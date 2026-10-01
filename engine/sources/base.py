@@ -1,0 +1,79 @@
+"""Shared helpers for data sources: raw caching, fallback and page budgeting."""
+from __future__ import annotations
+
+import logging
+from pathlib import Path
+from typing import Any, Awaitable, Callable, Iterable
+
+from ..http import Http, read_json_cache, write_json_cache
+from ..models import Page
+from ..ratelimit import CallBudget
+
+log = logging.getLogger("pseo.sources")
+
+
+async def cached_fetch(
+    http: Http,
+    cache_dir: Path,
+    cache_name: str,
+    url: str,
+    params: dict | None = None,
+    fetch: Callable[[str, dict | None], Awaitable[Any]] | None = None,
+) -> tuple[Any, bool]:
+    """Return (payload, from_cache). Falls back to the last good payload on failure."""
+    path = cache_dir / cache_name
+    marker = path.with_suffix(".unavailable")
+    fetcher = fetch or http.get_json
+    if marker.exists():
+        # Endpoint answered with a permanent error before (unsupported country, 404, ...).
+        # Remember it so scheduled runs do not keep burning retries on a known dead path.
+        return None, True
+    try:
+        data = await fetcher(url, params)
+        write_json_cache(path, data)
+        marker.unlink(missing_ok=True)
+        return data, False
+    except Exception as exc:  # noqa: BLE001
+        cached = read_json_cache(path)
+        if cached is not None:
+            log.warning("fetch failed (%s); using cached %s", exc, cache_name)
+            return cached, True
+        log.error("fetch failed and no cache for %s: %s", url, exc)
+        try:
+            marker.write_text(str(exc), encoding="utf-8")
+        except OSError:
+            pass
+        return None, False
+
+
+def load_asset(cache_dir: Path, assets_dir: Path, name: str, key: str) -> list[dict]:
+    payload = read_json_cache(assets_dir / name)
+    if isinstance(payload, dict):
+        return payload.get(key, [])
+    return payload or []
+
+
+def take(items: Iterable[Any], n: int) -> list[Any]:
+    out: list[Any] = []
+    for item in items:
+        out.append(item)
+        if len(out) >= n:
+            break
+    return out
+
+
+def trim_to_budget(pages: list[Page], budget: CallBudget) -> list[Page]:
+    """Keep pages until the per-run budget is used up, unseen pages first."""
+    ordered = sorted(pages, key=lambda page: (budget.is_new(page.path), page.slug))
+    allowed: list[Page] = []
+    for page in ordered:
+        if not budget.take():
+            break
+        allowed.append(page)
+    return allowed
+
+
+def fmt_num(value: float | int | None, digits: int = 1) -> str:
+    if value is None:
+        return "n/a"
+    return f"{value:,.{digits}f}"

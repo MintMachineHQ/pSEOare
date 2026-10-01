@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.env
+cache/
+output/
+.venv/
+
+# OpenBot agent scaffolding (not part of the site)
+.agents/
+.claude/

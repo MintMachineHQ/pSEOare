@@ -1,0 +1,67 @@
+{
+  "domain": "https://example.pages.dev",
+  "site_name": "LongTail Data Atlas",
+  "language": "en",
+  "limits": {
+    "max_pages_per_run": 150,
+    "max_gemini_calls_per_run": 120,
+    "gemini_min_interval_seconds": 4.1,
+    "http_concurrency": 8,
+    "http_timeout_seconds": 30,
+    "max_http_retries": 3
+  },
+  "sources": {
+    "holidays": {
+      "enabled": true,
+      "years_back": 1,
+      "years_forward": 1,
+      "priority": 1
+    },
+    "countries": {
+      "enabled": true,
+      "priority": 2
+    },
+    "climate": {
+      "enabled": true,
+      "cities": 60,
+      "priority": 3
+    },
+    "crypto": {
+      "enabled": true,
+      "coins": [
+        "bitcoin",
+        "ethereum",
+        "solana"
+      ],
+      "priority": 4
+    }
+  },
+  "gemini": {
+    "model": "gemini-1.5-flash",
+    "enabled": true,
+    "api_key_env": "GEMINI_API_KEY"
+  },
+  "indexing": {
+    "indexnow": {
+      "enabled": true,
+      "key_env": "INDEXNOW_KEY"
+    },
+    "google_indexing_api": {
+      "enabled": false,
+      "credentials_env": "GOOGLE_INDEXING_CREDENTIALS"
+    }
+  },
+  "monetization": {
+    "adsterra_script": "",
+    "monetag_script": "",
+    "cpa_fallback_url": "https://example.com/offer",
+    "cpa_fallback_image": "https://placehold.co/728x90.png?text=Recommended+Deal",
+    "cpa_fallback_text": "Recommended deal for you"
+  },
+  "seo": {
+    "generate_sitemap": true,
+    "generate_index_pages": true,
+    "randomize_dom": true,
+    "adsense_like": false
+  }
+}

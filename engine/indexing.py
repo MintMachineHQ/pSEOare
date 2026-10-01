@@ -1,0 +1,151 @@
+"""Search-engine notification: IndexNow (Bing/Yandex) and optional Google Indexing API."""
+from __future__ import annotations
+
+import base64
+import json
+import logging
+import time
+from pathlib import Path
+
+import aiohttp
+
+from .config import Config, env_secret
+from .http import Http
+
+log = logging.getLogger("pseo.indexing")
+
+INDEXNOW = "https://api.indexnow.org/indexnow"
+INDEXNOW_BATCH = 100
+GOOGLE_TOKEN = "https://oauth2.googleapis.com/token"
+GOOGLE_SCOPE = "https://www.googleapis.com/auth/indexing"
+GOOGLE_ENDPOINT = "https://indexing.googleapis.com/v3/urlNotifications"
+GOOGLE_MAX_URLS = 100
+
+
+async def notify(cfg: Config, http: Http, new_urls: list[str]) -> dict[str, int]:
+    stats = {"indexnow": 0, "google": 0}
+    if not new_urls:
+        return stats
+
+    inx = cfg.indexing.get("indexnow", {})
+    if inx.get("enabled"):
+        key = env_secret(inx.get("key_env", "INDEXNOW_KEY"))
+        if not key:
+            log.warning("indexnow enabled but no key configured; skipping")
+        else:
+            stats["indexnow"] = await _indexnow(http, cfg, key, new_urls)
+
+    gapi = cfg.indexing.get("google_indexing_api", {})
+    if gapi.get("enabled"):
+        creds = env_secret(gapi.get("credentials_env", "GOOGLE_INDEXING_CREDENTIALS"))
+        if not creds:
+            log.warning("google indexing enabled but no service-account JSON configured; skipping")
+        else:
+            stats["google"] = await _google(http, creds, new_urls[:GOOGLE_MAX_URLS])
+
+    return stats
+
+
+async def _indexnow(http: Http, cfg: Config, key: str, urls: list[str]) -> int:
+    key_file = Path(cfg.paths.output) / f"{key}.txt"
+    try:
+        key_file.write_text(key, encoding="utf-8")
+    except OSError as exc:
+        log.warning("could not write IndexNow key file: %s", exc)
+
+    sent = 0
+    for start in range(0, len(urls), INDEXNOW_BATCH):
+        batch = urls[start : start + INDEXNOW_BATCH]
+        payload = {
+            "host": cfg.host,
+            "key": key,
+            "keyLocation": f"{cfg.domain}/{key}.txt",
+            "urlList": batch,
+        }
+        try:
+            await http.post_json(INDEXNOW, payload)
+            sent += len(batch)
+        except Exception as exc:  # noqa: BLE001
+            log.warning("indexnow batch failed: %s", exc)
+    log.info("IndexNow: notified %d urls", sent)
+    return sent
+
+
+async def _google(http: Http, creds_json: str, urls: list[str]) -> int:
+    """Opt-in only. Google limits this API to JobPosting/BroadcastEvent resources;
+    submitting ordinary content pages through it risks a manual action."""
+    try:
+        creds = json.loads(creds_json)
+        token = await _google_access_token(creds)
+    except Exception as exc:  # noqa: BLE001
+        log.error("google indexing unavailable: %s", exc)
+        return 0
+
+    sent = 0
+    async with aiohttp.ClientSession() as session:
+        for url in urls:
+            body = {
+                "url": url,
+                "type": "URLNotificationRequest",
+                "httpRequest": {
+                    "method": "POST",
+                    "requestHeaders": {"Content-Type": "application/json"},
+                },
+            }
+            try:
+                async with session.post(
+                    GOOGLE_ENDPOINT,
+                    data=json.dumps(body),
+                    headers={
+                        "Authorization": f"Bearer {token}",
+                        "Content-Type": "application/json",
+                    },
+                ) as resp:
+                    if resp.status >= 400:
+                        log.warning("google indexing %s for %s", resp.status, url)
+                        continue
+                sent += 1
+            except Exception as exc:  # noqa: BLE001
+                log.warning("google indexing failed for %s: %s", url, exc)
+    log.info("google indexing: submitted %d urls", sent)
+    return sent
+
+
+async def _google_access_token(creds: dict) -> str:
+    """Service-account JWT bearer flow, so no google-auth dependency is needed."""
+    try:
+        from cryptography.hazmat.primitives import hashes, serialization
+        from cryptography.hazmat.primitives.asymmetric import padding
+    except ImportError as exc:  # pragma: no cover
+        raise RuntimeError("cryptography is required for the Google Indexing API") from exc
+
+    now = int(time.time())
+
+    def segment(obj: dict) -> str:
+        raw = json.dumps(obj, separators=(",", ":")).encode()
+        return base64.urlsafe_b64encode(raw).rstrip(b"=").decode()
+
+    header = {"alg": "RS256", "typ": "JWT"}
+    claims = {
+        "iss": creds["client_email"],
+        "scope": GOOGLE_SCOPE,
+        "aud": GOOGLE_TOKEN,
+        "exp": now + 3600,
+        "iat": now,
+    }
+    signing_input = f"{segment(header)}.{segment(claims)}".encode()
+    private_key = serialization.load_pem_private_key(creds["private_key"].encode(), password=None)
+    signature = private_key.sign(signing_input, padding.PKCS1v15(), hashes.SHA256())
+    assertion = f"{signing_input.decode()}.{base64.urlsafe_b64encode(signature).rstrip(b'=').decode()}"
+
+    async with aiohttp.ClientSession() as session:
+        async with session.post(
+            GOOGLE_TOKEN,
+            data={"grant_type": "urn:ietf:params:oauth:grant-type:jwt-bearer", "assertion": assertion},
+        ) as resp:
+            resp.raise_for_status()
+            data = await resp.json()
+    return data["access_token"]
+
+
+__all__ = ["notify"]
