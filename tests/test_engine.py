@@ -238,12 +238,19 @@ class TestSources(unittest.TestCase):
                 }
             }
         }
+        payload["properties"]["parameter"]["T2M_MAX"] = {"JAN": 12.8, "JUL": 37.6, "ANN": 37.7}
+        payload["properties"]["parameter"]["T2M_MIN"] = {"JAN": -23.9, "JUL": 8.7, "ANN": -23.9}
         page = climate._build_page(city, payload, cfg, "2026-01-01T00:00:00+00:00", False)
         self.assertIsNotNone(page)
         self.assertEqual(page.kind, "climate_city")
         self.assertIn("602 mm", page.summary)  # 1.65 mm/day * 365
         annual = dict(page.facts)["Annual precipitation"]
         self.assertIn("mm / year", annual)
+        # POWER max/min are period records, so the table must not call them mean highs.
+        headers = page.data["table"]["headers"]
+        self.assertIn("Record high (C)", headers)
+        self.assertNotIn("Mean high (C)", headers)
+        self.assertEqual(dict(page.facts)["All-time record high"], "37.7 C")
 
     def test_world_bank_rows_parsing(self):
         payload = [{"page": 1, "total": 2}, [{"id": "BEL", "name": "Belgium"}, {"id": "DEU", "name": "Germany"}]]

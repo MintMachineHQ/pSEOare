@@ -64,6 +64,10 @@ def _build_page(city: dict, data: dict, cfg, stamp: str, from_cache: bool) -> Pa
     if not tavg or "ANN" not in tavg:
         return None
 
+    # NASA POWER returns T2M_MAX / T2M_MIN as the record maximum and minimum
+    # temperature seen in that month over the whole climatology period, not the
+    # mean daily maximum. They are labelled as records so the table cannot be
+    # misread as typical highs and lows.
     rows = []
     for month in MONTHS:
         if month not in tavg:
@@ -71,10 +75,10 @@ def _build_page(city: dict, data: dict, cfg, stamp: str, from_cache: bool) -> Pa
         rows.append(
             [
                 month.capitalize(),
-                fmt_num(tmin.get(month), 1),
                 fmt_num(tavg.get(month), 1),
-                fmt_num(tmax.get(month), 1),
                 fmt_num(rain.get(month), 2),
+                fmt_num(tmax.get(month), 1),
+                fmt_num(tmin.get(month), 1),
             ]
         )
 
@@ -110,6 +114,8 @@ def _build_page(city: dict, data: dict, cfg, stamp: str, from_cache: bool) -> Pa
             ("Warmest month", f"{warmest.capitalize()} ({fmt_num(tavg.get(warmest), 1)} C)"),
             ("Coldest month", f"{coldest.capitalize()} ({fmt_num(tavg.get(coldest), 1)} C)"),
             ("Wettest month", f"{wettest.capitalize()} ({fmt_num(rain.get(wettest), 2)} mm/day)"),
+            ("All-time record high", f"{fmt_num(tmax.get('ANN'), 1)} C"),
+            ("All-time record low", f"{fmt_num(tmin.get('ANN'), 1)} C"),
             ("Annual precipitation", f"{fmt_num(annual_mm, 0)} mm / year"),
             ("Coordinates", f"{city['lat']}, {city['lon']}"),
             ("Population", fmt_num(city.get("population", 0), 0)),
@@ -122,7 +128,7 @@ def _build_page(city: dict, data: dict, cfg, stamp: str, from_cache: bool) -> Pa
         data={
             "table": {
                 "caption": f"Average monthly temperature and rainfall in {name}",
-                "headers": ["Month", "Mean low (C)", "Mean (C)", "Mean high (C)", "Rain (mm/day)"],
+                "headers": ["Month", "Mean temp (C)", "Rain (mm/day)", "Record high (C)", "Record low (C)"],
                 "rows": rows,
             },
             "sections": [
