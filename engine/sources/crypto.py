@@ -31,7 +31,9 @@ COINS = {
 
 async def collect(cfg, http: Http, budget) -> list[Page]:
     opts = cfg.source("crypto")
-    coins = [c.lower() for c in opts.get("coins", ["bitcoin", "ethereum"])][:8]
+    coins = [c.lower() for c in opts.get("coins", ["bitcoin", "ethereum"])]
+    if not coins:
+        return []
     stamp = datetime.now(timezone.utc).isoformat()
     pages: list[Page] = []
 

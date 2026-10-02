@@ -35,6 +35,8 @@ from engine.render import build_css, build_theme  # noqa: E402
 from engine.http import Http  # noqa: E402
 from engine.indexing import key_file_is_reachable  # noqa: E402
 from engine.models import Link, Page, slugify  # noqa: E402
+from engine.ratelimit import CallBudget  # noqa: E402
+from engine.sources.base import trim_to_budget  # noqa: E402
 from engine.render import build_css, build_theme, ad_block, pick_copy, render_page, waterfall_js  # noqa: E402
 from engine.sources import climate, countries, crypto, holidays  # noqa: E402
 from engine.writer import Writer  # noqa: E402
@@ -468,6 +470,25 @@ class TestRender(unittest.TestCase):
         block = ad_block(cfg, build_theme(), "top")
         self.assertNotIn("house-ad", block)
         self.assertIn("ad-hint", block)
+
+    def test_budget_prefers_unseen_pages_so_the_corpus_grows(self):
+        # Regression: sorting on is_new directly puts already-published pages first,
+        # because False sorts before True. Every run then regenerated the same head of
+        # the list and the corpus never grew past the first page_budget rows.
+        cfg = make_cfg(Path(tempfile.mkdtemp()))
+        pages = []
+        for i in range(20):
+            page = sample_page(cfg)
+            page.slug = f"page-{i:03d}"
+            pages.append(page)
+        seen = {p.path for p in pages[:15]}
+        budget = CallBudget(limit=5, seen=seen)
+        chosen = trim_to_budget(pages, budget)
+        self.assertEqual(len(chosen), 5)
+        self.assertEqual(
+            [p.slug for p in chosen],
+            ["page-015", "page-016", "page-017", "page-018", "page-019"],
+        )
 
     def test_waterfall_has_fallback(self):
         cfg = make_cfg(Path(tempfile.mkdtemp()))

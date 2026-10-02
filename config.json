@@ -36,7 +36,23 @@
         "cardano",
         "dogecoin",
         "polkadot",
-        "chainlink"
+        "chainlink",
+        "litecoin",
+        "bitcoin-cash",
+        "stellar",
+        "monero",
+        "avalanche",
+        "cosmos",
+        "polygon",
+        "uniswap",
+        "ethereum-classic",
+        "near",
+        "algorand",
+        "filecoin",
+        "hedera",
+        "tezos",
+        "aptos",
+        "arbitrum"
       ],
       "priority": 4
     }

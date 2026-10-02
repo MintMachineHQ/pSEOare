@@ -63,8 +63,15 @@ def take(items: Iterable[Any], n: int) -> list[Any]:
 
 
 def trim_to_budget(pages: list[Page], budget: CallBudget) -> list[Page]:
-    """Keep pages until the per-run budget is used up, unseen pages first."""
-    ordered = sorted(pages, key=lambda page: (budget.is_new(page.path), page.slug))
+    """Keep pages until the per-run budget is used up, unseen pages first.
+
+    The sort key is ``not is_new`` on purpose. ``is_new`` is True for a page that has
+    not been published yet, and False sorts before True, so sorting on ``is_new``
+    directly would put the pages we have already published at the front of the queue.
+    Every run would then regenerate the same alphabetical head of the list and the
+    corpus would never grow past the first page_budget rows.
+    """
+    ordered = sorted(pages, key=lambda page: (not budget.is_new(page.path), page.slug))
     allowed: list[Page] = []
     for page in ordered:
         if not budget.take():
