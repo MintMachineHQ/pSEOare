@@ -66,6 +66,7 @@ jobs:
           test -f output/index.html
           test -f output/sitemap.xml
           test -f output/robots.txt
+          test -f output/404.html
           pages=$(find output -name '*.html' | wc -l)
           echo "published pages: $pages"
           test "$pages" -gt 1
@@ -73,7 +74,9 @@ jobs:
           import json, pathlib, sys
           cfg = json.loads(pathlib.Path("config.json").read_text())
           # Verification tokens are plain text served at the site root, not pages.
-          skip = set((cfg.get("seo", {}).get("verification_files") or {}).keys())
+          # 404.html is an error document: it deliberately carries no JSON-LD, because
+          # there is no content on the page to describe.
+          skip = set((cfg.get("seo", {}).get("verification_files") or {}).keys()) | {"404.html"}
           broken = []
           for path in pathlib.Path("output").glob("*.html"):
               if path.name in skip:
