@@ -84,19 +84,24 @@ jobs:
           fi
 
       - name: Normalise the Pages project settings
+        # Best effort: the project is already created with these settings, so a
+        # rejected PATCH must not block the deploy itself.
+        continue-on-error: true
         run: |
-          set -euo pipefail
+          set -uo pipefail
           api="https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/pages/projects"
           # Serve the published branch directly: no build step, no wrangler deploy.
-          curl -s -X PATCH -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
+          patch=$(curl -s -X PATCH -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
             -H "Content-Type: application/json" \
             -d '{"production_branch":"gh-pages","build_config":{"build_command":"","output_dir":"/"}}' \
-            "$api/$PROJECT" \
+            "$api/$PROJECT") || true
+          echo "$patch" \
             | python3 -c '
           import json,sys
           d=json.load(sys.stdin)
           if not d.get("success"):
-              print("patch failed:", d.get("errors")); sys.exit(1)
+              print("patch rejected:", d.get("errors") or d.get("messages") or "no detail; continuing")
+              sys.exit(0)
           r=d["result"]
           print("branch:", r.get("production_branch"),
                 "| build:", repr(r.get("build_config",{}).get("build_command")),
