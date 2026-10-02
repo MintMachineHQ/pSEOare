@@ -223,7 +223,10 @@ def head_ads(cfg: Config) -> str:
     them inside every ad slot can fire the popunder several times and get the account
     flagged.
     """
-    return (cfg.monetization.get("popunder_script") or "").strip()
+    money = cfg.monetization
+    if money.get("popunder_enabled") is False:
+        return ""
+    return (money.get("popunder_script") or "").strip()
 
 
 def global_ads(cfg: Config) -> str:
@@ -256,6 +259,7 @@ def split_native_banner(raw: str) -> tuple[str, str] | None:
 def ad_block(cfg: Config, theme: dict[str, Any], slot: str) -> str:
     money = cfg.monetization
     native_slot = (money.get("native_banner_slot") or "foot").strip()
+    banner_on = money.get("native_banner_enabled") is not False
     parts: list[str] = []
     for key in ("adsterra_script", "monetag_script"):
         raw = (money.get(key) or "").strip()
@@ -266,9 +270,11 @@ def ad_block(cfg: Config, theme: dict[str, Any], slot: str) -> str:
             parts.append(f"    {raw}")
             continue
         loader, container_id = native
-        if slot != native_slot:
+        if not banner_on or slot != native_slot:
             # Same unit, same container id: emitting it twice would duplicate the id and
             # split impressions. The other slots fall through to the CPA waterfall.
+            # native_banner_enabled is the kill switch for networks whose creative
+            # selection we cannot fully control, e.g. an unfiltered site category.
             continue
         parts.append(f"    {loader}")
         parts.append(f'    <div class="native-banner" id="{container_id}"></div>')

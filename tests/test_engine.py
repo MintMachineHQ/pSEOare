@@ -392,6 +392,36 @@ class TestRender(unittest.TestCase):
         self.assertEqual(html_doc.count("container-f1f54edba8f1e63e97bdd455dd7245ec"), 1)
         self.assertIn(".native-banner{", html_doc)
 
+    def test_native_banner_kill_switch_removes_the_unit(self):
+        tmp = Path(tempfile.mkdtemp())
+        cfg = make_cfg(tmp)
+        cfg.raw["monetization"]["adsterra_script"] = (
+            '<script async="async" src="https://bauval.org/21/f1f54edba8f1e63e97bdd455dd7245ec">'
+            '</script>\n<div id="container-f1f54edba8f1e63e97bdd455dd7245ec"></div>'
+        )
+        cfg.raw["monetization"]["native_banner_enabled"] = False
+        theme = build_theme()
+        for slot in ("top", "mid", "foot"):
+            block = ad_block(cfg, theme, slot)
+            with self.subTest(slot=slot):
+                self.assertNotIn("bauval.org", block)
+                self.assertNotIn("container-f1f54edba", block)
+        html_doc = render_page(
+            sample_page(cfg), cfg, theme, build_css(theme), "", [], "2026-01-01T00:00:00+00:00"
+        )
+        self.assertNotIn("bauval.org", html_doc)
+
+    def test_popunder_kill_switch_removes_the_loader(self):
+        tmp = Path(tempfile.mkdtemp())
+        cfg = make_cfg(tmp)
+        cfg.raw["monetization"]["popunder_script"] = "<script>/*popunder*/</script>"
+        cfg.raw["monetization"]["popunder_enabled"] = False
+        theme = build_theme()
+        html_doc = render_page(
+            sample_page(cfg), cfg, theme, build_css(theme), "", [], "2026-01-01T00:00:00+00:00"
+        )
+        self.assertNotIn("/*popunder*/", html_doc)
+
     def test_waterfall_has_fallback(self):
         cfg = make_cfg(Path(tempfile.mkdtemp()))
         js = waterfall_js(cfg)
