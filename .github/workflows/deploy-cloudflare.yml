@@ -65,6 +65,13 @@ jobs:
           set -euo pipefail
           api="https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/pages/projects"
           current=$(curl -s -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" "$api/$PROJECT")
+          if ! echo "$current" | python3 -c 'import json,sys; sys.exit(0 if json.load(sys.stdin).get("success") else 1)'; then
+            echo "raw lookup response: $(echo "$current" | cut -c1-500)"
+            echo "available projects:"
+            curl -s -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" "$api" \
+              | python3 -c 'import json,sys; d=json.load(sys.stdin); print([p.get("name") for p in (d.get("result") or [])] or d.get("errors"))'
+            exit 1
+          fi
           echo "$current" | python3 -c '
           import json,sys
           d=json.load(sys.stdin)
