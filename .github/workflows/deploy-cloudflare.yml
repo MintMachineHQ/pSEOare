@@ -33,6 +33,36 @@ jobs:
       - name: Checkout source
         uses: actions/checkout@v4
 
+      - name: Verify Cloudflare credentials
+        run: |
+          set -euo pipefail
+          token="$CLOUDFLARE_API_TOKEN"
+          if [ -z "$token" ]; then
+            echo "::error::CF_API_TOKEN secret is empty"
+            exit 1
+          fi
+          # /user/tokens/verify proves the token is live without printing it.
+          verify=$(curl -s -H "Authorization: Bearer $token" \
+            https://api.cloudflare.com/client/v4/user/tokens/verify)
+          echo "$verify" | python3 -c 'import json,sys; d=json.load(sys.stdin); print("token status:", d.get("result",{}).get("status"), "| success:", d.get("success"))'
+          # Account id: use CF_ACCOUNT_ID when set, otherwise resolve it and print it.
+          if [ -n "${CLOUDFLARE_ACCOUNT_ID:-}" ]; then
+            account="$CLOUDFLARE_ACCOUNT_ID"
+          else
+            account=$(curl -s -H "Authorization: Bearer $token" \
+              "https://api.cloudflare.com/client/v4/accounts?per_page=1" \
+              | python3 -c 'import json,sys; d=json.load(sys.stdin); print(d["result"][0]["id"] if d.get("result") else "")')
+          fi
+          if [ -z "$account" ]; then
+            echo "::error::could not resolve a Cloudflare account id with this token"
+            exit 1
+          fi
+          echo "CLOUDFLARE_ACCOUNT_ID=$account" >> "$GITHUB_ENV"
+          echo "account id resolved: $account"
+          curl -s -H "Authorization: Bearer $token" \
+            "https://api.cloudflare.com/client/v4/accounts/$account/pages/projects" \
+            | python3 -c 'import json,sys; d=json.load(sys.stdin); print("pages projects:", [p["name"] for p in d.get("result") or []] or d.get("errors"))'
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
