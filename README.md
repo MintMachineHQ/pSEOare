@@ -95,6 +95,26 @@ Then set `config.json -> domain` to the published URL (Cloudflare Pages or
 - **CI minutes**: one daily run, `concurrency` guard, `keep_files: true` so published pages
   accumulate, caches restored with a rolling key.
 
+## Payouts
+
+All ad-network payouts go to one receive address, recorded in `config.json` so it is never
+typed by hand:
+
+| Field | Value |
+| --- | --- |
+| Address | `F9diFVYZh7SsC2KLGDH354gyyj2fCaLkTWCyRPHYxRwA` |
+| Network | Solana |
+| Asset | USDT |
+
+This is a receive address, so it is public information and safe to commit. It is **not** a
+private key: nothing in this repo can move funds, and the address only receives.
+
+**Network mismatch is the real risk here.** Adsterra and Monetag pay crypto mainly over
+**TRC20 (Tron)**, and several payout options are Binance Pay or a bank transfer. A Solana
+address cannot receive a TRC20 transfer, so before approving any payout, confirm the network
+selector in the network's dashboard matches `Solana`. If they only offer TRC20, either keep a
+second TRC20 address in this file or convert on withdrawal.
+
 ## Ad monetisation
 
 Put your network tag into `config.json -> monetization`:

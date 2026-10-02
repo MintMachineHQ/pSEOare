@@ -63,5 +63,11 @@
     "generate_index_pages": true,
     "randomize_dom": true,
     "adsense_like": false
+  },
+  "payouts": {
+    "wallet_address": "F9diFVYZh7SsC2KLGDH354gyyj2fCaLkTWCyRPHYxRwA",
+    "network": "solana",
+    "asset": "USDT",
+    "note": "Receive address for ad-network payouts. Public information, not a secret. Keep it in sync with the dashboard of every network you register with."
   }
 }
