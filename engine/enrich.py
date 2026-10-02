@@ -370,16 +370,15 @@ class Enricher:
         # Prefer general chat models, best capability first, and drop anything that
         # looks retired or non-textual.
         def rank(name: str) -> tuple:
-            parts: list[float] = []
-            for chunk in name.replace("-", " ").split():
-                if chunk.replace(".", "").isdigit():
-                    parts.extend(float(x) for x in chunk.split(".") if x)
-            prefers = 0
-            if "versatile" in name:
-                prefers = 2
-            elif "instant" in name:
-                prefers = 1
-            return (prefers, tuple(parts) or (0.0,), name)
+            # Prefer general-purpose chat models, then the largest parameter count.
+            # Version strings like "qwen3.8-27b" do not parse as plain numbers, so
+            # size in billions is the reliable strength signal.
+            size = 0.0
+            for chunk in name.replace("-", " ").replace("/", " ").split():
+                if chunk.lower().endswith("b") and chunk[:-1].replace(".", "").isdigit():
+                    size = float(chunk[:-1])
+            flavour = 1 if "versatile" in name else (0 if "instant" in name else 2)
+            return (flavour, size, name)
 
         text_models = [
             n for n in names if not any(b in n for b in ("tts", "whisper", "vision", "guard"))
