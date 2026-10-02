@@ -39,22 +39,26 @@ jobs:
             echo "::error::CF_API_TOKEN secret is empty"
             exit 1
           fi
-          curl -s -H "Authorization: Bearer $token" \
-            https://api.cloudflare.com/client/v4/user/tokens/verify \
-            | python3 -c 'import json,sys; d=json.load(sys.stdin); print("token:", d.get("result",{}).get("status"))'
+          # /user/tokens/verify only applies to user-scoped tokens, so do not treat a
+          # failure there as fatal. Listing accounts is the real permission test and
+          # works for both account-scoped and user-scoped tokens.
+          curl -s -H "Authorization: Bearer $token"             https://api.cloudflare.com/client/v4/user/tokens/verify             | python3 -c 'import json,sys; d=json.load(sys.stdin); r=d.get("result") or {}; print("user-token verify:", r.get("status", "n/a (account-scoped token)"))' || true
+          accounts=$(curl -s -H "Authorization: Bearer $token"             "https://api.cloudflare.com/client/v4/accounts?per_page=5")
+          account=$(echo "$accounts" | python3 -c 'import json,sys
+          d=json.load(sys.stdin)
+          res=d.get("result") or []
+          print(res[0]["id"] if res else "")')
+          if [ -z "$account" ]; then
+            echo "$accounts" | cut -c1-400
+            echo "::error::token cannot list Cloudflare accounts. Needs Account -> Cloudflare Pages: Edit (and Workers Scripts: Edit for wrangler)."
+            exit 1
+          fi
+          echo "account: $account"
           if [ -n "${CLOUDFLARE_ACCOUNT_ID:-}" ]; then
-            echo "CLOUDFLARE_ACCOUNT_ID=${CLOUDFLARE_ACCOUNT_ID}" >> "$GITHUB_ENV"
+            echo "using configured CF_ACCOUNT_ID"
           else
-            account=$(curl -s -H "Authorization: Bearer $token" \
-              "https://api.cloudflare.com/client/v4/accounts?per_page=1" \
-              | python3 -c 'import json,sys; d=json.load(sys.stdin); print(d["result"][0]["id"] if d.get("result") else "")')
-            if [ -z "$account" ]; then
-              echo "::error::could not resolve a Cloudflare account id with this token"
-              exit 1
-            fi
             echo "CLOUDFLARE_ACCOUNT_ID=$account" >> "$GITHUB_ENV"
           fi
-          echo "account: $CLOUDFLARE_ACCOUNT_ID"
 
       - name: Report and normalise the Pages project
         run: |
