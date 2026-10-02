@@ -1,5 +1,5 @@
 {
-  "domain": "https://mintmachinehq.github.io/pSEOare",
+  "domain": "https://pseoare.pages.dev",
   "site_name": "LongTail Data Atlas",
   "language": "en",
   "limits": {
@@ -70,7 +70,8 @@
     "adsense_like": false,
     "verification_files": {
       "googleeba8f39aab451061.html": "google-site-verification: googleeba8f39aab451061.html"
-    }
+    },
+    "mirror_note": "GitHub Pages (mintmachinehq.github.io/pSEOare/) mirrors this corpus. Canonicals, sitemap and IndexNow all point at the pages.dev primary."
   },
   "payouts": {
     "wallets": {

@@ -1,16 +1,18 @@
-name: Deploy to Cloudflare Pages
+name: Mirror site to Cloudflare Pages
 
-# Optional second publishing target. GitHub Pages keeps running from the daily cron;
-# this one is manual so you control when the Cloudflare project gets a fresh build.
-# Requires two repository secrets:
-#   CF_API_TOKEN  - Cloudflare API token with "Cloudflare Pages: Edit"
-#   CF_ACCOUNT_ID - Cloudflare account id
+# The site is generated once per day by deploy.yml and published to the gh-pages
+# branch. This workflow does NOT re-run the generator: it mirrors the finished
+# branch to Cloudflare Pages, which is seconds instead of minutes and keeps a
+# single source of truth for the corpus.
+#
+# Cloudflare can also auto-deploy from gh-pages on every push (see the project
+# settings), so this is the manual/recovery path rather than the daily one.
 on:
   workflow_dispatch:
     inputs:
       project:
         description: "Cloudflare Pages project name"
-        required: true
+        required: false
         default: pseoare
 
 permissions:
@@ -21,18 +23,14 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  deploy:
+  mirror:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 15
     env:
-      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-      INDEXNOW_KEY: ${{ secrets.IndexNOW_KEY }}
       CLOUDFLARE_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
       CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+      PROJECT: ${{ inputs.project }}
     steps:
-      - name: Checkout source
-        uses: actions/checkout@v4
-
       - name: Verify Cloudflare credentials
         run: |
           set -euo pipefail
@@ -41,68 +39,76 @@ jobs:
             echo "::error::CF_API_TOKEN secret is empty"
             exit 1
           fi
-          # /user/tokens/verify proves the token is live without printing it.
-          verify=$(curl -s -H "Authorization: Bearer $token" \
-            https://api.cloudflare.com/client/v4/user/tokens/verify)
-          echo "$verify" | python3 -c 'import json,sys; d=json.load(sys.stdin); print("token status:", d.get("result",{}).get("status"), "| success:", d.get("success"))'
-          # Account id: use CF_ACCOUNT_ID when set, otherwise resolve it and print it.
+          curl -s -H "Authorization: Bearer $token" \
+            https://api.cloudflare.com/client/v4/user/tokens/verify \
+            | python3 -c 'import json,sys; d=json.load(sys.stdin); print("token:", d.get("result",{}).get("status"))'
           if [ -n "${CLOUDFLARE_ACCOUNT_ID:-}" ]; then
-            account="$CLOUDFLARE_ACCOUNT_ID"
+            echo "CLOUDFLARE_ACCOUNT_ID=${CLOUDFLARE_ACCOUNT_ID}" >> "$GITHUB_ENV"
           else
             account=$(curl -s -H "Authorization: Bearer $token" \
               "https://api.cloudflare.com/client/v4/accounts?per_page=1" \
               | python3 -c 'import json,sys; d=json.load(sys.stdin); print(d["result"][0]["id"] if d.get("result") else "")')
+            if [ -z "$account" ]; then
+              echo "::error::could not resolve a Cloudflare account id with this token"
+              exit 1
+            fi
+            echo "CLOUDFLARE_ACCOUNT_ID=$account" >> "$GITHUB_ENV"
           fi
-          if [ -z "$account" ]; then
-            echo "::error::could not resolve a Cloudflare account id with this token"
-            exit 1
-          fi
-          echo "CLOUDFLARE_ACCOUNT_ID=$account" >> "$GITHUB_ENV"
-          echo "account id resolved: $account"
-          curl -s -H "Authorization: Bearer $token" \
-            "https://api.cloudflare.com/client/v4/accounts/$account/pages/projects" \
-            | python3 -c 'import json,sys; d=json.load(sys.stdin); print("pages projects:", [p["name"] for p in d.get("result") or []] or d.get("errors"))'
+          echo "account: $CLOUDFLARE_ACCOUNT_ID"
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-          cache: pip
-
-      - name: Install dependencies
-        run: pip install -r requirements.txt
-
-      - name: Restore scrape + manifest caches
-        uses: actions/cache/restore@v4
-        with:
-          path: cache
-          key: pseo-cache-${{ github.run_id }}
-          restore-keys: |
-            pseo-cache-
-
-      - name: Point the build at the Cloudflare domain
+      - name: Report and normalise the Pages project
         run: |
-          python - <<'PY'
-          import json, pathlib
-          path = pathlib.Path("config.json")
-          cfg = json.loads(path.read_text())
-          project = "${{ inputs.project }}"
-          # IndexNow can only validate its key at a domain root, which a *.pages.dev
-          # project URL is. A custom domain keeps working too.
-          cfg["domain"] = f"https://{project}.pages.dev"
-          path.write_text(json.dumps(cfg, indent=2) + "\n")
-          print("domain =", cfg["domain"])
-          PY
+          set -euo pipefail
+          api="https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/pages/projects"
+          current=$(curl -s -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" "$api/$PROJECT")
+          echo "$current" | python3 -c '
+          import json,sys
+          d=json.load(sys.stdin)
+          if not d.get("success"):
+              print("project lookup failed:", d.get("errors")); sys.exit(1)
+          r=d["result"]
+          print("project:", r["name"], "| subdomain:", r.get("subdomain"))
+          print("before: branch=", (r.get("production_branch")),
+                "build=", repr(r.get("build_config",{}).get("build_command")),
+                "output=", repr(r.get("build_config",{}).get("output_dir")))
+          '
+          # Serve the published branch directly: no build step, no wrangler deploy.
+          curl -s -X PATCH -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
+            -H "Content-Type: application/json" \
+            -d '{"production_branch":"gh-pages","build_config":{"build_command":"","output_dir":"/"}}' \
+            "$api/$PROJECT" \
+            | python3 -c '
+          import json,sys
+          d=json.load(sys.stdin)
+          if not d.get("success"):
+              print("patch failed:", d.get("errors")); sys.exit(1)
+          r=d["result"]
+          print("after : branch=", r.get("production_branch"),
+                "build=", repr(r.get("build_config",{}).get("build_command")),
+                "output=", repr(r.get("build_config",{}).get("output_dir")))
+          '
 
-      - name: Generate pages
-        run: python generator.py
+      - name: Fetch the published site from gh-pages
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
 
       - name: Publish to Cloudflare Pages
-        run: npx --yes wrangler@4 pages deploy output --project-name="${{ inputs.project }}" --branch=main
+        run: npx --yes wrangler@4 pages deploy . --project-name="$PROJECT" --branch=main
 
-      - name: Save caches for the next run
-        if: always()
-        uses: actions/cache/save@v4
-        with:
-          path: cache
-          key: pseo-cache-cf-${{ github.run_id }}
+      - name: Verify the site answers
+        run: |
+          set -euo pipefail
+          url="https://$PROJECT.pages.dev"
+          for i in 1 2 3 4 5 6 7 8 9 10; do
+            code=$(curl -s -o /tmp/index.html -w "%{http_code}" "$url/" || echo 000)
+            if [ "$code" = "200" ]; then
+              echo "live: $url/ ($code)"
+              grep -o "<title>[^<]*" /tmp/index.html | head -1
+              exit 0
+            fi
+            echo "attempt $i: $code, waiting"
+            sleep 20
+          done
+          echo "::error::$url did not return 200 after 10 attempts"
+          exit 1
