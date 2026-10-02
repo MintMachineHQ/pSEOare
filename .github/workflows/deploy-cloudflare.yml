@@ -34,7 +34,8 @@ jobs:
     env:
       CLOUDFLARE_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
       CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
-      PROJECT: ${{ inputs.project }}
+      # inputs only exist for workflow_dispatch, so the automatic mirror needs a default.
+      PROJECT: ${{ inputs.project || 'pseoare' }}
     steps:
       - name: Verify Cloudflare credentials
         run: |
