@@ -71,7 +71,8 @@
     "verification_files": {
       "googleeba8f39aab451061.html": "google-site-verification: googleeba8f39aab451061.html"
     },
-    "mirror_note": "GitHub Pages (mintmachinehq.github.io/pSEOare/) mirrors this corpus. Canonicals, sitemap and IndexNow all point at the pages.dev primary."
+    "mirror_note": "Cloudflare Pages (pseoare.pages.dev) is the only published host. The gh-pages branch is the build artifact the mirror workflow reads; it is not advertised, because clean URLs would not resolve there.",
+    "url_style": "clean"
   },
   "payouts": {
     "wallets": {

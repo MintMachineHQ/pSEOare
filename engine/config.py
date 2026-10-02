@@ -71,8 +71,18 @@ class Config:
     def host(self) -> str:
         return self.domain.replace("https://", "").replace("http://", "")
 
+    @property
+    def url_style(self) -> str:
+        # "clean" matches Cloudflare Pages, which strips .html and 308s to the
+        # extensionless path. Emitting .html there would make every canonical and
+        # internal link point at a redirect. "html" is correct for GitHub Pages.
+        return self.seo.get("url_style", "html")
+
     def url_for(self, path: str) -> str:
-        return f"{self.domain}/{path.lstrip('/')}"
+        clean = path.lstrip("/")
+        if self.url_style == "clean" and clean.endswith(".html") and clean != "index.html":
+            clean = clean[: -len(".html")]
+        return f"{self.domain}/{clean}"
 
 
 def load_config(path: Path | None = None) -> Config:

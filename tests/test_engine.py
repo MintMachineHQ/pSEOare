@@ -186,6 +186,26 @@ class TestHttpErrorPropagation(unittest.TestCase):
         asyncio.run(scenario())
 
 
+class TestUrlStyle(unittest.TestCase):
+    def test_html_style_keeps_extension(self):
+        tmp = Path(tempfile.mkdtemp())
+        cfg = make_cfg(tmp)
+        cfg.raw["seo"] = {"url_style": "html"}
+        self.assertEqual(
+            cfg.url_for("berlin-climate.html"), "https://data.example/berlin-climate.html"
+        )
+
+    def test_clean_style_drops_extension_but_keeps_index(self):
+        tmp = Path(tempfile.mkdtemp())
+        cfg = make_cfg(tmp)
+        cfg.raw["seo"] = {"url_style": "clean"}
+        self.assertEqual(
+            cfg.url_for("berlin-climate.html"), "https://data.example/berlin-climate"
+        )
+        self.assertEqual(cfg.url_for("index.html"), "https://data.example/index.html")
+        self.assertEqual(cfg.url_for("sitemap.xml"), "https://data.example/sitemap.xml")
+
+
 class TestIndexNowHosting(unittest.TestCase):
     def test_subpath_hosts_are_rejected(self):
         tmp = Path(tempfile.mkdtemp())
