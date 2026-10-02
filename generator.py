@@ -27,7 +27,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from engine.config import load_config  # noqa: E402
 from engine.enrich import Enricher  # noqa: E402
-from engine.hubs import assign_related, hub_documents, not_found_html, robots_txt, sitemap_xml  # noqa: E402
+from engine.hubs import assign_related, hub_documents, not_found_html, robots_txt, rss_feed, sitemap_xml  # noqa: E402
 from engine.http import Http  # noqa: E402
 from engine.indexing import notify  # noqa: E402
 from engine.models import Page  # noqa: E402
@@ -117,6 +117,7 @@ async def run(args: argparse.Namespace) -> int:
         if cfg.seo.get("generate_sitemap", True):
             writer.write_raw("sitemap.xml", sitemap_xml(pages, cfg, stamp, published=writer.manifest_pages()))
             writer.write_raw("robots.txt", robots_txt(cfg))
+            writer.write_raw("feed.xml", rss_feed(pages, cfg, stamp))
         # Without a 404 document the host answers every unknown path with the homepage
         # and a 200, which reads as an unbounded set of duplicate URLs to a crawler.
         writer.write_raw("404.html", not_found_html(cfg, theme, css, stamp))

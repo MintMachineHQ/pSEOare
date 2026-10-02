@@ -222,7 +222,11 @@ def sitemap_xml(
 
 
 def robots_txt(cfg: Config) -> str:
-    return "User-agent: *\nAllow: /\n" f"Sitemap: {cfg.url_for('sitemap.xml')}\n"
+    return (
+        "User-agent: *\nAllow: /\n"
+        f"Sitemap: {cfg.url_for('sitemap.xml')}\n"
+        f"# RSS feed: {cfg.url_for('feed.xml')}\n"
+    )
 
 def not_found_html(cfg: Config, theme: dict[str, Any], css: str, stamp: str) -> str:
     """A real 404 document.
@@ -264,4 +268,40 @@ under one of the hubs below, and the full list is in the sitemap.</p>
 </main>
 </body>
 </html>
+"""
+
+
+def rss_feed(pages: list[Page], cfg: Config, stamp: str, limit: int = 200) -> str:
+    """RSS 2.0 feed of the most recently generated pages.
+
+    A sitemap tells crawlers what exists; a feed is what aggregators and readers subscribe
+    to, and it costs one file. The full corpus is too large to send, so this carries the
+    newest slice.
+    """
+    stamp = stamp or datetime.now(timezone.utc).isoformat()
+    from xml.sax.saxutils import escape as xml_escape
+
+    items = []
+    for page in pages[:limit]:
+        url = cfg.url_for(page.path)
+        items.append(
+            f"    <item>\n"
+            f"      <title>{xml_escape(page.title)}</title>\n"
+            f"      <link>{xml_escape(url)}</link>\n"
+            f"      <guid isPermaLink=\"true\">{xml_escape(url)}</guid>\n"
+            f"      <description>{xml_escape(page.summary[:280])}</description>\n"
+            f"      <pubDate>{stamp}</pubDate>\n"
+            f"    </item>"
+        )
+    body = "\n".join(items)
+    return f"""<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>{xml_escape(cfg.site_name)}</title>
+    <link>{xml_escape(cfg.domain)}/</link>
+    <description>Reference pages rebuilt daily from public data APIs.</description>
+    <lastBuildDate>{stamp}</lastBuildDate>
+{body}
+  </channel>
+</rss>
 """

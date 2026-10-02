@@ -722,6 +722,27 @@ class TestRender(unittest.TestCase):
         self.assertIn("prose_version", src)
         self.assertIn("json.dumps([prose, faq, prose_version]", src)
 
+    def test_rss_feed_carries_the_newest_pages(self):
+        import xml.etree.ElementTree as ET
+
+        from engine.hubs import rss_feed
+
+        cfg = make_cfg(Path(tempfile.mkdtemp()))
+        pages = []
+        for i in range(5):
+            page = sample_page(cfg)
+            page.slug = f"item-{i}"
+            page.title = f"Item {i} & co"
+            pages.append(page)
+        xml = rss_feed(pages, cfg, "2026-02-02T00:00:00+00:00", limit=3)
+        root = ET.fromstring(xml)
+        self.assertEqual(root.tag, "rss")
+        items = root.findall("./channel/item")
+        self.assertEqual(len(items), 3)                      # honours the limit
+        self.assertEqual(len(root.findall("./channel/title")), 1)
+        self.assertIn("Item 0 &amp; co", xml)                # escaped, not raw
+        self.assertIn("feed.xml", Path("engine/writer.py").read_text())  # survives pruning
+
     def test_waterfall_has_fallback(self):
         cfg = make_cfg(Path(tempfile.mkdtemp()))
         js = waterfall_js(cfg)

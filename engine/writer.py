@@ -80,6 +80,7 @@ class Writer:
             "index.html",
             "404.html",
             "sitemap.xml",
+            "feed.xml",
             "robots.txt",
             ".nojekyll",
         }
