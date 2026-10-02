@@ -111,6 +111,12 @@ class TestEnrich(unittest.TestCase):
 
 
 class TestEnrichFailFast(unittest.TestCase):
+    def test_quota_exhaustion_is_detected(self):
+        from engine.enrich import QUOTA_MARKERS
+
+        body = "HTTP 429 rate limited: {\"error\": {\"message\": \"You exceeded your current quota\""
+        self.assertTrue(any(marker in body for marker in QUOTA_MARKERS))
+
     def test_rate_limit_is_not_a_hard_failure(self):
         from engine.enrich import RATE_LIMIT_MARKER
 

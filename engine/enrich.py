@@ -212,6 +212,13 @@ class Enricher:
                 self.consecutive_failures = 0
                 return cleaned
             except Exception as exc:  # noqa: BLE001
+                if any(marker in str(exc) for marker in QUOTA_MARKERS):
+                    log.error(
+                        "gemini quota exhausted for this key; keeping cached or fallback copy "
+                        "for the remaining pages"
+                    )
+                    self._trip_cutoff()
+                    return None
                 if RATE_LIMIT_MARKER in str(exc):
                     # Quota pacing, not a broken key: slow down instead of giving up.
                     self.rate_limited += 1
@@ -249,6 +256,9 @@ class Enricher:
 
 HARD_FAILURE_MARKERS = ("HTTP 400", "HTTP 401", "HTTP 403", "HTTP 404", "API_KEY_INVALID")
 RATE_LIMIT_MARKER = "HTTP 429"
+# A per-minute cap says "retry shortly". An exhausted daily free-tier quota says this
+# and will not recover during the run, so stop instead of burning the job timeout.
+QUOTA_MARKERS = ("exceeded your current quota", "quota exceeded", "RESOURCE_EXHAUSTED")
 
 
 def _is_hard_failure(exc: Exception) -> bool:
