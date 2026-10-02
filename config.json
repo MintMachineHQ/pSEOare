@@ -23,8 +23,9 @@
     },
     "climate": {
       "enabled": true,
-      "cities": 130,
-      "priority": 3
+      "cities": 454,
+      "priority": 3,
+      "note": "City list is GeoNames cities15000 filtered to population>=250k, up to7 per country, merged with the original curated 103 so no existing page is orphaned. 454 cities across 144 countries, sourced from assets/cities.json."
     },
     "crypto": {
       "enabled": true,

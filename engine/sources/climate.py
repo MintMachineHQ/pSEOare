@@ -7,7 +7,8 @@ from datetime import datetime, timezone
 
 from ..http import Http
 from ..models import Link, Page, slugify
-from .base import cached_fetch, fmt_num, load_asset, trim_to_budget
+from ..ratelimit import RateLimiter
+from .base import cached_fetch, fmt_num, load_asset
 
 log = logging.getLogger("pseo.sources.climate")
 
@@ -23,7 +24,26 @@ async def collect(cfg, http: Http, budget) -> list[Page]:
     stamp = datetime.now(timezone.utc).isoformat()
     selected = cities[:limit]
 
+    # Choose which cities to fetch before spending requests on them. The city list is far
+    # larger than one run's page budget, and each city costs a NASA POWER call, so
+    # fetching the whole list and trimming afterwards wasted hundreds of requests per run
+    # and pushed past the job timeout once the list grew. Unpublished cities come first so
+    # the corpus still grows; the remaining budget is spent refreshing known pages so
+    # upstream changes are still picked up.
+    # Must match _build_page exactly, or every city looks unseen on every run.
+    def page_path(city: dict) -> str:
+        return f"{slugify(f"{city['name']}-average-monthly-temperature-rainfall")}.html"
+
+    order = sorted(selected, key=lambda c: (not budget.is_new(page_path(c)), c["name"]))
+    chosen = order[: budget.remaining]
+    for _ in chosen:
+        budget.take()
+
+    # NASA POWER tolerates a few requests a second and throttles beyond that.
+    limiter = RateLimiter(per_minute=float(opts.get("requests_per_minute", 60)))
+
     async def one(city: dict) -> Page | None:
+        await limiter.acquire()
         try:
             data, from_cache = await cached_fetch(
                 http,
@@ -43,7 +63,7 @@ async def collect(cfg, http: Http, budget) -> list[Page]:
             return None
         return _build_page(city, data, cfg, stamp, from_cache) if isinstance(data, dict) else None
 
-    results = await asyncio.gather(*(one(c) for c in selected), return_exceptions=True)
+    results = await asyncio.gather(*(one(c) for c in chosen), return_exceptions=True)
     pages: list[Page] = []
     for res in results:
         if isinstance(res, Page):
@@ -52,7 +72,7 @@ async def collect(cfg, http: Http, budget) -> list[Page]:
             log.warning("climate task failed: %s", res)
 
     pages.sort(key=lambda p: p.slug)
-    return trim_to_budget(pages, budget)
+    return pages
 
 
 def _build_page(city: dict, data: dict, cfg, stamp: str, from_cache: bool) -> Page | None:

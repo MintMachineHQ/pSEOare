@@ -687,6 +687,30 @@ class TestRender(unittest.TestCase):
         self.assertIn("124,000,000", prose)
         self.assertEqual(len(faq), 2)
 
+    def test_climate_selects_cities_before_spending_requests(self):
+        """454 cities each cost a NASA POWER call, so choosing them after fetching
+        wasted hundreds of requests per run. Choose first: unseen cities first, and no
+        more than the remaining budget."""
+        import inspect
+
+        from engine.sources import climate
+
+        src = inspect.getsource(climate.collect)
+        self.assertIn("budget.remaining", src)
+        self.assertIn("page_path", src)
+        self.assertLess(src.index("chosen = order"), src.index("asyncio.gather"))
+
+    def test_climate_prefers_unpublished_cities(self):
+        """The pre-filter has to use the same slug _build_page produces, or every city
+        looks unseen and the whole list is refetched each run."""
+        import inspect
+
+        from engine.sources import climate
+
+        src = inspect.getsource(climate)
+        self.assertIn("average-monthly-temperature-rainfall", src)
+        self.assertIn("budget.is_new(page_path(c))", src)
+
     def test_waterfall_has_fallback(self):
         cfg = make_cfg(Path(tempfile.mkdtemp()))
         js = waterfall_js(cfg)
