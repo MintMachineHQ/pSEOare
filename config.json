@@ -44,7 +44,9 @@
   "gemini": {
     "model": "",
     "enabled": true,
-    "api_key_env": "GEMINI_API_KEY"
+    "api_key_env": "GEMINI_API_KEY",
+    "keys_env": "GEMINI_API_KEYS",
+    "note": "Set GEMINI_API_KEYS to a comma-separated list of keys (one per AI Studio project). The engine rotates to the next key when one reports quota exhaustion and remembers which key is spent for the day."
   },
   "indexing": {
     "indexnow": {

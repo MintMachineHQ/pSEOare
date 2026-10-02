@@ -70,7 +70,7 @@ GitHub -> repository -> Settings -> Secrets and variables -> Actions:
 
 | Secret | Purpose | Required |
 | --- | --- | --- |
-| `GEMINI_API_KEY` | AI Studio key for copy enrichment | optional (fallback copy otherwise) |
+| `GEMINI_API_KEYS` | comma-separated AI Studio keys; the engine rotates to the next one when a key reports quota exhaustion, and remembers the spent key for the day | optional (fallback copy otherwise) |
 | `INDEXNOW_KEY` | 32-char hex string; also written to `output/<key>.txt` | recommended |
 | `GOOGLE_INDEXING_CREDENTIALS` | service-account JSON | not recommended, see below |
 

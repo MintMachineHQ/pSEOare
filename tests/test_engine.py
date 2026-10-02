@@ -15,6 +15,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from engine.config import Config  # noqa: E402
 from engine.enrich import (  # noqa: E402
     FALLBACK_MODELS,
+    _key_pool,
     NON_TEXT_MARKERS,
     Enricher,
     _is_hard_failure,
@@ -251,6 +252,32 @@ class TestModelResolution(unittest.TestCase):
             self.assertEqual(enricher.model, FALLBACK_MODELS[0])
         finally:
             del os.environ["GEMINI_API_KEY"]
+
+
+class TestKeyRotation(unittest.TestCase):
+    def test_pool_splits_any_separator(self):
+        self.assertEqual(_key_pool("a, b\nc"), ["a", "b", "c"])
+
+    def test_pool_drops_duplicates_and_blanks(self):
+        self.assertEqual(_key_pool("a,,a, b"), ["a", "b"])
+        self.assertEqual(_key_pool(""), [])
+
+    def test_rotation_picks_next_key_then_stops(self):
+        import os
+
+        tmp = Path(tempfile.mkdtemp())
+        cfg = make_cfg(tmp)
+        os.environ["GEMINI_API_KEYS"] = "key-one,key-two"
+        try:
+            enricher = Enricher(cfg, http=None)  # type: ignore[arg-type]
+            self.assertEqual(enricher.api_key, "key-one")
+            enricher.api_key = "key-two"
+            self.assertEqual(enricher._mark_exhausted("gemini-test"), "key-one")
+            enricher.api_key = "key-one"
+            self.assertIsNone(enricher._mark_exhausted("gemini-test"))
+            self.assertFalse(enricher.enabled)
+        finally:
+            del os.environ["GEMINI_API_KEYS"]
 
 
 class TestRender(unittest.TestCase):

@@ -5,6 +5,7 @@ import asyncio
 import html
 import logging
 import re
+import time
 
 from .config import Config, env_secret
 from .http import Http, read_json_cache, write_json_cache
@@ -35,6 +36,20 @@ NON_TEXT_MARKERS = (
     "gemma",
 )
 
+def _key_pool(raw: str) -> list[str]:
+    """Accept comma, space or newline separated keys from one secret.
+
+    Rotating across keys multiplies the free-tier quota, so a single exhausted key
+    must not stop enrichment for the whole run.
+    """
+    parts = [p.strip() for p in raw.replace("\n", ",").replace(" ", ",").split(",")]
+    seen: list[str] = []
+    for part in parts:
+        if part and part not in seen:
+            seen.append(part)
+    return seen
+
+
 PROMPT = """You write short, factual, SEO-friendly copy for a data reference website.
 
 Topic: {title}
@@ -56,7 +71,17 @@ class Enricher:
     def __init__(self, cfg: Config, http: Http) -> None:
         self.cfg = cfg
         self.http = http
-        self.api_key = env_secret(cfg.raw.get("gemini", {}).get("api_key_env", "GEMINI_API_KEY"))
+        gemini_cfg = cfg.raw.get("gemini", {})
+        # GEMINI_API_KEYS (any separator) takes precedence; GEMINI_API_KEY still works.
+        pool = env_secret(gemini_cfg.get("keys_env", "GEMINI_API_KEYS")) or env_secret(
+            gemini_cfg.get("api_key_env", "GEMINI_API_KEY")
+        )
+        self.keys = _key_pool(pool) if pool else []
+        self.api_key = self.keys[0] if self.keys else None
+        # Keys that reported a daily quota exhaustion, remembered for the UTC day.
+        self.quota_path = cfg.paths.cache / "gemini_quota.json"
+        self.quota = read_json_cache(self.quota_path, {}) or {}
+        self._today = time.strftime("%Y-%m-%d")
         limits = cfg.limits
         self.model = cfg.raw.get("gemini", {}).get("model") or FALLBACK_MODELS[0]
         self.limiter = RateLimiter(per_minute=60.0 / float(limits.get("gemini_min_interval_seconds", 4.1)))
@@ -83,7 +108,8 @@ class Enricher:
         generateContent and produce text, and cache the choice for logging only.
         """
         cached = (read_json_cache(self.model_cache_path, {}) or {}).get("model")
-
+        if self.quota.get(self._today) == self.api_key:
+            log.warning("current key is quota-exhausted today; using the next one")
         try:
             data = await self.http.get_json(MODELS_ENDPOINT, {"key": self.api_key})
         except Exception as exc:  # noqa: BLE001
@@ -176,8 +202,11 @@ class Enricher:
         facts = ", ".join(f"{k}: {v}" for k, v in page.facts[:6])
         prompt = PROMPT.format(title=page.h1, summary=page.summary, facts=facts)
         models = [self.model] + [m for m in FALLBACK_MODELS if m != self.model]
+        start_key = self.api_key
         for model in models:
             text = await self._call_model(page, prompt, model)
+            if self.api_key != start_key:
+                models = [model] + [m for m in FALLBACK_MODELS if m != model]
             if text:
                 if model != self.model:
                     log.warning("switched to %s after %s failed", model, self.model)
@@ -213,11 +242,7 @@ class Enricher:
                 return cleaned
             except Exception as exc:  # noqa: BLE001
                 if any(marker in str(exc) for marker in QUOTA_MARKERS):
-                    log.error(
-                        "gemini quota exhausted for this key; keeping cached or fallback copy "
-                        "for the remaining pages"
-                    )
-                    self._trip_cutoff()
+                    self._mark_exhausted(model)
                     return None
                 if RATE_LIMIT_MARKER in str(exc):
                     # Quota pacing, not a broken key: slow down instead of giving up.
@@ -243,6 +268,26 @@ class Enricher:
                     await asyncio.sleep(wait)
         if self.consecutive_failures >= self.hard_failure_cutoff:
             self._trip_cutoff()
+        return None
+
+    def _mark_exhausted(self, model: str) -> str | None:
+        """Record the exhausted key and move to the next one, or stop if none left."""
+        if self.api_key:
+            self.quota[self._today] = self.api_key
+            write_json_cache(self.quota_path, self.quota)
+        remaining = [k for k in self.keys if k != self.api_key]
+        if remaining:
+            log.error(
+                "gemini quota exhausted on one key; rotating to the next of %d", len(remaining)
+            )
+            self.keys = remaining
+            self.api_key = remaining[0]
+            return self.api_key
+        log.error(
+            "gemini quota exhausted on every key; keeping cached or fallback copy for the "
+            "remaining pages"
+        )
+        self._trip_cutoff()
         return None
 
     def _trip_cutoff(self) -> None:
