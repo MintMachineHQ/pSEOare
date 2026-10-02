@@ -13,7 +13,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from engine.config import Config  # noqa: E402
-from engine.enrich import clean, fallback_copy, prose_and_faq  # noqa: E402
+from engine.enrich import Enricher, _is_hard_failure, clean, fallback_copy, prose_and_faq  # noqa: E402
 from engine.hubs import assign_related, sitemap_xml  # noqa: E402
 from engine.models import Link, Page, slugify  # noqa: E402
 from engine.render import build_css, build_theme, pick_copy, render_page, waterfall_js  # noqa: E402
@@ -99,6 +99,22 @@ class TestEnrich(unittest.TestCase):
         second = fallback_copy(page)
         self.assertEqual(first, second)
         self.assertEqual(len(first[1]), 2)
+
+
+class TestEnrichFailFast(unittest.TestCase):
+    def test_hard_failure_markers(self):
+        self.assertTrue(_is_hard_failure(RuntimeError("request failed: HTTP 400 Bad Request")))
+        self.assertTrue(_is_hard_failure(RuntimeError("API_KEY_INVALID")))
+        self.assertFalse(_is_hard_failure(RuntimeError("request failed: HTTP 429 rate limited")))
+        self.assertFalse(_is_hard_failure(TimeoutError("slow")))
+
+    def test_cutoff_disables_enrichment(self):
+        tmp = Path(tempfile.mkdtemp())
+        cfg = make_cfg(tmp)
+        enricher = Enricher(cfg, http=None)  # type: ignore[arg-type]
+        enricher.enabled = True
+        enricher._trip_cutoff()
+        self.assertFalse(enricher.enabled)
 
 
 class TestRender(unittest.TestCase):

@@ -45,6 +45,10 @@ class Enricher:
         self.cache_path = cfg.paths.cache / "gemini_cache.json"
         self.cache: dict[str, str] = read_json_cache(self.cache_path, {}) or {}
         self.stats = {"hit": 0, "generated": 0, "fallback": 0, "failed": 0}
+        # Consecutive hard failures (bad key, wrong model, quota exhausted) disable
+        # enrichment for the rest of the run instead of retrying every page.
+        self.consecutive_failures = 0
+        self.hard_failure_cutoff = 3
 
     def enrich_all(self, pages: list[Page]) -> dict[str, str]:
         """Return {cache_key: text} for the pages that need copy."""
@@ -68,6 +72,7 @@ class Enricher:
         targets = [p for p in targets if self.cache.get(str(p.data.get("key") or p.slug)) == ""]
         if not targets:
             return
+        log.info("enriching %d pages with %s", len(targets), self.model)
 
         async def worker(page: Page) -> None:
             key = str(page.data.get("key") or page.slug)
@@ -80,6 +85,9 @@ class Enricher:
                 self.stats["failed"] += 1
 
         for start in range(0, len(targets), 4):
+            if not self.enabled:
+                log.warning("gemini disabled mid-run: %d pages keep fallback copy", len(targets) - start)
+                break
             await asyncio.gather(*(worker(p) for p in targets[start : start + 4]))
 
         self.cache = {k: v for k, v in self.cache.items() if v}
@@ -100,13 +108,38 @@ class Enricher:
                 data = await self.http.post_json(url, payload, headers={"x-goog-api-key": self.api_key})
                 parts = data["candidates"][0]["content"]["parts"]
                 text = "".join(p.get("text", "") for p in parts).strip()
+                self.consecutive_failures = 0
                 return clean(text)
             except Exception as exc:  # noqa: BLE001
+                self.consecutive_failures += 1
+                if _is_hard_failure(exc):
+                    log.error("gemini rejected the request (%s); falling back for this run", exc)
+                    self._trip_cutoff()
+                    return None
                 wait = (2 ** attempt) * 8
                 log.warning("gemini failed (attempt %s) for %s: %s", attempt + 1, page.slug, exc)
                 if attempt < 2:
                     await asyncio.sleep(wait)
+        if self.consecutive_failures >= self.hard_failure_cutoff:
+            self._trip_cutoff()
         return None
+
+    def _trip_cutoff(self) -> None:
+        if self.enabled:
+            log.warning(
+                "gemini disabled for the rest of this run after %s consecutive failures",
+                self.consecutive_failures,
+            )
+        self.enabled = False
+
+
+HARD_FAILURE_MARKERS = ("HTTP 400", "HTTP 401", "HTTP 403", "HTTP 404", "API_KEY_INVALID")
+
+
+def _is_hard_failure(exc: Exception) -> bool:
+    """A bad key, wrong model or exhausted quota will not fix itself on retry."""
+    text = str(exc)
+    return any(marker in text for marker in HARD_FAILURE_MARKERS)
 
 
 def clean(text: str) -> str:
