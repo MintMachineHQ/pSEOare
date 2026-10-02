@@ -84,6 +84,9 @@ class Enricher:
         self.keys = _key_pool(pool) if pool else []
         self.groq_key = env_secret(gemini_cfg.get("groq_key_env", "GROQ_API_KEY"))
         self.groq_model = gemini_cfg.get("groq_model") or GROQ_FALLBACK_MODELS[0]
+        # Every model this key can see, best first. Groq retires model ids often, so the
+        # list is refreshed each run and walked on a 404 instead of hardcoding one name.
+        self.groq_models: list[str] = [self.groq_model]
         self.groq_limiter = RateLimiter(per_minute=25.0)
         self.groq_quota_path = cfg.paths.cache / "groq_quota.json"
         self.groq_quota = read_json_cache(self.groq_quota_path, {}) or {}
@@ -292,8 +295,24 @@ class Enricher:
         if self.groq_quota.get(self._today):
             log.warning("groq is quota-exhausted today; skipping it")
             return None
+        for model in self.groq_candidates():
+            text = await self._groq_try(page, prompt, model)
+            if text:
+                return text
+            if self.groq_quota.get(self._today):
+                return None
+        return None
+
+    def groq_candidates(self) -> list[str]:
+        seen: list[str] = []
+        for name in [self.groq_model, *self.groq_models]:
+            if name and name not in seen:
+                seen.append(name)
+        return seen
+
+    async def _groq_try(self, page: Page, prompt: str, model: str) -> str | None:
         payload = {
-            "model": self.groq_model,
+            "model": model,
             "messages": [{"role": "user", "content": prompt}],
             "temperature": 0.4,
             "max_tokens": 700,
@@ -314,13 +333,19 @@ class Enricher:
                 cleaned = clean(text)
                 if cleaned:
                     return cleaned
-                log.warning("groq returned no text for %s", page.slug)
+                log.warning("groq %s returned no text for %s", model, page.slug)
                 return None
             except Exception as exc:  # noqa: BLE001
                 if any(marker in str(exc) for marker in QUOTA_MARKERS) or "429" in str(exc):
                     self.groq_quota[self._today] = True
                     write_json_cache(self.groq_quota_path, self.groq_quota)
                     log.error("groq rate/quota hit for today; falling back to gemini")
+                    return None
+                if "404" in str(exc):
+                    # Retired model id: remember not to try it again this run.
+                    log.warning("groq model %s unavailable; trying the next candidate", model)
+                    if model in self.groq_models:
+                        self.groq_models.remove(model)
                     return None
                 log.warning("groq failed (attempt %s): %s", attempt + 1, exc)
                 if attempt == 0:
@@ -338,13 +363,30 @@ class Enricher:
         except Exception as exc:  # noqa: BLE001
             log.warning("groq model discovery failed (%s); trying %s", exc, self.groq_model)
             return self.groq_model
-        names = [m.get("id", "") for m in (data.get("data") or [])]
-        pool = [n for n in GROQ_FALLBACK_MODELS if n in names] or [
-            n for n in names if "versatile" in n
+        names = [m.get("id", "") for m in (data.get("data") or []) if m.get("id")]
+        if not names:
+            log.warning("groq returned no model list; trying %s", self.groq_model)
+            return self.groq_model
+        # Prefer general chat models, best capability first, and drop anything that
+        # looks retired or non-textual.
+        def rank(name: str) -> tuple:
+            parts: list[float] = []
+            for chunk in name.replace("-", " ").split():
+                if chunk.replace(".", "").isdigit():
+                    parts.extend(float(x) for x in chunk.split(".") if x)
+            prefers = 0
+            if "versatile" in name:
+                prefers = 2
+            elif "instant" in name:
+                prefers = 1
+            return (prefers, tuple(parts) or (0.0,), name)
+
+        text_models = [
+            n for n in names if not any(b in n for b in ("tts", "whisper", "vision", "guard"))
         ]
-        if pool:
-            self.groq_model = pool[0]
-            log.info("groq model resolved to %s", self.groq_model)
+        self.groq_models = sorted(text_models, key=rank, reverse=True)[:5]
+        self.groq_model = self.groq_models[0]
+        log.info("groq model resolved to %s (candidates: %s)", self.groq_model, ", ".join(self.groq_models))
         return self.groq_model
 
     def _mark_exhausted(self, model: str) -> str | None:

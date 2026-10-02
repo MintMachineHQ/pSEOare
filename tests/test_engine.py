@@ -303,6 +303,23 @@ class TestGroqProvider(unittest.TestCase):
         self.assertFalse(Enricher(cfg, http=None).enabled)  # type: ignore[arg-type]
 
 
+class TestGroqModelRotation(unittest.TestCase):
+    def test_candidates_put_current_model_first(self):
+        import os
+
+        tmp = Path(tempfile.mkdtemp())
+        cfg = make_cfg(tmp)
+        os.environ["GROQ_API_KEY"] = "gsk-test"
+        try:
+            enricher = Enricher(cfg, http=None)  # type: ignore[arg-type]
+            enricher.groq_model = "llama-x"
+            enricher.groq_models = ["llama-y", "llama-x"]
+            self.assertEqual(enricher.groq_candidates(), ["llama-x", "llama-y"])
+            self.assertEqual(len(enricher.groq_candidates()), 2)
+        finally:
+            del os.environ["GROQ_API_KEY"]
+
+
 class TestRender(unittest.TestCase):
     def test_page_contains_required_blocks(self):
         cfg = make_cfg(Path(tempfile.mkdtemp()))
