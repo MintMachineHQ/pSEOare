@@ -74,19 +74,21 @@ class Enricher:
     async def resolve_model(self) -> str:
         """Find a model this key can actually call.
 
-        Hardcoding a model name breaks the moment Google retires it (gemini-1.5-flash
-        already returns 404). Ask the API which generateContent-capable models exist,
-        prefer the newest flash model, and remember the answer for later runs.
+        Hardcoding a model name breaks the moment Google retires or re-scopes it:
+        gemini-1.5-flash already returns 404, and a discovery list that mixes text
+        and speech models will happily pick a TTS endpoint that returns no prose.
+        So ask the API every run (one cheap call), keep only models that support
+        generateContent and produce text, and cache the choice for logging only.
         """
-        cached = read_json_cache(self.model_cache_path, {}) or {}
-        if cached.get("model") and cached.get("for") == self.api_key[-6:]:
-            self.model = cached["model"]
-            return self.model
+        cached = (read_json_cache(self.model_cache_path, {}) or {}).get("model")
 
-        self.model = FALLBACK_MODELS[0]
         try:
             data = await self.http.get_json(MODELS_ENDPOINT, {"key": self.api_key})
         except Exception as exc:  # noqa: BLE001
+            if cached:
+                log.warning("model discovery failed (%s); reusing cached %s", exc, cached)
+                self.model = cached
+                return self.model
             log.warning("model discovery failed (%s); trying %s", exc, self.model)
             return self.model
 
@@ -98,7 +100,7 @@ class Enricher:
                 candidates.append(name)
 
         if not candidates:
-            log.warning("no generateContent-capable model returned; trying %s", self.model)
+            log.warning("no generateContent-capable model returned; keeping %s", self.model)
             return self.model
 
         text_models = [
@@ -109,22 +111,19 @@ class Enricher:
         pool = [n for n in text_models if "flash" in n.lower()] or text_models or candidates
 
         def rank(name: str) -> tuple:
-            version_parts = []
+            version_parts: list[float] = []
             for chunk in name.replace("-", " ").split():
                 if chunk.replace(".", "").isdigit():
                     version_parts.extend(float(x) for x in chunk.split(".") if x)
             version = tuple(version_parts) or (0.0,)
-            is_preview = 1 if "preview" in name else 0
-            is_lite = 1 if "lite" in name else 0
-            # Sort ascending, so negate the penalties.
-            return (version, -is_preview, -is_lite, name)
+            return (version, -int("preview" in name), -int("lite" in name), name)
 
         self.model = sorted(pool, key=rank)[-1]
         write_json_cache(
             self.model_cache_path,
             {"model": self.model, "for": self.api_key[-6:], "seen": sorted(candidates)},
         )
-        log.info("gemini model resolved to %s (available: %s)", self.model, ", ".join(sorted(candidates)))
+        log.info("gemini model resolved to %s", self.model)
         return self.model
 
     def enrich_all(self, pages: list[Page]) -> dict[str, str]:
