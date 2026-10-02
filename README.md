@@ -57,6 +57,10 @@ python -m http.server -d output 8080         # preview
 Flags: `--limit N` (cap pages), `--no-gemini` (deterministic copy), `--dry-run` (no pings),
 `--prune` (drop manifest entries with no file), `--config path.json`, `--log-level DEBUG`.
 
+`seo.url_style` controls link shape: `clean` for Cloudflare Pages (no `.html`, which is what
+the site uses), `html` if you ever move back to GitHub Pages. Getting this wrong makes every
+canonical point at a redirect, which is the difference between being indexed and ignored.
+
 Without a Gemini key the engine still publishes: `engine/enrich.py` falls back to
 deterministic copy built from the page's own facts, so no page is ever empty.
 
@@ -99,8 +103,12 @@ Then set `config.json -> domain` to the published URL (Cloudflare Pages or
 
 | Target | How | When |
 | --- | --- | --- |
-| GitHub Pages | `deploy.yml` on a daily cron | automatic, already live |
-| Cloudflare Pages | `deploy-cloudflare.yml` (manual) | when you want a root domain |
+| Build artifact | `deploy.yml`, daily cron, publishes to `gh-pages` | automatic |
+| **Public site** | `deploy-cloudflare.yml` mirrors `gh-pages` to Cloudflare Pages | automatic, runs right after the build |
+
+The public site is **https://pseoare.pages.dev**. The `gh-pages` branch is the build
+artifact the mirror reads; it is not advertised, because the engine emits Cloudflare clean
+URLs (no `.html`) and those would not resolve on GitHub Pages.
 
 **Why Cloudflare matters:** IndexNow validates its key at the domain root, so
 `https://user.github.io/repo/` fails with `403 UserForbiddedToAccessSite` and pings are
@@ -196,10 +204,9 @@ to avoid layout shift.
    Keep `seo.randomize_dom = true` for mild variation, not as a ranking lever.
 3. **Crypto history is capped at 365 days** on the key-free CoinGecko tier, so those pages
    are rolling 12-month summaries, not all-time history.
-4. **IndexNow needs a root domain.** The protocol validates the key at the domain root, so
-   `https://user.github.io/repo/` subpath hosting fails with `403 UserForbiddedToAccessSite`.
-   The engine detects this and skips pings. Cloudflare Pages (`project.pages.dev`) or a custom
-   domain turns IndexNow on with no code change.
+4. **IndexNow needs a root domain, and now has one.** The protocol validates its key at the
+   domain root, so the earlier `github.io/repo/` subpath returned `403
+   UserForbiddedToAccessSite`. On `pseoare.pages.dev` pings return `200/202`.
 5. **Zero-competition does not mean traffic.** Ranking still needs authority, indexing and
    a few hundred indexed pages. The engine produces supply cheaply; demand is your problem.
 6. **Adsterra/Monetag approval** requires real traffic on an established domain. Expect
