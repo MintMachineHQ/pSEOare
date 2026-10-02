@@ -95,6 +95,57 @@ Then set `config.json -> domain` to the published URL (Cloudflare Pages or
 - **CI minutes**: one daily run, `concurrency` guard, `keep_files: true` so published pages
   accumulate, caches restored with a rolling key.
 
+## Publishing targets
+
+| Target | How | When |
+| --- | --- | --- |
+| GitHub Pages | `deploy.yml` on a daily cron | automatic, already live |
+| Cloudflare Pages | `deploy-cloudflare.yml` (manual) | when you want a root domain |
+
+**Why Cloudflare matters:** IndexNow validates its key at the domain root, so
+`https://user.github.io/repo/` fails with `403 UserForbiddedToAccessSite` and pings are
+skipped. `https://<project>.pages.dev` is a root domain, so switching the domain turns
+IndexNow on with no code change. Cloudflare also gives you Bot Fight Mode for scraper
+defenders.
+
+Setup, about ten minutes of clicking:
+
+1. Cloudflare dashboard -> **Workers & Pages** -> **Create** -> **Pages** -> **Connect to Git**
+   -> choose `MintMachineHQ/pSEOare`, production branch `gh-pages`.
+   Or skip Git integration and deploy from CI instead (steps 3-5).
+2. Create the API token: **My Profile -> API Tokens -> Create Token** ->
+   *Cloudflare Pages: Edit*. Copy it once.
+3. Add repository secrets: `CF_API_TOKEN` and `CF_ACCOUNT_ID`
+   (Cloudflare dashboard -> Workers & Pages -> your account -> the account id).
+4. Run the **Deploy to Cloudflare Pages** workflow with the project name.
+5. Set `config.json -> domain` to the resulting `https://<project>.pages.dev`, or attach a
+   custom domain in the Pages dashboard and use that instead.
+
+## Ad network sign-up
+
+Two networks are worth trying; run both, they fill each other's blank ad slots.
+
+| Network | Sign up | Payout | Notes |
+| --- | --- | --- | --- |
+| Adsterra | adsterra.com -> Publisher -> Self-Serve | USDT TRC20, or Binance Pay | no minimum, approval can be strict on new domains |
+| Monetag | monetag.com -> Publisher | USDT TRC20 | asks for traffic proof on some accounts |
+
+Order of operations, because approval depends on it:
+
+1. Get the domain live (GitHub Pages is fine to start).
+2. Wait until Search Console shows impressions. Networks that check traffic will reject a
+   zero-impression domain, and a rejection can cost a review cycle.
+3. Sign up, add the domain exactly as published, and copy the `<script>` tag.
+4. Paste it into `config.json -> monetization`:
+
+```json
+"adsterra_script": "<script async src=\"//...\" data-slot=\"...\"></script>"
+```
+
+The tag is injected into all three slots (top, mid, foot) and the waterfall swaps in the
+CPA creative when a slot renders blank. Set the payout method to **USDT on TRC20** and paste
+the Tron address from `config.json -> payouts.wallets.tron_trc20.address`.
+
 ## Payouts
 
 All ad-network payouts go to one receive address, recorded in `config.json` so it is never
@@ -105,9 +156,11 @@ typed by hand:
 | Address | `F9diFVYZh7SsC2KLGDH354gyyj2fCaLkTWCyRPHYxRwA` |
 | Network | Solana |
 | Asset | USDT |
+| TRC20 fallback | `TPMycsdifyCGHyNRC8BeC12bS7ChA64BRN` (matches the Adsterra/Monetag payout rail) |
 
-This is a receive address, so it is public information and safe to commit. It is **not** a
-private key: nothing in this repo can move funds, and the address only receives.
+Both are receive addresses, so they are public information and safe to commit. No private key
+lives in this repository. The TRON key is stored outside it, in
+`~/.secrets/tron-wallet.json` with mode `600`, and `.gitignore` blocks any `*wallet*.json`.
 
 **Network mismatch is the real risk here.** Adsterra and Monetag pay crypto mainly over
 **TRC20 (Tron)**, and several payout options are Binance Pay or a bank transfer. A Solana

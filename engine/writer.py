@@ -46,6 +46,10 @@ class Writer:
     def write_raw(self, filename: str, content: str) -> None:
         (self.output / filename).write_text(content, encoding="utf-8")
 
+    def write_deploy_metadata(self) -> None:
+        """Keep static hosts from swallowing the site: no Jekyll, no underscore dirs."""
+        (self.output / ".nojekyll").write_text("", encoding="utf-8")
+
     def sync_manifest(self, pages: list[Page], stamp: str, prune: bool = False) -> None:
         # The manifest is cumulative: each run covers a slice of the corpus, so pages
         # produced by earlier runs must stay registered or they would be forgotten and

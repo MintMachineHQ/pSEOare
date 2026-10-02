@@ -99,6 +99,7 @@ async def run(args: argparse.Namespace) -> int:
         if cfg.seo.get("generate_sitemap", True):
             writer.write_raw("sitemap.xml", sitemap_xml(pages, cfg, stamp))
             writer.write_raw("robots.txt", robots_txt(cfg))
+        writer.write_deploy_metadata()
         writer.sync_manifest(pages, stamp, prune=args.prune)
 
         urls = [cfg.url_for(path) for path in new_files]

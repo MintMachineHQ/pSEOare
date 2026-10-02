@@ -8,3 +8,9 @@ output/
 # OpenBot agent scaffolding (not part of the site)
 .agents/
 .claude/
+
+# Wallet material must never enter this repository
+*wallet*.json
+*.pem
+*.key
+secrets/

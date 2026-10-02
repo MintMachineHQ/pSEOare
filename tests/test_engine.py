@@ -294,6 +294,13 @@ class TestWriter(unittest.TestCase):
         _, written3 = writer3.write_pages(changed, lambda p: "<html>2</html>", stamp)
         self.assertEqual(written3, 1)
 
+    def test_deploy_metadata_written(self):
+        tmp = Path(tempfile.mkdtemp())
+        cfg = make_cfg(tmp)
+        writer = Writer(cfg.paths.output, cfg.paths.cache)
+        writer.write_deploy_metadata()
+        self.assertTrue((cfg.paths.output / ".nojekyll").exists())
+
     def test_manifest_is_cumulative(self):
         tmp = Path(tempfile.mkdtemp())
         cfg = make_cfg(tmp)

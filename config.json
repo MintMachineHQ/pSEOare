@@ -65,9 +65,17 @@
     "adsense_like": false
   },
   "payouts": {
-    "wallet_address": "F9diFVYZh7SsC2KLGDH354gyyj2fCaLkTWCyRPHYxRwA",
-    "network": "solana",
-    "asset": "USDT",
-    "note": "Receive address for ad-network payouts. Public information, not a secret. Keep it in sync with the dashboard of every network you register with."
+    "wallets": {
+      "solana": {
+        "address": "F9diFVYZh7SsC2KLGDH354gyyj2fCaLkTWCyRPHYxRwA",
+        "asset": "USDT",
+        "note": "Primary receive address."
+      },
+      "tron_trc20": {
+        "address": "TPMycsdifyCGHyNRC8BeC12bS7ChA64BRN",
+        "asset": "USDT",
+        "note": "Matches the TRC20 payout rail Adsterra/Monetag use. Private key is NOT in this repo; it lives in ~/.secrets/tron-wallet.json (mode 600)."
+      }
+    }
   }
 }
