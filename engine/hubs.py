@@ -4,9 +4,11 @@ from __future__ import annotations
 from collections import defaultdict
 from datetime import datetime, timezone
 
+from typing import Any
+
 from .config import Config
 from .models import Link, Page
-from .render import render_hub
+from .render import _esc, render_hub
 
 SECTIONS: dict[str, dict[str, str]] = {
     "holidays_year": {"slug": "hub-holidays", "h1": "Public holiday calendars by country and year"},
@@ -194,3 +196,45 @@ def sitemap_xml(pages: list[Page], cfg: Config, stamp: str) -> str:
 
 def robots_txt(cfg: Config) -> str:
     return "User-agent: *\nAllow: /\n" f"Sitemap: {cfg.url_for('sitemap.xml')}\n"
+
+def not_found_html(cfg: Config, theme: dict[str, Any], css: str, stamp: str) -> str:
+    """A real 404 document.
+
+    Without this file the static host answers every unknown path with the homepage and
+    a 200 status. That is a soft 404: it hands search engines an unbounded number of URLs
+    that all carry identical content, which wastes crawl budget and suppresses indexing
+    of the real pages. Cloudflare Pages and GitHub Pages both serve 404.html with a
+    genuine 404 status.
+    """
+    home = _esc(cfg.url_for("index.html"))
+    sitemap = _esc(cfg.url_for("sitemap.xml"))
+    return f"""<!DOCTYPE html>
+<html lang="{cfg.language}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page not found | {_esc(cfg.site_name)}</title>
+<meta name="robots" content="noindex, follow">
+<meta name="description" content="That page does not exist on {_esc(cfg.site_name)}.">
+<link rel="canonical" href="{home}">
+<style>
+{css}
+.nf {{ max-width: 640px; margin: 0 auto; padding: 48px 20px; }}
+.nf h1 {{ font-size: 1.7rem; margin: 0 0 10px; }}
+.nf p {{ color: #4a5568; margin: 0 0 18px; }}
+.nf a {{ color: var(--accent); }}
+</style>
+</head>
+<body class="{theme['page']}-body">
+<main class="{theme['page']}">
+<div class="nf">
+<h1>That page is not here</h1>
+<p>The address you followed does not match any dataset page. Every figure on this site lives
+under one of the hubs below, and the full list is in the sitemap.</p>
+<p><a href="{home}">All datasets</a> &middot; <a href="{sitemap}">Sitemap</a></p>
+<p style="font-size:.85rem;color:#718096">Last build: {_esc(stamp)}</p>
+</div>
+</main>
+</body>
+</html>
+"""

@@ -65,7 +65,15 @@ class Writer:
             entries[page.path] = asdict(ManifestEntry.from_page(page, stamp))
         write_json_cache(self.manifest_path, {"updated_at": stamp, "pages": entries})
 
-        keep = set(entries) | {"index.html", "sitemap.xml", "robots.txt", ".nojekyll"}
+        # 404.html must survive the orphan sweep, otherwise the host falls back to
+        # serving index.html with a 200 for every unknown path.
+        keep = set(entries) | {
+            "index.html",
+            "404.html",
+            "sitemap.xml",
+            "robots.txt",
+            ".nojekyll",
+        }
         keep |= extra_keep or set()
         # Hub pages are paginated, so match the families rather than fixed names.
         keep |= {p.name for p in self.output.glob("hub-*.html")}

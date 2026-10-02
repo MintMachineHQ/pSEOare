@@ -28,6 +28,7 @@ from engine.hubs import (
     assign_related,
     hub_documents,
     hub_filenames,
+    not_found_html,
     sitemap_xml,
 )  # noqa: E402
 from engine.render import build_css, build_theme  # noqa: E402
@@ -410,6 +411,23 @@ class TestRender(unittest.TestCase):
             sample_page(cfg), cfg, theme, build_css(theme), "", [], "2026-01-01T00:00:00+00:00"
         )
         self.assertNotIn("bauval.org", html_doc)
+
+    def test_not_found_document_is_noindex_and_not_pruned(self):
+        cfg = make_cfg(Path(tempfile.mkdtemp()))
+        theme = build_theme()
+        doc = not_found_html(cfg, theme, build_css(theme), "2026-01-01T00:00:00+00:00")
+        self.assertIn('name="robots" content="noindex, follow"', doc)
+        self.assertNotIn("data-ad-slot", doc)
+        self.assertIn(cfg.url_for("index.html"), doc)
+
+    def test_keep_set_retains_the_404_document(self):
+        output = Path(tempfile.mkdtemp())
+        writer = Writer(output, output / "cache")
+        writer.write_raw("404.html", "<html></html>")
+        writer.write_raw("stale-page.html", "<html></html>")
+        writer.sync_manifest([], "2026-01-01T00:00:00+00:00", prune=False)
+        self.assertTrue((output / "404.html").exists(), "404.html must survive the orphan sweep")
+        self.assertFalse((output / "stale-page.html").exists())
 
     def test_popunder_kill_switch_removes_the_loader(self):
         tmp = Path(tempfile.mkdtemp())
