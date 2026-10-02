@@ -109,7 +109,7 @@ async def run(args: argparse.Namespace) -> int:
         for filename, html_doc in hub_documents(pages, cfg, theme, css):
             writer.write_raw(filename, html_doc)
         if cfg.seo.get("generate_sitemap", True):
-            writer.write_raw("sitemap.xml", sitemap_xml(pages, cfg, stamp))
+            writer.write_raw("sitemap.xml", sitemap_xml(pages, cfg, stamp, published=writer.manifest_pages()))
             writer.write_raw("robots.txt", robots_txt(cfg))
         # Without a 404 document the host answers every unknown path with the homepage
         # and a 200, which reads as an unbounded set of duplicate URLs to a crawler.

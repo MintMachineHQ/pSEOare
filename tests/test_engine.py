@@ -504,6 +504,24 @@ class TestRender(unittest.TestCase):
         remember_pending(empty, [])
         self.assertEqual(take_pending(empty), [])
 
+    def test_sitemap_covers_the_whole_corpus_not_just_this_run(self):
+        # The engine is incremental, so a run only rebuilds its own slice. Building the
+        # sitemap from that slice alone under-reports the site and rotates its contents.
+        cfg = make_cfg(Path(tempfile.mkdtemp()))
+        pages = [sample_page(cfg)]
+        pages[0].slug = "today"  # path is derived from slug
+        published = {
+            "today.html": {"generated_at": "2026-01-01T00:00:00+00:00"},
+            "older.html": {"generated_at": "2025-12-01T00:00:00+00:00"},
+        }
+        xml = sitemap_xml(pages, cfg, "2026-02-02T00:00:00+00:00", published=published)
+        self.assertIn(cfg.url_for("today.html"), xml)
+        self.assertIn(cfg.url_for("older.html"), xml)
+        self.assertIn("<lastmod>2025-12-01</lastmod>", xml)
+        self.assertIn("<lastmod>2026-02-02</lastmod>", xml)
+        # a page present in both the manifest and this run must appear exactly once
+        self.assertEqual(xml.count(cfg.url_for("today.html")), 1)
+
     def test_waterfall_has_fallback(self):
         cfg = make_cfg(Path(tempfile.mkdtemp()))
         js = waterfall_js(cfg)

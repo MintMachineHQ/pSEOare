@@ -49,6 +49,15 @@ class Writer:
         """Keep static hosts from swallowing the site: no Jekyll, no underscore dirs."""
         (self.output / ".nojekyll").write_text("", encoding="utf-8")
 
+    def manifest_pages(self) -> dict:
+        """Every page the manifest knows about, including earlier runs.
+
+        The engine is incremental, so a run only rebuilds its own slice. Anything that
+        needs the whole corpus, such as the sitemap, has to read this rather than the
+        current run's page list.
+        """
+        return (read_json_cache(self.manifest_path, {}) or {}).get("pages", {}) or {}
+
     def sync_manifest(
         self,
         pages: list[Page],

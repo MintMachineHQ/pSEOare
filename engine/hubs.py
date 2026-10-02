@@ -174,22 +174,49 @@ def hub_filenames(pages: list[Page]) -> list[str]:
     return names
 
 
-def sitemap_xml(pages: list[Page], cfg: Config, stamp: str) -> str:
+def sitemap_xml(
+    pages: list[Page],
+    cfg: Config,
+    stamp: str,
+    published: dict[str, Any] | None = None,
+) -> str:
+    """Sitemap for the whole published corpus.
+
+    ``pages`` is only the slice this run produced. The engine is incremental, so passing
+    just that slice made the sitemap list a few hundred URLs out of several hundred
+    published ones, and rotate its contents daily. Crawlers are then told about a
+    fraction of the site, and any URL dropped from the file risks being dropped from the
+    index. ``published`` is the manifest, keyed by path, and supplies lastmod dates for
+    everything not rebuilt today.
+    """
     stamp = stamp or datetime.now(timezone.utc).isoformat()
     from xml.sax.saxutils import escape as xml_escape
 
-    urls = [(name, "0.8", "daily") for name in hub_filenames(pages)]
-    urls += [(p.path, "0.7", "weekly") for p in pages]
-    entries = "\n".join(
-        f"  <url><loc>{xml_escape(cfg.url_for(path))}</loc>"
-        f"<lastmod>{stamp[:10]}</lastmod>"
-        f"<changefreq>{freq}</changefreq>"
-        f"<priority>{priority}</priority></url>"
-        for path, priority, freq in urls
-    )
+    urls = [(name, "0.8", "daily", stamp) for name in hub_filenames(pages)]
+    rebuilt = {page.path: page for page in pages}
+    for path, entry in (published or {}).items():
+        if path in rebuilt or not path.endswith(".html"):
+            continue
+        generated = (entry or {}).get("generated_at") or stamp
+        urls.append((path, "0.7", "weekly", generated))
+    urls += [(p.path, "0.7", "weekly", stamp) for p in pages]
+
+    seen: set[str] = set()
+    entries = []
+    for path, priority, freq, lastmod in urls:
+        if path in seen:
+            continue
+        seen.add(path)
+        entries.append(
+            f"  <url><loc>{xml_escape(cfg.url_for(path))}</loc>"
+            f"<lastmod>{lastmod[:10]}</lastmod>"
+            f"<changefreq>{freq}</changefreq>"
+            f"<priority>{priority}</priority></url>"
+        )
+    body = "\n".join(entries)
     return f"""<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-{entries}
+{body}
 </urlset>
 """
 
