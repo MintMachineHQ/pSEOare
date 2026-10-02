@@ -5,6 +5,7 @@ Run with:  python -m unittest discover -s tests -v
 from __future__ import annotations
 
 import json
+import asyncio
 import sys
 import tempfile
 import unittest
@@ -521,6 +522,38 @@ class TestRender(unittest.TestCase):
         self.assertIn("<lastmod>2026-02-02</lastmod>", xml)
         # a page present in both the manifest and this run must appear exactly once
         self.assertEqual(xml.count(cfg.url_for("today.html")), 1)
+
+    def test_http_tolerates_an_empty_success_body(self):
+        # IndexNow answers an accepted POST with 200 and no body at all. Parsing that as
+        # JSON turned every accepted submission into a retry and then into an error, so
+        # the engine reported indexnow=0 while Bing was in fact being told about pages.
+        import threading
+        from http.server import BaseHTTPRequestHandler, HTTPServer
+
+        class Handler(BaseHTTPRequestHandler):
+            def do_POST(self):  # noqa: N802 - BaseHTTPRequestHandler API
+                length = int(self.headers.get("Content-Length", 0))
+                self.rfile.read(length)
+                self.send_response(200)
+                self.end_headers()  # 200 with no body, exactly like IndexNow
+
+            def log_message(self, *args):
+                pass
+
+        server = HTTPServer(("127.0.0.1", 0), Handler)
+        thread = threading.Thread(target=server.serve_forever, daemon=True)
+        thread.start()
+        url = f"http://127.0.0.1:{server.server_port}/indexnow"
+        try:
+
+            async def scenario():
+                async with Http(concurrency=1, timeout=5, retries=2) as http:
+                    return await http.post_json(url, {"urlList": ["https://example.com/"]})
+
+            self.assertIsNone(asyncio.run(scenario()))
+        finally:
+            server.shutdown()
+            server.server_close()
 
     def test_waterfall_has_fallback(self):
         cfg = make_cfg(Path(tempfile.mkdtemp()))

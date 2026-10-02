@@ -86,6 +86,12 @@ class Http:
                         if "json" in ctype:
                             return await resp.json()
                         text = await resp.text()
+                        if not text.strip():
+                            # Some APIs answer a successful POST with 200 and an empty
+                            # body. IndexNow does exactly this. Treating that as a parse
+                            # failure turns every accepted submission into a retry and
+                            # then an error, so an empty body is returned as-is.
+                            return None
                         try:
                             return json.loads(text)
                         except json.JSONDecodeError as exc:
