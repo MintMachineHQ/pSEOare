@@ -1,14 +1,19 @@
 """Internal linking, hub pages, pagination and sitemap generation."""
 from __future__ import annotations
 
+import json
+import logging
 from collections import defaultdict
 from datetime import datetime, timezone
+from pathlib import Path
 
 from typing import Any
 
 from .config import Config
 from .models import Link, Page
 from .render import _esc, render_hub
+
+log = logging.getLogger(__name__)
 
 SECTIONS: dict[str, dict[str, str]] = {
     "holidays_year": {"slug": "hub-holidays", "h1": "Public holiday calendars by country and year"},
@@ -37,9 +42,47 @@ def _chunks(items: list, size: int) -> list[list]:
 # are worth adding mainly for the pages that would otherwise be a dead end, such as a
 # climate page for a city with no holiday coverage.
 CROSS_ENTITY_LINKS = 3
+# Cap per country, so one heavily covered country cannot crowd out the rest.
+ENTITY_INDEX_PER_ENTITY = 8
 
 
-def assign_related(pages: list[Page], cfg: Config) -> None:
+def load_entity_index(cache_dir: Path) -> dict[str, list[dict[str, str]]]:
+    """Published pages carry a country, but a single run only rebuilds one slice of the
+    corpus, so a run of climate pages cannot see the holiday pages built weeks ago. This
+    map, accumulated across runs, is what lets cross-dataset links point at them.
+    """
+    path = Path(cache_dir) / "entity_index.json"
+    try:
+        data = json.loads(path.read_text("utf-8"))
+    except (OSError, ValueError):
+        return {}
+    return data if isinstance(data, dict) else {}
+
+
+def save_entity_index(cache_dir: Path, pages: list[Page]) -> None:
+    index = load_entity_index(cache_dir)
+    for page in pages:
+        entity = str(page.data.get("entity") or "").strip()
+        if not entity:
+            continue
+        bucket = index.setdefault(entity, [])
+        if not any(entry["path"] == page.path for entry in bucket):
+            bucket.append({"path": page.path, "kind": page.kind, "h1": page.h1})
+    # Bound it: one bucket per country is small, but guard against unbounded growth anyway.
+    for entity, bucket in list(index.items()):
+        if len(bucket) > ENTITY_INDEX_PER_ENTITY:
+            index[entity] = sorted(bucket, key=lambda e: e["path"])[:ENTITY_INDEX_PER_ENTITY]
+    path = Path(cache_dir) / "entity_index.json"
+    try:
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(json.dumps(index, sort_keys=True), "utf-8")
+    except OSError as exc:  # a missing index only costs cross links, never the build
+        log.warning("could not write entity index: %s", exc)
+
+
+def assign_related(
+    pages: list[Page], cfg: Config, index: dict[str, list[dict[str, str]]] | None = None
+) -> None:
     """Link every page to its section hub, rotating siblings, and pages about its country.
 
     Sibling links alone keep visitors inside one dataset, so a Shanghai climate page never
@@ -53,7 +96,16 @@ def assign_related(pages: list[Page], cfg: Config) -> None:
         by_kind[page.kind].append(page)
         entity = str(page.data.get("entity") or "").strip()
         if entity:
-            by_entity[entity].append(page)
+            by_entity[entity].append(
+                {"path": page.path, "kind": page.kind, "h1": page.h1}
+            )
+    # Pages published by earlier runs, so a climate-only run can still reach holiday and
+    # country pages. Anything stale is harmless: the link check below would just miss.
+    for entity, entries in (index or {}).items():
+        known = {entry["path"] for entry in by_entity.get(entity, [])}
+        for entry in entries:
+            if isinstance(entry, dict) and entry.get("path") not in known:
+                by_entity[entity].append(entry)
 
     for page in pages:
         section = SECTIONS.get(page.kind)
@@ -61,9 +113,13 @@ def assign_related(pages: list[Page], cfg: Config) -> None:
         if section:
             links.append(Link(f"All: {section['h1']}", cfg.url_for(f"{section['slug']}.html")))
         entity = str(page.data.get("entity") or "").strip()
-        cross = [p for p in by_entity.get(entity, []) if p.slug != page.slug and p.kind != page.kind]
-        for other in cross[:CROSS_ENTITY_LINKS]:
-            links.append(Link(other.h1, cfg.url_for(other.path)))
+        cross = [
+            entry
+            for entry in by_entity.get(entity, [])
+            if entry["path"] != page.path and entry["kind"] != page.kind
+        ]
+        for entry in cross[:CROSS_ENTITY_LINKS]:
+            links.append(Link(entry["h1"], cfg.url_for(entry["path"])))
         siblings = [p for p in by_kind[page.kind] if p.slug != page.slug]
         # Stable pseudo-rotation: same page keeps the same neighbours every build.
         offset = int(hashlib_offset(page.slug)) % max(1, len(siblings))

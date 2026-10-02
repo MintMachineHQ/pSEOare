@@ -27,7 +27,16 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from engine.config import load_config  # noqa: E402
 from engine.enrich import Enricher  # noqa: E402
-from engine.hubs import assign_related, hub_documents, not_found_html, robots_txt, rss_feed, sitemap_xml  # noqa: E402
+from engine.hubs import (  # noqa: E402
+    assign_related,
+    hub_documents,
+    load_entity_index,
+    not_found_html,
+    robots_txt,
+    rss_feed,
+    save_entity_index,
+    sitemap_xml,
+)
 from engine.http import Http  # noqa: E402
 from engine.indexing import notify  # noqa: E402
 from engine.models import Page  # noqa: E402
@@ -79,7 +88,8 @@ async def run(args: argparse.Namespace) -> int:
             log.error("no pages produced; keeping the existing output directory untouched")
             return 2
 
-        assign_related(pages, cfg)
+        entity_index = load_entity_index(cfg.cache)
+        assign_related(pages, cfg, entity_index)
 
         enricher = Enricher(cfg, http)
         reserved = enricher.enrich_all(pages)
@@ -111,6 +121,9 @@ async def run(args: argparse.Namespace) -> int:
             return render_page(page, cfg, theme, css, prose, faq, stamp)
 
         new_files, written = writer.write_pages(pages, render_one, stamp)
+        # Record this run's pages so later, differently-scoped runs can link across
+        # datasets. Cheap, and a failure here must never fail the build.
+        save_entity_index(cfg.cache, pages)
 
         for filename, html_doc in hub_documents(pages, cfg, theme, css):
             writer.write_raw(filename, html_doc)

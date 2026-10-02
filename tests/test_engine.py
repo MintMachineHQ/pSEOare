@@ -768,10 +768,45 @@ class TestRender(unittest.TestCase):
         unrelated.data = dict(unrelated.data or {}, entity="Peru")
 
         pages = [climate, holidays, unrelated]
-        assign_related(pages, cfg)
+        assign_related(pages, cfg)  # same run, so the live pages already cover it
         hrefs = {link.url for link in climate.related}
         self.assertIn(cfg.url_for("holidays-china.html"), hrefs)   # same country
         self.assertNotIn(cfg.url_for("holidays-peru.html"), hrefs)  # different country
+
+    def test_entity_index_lets_a_later_run_link_across_datasets(self):
+        """A run only rebuilds one slice, so cross-dataset links need the index that
+        earlier runs left behind. Without it the feature silently does nothing."""
+        from engine.hubs import assign_related, load_entity_index, save_entity_index
+
+        cache = Path(tempfile.mkdtemp())
+        cfg = make_cfg(cache)
+
+        holidays = sample_page(cfg)
+        holidays.kind = "holidays_year"
+        holidays.slug = "public-holidays-china-2026"
+        holidays.h1 = "Public holidays in China 2026"
+        holidays.data = dict(holidays.data or {}, entity="China")
+        save_entity_index(cache, [holidays])
+        self.assertTrue((cache / "entity_index.json").exists())
+
+        # A later, climate-only run sees only its own page.
+        climate = sample_page(cfg)
+        climate.kind = "climate_city"
+        climate.slug = "chengdu-average-monthly-temperature-rainfall"
+        climate.h1 = "Chengdu climate"
+        climate.data = dict(climate.data or {}, entity="China")
+        assign_related([climate], cfg, load_entity_index(cache))
+
+        hrefs = {link.url for link in climate.related}
+        self.assertIn(cfg.url_for("public-holidays-china-2026.html"), hrefs)
+
+    def test_entity_index_survives_a_corrupt_file(self):
+        """A truncated cache must cost cross links, not the whole build."""
+        from engine.hubs import load_entity_index
+
+        cache = Path(tempfile.mkdtemp())
+        (cache / "entity_index.json").write_text("{not json", "utf-8")
+        self.assertEqual(load_entity_index(cache), {})
 
     def test_waterfall_has_fallback(self):
         cfg = make_cfg(Path(tempfile.mkdtemp()))
