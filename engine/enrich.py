@@ -17,7 +17,23 @@ API_ROOT = "https://generativelanguage.googleapis.com/v1beta"
 ENDPOINT = f"{API_ROOT}/models/{{model}}:generateContent"
 MODELS_ENDPOINT = f"{API_ROOT}/models"
 # Tried in order when model discovery is unavailable.
-FALLBACK_MODELS = ("gemini-2.0-flash", "gemini-2.5-flash", "gemini-flash-latest")
+FALLBACK_MODELS = ("gemini-2.5-flash", "gemini-flash-latest", "gemini-2.0-flash")
+# Model ids that answer generateContent but are useless for prose: speech, image,
+# transcription, embedding and computer-use endpoints. Ranking must skip them or it
+# happily picks a TTS model and every page comes back empty.
+NON_TEXT_MARKERS = (
+    "tts",
+    "image",
+    "transcribe",
+    "omni",
+    "robotics",
+    "computer-use",
+    "nano-banana",
+    "lyria",
+    "embedding",
+    "vision",
+    "gemma",
+)
 
 PROMPT = """You write short, factual, SEO-friendly copy for a data reference website.
 
@@ -85,18 +101,25 @@ class Enricher:
             log.warning("no generateContent-capable model returned; trying %s", self.model)
             return self.model
 
-        flash = [n for n in candidates if "flash" in n.lower()]
-        pool = flash or candidates
-        # Prefer the highest generation number, e.g. 2.5 before 2.0 before 1.5.
-        def rank(name: str) -> tuple:
-            digits = "".join(ch for ch in name if ch.isdigit() or ch == ".")
-            try:
-                version = tuple(float(x) for x in digits.split(".") if x)
-            except ValueError:
-                version = (0.0,)
-            return (version, name)
+        text_models = [
+            n for n in candidates if not any(m in n.lower() for m in NON_TEXT_MARKERS)
+        ]
+        # Flash before pro: prose generation is cheap and fast on flash, and the free
+        # tier quota is friendlier. Prefer a stable release over a dated preview.
+        pool = [n for n in text_models if "flash" in n.lower()] or text_models or candidates
 
-        self.model = sorted(pool, key=rank, reverse=True)[0]
+        def rank(name: str) -> tuple:
+            version_parts = []
+            for chunk in name.replace("-", " ").split():
+                if chunk.replace(".", "").isdigit():
+                    version_parts.extend(float(x) for x in chunk.split(".") if x)
+            version = tuple(version_parts) or (0.0,)
+            is_preview = 1 if "preview" in name else 0
+            is_lite = 1 if "lite" in name else 0
+            # Sort ascending, so negate the penalties.
+            return (version, -is_preview, -is_lite, name)
+
+        self.model = sorted(pool, key=rank)[-1]
         write_json_cache(
             self.model_cache_path,
             {"model": self.model, "for": self.api_key[-6:], "seen": sorted(candidates)},
@@ -181,8 +204,12 @@ class Enricher:
                 )
                 parts = data["candidates"][0]["content"]["parts"]
                 text = "".join(p.get("text", "") for p in parts).strip()
+                cleaned = clean(text)
+                if not cleaned:
+                    log.warning("model %s returned no text for %s", model, page.slug)
+                    return None
                 self.consecutive_failures = 0
-                return clean(text)
+                return cleaned
             except Exception as exc:  # noqa: BLE001
                 self.consecutive_failures += 1
                 if _is_hard_failure(exc):

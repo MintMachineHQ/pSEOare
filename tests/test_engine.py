@@ -15,6 +15,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from engine.config import Config  # noqa: E402
 from engine.enrich import (  # noqa: E402
     FALLBACK_MODELS,
+    NON_TEXT_MARKERS,
     Enricher,
     _is_hard_failure,
     clean,
@@ -128,6 +129,18 @@ class TestModelResolution(unittest.TestCase):
     def test_fallback_models_are_current(self):
         self.assertNotIn("1.5", " ".join(FALLBACK_MODELS))
         self.assertIn("gemini-2.0-flash", FALLBACK_MODELS)
+
+    def test_text_only_models(self):
+        seen = [
+            "gemini-2.5-flash",
+            "gemini-3.8-flash-tts",
+            "gemini-3.1-flash-image",
+            "gemini-3.5-transcribe",
+            "gemini-omni-1.1-flash",
+            "gemma-4-26b-a4b-it",
+        ]
+        text = [n for n in seen if not any(m in n.lower() for m in NON_TEXT_MARKERS)]
+        self.assertEqual(text, ["gemini-2.5-flash"])
 
     def test_configured_model_is_optional(self):
         tmp = Path(tempfile.mkdtemp())

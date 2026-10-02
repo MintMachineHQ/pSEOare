@@ -67,6 +67,13 @@ async def _indexnow(http: Http, cfg: Config, key: str, urls: list[str]) -> int:
             sent += len(batch)
         except Exception as exc:  # noqa: BLE001
             log.warning("indexnow batch failed: %s", exc)
+            if sent == 0:
+                log.warning(
+                    "IndexNow validates %s/%s.txt over HTTP. It is published by this run, "
+                    "so the first build is expected to fail; later runs succeed.",
+                    cfg.domain,
+                    key,
+                )
     log.info("IndexNow: notified %d urls", sent)
     return sent
 
