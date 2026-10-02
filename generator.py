@@ -90,14 +90,20 @@ async def run(args: argparse.Namespace) -> int:
         theme = build_theme()
         css = build_css(theme)
         copies: dict[str, tuple[str, list]] = {}
+        prose_version = cfg.raw.get("seo", {}).get("prose_version", 1)
 
         # Resolve copy up front: the hash includes it, so pages whose AI copy arrived
         # in this run are rewritten even when their data is unchanged.
         for page in pages:
             prose, faq = pick_copy(page, enricher.cache)
             copies[page.slug] = (prose, faq)
+            # prose_version is part of the hash on purpose. When the copy generator
+            # changes, every already-published page still carries the old text until its
+            # turn comes round again, which with a thousand pages takes weeks. Including a
+            # version invalidates them all at once, and each page is then rewritten once
+            # as the normal per-run slice reaches it.
             page.data["copy_hash"] = hashlib.sha256(
-                json.dumps([prose, faq], sort_keys=True).encode()
+                json.dumps([prose, faq, prose_version], sort_keys=True).encode()
             ).hexdigest()[:16]
 
         def render_one(page: Page) -> str:

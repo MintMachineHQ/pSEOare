@@ -711,6 +711,17 @@ class TestRender(unittest.TestCase):
         self.assertIn("average-monthly-temperature-rainfall", src)
         self.assertIn("budget.is_new(page_path(c))", src)
 
+    def test_prose_version_is_part_of_the_page_hash(self):
+        """Changing the copy generator must invalidate every published page, or they keep
+        the old boilerplate until their turn comes round again."""
+        import inspect
+
+        import generator
+
+        src = inspect.getsource(generator.run)
+        self.assertIn("prose_version", src)
+        self.assertIn("json.dumps([prose, faq, prose_version]", src)
+
     def test_waterfall_has_fallback(self):
         cfg = make_cfg(Path(tempfile.mkdtemp()))
         js = waterfall_js(cfg)
