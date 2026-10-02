@@ -17,6 +17,11 @@ log = logging.getLogger("pseo.enrich")
 API_ROOT = "https://generativelanguage.googleapis.com/v1beta"
 ENDPOINT = f"{API_ROOT}/models/{{model}}:generateContent"
 MODELS_ENDPOINT = f"{API_ROOT}/models"
+# Groq is OpenAI-compatible and its free tier is far larger than Gemini's
+# (thousands of requests/day), so it is the better default when a key exists.
+GROQ_ENDPOINT = "https://api.groq.com/openai/v1/chat/completions"
+GROQ_MODELS_ENDPOINT = "https://api.groq.com/openai/v1/models"
+GROQ_FALLBACK_MODELS = ("llama-3.3-70b-versatile", "llama-3.1-8b-instant")
 # Tried in order when model discovery is unavailable.
 FALLBACK_MODELS = ("gemini-2.5-flash", "gemini-flash-latest", "gemini-2.0-flash")
 # Model ids that answer generateContent but are useless for prose: speech, image,
@@ -77,6 +82,11 @@ class Enricher:
             gemini_cfg.get("api_key_env", "GEMINI_API_KEY")
         )
         self.keys = _key_pool(pool) if pool else []
+        self.groq_key = env_secret(gemini_cfg.get("groq_key_env", "GROQ_API_KEY"))
+        self.groq_model = gemini_cfg.get("groq_model") or GROQ_FALLBACK_MODELS[0]
+        self.groq_limiter = RateLimiter(per_minute=25.0)
+        self.groq_quota_path = cfg.paths.cache / "groq_quota.json"
+        self.groq_quota = read_json_cache(self.groq_quota_path, {}) or {}
         self.api_key = self.keys[0] if self.keys else None
         # Keys that reported a daily quota exhaustion, remembered for the UTC day.
         self.quota_path = cfg.paths.cache / "gemini_quota.json"
@@ -86,7 +96,7 @@ class Enricher:
         self.model = cfg.raw.get("gemini", {}).get("model") or FALLBACK_MODELS[0]
         self.limiter = RateLimiter(per_minute=60.0 / float(limits.get("gemini_min_interval_seconds", 4.1)))
         self.budget = CallBudget(int(limits.get("max_gemini_calls_per_run", 100)))
-        self.enabled = bool(cfg.raw.get("gemini", {}).get("enabled", True)) and bool(self.api_key)
+        self.enabled = bool(gemini_cfg.get("enabled", True)) and bool(self.keys or self.groq_key)
         self.cache_path = cfg.paths.cache / "gemini_cache.json"
         self.model_cache_path = cfg.paths.cache / "gemini_model.json"
         self.cache: dict[str, str] = read_json_cache(self.cache_path, {}) or {}
@@ -176,6 +186,8 @@ class Enricher:
         targets = [p for p in targets if self.cache.get(str(p.data.get("key") or p.slug)) == ""]
         if not targets:
             return
+        if self.groq_key:
+            await self.resolve_groq_model()
         await self.resolve_model()
         log.info("enriching %d pages with %s", len(targets), self.model)
 
@@ -201,6 +213,12 @@ class Enricher:
     async def _call(self, page: Page) -> str | None:
         facts = ", ".join(f"{k}: {v}" for k, v in page.facts[:6])
         prompt = PROMPT.format(title=page.h1, summary=page.summary, facts=facts)
+        if self.groq_key:
+            text = await self._call_groq(page, prompt)
+            if text:
+                return text
+            if not self.keys:
+                return None
         models = [self.model] + [m for m in FALLBACK_MODELS if m != self.model]
         start_key = self.api_key
         for model in models:
@@ -269,6 +287,65 @@ class Enricher:
         if self.consecutive_failures >= self.hard_failure_cutoff:
             self._trip_cutoff()
         return None
+
+    async def _call_groq(self, page: Page, prompt: str) -> str | None:
+        if self.groq_quota.get(self._today):
+            log.warning("groq is quota-exhausted today; skipping it")
+            return None
+        payload = {
+            "model": self.groq_model,
+            "messages": [{"role": "user", "content": prompt}],
+            "temperature": 0.4,
+            "max_tokens": 700,
+        }
+        for attempt in range(2):
+            await self.groq_limiter.acquire()
+            try:
+                data = await self.http.post_json(
+                    GROQ_ENDPOINT,
+                    payload,
+                    headers={
+                        "Authorization": f"Bearer {self.groq_key}",
+                        "Content-Type": "application/json",
+                    },
+                )
+                choices = data.get("choices") or []
+                text = (choices[0].get("message", {}).get("content") or "").strip()
+                cleaned = clean(text)
+                if cleaned:
+                    return cleaned
+                log.warning("groq returned no text for %s", page.slug)
+                return None
+            except Exception as exc:  # noqa: BLE001
+                if any(marker in str(exc) for marker in QUOTA_MARKERS) or "429" in str(exc):
+                    self.groq_quota[self._today] = True
+                    write_json_cache(self.groq_quota_path, self.groq_quota)
+                    log.error("groq rate/quota hit for today; falling back to gemini")
+                    return None
+                log.warning("groq failed (attempt %s): %s", attempt + 1, exc)
+                if attempt == 0:
+                    await asyncio.sleep(4)
+        return None
+
+    async def resolve_groq_model(self) -> str:
+        """Pick a model this Groq key can actually call."""
+        if not self.groq_key:
+            return self.groq_model
+        try:
+            data = await self.http.get_json(
+                GROQ_MODELS_ENDPOINT, headers={"Authorization": f"Bearer {self.groq_key}"}
+            )
+        except Exception as exc:  # noqa: BLE001
+            log.warning("groq model discovery failed (%s); trying %s", exc, self.groq_model)
+            return self.groq_model
+        names = [m.get("id", "") for m in (data.get("data") or [])]
+        pool = [n for n in GROQ_FALLBACK_MODELS if n in names] or [
+            n for n in names if "versatile" in n
+        ]
+        if pool:
+            self.groq_model = pool[0]
+            log.info("groq model resolved to %s", self.groq_model)
+        return self.groq_model
 
     def _mark_exhausted(self, model: str) -> str | None:
         """Record the exhausted key and move to the next one, or stop if none left."""

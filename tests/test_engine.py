@@ -280,6 +280,29 @@ class TestKeyRotation(unittest.TestCase):
             del os.environ["GEMINI_API_KEYS"]
 
 
+class TestGroqProvider(unittest.TestCase):
+    def test_enabler_accepts_groq_only(self):
+        import os
+
+        tmp = Path(tempfile.mkdtemp())
+        cfg = make_cfg(tmp)
+        cfg.raw["gemini"] = {"enabled": True, "keys_env": "GEMINI_API_KEYS", "groq_key_env": "GROQ_API_KEY"}
+        os.environ["GROQ_API_KEY"] = "gsk-test"
+        try:
+            enricher = Enricher(cfg, http=None)  # type: ignore[arg-type]
+            self.assertTrue(enricher.enabled)
+            self.assertEqual(enricher.groq_key, "gsk-test")
+            self.assertEqual(enricher.keys, [])
+        finally:
+            del os.environ["GROQ_API_KEY"]
+
+    def test_defaults_to_off_without_any_provider(self):
+        tmp = Path(tempfile.mkdtemp())
+        cfg = make_cfg(tmp)
+        cfg.raw["gemini"] = {"enabled": True}
+        self.assertFalse(Enricher(cfg, http=None).enabled)  # type: ignore[arg-type]
+
+
 class TestRender(unittest.TestCase):
     def test_page_contains_required_blocks(self):
         cfg = make_cfg(Path(tempfile.mkdtemp()))

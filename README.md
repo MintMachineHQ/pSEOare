@@ -70,7 +70,8 @@ GitHub -> repository -> Settings -> Secrets and variables -> Actions:
 
 | Secret | Purpose | Required |
 | --- | --- | --- |
-| `GEMINI_API_KEYS` | comma-separated AI Studio keys; the engine rotates to the next one when a key reports quota exhaustion, and remembers the spent key for the day | optional (fallback copy otherwise) |
+| `GROQ_API_KEY` | Groq free-tier key — preferred provider, far larger quota than Gemini | optional, recommended |
+| `GEMINI_API_KEYS` | comma-separated AI Studio keys; the engine rotates to the next one when a key reports quota exhaustion and remembers the spent key for the day | optional (fallback copy otherwise) |
 | `INDEXNOW_KEY` | 32-char hex string; also written to `output/<key>.txt` | recommended |
 | `GOOGLE_INDEXING_CREDENTIALS` | service-account JSON | not recommended, see below |
 
@@ -79,6 +80,9 @@ Then set `config.json -> domain` to the published URL (Cloudflare Pages or
 
 ## How the cost controls work
 
+- **Provider chain**: Groq first when `GROQ_API_KEY` exists (its free tier is thousands of
+  requests a day versus Gemini's small daily cap), then the Gemini key pool, then the
+  deterministic fallback copy. Quota state is remembered per UTC day per provider.
 - **Gemini pacing**: `RateLimiter` spaces calls `gemini_min_interval_seconds` apart (7.5s by
   default) and enforces a rolling per-minute window. On `429` it honours `Retry-After`, halves
   the pace after two rate limits, and never counts a rate limit as a broken key. A hard

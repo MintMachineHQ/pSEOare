@@ -46,8 +46,10 @@ class Http:
             await self._session.close()
             self._session = None
 
-    async def get_json(self, url: str, params: dict | None = None) -> Any:
-        return await self._request("GET", url, params=params)
+    async def get_json(
+        self, url: str, params: dict | None = None, headers: dict | None = None
+    ) -> Any:
+        return await self._request("GET", url, params=params, headers=headers)
 
     async def post_json(self, url: str, payload: Any, headers: dict | None = None) -> Any:
         return await self._request("POST", url, json_body=payload, headers=headers)
