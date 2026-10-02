@@ -88,7 +88,7 @@ async def run(args: argparse.Namespace) -> int:
             log.error("no pages produced; keeping the existing output directory untouched")
             return 2
 
-        entity_index = load_entity_index(cfg.cache)
+        entity_index = load_entity_index(cfg.paths.cache)
         assign_related(pages, cfg, entity_index)
 
         enricher = Enricher(cfg, http)
@@ -123,7 +123,7 @@ async def run(args: argparse.Namespace) -> int:
         new_files, written = writer.write_pages(pages, render_one, stamp)
         # Record this run's pages so later, differently-scoped runs can link across
         # datasets. Cheap, and a failure here must never fail the build.
-        save_entity_index(cfg.cache, pages)
+        save_entity_index(cfg.paths.cache, pages)
 
         for filename, html_doc in hub_documents(pages, cfg, theme, css):
             writer.write_raw(filename, html_doc)
