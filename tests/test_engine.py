@@ -6,6 +6,7 @@ from __future__ import annotations
 
 import json
 import asyncio
+import math
 import sys
 import tempfile
 import unittest
@@ -636,6 +637,55 @@ class TestRender(unittest.TestCase):
         src = inspect.getsource(crypto_source.collect)
         self.assertIn("RateLimiter", src)
         self.assertIn("await limiter.acquire()", src)
+
+    def _climate(self, name: str, warm: float, cold: float, wet: float, dry: float):
+        months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
+        # coldest at midwinter, warmest at midsummer, so the derived swing is exactly
+        # warm - cold and the peak lands on Jul
+        temps = [
+            cold + (warm - cold) * ((1 + math.cos(2 * math.pi * (i - 6) / 12)) / 2)
+            for i in range(12)
+        ]
+        rains = []
+        for i in range(12):
+            rains.append(wet if i in (5, 6) else dry)
+        rows = [[m, round(t, 1), round(r, 2), 40.0, -15.0]
+                for m, t, r in zip(months, temps, rains)]
+        return Page(kind="climate_city", title=name, h1=f"{name} climate: monthly averages",
+                    slug=name.lower().replace(" ", "-"), summary=f"{name} averages.",
+                    data={"table": {"headers": [], "rows": rows}})
+
+    def test_fallback_copy_is_unique_across_pages(self):
+        """One template reused everywhere is thin content. Prose must differ per page."""
+        names = ["Berlin", "Tokyo", "Lagos", "Cairo", "Lima", "Oslo", "Chicago", "Mumbai"]
+        pages = [self._climate(n, 22 + i, -4 + i, 3.0 + i, 0.4) for i, n in enumerate(names)]
+        prose = [fallback_copy(p)[0] for p in pages]
+        self.assertEqual(len(set(prose)), len(prose))
+
+    def test_fallback_copy_states_a_derived_comparison(self):
+        """Prose should say something the table does not: the temperature swing."""
+        page = self._climate("Berlin", 20.0, -2.0, 2.5, 0.6)
+        prose, faq = fallback_copy(page)
+        # 20 - (-2) = 22, a number that appears nowhere in the table itself
+        self.assertIn("22.0 C", prose)
+        self.assertIn("Berlin", prose)           # proper noun stays capitalised
+        self.assertNotIn("berlin", prose)
+        self.assertTrue(faq)
+        for question, answer in faq:
+            self.assertTrue(question.strip())
+            self.assertTrue(answer.strip())
+
+    def test_fallback_copy_detects_a_seasonal_rainfall_climate(self):
+        wet = self._climate("Lagos", 30.0, 26.0, 14.0, 0.2)
+        prose, _ = fallback_copy(wet)
+        self.assertRegex(prose, r"season|peak")
+
+    def test_fallback_copy_survives_a_page_without_a_table(self):
+        page = Page(kind="country", title="Japan", h1="Japan country data", slug="japan",
+                    summary="x", facts=[("Population", "124,000,000")])
+        prose, faq = fallback_copy(page)
+        self.assertIn("124,000,000", prose)
+        self.assertEqual(len(faq), 2)
 
     def test_waterfall_has_fallback(self):
         cfg = make_cfg(Path(tempfile.mkdtemp()))

@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import asyncio
 import html
+import hashlib
 import logging
 import re
 import time
@@ -484,24 +485,176 @@ def prose_and_faq(text: str) -> tuple[str, list[tuple[str, str]]]:
     return " ".join(prose_lines), faq
 
 
+def _num(text: str) -> float | None:
+    """First number in a fact value such as 'Jul (20.5 C)' or '602 mm / year'."""
+    match = re.search(r"-?\d+(?:\.\d+)?", str(text).replace(",", ""))
+    return float(match.group()) if match else None
+
+
+def _month_insight(rows: list[Any]) -> dict[str, Any] | None:
+    """Derive comparison sentences from a monthly climate table.
+
+    The prose has to say something the table does not, or it is padding. These give each
+    city page a distinct, checkable claim: how far the warmest month sits above the
+    coldest, whether rain falls all year or in one season, and how the wet month compares
+    with the dry one.
+    """
+    parsed = []
+    for row in rows or []:
+        if not isinstance(row, (list, tuple)) or len(row) < 3:
+            continue
+        try:
+            parsed.append((str(row[0]), float(row[1]), float(row[2])))
+        except (TypeError, ValueError):
+            continue
+    if len(parsed) < 6:
+        return None
+    warmest = max(parsed, key=lambda r: r[1])
+    coldest = min(parsed, key=lambda r: r[1])
+    wettest = max(parsed, key=lambda r: r[2])
+    driest = min(parsed, key=lambda r: r[2])
+    total_rain = sum(r[2] for r in parsed) * 30.4
+    wettest_share = wettest[2] / sum(r[2] for r in parsed) if sum(r[2] for r in parsed) else 0.0
+    return {
+        "warmest": warmest,
+        "coldest": coldest,
+        "wettest": wettest,
+        "driest": driest,
+        "swing": warmest[1] - coldest[1],
+        "total_rain": total_rain,
+        "wettest_share": wettest_share,
+        "seasonal": wettest_share > 0.18,
+        "rain_swing": wettest[2] / driest[2] if driest[2] else 0.0,
+    }
+
+
+_OPENERS = (
+    "This page is a single place to check {subject}.",
+    "Everything below is collected in one spot so you do not have to cross-check {subject} by hand.",
+    "A consolidated reference for {subject}, rebuilt from public data on a schedule.",
+    "If you only need {subject}, the figures and table here are the whole story.",
+    "This is the short version of {subject}, with the monthly detail underneath.",
+    "One page for {subject}, sourced from public APIs and refreshed automatically.",
+)
+
+_BRIDGES = (
+    "The build runs on a schedule and caches the last good response, so the numbers stay put even when the upstream API is having a bad day.",
+    "Every run re-reads the source and only rewrites this page when a figure actually changed.",
+    "Values come from a public open API; a successful result is cached so a later outage never blanks the page.",
+    "The same build that regenerates the sitemap refreshes these values, and unchanged pages are left untouched.",
+    "Because each page is rebuilt independently, one unavailable upstream never takes the rest of the site down.",
+)
+
+_CLOSERS = (
+    "Use the table for exact numbers, or the related pages below for neighbouring locations and periods.",
+    "The table underneath carries the per-month breakdown; the related pages cover the same dataset nearby.",
+    "Scroll for the month-by-month figures, or jump to a neighbouring location from the links below.",
+    "Exact monthly values are in the table; links below cover adjacent locations and years.",
+)
+
+_CLIMATE_FRAMES = (
+    "{place} runs from {coldest} in {coldest_month} to {warmest} in {warmest_month}, a swing of {swing} C.",
+    "The gap between {coldest_month} and {warmest_month} is {swing} C here: {coldest} against {warmest}.",
+    "Expect {coldest} at the coldest ({coldest_month}) and {warmest} at the warmest ({warmest_month}) — a {swing} C spread.",
+)
+
+_RAIN_FRAMES_SEASONAL = (
+    "Rain is strongly seasonal: {wettest_month} is the wettest month at {wettest_rain} mm/day, while {driest_month} runs at {driest_rain} mm/day, about {rain_ratio}x drier.",
+    "Precipitation peaks in {wettest_month} ({wettest_rain} mm/day) and bottoms out in {driest_month} ({driest_rain} mm/day), so a {rain_ratio}x difference between the two.",
+    "Expect a wet season rather than rain year-round: {wettest_month} brings {wettest_rain} mm/day against {driest_rain} mm/day in {driest_month}.",
+)
+
+_RAIN_FRAMES_EVEN = (
+    "Rain is spread through the year, with {wettest_month} the wettest month at {wettest_rain} mm/day and {driest_month} the driest at {driest_rain} mm/day.",
+    "No month dominates: the wettest is {wettest_month} at {wettest_rain} mm/day, the driest {driest_month} at {driest_rain} mm/day.",
+    "Expect a wet month and a dry month but no real season: {wettest_rain} mm/day in {wettest_month} against {driest_rain} mm/day in {driest_month}.",
+)
+
+_CLIMATE_FAQ = (
+    ("Is {place} climate data a forecast?", "No. These are multi-decadal averages for the grid cell, not a prediction for any particular year."),
+    ("Why do the numbers differ from a weather app?", "An app shows one location on one day. These are long-run averages, so they smooth out single hot or cold spells."),
+    ("How much rain is {wettest_rain} mm/day in a month?", "Rain is recorded as a daily mean, so {wettest_rain} mm/day is roughly {monthly} mm across a 30-day month."),
+    ("Does {place} get the same every year?", "Close to it. Averaging decades smooths variation, so treat these as typical rather than guaranteed."),
+)
+
+
 def fallback_copy(page: Page) -> tuple[str, list[tuple[str, str]]]:
-    """Deterministic copy so the site still publishes without any AI key."""
-    facts = "; ".join(f"{k.lower()} {v}" for k, v in page.facts[:4])
-    prose = (
-        f"This reference page collects {page.h1.lower()} in one place: {facts}. "
-        f"Figures are refreshed automatically by a scheduled build and cached locally so the page "
-        f"keeps its values even when the upstream API is temporarily unavailable. "
-        f"Use the table below for exact numbers, or the related pages for the same dataset for "
-        f"neighbouring periods and locations."
-    )
-    faq = [
-        (
-            f"Where does the data on {page.h1.lower()} come from?",
-            "From a public open API that is queried automatically and cached after every successful run.",
-        ),
-        (
-            f"How often is {page.h1.lower()} updated?",
-            "The build runs on a schedule, so values refresh at least daily and old pages stay live.",
-        ),
-    ]
+    """Deterministic copy so the site still publishes without any AI key.
+
+    The AI provider is usually rate-limited on a free tier, which means most pages ship
+    this text. One template reused across every page is thin content: hundreds of pages
+    differing only in a name is the pattern a search engine discounts.
+
+    So the copy is built from the page's own figures. Each opening frame is chosen by a
+    stable hash of the slug, so the phrasing varies across the corpus but never flickers
+    between builds, and every page states a comparison its reader would otherwise have to
+    work out from the table.
+    """
+    rows = ((page.data.get("table") or {}).get("rows")) or []
+    insight = _month_insight(rows) if page.kind.startswith("climate") else None
+    # Keep proper nouns capitalised: "berlin climate" reads like a typo.
+    subject = page.h1 if page.kind.startswith("climate") else page.h1.lower()
+    pick = lambda options: options[int(hashlib.sha256(page.slug.encode()).hexdigest(), 16) % len(options)]
+
+    opener = pick(_OPENERS).format(subject=subject)
+    bridge = pick(_BRIDGES)
+    closer = pick(_CLOSERS)
+    parts = [opener]
+
+    if insight:
+        place = page.h1.split()[0]
+        wm, cm = insight["warmest"], insight["coldest"]
+        wet, dry = insight["wettest"], insight["driest"]
+        parts.append(
+            pick(_CLIMATE_FRAMES).format(
+                place=place,
+                coldest=f"{cm[1]:.1f} C",
+                coldest_month=cm[0],
+                warmest=f"{wm[1]:.1f} C",
+                warmest_month=wm[0],
+                swing=f"{insight['swing']:.1f}",
+            )
+        )
+        rain_frame = pick(_RAIN_FRAMES_SEASONAL if insight["seasonal"] else _RAIN_FRAMES_EVEN)
+        parts.append(
+            rain_frame.format(
+                wettest_month=wet[0],
+                wettest_rain=f"{wet[2]:.2f}",
+                driest_month=dry[0],
+                driest_rain=f"{dry[2]:.2f}",
+                rain_ratio=f"{insight['rain_swing']:.1f}" if insight["rain_swing"] else "2",
+            )
+        )
+        parts.append(
+            f"Taken together that is roughly {insight['total_rain']:,.0f} mm of rain a year for the grid cell."
+        )
+    else:
+        facts = "; ".join(f"{k.lower()} {v}" for k, v in page.facts[:4])
+        if facts:
+            parts.append(f"The headline figures are {facts}.")
+    parts.extend((bridge, closer))
+    prose = " ".join(parts)
+
+    if insight:
+        place = page.h1.split()[0]
+        fill = {
+            "place": place,
+            "wettest_rain": f"{insight['wettest'][2]:.2f}",
+            "monthly": f"{insight['wettest'][2] * 30.4:.0f}",
+        }
+        chosen = _CLIMATE_FAQ[
+            int(hashlib.sha256((page.slug + "faq").encode()).hexdigest(), 16) % len(_CLIMATE_FAQ) :
+        ][:2]
+        faq = [(q.format(**fill), a.format(**fill)) for q, a in chosen]
+    else:
+        faq = [
+            (
+                f"Where does the data on {subject} come from?",
+                "A public open API, queried automatically and cached after every successful run.",
+            ),
+            (
+                f"How often is {subject} updated?",
+                "The build runs on a schedule, so values refresh at least daily and older pages stay live.",
+            ),
+        ]
     return prose, faq
