@@ -22,7 +22,14 @@ from engine.enrich import (  # noqa: E402
     fallback_copy,
     prose_and_faq,
 )
-from engine.hubs import assign_related, sitemap_xml  # noqa: E402
+from engine.hubs import (
+    LINKS_PER_PAGE,
+    assign_related,
+    hub_documents,
+    hub_filenames,
+    sitemap_xml,
+)  # noqa: E402
+from engine.render import build_css, build_theme  # noqa: E402
 from engine.http import Http  # noqa: E402
 from engine.indexing import key_file_is_reachable  # noqa: E402
 from engine.models import Link, Page, slugify  # noqa: E402
@@ -313,6 +320,55 @@ class TestWriter(unittest.TestCase):
         manifest = json.loads((cfg.paths.cache / "manifest.json").read_text())
         self.assertIn("berlin-climate.html", manifest["pages"])
         self.assertIn("second-page.html", manifest["pages"])
+
+
+class TestHubPagination(unittest.TestCase):
+    def _many(self, cfg, count):
+        pages = []
+        for i in range(count):
+            page = sample_page(cfg)
+            page.slug = f"city-{i:04d}"
+            page.h1 = f"City {i}"
+            pages.append(page)
+        return pages
+
+    def test_hubs_paginate(self):
+        tmp = Path(tempfile.mkdtemp())
+        cfg = make_cfg(tmp)
+        cfg.raw["domain"] = "https://data.example"
+        pages = self._many(cfg, LINKS_PER_PAGE + 25)
+        docs = dict(hub_documents(pages, cfg, build_theme(), build_css(build_theme())))
+        self.assertIn("hub-climate.html", docs)
+        self.assertIn("hub-climate-2.html", docs)
+        self.assertIn("index.html", docs)
+        self.assertIn("all-datasets-2.html", docs)
+
+    def test_hub_canonicals_are_unique(self):
+        tmp = Path(tempfile.mkdtemp())
+        cfg = make_cfg(tmp)
+        cfg.raw["domain"] = "https://data.example"
+        pages = self._many(cfg, LINKS_PER_PAGE + 10)
+        docs = hub_documents(pages, cfg, build_theme(), build_css(build_theme()))
+        canon = [h.split('rel="canonical" href="')[1].split('"')[0] for _, h in docs]
+        self.assertEqual(len(canon), len(set(canon)), "every hub page needs its own canonical")
+
+    def test_every_page_appears_in_a_hub(self):
+        tmp = Path(tempfile.mkdtemp())
+        cfg = make_cfg(tmp)
+        pages = self._many(cfg, LINKS_PER_PAGE + 5)
+        names = hub_filenames(pages)
+        self.assertEqual(len(names), 1 + 2 + 1)  # index + 2 hub pages + 1 all-datasets page
+
+
+class TestCopyHash(unittest.TestCase):
+    def test_prose_change_invalidates_the_hash(self):
+        cfg = make_cfg(Path(tempfile.mkdtemp()))
+        page = sample_page(cfg)
+        before = page.content_hash
+        page.data["copy_hash"] = "abc123"
+        self.assertNotEqual(before, page.content_hash)
+        page.data["copy_hash"] = "abc123"
+        self.assertEqual(page.content_hash, page.content_hash)
 
 
 class TestLinks(unittest.TestCase):

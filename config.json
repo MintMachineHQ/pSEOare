@@ -3,7 +3,7 @@
   "site_name": "LongTail Data Atlas",
   "language": "en",
   "limits": {
-    "max_pages_per_run": 150,
+    "max_pages_per_run": 300,
     "max_gemini_calls_per_run": 40,
     "gemini_min_interval_seconds": 7.5,
     "http_concurrency": 8,
@@ -13,7 +13,7 @@
   "sources": {
     "holidays": {
       "enabled": true,
-      "years_back": 1,
+      "years_back": 2,
       "years_forward": 1,
       "priority": 1
     },
@@ -23,7 +23,7 @@
     },
     "climate": {
       "enabled": true,
-      "cities": 60,
+      "cities": 130,
       "priority": 3
     },
     "crypto": {
@@ -31,7 +31,12 @@
       "coins": [
         "bitcoin",
         "ethereum",
-        "solana"
+        "solana",
+        "ripple",
+        "cardano",
+        "dogecoin",
+        "polkadot",
+        "chainlink"
       ],
       "priority": 4
     }

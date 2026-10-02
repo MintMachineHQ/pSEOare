@@ -28,7 +28,7 @@ INDICATORS = {
     GDP_PC: "GDP per capita (current US$)",
 }
 INDICATOR_YEAR = 2023
-MAX_COUNTRIES = 80
+MAX_COUNTRIES = 200
 
 
 def _year_for(indicator: str) -> int:

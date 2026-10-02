@@ -15,6 +15,8 @@ from __future__ import annotations
 
 import argparse
 import asyncio
+import hashlib
+import json
 import logging
 import os
 import sys
@@ -87,9 +89,19 @@ async def run(args: argparse.Namespace) -> int:
 
         theme = build_theme()
         css = build_css(theme)
+        copies: dict[str, tuple[str, list]] = {}
+
+        # Resolve copy up front: the hash includes it, so pages whose AI copy arrived
+        # in this run are rewritten even when their data is unchanged.
+        for page in pages:
+            prose, faq = pick_copy(page, enricher.cache)
+            copies[page.slug] = (prose, faq)
+            page.data["copy_hash"] = hashlib.sha256(
+                json.dumps([prose, faq], sort_keys=True).encode()
+            ).hexdigest()[:16]
 
         def render_one(page: Page) -> str:
-            prose, faq = pick_copy(page, enricher.cache)
+            prose, faq = copies[page.slug]
             return render_page(page, cfg, theme, css, prose, faq, stamp)
 
         new_files, written = writer.write_pages(pages, render_one, stamp)

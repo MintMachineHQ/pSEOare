@@ -48,8 +48,20 @@ class Page:
 
     @property
     def content_hash(self) -> str:
+        """Hash everything that can change the rendered file.
+
+        copy_hash carries the prose, so a page whose AI copy is written days later
+        (after the daily Gemini quota frees up) is treated as changed and rewritten.
+        Without it, enriched copy would never reach disk.
+        """
         payload = json.dumps(
-            {"d": self.data, "t": self.title, "s": self.summary},
+            {
+                "d": self.data,
+                "t": self.title,
+                "s": self.summary,
+                "c": self.data.get("copy_hash", ""),
+                "f": self.facts,
+            },
             sort_keys=True,
             default=str,
         )

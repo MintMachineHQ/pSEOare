@@ -7,7 +7,6 @@ from dataclasses import asdict
 from datetime import datetime, timezone
 from pathlib import Path
 
-from .hubs import SECTIONS
 from .http import read_json_cache, write_json_cache
 from .models import ManifestEntry, Page
 
@@ -60,8 +59,10 @@ class Writer:
             entries[page.path] = asdict(ManifestEntry.from_page(page, stamp))
         write_json_cache(self.manifest_path, {"updated_at": stamp, "pages": entries})
 
-        keep = set(entries) | {"index.html", "sitemap.xml", "robots.txt"}
-        keep |= {f"{meta['slug']}.html" for meta in SECTIONS.values()}
+        keep = set(entries) | {"index.html", "sitemap.xml", "robots.txt", ".nojekyll"}
+        # Hub pages are paginated, so match the families rather than fixed names.
+        keep |= {p.name for p in self.output.glob("hub-*.html")}
+        keep |= {p.name for p in self.output.glob("all-datasets-*.html")}
         removed = 0
         for path in self.output.glob("*.html"):
             if path.name not in keep:

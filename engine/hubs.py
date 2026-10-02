@@ -1,4 +1,4 @@
-"""Internal linking, hub pages and sitemap generation."""
+"""Internal linking, hub pages, pagination and sitemap generation."""
 from __future__ import annotations
 
 from collections import defaultdict
@@ -18,10 +18,21 @@ SECTIONS: dict[str, dict[str, str]] = {
     "crypto_12m": {"slug": "hub-crypto", "h1": "Crypto price by month"},
 }
 RELATED_PER_PAGE = 12
+# Links per hub page. Kept well under the 50k-link-per-page search limit while
+# staying small enough to paginate once the corpus passes a few thousand pages.
+LINKS_PER_PAGE = 250
+
+
+def _hub_filename(slug: str, index: int) -> str:
+    return f"{slug}.html" if index == 1 else f"{slug}-{index}.html"
+
+
+def _chunks(items: list, size: int) -> list[list]:
+    return [items[i : i + size] for i in range(0, len(items), size)]
 
 
 def assign_related(pages: list[Page], cfg: Config) -> None:
-    """Link every page to neighbours of the same kind plus its section hub."""
+    """Link every page to its section hub plus rotating siblings of the same kind."""
     by_kind: dict[str, list[Page]] = defaultdict(list)
     for page in pages:
         by_kind[page.kind].append(page)
@@ -32,76 +43,141 @@ def assign_related(pages: list[Page], cfg: Config) -> None:
         if section:
             links.append(Link(f"All: {section['h1']}", cfg.url_for(f"{section['slug']}.html")))
         siblings = [p for p in by_kind[page.kind] if p.slug != page.slug]
-        random_offset = abs(hash(page.slug)) % max(1, len(siblings))
-        rotated = siblings[random_offset:] + siblings[:random_offset]
+        # Stable pseudo-rotation: same page keeps the same neighbours every build.
+        offset = int(hashlib_offset(page.slug)) % max(1, len(siblings))
+        rotated = siblings[offset:] + siblings[:offset]
         for sib in rotated[:RELATED_PER_PAGE]:
             links.append(Link(sib.h1, cfg.url_for(sib.path)))
         page.related = links
 
 
+def hashlib_offset(text: str) -> int:
+    """Process-independent hash: random offsets would reshuffle links every build."""
+    total = 0
+    for ch in text:
+        total = (total * 131 + ord(ch)) & 0xFFFFFFFF
+    return total
+
+
 def hub_documents(
     pages: list[Page], cfg: Config, theme: dict, css: str
 ) -> list[tuple[str, str]]:
-    """Return [(filename, html)] for the root index plus one hub per section."""
+    """Return [(filename, html)] for the root index plus a paginated hub per section."""
     stamp = datetime.now(timezone.utc).isoformat()
     docs: list[tuple[str, str]] = []
     by_kind: dict[str, list[Page]] = defaultdict(list)
     for page in pages:
         by_kind[page.kind].append(page)
 
-    all_links = [
-        Link(page.h1, cfg.url_for(page.path))
-        for page in sorted(pages, key=lambda p: (p.kind, p.h1))
-    ][:600]
-    index_html = render_hub(
-        title=f"{cfg.site_name} - free public data reference",
-        h1=f"{cfg.site_name}: {len(pages)} automatically updated data pages",
-        intro=(
-            f"This site publishes {len(pages)} data pages built from public APIs on a daily "
-            "schedule. Every value is sourced, dated and linked to neighbouring datasets so you can "
-            "compare years, cities or countries without digging through spreadsheets."
-        ),
-        links=all_links,
-        cfg=cfg,
-        theme=theme,
-        css=css,
-        stamp=stamp,
+    everything = sorted(pages, key=lambda p: (p.kind, p.h1))
+    index_pages = _chunks(
+        [Link(p.h1, cfg.url_for(p.path)) for p in everything], LINKS_PER_PAGE
     )
-    docs.append(("index.html", index_html))
+    docs.append(
+        (
+            "index.html",
+            render_hub(
+                title=f"{cfg.site_name} - free public data reference",
+                h1=f"{cfg.site_name}: {len(pages)} automatically updated data pages",
+                intro=(
+                    f"This site publishes {len(pages)} data pages built from public APIs on a "
+                    "daily schedule. Every value is sourced, dated and linked to neighbouring "
+                    "datasets so you can compare years, cities or countries without digging "
+                    "through spreadsheets."
+                ),
+                links=index_pages[0],
+                cfg=cfg,
+                theme=theme,
+                css=css,
+                stamp=stamp,
+                canonical="index.html",
+                section_title="All datasets",
+            ),
+        )
+    )
+    for offset, links in enumerate(index_pages[1:], start=2):
+        docs.append(
+            (
+                f"all-datasets-{offset}.html",
+                render_hub(
+                    title=f"All datasets page {offset} | {cfg.site_name}",
+                    h1="All datasets",
+                    intro=f"Page {offset} of the complete dataset index.",
+                    links=links,
+                    cfg=cfg,
+                    theme=theme,
+                    css=css,
+                    stamp=stamp,
+                    canonical=f"all-datasets-{offset}.html",
+                    section_title="All datasets",
+                ),
+            )
+        )
 
+    # Country profile and population share a hub slug, so group by slug not by kind.
+    grouped: dict[str, list[Page]] = defaultdict(list)
     for kind, meta in SECTIONS.items():
-        items = by_kind.get(kind, [])
+        grouped[meta["slug"]].extend(by_kind.get(kind, []))
+
+    for slug, items in grouped.items():
         if not items:
             continue
-        links = [
-            Link(p.h1, cfg.url_for(p.path))
-            for p in sorted(items, key=lambda p: p.h1)[:600]
-        ]
-        html_doc = render_hub(
-            title=f"{meta['h1']} | {cfg.site_name}",
-            h1=meta["h1"],
-            intro=(
-                f"{len(items)} pages in this collection. Each page carries its own summary, key "
-                "figures and FAQ, and links to the closest matching datasets."
-            ),
-            links=links,
-            cfg=cfg,
-            theme=theme,
-            css=css,
-            stamp=stamp,
-        )
-        docs.append((f"{meta['slug']}.html", html_doc))
+        items = sorted(items, key=lambda p: p.h1)
+        meta = next(m for m in SECTIONS.values() if m["slug"] == slug)
+        chunks = _chunks([Link(p.h1, cfg.url_for(p.path)) for p in items], LINKS_PER_PAGE)
+        for index, links in enumerate(chunks, start=1):
+            docs.append(
+                (
+                    _hub_filename(slug, index),
+                    render_hub(
+                        title=f"{meta['h1']} | {cfg.site_name}",
+                        h1=meta["h1"] if index == 1 else f"{meta['h1']} (page {index})",
+                        intro=(
+                            f"{len(items)} pages in this collection. Each page carries its own "
+                            "summary, key figures and FAQ, and links to the closest matching "
+                            "datasets."
+                        ),
+                        links=links,
+                        cfg=cfg,
+                        theme=theme,
+                        css=css,
+                        stamp=stamp,
+                        canonical=_hub_filename(slug, index),
+                        section_title=meta["h1"],
+                        page_index=index,
+                        total_pages=len(chunks),
+                    ),
+                )
+            )
     return docs
+
+
+def hub_filenames(pages: list[Page]) -> list[str]:
+    """Filenames of every generated hub/index page, for sitemap and cleanup."""
+    by_kind: dict[str, list[Page]] = defaultdict(list)
+    for page in pages:
+        by_kind[page.kind].append(page)
+    names = ["index.html"]
+    grouped: dict[str, list[Page]] = defaultdict(list)
+    for kind, meta in SECTIONS.items():
+        grouped[meta["slug"]].extend(by_kind.get(kind, []))
+    for slug, items in grouped.items():
+        if not items:
+            continue
+        for index in range(1, len(_chunks(items, LINKS_PER_PAGE)) + 1):
+            names.append(_hub_filename(slug, index))
+    if len(pages) > LINKS_PER_PAGE:
+        for index in range(2, len(_chunks(pages, LINKS_PER_PAGE)) + 1):
+            names.append(f"all-datasets-{index}.html")
+    return names
 
 
 def sitemap_xml(pages: list[Page], cfg: Config, stamp: str) -> str:
     stamp = stamp or datetime.now(timezone.utc).isoformat()
-    urls = [("index.html", "1.0", "daily")] + [
-        (f"{SECTIONS[k]['slug']}.html", "0.8", "daily") for k in SECTIONS if any(p.kind == k for p in pages)
-    ]
-    urls += [(p.path, "0.7", "weekly") for p in pages]
     from xml.sax.saxutils import escape as xml_escape
 
+    urls = [(name, "0.8", "daily") for name in hub_filenames(pages)]
+    urls += [(p.path, "0.7", "weekly") for p in pages]
     entries = "\n".join(
         f"  <url><loc>{xml_escape(cfg.url_for(path))}</loc>"
         f"<lastmod>{stamp[:10]}</lastmod>"
@@ -113,12 +189,8 @@ def sitemap_xml(pages: list[Page], cfg: Config, stamp: str) -> str:
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 {entries}
 </urlset>
-"""  # noqa: E501 - urls are xml-escaped above
+"""
 
 
 def robots_txt(cfg: Config) -> str:
-    return (
-        "User-agent: *\n"
-        "Allow: /\n"
-        f"Sitemap: {cfg.url_for('sitemap.xml')}\n"
-    )
+    return "User-agent: *\nAllow: /\n" f"Sitemap: {cfg.url_for('sitemap.xml')}\n"

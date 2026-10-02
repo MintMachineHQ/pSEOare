@@ -12,7 +12,7 @@ from .base import cached_fetch, load_asset, trim_to_budget
 log = logging.getLogger("pseo.sources.holidays")
 
 API = "https://date.nager.at/api/v3/PublicHolidays/{year}/{code}"
-MAX_HOLIDAY_PAGES_PER_COUNTRY = 4
+MAX_HOLIDAY_PAGES_PER_COUNTRY = 3
 
 
 def _year_window(cfg_years_back: int, cfg_years_forward: int) -> list[int]:

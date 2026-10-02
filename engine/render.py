@@ -369,29 +369,55 @@ def render_hub(
     theme: dict[str, Any],
     css: str,
     stamp: str,
+    canonical: str,
+    section_title: str,
+    page_index: int = 1,
+    total_pages: int = 1,
     extra_schema: dict | None = None,
 ) -> str:
     anchor_list = "\n".join(
         f'      <li><a href="{_esc(l.url)}">{_esc(l.label)}</a></li>' for l in links
     )
+    canonical_url = cfg.url_for(canonical)
     schema = {
         "@context": "https://schema.org",
         "@type": "CollectionPage",
         "name": h1,
         "description": intro[:300],
-        "url": cfg.domain,
+        "url": canonical_url,
+        "inLanguage": cfg.language,
+        "dateModified": stamp,
     }
+    if page_index > 1:
+        schema["name"] = f"{h1} (page {page_index} of {total_pages})"
     if extra_schema:
         schema.update(extra_schema)
     schema_json = safe_json(schema)
+
+    pager = ""
+    if total_pages > 1:
+        base = canonical.rsplit("-", 1)[0] if canonical.endswith(f"-{page_index}.html") else canonical
+        prev_href = f"{base}-{page_index - 1}.html" if page_index > 1 else f"{base}.html"
+        next_href = f"{base}-{page_index + 1}.html" if page_index < total_pages else ""
+        items = [
+            f'<a href="{_esc(cfg.url_for(prev_href))}">Previous</a>'
+            if page_index > 1
+            else "<span aria-disabled=\"true\">Previous</span>",
+            f'<span>Page {page_index} of {total_pages}</span>',
+            f'<a href="{_esc(cfg.url_for(next_href))}">Next</a>'
+            if next_href
+            else "<span aria-disabled=\"true\">Next</span>",
+        ]
+        pager = f'<nav class="pager" aria-label="Pagination">{" ".join(items)}</nav>'
+
     return f"""<!DOCTYPE html>
 <html lang="{cfg.language}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{_esc(title)} | {_esc(cfg.site_name)}</title>
+<title>{_esc(title)}</title>
 <meta name="description" content="{_esc(intro[:158])}">
-<link rel="canonical" href="{_esc(cfg.url_for('index.html'))}">
+<link rel="canonical" href="{_esc(canonical_url)}">
 <script type="application/ld+json">
 {schema_json}
 </script>
@@ -399,6 +425,8 @@ def render_hub(
 {css}
 ul.hub {{ list-style: none; padding: 0; columns: 2; column-gap: 26px; }}
 ul.hub li {{ margin: 0 0 6px; break-inside: avoid; }}
+nav.pager {{ display: flex; gap: 14px; align-items: center; margin: 18px 0; }}
+nav.pager a {{ color: var(--accent); }}
 </style>
 </head>
 <body class="{theme['page']}-body">
@@ -407,11 +435,13 @@ ul.hub li {{ margin: 0 0 6px; break-inside: avoid; }}
 <h1 class="{theme['title']}">{_esc(h1)}</h1>
 <p class="lede">{_esc(intro)}</p>
 </article>
-<nav class="{theme['card']}" aria-label="Datasets">
+<p><a href="{_esc(cfg.url_for('index.html'))}">Home</a> &rsaquo; {_esc(section_title)}</p>
+<nav class="{theme['card']}" aria-label="{_esc(section_title)}">
 <ul class="hub">
 {anchor_list}
 </ul>
 </nav>
+{pager}
 <footer><p>Last build: {stamp}. Updated on a daily schedule from public data sources.</p></footer>
 </main>
 <script>
