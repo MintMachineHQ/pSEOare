@@ -74,11 +74,11 @@
     "native_banner_enabled_note": "Kill switch. The Adsterra site is categorised \"Other\", an unfiltered bucket that served suggestive/dating creatives. Set true again only after the site is recategorised to a specific vertical that excludes adult inventory.",
     "house_ad": {
       "enabled": true,
-      "url": "all-datasets-1.html",
+      "url": "index.html",
       "kicker": "More reference data",
       "headline": "Browse every dataset on this site",
       "text": "Country indicators, city climate averages, holiday dates and 365-day crypto ranges, each page linked to its neighbours.",
-      "note": "Fills any slot no ad network occupies, so top and mid are not dead space. Set enabled false to disable. A CPA offer can replace it by setting cpa_fallback_url once you have a real link."
+      "note": "Fills any slot no ad network occupies, so top and mid are not dead space. Target must be a path that actually exists: index.html is the full dataset list. Set enabled false to disable. A CPA offer can replace it by setting cpa_fallback_url once there is a real link."
     }
   },
   "seo": {
