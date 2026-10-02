@@ -10,7 +10,7 @@ from pathlib import Path
 import aiohttp
 
 from .config import Config, env_secret
-from .http import Http
+from .http import Http, read_json_cache, write_json_cache
 
 log = logging.getLogger("pseo.indexing")
 
@@ -28,9 +28,31 @@ def key_file_is_reachable(cfg: Config) -> bool:
     return "/" not in remainder
 
 
+PENDING_FILE = "indexnow_pending.json"
+
+
+def take_pending(cfg: Config) -> list[str]:
+    """URLs published by the previous run, which are live by now.
+
+    IndexNow validates every submitted URL and rejects a batch whose members are not
+    reachable. A URL created during this run is still missing from the published site,
+    because publishing happens after generation, so notifying on the same run would be
+    rejected every time. Each run therefore notifies the previous run's new URLs, which
+    the last publish has made live.
+    """
+    return read_json_cache(cfg.paths.cache / PENDING_FILE, []) or []
+
+
+def remember_pending(cfg: Config, urls: list[str]) -> None:
+    """Queue this run's new URLs for the next run to notify."""
+    if urls:
+        write_json_cache(cfg.paths.cache / PENDING_FILE, urls)
+
+
 async def notify(cfg: Config, http: Http, new_urls: list[str]) -> dict[str, int]:
     stats = {"indexnow": 0, "google": 0}
-    if not new_urls:
+    pending = take_pending(cfg)
+    if not pending and not new_urls:
         return stats
 
     inx = cfg.indexing.get("indexnow", {})
@@ -39,7 +61,8 @@ async def notify(cfg: Config, http: Http, new_urls: list[str]) -> dict[str, int]
         if not key:
             log.warning("indexnow enabled but no key configured; skipping")
         else:
-            stats["indexnow"] = await _indexnow(http, cfg, key, new_urls)
+            stats["indexnow"] = await _indexnow(http, cfg, key, pending)
+    remember_pending(cfg, [cfg.url_for(path) for path in new_urls])
 
     gapi = cfg.indexing.get("google_indexing_api", {})
     if gapi.get("enabled"):
@@ -47,7 +70,7 @@ async def notify(cfg: Config, http: Http, new_urls: list[str]) -> dict[str, int]
         if not creds:
             log.warning("google indexing enabled but no service-account JSON configured; skipping")
         else:
-            stats["google"] = await _google(http, creds, new_urls[:GOOGLE_MAX_URLS])
+            stats["google"] = await _google(http, creds, pending[:GOOGLE_MAX_URLS])
 
     return stats
 

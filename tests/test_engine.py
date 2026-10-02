@@ -33,7 +33,7 @@ from engine.hubs import (
 )  # noqa: E402
 from engine.render import build_css, build_theme  # noqa: E402
 from engine.http import Http  # noqa: E402
-from engine.indexing import key_file_is_reachable  # noqa: E402
+from engine.indexing import key_file_is_reachable, remember_pending, take_pending  # noqa: E402
 from engine.models import Link, Page, slugify  # noqa: E402
 from engine.ratelimit import CallBudget  # noqa: E402
 from engine.sources.base import trim_to_budget  # noqa: E402
@@ -489,6 +489,20 @@ class TestRender(unittest.TestCase):
             [p.slug for p in chosen],
             ["page-015", "page-016", "page-017", "page-018", "page-019"],
         )
+
+    def test_indexnow_defers_to_the_next_run(self):
+        # IndexNow validates every submitted URL. A page produced during this run is not
+        # published until after generation, so notifying on the same run gets the batch
+        # rejected. Each run must notify the previous run's URLs instead.
+        tmp = Path(tempfile.mkdtemp())
+        cfg = make_cfg(tmp)
+        remember_pending(cfg, ["https://pseoare.pages.dev/a", "https://pseoare.pages.dev/b"])
+        self.assertEqual(take_pending(cfg), ["https://pseoare.pages.dev/a", "https://pseoare.pages.dev/b"])
+        # A fresh cache directory has nothing queued, and an empty run queues nothing.
+        empty = make_cfg(Path(tempfile.mkdtemp()))
+        self.assertEqual(take_pending(empty), [])
+        remember_pending(empty, [])
+        self.assertEqual(take_pending(empty), [])
 
     def test_waterfall_has_fallback(self):
         cfg = make_cfg(Path(tempfile.mkdtemp()))
