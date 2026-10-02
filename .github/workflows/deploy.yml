@@ -68,15 +68,20 @@ jobs:
           echo "published pages: $pages"
           test "$pages" -gt 1
           python - <<'PY'
-          import pathlib, sys
+          import json, pathlib, sys
+          cfg = json.loads(pathlib.Path("config.json").read_text())
+          # Verification tokens are plain text served at the site root, not pages.
+          skip = set((cfg.get("seo", {}).get("verification_files") or {}).keys())
           broken = []
           for path in pathlib.Path("output").glob("*.html"):
+              if path.name in skip:
+                  continue
               text = path.read_text(encoding="utf-8")
               if "<h1" not in text or "application/ld+json" not in text:
                   broken.append(path.name)
           if broken:
               sys.exit(f"pages missing h1 or JSON-LD: {broken[:5]}")
-          print("all pages have an h1 and JSON-LD")
+          print(f"all pages have an h1 and JSON-LD ({len(skip)} verification files skipped)")
           PY
 
       - name: Save caches for the next run
