@@ -22,6 +22,12 @@ GOOGLE_ENDPOINT = "https://indexing.googleapis.com/v3/urlNotifications"
 GOOGLE_MAX_URLS = 100
 
 
+def key_file_is_reachable(cfg: Config) -> bool:
+    """True when the site root equals the published root (no project subpath)."""
+    remainder = cfg.domain.replace("https://", "").replace("http://", "").strip("/")
+    return "/" not in remainder
+
+
 async def notify(cfg: Config, http: Http, new_urls: list[str]) -> dict[str, int]:
     stats = {"indexnow": 0, "google": 0}
     if not new_urls:
@@ -47,6 +53,17 @@ async def notify(cfg: Config, http: Http, new_urls: list[str]) -> dict[str, int]
 
 
 async def _indexnow(http: Http, cfg: Config, key: str, urls: list[str]) -> int:
+    if not key_file_is_reachable(cfg):
+        log.warning(
+            "IndexNow needs %s/%s.txt at the domain root, but this site is served from the "
+            "subpath %s. IndexNow rejects that with 403 UserForbiddedToAccessSite, so pings are "
+            "skipped. Publish on Cloudflare Pages (project.pages.dev) or a custom domain to enable it.",
+            cfg.host,
+            key,
+            cfg.domain,
+        )
+        return 0
+
     key_file = Path(cfg.paths.output) / f"{key}.txt"
     try:
         key_file.write_text(key, encoding="utf-8")

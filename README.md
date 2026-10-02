@@ -67,7 +67,7 @@ GitHub -> repository -> Settings -> Secrets and variables -> Actions:
 | Secret | Purpose | Required |
 | --- | --- | --- |
 | `GEMINI_API_KEY` | AI Studio key for copy enrichment | optional (fallback copy otherwise) |
-| `INDEXNOW_KEY` | random 32-char hex string; also written to `output/<key>.txt` | recommended |
+| `INDEXNOW_KEY` | 32-char hex string; also written to `output/<key>.txt` | recommended |
 | `GOOGLE_INDEXING_CREDENTIALS` | service-account JSON | not recommended, see below |
 
 Then set `config.json -> domain` to the published URL (Cloudflare Pages or
@@ -75,8 +75,15 @@ Then set `config.json -> domain` to the published URL (Cloudflare Pages or
 
 ## How the cost controls work
 
-- **Gemini pacing**: `RateLimiter` spaces calls at least 4.1s apart and also enforces a
-  rolling 15-per-minute window, with 8s/16s/24s backoff on failure.
+- **Gemini pacing**: `RateLimiter` spaces calls `gemini_min_interval_seconds` apart (7.5s by
+  default) and enforces a rolling per-minute window. On `429` it honours `Retry-After`, halves
+  the pace after two rate limits, and never counts a rate limit as a broken key. A hard
+  rejection (400/401/403/404) disables enrichment for the rest of the run instead of retrying
+  every page, so a bad key costs one run rather than twenty minutes.
+- **Model discovery**: the model is never hardcoded. Each run asks
+  `v1beta/models` which models the key can call, drops non-text endpoints (TTS, image,
+  transcription), prefers the newest stable flash model, and falls back through a candidate
+  list if the chosen one 404s. `gemini-1.5-flash` already returns 404.
 - **Per-run budget**: `max_gemini_calls_per_run` caps spend; the cache is keyed by data
   key, so a re-run of unchanged data costs zero calls.
 - **Delta writes**: `cache/manifest.json` stores a content hash per page; unchanged pages
@@ -116,9 +123,13 @@ to avoid layout shift.
    Keep `seo.randomize_dom = true` for mild variation, not as a ranking lever.
 3. **Crypto history is capped at 365 days** on the key-free CoinGecko tier, so those pages
    are rolling 12-month summaries, not all-time history.
-4. **Zero-competition does not mean traffic.** Ranking still needs authority, indexing and
+4. **IndexNow needs a root domain.** The protocol validates the key at the domain root, so
+   `https://user.github.io/repo/` subpath hosting fails with `403 UserForbiddedToAccessSite`.
+   The engine detects this and skips pings. Cloudflare Pages (`project.pages.dev`) or a custom
+   domain turns IndexNow on with no code change.
+5. **Zero-competition does not mean traffic.** Ranking still needs authority, indexing and
    a few hundred indexed pages. The engine produces supply cheaply; demand is your problem.
-5. **Adsterra/Monetag approval** requires real traffic on an established domain. Expect
+6. **Adsterra/Monetag approval** requires real traffic on an established domain. Expect
    rejection on a brand-new Pages subdomain; a cheap domain plus a few weeks of indexed
    pages is the usual path.
 

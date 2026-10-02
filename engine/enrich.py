@@ -70,6 +70,8 @@ class Enricher:
         # enrichment for the rest of the run instead of retrying every page.
         self.consecutive_failures = 0
         self.hard_failure_cutoff = 3
+        self.rate_limited = 0
+        self.rate_limit_cutoff = 2
 
     async def resolve_model(self) -> str:
         """Find a model this key can actually call.
@@ -210,6 +212,15 @@ class Enricher:
                 self.consecutive_failures = 0
                 return cleaned
             except Exception as exc:  # noqa: BLE001
+                if RATE_LIMIT_MARKER in str(exc):
+                    # Quota pacing, not a broken key: slow down instead of giving up.
+                    self.rate_limited += 1
+                    if self.rate_limited >= self.rate_limit_cutoff:
+                        log.warning("rate limited %s times; halving the request pace", self.rate_limited)
+                        self.limiter.min_interval *= 2
+                        self.rate_limited = 0
+                    log.warning("gemini rate limited; next call in a slower window")
+                    return None
                 self.consecutive_failures += 1
                 if _is_hard_failure(exc):
                     if "404" in str(exc):
@@ -237,6 +248,7 @@ class Enricher:
 
 
 HARD_FAILURE_MARKERS = ("HTTP 400", "HTTP 401", "HTTP 403", "HTTP 404", "API_KEY_INVALID")
+RATE_LIMIT_MARKER = "HTTP 429"
 
 
 def _is_hard_failure(exc: Exception) -> bool:

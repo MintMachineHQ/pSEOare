@@ -71,10 +71,14 @@ class Http:
                         method, url, params=params, json=json_body, headers=headers
                     ) as resp:
                         if resp.status == 429:
-                            await asyncio.sleep(6 * (attempt + 1))
-                            raise aiohttp.ClientError("HTTP 429 rate limited")
-                        if resp.status >= 500:
-                            raise aiohttp.ClientError(f"HTTP {resp.status}")
+                            body = (await resp.text())[:300]
+                            retry_after = float(resp.headers.get("Retry-After", 0) or 0)
+                            wait = retry_after or 8.0 * (attempt + 1)
+                            await asyncio.sleep(wait)
+                            raise aiohttp.ClientError(f"HTTP 429 rate limited: {body}")
+                        if resp.status >= 400:
+                            body = (await resp.text())[:300]
+                            raise aiohttp.ClientError(f"HTTP {resp.status}: {body}")
                         resp.raise_for_status()
                         ctype = resp.headers.get("Content-Type", "")
                         if "json" in ctype:

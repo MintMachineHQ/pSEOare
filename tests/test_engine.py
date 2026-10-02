@@ -23,6 +23,7 @@ from engine.enrich import (  # noqa: E402
     prose_and_faq,
 )
 from engine.hubs import assign_related, sitemap_xml  # noqa: E402
+from engine.indexing import key_file_is_reachable  # noqa: E402
 from engine.models import Link, Page, slugify  # noqa: E402
 from engine.render import build_css, build_theme, pick_copy, render_page, waterfall_js  # noqa: E402
 from engine.sources import climate, countries, crypto, holidays  # noqa: E402
@@ -110,6 +111,12 @@ class TestEnrich(unittest.TestCase):
 
 
 class TestEnrichFailFast(unittest.TestCase):
+    def test_rate_limit_is_not_a_hard_failure(self):
+        from engine.enrich import RATE_LIMIT_MARKER
+
+        self.assertNotEqual(RATE_LIMIT_MARKER, "HTTP 400")
+        self.assertFalse(_is_hard_failure(RuntimeError("HTTP 429 rate limited: quota")))
+
     def test_hard_failure_markers(self):
         self.assertTrue(_is_hard_failure(RuntimeError("request failed: HTTP 400 Bad Request")))
         self.assertTrue(_is_hard_failure(RuntimeError("API_KEY_INVALID")))
@@ -123,6 +130,22 @@ class TestEnrichFailFast(unittest.TestCase):
         enricher.enabled = True
         enricher._trip_cutoff()
         self.assertFalse(enricher.enabled)
+
+
+class TestIndexNowHosting(unittest.TestCase):
+    def test_subpath_hosts_are_rejected(self):
+        tmp = Path(tempfile.mkdtemp())
+        cfg = make_cfg(tmp)
+        cfg.raw["domain"] = "https://mintmachinehq.github.io/pSEOare"
+        self.assertFalse(key_file_is_reachable(cfg))
+
+    def test_root_hosts_are_allowed(self):
+        tmp = Path(tempfile.mkdtemp())
+        cfg = make_cfg(tmp)
+        cfg.raw["domain"] = "https://data-atlas.pages.dev"
+        self.assertTrue(key_file_is_reachable(cfg))
+        cfg.raw["domain"] = "https://atlas.example.com"
+        self.assertTrue(key_file_is_reachable(cfg))
 
 
 class TestModelResolution(unittest.TestCase):
