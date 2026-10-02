@@ -40,32 +40,43 @@ def key() -> str:
     return value
 
 
-def call(method: str, api_key: str, payload: dict | None = None) -> dict:
-    url = f"{API}/{method}?" + urllib.parse.urlencode({"apikey": api_key})
-    data = json.dumps(payload).encode() if payload is not None else None
+def call(method: str, api_key: str, payload: dict | None = None, get: bool = False) -> dict:
+    """Call a Bing Webmaster API method.
+
+    SubmitUrlbatch takes a JSON body on POST. GetUrlSubmissionQuota is a GET and takes
+    its arguments in the query string; posting to it answers 405.
+    """
+    params = {"apikey": api_key}
+    body = None
+    if get:
+        params.update(payload or {})
+    elif payload is not None:
+        body = json.dumps(payload).encode()
+    url = f"{API}/{method}?" + urllib.parse.urlencode(params)
     req = urllib.request.Request(
         url,
-        data=data,
-        method="POST" if data else "GET",
+        data=body,
+        method="GET" if get else "POST",
         headers={"Content-Type": "application/json; charset=utf-8", "User-Agent": "pseoare"},
     )
     try:
         with urllib.request.urlopen(req, timeout=60) as resp:
-            body = resp.read().decode().strip()
+            body_text = resp.read().decode().strip()
     except urllib.error.HTTPError as exc:
         detail = exc.read().decode()[:400]
         hint = {
             401: "the key was rejected. Generate a fresh one in Bing Webmaster Tools",
             403: "the key is valid but not permitted for this site",
+            405: "wrong HTTP method or endpoint name for this method",
             429: "Bing is rate limiting; try again later",
         }.get(exc.code, "")
         sys.exit(f"{method} failed: HTTP {exc.code} {hint}\n{detail}")
-    if not body:
+    if not body_text:
         return {}
     try:
-        return json.loads(body)
+        return json.loads(body_text)
     except json.JSONDecodeError:
-        return {"raw": body[:300]}
+        return {"raw": body_text[:300]}
 
 
 def sitemap_urls(source: str) -> list[str]:
@@ -83,7 +94,7 @@ def sitemap_urls(source: str) -> list[str]:
 
 
 def quota(api_key: str, site: str) -> None:
-    result = call("GetUrlSubmissionQuota", api_key, {"siteUrl": site})
+    result = call("GetUrlSubmissionQuota", api_key, {"siteUrl": site}, get=True)
     print(json.dumps(result, indent=2)[:800])
 
 

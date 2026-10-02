@@ -107,9 +107,25 @@ class Enricher:
         # Consecutive hard failures (bad key, wrong model, quota exhausted) disable
         # enrichment for the rest of the run instead of retrying every page.
         self.consecutive_failures = 0
+        self._gemini_skip_logged = False
         self.hard_failure_cutoff = 3
         self.rate_limited = 0
         self.rate_limit_cutoff = 2
+
+    @property
+    def gemini_available(self) -> bool:
+        """True when some Gemini key is still usable today.
+
+        A daily quota exhaustion is remembered per key for the UTC day. With a single
+        key configured, the old guard logged "using the next one" and then carried on
+        calling the same exhausted key, once per candidate model, each with its own
+        HTTP retries and exponential backoff. That is minutes of a cron job waiting on
+        an error that cannot recover until tomorrow.
+        """
+        if not self.keys:
+            return False
+        exhausted = self.quota.get(self._today)
+        return not exhausted or any(key != exhausted for key in self.keys)
 
     async def resolve_model(self) -> str:
         """Find a model this key can actually call.
@@ -121,8 +137,13 @@ class Enricher:
         generateContent and produce text, and cache the choice for logging only.
         """
         cached = (read_json_cache(self.model_cache_path, {}) or {}).get("model")
-        if self.quota.get(self._today) == self.api_key:
-            log.warning("current key is quota-exhausted today; using the next one")
+        if not self.gemini_available:
+            log.warning(
+                "every gemini key is quota-exhausted today; skipping model discovery"
+            )
+            if cached:
+                self.model = cached
+            return self.model
         try:
             data = await self.http.get_json(MODELS_ENDPOINT, {"key": self.api_key})
         except Exception as exc:  # noqa: BLE001
@@ -222,6 +243,11 @@ class Enricher:
                 return text
             if not self.keys:
                 return None
+        if not self.gemini_available:
+            if not self._gemini_skip_logged:
+                log.warning("every gemini key is quota-exhausted today; using fallback copy")
+                self._gemini_skip_logged = True
+            return None
         models = [self.model] + [m for m in FALLBACK_MODELS if m != self.model]
         start_key = self.api_key
         for model in models:

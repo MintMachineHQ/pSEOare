@@ -33,7 +33,7 @@ from engine.hubs import (
     sitemap_xml,
 )  # noqa: E402
 from engine.render import build_css, build_theme  # noqa: E402
-from engine.http import Http  # noqa: E402
+from engine.http import Http, QuotaExhausted  # noqa: E402
 from engine.indexing import key_file_is_reachable, remember_pending, take_pending  # noqa: E402
 from engine.models import Link, Page, slugify  # noqa: E402
 from engine.ratelimit import CallBudget  # noqa: E402
@@ -152,7 +152,7 @@ class TestEnrichFailFast(unittest.TestCase):
 
 
 class TestHttpErrorPropagation(unittest.TestCase):
-    def test_retry_wrapper_keeps_the_last_error(self):
+    def test_rate_limit_body_survives_the_retry_wrapper(self):
         """The enricher classifies quota vs rate-limit from the message, so the
         underlying body must survive the retry wrapper."""
         import asyncio
@@ -166,7 +166,7 @@ class TestHttpErrorPropagation(unittest.TestCase):
                 headers = {"Content-Type": "application/json"}
 
                 async def text(self) -> str:
-                    return '{"error": {"message": "You exceeded your current quota"}}'
+                    return '{"error": {"message": "Resource has been exhausted"}}'
 
                 async def __aenter__(self):
                     return self
@@ -183,7 +183,7 @@ class TestHttpErrorPropagation(unittest.TestCase):
                 await http.get_json("https://example.invalid/models")
             except RuntimeError as exc:
                 message = str(exc)
-                self.assertIn("exceeded your current quota", message)
+                self.assertIn("Resource has been exhausted", message)
                 self.assertIn("HTTP 429", message)
             else:
                 self.fail("expected a RuntimeError")
@@ -551,6 +551,77 @@ class TestRender(unittest.TestCase):
                     return await http.post_json(url, {"urlList": ["https://example.com/"]})
 
             self.assertIsNone(asyncio.run(scenario()))
+        finally:
+            server.shutdown()
+            server.server_close()
+
+    def test_quota_body_surfaces_directly_as_quota_exhausted(self):
+        """An exhausted daily quota bypasses the retry wrapper, but the body must
+        still reach the enricher, which classifies failures on the message."""
+        import asyncio
+
+        async def scenario() -> None:
+            http = Http(concurrency=1, timeout=1, retries=3)
+
+            class FakeResponse:
+                status = 429
+                headers = {"Content-Type": "application/json"}
+
+                async def text(self) -> str:
+                    return '{"error": {"message": "You exceeded your current quota"}}'
+
+                async def __aenter__(self):
+                    return self
+
+                async def __aexit__(self, *exc):
+                    return False
+
+            class FakeSession:
+                def request(self, *args, **kwargs):
+                    return FakeResponse()
+
+            http._session = FakeSession()  # type: ignore[assignment]
+            with self.assertRaises(QuotaExhausted) as ctx:
+                await http.get_json("https://example.invalid/models")
+            self.assertIn("exceeded your current quota", str(ctx.exception))
+
+        asyncio.run(scenario())
+
+    def test_exhausted_quota_is_sent_once_not_three_times(self):
+        """A daily free-tier quota cannot recover during a run, so retrying it three
+        times with backoff only burned the job timeout."""
+        import threading
+        from http.server import BaseHTTPRequestHandler, HTTPServer
+
+        attempts = []
+
+        class Handler(BaseHTTPRequestHandler):
+            def do_POST(self):  # noqa: N802 - BaseHTTPRequestHandler API
+                attempts.append(1)
+                length = int(self.headers.get("Content-Length", 0))
+                self.rfile.read(length)
+                body = b'{"error":{"message":"You exceeded your current quota"}}'
+                self.send_response(429)
+                self.send_header("Content-Type", "application/json")
+                self.send_header("Content-Length", str(len(body)))
+                self.end_headers()
+                self.wfile.write(body)
+
+            def log_message(self, *args):
+                pass
+
+        server = HTTPServer(("127.0.0.1", 0), Handler)
+        threading.Thread(target=server.serve_forever, daemon=True).start()
+        url = f"http://127.0.0.1:{server.server_port}/generateContent"
+        try:
+
+            async def scenario():
+                async with Http(concurrency=1, timeout=5, retries=3) as http:
+                    await http.post_json(url, {"a": 1})
+
+            with self.assertRaises(QuotaExhausted):
+                asyncio.run(scenario())
+            self.assertEqual(len(attempts), 1, "an exhausted quota must be sent once")
         finally:
             server.shutdown()
             server.server_close()

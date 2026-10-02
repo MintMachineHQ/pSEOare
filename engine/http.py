@@ -19,6 +19,22 @@ USER_AGENT = (
 )
 
 
+QUOTA_EXHAUSTED_MARKERS = (
+    "exceeded your current quota",
+    "quota exceeded",
+    "resource_exhausted",
+    "insufficient_quota",
+)
+
+
+class QuotaExhausted(Exception):
+    """A 429 that means the daily allowance is gone, not a momentary rate limit."""
+
+
+def _is_quota_exhausted(body: str) -> bool:
+    return any(marker in body.lower() for marker in QUOTA_EXHAUSTED_MARKERS)
+
+
 class Http:
     def __init__(
         self,
@@ -74,6 +90,11 @@ class Http:
                     ) as resp:
                         if resp.status == 429:
                             body = (await resp.text())[:300]
+                            if _is_quota_exhausted(body):
+                                # A daily free-tier quota will not recover during this
+                                # run. Retrying it three times with backoff costs minutes
+                                # of the job for an answer that cannot change.
+                                raise QuotaExhausted(f"HTTP 429 quota exhausted: {body}")
                             retry_after = float(resp.headers.get("Retry-After", 0) or 0)
                             wait = retry_after or 8.0 * (attempt + 1)
                             await asyncio.sleep(wait)
@@ -96,6 +117,9 @@ class Http:
                             return json.loads(text)
                         except json.JSONDecodeError as exc:
                             raise ValueError(f"non-JSON response from {url}: {exc}") from exc
+            except QuotaExhausted as exc:
+                # Not retryable: the caller decides what to do about an exhausted quota.
+                raise
             except Exception as exc:  # noqa: BLE001 - deliberate catch-all + retry
                 last = exc
                 wait = min(30.0, (2 ** attempt) * 1.5)
