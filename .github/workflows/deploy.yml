@@ -1,0 +1,98 @@
+name: Build and deploy pSEO site
+
+on:
+  schedule:
+    # 04:17 UTC daily - off the top of the hour, when GitHub's cron queue is emptiest.
+    - cron: "17 4 * * *"
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "Max pages to generate in this run (blank = config default)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pseo-deploy
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
+      GOOGLE_INDEXING_CREDENTIALS: ${{ secrets.GOOGLE_INDEXING_CREDENTIALS }}
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Restore scrape + manifest caches
+        uses: actions/cache/restore@v4
+        with:
+          path: cache
+          # Rolling restore: every run picks up the most recent cache prefix, and
+          # each run saves a fresh cache (below) for the next one.
+          key: pseo-cache-${{ github.run_id }}
+          restore-keys: |
+            pseo-cache-
+
+      - name: Generate pages
+        run: |
+          if [ -n "${{ inputs.limit }}" ]; then
+            python generator.py --limit "${{ inputs.limit }}"
+          else
+            python generator.py
+          fi
+
+      - name: Sanity check output
+        run: |
+          test -f output/index.html
+          test -f output/sitemap.xml
+          test -f output/robots.txt
+          pages=$(find output -name '*.html' | wc -l)
+          echo "published pages: $pages"
+          test "$pages" -gt 1
+          python - <<'PY'
+          import pathlib, sys
+          broken = []
+          for path in pathlib.Path("output").glob("*.html"):
+              text = path.read_text(encoding="utf-8")
+              if "<h1" not in text or "application/ld+json" not in text:
+                  broken.append(path.name)
+          if broken:
+              sys.exit(f"pages missing h1 or JSON-LD: {broken[:5]}")
+          print("all pages have an h1 and JSON-LD")
+          PY
+
+      - name: Save caches for the next run
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: cache
+          key: pseo-cache-${{ github.run_id }}
+
+      - name: Publish to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./output
+          # The generated corpus grows over time: keep previously published pages.
+          keep_files: true
+          commit_message: "pSEO auto-build ${{ github.run_number }}"
+          user_name: "pseo-bot"
+          user_email: "pseo-bot@users.noreply.github.com"
