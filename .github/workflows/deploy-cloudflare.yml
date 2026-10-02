@@ -60,29 +60,28 @@ jobs:
             echo "CLOUDFLARE_ACCOUNT_ID=$account" >> "$GITHUB_ENV"
           fi
 
-      - name: Report and normalise the Pages project
+      - name: Ensure the Pages project exists
         run: |
           set -euo pipefail
           api="https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/pages/projects"
-          current=$(curl -s -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" "$api/$PROJECT")
-          if ! echo "$current" | python3 -c 'import json,sys; sys.exit(0 if json.load(sys.stdin).get("success") else 1)'; then
-            echo "raw lookup response: $(echo "$current" | cut -c1-500)"
-            echo "available projects:"
-            curl -s -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" "$api" \
-              | python3 -c 'import json,sys; d=json.load(sys.stdin); print([p.get("name") for p in (d.get("result") or [])] or d.get("errors"))'
-            exit 1
+          names=$(curl -s -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" "$api" \
+            | python3 -c 'import json,sys; d=json.load(sys.stdin); print(" ".join(p.get("name","") for p in (d.get("result") or [])))')
+          echo "existing Pages projects: ${names:-none}"
+          if echo " $names " | grep -q " $PROJECT "; then
+            echo "project '$PROJECT' exists"
+          else
+            echo "creating Pages project '$PROJECT'"
+            curl -s -X POST -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
+              -H "Content-Type: application/json" \
+              -d "{\"name\":\"$PROJECT\",\"production_branch\":\"gh-pages\",\"build_config\":{\"build_command\":\"\",\"output_dir\":\"/\"}}" \
+              "$api" \
+              | python3 -c 'import json,sys; d=json.load(sys.stdin); r=d.get("result") or {}; print("created:", r.get("name"), "| url:", r.get("url") or d.get("errors"))'
           fi
-          echo "$current" | python3 -c '
-          import json,sys
-          d=json.load(sys.stdin)
-          if not d.get("success"):
-              print("project lookup failed:", d.get("errors")); sys.exit(1)
-          r=d["result"]
-          print("project:", r["name"], "| subdomain:", r.get("subdomain"))
-          print("before: branch=", (r.get("production_branch")),
-                "build=", repr(r.get("build_config",{}).get("build_command")),
-                "output=", repr(r.get("build_config",{}).get("output_dir")))
-          '
+
+      - name: Normalise the Pages project settings
+        run: |
+          set -euo pipefail
+          api="https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/pages/projects"
           # Serve the published branch directly: no build step, no wrangler deploy.
           curl -s -X PATCH -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
             -H "Content-Type: application/json" \
@@ -94,9 +93,10 @@ jobs:
           if not d.get("success"):
               print("patch failed:", d.get("errors")); sys.exit(1)
           r=d["result"]
-          print("after : branch=", r.get("production_branch"),
-                "build=", repr(r.get("build_config",{}).get("build_command")),
-                "output=", repr(r.get("build_config",{}).get("output_dir")))
+          print("branch:", r.get("production_branch"),
+                "| build:", repr(r.get("build_config",{}).get("build_command")),
+                "| output:", repr(r.get("build_config",{}).get("output_dir")),
+                "| url:", r.get("url"))
           '
 
       - name: Fetch the published site from gh-pages
