@@ -8,6 +8,11 @@ name: Mirror site to Cloudflare Pages
 # Cloudflare can also auto-deploy from gh-pages on every push (see the project
 # settings), so this is the manual/recovery path rather than the daily one.
 on:
+  # Mirror automatically whenever the daily build finishes, so the Cloudflare copy
+  # never lags the GitHub Pages copy.
+  workflow_run:
+    workflows: ["Build and deploy pSEO site"]
+    types: [completed]
   workflow_dispatch:
     inputs:
       project:
@@ -105,21 +110,26 @@ jobs:
           ref: gh-pages
 
       - name: Publish to Cloudflare Pages
-        run: npx --yes wrangler@4 pages deploy . --project-name="$PROJECT" --branch=main
+        # The branch must match the project's production branch or Cloudflare treats
+        # the deployment as a preview and the root domain serves nothing.
+        run: npx --yes wrangler@4 pages deploy . --project-name="$PROJECT" --branch=gh-pages
 
       - name: Verify the site answers
         run: |
           set -euo pipefail
           url="https://$PROJECT.pages.dev"
           for i in 1 2 3 4 5 6 7 8 9 10; do
-            code=$(curl -s -o /tmp/index.html -w "%{http_code}" "$url/" || echo 000)
-            if [ "$code" = "200" ]; then
-              echo "live: $url/ ($code)"
+            code=$(curl -s -o /tmp/index.html -w "%{http_code}" "$url/index.html" || echo 000)
+            # pages.dev answers 404 for a missing production deployment, and may serve
+            # a bot interstitial on "/" , so probe a real page too.
+            sitemap=$(curl -s -o /dev/null -w "%{http_code}" "$url/sitemap.xml" || echo 000)
+            if [ "$code" = "200" ] && [ "$sitemap" = "200" ]; then
+              echo "live: $url/ ($code), sitemap $sitemap"
               grep -o "<title>[^<]*" /tmp/index.html | head -1
               exit 0
             fi
-            echo "attempt $i: $code, waiting"
+            echo "attempt $i: index=$code sitemap=$sitemap, waiting"
             sleep 20
           done
-          echo "::error::$url did not return 200 after 10 attempts"
+          echo "::error::$url is not serving a production deployment"
           exit 1
