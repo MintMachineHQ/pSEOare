@@ -23,6 +23,7 @@ from engine.enrich import (  # noqa: E402
     prose_and_faq,
 )
 from engine.hubs import assign_related, sitemap_xml  # noqa: E402
+from engine.http import Http  # noqa: E402
 from engine.indexing import key_file_is_reachable  # noqa: E402
 from engine.models import Link, Page, slugify  # noqa: E402
 from engine.render import build_css, build_theme, pick_copy, render_page, waterfall_js  # noqa: E402
@@ -136,6 +137,46 @@ class TestEnrichFailFast(unittest.TestCase):
         enricher.enabled = True
         enricher._trip_cutoff()
         self.assertFalse(enricher.enabled)
+
+
+class TestHttpErrorPropagation(unittest.TestCase):
+    def test_retry_wrapper_keeps_the_last_error(self):
+        """The enricher classifies quota vs rate-limit from the message, so the
+        underlying body must survive the retry wrapper."""
+        import asyncio
+        import aiohttp
+
+        async def scenario() -> None:
+            http = Http(concurrency=1, timeout=1, retries=1)
+
+            class FakeResponse:
+                status = 429
+                headers = {"Content-Type": "application/json"}
+
+                async def text(self) -> str:
+                    return '{"error": {"message": "You exceeded your current quota"}}'
+
+                async def __aenter__(self):
+                    return self
+
+                async def __aexit__(self, *exc):
+                    return False
+
+            class FakeSession:
+                def request(self, *args, **kwargs):
+                    return FakeResponse()
+
+            http._session = FakeSession()  # type: ignore[assignment]
+            try:
+                await http.get_json("https://example.invalid/models")
+            except RuntimeError as exc:
+                message = str(exc)
+                self.assertIn("exceeded your current quota", message)
+                self.assertIn("HTTP 429", message)
+            else:
+                self.fail("expected a RuntimeError")
+
+        asyncio.run(scenario())
 
 
 class TestIndexNowHosting(unittest.TestCase):

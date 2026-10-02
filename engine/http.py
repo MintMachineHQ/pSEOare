@@ -94,7 +94,11 @@ class Http:
                 log.warning("request failed (%s/%s) %s -> %s", attempt + 1, self._retries, url, exc)
                 if attempt < self._retries - 1:
                     await asyncio.sleep(wait)
-        raise RuntimeError(f"request failed after {self._retries} attempts: {url}") from last
+        # Keep the last error text: callers classify failures (bad key, rate limit,
+        # quota exhaustion) from the message, so it must survive the retry wrapper.
+        raise RuntimeError(
+            f"request failed after {self._retries} attempts: {url} ({last})"
+        ) from last
 
 
 def cache_path(cache_dir: Path, name: str) -> Path:
