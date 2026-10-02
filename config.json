@@ -54,7 +54,8 @@
         "aptos",
         "arbitrum"
       ],
-      "priority": 4
+      "priority": 4,
+      "requests_per_minute": 8
     }
   },
   "gemini": {

@@ -626,6 +626,17 @@ class TestRender(unittest.TestCase):
             server.shutdown()
             server.server_close()
 
+    def test_crypto_source_throttles_coingecko(self):
+        """A wide coin list gathered at once tripped CoinGecko 429s, each retried
+        three times. The source now paces itself below the key-free ceiling."""
+        import inspect
+
+        from engine.sources import crypto as crypto_source
+
+        src = inspect.getsource(crypto_source.collect)
+        self.assertIn("RateLimiter", src)
+        self.assertIn("await limiter.acquire()", src)
+
     def test_waterfall_has_fallback(self):
         cfg = make_cfg(Path(tempfile.mkdtemp()))
         js = waterfall_js(cfg)

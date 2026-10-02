@@ -12,6 +12,7 @@ from datetime import datetime, timezone
 
 from ..http import Http
 from ..models import Link, Page, slugify
+from ..ratelimit import RateLimiter
 from .base import cached_fetch, fmt_num, trim_to_budget
 
 log = logging.getLogger("pseo.sources.crypto")
@@ -36,8 +37,13 @@ async def collect(cfg, http: Http, budget) -> list[Page]:
         return []
     stamp = datetime.now(timezone.utc).isoformat()
     pages: list[Page] = []
+    # CoinGecko's key-free tier rate-limits aggressively. Every coin is gathered at
+    # once, so without a throttle a wide coin list trips 429s, and each 429 is then
+    # retried three times with backoff before the cached snapshot is used instead.
+    limiter = RateLimiter(per_minute=float(opts.get("requests_per_minute", 8)))
 
     async def one(coin: str) -> Page | None:
+        await limiter.acquire()
         try:
             data, from_cache = await cached_fetch(
                 http,
