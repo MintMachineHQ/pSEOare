@@ -4,6 +4,7 @@ from __future__ import annotations
 import html
 import json
 import random
+import re
 import string
 from typing import Any, Iterable
 
@@ -214,31 +215,66 @@ def json_ld(page: Page, cfg: Config, canonical: str, stamp: str) -> str:
 # --------------------------------------------------------------------------
 # ads / waterfall
 # --------------------------------------------------------------------------
-def global_ads(cfg: Config) -> str:
-    """Scripts that must appear exactly once per page.
+def head_ads(cfg: Config) -> str:
+    """Loaders the network requires immediately before </head>.
 
-    Popunder and social-bar loaders install page-wide listeners; repeating them in
-    every ad slot can fire the popunder several times and get the account flagged.
+    Adsterra's popunder snippet is documented for that exact position, and it only has
+    to appear once per page: these scripts install page-wide listeners, so repeating
+    them inside every ad slot can fire the popunder several times and get the account
+    flagged.
     """
-    money = cfg.monetization
-    out = []
-    for key in ("popunder_script", "social_bar_script"):
-        raw = (money.get(key) or "").strip()
-        if raw:
-            out.append(raw)
-    return "\n".join(out)
+    return (cfg.monetization.get("popunder_script") or "").strip()
+
+
+def global_ads(cfg: Config) -> str:
+    """Scripts that must appear exactly once per page, at the end of the body."""
+    return (cfg.monetization.get("social_bar_script") or "").strip()
+
+
+CONTAINER_RE = re.compile(r"""<div[^>]*\bid=["'](container-[^"']+)["'][^>]*>\s*</div>""", re.I)
+
+NATIVE_BANNER_CSS = """
+.native-banner{display:block;width:100%;min-height:90px;margin:0 auto;overflow:hidden}
+@media (max-width:820px){.native-banner{min-height:250px}}
+""".strip()
+
+
+def split_native_banner(raw: str) -> tuple[str, str] | None:
+    """Split a native-banner snippet into (loader script, container id).
+
+    Networks hand out a loader plus a bare ``<div id="container-...">``. That div has no
+    height, so the ad renders at zero pixels and never earns an impression. The id is
+    also fixed, so the pair must be emitted exactly once per page or the id duplicates.
+    """
+    match = CONTAINER_RE.search(raw)
+    if not match:
+        return None
+    loader = (raw[: match.start()].strip() + "\n" + raw[match.end():].strip()).strip()
+    return loader, match.group(1)
 
 
 def ad_block(cfg: Config, theme: dict[str, Any], slot: str) -> str:
     money = cfg.monetization
-    scripts = []
+    native_slot = (money.get("native_banner_slot") or "foot").strip()
+    parts: list[str] = []
     for key in ("adsterra_script", "monetag_script"):
         raw = (money.get(key) or "").strip()
-        if raw:
-            scripts.append(f"    {raw}")
-    scripts_html = "\n".join(scripts)
+        if not raw:
+            continue
+        native = split_native_banner(raw)
+        if native is None:
+            parts.append(f"    {raw}")
+            continue
+        loader, container_id = native
+        if slot != native_slot:
+            # Same unit, same container id: emitting it twice would duplicate the id and
+            # split impressions. The other slots fall through to the CPA waterfall.
+            continue
+        parts.append(f"    {loader}")
+        parts.append(f'    <div class="native-banner" id="{container_id}"></div>')
+    body = "\n".join(parts) if parts else '      <span class="ad-hint">ad slot</span>'
     return f"""    <aside class="ad-zone {theme['page']}-ad-{slot}" data-ad-slot="{slot}" aria-label="Advertisement">
-{scripts_html if scripts_html else '      <span class="ad-hint">ad slot</span>'}
+{body}
     </aside>"""
 
 
@@ -343,7 +379,9 @@ def render_page(
 </script>
 <style>
 {css}
+{NATIVE_BANNER_CSS}
 </style>
+{head_ads(cfg)}
 </head>
 <body class="{theme['page']}-body">
 <main class="{theme['page']}">
@@ -443,7 +481,9 @@ ul.hub {{ list-style: none; padding: 0; columns: 2; column-gap: 26px; }}
 ul.hub li {{ margin: 0 0 6px; break-inside: avoid; }}
 nav.pager {{ display: flex; gap: 14px; align-items: center; margin: 18px 0; }}
 nav.pager a {{ color: var(--accent); }}
+{NATIVE_BANNER_CSS}
 </style>
+{head_ads(cfg)}
 </head>
 <body class="{theme['page']}-body">
 <main class="{theme['page']}">

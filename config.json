@@ -61,14 +61,15 @@
     }
   },
   "monetization": {
-    "adsterra_script": "",
+    "adsterra_script": "<script async=\"async\" data-cfasync=\"false\" src=\"https://bauval.org/21/f1f54edba8f1e63e97bdd455dd7245ec\"></script>\n<div id=\"container-f1f54edba8f1e63e97bdd455dd7245ec\"></div>",
     "monetag_script": "",
     "cpa_fallback_url": "https://example.com/offer",
     "cpa_fallback_image": "https://placehold.co/728x90.png?text=Recommended+Deal",
     "cpa_fallback_text": "Recommended deal for you",
-    "popunder_script": "",
+    "popunder_script": "<script data-cfasync=\"false\" src=\"https://abscloud.org/1/ab24cc73abe03a1b2a5a5b4e33bbf3c7\"></script>",
     "social_bar_script": "",
-    "note": "Slot scripts (adsterra_script / monetag_script) are injected into top, mid and foot. Page-wide loaders (popunder_script / social_bar_script) are injected once at the end of the body, because repeating a popunder loader fires it multiple times."
+    "note": "Slot scripts (adsterra_script / monetag_script) are injected into top, mid and foot. Page-wide loaders (popunder_script / social_bar_script) are injected once at the end of the body, because repeating a popunder loader fires it multiple times.",
+    "native_banner_slot": "foot"
   },
   "seo": {
     "generate_sitemap": true,
@@ -92,7 +93,17 @@
         "address": "TPMycsdifyCGHyNRC8BeC12bS7ChA64BRN",
         "asset": "USDT",
         "note": "Matches the TRC20 payout rail Adsterra/Monetag use. Private key is NOT in this repo; it lives in ~/.secrets/tron-wallet.json (mode 600)."
+      },
+      "bitcoin": {
+        "address": "bc1q0c2lvmx5sqa9q2e3m3cj2anh6npl9naygkljxx",
+        "asset": "BTC",
+        "script_type": "P2WPKH native segwit (BIP-84 m/84'/0'/0')",
+        "note": "Use ONLY if the payout dashboard offers Bitcoin (BTC) as a separate option. A BTC address cannot receive USDT. Keys are NOT in this repo; mnemonic + xprv live in ~/.secrets/bitcoin-wallet.json (mode 600)."
       }
-    }
+    },
+    "notes": [
+      "Match the wallet to the exact asset+network the network offers. Never paste a BTC address into a USDT field.",
+      "Adsterra/Monetag default to USDT on TRC20, which matches wallets.tron_trc20. wallets.bitcoin is only for a BTC-denominated payout option."
+    ]
   }
 }

@@ -34,7 +34,7 @@ from engine.render import build_css, build_theme  # noqa: E402
 from engine.http import Http  # noqa: E402
 from engine.indexing import key_file_is_reachable  # noqa: E402
 from engine.models import Link, Page, slugify  # noqa: E402
-from engine.render import build_css, build_theme, pick_copy, render_page, waterfall_js  # noqa: E402
+from engine.render import build_css, build_theme, ad_block, pick_copy, render_page, waterfall_js  # noqa: E402
 from engine.sources import climate, countries, crypto, holidays  # noqa: E402
 from engine.writer import Writer  # noqa: E402
 
@@ -361,10 +361,36 @@ class TestRender(unittest.TestCase):
             sample_page(cfg), cfg, theme, build_css(theme), "", [], "2026-01-01T00:00:00+00:00"
         )
         self.assertEqual(html_doc.count("/*popunder*/"), 1)
-        # and it must sit outside the ad slots, after the waterfall
-        self.assertGreater(
-            html_doc.index("/*popunder*/"), html_doc.index("data-ad-slot")
+        # The network documents this loader for the end of <head>: once per page, never
+        # inside an ad slot, and before </head> so it is not render-blocking.
+        self.assertLess(html_doc.index("/*popunder*/"), html_doc.index("data-ad-slot"))
+        self.assertLess(html_doc.index("/*popunder*/"), html_doc.index("</head>"))
+        self.assertNotIn("/*popunder*/", html_doc[html_doc.index("data-ad-slot") :])
+
+    def test_native_banner_emitted_once_with_sized_container(self):
+        tmp = Path(tempfile.mkdtemp())
+        cfg = make_cfg(tmp)
+        cfg.raw["monetization"]["adsterra_script"] = (
+            '<script async="async" src="https://bauval.org/21/f1f54edba8f1e63e97bdd455dd7245ec">'
+            '</script>\n<div id="container-f1f54edba8f1e63e97bdd455dd7245ec"></div>'
         )
+        theme = build_theme()
+        for slot in ("top", "mid", "foot"):
+            block = ad_block(cfg, theme, slot)
+            with self.subTest(slot=slot):
+                # exactly one slot may carry the unit, or the container id duplicates
+                if slot == cfg.raw["monetization"].get("native_banner_slot", "foot"):
+                    self.assertEqual(block.count("bauval.org"), 1)
+                    self.assertEqual(block.count("container-f1f54edba"), 1)
+                    self.assertIn('class="native-banner"', block)
+                else:
+                    self.assertNotIn("bauval.org", block)
+                    self.assertNotIn("container-f1f54edba", block)
+        html_doc = render_page(
+            sample_page(cfg), cfg, theme, build_css(theme), "", [], "2026-01-01T00:00:00+00:00"
+        )
+        self.assertEqual(html_doc.count("container-f1f54edba8f1e63e97bdd455dd7245ec"), 1)
+        self.assertIn(".native-banner{", html_doc)
 
     def test_waterfall_has_fallback(self):
         cfg = make_cfg(Path(tempfile.mkdtemp()))
