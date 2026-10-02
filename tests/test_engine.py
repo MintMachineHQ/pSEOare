@@ -13,7 +13,14 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from engine.config import Config  # noqa: E402
-from engine.enrich import Enricher, _is_hard_failure, clean, fallback_copy, prose_and_faq  # noqa: E402
+from engine.enrich import (  # noqa: E402
+    FALLBACK_MODELS,
+    Enricher,
+    _is_hard_failure,
+    clean,
+    fallback_copy,
+    prose_and_faq,
+)
 from engine.hubs import assign_related, sitemap_xml  # noqa: E402
 from engine.models import Link, Page, slugify  # noqa: E402
 from engine.render import build_css, build_theme, pick_copy, render_page, waterfall_js  # noqa: E402
@@ -115,6 +122,25 @@ class TestEnrichFailFast(unittest.TestCase):
         enricher.enabled = True
         enricher._trip_cutoff()
         self.assertFalse(enricher.enabled)
+
+
+class TestModelResolution(unittest.TestCase):
+    def test_fallback_models_are_current(self):
+        self.assertNotIn("1.5", " ".join(FALLBACK_MODELS))
+        self.assertIn("gemini-2.0-flash", FALLBACK_MODELS)
+
+    def test_configured_model_is_optional(self):
+        tmp = Path(tempfile.mkdtemp())
+        cfg = make_cfg(tmp)
+        cfg.raw["gemini"] = {"enabled": True, "api_key_env": "GEMINI_API_KEY"}
+        import os
+
+        os.environ["GEMINI_API_KEY"] = "test-key-123456"
+        try:
+            enricher = Enricher(cfg, http=None)  # type: ignore[arg-type]
+            self.assertEqual(enricher.model, FALLBACK_MODELS[0])
+        finally:
+            del os.environ["GEMINI_API_KEY"]
 
 
 class TestRender(unittest.TestCase):

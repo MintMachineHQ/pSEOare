@@ -13,7 +13,11 @@ from .ratelimit import CallBudget, RateLimiter
 
 log = logging.getLogger("pseo.enrich")
 
-ENDPOINT = "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
+API_ROOT = "https://generativelanguage.googleapis.com/v1beta"
+ENDPOINT = f"{API_ROOT}/models/{{model}}:generateContent"
+MODELS_ENDPOINT = f"{API_ROOT}/models"
+# Tried in order when model discovery is unavailable.
+FALLBACK_MODELS = ("gemini-2.0-flash", "gemini-2.5-flash", "gemini-flash-latest")
 
 PROMPT = """You write short, factual, SEO-friendly copy for a data reference website.
 
@@ -38,17 +42,67 @@ class Enricher:
         self.http = http
         self.api_key = env_secret(cfg.raw.get("gemini", {}).get("api_key_env", "GEMINI_API_KEY"))
         limits = cfg.limits
-        self.model = cfg.raw.get("gemini", {}).get("model", "gemini-1.5-flash")
+        self.model = cfg.raw.get("gemini", {}).get("model") or FALLBACK_MODELS[0]
         self.limiter = RateLimiter(per_minute=60.0 / float(limits.get("gemini_min_interval_seconds", 4.1)))
         self.budget = CallBudget(int(limits.get("max_gemini_calls_per_run", 100)))
         self.enabled = bool(cfg.raw.get("gemini", {}).get("enabled", True)) and bool(self.api_key)
         self.cache_path = cfg.paths.cache / "gemini_cache.json"
+        self.model_cache_path = cfg.paths.cache / "gemini_model.json"
         self.cache: dict[str, str] = read_json_cache(self.cache_path, {}) or {}
         self.stats = {"hit": 0, "generated": 0, "fallback": 0, "failed": 0}
         # Consecutive hard failures (bad key, wrong model, quota exhausted) disable
         # enrichment for the rest of the run instead of retrying every page.
         self.consecutive_failures = 0
         self.hard_failure_cutoff = 3
+
+    async def resolve_model(self) -> str:
+        """Find a model this key can actually call.
+
+        Hardcoding a model name breaks the moment Google retires it (gemini-1.5-flash
+        already returns 404). Ask the API which generateContent-capable models exist,
+        prefer the newest flash model, and remember the answer for later runs.
+        """
+        cached = read_json_cache(self.model_cache_path, {}) or {}
+        if cached.get("model") and cached.get("for") == self.api_key[-6:]:
+            self.model = cached["model"]
+            return self.model
+
+        self.model = FALLBACK_MODELS[0]
+        try:
+            data = await self.http.get_json(MODELS_ENDPOINT, {"key": self.api_key})
+        except Exception as exc:  # noqa: BLE001
+            log.warning("model discovery failed (%s); trying %s", exc, self.model)
+            return self.model
+
+        candidates: list[str] = []
+        for entry in (data.get("models") or []):
+            name = (entry.get("name") or "").split("/")[-1]
+            methods = entry.get("supportedGenerationMethods") or []
+            if name and "generateContent" in methods:
+                candidates.append(name)
+
+        if not candidates:
+            log.warning("no generateContent-capable model returned; trying %s", self.model)
+            return self.model
+
+        flash = [n for n in candidates if "flash" in n.lower()]
+        pool = flash or candidates
+        # Prefer the highest generation number, e.g. 2.5 before 2.0 before 1.5.
+        def rank(name: str) -> tuple:
+            digits = "".join(ch for ch in name if ch.isdigit() or ch == ".")
+            try:
+                version = tuple(float(x) for x in digits.split(".") if x)
+            except ValueError:
+                version = (0.0,)
+            return (version, name)
+
+        self.model = sorted(pool, key=rank, reverse=True)[0]
+        write_json_cache(
+            self.model_cache_path,
+            {"model": self.model, "for": self.api_key[-6:], "seen": sorted(candidates)},
+        )
+        log.info("gemini model resolved to %s (available: %s)", self.model, ", ".join(sorted(candidates)))
+        return self.model
 
     def enrich_all(self, pages: list[Page]) -> dict[str, str]:
         """Return {cache_key: text} for the pages that need copy."""
@@ -72,6 +126,7 @@ class Enricher:
         targets = [p for p in targets if self.cache.get(str(p.data.get("key") or p.slug)) == ""]
         if not targets:
             return
+        await self.resolve_model()
         log.info("enriching %d pages with %s", len(targets), self.model)
 
         async def worker(page: Page) -> None:
@@ -96,8 +151,24 @@ class Enricher:
     async def _call(self, page: Page) -> str | None:
         facts = ", ".join(f"{k}: {v}" for k, v in page.facts[:6])
         prompt = PROMPT.format(title=page.h1, summary=page.summary, facts=facts)
-        url = ENDPOINT.format(model=self.model)
-        params = {"key": self.api_key}
+        models = [self.model] + [m for m in FALLBACK_MODELS if m != self.model]
+        for model in models:
+            text = await self._call_model(page, prompt, model)
+            if text:
+                if model != self.model:
+                    log.warning("switched to %s after %s failed", model, self.model)
+                    self.model = model
+                    write_json_cache(
+                        self.model_cache_path,
+                        {"model": model, "for": self.api_key[-6:]},
+                    )
+                return text
+            if self.consecutive_failures >= self.hard_failure_cutoff:
+                return None
+        return None
+
+    async def _call_model(self, page: Page, prompt: str, model: str) -> str | None:
+        url = ENDPOINT.format(model=model)
         payload = {
             "contents": [{"parts": [{"text": prompt}]}],
             "generationConfig": {"temperature": 0.4, "maxOutputTokens": 700},
@@ -105,7 +176,9 @@ class Enricher:
         for attempt in range(3):
             await self.limiter.acquire()
             try:
-                data = await self.http.post_json(url, payload, headers={"x-goog-api-key": self.api_key})
+                data = await self.http.post_json(
+                    url, payload, headers={"x-goog-api-key": self.api_key}
+                )
                 parts = data["candidates"][0]["content"]["parts"]
                 text = "".join(p.get("text", "") for p in parts).strip()
                 self.consecutive_failures = 0
@@ -113,6 +186,10 @@ class Enricher:
             except Exception as exc:  # noqa: BLE001
                 self.consecutive_failures += 1
                 if _is_hard_failure(exc):
+                    if "404" in str(exc):
+                        # Wrong or retired model: let the caller try the next candidate.
+                        log.warning("model %s unavailable (%s)", model, exc)
+                        return None
                     log.error("gemini rejected the request (%s); falling back for this run", exc)
                     self._trip_cutoff()
                     return None
