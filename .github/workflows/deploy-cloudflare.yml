@@ -119,11 +119,12 @@ jobs:
           set -euo pipefail
           url="https://$PROJECT.pages.dev"
           for i in 1 2 3 4 5 6 7 8 9 10; do
-            code=$(curl -s -o /tmp/index.html -w "%{http_code}" "$url/index.html" || echo 000)
+            code=$(curl -s -L -o /tmp/index.html -w "%{http_code}" "$url/index.html" || echo 000)
             # pages.dev answers 404 for a missing production deployment, and may serve
             # a bot interstitial on "/" , so probe a real page too.
             sitemap=$(curl -s -o /dev/null -w "%{http_code}" "$url/sitemap.xml" || echo 000)
-            if [ "$code" = "200" ] && [ "$sitemap" = "200" ]; then
+            # /index.html legitimately 308s to /, so follow redirects.
+            if { [ "$code" = "200" ] || [ "$code" = "308" ]; } && [ "$sitemap" = "200" ]; then
               echo "live: $url/ ($code), sitemap $sitemap"
               grep -o "<title>[^<]*" /tmp/index.html | head -1
               exit 0
