@@ -202,7 +202,7 @@ class TestUrlStyle(unittest.TestCase):
         self.assertEqual(
             cfg.url_for("berlin-climate.html"), "https://data.example/berlin-climate"
         )
-        self.assertEqual(cfg.url_for("index.html"), "https://data.example/index.html")
+        self.assertEqual(cfg.url_for("index.html"), "https://data.example/")
         self.assertEqual(cfg.url_for("sitemap.xml"), "https://data.example/sitemap.xml")
 
 

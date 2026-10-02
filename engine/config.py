@@ -80,8 +80,11 @@ class Config:
 
     def url_for(self, path: str) -> str:
         clean = path.lstrip("/")
-        if self.url_style == "clean" and clean.endswith(".html") and clean != "index.html":
-            clean = clean[: -len(".html")]
+        if self.url_style == "clean":
+            if clean == "index.html":
+                return f"{self.domain}/"
+            if clean.endswith(".html"):
+                clean = clean[: -len(".html")]
         return f"{self.domain}/{clean}"
 
 
