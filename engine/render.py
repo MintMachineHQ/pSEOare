@@ -256,6 +256,43 @@ def split_native_banner(raw: str) -> tuple[str, str] | None:
     return loader, match.group(1)
 
 
+HOUSE_AD_CSS = """
+.house-ad{display:block;border:1px solid #e2e8f0;border-left:3px solid var(--accent);
+  border-radius:8px;padding:14px 16px;background:#f8fafc;color:inherit;text-decoration:none}
+.house-ad:hover{border-color:var(--accent);background:#fff}
+.house-ad .ha-kicker{display:block;font-size:.72rem;letter-spacing:.09em;
+  text-transform:uppercase;color:#64748b;margin-bottom:4px}
+.house-ad .ha-headline{display:block;font-weight:600;font-size:1.02rem;margin-bottom:3px}
+.house-ad .ha-text{display:block;font-size:.88rem;color:#475569}
+""".strip()
+
+
+def house_ad_html(cfg: Config, theme: dict[str, Any], slot: str) -> str:
+    """A first-party promo for slots no ad network is filling.
+
+    A slot left empty earns nothing, and a slot pointing at a placeholder offer earns
+    nothing either. This links to the site's own most relevant hub instead, which keeps
+    the visitor moving through the corpus. Every internal click is another exit from a
+    page, and every exit is another opportunity for the popunder.
+
+    Rendered as static HTML rather than by the waterfall, so it is present without
+    JavaScript and is large enough (height, width, text) that the blank-slot detector
+    leaves it alone.
+    """
+    promo = cfg.monetization.get("house_ad") or {}
+    if promo.get("enabled") is False:
+        return ""
+    target = (promo.get("url") or "").strip()
+    if not target:
+        return ""
+    target = cfg.url_for(target) if not target.startswith("http") else target
+    return f"""      <a class="house-ad" href="{_esc(target)}" rel="nofollow sponsored">
+        <span class="ha-kicker">{_esc(promo.get("kicker", "More reference data"))}</span>
+        <span class="ha-headline">{_esc(promo.get("headline", "Browse the full dataset index"))}</span>
+        <span class="ha-text">{_esc(promo.get("text", "Every figure on this site links to its own source and a hub of neighbouring pages."))}</span>
+      </a>"""
+
+
 def ad_block(cfg: Config, theme: dict[str, Any], slot: str) -> str:
     money = cfg.monetization
     native_slot = (money.get("native_banner_slot") or "foot").strip()
@@ -272,13 +309,15 @@ def ad_block(cfg: Config, theme: dict[str, Any], slot: str) -> str:
         loader, container_id = native
         if not banner_on or slot != native_slot:
             # Same unit, same container id: emitting it twice would duplicate the id and
-            # split impressions. The other slots fall through to the CPA waterfall.
+            # split impressions. The other slots fall through to the house ad.
             # native_banner_enabled is the kill switch for networks whose creative
             # selection we cannot fully control, e.g. an unfiltered site category.
             continue
         parts.append(f"    {loader}")
         parts.append(f'    <div class="native-banner" id="{container_id}"></div>')
-    body = "\n".join(parts) if parts else '      <span class="ad-hint">ad slot</span>'
+    body = "\n".join(parts) if parts else house_ad_html(cfg, theme, slot)
+    if not body.strip():
+        body = '      <span class="ad-hint">ad slot</span>'
     return f"""    <aside class="ad-zone {theme['page']}-ad-{slot}" data-ad-slot="{slot}" aria-label="Advertisement">
 {body}
     </aside>"""
@@ -386,6 +425,7 @@ def render_page(
 <style>
 {css}
 {NATIVE_BANNER_CSS}
+{HOUSE_AD_CSS}
 </style>
 {head_ads(cfg)}
 </head>
@@ -488,6 +528,7 @@ ul.hub li {{ margin: 0 0 6px; break-inside: avoid; }}
 nav.pager {{ display: flex; gap: 14px; align-items: center; margin: 18px 0; }}
 nav.pager a {{ color: var(--accent); }}
 {NATIVE_BANNER_CSS}
+{HOUSE_AD_CSS}
 </style>
 {head_ads(cfg)}
 </head>

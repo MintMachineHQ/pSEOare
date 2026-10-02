@@ -440,6 +440,35 @@ class TestRender(unittest.TestCase):
         )
         self.assertNotIn("/*popunder*/", html_doc)
 
+    def test_house_ad_fills_an_unoccupied_slot(self):
+        tmp = Path(tempfile.mkdtemp())
+        cfg = make_cfg(tmp)
+        cfg.raw["monetization"]["native_banner_enabled"] = False
+        cfg.raw["monetization"]["house_ad"] = {
+            "enabled": True,
+            "url": "all-datasets-1.html",
+            "kicker": "More reference data",
+            "headline": "Browse every dataset",
+            "text": "Country indicators, city climate averages and holiday dates.",
+        }
+        theme = build_theme()
+        for slot in ("top", "mid", "foot"):
+            block = ad_block(cfg, theme, slot)
+            with self.subTest(slot=slot):
+                self.assertIn('class="house-ad"', block)
+                self.assertIn(cfg.url_for("all-datasets-1.html"), block)
+                # the blank-slot detector must leave it alone: enough height, width, text
+                self.assertGreater(len("Country indicators, city climate averages and holiday dates."), 12)
+                self.assertNotIn("example.com", block)
+
+    def test_house_ad_can_be_switched_off(self):
+        cfg = make_cfg(Path(tempfile.mkdtemp()))
+        cfg.raw["monetization"]["native_banner_enabled"] = False
+        cfg.raw["monetization"]["house_ad"] = {"enabled": False, "url": "all-datasets-1.html"}
+        block = ad_block(cfg, build_theme(), "top")
+        self.assertNotIn("house-ad", block)
+        self.assertIn("ad-hint", block)
+
     def test_waterfall_has_fallback(self):
         cfg = make_cfg(Path(tempfile.mkdtemp()))
         js = waterfall_js(cfg)
