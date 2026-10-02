@@ -104,6 +104,7 @@ def _build_pages(
             facts=facts,
             breadcrumbs=[Link("Home", cfg.url_for("index.html")), Link(f"{name} holidays", "#")],
             data={
+                "entity": name,
                 "table": {
                     "caption": f"Public holidays in {name}, {year}",
                     "headers": ["Date", "Holiday", "Observed"],

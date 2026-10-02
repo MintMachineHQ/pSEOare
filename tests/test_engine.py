@@ -743,6 +743,36 @@ class TestRender(unittest.TestCase):
         self.assertIn("Item 0 &amp; co", xml)                # escaped, not raw
         self.assertIn("feed.xml", Path("engine/writer.py").read_text())  # survives pruning
 
+    def test_related_links_cross_datasets_by_country(self):
+        """A climate page for a city should lead to that country's holiday calendar,
+        otherwise visitors stay inside one dataset and pageviews per session stay low."""
+        from engine.hubs import assign_related
+
+        cfg = make_cfg(Path(tempfile.mkdtemp()))
+        climate = sample_page(cfg)
+        climate.kind = "climate_city"
+        climate.slug = "shanghai-climate"
+        climate.h1 = "Shanghai climate"
+        climate.data = dict(climate.data or {}, entity="China")
+
+        holidays = sample_page(cfg)
+        holidays.kind = "holidays_year"
+        holidays.slug = "holidays-china"
+        holidays.h1 = "Public holidays in China 2026"
+        holidays.data = dict(holidays.data or {}, entity="China")
+
+        unrelated = sample_page(cfg)
+        unrelated.kind = "holidays_year"
+        unrelated.slug = "holidays-peru"
+        unrelated.h1 = "Public holidays in Peru 2026"
+        unrelated.data = dict(unrelated.data or {}, entity="Peru")
+
+        pages = [climate, holidays, unrelated]
+        assign_related(pages, cfg)
+        hrefs = {link.url for link in climate.related}
+        self.assertIn(cfg.url_for("holidays-china.html"), hrefs)   # same country
+        self.assertNotIn(cfg.url_for("holidays-peru.html"), hrefs)  # different country
+
     def test_waterfall_has_fallback(self):
         cfg = make_cfg(Path(tempfile.mkdtemp()))
         js = waterfall_js(cfg)

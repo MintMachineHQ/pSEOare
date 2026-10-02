@@ -153,6 +153,7 @@ def _country_pages(record: dict, v: dict[str, float], cfg, stamp: str, from_cach
             Link(name, "#"),
         ],
         data={
+            "entity": name,
             "sections": [
                 {
                     "heading": f"Reading the {name} profile",
@@ -201,6 +202,7 @@ def _country_pages(record: dict, v: dict[str, float], cfg, stamp: str, from_cach
             Link(name, "#"),
         ],
         data={
+            "entity": name,
             "sections": [
                 {
                     "heading": f"How the {name} population figure is derived",
@@ -265,6 +267,7 @@ def _ranking_pages(sovereign: list[dict], values: dict, cfg, stamp: str, from_ca
                 Link("Population ranking", "#"),
             ],
             data={
+            "entity": name,
                 "table": {
                     "caption": "30 most populated countries",
                     "headers": ["Rank", "Country", "Population", "Area (km2)", "Density /km2"],

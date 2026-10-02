@@ -33,17 +33,37 @@ def _chunks(items: list, size: int) -> list[list]:
     return [items[i : i + size] for i in range(0, len(items), size)]
 
 
+# Cap on cross-dataset links. Same-kind siblings already fill the common case, and these
+# are worth adding mainly for the pages that would otherwise be a dead end, such as a
+# climate page for a city with no holiday coverage.
+CROSS_ENTITY_LINKS = 3
+
+
 def assign_related(pages: list[Page], cfg: Config) -> None:
-    """Link every page to its section hub plus rotating siblings of the same kind."""
+    """Link every page to its section hub, rotating siblings, and pages about its country.
+
+    Sibling links alone keep visitors inside one dataset, so a Shanghai climate page never
+    leads anywhere near the Shanghai holiday calendar. Both are answering questions about
+    the same place, so linking across datasets is the cheapest way to raise pageviews per
+    session, which is what the popunder impression depends on.
+    """
     by_kind: dict[str, list[Page]] = defaultdict(list)
+    by_entity: dict[str, list[Page]] = defaultdict(list)
     for page in pages:
         by_kind[page.kind].append(page)
+        entity = str(page.data.get("entity") or "").strip()
+        if entity:
+            by_entity[entity].append(page)
 
     for page in pages:
         section = SECTIONS.get(page.kind)
         links: list[Link] = []
         if section:
             links.append(Link(f"All: {section['h1']}", cfg.url_for(f"{section['slug']}.html")))
+        entity = str(page.data.get("entity") or "").strip()
+        cross = [p for p in by_entity.get(entity, []) if p.slug != page.slug and p.kind != page.kind]
+        for other in cross[:CROSS_ENTITY_LINKS]:
+            links.append(Link(other.h1, cfg.url_for(other.path)))
         siblings = [p for p in by_kind[page.kind] if p.slug != page.slug]
         # Stable pseudo-rotation: same page keeps the same neighbours every build.
         offset = int(hashlib_offset(page.slug)) % max(1, len(siblings))

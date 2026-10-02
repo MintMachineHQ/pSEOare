@@ -146,6 +146,7 @@ def _build_page(city: dict, data: dict, cfg, stamp: str, from_cache: bool) -> Pa
             Link(name, "#"),
         ],
         data={
+            "entity": city.get("country", ""),
             "table": {
                 "caption": f"Average monthly temperature and rainfall in {name}",
                 "headers": ["Month", "Mean temp (C)", "Rain (mm/day)", "Record high (C)", "Record low (C)"],
