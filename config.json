@@ -65,7 +65,10 @@
     "monetag_script": "",
     "cpa_fallback_url": "https://example.com/offer",
     "cpa_fallback_image": "https://placehold.co/728x90.png?text=Recommended+Deal",
-    "cpa_fallback_text": "Recommended deal for you"
+    "cpa_fallback_text": "Recommended deal for you",
+    "popunder_script": "",
+    "social_bar_script": "",
+    "note": "Slot scripts (adsterra_script / monetag_script) are injected into top, mid and foot. Page-wide loaders (popunder_script / social_bar_script) are injected once at the end of the body, because repeating a popunder loader fires it multiple times."
   },
   "seo": {
     "generate_sitemap": true,

@@ -352,6 +352,20 @@ class TestRender(unittest.TestCase):
         self.assertNotIn("<script>alert", html_doc)
         self.assertIn("&lt;script&gt;", html_doc)
 
+    def test_popunder_is_injected_once_not_per_slot(self):
+        tmp = Path(tempfile.mkdtemp())
+        cfg = make_cfg(tmp)
+        cfg.raw["monetization"]["popunder_script"] = "<script>/*popunder*/</script>"
+        theme = build_theme()
+        html_doc = render_page(
+            sample_page(cfg), cfg, theme, build_css(theme), "", [], "2026-01-01T00:00:00+00:00"
+        )
+        self.assertEqual(html_doc.count("/*popunder*/"), 1)
+        # and it must sit outside the ad slots, after the waterfall
+        self.assertGreater(
+            html_doc.index("/*popunder*/"), html_doc.index("data-ad-slot")
+        )
+
     def test_waterfall_has_fallback(self):
         cfg = make_cfg(Path(tempfile.mkdtemp()))
         js = waterfall_js(cfg)

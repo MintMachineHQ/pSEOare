@@ -214,6 +214,21 @@ def json_ld(page: Page, cfg: Config, canonical: str, stamp: str) -> str:
 # --------------------------------------------------------------------------
 # ads / waterfall
 # --------------------------------------------------------------------------
+def global_ads(cfg: Config) -> str:
+    """Scripts that must appear exactly once per page.
+
+    Popunder and social-bar loaders install page-wide listeners; repeating them in
+    every ad slot can fire the popunder several times and get the account flagged.
+    """
+    money = cfg.monetization
+    out = []
+    for key in ("popunder_script", "social_bar_script"):
+        raw = (money.get(key) or "").strip()
+        if raw:
+            out.append(raw)
+    return "\n".join(out)
+
+
 def ad_block(cfg: Config, theme: dict[str, Any], slot: str) -> str:
     money = cfg.monetization
     scripts = []
@@ -355,6 +370,7 @@ Last build: {stamp}. Questions about a figure? Check the related pages above.</p
 <script>
 {waterfall_js(cfg)}
 </script>
+{global_ads(cfg)}
 </body>
 </html>
 """
