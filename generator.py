@@ -112,7 +112,16 @@ async def run(args: argparse.Namespace) -> int:
             writer.write_raw("sitemap.xml", sitemap_xml(pages, cfg, stamp))
             writer.write_raw("robots.txt", robots_txt(cfg))
         writer.write_deploy_metadata()
-        writer.sync_manifest(pages, stamp, prune=args.prune)
+        # Search Console / ad-network verification tokens live at the site root and
+        # must survive the orphan cleanup, so they are written and kept explicitly.
+        for name, body in (cfg.seo.get("verification_files") or {}).items():
+            writer.write_raw(name, body)
+        writer.sync_manifest(
+            pages,
+            stamp,
+            prune=args.prune,
+            extra_keep=set((cfg.seo.get("verification_files") or {}).keys()),
+        )
 
         urls = [cfg.url_for(path) for path in new_files]
         stats = {"indexnow": 0, "google": 0}

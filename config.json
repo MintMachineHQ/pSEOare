@@ -67,7 +67,10 @@
     "generate_sitemap": true,
     "generate_index_pages": true,
     "randomize_dom": true,
-    "adsense_like": false
+    "adsense_like": false,
+    "verification_files": {
+      "googleeba8f39aab451061.html": "google-site-verification: googleeba8f39aab451061.html"
+    }
   },
   "payouts": {
     "wallets": {

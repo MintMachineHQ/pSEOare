@@ -49,7 +49,13 @@ class Writer:
         """Keep static hosts from swallowing the site: no Jekyll, no underscore dirs."""
         (self.output / ".nojekyll").write_text("", encoding="utf-8")
 
-    def sync_manifest(self, pages: list[Page], stamp: str, prune: bool = False) -> None:
+    def sync_manifest(
+        self,
+        pages: list[Page],
+        stamp: str,
+        prune: bool = False,
+        extra_keep: set[str] | None = None,
+    ) -> None:
         # The manifest is cumulative: each run covers a slice of the corpus, so pages
         # produced by earlier runs must stay registered or they would be forgotten and
         # their files treated as orphans.
@@ -60,6 +66,7 @@ class Writer:
         write_json_cache(self.manifest_path, {"updated_at": stamp, "pages": entries})
 
         keep = set(entries) | {"index.html", "sitemap.xml", "robots.txt", ".nojekyll"}
+        keep |= extra_keep or set()
         # Hub pages are paginated, so match the families rather than fixed names.
         keep |= {p.name for p in self.output.glob("hub-*.html")}
         keep |= {p.name for p in self.output.glob("all-datasets-*.html")}

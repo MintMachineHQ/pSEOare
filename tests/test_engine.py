@@ -301,6 +301,17 @@ class TestWriter(unittest.TestCase):
         _, written3 = writer3.write_pages(changed, lambda p: "<html>2</html>", stamp)
         self.assertEqual(written3, 1)
 
+    def test_verification_files_survive_cleanup(self):
+        tmp = Path(tempfile.mkdtemp())
+        cfg = make_cfg(tmp)
+        token = "googleabc123.html"
+        cfg.raw["seo"] = {"verification_files": {token: "google-site-verification: googleabc123"}}
+        writer = Writer(cfg.paths.output, cfg.paths.cache)
+        for name, body in cfg.raw["seo"]["verification_files"].items():
+            writer.write_raw(name, body)
+        writer.sync_manifest([], "2026-01-01T00:00:00+00:00", extra_keep=set(cfg.raw["seo"]["verification_files"]))
+        self.assertTrue((cfg.paths.output / token).exists())
+
     def test_deploy_metadata_written(self):
         tmp = Path(tempfile.mkdtemp())
         cfg = make_cfg(tmp)
