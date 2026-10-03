@@ -28,6 +28,11 @@ COINS = {
     "dogecoin": "Dogecoin",
     "polkadot": "Polkadot",
     "chainlink": "Chainlink",
+    # CoinGecko ids that do not match the display name. Without these the page title and
+    # slug come out as "Avalanche-2" and "Matic-Network", which nobody searches for.
+    "avalanche-2": "Avalanche",
+    "matic-network": "Polygon",
+    "hedera-hashgraph": "Hedera",
 }
 
 
@@ -36,6 +41,7 @@ async def collect(cfg, http: Http, budget) -> list[Page]:
     coins = [c.lower() for c in opts.get("coins", ["bitcoin", "ethereum"])]
     if not coins:
         return []
+    coins = _uncached_first(cfg, coins)
     stamp = datetime.now(timezone.utc).isoformat()
     pages: list[Page] = []
     # CoinGecko's key-free tier rate-limits aggressively. Every coin is gathered at
@@ -89,6 +95,29 @@ async def collect(cfg, http: Http, budget) -> list[Page]:
 
     pages.sort(key=lambda p: p.slug)
     return trim_to_budget(pages, budget)
+
+
+def _uncached_first(cfg, coins: list[str]) -> list[str]:
+    """Try the coins that have no snapshot yet before the ones that do.
+
+    Latching the daily ceiling means a run that gets refused early may only ever issue
+    one request. If the request always went to the first coin in the list, and that coin
+    already has a cached snapshot, the run would fetch nothing new and the coins still
+    missing a snapshot would never acquire one. Putting the uncached coins at the front
+    turns the one permitted request into forward progress every day.
+    """
+    def cached(coin: str) -> bool:
+        return (cfg.paths.cache / f"crypto_{coin}_365d.json").exists()
+
+    ordered = sorted(coins, key=lambda c: (cached(c), c))
+    missing = [c for c in ordered if not cached(c)]
+    if missing:
+        log.info(
+            "no cached snapshot yet for %d coin(s), trying them first: %s",
+            len(missing),
+            ", ".join(missing),
+        )
+    return ordered
 
 
 async def _from_cache_only(http: Http, cfg, coin: str) -> Page | None:

@@ -1399,6 +1399,41 @@ class TestUnavailableMarker(unittest.TestCase):
         self.assertTrue((cache_dir / "crypto_x_365d.unavailable").exists())
 
 
+class TestCryptoFetchOrder(unittest.TestCase):
+    """A latched run only gets one request, so it must go to a coin that needs it."""
+
+    def test_uncached_coins_are_tried_first(self):
+        cfg = make_cfg(Path(tempfile.mkdtemp()))
+        cache = cfg.paths.cache
+        for coin in ("bitcoin", "ethereum"):
+            write_json_cache(cache / f"crypto_{coin}_365d.json", {"prices": []})
+        ordered = crypto._uncached_first(cfg, ["bitcoin", "ethereum", "cosmos", "solana"])
+        self.assertEqual(ordered[:2], ["cosmos", "solana"])
+        self.assertEqual(set(ordered), {"bitcoin", "ethereum", "cosmos", "solana"})
+
+    def test_order_is_stable_and_complete_with_no_cache(self):
+        cfg = make_cfg(Path(tempfile.mkdtemp()))
+        coins = ["bitcoin", "cosmos", "matic-network"]
+        self.assertEqual(crypto._uncached_first(cfg, coins), sorted(coins))
+
+    def test_coin_ids_get_readable_slugs(self):
+        """AVAX is avalanche-2 and POL is matic-network; the slug must not leak that."""
+        cfg = make_cfg(Path(tempfile.mkdtemp()))
+        base = 1767225600000
+        payload = {
+            "prices": [[base + i * 86400000, 100 + i] for i in range(60)],
+            "total_volumes": [[base + i * 86400000, 1e9] for i in range(60)],
+        }
+        for coin, slug in (
+            ("avalanche-2", "avalanche-price-by-month"),
+            ("matic-network", "polygon-price-by-month"),
+            ("hedera-hashgraph", "hedera-price-by-month"),
+        ):
+            page = crypto._build_page(coin, payload, cfg, "2026-01-01T00:00:00+00:00", False)
+            self.assertIsNotNone(page)
+            self.assertEqual(page.slug, slug)
+
+
 class TestPruneMarkers(unittest.TestCase):
     """Only a definitive refusal should keep an endpoint retired."""
 
