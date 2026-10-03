@@ -1441,6 +1441,63 @@ class TestPruneMarkers(unittest.TestCase):
         self.assertTrue((cache / "crypto_bitcoin_365d.json").exists())
 
 
+class TestBingQuota(unittest.TestCase):
+    """Bing reports the size of the allowance, never what is left of it."""
+
+    def setUp(self):
+        sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "tools"))
+        import importlib
+
+        import bing_submit
+
+        self.m = importlib.reload(bing_submit)
+
+    def _with_state(self, value, date):
+        tmp = Path(tempfile.mkdtemp()) / "bing_submitted.json"
+        if value is not None:
+            tmp.write_text(json.dumps({"date": date, "count": value}))
+        self.m.STATE = tmp
+        return tmp
+
+    def test_no_state_file_means_nothing_submitted(self):
+        self._with_state(None, "2000-01-01")
+        self.assertEqual(self.m.submitted_today(), 0)
+
+    def test_todays_tally_is_counted(self):
+        import datetime as dt
+
+        self._with_state(40, dt.date.today().isoformat())
+        self.assertEqual(self.m.submitted_today(), 40)
+
+    def test_yesterdays_tally_does_not_count(self):
+        self._with_state(100, "2000-01-01")
+        self.assertEqual(self.m.submitted_today(), 0)
+
+    def test_remaining_is_allowance_minus_tally(self):
+        import datetime as dt
+
+        today = dt.date.today().isoformat()
+        # No network in a unit test: the endpoint only supplies the allowance size.
+        with mock.patch.object(
+            self.m, "call", return_value={"d": {"DailyQuota": 100, "MonthlyQuota": 2900}}
+        ):
+            self._with_state(None, "2000-01-01")
+            self.assertEqual(self.m.quota("k", "s", quiet=True), 100)  # state absent
+            self._with_state(30, today)
+            self.assertEqual(self.m.quota("k", "s", quiet=True), 70)
+            self._with_state(100, today)
+            self.assertEqual(self.m.quota("k", "s", quiet=True), 0)
+            self._with_state(500, today)  # never negative, never sends past the cap
+            self.assertEqual(self.m.quota("k", "s", quiet=True), 0)
+
+    def test_quota_refusal_is_recognised(self):
+        for body in (
+            '{"ErrorCode":8,"Message":"ERROR!!! You have exceeded your daily url submission quota : 100"}',
+            '{"ErrorCode":8,"Message":"ERROR!!! Quota remaining for today: 0, Submitted: 100"}',
+        ):
+            self.assertTrue(any(m in body.lower() for m in self.m.QUOTA_ERROR_MARKERS), body)
+
+
 class TestBingSubmission(unittest.TestCase):
     def test_long_tail_pages_outrank_hubs(self):
         """The daily allowance is 100 URLs, so hubs must not be spent first."""

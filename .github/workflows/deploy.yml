@@ -125,7 +125,8 @@ jobs:
         # thousands, so the tool submits its quota itself rather than relying on someone
         # to remember. It runs after the publish step so every submitted URL is already
         # live rather than announced a few seconds early. A missing key or an exhausted
-        # quota is not a build failure.
+        # quota is not a build failure; the tool also exits cleanly when the day's
+        # allowance is already spent, and continue-on-error is belt and braces.
         if: always()
         continue-on-error: true
         run: |
