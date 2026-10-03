@@ -163,6 +163,9 @@ class ChatProvider:
             log.warning("%s is quota-exhausted today; skipping it", self.label)
             return None
         if self.http is None:
+            log.error(
+                "%s has no HTTP client bound; it cannot be called", self.label
+            )
             return None
         await self.resolve_model()
         for model in self.candidates():
@@ -270,7 +273,15 @@ class Enricher:
                     spec["key_env"] = gemini_cfg["groq_key_env"]
                 if gemini_cfg.get("groq_model"):
                     spec["model"] = gemini_cfg["groq_model"]
-            self.chat_providers.append(ChatProvider(pname, spec, cfg.paths.cache, today))
+            provider = ChatProvider(pname, spec, cfg.paths.cache, today)
+            # A provider without a client returns None from call(), which looks exactly
+            # like an exhausted quota: the run silently drops to fallback copy with no
+            # error anywhere. Bind here so a missing bind fails loudly instead.
+            if http is not None:
+                provider.bind(http)
+            else:
+                log.warning("enrichment provider %s constructed without an HTTP client", pname)
+            self.chat_providers.append(provider)
         # Back-compat attributes: tests and callers still ask whether Groq is present.
         self.groq_key = next((p.key for p in self.chat_providers if p.name == "groq"), None)
         self.groq_model = next((p.model for p in self.chat_providers if p.name == "groq"), GROQ_FALLBACK_MODELS[0])

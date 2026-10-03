@@ -8,8 +8,10 @@ import json
 import asyncio
 import math
 import sys
+import os
 import tempfile
 import unittest
+from unittest import mock
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
@@ -150,6 +152,43 @@ class TestEnrichFailFast(unittest.TestCase):
         enricher.enabled = True
         enricher._trip_cutoff()
         self.assertFalse(enricher.enabled)
+
+
+class TestProviderBinding(unittest.TestCase):
+    """Every OpenAI-compatible provider must actually reach the network.
+
+    Regression: ChatProvider.call() returned None when its HTTP client was never
+    bound, which is indistinguishable from an exhausted quota. The whole AI
+    enrichment chain was silently dead in CI while every test still passed.
+    """
+
+    def test_providers_receive_the_http_client(self):
+        tmp = Path(tempfile.mkdtemp())
+        cfg = make_cfg(tmp)
+        sentinel = object()
+        with mock.patch.dict(os.environ, {"MISTRAL_API_KEY": "k"}, clear=False):
+            enricher = Enricher(cfg, http=sentinel)  # type: ignore[arg-type]
+        providers = {p.name: p for p in enricher.chat_providers}
+        self.assertIn("mistral", providers)
+        self.assertIs(providers["mistral"].http, sentinel)
+
+    def test_call_raises_a_loud_error_without_a_client(self):
+        from engine.enrich import ChatProvider
+
+        spec = {
+            "endpoint": "https://example.invalid/v1",
+            "models_endpoint": "https://example.invalid/v1/models",
+            "key_env": "MISTRAL_API_KEY",
+            "models": ("m",),
+            "label": "Test",
+        }
+        tmp = Path(tempfile.mkdtemp())
+        with mock.patch.dict(os.environ, {"MISTRAL_API_KEY": "k"}, clear=False):
+            provider = ChatProvider("mistral", spec, tmp, "2026-01-01")
+        self.assertIsNone(provider.http)
+        with self.assertLogs("pseo.enrich", level="ERROR") as logs:
+            self.assertIsNone(asyncio.run(provider.call(None, "prompt")))
+        self.assertTrue(any("no HTTP client" in line for line in logs.output))
 
 
 class TestHttpErrorPropagation(unittest.TestCase):
