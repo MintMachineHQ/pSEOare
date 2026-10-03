@@ -72,6 +72,18 @@ def trim_to_budget(pages: list[Page], budget: CallBudget) -> list[Page]:
     corpus would never grow past the first page_budget rows.
     """
     ordered = sorted(pages, key=lambda page: (not budget.is_new(page.path), page.slug))
+    # Report the split. A source whose candidate list is entirely "seen" is a saturated
+    # dataset, and knowing that per source is the only way to tell "the corpus is full"
+    # apart from "the budget is being spent on refreshes while unpublished pages wait".
+    unseen = sum(1 for page in ordered if budget.is_new(page.path))
+    if not pages or unseen < len(ordered):
+        log.info(
+            "trim: %d candidates, %d unseen, %d already published, budget %d remaining",
+            len(ordered),
+            unseen,
+            len(ordered) - unseen,
+            budget.remaining,
+        )
     allowed: list[Page] = []
     for page in ordered:
         if not budget.take():
