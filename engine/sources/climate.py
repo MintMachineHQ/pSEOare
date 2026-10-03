@@ -32,7 +32,10 @@ async def collect(cfg, http: Http, budget) -> list[Page]:
     # upstream changes are still picked up.
     # Must match _build_page exactly, or every city looks unseen on every run.
     def page_path(city: dict) -> str:
-        return f"{slugify(f"{city['name']}-average-monthly-temperature-rainfall")}.html"
+        # Must match _build_page exactly, or every city looks unseen and the whole list
+        # is refetched each run.
+        slug = city.get("slug") or slugify(f"{city['name']}-average-monthly-temperature-rainfall")
+        return f"{slug}.html"
 
     order = sorted(selected, key=lambda c: (not budget.is_new(page_path(c)), c["name"]))
     chosen = order[: budget.remaining]
@@ -120,7 +123,9 @@ def _build_page(city: dict, data: dict, cfg, stamp: str, from_cache: bool) -> Pa
         kind="climate_city",
         title=f"{name} average monthly temperature and rainfall (long-term climate)",
         h1=f"{name} climate: monthly averages",
-        slug=slugify(f"{name}-average-monthly-temperature-rainfall"),
+        # Prefer an explicit slug from assets/cities.json. tools/build_cities.py resolves
+        # the case where two cities share a name, which a name-derived slug cannot.
+        slug=city.get("slug") or slugify(f"{name}-average-monthly-temperature-rainfall"),
         summary=summary,
         schema_type="Dataset",
         keywords=[

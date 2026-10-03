@@ -13,9 +13,10 @@
   "sources": {
     "holidays": {
       "enabled": true,
-      "years_back": 2,
+      "years_back": 10,
       "years_forward": 1,
-      "priority": 1
+      "priority": 1,
+      "years_note": "Nager carries deep history for most countries and has no key and no rate limit, so widening years is free capacity. 10 back covers the 'holidays in YEAR' question for a decade, which is the long-tail shape people actually search."
     },
     "countries": {
       "enabled": true,
@@ -23,7 +24,7 @@
     },
     "climate": {
       "enabled": true,
-      "cities": 454,
+      "cities": 1351,
       "priority": 3,
       "note": "City list is GeoNames cities15000 filtered to population>=250k, up to7 per country, merged with the original curated 103 so no existing page is orphaned. 454 cities across 144 countries, sourced from assets/cities.json."
     },

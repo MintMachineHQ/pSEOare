@@ -1007,6 +1007,53 @@ class TestRender(unittest.TestCase):
         for page in pages:
             self.assertEqual((page.data or {}).get("entity"), "Algeria")
 
+    def test_city_list_slugs_are_unique_and_stable(self):
+        """Slugs come from the city name, so two cities sharing a name would overwrite each
+        other's page. build_cities.py freezes any already-published slug and disambiguates
+        the rest; this guards the two properties that actually matter."""
+        import re
+
+        cities = json.loads(Path("assets/cities.json").read_text("utf-8"))["cities"]
+        slugs = [c["slug"] for c in cities]
+
+        def derived(name: str) -> str:
+            return re.sub(r"[^a-z0-9]+", "-", f"{name}-average-monthly-temperature-rainfall".lower().replace("&", "and")).strip("-")
+
+        self.assertEqual(len(slugs), len(set(slugs)), "two cities share a slug")
+        for city in cities:
+            # Every published city keeps its historical name-derived slug.
+            self.assertEqual(city["slug"], derived(city["name"]), city["name"])
+            for field in ("country", "lat", "lon", "population"):
+                self.assertIn(field, city)
+
+    def test_climate_honours_an_explicit_slug(self):
+        """The pre-fetch predictor and the page builder must agree on the slug, or unseen
+        detection breaks and the whole list is refetched every run."""
+        from engine.sources.climate import _build_page
+        from engine.config import load_config
+
+        cfg = load_config(Path("config.json"))
+        city = {
+            "name": "Springfield",
+            "country": "United States",
+            "lat": 39.8,
+            "lon": -89.6,
+            "population": 150000,
+            "slug": "illinois-springfield-average-monthly-temperature-rainfall",
+        }
+        # POWER nests under properties.parameter and _build_page requires an ANN mean.
+        params = {
+            "T2M": {"JAN": 1.0, "JUL": 22.0, "ANN": 11.5},
+            "T2M_MAX": {"JAN": 5.0, "JUL": 26.0, "ANN": 15.5},
+            "T2M_MIN": {"JAN": -3.0, "JUL": 18.0, "ANN": 7.5},
+            "PRECTOTCORR": {"JAN": 2.0, "JUL": 4.0, "ANN": 3.0},
+        }
+        data = {"properties": {"parameter": params}}
+        page = _build_page(city, data, cfg, "2026-10-02T00:00:00+00:00", False)
+        self.assertIsNotNone(page)
+        self.assertEqual(page.slug, city["slug"])
+        self.assertEqual(page.path, city["slug"] + ".html")
+
     def test_waterfall_has_fallback(self):
         cfg = make_cfg(Path(tempfile.mkdtemp()))
         js = waterfall_js(cfg)
