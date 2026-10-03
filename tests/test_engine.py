@@ -319,10 +319,161 @@ class TestGroqModelRotation(unittest.TestCase):
             enricher = Enricher(cfg, http=None)  # type: ignore[arg-type]
             enricher.groq_model = "llama-x"
             enricher.groq_models = ["llama-y", "llama-x"]
-            self.assertEqual(enricher.groq_candidates(), ["llama-x", "llama-y"])
-            self.assertEqual(len(enricher.groq_candidates()), 2)
+            candidates = enricher.groq_candidates()
+            self.assertEqual(candidates[:2], ["llama-x", "llama-y"])
+            # Known-good ids from the registry are appended after whatever discovery
+            # returned, so a provider whose discovery call fails still has somewhere to go.
+            self.assertIn("llama-3.3-70b-versatile", candidates)
+            self.assertEqual(len(candidates), len(set(candidates)))  # no duplicates
         finally:
             del os.environ["GROQ_API_KEY"]
+
+
+class TestOpenAICompatProviders(unittest.TestCase):
+    """Cerebras and Mistral were added as registry entries rather than copies of the
+    Groq code, so these check the shared contract every provider inherits."""
+
+    def _enricher(self, **env):
+        import os
+
+        tmp = Path(tempfile.mkdtemp())
+        cfg = make_cfg(tmp)
+        for key in ("CEREBRAS_API_KEY", "MISTRAL_API_KEY", "GROQ_API_KEY", "GEMINI_API_KEY", "GEMINI_API_KEYS"):
+            os.environ.pop(key, None)
+        os.environ.update(env)
+        return Enricher(cfg, http=None)  # type: ignore[arg-type]
+
+    def test_mistral_only_enables_enrichment(self):
+        enricher = self._enricher(MISTRAL_API_KEY="key-m")
+        self.assertTrue(enricher.enabled)
+        self.assertEqual(enricher.keys, [])
+        self.assertEqual([p.name for p in enricher.chat_providers if p.available], ["mistral"])
+
+    def test_cerebras_only_enables_enrichment(self):
+        enricher = self._enricher(CEREBRAS_API_KEY="key-c")
+        self.assertTrue(enricher.enabled)
+        self.assertEqual([p.name for p in enricher.chat_providers if p.available], ["cerebras"])
+
+    def test_all_three_stack_in_configured_order(self):
+        enricher = self._enricher(
+            CEREBRAS_API_KEY="c", MISTRAL_API_KEY="m", GROQ_API_KEY="g"
+        )
+        self.assertEqual(
+            [p.name for p in enricher.chat_providers if p.available],
+            ["cerebras", "mistral", "groq"],
+        )
+
+    def test_config_order_overrides_the_default(self):
+        import os
+
+        tmp = Path(tempfile.mkdtemp())
+        cfg = make_cfg(tmp)
+        cfg.raw["gemini"] = {"enabled": True, "providers": ["mistral", "cerebras"]}
+        os.environ.pop("GROQ_API_KEY", None)
+        os.environ["MISTRAL_API_KEY"] = "m"
+        os.environ["CEREBRAS_API_KEY"] = "c"
+        try:
+            enricher = Enricher(cfg, http=None)  # type: ignore[arg-type]
+            self.assertEqual(
+                [p.name for p in enricher.chat_providers if p.available],
+                ["mistral", "cerebras"],
+            )
+        finally:
+            os.environ.pop("MISTRAL_API_KEY", None)
+            os.environ.pop("CEREBRAS_API_KEY", None)
+
+    def test_unknown_provider_is_ignored_not_fatal(self):
+        import os
+
+        tmp = Path(tempfile.mkdtemp())
+        cfg = make_cfg(tmp)
+        cfg.raw["gemini"] = {"enabled": True, "providers": ["not-a-provider", "mistral"]}
+        os.environ["MISTRAL_API_KEY"] = "m"
+        try:
+            enricher = Enricher(cfg, http=None)  # type: ignore[arg-type]
+            self.assertEqual([p.name for p in enricher.chat_providers], ["mistral"])
+        finally:
+            os.environ.pop("MISTRAL_API_KEY", None)
+
+    def test_each_provider_endpoints_are_distinct_and_openai_shaped(self):
+        from engine.enrich import OPENAI_COMPAT_PROVIDERS
+
+        seen = set()
+        for name, spec in OPENAI_COMPAT_PROVIDERS.items():
+            self.assertTrue(spec["endpoint"].endswith("/chat/completions"), name)
+            self.assertTrue(spec["models_endpoint"].endswith("/models"), name)
+            self.assertNotIn(spec["endpoint"], seen, name)
+            seen.add(spec["endpoint"])
+            self.assertTrue(spec["key_env"].endswith("_API_KEY"), name)
+            self.assertTrue(spec["models"], name)
+
+    def test_daily_quota_latches_and_never_retries(self):
+        """A 429 on a free tier costs the whole day. Retrying it just burns wall clock
+        and then every page falls back anyway."""
+        import asyncio
+        import os
+
+        tmp = Path(tempfile.mkdtemp())
+        cfg = make_cfg(tmp)
+        cfg.raw["gemini"] = {"enabled": True, "providers": ["mistral"]}
+        os.environ["MISTRAL_API_KEY"] = "m"
+        try:
+            enricher = Enricher(cfg, http=None)  # type: ignore[arg-type]
+            provider = enricher.chat_providers[0]
+
+            class Boom:
+                async def post_json(self, *a, **k):
+                    raise RuntimeError("HTTP 429 rate limit exceeded")
+
+                async def get_json(self, *a, **k):
+                    return {"data": []}
+
+            provider.bind(Boom())
+            page = sample_page(cfg)
+            text = asyncio.run(provider.call(page, "prompt"))
+            self.assertIsNone(text)
+            self.assertTrue(provider.exhausted)
+            self.assertTrue(provider.quota_path.exists(), provider.quota_path)
+            # Latched for the day: a second call must not even reach the network.
+            provider.http = None
+            self.assertIsNone(asyncio.run(provider.call(page, "prompt")))
+        finally:
+            os.environ.pop("MISTRAL_API_KEY", None)
+
+    def test_model_discovery_prefers_small_fast_models(self):
+        import asyncio
+        import os
+
+        tmp = Path(tempfile.mkdtemp())
+        cfg = make_cfg(tmp)
+        cfg.raw["gemini"] = {"enabled": True, "providers": ["cerebras"]}
+        os.environ["CEREBRAS_API_KEY"] = "c"
+        try:
+            enricher = Enricher(cfg, http=None)  # type: ignore[arg-type]
+            provider = enricher.chat_providers[0]
+
+            class Models:
+                async def post_json(self, *a, **k):
+                    return {"choices": [{"message": {"content": "  A paragraph of prose.  "}}]}
+
+                async def get_json(self, *a, **k):
+                    return {
+                        "data": [
+                            {"id": "llama-3.3-70b"},
+                            {"id": "qwen-3-32b"},
+                            {"id": "llama3.1-8b"},
+                        ]
+                    }
+
+            provider.bind(Models())
+            chosen = asyncio.run(provider.resolve_model())
+            # A 40-call daily budget cannot use a 70b model at any sane latency, and a
+            # wasted call is a lost page, so the small fast model wins.
+            self.assertEqual(chosen, "llama3.1-8b")
+            page = sample_page(cfg)
+            self.assertEqual(asyncio.run(provider.call(page, "prompt")), "A paragraph of prose.")
+        finally:
+            os.environ.pop("CEREBRAS_API_KEY", None)
 
 
 class TestRender(unittest.TestCase):
@@ -807,6 +958,54 @@ class TestRender(unittest.TestCase):
         cache = Path(tempfile.mkdtemp())
         (cache / "entity_index.json").write_text("{not json", "utf-8")
         self.assertEqual(load_entity_index(cache), {})
+
+    def test_every_source_builder_is_callable(self):
+        """A source that raises inside its own builder dies every run and only shows up
+        as one ERROR line among thousands. This happened: the countries ranking builder
+        referenced a name that was not in scope, so that dataset produced nothing."""
+        import inspect
+
+        from engine.sources import climate, countries, crypto, holidays
+
+        builders = [
+            countries._country_pages,
+            countries._ranking_pages,
+            holidays._build_pages,
+            climate._build_page,
+        ]
+        for fn in builders:
+            names = {
+                n
+                for n in inspect.signature(fn).parameters
+            }
+            body = inspect.getsource(fn)
+            for token in ("name", "record"):
+                if f'"{token}"' in body or f"'{token}'" in body:
+                    continue
+                self.assertNotIn(
+                    f'"entity": {token},', body,
+                    f"{fn.__name__} references {token!r}; make sure it is a parameter",
+                )
+            self.assertTrue(names, fn.__name__)
+
+    def test_country_rank_pages_carry_a_country_entity(self):
+        """Cross-dataset linking keys off this field; a NameError here silently drops a
+        whole dataset out of the entity index."""
+        from engine.config import load_config
+        from engine.sources import countries
+
+        record = {"id": "DZA", "name": "Algeria"}
+        cfg = load_config(Path("config.json"))
+        pages = countries._ranking_pages(
+            [record],
+            {record["id"]: {"SP.POP.TOTL": 45_000_000, "AG.SRF.TOTL.K2": 2_000_000}},
+            cfg,
+            "2026-10-02T00:00:00+00:00",
+            False,
+        )
+        self.assertTrue(pages)
+        for page in pages:
+            self.assertEqual((page.data or {}).get("entity"), "Algeria")
 
     def test_waterfall_has_fallback(self):
         cfg = make_cfg(Path(tempfile.mkdtemp()))

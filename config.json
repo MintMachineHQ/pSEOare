@@ -62,9 +62,15 @@
   "gemini": {
     "model": "",
     "enabled": true,
+    "providers": [
+      "cerebras",
+      "mistral",
+      "groq"
+    ],
+    "provider_overrides": {},
     "api_key_env": "GEMINI_API_KEY",
     "keys_env": "GEMINI_API_KEYS",
-    "note": "Provider chain: Groq first when GROQ_API_KEY exists (much larger free quota), then Gemini keys rotated via GEMINI_API_KEYS. If neither is set, deterministic fallback copy is used.",
+    "note": "OpenAI-compatible provider chain, tried in the order listed under providers. Cerebras and Mistral are first because their free tiers have far more daily throughput than Gemini's. Every provider latches a 429 to the UTC day and is skipped after that, and model ids are discovered per run. With no key present at all the deterministic fallback copy is used, which is now good enough that no page is ever thin.",
     "groq_key_env": "GROQ_API_KEY",
     "groq_model": ""
   },

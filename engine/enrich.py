@@ -7,6 +7,7 @@ import hashlib
 import logging
 import re
 import time
+from pathlib import Path
 
 from .config import Config, env_secret
 from .http import Http, read_json_cache, write_json_cache
@@ -18,11 +19,42 @@ log = logging.getLogger("pseo.enrich")
 API_ROOT = "https://generativelanguage.googleapis.com/v1beta"
 ENDPOINT = f"{API_ROOT}/models/{{model}}:generateContent"
 MODELS_ENDPOINT = f"{API_ROOT}/models"
-# Groq is OpenAI-compatible and its free tier is far larger than Gemini's
-# (thousands of requests/day), so it is the better default when a key exists.
-GROQ_ENDPOINT = "https://api.groq.com/openai/v1/chat/completions"
-GROQ_MODELS_ENDPOINT = "https://api.groq.com/openai/v1/models"
-GROQ_FALLBACK_MODELS = ("llama-3.3-70b-versatile", "llama-3.1-8b-instant")
+# Every provider below speaks the OpenAI chat-completions dialect, so one client covers
+# all of them and adding another is a registry entry rather than another 80 lines of
+# near-identical request, quota and model-discovery code.
+#
+# Order matters: ChatProvider list is walked top to bottom and the first one that
+# returns text wins. Higher free throughput goes first. per_minute is deliberately well
+# under each vendor's documented free-tier ceiling, because a 429 burns the whole day
+# (see ChatProvider.note_quota).
+OPENAI_COMPAT_PROVIDERS: dict[str, dict] = {
+    "cerebras": {
+        "endpoint": "https://api.cerebras.ai/v1/chat/completions",
+        "models_endpoint": "https://api.cerebras.ai/v1/models",
+        "key_env": "CEREBRAS_API_KEY",
+        "models": ("llama-3.3-70b", "llama3.1-8b"),
+        "per_minute": 25.0,
+        "label": "Cerebras",
+    },
+    "mistral": {
+        "endpoint": "https://api.mistral.ai/v1/chat/completions",
+        "models_endpoint": "https://api.mistral.ai/v1/models",
+        "key_env": "MISTRAL_API_KEY",
+        "models": ("mistral-small-latest", "open-mistral-nemo"),
+        "per_minute": 20.0,
+        "label": "Mistral",
+    },
+    "groq": {
+        "endpoint": "https://api.groq.com/openai/v1/chat/completions",
+        "models_endpoint": "https://api.groq.com/openai/v1/models",
+        "key_env": "GROQ_API_KEY",
+        "models": ("llama-3.3-70b-versatile", "llama-3.1-8b-instant"),
+        "per_minute": 25.0,
+        "label": "Groq",
+    },
+}
+# Kept for callers that only care about Groq.
+GROQ_FALLBACK_MODELS = OPENAI_COMPAT_PROVIDERS["groq"]["models"]
 # Tried in order when model discovery is unavailable.
 FALLBACK_MODELS = ("gemini-2.5-flash", "gemini-flash-latest", "gemini-2.0-flash")
 # Model ids that answer generateContent but are useless for prose: speech, image,
@@ -73,6 +105,143 @@ FAQ: <question>?|<answer under 35 words>
 - Do not output HTML tags, markdown headers, or preamble."""
 
 
+class ChatProvider:
+    """One OpenAI-compatible chat endpoint: key, rate limit, daily quota, model discovery.
+
+    Kept deliberately generic so Cerebras, Mistral and Groq share one implementation.
+    The two behaviours that actually cost us time live here:
+
+    * A 429 or a daily-cap message is latched to the UTC day and never retried, because
+      retrying a capped key just burns wall clock and every page then falls back.
+    * Model ids are discovered per run and a 404 evicts that id for the rest of the run.
+      Hardcoding a model name works until the vendor retires it, which silently costs a
+      whole provider's throughput.
+    """
+
+    def __init__(self, name: str, spec: dict, cache_dir, today: str) -> None:
+        self.name = name
+        self.spec = spec
+        self.label = spec.get("label", name)
+        self.endpoint = spec["endpoint"]
+        self.models_endpoint = spec["models_endpoint"]
+        self.key = env_secret(spec.get("key_env", ""))
+        self.model = spec.get("model") or spec["models"][0]
+        self.models: list[str] = [self.model]
+        self.limiter = RateLimiter(per_minute=float(spec.get("per_minute", 20.0)))
+        self.quota_path = Path(cache_dir) / f"{name}_quota.json"
+        self.quota = read_json_cache(self.quota_path, {}) or {}
+        self.today = today
+        self.http = None  # bound by bind()
+
+    def bind(self, http) -> None:
+        self.http = http
+
+    @property
+    def available(self) -> bool:
+        return bool(self.key)
+
+    @property
+    def exhausted(self) -> bool:
+        return bool(self.quota.get(self.today))
+
+    def note_quota(self) -> None:
+        self.quota[self.today] = True
+        write_json_cache(self.quota_path, self.quota)
+        log.error("%s rate/quota hit for today; skipping it for the rest of the UTC day", self.label)
+
+    def candidates(self) -> list[str]:
+        seen: list[str] = []
+        for candidate in [self.model, *self.models, *self.spec.get("models", ())]:
+            if candidate and candidate not in seen:
+                seen.append(candidate)
+        return seen
+
+    async def call(self, page: Page, prompt: str) -> str | None:
+        if not self.available:
+            return None
+        if self.exhausted:
+            log.warning("%s is quota-exhausted today; skipping it", self.label)
+            return None
+        if self.http is None:
+            return None
+        await self.resolve_model()
+        for model in self.candidates():
+            text = await self._attempt(page, prompt, model)
+            if text:
+                return text
+            if self.exhausted:
+                return None
+        return None
+
+    async def _attempt(self, page: Page, prompt: str, model: str) -> str | None:
+        payload = {
+            "model": model,
+            "messages": [{"role": "user", "content": prompt}],
+            "temperature": 0.4,
+            "max_tokens": 700,
+        }
+        headers = {"Authorization": f"Bearer {self.key}", "Content-Type": "application/json"}
+        for attempt in range(2):
+            await self.limiter.acquire()
+            try:
+                data = await self.http.post_json(self.endpoint, payload, headers=headers)
+                choices = data.get("choices") or []
+                text = (choices[0].get("message", {}).get("content") or "").strip()
+                cleaned = clean(text)
+                if cleaned:
+                    return cleaned
+                log.warning("%s %s returned no text for %s", self.label, model, page.slug)
+                return None
+            except Exception as exc:  # noqa: BLE001
+                detail = str(exc)
+                if any(marker in detail for marker in QUOTA_MARKERS) or "429" in detail:
+                    self.note_quota()
+                    return None
+                if "404" in detail:
+                    log.warning("%s model %s unavailable; trying the next candidate", self.label, model)
+                    if model in self.models:
+                        self.models.remove(model)
+                    return None
+                log.warning("%s failed (attempt %s): %s", self.label, attempt + 1, exc)
+                if attempt == 0:
+                    await asyncio.sleep(4)
+        return None
+
+    async def resolve_model(self) -> str:
+        """Ask the vendor which model ids this key can call, best first."""
+        if not self.available or self.http is None:
+            return self.model
+        try:
+            data = await self.http.get_json(self.models_endpoint, headers={"Authorization": f"Bearer {self.key}"})
+        except Exception as exc:  # noqa: BLE001
+            log.warning("%s model discovery failed (%s); trying %s", self.label, exc, self.model)
+            return self.model
+        names = [m.get("id", "") for m in (data.get("data") or []) if m.get("id")]
+        if not names:
+            log.warning("%s returned no model list; trying %s", self.label, self.model)
+            return self.model
+
+        def rank(name: str) -> tuple:
+            low = name.lower()
+            preferred = (
+                "small" in low
+                or "nemo" in low
+                or "flash" in low
+                or "mini" in low
+                or "8b" in low
+                or "instant" in low
+            )
+            size = next((int(p) for p in re.findall(r"(\d+)b", low)), 0)
+            return (0 if preferred else 1, -size, low)
+
+        ordered = sorted(names, key=rank)
+        if ordered[0] != self.model:
+            log.info("%s: using discovered model %s", self.label, ordered[0])
+        self.model = ordered[0]
+        self.models = ordered
+        return self.model
+
+
 class Enricher:
     def __init__(self, cfg: Config, http: Http) -> None:
         self.cfg = cfg
@@ -83,14 +252,28 @@ class Enricher:
             gemini_cfg.get("api_key_env", "GEMINI_API_KEY")
         )
         self.keys = _key_pool(pool) if pool else []
-        self.groq_key = env_secret(gemini_cfg.get("groq_key_env", "GROQ_API_KEY"))
-        self.groq_model = gemini_cfg.get("groq_model") or GROQ_FALLBACK_MODELS[0]
-        # Every model this key can see, best first. Groq retires model ids often, so the
-        # list is refreshed each run and walked on a 404 instead of hardcoding one name.
-        self.groq_models: list[str] = [self.groq_model]
-        self.groq_limiter = RateLimiter(per_minute=25.0)
-        self.groq_quota_path = cfg.paths.cache / "groq_quota.json"
-        self.groq_quota = read_json_cache(self.groq_quota_path, {}) or {}
+        # OpenAI-compatible providers, in the order they should be tried. config names the
+        # order so adding a paid key needs no code change. groq_key_env/groq_model stay
+        # honoured so an existing config keeps working untouched.
+        today = time.strftime("%Y-%m-%d")
+        order = gemini_cfg.get("providers") or ["cerebras", "mistral", "groq"]
+        self.chat_providers: list[ChatProvider] = []
+        for pname in order:
+            spec = dict(OPENAI_COMPAT_PROVIDERS.get(pname, {}))
+            if not spec:
+                log.warning("unknown enrichment provider %r; ignoring", pname)
+                continue
+            overrides = (gemini_cfg.get("provider_overrides") or {}).get(pname) or {}
+            spec.update(overrides)
+            if pname == "groq":
+                if gemini_cfg.get("groq_key_env"):
+                    spec["key_env"] = gemini_cfg["groq_key_env"]
+                if gemini_cfg.get("groq_model"):
+                    spec["model"] = gemini_cfg["groq_model"]
+            self.chat_providers.append(ChatProvider(pname, spec, cfg.paths.cache, today))
+        # Back-compat attributes: tests and callers still ask whether Groq is present.
+        self.groq_key = next((p.key for p in self.chat_providers if p.name == "groq"), None)
+        self.groq_model = next((p.model for p in self.chat_providers if p.name == "groq"), GROQ_FALLBACK_MODELS[0])
         self.api_key = self.keys[0] if self.keys else None
         # Keys that reported a daily quota exhaustion, remembered for the UTC day.
         self.quota_path = cfg.paths.cache / "gemini_quota.json"
@@ -100,7 +283,9 @@ class Enricher:
         self.model = cfg.raw.get("gemini", {}).get("model") or FALLBACK_MODELS[0]
         self.limiter = RateLimiter(per_minute=60.0 / float(limits.get("gemini_min_interval_seconds", 4.1)))
         self.budget = CallBudget(int(limits.get("max_gemini_calls_per_run", 100)))
-        self.enabled = bool(gemini_cfg.get("enabled", True)) and bool(self.keys or self.groq_key)
+        self.enabled = bool(gemini_cfg.get("enabled", True)) and bool(
+            self.keys or any(p.available for p in self.chat_providers)
+        )
         self.cache_path = cfg.paths.cache / "gemini_cache.json"
         self.model_cache_path = cfg.paths.cache / "gemini_model.json"
         self.cache: dict[str, str] = read_json_cache(self.cache_path, {}) or {}
@@ -211,8 +396,6 @@ class Enricher:
         targets = [p for p in targets if self.cache.get(str(p.data.get("key") or p.slug)) == ""]
         if not targets:
             return
-        if self.groq_key:
-            await self.resolve_groq_model()
         await self.resolve_model()
         log.info("enriching %d pages with %s", len(targets), self.model)
 
@@ -238,12 +421,13 @@ class Enricher:
     async def _call(self, page: Page) -> str | None:
         facts = ", ".join(f"{k}: {v}" for k, v in page.facts[:6])
         prompt = PROMPT.format(title=page.h1, summary=page.summary, facts=facts)
-        if self.groq_key:
-            text = await self._call_groq(page, prompt)
+        for provider in self.chat_providers:
+            text = await provider.call(page, prompt)
             if text:
+                self.stats["provider"] = provider.label
                 return text
-            if not self.keys:
-                return None
+        if not self.keys:
+            return None
         if not self.gemini_available:
             if not self._gemini_skip_logged:
                 log.warning("every gemini key is quota-exhausted today; using fallback copy")
@@ -318,102 +502,38 @@ class Enricher:
             self._trip_cutoff()
         return None
 
-    async def _call_groq(self, page: Page, prompt: str) -> str | None:
-        if self.groq_quota.get(self._today):
-            log.warning("groq is quota-exhausted today; skipping it")
-            return None
-        for model in self.groq_candidates():
-            text = await self._groq_try(page, prompt, model)
-            if text:
-                return text
-            if self.groq_quota.get(self._today):
-                return None
-        return None
+    # --- Groq back-compat shims -------------------------------------------------
+    # Older config and tests still speak in Groq terms. Groq is now just the first
+    # member of the provider list, so these forward to it instead of owning logic.
+    @property
+    def _groq(self) -> "ChatProvider | None":
+        return next((p for p in self.chat_providers if p.name == "groq"), None)
+
+    @property
+    def groq_model(self) -> str:
+        provider = self._groq
+        return provider.model if provider else GROQ_FALLBACK_MODELS[0]
+
+    @groq_model.setter
+    def groq_model(self, value: str) -> None:
+        provider = self._groq
+        if provider:
+            provider.model = value
+
+    @property
+    def groq_models(self) -> list[str]:
+        provider = self._groq
+        return provider.models if provider else []
+
+    @groq_models.setter
+    def groq_models(self, value: list[str]) -> None:
+        provider = self._groq
+        if provider:
+            provider.models = value
 
     def groq_candidates(self) -> list[str]:
-        seen: list[str] = []
-        for name in [self.groq_model, *self.groq_models]:
-            if name and name not in seen:
-                seen.append(name)
-        return seen
-
-    async def _groq_try(self, page: Page, prompt: str, model: str) -> str | None:
-        payload = {
-            "model": model,
-            "messages": [{"role": "user", "content": prompt}],
-            "temperature": 0.4,
-            "max_tokens": 700,
-        }
-        for attempt in range(2):
-            await self.groq_limiter.acquire()
-            try:
-                data = await self.http.post_json(
-                    GROQ_ENDPOINT,
-                    payload,
-                    headers={
-                        "Authorization": f"Bearer {self.groq_key}",
-                        "Content-Type": "application/json",
-                    },
-                )
-                choices = data.get("choices") or []
-                text = (choices[0].get("message", {}).get("content") or "").strip()
-                cleaned = clean(text)
-                if cleaned:
-                    return cleaned
-                log.warning("groq %s returned no text for %s", model, page.slug)
-                return None
-            except Exception as exc:  # noqa: BLE001
-                if any(marker in str(exc) for marker in QUOTA_MARKERS) or "429" in str(exc):
-                    self.groq_quota[self._today] = True
-                    write_json_cache(self.groq_quota_path, self.groq_quota)
-                    log.error("groq rate/quota hit for today; falling back to gemini")
-                    return None
-                if "404" in str(exc):
-                    # Retired model id: remember not to try it again this run.
-                    log.warning("groq model %s unavailable; trying the next candidate", model)
-                    if model in self.groq_models:
-                        self.groq_models.remove(model)
-                    return None
-                log.warning("groq failed (attempt %s): %s", attempt + 1, exc)
-                if attempt == 0:
-                    await asyncio.sleep(4)
-        return None
-
-    async def resolve_groq_model(self) -> str:
-        """Pick a model this Groq key can actually call."""
-        if not self.groq_key:
-            return self.groq_model
-        try:
-            data = await self.http.get_json(
-                GROQ_MODELS_ENDPOINT, headers={"Authorization": f"Bearer {self.groq_key}"}
-            )
-        except Exception as exc:  # noqa: BLE001
-            log.warning("groq model discovery failed (%s); trying %s", exc, self.groq_model)
-            return self.groq_model
-        names = [m.get("id", "") for m in (data.get("data") or []) if m.get("id")]
-        if not names:
-            log.warning("groq returned no model list; trying %s", self.groq_model)
-            return self.groq_model
-        # Prefer general chat models, best capability first, and drop anything that
-        # looks retired or non-textual.
-        def rank(name: str) -> tuple:
-            # Prefer general-purpose chat models, then the largest parameter count.
-            # Version strings like "qwen3.8-27b" do not parse as plain numbers, so
-            # size in billions is the reliable strength signal.
-            size = 0.0
-            for chunk in name.replace("-", " ").replace("/", " ").split():
-                if chunk.lower().endswith("b") and chunk[:-1].replace(".", "").isdigit():
-                    size = float(chunk[:-1])
-            flavour = 1 if "versatile" in name else (0 if "instant" in name else 2)
-            return (flavour, size, name)
-
-        text_models = [
-            n for n in names if not any(b in n for b in ("tts", "whisper", "vision", "guard"))
-        ]
-        self.groq_models = sorted(text_models, key=rank, reverse=True)[:5]
-        self.groq_model = self.groq_models[0]
-        log.info("groq model resolved to %s (candidates: %s)", self.groq_model, ", ".join(self.groq_models))
-        return self.groq_model
+        provider = self._groq
+        return provider.candidates() if provider else []
 
     def _mark_exhausted(self, model: str) -> str | None:
         """Record the exhausted key and move to the next one, or stop if none left."""
