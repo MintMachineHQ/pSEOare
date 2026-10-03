@@ -35,7 +35,7 @@ from engine.hubs import (
     not_found_html,
     sitemap_xml,
 )  # noqa: E402
-from engine.render import build_css, build_theme  # noqa: E402
+from engine.render import ad_exempt_hosts, build_css, build_theme  # noqa: E402
 from engine.http import Http, QuotaExhausted, _is_quota_exhausted, write_json_cache  # noqa: E402
 from engine.indexing import key_file_is_reachable, remember_pending, take_pending  # noqa: E402
 from engine.models import Link, Page, slugify  # noqa: E402
@@ -546,6 +546,47 @@ class TestRender(unittest.TestCase):
         html_doc = render_page(page, cfg, theme, build_css(theme), "", [], "2026-01-01T00:00:00+00:00")
         self.assertNotIn("<script>alert", html_doc)
         self.assertIn("&lt;script&gt;", html_doc)
+
+    def test_popunder_is_withheld_from_community_referral_traffic(self):
+        tmp = Path(tempfile.mkdtemp())
+        cfg = make_cfg(tmp)
+        cfg.raw["monetization"]["popunder_script"] = (
+            '<script data-cfasync="false" src="https://abscloud.org/1/abc123"></script>'
+        )
+        theme = build_theme()
+        html_doc = render_page(
+            sample_page(cfg), cfg, theme, build_css(theme), "", [], "2026-01-01T00:00:00+00:00"
+        )
+        head = html_doc[: html_doc.index("</head>")]
+        # The vendor script is injected at runtime, so it must not appear as a plain tag.
+        self.assertNotIn('src="https://abscloud.org/1/abc123"></script>', head)
+        # The bootstrap must exist, and it must carry the referrer check and the src.
+        self.assertIn("document.referrer", head)
+        self.assertIn("abscloud.org/1/abc123", head)
+        self.assertIn("reddit.com", head)
+        # A subdomain of an exempt host must also match, so the suffix test has to exist.
+        self.assertIn("host.slice(", head)
+        self.assertLess(html_doc.index("document.referrer"), html_doc.index("</head>"))
+
+    def test_popunder_gate_can_be_overridden_and_disabled(self):
+        tmp = Path(tempfile.mkdtemp())
+        cfg = make_cfg(tmp)
+        cfg.raw["monetization"]["popunder_script"] = (
+            '<script data-cfasync="false" src="https://abscloud.org/1/abc123"></script>'
+        )
+        # An empty list means "load for everyone": the snippet is emitted untouched.
+        cfg.raw["monetization"]["popunder_exempt_hosts"] = []
+        theme = build_theme()
+        html_doc = render_page(
+            sample_page(cfg), cfg, theme, build_css(theme), "", [], "2026-01-01T00:00:00+00:00"
+        )
+        self.assertIn('src="https://abscloud.org/1/abc123"></script>', html_doc)
+        self.assertNotIn("document.referrer", html_doc)
+
+        # The default list is used when the key is absent, so deleting it must not
+        # silently disable the gate.
+        del cfg.raw["monetization"]["popunder_exempt_hosts"]
+        self.assertIn("reddit.com", ad_exempt_hosts(cfg))
 
     def test_popunder_is_injected_once_not_per_slot(self):
         tmp = Path(tempfile.mkdtemp())

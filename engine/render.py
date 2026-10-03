@@ -215,6 +215,44 @@ def json_ld(page: Page, cfg: Config, canonical: str, stamp: str) -> str:
 # --------------------------------------------------------------------------
 # ads / waterfall
 # --------------------------------------------------------------------------
+SRC_RE = re.compile(r"""<script[^>]*\bsrc=["']([^"']+)["'][^>]*>\s*</script>""", re.I)
+
+# Hosts whose traffic must never be monetised with a popunder. Referral traffic is the
+# one source we cannot buy and the one we cannot afford to lose: a visitor who clicks
+# from a community thread expects an answer, and an instant popunder is exactly the
+# behaviour that gets a link flagged as spam and an account banned. These are matched on
+# the referrer's host, including subdomains.
+DEFAULT_AD_EXEMPT_HOSTS = [
+    "reddit.com",
+    "stackoverflow.com",
+    "stackexchange.com",
+    "superuser.com",
+    "serverfault.com",
+    "askubuntu.com",
+    "quora.com",
+    "linkedin.com",
+    "facebook.com",
+    "instagram.com",
+    "news.ycombinator.com",
+    "lobste.rs",
+    "tiktok.com",
+    "youtube.com",
+    "pinterest.com",
+    "tumblr.com",
+    "medium.com",
+    "discord.com",
+    "wikipedia.org",
+]
+
+
+def ad_exempt_hosts(cfg: Config) -> list[str]:
+    """Referrer hosts on which the popunder must not load."""
+    configured = cfg.monetization.get("popunder_exempt_hosts")
+    if configured is None:
+        return list(DEFAULT_AD_EXEMPT_HOSTS)
+    return [str(h).strip().lower().lstrip(".") for h in configured if str(h).strip()]
+
+
 def head_ads(cfg: Config) -> str:
     """Loaders the network requires immediately before </head>.
 
@@ -222,11 +260,49 @@ def head_ads(cfg: Config) -> str:
     to appear once per page: these scripts install page-wide listeners, so repeating
     them inside every ad slot can fire the popunder several times and get the account
     flagged.
+
+    When the snippet is a plain remote loader it is wrapped in a small bootstrap instead
+    of being emitted directly, so the vendor script is only injected for visitors who
+    arrived without a community referrer. Emitting it raw would mean the popunder arms
+    itself on exactly the traffic that would complain about it. A snippet we cannot
+    parse (inline test snippet, or one carrying its own behaviour) is emitted untouched.
     """
     money = cfg.monetization
     if money.get("popunder_enabled") is False:
         return ""
-    return (money.get("popunder_script") or "").strip()
+    raw = (money.get("popunder_script") or "").strip()
+    if not raw:
+        return ""
+    hosts = ad_exempt_hosts(cfg)
+    match = SRC_RE.search(raw)
+    if not match or not hosts:
+        return raw
+    src = _esc(match.group(1))
+    exempt = safe_json(hosts)
+    return (
+        "    <script>\n"
+        "    // Ads are withheld from community referral traffic: an instant popunder on a\n"
+        "    // referred visit is the fastest route to a removed link and a banned account.\n"
+        "    (function () {\n"
+        f"      var exempt = {exempt};\n"
+        "      var ref = document.referrer || '';\n"
+        "      var host = '';\n"
+        "      try { host = new URL(ref).hostname.toLowerCase(); } catch (e) { host = ''; }\n"
+        "      if (host) {\n"
+        "        for (var i = 0; i < exempt.length; i++) {\n"
+        "          var e = exempt[i];\n"
+        "          if (host === e || host.slice(-(e.length + 1)) === '.' + e) return;\n"
+        "        }\n"
+        "      }\n"
+        "      var s = document.createElement('script');\n"
+        f"      s.src = '{src}';\n"
+        "      s.async = true;\n"
+        "      s.setAttribute('data-cfasync', 'false');\n"
+        "      s.referrerPolicy = 'unsafe-url';\n"
+        "      document.head.appendChild(s);\n"
+        "    })();\n"
+        "    </script>"
+    )
 
 
 def global_ads(cfg: Config) -> str:
