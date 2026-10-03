@@ -198,14 +198,14 @@ def build() -> str:
 
     # live stat strip
     stats = [
-        ("1,757", "published pages"),
+        ("1,907", "published pages"),
         ("5", "data sources"),
-        ("454", "cities"),
+        ("1,351", "cities"),
         ("24", "coins"),
         ("04:17 UTC", "daily cron"),
         ("300", "pages / run cap"),
         ("$0.0010", "revenue so far"),
-        ("71", "tests green"),
+        ("83", "tests green"),
     ]
     sx, sw_, sy = 60, 255, 126
     for i, (big, small) in enumerate(stats):
@@ -245,8 +245,9 @@ def build() -> str:
             "monthly T2M / rainfall / wind /",
             "solar radiation, per lat+lon",
             "",
-            "454 cities, population ≥ 250k",
+            "1,351 cities, population ≥ 250k",
             "paced and budgeted before fetch",
+            "30 max per country",
         ], "75 / run"),
         ("src", "Nager.Date", [
             "date.nager.at/api/v3",
@@ -254,7 +255,7 @@ def build() -> str:
             "",
             "no API key, no registration",
             "",
-            "years_back 2 + forward 1",
+            "10 years back + 1 forward",
             "country x year matrix",
         ], "75 / run"),
         ("src", "World Bank", [
@@ -399,7 +400,7 @@ def build() -> str:
     stage(c, 4, "DISCOVERY", "how a page gets found", 1614)
     d_y, d_h = 1676, 172
     disc = [
-        ("disc", "sitemap.xml", ["built from the manifest", "every published URL, all 1,757", "points at the live host, not the artifact"]),
+        ("disc", "sitemap.xml", ["built from the manifest", "every published URL, all 1,907", "points at the live host, not the artifact"]),
         ("disc", "IndexNow", ["150 URLs per run", "current run deferred to next run, so", "Bing is never told before publish", "quota-free, replaces manual submission"]),
         ("disc", "feed.xml", ["RSS 2.0, newest 200 pages", "the path aggregators actually", "subscribe to", "listed in robots.txt"]),
         ("disc", "robots.txt", ["allow all", "declares sitemap.xml", "names feed.xml", "genuine 404 carries noindex"]),
@@ -432,7 +433,7 @@ def build() -> str:
     c.path("M1496 1999 L1532 1999", EDGE, 2)
 
     # ------------------------------------------------------- stage 6 the site
-    stage(c, 6, "THE LIVE SITE", "1,757 pages, how a visitor moves through them", 2104)
+    stage(c, 6, "THE LIVE SITE", "1,907 pages, how a visitor moves through them", 2104)
     s_y, s_h = 2166, 214
     sites = [
         ("ok", "Entry points", [

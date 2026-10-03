@@ -22,13 +22,13 @@
 <text x="2140" y="74" fill="#64748b" font-size="14" font-weight="normal" text-anchor="end" opacity="1.0">github.com/MintMachineHQ/pSEOare</text>
 <text x="2140" y="98" fill="#34d399" font-size="14" font-weight="normal" text-anchor="end" opacity="1.0">live: pseoare.pages.dev</text>
 <rect x="60" y="126" width="241" height="52" rx="8" fill="#0b1220" stroke="#1e293b" stroke-width="1"/>
-<text x="74" y="151" fill="#7dd3fc" font-size="21" font-weight="bold" text-anchor="start" opacity="1.0">1,757</text>
+<text x="74" y="151" fill="#7dd3fc" font-size="21" font-weight="bold" text-anchor="start" opacity="1.0">1,907</text>
 <text x="74" y="169" fill="#64748b" font-size="12" font-weight="normal" text-anchor="start" opacity="1.0">published pages</text>
 <rect x="315" y="126" width="241" height="52" rx="8" fill="#0b1220" stroke="#1e293b" stroke-width="1"/>
 <text x="329" y="151" fill="#7dd3fc" font-size="21" font-weight="bold" text-anchor="start" opacity="1.0">5</text>
 <text x="329" y="169" fill="#64748b" font-size="12" font-weight="normal" text-anchor="start" opacity="1.0">data sources</text>
 <rect x="570" y="126" width="241" height="52" rx="8" fill="#0b1220" stroke="#1e293b" stroke-width="1"/>
-<text x="584" y="151" fill="#7dd3fc" font-size="21" font-weight="bold" text-anchor="start" opacity="1.0">454</text>
+<text x="584" y="151" fill="#7dd3fc" font-size="21" font-weight="bold" text-anchor="start" opacity="1.0">1,351</text>
 <text x="584" y="169" fill="#64748b" font-size="12" font-weight="normal" text-anchor="start" opacity="1.0">cities</text>
 <rect x="825" y="126" width="241" height="52" rx="8" fill="#0b1220" stroke="#1e293b" stroke-width="1"/>
 <text x="839" y="151" fill="#7dd3fc" font-size="21" font-weight="bold" text-anchor="start" opacity="1.0">24</text>
@@ -43,7 +43,7 @@
 <text x="584" y="213" fill="#7dd3fc" font-size="21" font-weight="bold" text-anchor="start" opacity="1.0">$0.0010</text>
 <text x="584" y="231" fill="#64748b" font-size="12" font-weight="normal" text-anchor="start" opacity="1.0">revenue so far</text>
 <rect x="825" y="188" width="241" height="52" rx="8" fill="#0b1220" stroke="#1e293b" stroke-width="1"/>
-<text x="839" y="213" fill="#7dd3fc" font-size="21" font-weight="bold" text-anchor="start" opacity="1.0">71</text>
+<text x="839" y="213" fill="#7dd3fc" font-size="21" font-weight="bold" text-anchor="start" opacity="1.0">83</text>
 <text x="839" y="231" fill="#64748b" font-size="12" font-weight="normal" text-anchor="start" opacity="1.0">tests green</text>
 <line x1="60" y1="258" x2="2140" y2="258" stroke="#1e293b" stroke-width="2"/>
 <rect x="60" y="286" width="2080" height="46" rx="8" fill="#0a1220" stroke="#1e293b" stroke-width="1"/>
@@ -83,8 +83,9 @@
 <text x="78.0" y="662" fill="#94a3b8" font-size="12" font-weight="normal" text-anchor="start" opacity="1.0">monthly T2M / rainfall / wind /</text>
 <text x="78.0" y="678" fill="#94a3b8" font-size="12" font-weight="normal" text-anchor="start" opacity="1.0">solar radiation, per lat+lon</text>
 <text x="78.0" y="694" fill="#94a3b8" font-size="12" font-weight="normal" text-anchor="start" opacity="1.0"></text>
-<text x="78.0" y="710" fill="#94a3b8" font-size="12" font-weight="normal" text-anchor="start" opacity="1.0">454 cities, population ≥ 250k</text>
+<text x="78.0" y="710" fill="#94a3b8" font-size="12" font-weight="normal" text-anchor="start" opacity="1.0">1,351 cities, population ≥ 250k</text>
 <text x="78.0" y="726" fill="#94a3b8" font-size="12" font-weight="normal" text-anchor="start" opacity="1.0">paced and budgeted before fetch</text>
+<text x="78.0" y="742" fill="#94a3b8" font-size="12" font-weight="normal" text-anchor="start" opacity="1.0">30 max per country</text>
 <rect x="359.6" y="574" width="90" height="22" rx="11" fill="#0b1220" stroke="#2c5282" stroke-width="1"/>
 <text x="404.6" y="589" fill="#7dd3fc" font-size="12" font-weight="bold" text-anchor="middle" opacity="1.0">75 / run</text>
 <rect x="479.6" y="562" width="401.6" height="250" rx="12" fill="url(#src)" stroke="#2c5282" stroke-width="2"/>
@@ -94,7 +95,7 @@
 <text x="497.6" y="646" fill="#94a3b8" font-size="12" font-weight="normal" text-anchor="start" opacity="1.0"></text>
 <text x="497.6" y="662" fill="#94a3b8" font-size="12" font-weight="normal" text-anchor="start" opacity="1.0">no API key, no registration</text>
 <text x="497.6" y="678" fill="#94a3b8" font-size="12" font-weight="normal" text-anchor="start" opacity="1.0"></text>
-<text x="497.6" y="694" fill="#94a3b8" font-size="12" font-weight="normal" text-anchor="start" opacity="1.0">years_back 2 + forward 1</text>
+<text x="497.6" y="694" fill="#94a3b8" font-size="12" font-weight="normal" text-anchor="start" opacity="1.0">10 years back + 1 forward</text>
 <text x="497.6" y="710" fill="#94a3b8" font-size="12" font-weight="normal" text-anchor="start" opacity="1.0">country x year matrix</text>
 <rect x="779.2" y="574" width="90" height="22" rx="11" fill="#0b1220" stroke="#2c5282" stroke-width="1"/>
 <text x="824.2" y="589" fill="#7dd3fc" font-size="12" font-weight="bold" text-anchor="middle" opacity="1.0">75 / run</text>
@@ -224,7 +225,7 @@
 <rect x="60.0" y="1676" width="506.5" height="172" rx="12" fill="url(#disc)" stroke="#6d28d9" stroke-width="2"/>
 <text x="78.0" y="1706" fill="#e2e8f0" font-size="16" font-weight="bold" text-anchor="start" opacity="1.0">sitemap.xml</text>
 <text x="78.0" y="1728" fill="#94a3b8" font-size="12" font-weight="normal" text-anchor="start" opacity="1.0">built from the manifest</text>
-<text x="78.0" y="1744" fill="#94a3b8" font-size="12" font-weight="normal" text-anchor="start" opacity="1.0">every published URL, all 1,757</text>
+<text x="78.0" y="1744" fill="#94a3b8" font-size="12" font-weight="normal" text-anchor="start" opacity="1.0">every published URL, all 1,907</text>
 <text x="78.0" y="1760" fill="#94a3b8" font-size="12" font-weight="normal" text-anchor="start" opacity="1.0">points at the live host, not the artifact</text>
 <path d="M313.25 1848 L313.25 1890" fill="none" stroke="#334155" stroke-width="2" marker-end="url(#ar)"/>
 <rect x="566.5" y="1676" width="506.5" height="172" rx="12" fill="url(#disc)" stroke="#6d28d9" stroke-width="2"/>
@@ -281,7 +282,7 @@
 <rect x="60" y="2104" width="2080" height="46" rx="8" fill="#0a1220" stroke="#1e293b" stroke-width="1"/>
 <text x="84" y="2134" fill="#38bdf8" font-size="14" font-weight="bold" text-anchor="start" opacity="1.0">STAGE 6</text>
 <text x="180" y="2134" fill="#e2e8f0" font-size="19" font-weight="bold" text-anchor="start" opacity="1.0">THE LIVE SITE</text>
-<text x="349" y="2133" fill="#64748b" font-size="13" font-weight="normal" text-anchor="start" opacity="1.0">1,757 pages, how a visitor moves through them</text>
+<text x="349" y="2133" fill="#64748b" font-size="13" font-weight="normal" text-anchor="start" opacity="1.0">1,907 pages, how a visitor moves through them</text>
 <rect x="60.0" y="2166" width="506.5" height="214" rx="12" fill="url(#ok)" stroke="#0f766e" stroke-width="2"/>
 <text x="78.0" y="2196" fill="#e2e8f0" font-size="16" font-weight="bold" text-anchor="start" opacity="1.0">Entry points</text>
 <text x="78.0" y="2218" fill="#94a3b8" font-size="12" font-weight="normal" text-anchor="start" opacity="1.0">index.html lists every dataset</text>
