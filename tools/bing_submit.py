@@ -24,10 +24,17 @@ import urllib.parse
 import urllib.request
 
 API = "https://ssl.bing.com/webmaster/api.svc/json"
-KEY_PATH = os.path.expanduser("~/.secrets/bing-webmaster-key")
+# Overridable so CI can mount the key from a secret without writing to $HOME.
+KEY_PATH = os.path.expanduser(
+    os.getenv("BING_KEY_PATH") or "~/.secrets/bing-webmaster-key"
+)
 SITEMAP = "https://pseoare.pages.dev/sitemap.xml"
-# Bing caps a batch at 500 URLs and a domain at 10,000 submissions per day.
-BATCH = 500
+# Bing rejects a batch larger than 100 URLs with HTTP 400 / ErrorCode 8, and the
+# per-domain allowance is small too (100/day, 2,900/month as reported by
+# GetUrlSubmissionQuota). Both numbers are read from the quota endpoint at run
+# time; these are only fallbacks when that call fails.
+BATCH = 100
+FALLBACK_DAILY_QUOTA = 100
 
 
 def key() -> str:
@@ -93,9 +100,33 @@ def sitemap_urls(source: str) -> list[str]:
     return [u for u in urls if not (u in seen or seen.add(u))]
 
 
-def quota(api_key: str, site: str) -> None:
+def quota(api_key: str, site: str, quiet: bool = False) -> int:
     result = call("GetUrlSubmissionQuota", api_key, {"siteUrl": site}, get=True)
-    print(json.dumps(result, indent=2)[:800])
+    data = result.get("d", result) if isinstance(result, dict) else {}
+    daily = int(data.get("DailyQuota") or FALLBACK_DAILY_QUOTA)
+    monthly = data.get("MonthlyQuota")
+    if not quiet:
+        print(json.dumps(result, indent=2)[:800])
+    return daily
+
+
+def prioritise(urls: list[str]) -> list[str]:
+    """Order the sitemap so long-tail pages are submitted before the hubs.
+
+    The allowance is 100 URLs/day against a corpus of thousands, so the order
+    matters: the hub indexes and the homepage are already discoverable from any
+    single deep link, while the individual pages are the ones that can win a
+    query. Sending hubs first would spend the budget on the pages that need it
+    least.
+    """
+    def rank(url: str) -> int:
+        # Compare the path, not the last "/"-separated chunk of the whole URL: the
+        # homepage has no path component at all, so rsplit on the raw string leaves
+        # the hostname behind and quietly ranks it as a deep page.
+        path = urllib.parse.urlparse(url).path.strip("/")
+        return 1 if (not path or path.startswith("hub-")) else 0
+
+    return sorted(urls, key=rank)
 
 
 def main() -> None:
@@ -112,17 +143,31 @@ def main() -> None:
         quota(api_key, args.site)
         return
 
-    urls = sitemap_urls(args.sitemap)
+    daily = quota(api_key, args.site, quiet=True)
+
+    urls = prioritise(sitemap_urls(args.sitemap))
+    total = len(urls)
+
+    # Never send more than the day's remaining allowance: Bing counts the whole
+    # submitted batch against the quota and answers HTTP 400 if it overflows,
+    # discarding the batch rather than partially accepting it.
+    sendable = min(total, daily)
     if args.limit:
-        urls = urls[: args.limit]
-    batches = [urls[i : i + BATCH] for i in range(0, len(urls), BATCH)]
+        sendable = min(sendable, args.limit)
 
     print(f"site     {args.site}")
     print(f"sitemap  {args.sitemap}")
-    print(f"urls     {len(urls)} unique -> {len(batches)} batches of up to {BATCH}")
-    if len(urls) > 10_000:
-        print(f"WARNING  {len(urls)} urls exceeds Bing's 10,000/day quota for one domain;")
-        print("         re-run the next day for the remainder")
+    print(f"urls     {total} unique in the sitemap")
+    print(f"quota    {daily} left today -> sending at most {sendable}")
+    if sendable < total:
+        print(f"NOTE     {total - sendable} urls wait for a later day; the sitemap and")
+        print("         IndexNow still cover them, so nothing is left undiscovered.")
+
+    urls = urls[:sendable]
+    if not urls:
+        print("nothing to submit today")
+        return
+    batches = [urls[i : i + BATCH] for i in range(0, len(urls), BATCH)]
 
     if not args.submit:
         print("\nplan only, nothing sent. re-run with --submit to send")

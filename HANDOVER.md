@@ -32,7 +32,7 @@ This document explains what exists, how it fits together, and how to change it s
  └─────────┬─────────┘
            ▼
  ┌───────────────────┐
- │ 3. enrich prose   │  engine/enrich.py — Groq first, then Gemini,
+ │ 3. enrich prose   │  engine/enrich.py — Cerebras, Mistral,
  │                   │  then deterministic fallback. Never blocks a build.
  └─────────┬─────────┘
            ▼
@@ -89,10 +89,10 @@ Pages. The mirror is what makes the site live; `gh-pages` is only a build artifa
 
 | Dataset | Source | Produces |
 | --- | --- | --- |
-| Holidays | `date.nager.at` | One page per country × holiday × year. 2 years back, 1 forward. |
+| Holidays | `date.nager.at` | One page per country × holiday × year. 10 years back, 1 forward. |
 | Countries | `api.worldbank.org` + REST Countries | One page per country: population, GDP, coordinates, currency. |
-| Climate | NASA POWER climatology | One page per city: 12 monthly mean temps, rainfall, record highs/lows. 130 cities. |
-| Crypto | CoinGecko `market_chart` | One page per coin: 365-day range, current price, drawdown. 8 coins. |
+| Climate | NASA POWER climatology | One page per city: 12 monthly mean temps, rainfall, record highs/lows. 1,351 cities. |
+| Crypto | CoinGecko `market_chart` | One page per coin: monthly low/high/average over a rolling year. 24 coins, latched to the cached snapshot once the key-free daily ceiling is hit. |
 
 Every source caches its last successful response under `cache/`. If an upstream API
 fails or blocks the runner, the cached snapshot is used and the page is marked
@@ -196,8 +196,8 @@ clean, IndexNow is accepted, and the popunder demonstrably registers a click-awa
 (Adsterra's tracking pixel returned 200). There are simply no visitors.
 
 Realistic arithmetic: popunder CPMs on cold, unbranded traffic sit well under $1, so
-**$40/day needs on the order of 50,000 pageviews a day.** The site is one day old with
-238 URLs and no backlinks. No ad setting closes that gap.
+**$40/day needs on the order of 50,000 pageviews a day.** The site is days old with a
+few thousand URLs and no backlinks. No ad setting closes that gap.
 
 ### The soft-404 bug that was found and fixed
 
@@ -314,8 +314,9 @@ python3 tools/adsterra_stats.py 30 --json # machine-readable
 
 1. **Change the Adsterra site category** away from `Other`, in the dashboard. The
    publisher API cannot do it.
-2. **Submit the sitemap in Bing Webmaster Tools.** IndexNow already works, but Bing
-   Webmaster Tools is the fastest route to indexation.
+2. **Nothing to do for Bing submission** — the daily build already spends the 100
+   URL/day Webmaster allowance itself, long-tail pages first. IndexNow runs alongside
+   it. The dashboard is only worth reading, not pressing.
 3. **Use Search Console URL Inspection → Request Indexing** on the ten hub pages. It is
    manual, and it is the single highest-impact action available.
 4. **Replace the CPA fallback** with a real offer. `cpa_fallback_url` is

@@ -26,7 +26,7 @@
       "enabled": true,
       "cities": 1351,
       "priority": 3,
-      "note": "City list is GeoNames cities15000 filtered to population>=250k, up to7 per country, merged with the original curated 103 so no existing page is orphaned. 454 cities across 144 countries, sourced from assets/cities.json."
+      "note": "City list is GeoNames cities15000 filtered to population>=250k, up to 30 per country, merged with the original curated list so no existing page is orphaned. 1,351 cities across 152 countries, sourced from assets/cities.json."
     },
     "crypto": {
       "enabled": true,
@@ -43,21 +43,23 @@
         "bitcoin-cash",
         "stellar",
         "monero",
-        "avalanche",
+        "avalanche-2",
         "cosmos",
-        "polygon",
+        "matic-network",
         "uniswap",
         "ethereum-classic",
         "near",
         "algorand",
         "filecoin",
-        "hedera",
+        "hedera-hashgraph",
         "tezos",
         "aptos",
         "arbitrum"
       ],
       "priority": 4,
-      "requests_per_minute": 8
+      "requests_per_minute": 15,
+      "requests_per_minute_note": "CoinGecko's key-free tier refuses bursts well below this, so the limiter is not the binding constraint; the run-time cost of sleeping between coins is. 15/min keeps a 24-coin refresh near 100s instead of 3 minutes, and the daily-ceiling latch in engine/sources/crypto.py handles the 429 case without burning retries.",
+      "coins_note": "These are CoinGecko coin ids, not ticker symbols. The symbols 404: AVAX is 'avalanche-2', HBAR is 'hedera-hashgraph', POL/MATIC is 'matic-network'. A wrong id is indistinguishable from a dead endpoint once cached_fetch records it, so verify an id with GET /api/v3/coins/<id> before adding it here."
     }
   },
   "gemini": {

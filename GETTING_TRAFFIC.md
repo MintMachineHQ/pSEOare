@@ -8,43 +8,23 @@ visits, so the ads earn nothing. Ads make money from *visitors*, not from pages.
 
 ---
 
-## 1. Bing Webmaster Tools (about 10 minutes)
+## 1. Bing Webmaster Tools — done, you only need to look
 
-**What it is:** a free Microsoft tool where you prove you own a website and then watch
-it get crawled and indexed. Google has the same thing (Search Console — already done).
-Bing is easier to get indexed on, and it feeds a lot of other sites.
+**Already working, no action needed:**
 
-**What you already have:** automatic pings to Bing are switched on and working. I tested
-one live and Bing accepted it. So the plumbing is done — you just need the dashboard to
-see it and to push harder.
+- The site is verified and the API key is set, so the daily build now spends Bing's
+  submission allowance itself, right after it publishes. It reads the day's remaining
+  quota, submits that many long-tail pages, and stops cleanly. You never have to
+  remember to press a button.
+- Because the allowance is only **100 URLs a day** against a corpus of 2,200+, the tool
+  deliberately submits the individual data pages first and leaves the hub indexes and
+  the homepage for last. Hubs are reachable from any deep link; the specific pages are
+  the ones that can win a query.
+- Automatic IndexNow pings still run for every new page, so nothing waits on the quota.
 
-**Do this:**
-
-1. Go to <https://www.bing.com/webmasters>
-2. Sign in with a Microsoft account (Outlook / Hotmail / live.com). Use a new one if you
-   want to keep this separate.
-3. Click **Add site**, type `pseoare.pages.dev`, submit.
-4. Bing gives you a choice of how to prove ownership. Pick **Import from GSC** if it
-   offers that (you already verified Search Console, so it is instant). Otherwise pick
-   **XML file upload** and it will show you a filename that looks like
-   `BingSiteAuth.xml`.
-5. Copy that exact filename and its contents and paste them into `config.json` in this
-   block:
-
-```json
-"verification_files": {
-  "googleeba8f39aab451061.html": "google-site-verification: googleeba8f39aab451061.html",
-  "BingSiteAuth.xml": "PASTE_THE_CONTENTS_BING_GAVE_YOU_HERE"
-}
-```
-
-6. Commit and push, or just tell me to do it. The file goes live on the next build
-   (daily at 04:17 UTC, or immediately if you say so).
-7. Back in Bing, click **Verify**. Then submit the sitemap:
-   `https://pseoare.pages.dev/sitemap.xml`
-
-You do not need to do step 5 yourself — send me the filename and contents and I will
-publish it in one commit.
+**The only thing worth doing is looking.** Go to <https://www.bing.com/webmasters> and
+check **URL Inspection** or **IndexNow** after a few days. That dashboard is the fastest
+honest read on whether Bing is taking the pages.
 
 ---
 
@@ -53,9 +33,9 @@ publish it in one commit.
 **What it is:** a button that tells Google "crawl this exact page now" instead of
 waiting for it to find you on its own.
 
-**Why it matters most:** you have 238 pages and Google has indexed zero. Requesting the
-10 hub pages gets the biggest pages indexed fastest, and Google then follows the links
-inside them to the rest.
+**Why it matters most:** Google has indexed nothing yet. Requesting the hub pages gets
+the biggest pages indexed fastest, and Google then follows the links inside them to the
+rest.
 
 **Do this:**
 
@@ -65,7 +45,8 @@ inside them to the rest.
 4. Repeat for each of the 10.
 
 The 9 to request, in order of importance. All of these were checked and return 200 —
-copy them one at a time:
+copy them one at a time. Google allows roughly 10–12 requests a day per property, so
+this is a two-minute job, not an all-day one.
 
 ```
 https://pseoare.pages.dev/
@@ -84,10 +65,11 @@ https://pseoare.pages.dev/amazigh-new-year-morocco-2024-01-14
 Do not guess a URL — the site returns a real 404 for anything that does not exist, and a
 404 tells Google nothing.
 
-**A note on the corpus size.** There are 238 pages live, not the full planned set. The
-build adds roughly 300 more per day and only rewrites what changed, so the site fills
-out over the next few weeks. There is no `japan-country-data` page yet — that is normal,
-not a fault.
+**A note on the corpus size.** There are over 2,200 pages live and it grows by roughly
+150 a day. Do not try to request them all — Google will throttle you and the hubs do the
+same job for the rest. Request the hubs, then spot-check a handful of individual pages
+once a week. If a specific country or city page is missing that you expected, that is a
+real gap worth reporting; a page that has not been generated yet is not.
 
 **Expect a "not indexed" verdict on most of them.** That is normal and not a
 rejection — it means "not yet", and Request Indexing still queues the crawl. Only if it
@@ -152,7 +134,7 @@ useless here — Google discounts it and Adsterra's own quality checks would fla
 - Daily rebuild at 04:17 UTC, published automatically
 - Cloudflare mirror, so the live site updates itself
 - IndexNow pings to Bing on every changed page
-- AI prose enrichment, Groq first
+- AI prose enrichment, Mistral first (Cerebras → Mistral → Groq → Gemini)
 - A daily revenue report that tells you impressions, clicks and money, and names any ad
   unit sitting at zero
 

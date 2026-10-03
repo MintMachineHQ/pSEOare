@@ -24,6 +24,11 @@ QUOTA_EXHAUSTED_MARKERS = (
     "quota exceeded",
     "resource_exhausted",
     "insufficient_quota",
+    # CoinGecko words its key-free daily ceiling as "You've exceeded the Rate Limit",
+    # which reads like a momentary throttle but is not one. Without this marker every
+    # coin in the list is retried three times with 8s/16s/30s backoff before the cached
+    # snapshot is used, which cost minutes of a cron run to reach the same answer.
+    "exceeded the rate limit",
 )
 
 

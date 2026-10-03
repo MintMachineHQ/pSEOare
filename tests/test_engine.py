@@ -36,11 +36,11 @@ from engine.hubs import (
     sitemap_xml,
 )  # noqa: E402
 from engine.render import build_css, build_theme  # noqa: E402
-from engine.http import Http, QuotaExhausted  # noqa: E402
+from engine.http import Http, QuotaExhausted, _is_quota_exhausted, write_json_cache  # noqa: E402
 from engine.indexing import key_file_is_reachable, remember_pending, take_pending  # noqa: E402
 from engine.models import Link, Page, slugify  # noqa: E402
 from engine.ratelimit import CallBudget  # noqa: E402
-from engine.sources.base import trim_to_budget  # noqa: E402
+from engine.sources.base import cached_fetch, trim_to_budget  # noqa: E402
 from engine.render import build_css, build_theme, ad_block, pick_copy, render_page, waterfall_js  # noqa: E402
 from engine.sources import climate, countries, crypto, holidays  # noqa: E402
 from engine.writer import Writer  # noqa: E402
@@ -1323,6 +1323,154 @@ class TestSources(unittest.TestCase):
         cfg = make_cfg(Path(tempfile.mkdtemp()))
         payload = {"prices": [[1767225600000, 100]]}
         self.assertIsNone(crypto._build_page("bitcoin", payload, cfg, "2026-01-01T00:00:00+00:00", False))
+
+    def test_coingecko_daily_ceiling_is_treated_as_exhausted(self):
+        """CoinGecko words its key-free daily cap as a rate limit; retrying it wastes minutes."""
+        self.assertTrue(_is_quota_exhausted("You've exceeded the Rate Limit. Please visit ..."))
+        self.assertTrue(_is_quota_exhausted("quota exceeded"))
+        # A genuine momentary throttle is still retryable.
+        self.assertFalse(_is_quota_exhausted("too many requests, slow down"))
+
+    def test_crypto_latches_the_daily_ceiling_and_reads_cache(self):
+        """After one refusal the remaining coins must issue no requests at all."""
+        cfg = make_cfg(Path(tempfile.mkdtemp()))
+        base = 1767225600000
+        payload = {
+            "prices": [[base + i * 86400000, 100 + i] for i in range(60)],
+            "total_volumes": [[base + i * 86400000, 1e9] for i in range(60)],
+        }
+        # Prime the cache for both coins so the cache-only path has data to serve.
+        write_json_cache(cfg.paths.cache / "crypto_bitcoin_365d.json", payload)
+        write_json_cache(cfg.paths.cache / "crypto_solana_365d.json", payload)
+
+        calls: list[str] = []
+
+        class ThrottledHttp:
+            async def get_json(self, url, params=None, headers=None):
+                calls.append(url)
+                raise QuotaExhausted("HTTP 429 quota exhausted: You've exceeded the Rate Limit")
+
+        class Budget:
+            def is_new(self, path):
+                return True
+
+            @property
+            def remaining(self):
+                return 100
+
+            def take(self, n=1):
+                return True
+
+        cfg.raw["sources"] = {"crypto": {"coins": ["bitcoin", "solana"], "requests_per_minute": 600}}
+        pages = asyncio.run(
+            crypto.collect(cfg, ThrottledHttp(), Budget())
+        )
+        # Only the first coin is attempted; the other is served from cache.
+        self.assertEqual(len(calls), 1)
+        self.assertEqual({p.kind for p in pages}, {"crypto_12m"})
+        self.assertEqual(len(pages), 2)
+
+
+class TestUnavailableMarker(unittest.TestCase):
+    """A rate limit must never blacklist a working endpoint for good."""
+
+    async def _fetch(self, exc, cache_dir, name="crypto_x_365d.json"):
+        class FailingHttp:
+            async def get_json(self, url, params=None, headers=None):
+                raise exc
+
+        return await cached_fetch(FailingHttp(), cache_dir, name, "https://api.example/x")
+
+    def test_rate_limit_does_not_write_the_marker(self):
+        for exc in (
+            QuotaExhausted("HTTP 429 quota exhausted: You've exceeded the Rate Limit"),
+            RuntimeError("request failed after 3 attempts: https://x (HTTP 429 rate limited)"),
+        ):
+            cache_dir = Path(tempfile.mkdtemp())
+            asyncio.run(self._fetch(exc, cache_dir))
+            self.assertFalse(
+                (cache_dir / "crypto_x_365d.unavailable").exists(),
+                f"{exc} must not permanently disable the endpoint",
+            )
+
+    def test_permanent_refusal_does_write_the_marker(self):
+        cache_dir = Path(tempfile.mkdtemp())
+        asyncio.run(self._fetch(RuntimeError("HTTP 404: not found"), cache_dir))
+        self.assertTrue((cache_dir / "crypto_x_365d.unavailable").exists())
+
+
+class TestPruneMarkers(unittest.TestCase):
+    """Only a definitive refusal should keep an endpoint retired."""
+
+    def test_rate_limits_and_quota_markers_are_stale(self):
+        sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "tools"))
+        import prune_markers
+
+        for reason in (
+            "request failed after 3 attempts: https://x (HTTP 429 rate limited)",
+            "HTTP 429 quota exhausted: You've exceeded the Rate Limit",
+            "Cannot connect to host api.example:443",
+            "TimeoutError",
+        ):
+            self.assertTrue(prune_markers.is_stale(reason), reason)
+
+    def test_permanent_status_markers_are_kept(self):
+        sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "tools"))
+        import prune_markers
+
+        for code in ("HTTP 400", "HTTP 401", "HTTP 403", "HTTP 404", "HTTP 410", "HTTP 451"):
+            self.assertFalse(prune_markers.is_stale(f"request failed: {code} gone"), code)
+
+    def test_it_only_ever_removes_marker_files(self):
+        """A repair tool must not be able to delete a cache payload or a page."""
+        sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "tools"))
+        import prune_markers
+
+        cache = Path(tempfile.mkdtemp())
+        (cache / "crypto_bitcoin_365d.json").write_text("{}")
+        (cache / "good.unavailable").write_text("HTTP 404 gone")
+        (cache / "stale.unavailable").write_text("HTTP 429 rate limited")
+        argv = sys.argv
+        sys.argv = ["prune_markers.py", "--apply", "--cache", str(cache)]
+        try:
+            self.assertEqual(prune_markers.main(), 0)
+        finally:
+            sys.argv = argv
+        self.assertFalse((cache / "stale.unavailable").exists())
+        self.assertTrue((cache / "good.unavailable").exists())
+        self.assertTrue((cache / "crypto_bitcoin_365d.json").exists())
+
+
+class TestBingSubmission(unittest.TestCase):
+    def test_long_tail_pages_outrank_hubs(self):
+        """The daily allowance is 100 URLs, so hubs must not be spent first."""
+        sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "tools"))
+        import bing_submit
+
+        urls = [
+            "https://pseoare.pages.dev/",
+            "https://pseoare.pages.dev/hub-climate",
+            "https://pseoare.pages.dev/hub-countries",
+            "https://pseoare.pages.dev/berlin-average-monthly-temperature-rainfall",
+            "https://pseoare.pages.dev/population-of-france",
+        ]
+        ordered = bing_submit.prioritise(urls)
+        self.assertEqual(ordered[0], "https://pseoare.pages.dev/berlin-average-monthly-temperature-rainfall")
+        self.assertEqual(ordered[1], "https://pseoare.pages.dev/population-of-france")
+        self.assertEqual(set(ordered[-3:]), set(urls[:3]))
+        self.assertEqual(sorted(ordered), sorted(urls), "prioritise must not drop a url")
+
+    def test_bing_key_path_is_overridable_for_ci(self):
+        """CI mounts the key from a secret, so the path has to be overridable."""
+        sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "tools"))
+        import importlib
+
+        import bing_submit
+
+        with mock.patch.dict(os.environ, {"BING_KEY_PATH": "/tmp/x/bing-webmaster-key"}):
+            reloaded = importlib.reload(bing_submit)
+            self.assertEqual(reloaded.KEY_PATH, "/tmp/x/bing-webmaster-key")
+        importlib.reload(bing_submit)
 
 
 if __name__ == "__main__":

@@ -9,8 +9,9 @@ import asyncio
 import logging
 from collections import defaultdict
 from datetime import datetime, timezone
+from typing import Any
 
-from ..http import Http
+from ..http import Http, QuotaExhausted
 from ..models import Link, Page, slugify
 from ..ratelimit import RateLimiter
 from .base import cached_fetch, fmt_num, trim_to_budget
@@ -41,9 +42,22 @@ async def collect(cfg, http: Http, budget) -> list[Page]:
     # once, so without a throttle a wide coin list trips 429s, and each 429 is then
     # retried three times with backoff before the cached snapshot is used instead.
     limiter = RateLimiter(per_minute=float(opts.get("requests_per_minute", 8)))
+    # Once the key-free daily ceiling is hit it will not recover inside this run, and
+    # every later coin would only spend its own rate-limit slot before falling back to
+    # the same cached snapshot. Latch the first refusal and let the rest read the cache
+    # directly, which is what they would have ended up with anyway.
+    throttled = asyncio.Event()
 
     async def one(coin: str) -> Page | None:
+        if throttled.is_set():
+            return await _from_cache_only(http, cfg, coin)
         await limiter.acquire()
+        # The coins are gathered concurrently, so several of them can already be
+        # queued on the limiter when the first refusal latches. Re-check here, or
+        # every queued coin still walks into the same wall one rate-limit slot
+        # at a time.
+        if throttled.is_set():
+            return await _from_cache_only(http, cfg, coin)
         try:
             data, from_cache = await cached_fetch(
                 http,
@@ -51,7 +65,14 @@ async def collect(cfg, http: Http, budget) -> list[Page]:
                 f"crypto_{coin}_365d.json",
                 API.format(coin=coin),
                 {"vs_currency": "usd", "days": 365},
+                propagate_quota=True,
             )
+        except QuotaExhausted as exc:
+            # cached_fetch serves the cached snapshot before re-raising, so rebuild
+            # this coin from that same cache rather than dropping the page.
+            log.warning("crypto daily limit reached (%s); remaining coins use cache", exc)
+            throttled.set()
+            return await _from_cache_only(http, cfg, coin)
         except Exception as exc:  # noqa: BLE001
             log.warning("crypto %s failed: %s", coin, exc)
             return None
@@ -68,6 +89,25 @@ async def collect(cfg, http: Http, budget) -> list[Page]:
 
     pages.sort(key=lambda p: p.slug)
     return trim_to_budget(pages, budget)
+
+
+async def _from_cache_only(http: Http, cfg, coin: str) -> Page | None:
+    """Build a coin page from its last good snapshot, issuing no request at all."""
+    stamp = datetime.now(timezone.utc).isoformat()
+    data, from_cache = await cached_fetch(
+        http,
+        cfg.paths.cache,
+        f"crypto_{coin}_365d.json",
+        API.format(coin=coin),
+        fetch=_never_call,
+    )
+    if not isinstance(data, dict) or not data.get("prices"):
+        return None
+    return _build_page(coin, data, cfg, stamp, from_cache)
+
+
+async def _never_call(url: str, params: dict | None = None) -> Any:
+    raise QuotaExhausted(f"skipped, daily limit already reached ({url})")
 
 
 def _build_page(coin: str, data: dict, cfg, stamp: str, from_cache: bool) -> Page | None:

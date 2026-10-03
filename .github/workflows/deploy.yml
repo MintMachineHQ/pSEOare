@@ -21,7 +21,10 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    # The corpus grows every run, so job time grows with it. It sat near 10 minutes
+    # before the CoinGecko daily-limit latch and a rate-limit bump, and the cap has to
+    # leave room for that growth instead of killing a build mid-publish.
+    timeout-minutes: 40
     env:
       GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
       GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
@@ -30,6 +33,7 @@ jobs:
       MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
       INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
       GOOGLE_INDEXING_CREDENTIALS: ${{ secrets.GOOGLE_INDEXING_CREDENTIALS }}
+      BING_WEBMASTER_KEY: ${{ secrets.BING_WEBMASTER_KEY }}
     steps:
       - name: Checkout source
         uses: actions/checkout@v4
@@ -54,6 +58,12 @@ jobs:
           key: pseo-cache-${{ github.run_id }}
           restore-keys: |
             pseo-cache-
+
+      - name: Clear stale unavailable markers
+        # A marker written for a rate limit or a daily quota is permanent and would
+        # retire a working endpoint for the life of the cache, so those are cleared
+        # before the build retries them. Markers recording a permanent status are kept.
+        run: python tools/prune_markers.py --apply
 
       - name: Generate pages
         run: |
@@ -108,3 +118,21 @@ jobs:
           commit_message: "pSEO auto-build ${{ github.run_number }}"
           user_name: "pseo-bot"
           user_email: "pseo-bot@users.noreply.github.com"
+
+      - name: Submit today's URLs to Bing
+        # IndexNow pings Bing too, but the Webmaster endpoint is the one Bing's own
+        # crawler weights. Its allowance is only 100 URLs a day against a corpus in the
+        # thousands, so the tool submits its quota itself rather than relying on someone
+        # to remember. It runs after the publish step so every submitted URL is already
+        # live rather than announced a few seconds early. A missing key or an exhausted
+        # quota is not a build failure.
+        if: always()
+        continue-on-error: true
+        run: |
+          if [ -z "${BING_WEBMASTER_KEY:-}" ]; then
+            echo "BING_WEBMASTER_KEY not set; skipping Bing submission"
+            exit 0
+          fi
+          mkdir -p /tmp/bingkey
+          printf '%s' "$BING_WEBMASTER_KEY" > /tmp/bingkey/bing-webmaster-key
+          BING_KEY_PATH=/tmp/bingkey/bing-webmaster-key python tools/bing_submit.py --submit

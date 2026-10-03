@@ -37,7 +37,7 @@ engine/hubs.py            internal linking, hub pages, sitemap, robots
 engine/indexing.py        IndexNow + optional Google Indexing API
 engine/writer.py          manifest, delta writes, orphan cleanup
 engine/sources/*.py       one module per data source
-assets/cities.json        130 cities with coordinates
+assets/cities.json        1,351 cities with coordinates
 assets/countries.json     58 countries for holiday coverage
 cache/                    raw API snapshots, Gemini cache, manifest (git-ignored)
 output/                   published HTML, sitemap.xml, robots.txt
@@ -80,9 +80,11 @@ Then set `config.json -> domain` to the published URL (Cloudflare Pages or
 
 ## How the cost controls work
 
-- **Provider chain**: Groq first when `GROQ_API_KEY` exists (its free tier is thousands of
-  requests a day versus Gemini's small daily cap), then the Gemini key pool, then the
-  deterministic fallback copy. Quota state is remembered per UTC day per provider.
+- **Provider chain**: Cerebras, then Mistral, then Groq, each skipped cleanly when its
+  key is absent or its free quota is spent, then the deterministic fallback copy derived
+  from the page's own numbers. The order is data, in `config.json` → `gemini.providers`,
+  so adding or dropping a provider needs no code change. Quota state is remembered per
+  UTC day per provider.
 - **Gemini pacing**: `RateLimiter` spaces calls `gemini_min_interval_seconds` apart (7.5s by
   default) and enforces a rolling per-minute window. On `429` it honours `Retry-After`, halves
   the pace after two rate limits, and never counts a rate limit as a broken key. A hard
