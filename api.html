@@ -1,0 +1,61 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Data API | LongTail Data Atlas</title><meta name="description" content="Free JSON access to the climate, holiday and crypto data on this site."><link rel="canonical" href="https://pseoare.pages.dev/"><style>
+body{font:16px/1.55 system-ui,sans-serif;margin:0;padding:1.2rem;max-width:60rem;color:#1c1c1c}
+h1{font-size:1.7rem;margin:0 0 .4rem}h2{font-size:1.2rem;margin:1.6rem 0 .5rem}
+.lede{font-size:1.05rem;color:#333;margin:.2rem 0 .6rem}
+.meta,.note{color:#666;font-size:.85rem}
+.fact{background:#f4f6f9;border-left:4px solid #3d6ea8;padding:.7rem .9rem;margin:1rem 0}
+table{border-collapse:collapse;width:100%;margin:.6rem 0 1.2rem;font-size:.92rem}
+caption{text-align:left;font-weight:600;padding:.3rem 0}
+th,td{border:1px solid #ddd;padding:.34rem .5rem;text-align:left;vertical-align:top}
+thead th{background:#f4f4f4}td.num{text-align:right;font-variant-numeric:tabular-nums}
+.chart{margin:.6rem 0;background:#fafbfc;border:1px solid #eee;border-radius:4px}
+a{color:#2c5c96}code{background:#f4f4f4;padding:.1rem .3rem;border-radius:3px}
+pre{background:#f7f7f7;padding:.7rem;overflow:auto;border-radius:4px}
+.widget{font:14px/1.5 system-ui,sans-serif;padding:0}
+.widget h1{font-size:1.05rem;margin:0 0 .4rem}
+.attrib{font-size:.8rem;color:#666;margin:.4rem 0 0}
+@media(prefers-color-scheme:dark){body{background:#14171a;color:#e8e8e8}
+th,td{border-color:#333}thead th{background:#22262a}.meta,.note{color:#9aa}
+pre,.chart{background:#1b1f23}code{background:#252a2f}.fact{background:#1b2129}}
+</style><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Dataset", "name": "Data API", "description": "Free JSON access to the climate, holiday and crypto data on this site.", "url": "https://pseoare.pages.dev/", "dateModified": "2026-10-04T08:57:37.004949+00:00", "license": "https://creativecommons.org/licenses/by/4.0/", "isAccessibleForFree": true}</script><link rel="alternate" type="application/rss+xml" href="https://pseoare.pages.dev/feed.xml"></head><body>
+<h1>Data API</h1>
+<p class="lede">The same figures behind every page on this site, as JSON. Free, key-free
+and rebuilt daily.</p>
+<p class="meta">Updated: 2026-10-04 &middot;
+ 306 pages indexed.</p>
+
+<h2 id="climate">Climate API</h2>
+<p>Monthly climate averages for every tracked city. No key, no rate limit, no attribution required.</p>
+<p>Endpoint: <code>https://pseoare.pages.dev/api/climate.json</code></p>
+<pre><code>{
+  &quot;city&quot;: &quot;Kazan&quot;,
+  &quot;annual_mean_c&quot;: 3.1,
+  &quot;warmest_month&quot;: &quot;Jul&quot;,
+  &quot;swing_c&quot;: 33.3
+}</code></pre>
+<h2 id="holidays">Holidays API</h2>
+<p>Public holidays with dates, weekdays and local names. No key, no rate limit, no attribution required.</p>
+<p>Endpoint: <code>https://pseoare.pages.dev/api/holidays.json</code></p>
+<pre><code>{
+  &quot;country&quot;: &quot;Cyprus&quot;,
+  &quot;local_name&quot;: &quot;Χριστούγεννα&quot;,
+  &quot;date&quot;: &quot;2027-12-25&quot;,
+  &quot;weekday&quot;: &quot;Saturday&quot;
+}</code></pre>
+<h2 id="crypto">Crypto API</h2>
+<p>365-day high, low and latest for each tracked asset. No key, no rate limit, no attribution required.</p>
+<p>Endpoint: <code>https://pseoare.pages.dev/api/crypto.json</code></p>
+<pre><code>{
+  &quot;asset&quot;: &quot;Bitcoin&quot;,
+  &quot;high_12m&quot;: 124739.81,
+  &quot;low_12m&quot;: 58566.09,
+  &quot;pct_above_low&quot;: 44.8
+}</code></pre>
+<h2>Terms</h2>
+<ul>
+<li>Figures come from public open APIs and are on a best-effort basis; check the source
+page before relying on a number.</li>
+<li>Attribution is appreciated but not required.</li>
+<li>Please cache rather than poll aggressively; the data only changes once a day.</li>
+</ul>
+</body></html>
