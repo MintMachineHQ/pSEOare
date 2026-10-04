@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-04T13:43:18.724717+00:00",
+ "updated": "2026-10-04T13:57:55.564289+00:00",
  "count": 75,
  "source": "https://pseoare.pages.dev",
  "note": "figures are World Bank indicators; country rows carry only the indicators present in the source release",
@@ -8,522 +8,522 @@
    "country": "Afghanistan",
    "page": "https://pseoare.pages.dev/afghanistan-country-data",
    "population": 41454761.0,
-   "gdp per capita": 414.0,
-   "surface area": 652860.0
+   "gdp_per_capita": 414.0,
+   "surface_area": 652860.0
   },
   {
    "country": "Albania",
    "page": "https://pseoare.pages.dev/albania-country-data",
    "population": 2411658.0,
-   "gdp per capita": 9741.0,
-   "surface area": 28750.0
+   "gdp_per_capita": 9741.0,
+   "surface_area": 28750.0
   },
   {
    "country": "Algeria",
    "page": "https://pseoare.pages.dev/algeria-country-data",
    "population": 46164219.0,
-   "gdp per capita": 5370.0,
-   "surface area": 2381741.0
+   "gdp_per_capita": 5370.0,
+   "surface_area": 2381741.0
   },
   {
    "country": "American Samoa",
    "page": "https://pseoare.pages.dev/american-samoa-country-data",
    "population": 47521.0,
-   "surface area": 200.0
+   "surface_area": 200.0
   },
   {
    "country": "Andorra",
    "page": "https://pseoare.pages.dev/andorra-country-data",
    "population": 80856.0,
-   "gdp per capita": 46812.0,
-   "surface area": 470.0
+   "gdp_per_capita": 46812.0,
+   "surface_area": 470.0
   },
   {
    "country": "Angola",
    "page": "https://pseoare.pages.dev/angola-country-data",
    "population": 36749906.0,
-   "gdp per capita": 2886.0,
-   "surface area": 1246700.0
+   "gdp_per_capita": 2886.0,
+   "surface_area": 1246700.0
   },
   {
    "country": "Antigua and Barbuda",
    "page": "https://pseoare.pages.dev/antigua-and-barbuda-country-data",
    "population": 93316.0,
-   "gdp per capita": 22012.0,
-   "surface area": 440.0
+   "gdp_per_capita": 22012.0,
+   "surface_area": 440.0
   },
   {
    "country": "Argentina",
    "page": "https://pseoare.pages.dev/argentina-country-data",
    "population": 45538401.0,
-   "gdp per capita": 14262.0,
-   "surface area": 2780400.0
+   "gdp_per_capita": 14262.0,
+   "surface_area": 2780400.0
   },
   {
    "country": "Armenia",
    "page": "https://pseoare.pages.dev/armenia-country-data",
    "population": 2964300.0,
-   "gdp per capita": 8159.0,
-   "surface area": 29740.0
+   "gdp_per_capita": 8159.0,
+   "surface_area": 29740.0
   },
   {
    "country": "Aruba",
    "page": "https://pseoare.pages.dev/aruba-country-data",
    "population": 107359.0,
-   "gdp per capita": 34898.0,
-   "surface area": 180.0
+   "gdp_per_capita": 34898.0,
+   "surface_area": 180.0
   },
   {
    "country": "Australia",
    "page": "https://pseoare.pages.dev/australia-country-data",
    "population": 26659922.0,
-   "gdp per capita": 65058.0,
-   "surface area": 7741220.0
+   "gdp_per_capita": 65058.0,
+   "surface_area": 7741220.0
   },
   {
    "country": "Austria",
    "page": "https://pseoare.pages.dev/austria-country-data",
    "population": 9131761.0,
-   "gdp per capita": 56580.0,
-   "surface area": 83879.0
+   "gdp_per_capita": 56580.0,
+   "surface_area": 83879.0
   },
   {
    "country": "Azerbaijan",
    "page": "https://pseoare.pages.dev/azerbaijan-country-data",
    "population": 10153958.0,
-   "gdp per capita": 7133.0,
-   "surface area": 86600.0
+   "gdp_per_capita": 7133.0,
+   "surface_area": 86600.0
   },
   {
    "country": "Bahamas, The",
    "page": "https://pseoare.pages.dev/bahamas-the-country-data",
    "population": 399440.0,
-   "gdp per capita": 38232.0,
-   "surface area": 13880.0
+   "gdp_per_capita": 38232.0,
+   "surface_area": 13880.0
   },
   {
    "country": "Bahrain",
    "page": "https://pseoare.pages.dev/bahrain-country-data",
    "population": 1577059.0,
-   "gdp per capita": 29290.0,
-   "surface area": 780.0
+   "gdp_per_capita": 29290.0,
+   "surface_area": 780.0
   },
   {
    "country": "Bangladesh",
    "page": "https://pseoare.pages.dev/bangladesh-country-data",
    "population": 171466990.0,
-   "gdp per capita": 2551.0,
-   "surface area": 147570.0
+   "gdp_per_capita": 2551.0,
+   "surface_area": 147570.0
   },
   {
    "country": "Barbados",
    "page": "https://pseoare.pages.dev/barbados-country-data",
    "population": 282336.0,
-   "gdp per capita": 25584.0,
-   "surface area": 430.0
+   "gdp_per_capita": 25584.0,
+   "surface_area": 430.0
   },
   {
    "country": "Belarus",
    "page": "https://pseoare.pages.dev/belarus-country-data",
    "population": 9178298.0,
-   "gdp per capita": 7897.0,
-   "surface area": 207600.0
+   "gdp_per_capita": 7897.0,
+   "surface_area": 207600.0
   },
   {
    "country": "Belgium",
    "page": "https://pseoare.pages.dev/belgium-country-data",
    "population": 11779946.0,
-   "gdp per capita": 55245.0,
-   "surface area": 30688.0
+   "gdp_per_capita": 55245.0,
+   "surface_area": 30688.0
   },
   {
    "country": "Belize",
    "page": "https://pseoare.pages.dev/belize-country-data",
    "population": 411106.0,
-   "gdp per capita": 7425.0,
-   "surface area": 22970.0
+   "gdp_per_capita": 7425.0,
+   "surface_area": 22970.0
   },
   {
    "country": "Benin",
    "page": "https://pseoare.pages.dev/benin-country-data",
    "population": 14111034.0,
-   "gdp per capita": 1394.0,
-   "surface area": 114760.0
+   "gdp_per_capita": 1394.0,
+   "surface_area": 114760.0
   },
   {
    "country": "Bermuda",
    "page": "https://pseoare.pages.dev/bermuda-country-data",
    "population": 64698.0,
-   "gdp per capita": 132962.0,
-   "surface area": 4290.0
+   "gdp_per_capita": 132962.0,
+   "surface_area": 4290.0
   },
   {
    "country": "Bhutan",
    "page": "https://pseoare.pages.dev/bhutan-country-data",
    "population": 786385.0,
-   "gdp per capita": 3831.0,
-   "surface area": 38390.0
+   "gdp_per_capita": 3831.0,
+   "surface_area": 38390.0
   },
   {
    "country": "Bolivia",
    "page": "https://pseoare.pages.dev/bolivia-country-data",
    "population": 12244159.0,
-   "gdp per capita": 4275.0,
-   "surface area": 1098580.0
+   "gdp_per_capita": 4275.0,
+   "surface_area": 1098580.0
   },
   {
    "country": "Bosnia and Herzegovina",
    "page": "https://pseoare.pages.dev/bosnia-and-herzegovina-country-data",
    "population": 3185073.0,
-   "gdp per capita": 8663.0,
-   "surface area": 51210.0
+   "gdp_per_capita": 8663.0,
+   "surface_area": 51210.0
   },
   {
    "country": "Botswana",
    "page": "https://pseoare.pages.dev/botswana-country-data",
    "population": 2480244.0,
-   "gdp per capita": 7827.0,
-   "surface area": 581730.0
+   "gdp_per_capita": 7827.0,
+   "surface_area": 581730.0
   },
   {
    "country": "Brazil",
    "page": "https://pseoare.pages.dev/brazil-country-data",
    "population": 211140729.0,
-   "gdp per capita": 10378.0,
-   "surface area": 8515770.0
+   "gdp_per_capita": 10378.0,
+   "surface_area": 8515770.0
   },
   {
    "country": "British Virgin Islands",
    "page": "https://pseoare.pages.dev/british-virgin-islands-country-data",
    "population": 38985.0,
-   "surface area": 150.0
+   "surface_area": 150.0
   },
   {
    "country": "Brunei Darussalam",
    "page": "https://pseoare.pages.dev/brunei-darussalam-country-data",
    "population": 458949.0,
-   "gdp per capita": 32891.0,
-   "surface area": 5770.0
+   "gdp_per_capita": 32891.0,
+   "surface_area": 5770.0
   },
   {
    "country": "Bulgaria",
    "page": "https://pseoare.pages.dev/bulgaria-country-data",
    "population": 6446596.0,
-   "gdp per capita": 15854.0,
-   "surface area": 111000.0
+   "gdp_per_capita": 15854.0,
+   "surface_area": 111000.0
   },
   {
    "country": "Burkina Faso",
    "page": "https://pseoare.pages.dev/burkina-faso-country-data",
    "population": 23025776.0,
-   "gdp per capita": 873.0,
-   "surface area": 274220.0
+   "gdp_per_capita": 873.0,
+   "surface_area": 274220.0
   },
   {
    "country": "Burundi",
    "page": "https://pseoare.pages.dev/burundi-country-data",
    "population": 13689450.0,
-   "gdp per capita": 250.0,
-   "surface area": 27830.0
+   "gdp_per_capita": 250.0,
+   "surface_area": 27830.0
   },
   {
    "country": "Cabo Verde",
    "page": "https://pseoare.pages.dev/cabo-verde-country-data",
    "population": 522331.0,
-   "gdp per capita": 4795.0,
-   "surface area": 4030.0
+   "gdp_per_capita": 4795.0,
+   "surface_area": 4030.0
   },
   {
    "country": "Cambodia",
    "page": "https://pseoare.pages.dev/cambodia-country-data",
    "population": 17423880.0,
-   "gdp per capita": 2430.0,
-   "surface area": 181040.0
+   "gdp_per_capita": 2430.0,
+   "surface_area": 181040.0
   },
   {
    "country": "Cameroon",
    "page": "https://pseoare.pages.dev/cameroon-country-data",
    "population": 28372687.0,
-   "gdp per capita": 1720.0,
-   "surface area": 475440.0
+   "gdp_per_capita": 1720.0,
+   "surface_area": 475440.0
   },
   {
    "country": "Canada",
    "page": "https://pseoare.pages.dev/canada-country-data",
    "population": 40049088.0,
-   "gdp per capita": 54848.0,
-   "surface area": 15640500.0
+   "gdp_per_capita": 54848.0,
+   "surface_area": 15640500.0
   },
   {
    "country": "Cayman Islands",
    "page": "https://pseoare.pages.dev/cayman-islands-country-data",
    "population": 73038.0,
-   "gdp per capita": 100065.0,
-   "surface area": 264.0
+   "gdp_per_capita": 100065.0,
+   "surface_area": 264.0
   },
   {
    "country": "Central African Republic",
    "page": "https://pseoare.pages.dev/central-african-republic-country-data",
    "population": 5152421.0,
-   "gdp per capita": 496.0,
-   "surface area": 622980.0
+   "gdp_per_capita": 496.0,
+   "surface_area": 622980.0
   },
   {
    "country": "Chad",
    "page": "https://pseoare.pages.dev/chad-country-data",
    "population": 19319064.0,
-   "gdp per capita": 950.0,
-   "surface area": 1284000.0
+   "gdp_per_capita": 950.0,
+   "surface_area": 1284000.0
   },
   {
    "country": "Channel Islands",
    "page": "https://pseoare.pages.dev/channel-islands-country-data",
    "population": 167691.0,
-   "gdp per capita": 74586.0,
-   "surface area": 198.0
+   "gdp_per_capita": 74586.0,
+   "surface_area": 198.0
   },
   {
    "country": "Chile",
    "page": "https://pseoare.pages.dev/chile-country-data",
    "population": 19658835.0,
-   "gdp per capita": 17082.0,
-   "surface area": 756700.0
+   "gdp_per_capita": 17082.0,
+   "surface_area": 756700.0
   },
   {
    "country": "China",
    "page": "https://pseoare.pages.dev/china-country-data",
    "population": 1410710000.0,
-   "gdp per capita": 12951.0,
-   "surface area": 9562910.0
+   "gdp_per_capita": 12951.0,
+   "surface_area": 9562910.0
   },
   {
    "country": "Colombia",
    "page": "https://pseoare.pages.dev/colombia-country-data",
    "population": 52321152.0,
-   "gdp per capita": 7012.0,
-   "surface area": 1141750.0
+   "gdp_per_capita": 7012.0,
+   "surface_area": 1141750.0
   },
   {
    "country": "Comoros",
    "page": "https://pseoare.pages.dev/comoros-country-data",
    "population": 850387.0,
-   "gdp per capita": 1724.0,
-   "surface area": 1861.0
+   "gdp_per_capita": 1724.0,
+   "surface_area": 1861.0
   },
   {
    "country": "Congo, Dem. Rep.",
    "page": "https://pseoare.pages.dev/congo-dem-rep-country-data",
    "population": 105789731.0,
-   "gdp per capita": 660.0,
-   "surface area": 2344860.0
+   "gdp_per_capita": 660.0,
+   "surface_area": 2344860.0
   },
   {
    "country": "Congo, Rep.",
    "page": "https://pseoare.pages.dev/congo-rep-country-data",
    "population": 6182885.0,
-   "gdp per capita": 2478.0,
-   "surface area": 342000.0
+   "gdp_per_capita": 2478.0,
+   "surface_area": 342000.0
   },
   {
    "country": "Costa Rica",
    "page": "https://pseoare.pages.dev/costa-rica-country-data",
    "population": 5105525.0,
-   "gdp per capita": 17141.0,
-   "surface area": 51100.0
+   "gdp_per_capita": 17141.0,
+   "surface_area": 51100.0
   },
   {
    "country": "Cote d'Ivoire",
    "page": "https://pseoare.pages.dev/cote-d-ivoire-country-data",
    "population": 31165654.0,
-   "gdp per capita": 2592.0,
-   "surface area": 322460.0
+   "gdp_per_capita": 2592.0,
+   "surface_area": 322460.0
   },
   {
    "country": "Croatia",
    "page": "https://pseoare.pages.dev/croatia-country-data",
    "population": 3859686.0,
-   "gdp per capita": 22183.0,
-   "surface area": 88073.0
+   "gdp_per_capita": 22183.0,
+   "surface_area": 88073.0
   },
   {
    "country": "Cuba",
    "page": "https://pseoare.pages.dev/cuba-country-data",
    "population": 11019931.0,
-   "surface area": 109880.0
+   "surface_area": 109880.0
   },
   {
    "country": "Curacao",
    "page": "https://pseoare.pages.dev/curacao-country-data",
    "population": 154654.0,
-   "gdp per capita": 21218.0,
-   "surface area": 444.0
+   "gdp_per_capita": 21218.0,
+   "surface_area": 444.0
   },
   {
    "country": "Cyprus",
    "page": "https://pseoare.pages.dev/cyprus-country-data",
    "population": 1344976.0,
-   "gdp per capita": 36624.0,
-   "surface area": 9250.0
+   "gdp_per_capita": 36624.0,
+   "surface_area": 9250.0
   },
   {
    "country": "Czechia",
    "page": "https://pseoare.pages.dev/czechia-country-data",
    "population": 10864042.0,
-   "gdp per capita": 31762.0,
-   "surface area": 78870.0
+   "gdp_per_capita": 31762.0,
+   "surface_area": 78870.0
   },
   {
    "country": "Denmark",
    "page": "https://pseoare.pages.dev/denmark-country-data",
    "population": 5946952.0,
-   "gdp per capita": 68044.0,
-   "surface area": 42920.0
+   "gdp_per_capita": 68044.0,
+   "surface_area": 42920.0
   },
   {
    "country": "Djibouti",
    "page": "https://pseoare.pages.dev/djibouti-country-data",
    "population": 1152944.0,
-   "gdp per capita": 3381.0,
-   "surface area": 23200.0
+   "gdp_per_capita": 3381.0,
+   "surface_area": 23200.0
   },
   {
    "country": "Dominica",
    "page": "https://pseoare.pages.dev/dominica-country-data",
    "population": 66510.0,
-   "gdp per capita": 9913.0,
-   "surface area": 750.0
+   "gdp_per_capita": 9913.0,
+   "surface_area": 750.0
   },
   {
    "country": "Dominican Republic",
    "page": "https://pseoare.pages.dev/dominican-republic-country-data",
    "population": 11331265.0,
-   "gdp per capita": 10630.0,
-   "surface area": 48670.0
+   "gdp_per_capita": 10630.0,
+   "surface_area": 48670.0
   },
   {
    "country": "Ecuador",
    "page": "https://pseoare.pages.dev/ecuador-country-data",
    "population": 17980083.0,
-   "gdp per capita": 6718.0,
-   "surface area": 256370.0
+   "gdp_per_capita": 6718.0,
+   "surface_area": 256370.0
   },
   {
    "country": "Egypt, Arab Rep.",
    "page": "https://pseoare.pages.dev/egypt-arab-rep-country-data",
    "population": 114535772.0,
-   "gdp per capita": 3457.0,
-   "surface area": 1001450.0
+   "gdp_per_capita": 3457.0,
+   "surface_area": 1001450.0
   },
   {
    "country": "El Salvador",
    "page": "https://pseoare.pages.dev/el-salvador-country-data",
    "population": 6309624.0,
-   "gdp per capita": 5320.0,
-   "surface area": 21040.0
+   "gdp_per_capita": 5320.0,
+   "surface_area": 21040.0
   },
   {
    "country": "Equatorial Guinea",
    "page": "https://pseoare.pages.dev/equatorial-guinea-country-data",
    "population": 1847549.0,
-   "gdp per capita": 6788.0,
-   "surface area": 28050.0
+   "gdp_per_capita": 6788.0,
+   "surface_area": 28050.0
   },
   {
    "country": "Eritrea",
    "page": "https://pseoare.pages.dev/eritrea-country-data",
    "population": 3470390.0,
-   "surface area": 121665.0
+   "surface_area": 121665.0
   },
   {
    "country": "Estonia",
    "page": "https://pseoare.pages.dev/estonia-country-data",
    "population": 1370286.0,
-   "gdp per capita": 30264.0,
-   "surface area": 45340.0
+   "gdp_per_capita": 30264.0,
+   "surface_area": 45340.0
   },
   {
    "country": "Eswatini",
    "page": "https://pseoare.pages.dev/eswatini-country-data",
    "population": 1230506.0,
-   "gdp per capita": 3756.0,
-   "surface area": 17360.0
+   "gdp_per_capita": 3756.0,
+   "surface_area": 17360.0
   },
   {
    "country": "Ethiopia",
    "page": "https://pseoare.pages.dev/ethiopia-country-data",
    "population": 128691692.0,
-   "gdp per capita": 1056.0,
-   "surface area": 1136242.0
+   "gdp_per_capita": 1056.0,
+   "surface_area": 1136242.0
   },
   {
    "country": "Faroe Islands",
    "page": "https://pseoare.pages.dev/faroe-islands-country-data",
    "population": 54398.0,
-   "gdp per capita": 72487.0,
-   "surface area": 1396.0
+   "gdp_per_capita": 72487.0,
+   "surface_area": 1396.0
   },
   {
    "country": "Fiji",
    "page": "https://pseoare.pages.dev/fiji-country-data",
    "population": 924145.0,
-   "gdp per capita": 5926.0,
-   "surface area": 18270.0
+   "gdp_per_capita": 5926.0,
+   "surface_area": 18270.0
   },
   {
    "country": "Finland",
    "page": "https://pseoare.pages.dev/finland-country-data",
    "population": 5583911.0,
-   "gdp per capita": 52865.0,
-   "surface area": 338450.0
+   "gdp_per_capita": 52865.0,
+   "surface_area": 338450.0
   },
   {
    "country": "France",
    "page": "https://pseoare.pages.dev/france-country-data",
    "population": 68372286.0,
-   "gdp per capita": 44700.0,
-   "surface area": 549087.0
+   "gdp_per_capita": 44700.0,
+   "surface_area": 549087.0
   },
   {
    "country": "French Polynesia",
    "page": "https://pseoare.pages.dev/french-polynesia-country-data",
    "population": 281118.0,
-   "gdp per capita": 21832.0,
-   "surface area": 3471.0
+   "gdp_per_capita": 21832.0,
+   "surface_area": 3471.0
   },
   {
    "country": "Gabon",
    "page": "https://pseoare.pages.dev/gabon-country-data",
    "population": 2484789.0,
-   "gdp per capita": 7803.0,
-   "surface area": 267670.0
+   "gdp_per_capita": 7803.0,
+   "surface_area": 267670.0
   },
   {
    "country": "Gambia, The",
    "page": "https://pseoare.pages.dev/gambia-the-country-data",
    "population": 2697845.0,
-   "gdp per capita": 883.0,
-   "surface area": 11300.0
+   "gdp_per_capita": 883.0,
+   "surface_area": 11300.0
   },
   {
    "country": "Georgia",
    "page": "https://pseoare.pages.dev/georgia-country-data",
    "population": 3715483.0,
-   "gdp per capita": 8284.0,
-   "surface area": 69700.0
+   "gdp_per_capita": 8284.0,
+   "surface_area": 69700.0
   },
   {
    "country": "Germany",
    "page": "https://pseoare.pages.dev/germany-country-data",
    "population": 83287273.0,
-   "gdp per capita": 54777.0,
-   "surface area": 357580.0
+   "gdp_per_capita": 54777.0,
+   "surface_area": 357580.0
   },
   {
    "country": "Ghana",
    "page": "https://pseoare.pages.dev/ghana-country-data",
    "population": 33787914.0,
-   "gdp per capita": 2384.0,
-   "surface area": 238540.0
+   "gdp_per_capita": 2384.0,
+   "surface_area": 238540.0
   }
  ]
 }

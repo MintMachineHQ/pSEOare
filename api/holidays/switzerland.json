@@ -1,7 +1,7 @@
 {
  "answer": {
   "country": "Switzerland",
-  "count": 8,
+  "count": 16,
   "holidays": [
    {
     "name": "New Year's Day in Switzerland (2016)",
@@ -12,12 +12,28 @@
     "page": "https://pseoare.pages.dev/new-year-s-day-switzerland-2016-01-01"
    },
    {
+    "name": "St. Berchtold's Day in Switzerland (2016)",
+    "local_name": "Berchtoldstag",
+    "date": "2016-01-02",
+    "weekday": "Saturday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/st-berchtold-s-day-switzerland-2016-01-02"
+   },
+   {
     "name": "New Year's Day in Switzerland (2017)",
     "local_name": "Neujahr",
     "date": "2017-01-01",
     "weekday": "Sunday",
     "weekend": true,
     "page": "https://pseoare.pages.dev/new-year-s-day-switzerland-2017-01-01"
+   },
+   {
+    "name": "St. Berchtold's Day in Switzerland (2017)",
+    "local_name": "Berchtoldstag",
+    "date": "2017-01-02",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/st-berchtold-s-day-switzerland-2017-01-02"
    },
    {
     "name": "New Year's Day in Switzerland (2018)",
@@ -28,12 +44,28 @@
     "page": "https://pseoare.pages.dev/new-year-s-day-switzerland-2018-01-01"
    },
    {
+    "name": "St. Berchtold's Day in Switzerland (2018)",
+    "local_name": "Berchtoldstag",
+    "date": "2018-01-02",
+    "weekday": "Tuesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/st-berchtold-s-day-switzerland-2018-01-02"
+   },
+   {
     "name": "New Year's Day in Switzerland (2019)",
     "local_name": "Neujahr",
     "date": "2019-01-01",
     "weekday": "Tuesday",
     "weekend": false,
     "page": "https://pseoare.pages.dev/new-year-s-day-switzerland-2019-01-01"
+   },
+   {
+    "name": "St. Berchtold's Day in Switzerland (2019)",
+    "local_name": "Berchtoldstag",
+    "date": "2019-01-02",
+    "weekday": "Wednesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/st-berchtold-s-day-switzerland-2019-01-02"
    },
    {
     "name": "New Year's Day in Switzerland (2020)",
@@ -44,12 +76,28 @@
     "page": "https://pseoare.pages.dev/new-year-s-day-switzerland-2020-01-01"
    },
    {
+    "name": "St. Berchtold's Day in Switzerland (2020)",
+    "local_name": "Berchtoldstag",
+    "date": "2020-01-02",
+    "weekday": "Thursday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/st-berchtold-s-day-switzerland-2020-01-02"
+   },
+   {
     "name": "New Year's Day in Switzerland (2021)",
     "local_name": "Neujahr",
     "date": "2021-01-01",
     "weekday": "Friday",
     "weekend": false,
     "page": "https://pseoare.pages.dev/new-year-s-day-switzerland-2021-01-01"
+   },
+   {
+    "name": "St. Berchtold's Day in Switzerland (2021)",
+    "local_name": "Berchtoldstag",
+    "date": "2021-01-02",
+    "weekday": "Saturday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/st-berchtold-s-day-switzerland-2021-01-02"
    },
    {
     "name": "New Year's Day in Switzerland (2022)",
@@ -60,12 +108,28 @@
     "page": "https://pseoare.pages.dev/new-year-s-day-switzerland-2022-01-01"
    },
    {
+    "name": "St. Berchtold's Day in Switzerland (2022)",
+    "local_name": "Berchtoldstag",
+    "date": "2022-01-02",
+    "weekday": "Sunday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/st-berchtold-s-day-switzerland-2022-01-02"
+   },
+   {
     "name": "New Year's Day in Switzerland (2023)",
     "local_name": "Neujahr",
     "date": "2023-01-01",
     "weekday": "Sunday",
     "weekend": true,
     "page": "https://pseoare.pages.dev/new-year-s-day-switzerland-2023-01-01"
+   },
+   {
+    "name": "St. Berchtold's Day in Switzerland (2023)",
+    "local_name": "Berchtoldstag",
+    "date": "2023-01-02",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/st-berchtold-s-day-switzerland-2023-01-02"
    }
   ]
  },
@@ -74,7 +138,7 @@
   "title": "Public holidays for Switzerland",
   "site": "https://pseoare.pages.dev"
  },
- "updated": "2026-10-04T13:43:18.724717+00:00",
+ "updated": "2026-10-04T13:57:55.564289+00:00",
  "license": "CC-BY-4.0",
  "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
 }

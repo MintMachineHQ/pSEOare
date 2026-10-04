@@ -1,7 +1,7 @@
 {
  "answer": {
   "country": "Ireland",
-  "count": 8,
+  "count": 16,
   "holidays": [
    {
     "name": "New Year's Day in Ireland (2016)",
@@ -12,12 +12,28 @@
     "page": "https://pseoare.pages.dev/new-year-s-day-ireland-2016-01-01"
    },
    {
+    "name": "Saint Patrick's Day in Ireland (2016)",
+    "local_name": "L\u00e1 Fh\u00e9ile P\u00e1draig",
+    "date": "2016-03-17",
+    "weekday": "Thursday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/saint-patrick-s-day-ireland-2016-03-17"
+   },
+   {
     "name": "New Year's Day in Ireland (2017)",
     "local_name": "L\u00e1 Caille",
     "date": "2017-01-01",
     "weekday": "Sunday",
     "weekend": true,
     "page": "https://pseoare.pages.dev/new-year-s-day-ireland-2017-01-01"
+   },
+   {
+    "name": "Saint Patrick's Day in Ireland (2017)",
+    "local_name": "L\u00e1 Fh\u00e9ile P\u00e1draig",
+    "date": "2017-03-17",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/saint-patrick-s-day-ireland-2017-03-17"
    },
    {
     "name": "New Year's Day in Ireland (2018)",
@@ -28,12 +44,28 @@
     "page": "https://pseoare.pages.dev/new-year-s-day-ireland-2018-01-01"
    },
    {
+    "name": "Saint Patrick's Day in Ireland (2018)",
+    "local_name": "L\u00e1 Fh\u00e9ile P\u00e1draig",
+    "date": "2018-03-17",
+    "weekday": "Saturday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/saint-patrick-s-day-ireland-2018-03-17"
+   },
+   {
     "name": "New Year's Day in Ireland (2019)",
     "local_name": "L\u00e1 Caille",
     "date": "2019-01-01",
     "weekday": "Tuesday",
     "weekend": false,
     "page": "https://pseoare.pages.dev/new-year-s-day-ireland-2019-01-01"
+   },
+   {
+    "name": "Saint Patrick's Day in Ireland (2019)",
+    "local_name": "L\u00e1 Fh\u00e9ile P\u00e1draig",
+    "date": "2019-03-17",
+    "weekday": "Sunday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/saint-patrick-s-day-ireland-2019-03-17"
    },
    {
     "name": "New Year's Day in Ireland (2020)",
@@ -44,12 +76,28 @@
     "page": "https://pseoare.pages.dev/new-year-s-day-ireland-2020-01-01"
    },
    {
+    "name": "Saint Patrick's Day in Ireland (2020)",
+    "local_name": "L\u00e1 Fh\u00e9ile P\u00e1draig",
+    "date": "2020-03-17",
+    "weekday": "Tuesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/saint-patrick-s-day-ireland-2020-03-17"
+   },
+   {
     "name": "New Year's Day in Ireland (2021)",
     "local_name": "L\u00e1 Caille",
     "date": "2021-01-01",
     "weekday": "Friday",
     "weekend": false,
     "page": "https://pseoare.pages.dev/new-year-s-day-ireland-2021-01-01"
+   },
+   {
+    "name": "Saint Patrick's Day in Ireland (2021)",
+    "local_name": "L\u00e1 Fh\u00e9ile P\u00e1draig",
+    "date": "2021-03-17",
+    "weekday": "Wednesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/saint-patrick-s-day-ireland-2021-03-17"
    },
    {
     "name": "New Year's Day in Ireland (2022)",
@@ -60,12 +108,28 @@
     "page": "https://pseoare.pages.dev/new-year-s-day-ireland-2022-01-01"
    },
    {
+    "name": "Saint Patrick's Day in Ireland (2022)",
+    "local_name": "L\u00e1 Fh\u00e9ile P\u00e1draig",
+    "date": "2022-03-17",
+    "weekday": "Thursday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/saint-patrick-s-day-ireland-2022-03-17"
+   },
+   {
     "name": "New Year's Day in Ireland (2023)",
     "local_name": "L\u00e1 Caille",
     "date": "2023-01-01",
     "weekday": "Sunday",
     "weekend": true,
     "page": "https://pseoare.pages.dev/new-year-s-day-ireland-2023-01-01"
+   },
+   {
+    "name": "Saint Brigid's Day in Ireland (2023)",
+    "local_name": "L\u00e1 Fh\u00e9ile Br\u00edde",
+    "date": "2023-02-06",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/saint-brigid-s-day-ireland-2023-02-06"
    }
   ]
  },
@@ -74,7 +138,7 @@
   "title": "Public holidays for Ireland",
   "site": "https://pseoare.pages.dev"
  },
- "updated": "2026-10-04T13:43:18.724717+00:00",
+ "updated": "2026-10-04T13:57:55.564289+00:00",
  "license": "CC-BY-4.0",
  "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
 }

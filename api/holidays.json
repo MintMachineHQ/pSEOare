@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-04T13:43:18.724717+00:00",
- "count": 448,
+ "updated": "2026-10-04T13:57:55.564289+00:00",
+ "count": 489,
  "source": "https://pseoare.pages.dev",
  "results": [
   {
@@ -3586,6 +3586,334 @@
    "date": "2023-01-11",
    "weekday": "Wednesday",
    "page": "https://pseoare.pages.dev/proclamation-of-independence-morocco-2023-01-11"
+  },
+  {
+   "holiday": "Reunification Day in Vietnam (2016)",
+   "country": "Vietnam",
+   "local_name": "Ng\u00e0y Gi\u1ea3i ph\u00f3ng mi\u1ec1n Nam, th\u1ed1ng nh\u1ea5t \u0111\u1ea5t n\u01b0\u1edbc",
+   "date": "2016-04-30",
+   "weekday": "Saturday",
+   "page": "https://pseoare.pages.dev/reunification-day-vietnam-2016-04-30"
+  },
+  {
+   "holiday": "Reunification Day in Vietnam (2017)",
+   "country": "Vietnam",
+   "local_name": "Ng\u00e0y Gi\u1ea3i ph\u00f3ng mi\u1ec1n Nam, th\u1ed1ng nh\u1ea5t \u0111\u1ea5t n\u01b0\u1edbc",
+   "date": "2017-04-30",
+   "weekday": "Sunday",
+   "page": "https://pseoare.pages.dev/reunification-day-vietnam-2017-04-30"
+  },
+  {
+   "holiday": "Reunification Day in Vietnam (2018)",
+   "country": "Vietnam",
+   "local_name": "Ng\u00e0y Gi\u1ea3i ph\u00f3ng mi\u1ec1n Nam, th\u1ed1ng nh\u1ea5t \u0111\u1ea5t n\u01b0\u1edbc",
+   "date": "2018-04-30",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/reunification-day-vietnam-2018-04-30"
+  },
+  {
+   "holiday": "Reunification Day in Vietnam (2019)",
+   "country": "Vietnam",
+   "local_name": "Ng\u00e0y Gi\u1ea3i ph\u00f3ng mi\u1ec1n Nam, th\u1ed1ng nh\u1ea5t \u0111\u1ea5t n\u01b0\u1edbc",
+   "date": "2019-04-30",
+   "weekday": "Tuesday",
+   "page": "https://pseoare.pages.dev/reunification-day-vietnam-2019-04-30"
+  },
+  {
+   "holiday": "Reunification Day in Vietnam (2020)",
+   "country": "Vietnam",
+   "local_name": "Ng\u00e0y Gi\u1ea3i ph\u00f3ng mi\u1ec1n Nam, th\u1ed1ng nh\u1ea5t \u0111\u1ea5t n\u01b0\u1edbc",
+   "date": "2020-04-30",
+   "weekday": "Thursday",
+   "page": "https://pseoare.pages.dev/reunification-day-vietnam-2020-04-30"
+  },
+  {
+   "holiday": "Reunification Day in Vietnam (2021)",
+   "country": "Vietnam",
+   "local_name": "Ng\u00e0y Gi\u1ea3i ph\u00f3ng mi\u1ec1n Nam, th\u1ed1ng nh\u1ea5t \u0111\u1ea5t n\u01b0\u1edbc",
+   "date": "2021-04-30",
+   "weekday": "Friday",
+   "page": "https://pseoare.pages.dev/reunification-day-vietnam-2021-04-30"
+  },
+  {
+   "holiday": "Reunification Day in Vietnam (2022)",
+   "country": "Vietnam",
+   "local_name": "Ng\u00e0y Gi\u1ea3i ph\u00f3ng mi\u1ec1n Nam, th\u1ed1ng nh\u1ea5t \u0111\u1ea5t n\u01b0\u1edbc",
+   "date": "2022-04-30",
+   "weekday": "Saturday",
+   "page": "https://pseoare.pages.dev/reunification-day-vietnam-2022-04-30"
+  },
+  {
+   "holiday": "Reunification Day in Vietnam (2023)",
+   "country": "Vietnam",
+   "local_name": "Ng\u00e0y Gi\u1ea3i ph\u00f3ng mi\u1ec1n Nam, th\u1ed1ng nh\u1ea5t \u0111\u1ea5t n\u01b0\u1edbc",
+   "date": "2023-04-30",
+   "weekday": "Sunday",
+   "page": "https://pseoare.pages.dev/reunification-day-vietnam-2023-04-30"
+  },
+  {
+   "holiday": "Revolution Day 2011 / National Police Day in Egypt (2016)",
+   "country": "Egypt",
+   "local_name": "\u0639\u064a\u062f \u0627\u0644\u062b\u0648\u0631\u0629 25 \u064a\u0646\u0627\u064a\u0631",
+   "date": "2016-01-25",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/revolution-day-2011-national-police-day-egypt-2016-01-25"
+  },
+  {
+   "holiday": "Revolution Day 2011 / National Police Day in Egypt (2017)",
+   "country": "Egypt",
+   "local_name": "\u0639\u064a\u062f \u0627\u0644\u062b\u0648\u0631\u0629 25 \u064a\u0646\u0627\u064a\u0631",
+   "date": "2017-01-25",
+   "weekday": "Wednesday",
+   "page": "https://pseoare.pages.dev/revolution-day-2011-national-police-day-egypt-2017-01-25"
+  },
+  {
+   "holiday": "Revolution Day 2011 / National Police Day in Egypt (2018)",
+   "country": "Egypt",
+   "local_name": "\u0639\u064a\u062f \u0627\u0644\u062b\u0648\u0631\u0629 25 \u064a\u0646\u0627\u064a\u0631",
+   "date": "2018-01-25",
+   "weekday": "Thursday",
+   "page": "https://pseoare.pages.dev/revolution-day-2011-national-police-day-egypt-2018-01-25"
+  },
+  {
+   "holiday": "Revolution Day 2011 / National Police Day in Egypt (2019)",
+   "country": "Egypt",
+   "local_name": "\u0639\u064a\u062f \u0627\u0644\u062b\u0648\u0631\u0629 25 \u064a\u0646\u0627\u064a\u0631",
+   "date": "2019-01-25",
+   "weekday": "Friday",
+   "page": "https://pseoare.pages.dev/revolution-day-2011-national-police-day-egypt-2019-01-25"
+  },
+  {
+   "holiday": "Revolution Day 2011 / National Police Day in Egypt (2020)",
+   "country": "Egypt",
+   "local_name": "\u0639\u064a\u062f \u0627\u0644\u062b\u0648\u0631\u0629 25 \u064a\u0646\u0627\u064a\u0631",
+   "date": "2020-01-25",
+   "weekday": "Saturday",
+   "page": "https://pseoare.pages.dev/revolution-day-2011-national-police-day-egypt-2020-01-25"
+  },
+  {
+   "holiday": "Revolution Day 2011 / National Police Day in Egypt (2021)",
+   "country": "Egypt",
+   "local_name": "\u0639\u064a\u062f \u0627\u0644\u062b\u0648\u0631\u0629 25 \u064a\u0646\u0627\u064a\u0631",
+   "date": "2021-01-28",
+   "weekday": "Thursday",
+   "page": "https://pseoare.pages.dev/revolution-day-2011-national-police-day-egypt-2021-01-28"
+  },
+  {
+   "holiday": "Revolution Day 2011 / National Police Day in Egypt (2022)",
+   "country": "Egypt",
+   "local_name": "\u0639\u064a\u062f \u0627\u0644\u062b\u0648\u0631\u0629 25 \u064a\u0646\u0627\u064a\u0631",
+   "date": "2022-01-27",
+   "weekday": "Thursday",
+   "page": "https://pseoare.pages.dev/revolution-day-2011-national-police-day-egypt-2022-01-27"
+  },
+  {
+   "holiday": "Revolution Day 2011 / National Police Day in Egypt (2023)",
+   "country": "Egypt",
+   "local_name": "\u0639\u064a\u062f \u0627\u0644\u062b\u0648\u0631\u0629 25 \u064a\u0646\u0627\u064a\u0631",
+   "date": "2023-01-26",
+   "weekday": "Thursday",
+   "page": "https://pseoare.pages.dev/revolution-day-2011-national-police-day-egypt-2023-01-26"
+  },
+  {
+   "holiday": "Saint Brigid's Day in Ireland (2023)",
+   "country": "Ireland",
+   "local_name": "L\u00e1 Fh\u00e9ile Br\u00edde",
+   "date": "2023-02-06",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/saint-brigid-s-day-ireland-2023-02-06"
+  },
+  {
+   "holiday": "Saint Patrick's Day in Ireland (2016)",
+   "country": "Ireland",
+   "local_name": "L\u00e1 Fh\u00e9ile P\u00e1draig",
+   "date": "2016-03-17",
+   "weekday": "Thursday",
+   "page": "https://pseoare.pages.dev/saint-patrick-s-day-ireland-2016-03-17"
+  },
+  {
+   "holiday": "Saint Patrick's Day in Ireland (2017)",
+   "country": "Ireland",
+   "local_name": "L\u00e1 Fh\u00e9ile P\u00e1draig",
+   "date": "2017-03-17",
+   "weekday": "Friday",
+   "page": "https://pseoare.pages.dev/saint-patrick-s-day-ireland-2017-03-17"
+  },
+  {
+   "holiday": "Saint Patrick's Day in Ireland (2018)",
+   "country": "Ireland",
+   "local_name": "L\u00e1 Fh\u00e9ile P\u00e1draig",
+   "date": "2018-03-17",
+   "weekday": "Saturday",
+   "page": "https://pseoare.pages.dev/saint-patrick-s-day-ireland-2018-03-17"
+  },
+  {
+   "holiday": "Saint Patrick's Day in Ireland (2019)",
+   "country": "Ireland",
+   "local_name": "L\u00e1 Fh\u00e9ile P\u00e1draig",
+   "date": "2019-03-17",
+   "weekday": "Sunday",
+   "page": "https://pseoare.pages.dev/saint-patrick-s-day-ireland-2019-03-17"
+  },
+  {
+   "holiday": "Saint Patrick's Day in Ireland (2020)",
+   "country": "Ireland",
+   "local_name": "L\u00e1 Fh\u00e9ile P\u00e1draig",
+   "date": "2020-03-17",
+   "weekday": "Tuesday",
+   "page": "https://pseoare.pages.dev/saint-patrick-s-day-ireland-2020-03-17"
+  },
+  {
+   "holiday": "Saint Patrick's Day in Ireland (2021)",
+   "country": "Ireland",
+   "local_name": "L\u00e1 Fh\u00e9ile P\u00e1draig",
+   "date": "2021-03-17",
+   "weekday": "Wednesday",
+   "page": "https://pseoare.pages.dev/saint-patrick-s-day-ireland-2021-03-17"
+  },
+  {
+   "holiday": "Saint Patrick's Day in Ireland (2022)",
+   "country": "Ireland",
+   "local_name": "L\u00e1 Fh\u00e9ile P\u00e1draig",
+   "date": "2022-03-17",
+   "weekday": "Thursday",
+   "page": "https://pseoare.pages.dev/saint-patrick-s-day-ireland-2022-03-17"
+  },
+  {
+   "holiday": "Sinai Liberation Day in Egypt (2016)",
+   "country": "Egypt",
+   "local_name": "\u0639\u064a\u062f \u062a\u062d\u0631\u064a\u0631 \u0633\u064a\u0646\u0627\u0621",
+   "date": "2016-04-25",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/sinai-liberation-day-egypt-2016-04-25"
+  },
+  {
+   "holiday": "Sinai Liberation Day in Egypt (2019)",
+   "country": "Egypt",
+   "local_name": "\u0639\u064a\u062f \u062a\u062d\u0631\u064a\u0631 \u0633\u064a\u0646\u0627\u0621",
+   "date": "2019-04-25",
+   "weekday": "Thursday",
+   "page": "https://pseoare.pages.dev/sinai-liberation-day-egypt-2019-04-25"
+  },
+  {
+   "holiday": "Sinai Liberation Day in Egypt (2021)",
+   "country": "Egypt",
+   "local_name": "\u0639\u064a\u062f \u062a\u062d\u0631\u064a\u0631 \u0633\u064a\u0646\u0627\u0621",
+   "date": "2021-04-29",
+   "weekday": "Thursday",
+   "page": "https://pseoare.pages.dev/sinai-liberation-day-egypt-2021-04-29"
+  },
+  {
+   "holiday": "St. Berchtold's Day in Switzerland (2016)",
+   "country": "Switzerland",
+   "local_name": "Berchtoldstag",
+   "date": "2016-01-02",
+   "weekday": "Saturday",
+   "page": "https://pseoare.pages.dev/st-berchtold-s-day-switzerland-2016-01-02"
+  },
+  {
+   "holiday": "St. Berchtold's Day in Switzerland (2017)",
+   "country": "Switzerland",
+   "local_name": "Berchtoldstag",
+   "date": "2017-01-02",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/st-berchtold-s-day-switzerland-2017-01-02"
+  },
+  {
+   "holiday": "St. Berchtold's Day in Switzerland (2018)",
+   "country": "Switzerland",
+   "local_name": "Berchtoldstag",
+   "date": "2018-01-02",
+   "weekday": "Tuesday",
+   "page": "https://pseoare.pages.dev/st-berchtold-s-day-switzerland-2018-01-02"
+  },
+  {
+   "holiday": "St. Berchtold's Day in Switzerland (2019)",
+   "country": "Switzerland",
+   "local_name": "Berchtoldstag",
+   "date": "2019-01-02",
+   "weekday": "Wednesday",
+   "page": "https://pseoare.pages.dev/st-berchtold-s-day-switzerland-2019-01-02"
+  },
+  {
+   "holiday": "St. Berchtold's Day in Switzerland (2020)",
+   "country": "Switzerland",
+   "local_name": "Berchtoldstag",
+   "date": "2020-01-02",
+   "weekday": "Thursday",
+   "page": "https://pseoare.pages.dev/st-berchtold-s-day-switzerland-2020-01-02"
+  },
+  {
+   "holiday": "St. Berchtold's Day in Switzerland (2021)",
+   "country": "Switzerland",
+   "local_name": "Berchtoldstag",
+   "date": "2021-01-02",
+   "weekday": "Saturday",
+   "page": "https://pseoare.pages.dev/st-berchtold-s-day-switzerland-2021-01-02"
+  },
+  {
+   "holiday": "St. Berchtold's Day in Switzerland (2022)",
+   "country": "Switzerland",
+   "local_name": "Berchtoldstag",
+   "date": "2022-01-02",
+   "weekday": "Sunday",
+   "page": "https://pseoare.pages.dev/st-berchtold-s-day-switzerland-2022-01-02"
+  },
+  {
+   "holiday": "St. Berchtold's Day in Switzerland (2023)",
+   "country": "Switzerland",
+   "local_name": "Berchtoldstag",
+   "date": "2023-01-02",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/st-berchtold-s-day-switzerland-2023-01-02"
+  },
+  {
+   "holiday": "The Day of Restoration of the State of Lithuania in Lithuania (2016)",
+   "country": "Lithuania",
+   "local_name": "Lietuvos valstyb\u0117s atk\u016brimo diena",
+   "date": "2016-02-16",
+   "weekday": "Tuesday",
+   "page": "https://pseoare.pages.dev/the-day-of-restoration-of-the-state-of-lithuania-lithuania-2016-02-16"
+  },
+  {
+   "holiday": "The Day of Restoration of the State of Lithuania in Lithuania (2017)",
+   "country": "Lithuania",
+   "local_name": "Lietuvos valstyb\u0117s atk\u016brimo diena",
+   "date": "2017-02-16",
+   "weekday": "Thursday",
+   "page": "https://pseoare.pages.dev/the-day-of-restoration-of-the-state-of-lithuania-lithuania-2017-02-16"
+  },
+  {
+   "holiday": "The Day of Restoration of the State of Lithuania in Lithuania (2018)",
+   "country": "Lithuania",
+   "local_name": "Lietuvos valstyb\u0117s atk\u016brimo diena",
+   "date": "2018-02-16",
+   "weekday": "Friday",
+   "page": "https://pseoare.pages.dev/the-day-of-restoration-of-the-state-of-lithuania-lithuania-2018-02-16"
+  },
+  {
+   "holiday": "The Day of Restoration of the State of Lithuania in Lithuania (2019)",
+   "country": "Lithuania",
+   "local_name": "Lietuvos valstyb\u0117s atk\u016brimo diena",
+   "date": "2019-02-16",
+   "weekday": "Saturday",
+   "page": "https://pseoare.pages.dev/the-day-of-restoration-of-the-state-of-lithuania-lithuania-2019-02-16"
+  },
+  {
+   "holiday": "The Day of Restoration of the State of Lithuania in Lithuania (2020)",
+   "country": "Lithuania",
+   "local_name": "Lietuvos valstyb\u0117s atk\u016brimo diena",
+   "date": "2020-02-16",
+   "weekday": "Sunday",
+   "page": "https://pseoare.pages.dev/the-day-of-restoration-of-the-state-of-lithuania-lithuania-2020-02-16"
+  },
+  {
+   "holiday": "The Day of Restoration of the State of Lithuania in Lithuania (2021)",
+   "country": "Lithuania",
+   "local_name": "Lietuvos valstyb\u0117s atk\u016brimo diena",
+   "date": "2021-02-16",
+   "weekday": "Tuesday",
+   "page": "https://pseoare.pages.dev/the-day-of-restoration-of-the-state-of-lithuania-lithuania-2021-02-16"
   }
  ]
 }

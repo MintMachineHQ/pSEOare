@@ -1,0 +1,104 @@
+{
+ "answer": {
+  "country": "Egypt",
+  "count": 11,
+  "holidays": [
+   {
+    "name": "Revolution Day 2011 / National Police Day in Egypt (2016)",
+    "local_name": "\u0639\u064a\u062f \u0627\u0644\u062b\u0648\u0631\u0629 25 \u064a\u0646\u0627\u064a\u0631",
+    "date": "2016-01-25",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/revolution-day-2011-national-police-day-egypt-2016-01-25"
+   },
+   {
+    "name": "Sinai Liberation Day in Egypt (2016)",
+    "local_name": "\u0639\u064a\u062f \u062a\u062d\u0631\u064a\u0631 \u0633\u064a\u0646\u0627\u0621",
+    "date": "2016-04-25",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/sinai-liberation-day-egypt-2016-04-25"
+   },
+   {
+    "name": "Revolution Day 2011 / National Police Day in Egypt (2017)",
+    "local_name": "\u0639\u064a\u062f \u0627\u0644\u062b\u0648\u0631\u0629 25 \u064a\u0646\u0627\u064a\u0631",
+    "date": "2017-01-25",
+    "weekday": "Wednesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/revolution-day-2011-national-police-day-egypt-2017-01-25"
+   },
+   {
+    "name": "Revolution Day 2011 / National Police Day in Egypt (2018)",
+    "local_name": "\u0639\u064a\u062f \u0627\u0644\u062b\u0648\u0631\u0629 25 \u064a\u0646\u0627\u064a\u0631",
+    "date": "2018-01-25",
+    "weekday": "Thursday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/revolution-day-2011-national-police-day-egypt-2018-01-25"
+   },
+   {
+    "name": "Revolution Day 2011 / National Police Day in Egypt (2019)",
+    "local_name": "\u0639\u064a\u062f \u0627\u0644\u062b\u0648\u0631\u0629 25 \u064a\u0646\u0627\u064a\u0631",
+    "date": "2019-01-25",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/revolution-day-2011-national-police-day-egypt-2019-01-25"
+   },
+   {
+    "name": "Sinai Liberation Day in Egypt (2019)",
+    "local_name": "\u0639\u064a\u062f \u062a\u062d\u0631\u064a\u0631 \u0633\u064a\u0646\u0627\u0621",
+    "date": "2019-04-25",
+    "weekday": "Thursday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/sinai-liberation-day-egypt-2019-04-25"
+   },
+   {
+    "name": "Revolution Day 2011 / National Police Day in Egypt (2020)",
+    "local_name": "\u0639\u064a\u062f \u0627\u0644\u062b\u0648\u0631\u0629 25 \u064a\u0646\u0627\u064a\u0631",
+    "date": "2020-01-25",
+    "weekday": "Saturday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/revolution-day-2011-national-police-day-egypt-2020-01-25"
+   },
+   {
+    "name": "Revolution Day 2011 / National Police Day in Egypt (2021)",
+    "local_name": "\u0639\u064a\u062f \u0627\u0644\u062b\u0648\u0631\u0629 25 \u064a\u0646\u0627\u064a\u0631",
+    "date": "2021-01-28",
+    "weekday": "Thursday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/revolution-day-2011-national-police-day-egypt-2021-01-28"
+   },
+   {
+    "name": "Sinai Liberation Day in Egypt (2021)",
+    "local_name": "\u0639\u064a\u062f \u062a\u062d\u0631\u064a\u0631 \u0633\u064a\u0646\u0627\u0621",
+    "date": "2021-04-29",
+    "weekday": "Thursday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/sinai-liberation-day-egypt-2021-04-29"
+   },
+   {
+    "name": "Revolution Day 2011 / National Police Day in Egypt (2022)",
+    "local_name": "\u0639\u064a\u062f \u0627\u0644\u062b\u0648\u0631\u0629 25 \u064a\u0646\u0627\u064a\u0631",
+    "date": "2022-01-27",
+    "weekday": "Thursday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/revolution-day-2011-national-police-day-egypt-2022-01-27"
+   },
+   {
+    "name": "Revolution Day 2011 / National Police Day in Egypt (2023)",
+    "local_name": "\u0639\u064a\u062f \u0627\u0644\u062b\u0648\u0631\u0629 25 \u064a\u0646\u0627\u064a\u0631",
+    "date": "2023-01-26",
+    "weekday": "Thursday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/revolution-day-2011-national-police-day-egypt-2023-01-26"
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/hub-single-holidays",
+  "title": "Public holidays for Egypt",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-04T13:57:55.564289+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}
