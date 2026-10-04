@@ -2630,9 +2630,13 @@ class TestSitemapSplit(unittest.TestCase):
         self.assertEqual(
             _sitemap_family("amazigh-new-year-morocco-2024-01-14.html"), "holidays"
         )
+        # What actually reaches this function is the loc from the finished sitemap, and
+        # url_for() strips .html on this site. Testing only the filename form let a
+        # regex that could never fire pass.
         self.assertEqual(
-            _sitemap_family("christmas-day-cyprus-2027-12-25.html"), "holidays"
+            _sitemap_family("christmas-day-cyprus-2027-12-25"), "holidays"
         )
+        self.assertEqual(_sitemap_family("amazigh-new-year-morocco-2024-01-14"), "holidays")
         # A city page must not be mistaken for a holiday because of a stray number.
         self.assertEqual(
             _sitemap_family("aba-average-monthly-temperature-rainfall.html"), "climate"
@@ -2648,6 +2652,26 @@ class TestSitemapSplit(unittest.TestCase):
         for name in files:
             self.assertIn(name, index)
 
+    def test_a_real_corpus_produces_every_family(self):
+        """End to end: a sitemap built from holiday, climate and ranking URLs must
+        produce a holidays file, not quietly fold them into pages."""
+        from engine.hubs import split_sitemaps
+
+        cfg = make_cfg(Path(tempfile.mkdtemp()))
+        published = {
+            "christmas-day-cyprus-2027-12-25.html": {
+                "generated_at": "2026-10-01T00:00:00+00:00"},
+            "aba-average-monthly-temperature-rainfall.html": {
+                "generated_at": "2026-10-01T00:00:00+00:00"},
+        }
+        _index, files = split_sitemaps(
+            [], cfg, "2026-10-04T00:00:00Z", published=published,
+            extra=["top-coldest-cities.html"])
+        self.assertIn("sitemap-holidays.xml", files)
+        self.assertIn("sitemap-climate.xml", files)
+        self.assertIn("sitemap-rankings.xml", files)
+        self.assertNotIn("christmas-day-cyprus-2027-12-25", files["sitemap-pages.xml"])
+
     def test_holiday_pages_reach_the_holidays_family(self):
         """Every family declared must be reachable, or that sitemap is never written and
         the split silently measures nothing."""
@@ -2657,7 +2681,7 @@ class TestSitemapSplit(unittest.TestCase):
             "climate": "a-average-monthly-temperature-rainfall.html",
             "countries": "afghanistan-country-data.html",
             "crypto": "bitcoin-price-by-month.html",
-            "holidays": "christmas-day-cyprus-2027-12-25.html",
+            "holidays": "christmas-day-cyprus-2027-12-25",
             "rankings": "top-coldest-cities.html",
             "comparisons": "compare-a-vs-b.html",
             "events": "today.html",

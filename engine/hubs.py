@@ -342,8 +342,12 @@ def _sitemap_family(path: str) -> str:
         return "stories"
     # Holiday pages are named "<holiday>-<country>-<YYYY-MM-DD>", so the date suffix is
     # the only reliable marker. Without this branch all ~1,900 of them fell into "pages"
-    # and sitemap-holidays.xml was never created at all, which defeats the split.
-    if re.search(r"-20\d{2}-\d{2}-\d{2}\.html$", path):
+    # and sitemap-holidays.xml was never written at all, which defeats the split.
+    #
+    # The suffix is optional because what arrives here is the *loc* from the finished
+    # sitemap, and url_for() strips the .html on this site. Requiring ".html" made the
+    # branch match nothing at all while passing a unit test that fed it filenames.
+    if re.search(r"-20\d{2}-\d{2}-\d{2}(?:\.html)?$", path):
         return "holidays"
     if "average-monthly-temperature-rainfall" in path:
         return "climate"
