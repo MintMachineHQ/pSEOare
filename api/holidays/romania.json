@@ -1,7 +1,7 @@
 {
  "country": "Romania",
  "page": "https://pseoare.pages.dev/hub-single-holidays",
- "count": 7,
+ "count": 8,
  "holidays": [
   {
    "name": "New Year's Day in Romania (2016)",
@@ -58,8 +58,16 @@
    "weekday": "Saturday",
    "weekend": true,
    "page": "https://pseoare.pages.dev/new-year-s-day-romania-2022-01-01"
+  },
+  {
+   "name": "New Year's Day in Romania (2023)",
+   "local_name": "Anul Nou",
+   "date": "2023-01-01",
+   "weekday": "Sunday",
+   "weekend": true,
+   "page": "https://pseoare.pages.dev/new-year-s-day-romania-2023-01-01"
   }
  ],
- "updated": "2026-10-04T10:23:06.513626+00:00",
+ "updated": "2026-10-04T10:34:52.413128+00:00",
  "source": "https://pseoare.pages.dev"
 }

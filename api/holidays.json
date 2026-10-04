@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-04T10:23:06.513626+00:00",
- "count": 303,
+ "updated": "2026-10-04T10:34:52.413128+00:00",
+ "count": 360,
  "source": "https://pseoare.pages.dev",
  "results": [
   {
@@ -2426,6 +2426,462 @@
    "date": "2022-01-01",
    "weekday": "Saturday",
    "page": "https://pseoare.pages.dev/new-year-s-day-romania-2022-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Romania (2023)",
+   "country": "Romania",
+   "local_name": "Anul Nou",
+   "date": "2023-01-01",
+   "weekday": "Sunday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-romania-2023-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Serbia (2016)",
+   "country": "Serbia",
+   "local_name": "Nova Godina",
+   "date": "2016-01-01",
+   "weekday": "Friday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-serbia-2016-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Serbia (2016)",
+   "country": "Serbia",
+   "local_name": "Nova Godina",
+   "date": "2016-01-02",
+   "weekday": "Saturday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-serbia-2016-01-02"
+  },
+  {
+   "holiday": "New Year's Day in Serbia (2017)",
+   "country": "Serbia",
+   "local_name": "Nova Godina",
+   "date": "2017-01-02",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-serbia-2017-01-02"
+  },
+  {
+   "holiday": "New Year's Day in Serbia (2017)",
+   "country": "Serbia",
+   "local_name": "Nova Godina",
+   "date": "2017-01-03",
+   "weekday": "Tuesday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-serbia-2017-01-03"
+  },
+  {
+   "holiday": "New Year's Day in Serbia (2018)",
+   "country": "Serbia",
+   "local_name": "Nova Godina",
+   "date": "2018-01-01",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-serbia-2018-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Serbia (2018)",
+   "country": "Serbia",
+   "local_name": "Nova Godina",
+   "date": "2018-01-02",
+   "weekday": "Tuesday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-serbia-2018-01-02"
+  },
+  {
+   "holiday": "New Year's Day in Serbia (2019)",
+   "country": "Serbia",
+   "local_name": "Nova Godina",
+   "date": "2019-01-01",
+   "weekday": "Tuesday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-serbia-2019-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Serbia (2019)",
+   "country": "Serbia",
+   "local_name": "Nova Godina",
+   "date": "2019-01-02",
+   "weekday": "Wednesday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-serbia-2019-01-02"
+  },
+  {
+   "holiday": "New Year's Day in Serbia (2020)",
+   "country": "Serbia",
+   "local_name": "Nova Godina",
+   "date": "2020-01-01",
+   "weekday": "Wednesday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-serbia-2020-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Serbia (2020)",
+   "country": "Serbia",
+   "local_name": "Nova Godina",
+   "date": "2020-01-02",
+   "weekday": "Thursday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-serbia-2020-01-02"
+  },
+  {
+   "holiday": "New Year's Day in Serbia (2021)",
+   "country": "Serbia",
+   "local_name": "Nova Godina",
+   "date": "2021-01-01",
+   "weekday": "Friday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-serbia-2021-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Serbia (2021)",
+   "country": "Serbia",
+   "local_name": "Nova Godina",
+   "date": "2021-01-02",
+   "weekday": "Saturday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-serbia-2021-01-02"
+  },
+  {
+   "holiday": "New Year's Day in Serbia (2022)",
+   "country": "Serbia",
+   "local_name": "Nova Godina",
+   "date": "2022-01-01",
+   "weekday": "Saturday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-serbia-2022-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Serbia (2022)",
+   "country": "Serbia",
+   "local_name": "Nova Godina",
+   "date": "2022-01-03",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-serbia-2022-01-03"
+  },
+  {
+   "holiday": "New Year's Day in Serbia (2023)",
+   "country": "Serbia",
+   "local_name": "Nova Godina",
+   "date": "2023-01-02",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-serbia-2023-01-02"
+  },
+  {
+   "holiday": "New Year's Day in Serbia (2023)",
+   "country": "Serbia",
+   "local_name": "Nova Godina",
+   "date": "2023-01-03",
+   "weekday": "Tuesday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-serbia-2023-01-03"
+  },
+  {
+   "holiday": "New Year's Day in Singapore (2016)",
+   "country": "Singapore",
+   "local_name": "New Year's Day",
+   "date": "2016-01-01",
+   "weekday": "Friday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-singapore-2016-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Singapore (2017)",
+   "country": "Singapore",
+   "local_name": "New Year's Day",
+   "date": "2017-01-02",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-singapore-2017-01-02"
+  },
+  {
+   "holiday": "New Year's Day in Singapore (2018)",
+   "country": "Singapore",
+   "local_name": "New Year's Day",
+   "date": "2018-01-01",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-singapore-2018-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Singapore (2019)",
+   "country": "Singapore",
+   "local_name": "New Year's Day",
+   "date": "2019-01-01",
+   "weekday": "Tuesday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-singapore-2019-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Singapore (2020)",
+   "country": "Singapore",
+   "local_name": "New Year's Day",
+   "date": "2020-01-01",
+   "weekday": "Wednesday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-singapore-2020-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Singapore (2021)",
+   "country": "Singapore",
+   "local_name": "New Year's Day",
+   "date": "2021-01-01",
+   "weekday": "Friday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-singapore-2021-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Singapore (2022)",
+   "country": "Singapore",
+   "local_name": "New Year's Day",
+   "date": "2022-01-01",
+   "weekday": "Saturday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-singapore-2022-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Singapore (2023)",
+   "country": "Singapore",
+   "local_name": "New Year's Day",
+   "date": "2023-01-02",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-singapore-2023-01-02"
+  },
+  {
+   "holiday": "New Year's Day in Slovenia (2016)",
+   "country": "Slovenia",
+   "local_name": "novo leto",
+   "date": "2016-01-01",
+   "weekday": "Friday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-slovenia-2016-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Slovenia (2016)",
+   "country": "Slovenia",
+   "local_name": "novo leto",
+   "date": "2016-01-02",
+   "weekday": "Saturday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-slovenia-2016-01-02"
+  },
+  {
+   "holiday": "New Year's Day in Slovenia (2017)",
+   "country": "Slovenia",
+   "local_name": "novo leto",
+   "date": "2017-01-01",
+   "weekday": "Sunday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-slovenia-2017-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Slovenia (2017)",
+   "country": "Slovenia",
+   "local_name": "novo leto",
+   "date": "2017-01-02",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-slovenia-2017-01-02"
+  },
+  {
+   "holiday": "New Year's Day in Slovenia (2018)",
+   "country": "Slovenia",
+   "local_name": "novo leto",
+   "date": "2018-01-01",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-slovenia-2018-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Slovenia (2018)",
+   "country": "Slovenia",
+   "local_name": "novo leto",
+   "date": "2018-01-02",
+   "weekday": "Tuesday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-slovenia-2018-01-02"
+  },
+  {
+   "holiday": "New Year's Day in Slovenia (2019)",
+   "country": "Slovenia",
+   "local_name": "novo leto",
+   "date": "2019-01-01",
+   "weekday": "Tuesday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-slovenia-2019-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Slovenia (2019)",
+   "country": "Slovenia",
+   "local_name": "novo leto",
+   "date": "2019-01-02",
+   "weekday": "Wednesday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-slovenia-2019-01-02"
+  },
+  {
+   "holiday": "New Year's Day in Slovenia (2020)",
+   "country": "Slovenia",
+   "local_name": "novo leto",
+   "date": "2020-01-01",
+   "weekday": "Wednesday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-slovenia-2020-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Slovenia (2020)",
+   "country": "Slovenia",
+   "local_name": "novo leto",
+   "date": "2020-01-02",
+   "weekday": "Thursday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-slovenia-2020-01-02"
+  },
+  {
+   "holiday": "New Year's Day in Slovenia (2021)",
+   "country": "Slovenia",
+   "local_name": "novo leto",
+   "date": "2021-01-01",
+   "weekday": "Friday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-slovenia-2021-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Slovenia (2021)",
+   "country": "Slovenia",
+   "local_name": "novo leto",
+   "date": "2021-01-02",
+   "weekday": "Saturday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-slovenia-2021-01-02"
+  },
+  {
+   "holiday": "New Year's Day in Slovenia (2022)",
+   "country": "Slovenia",
+   "local_name": "novo leto",
+   "date": "2022-01-01",
+   "weekday": "Saturday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-slovenia-2022-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Slovenia (2022)",
+   "country": "Slovenia",
+   "local_name": "novo leto",
+   "date": "2022-01-02",
+   "weekday": "Sunday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-slovenia-2022-01-02"
+  },
+  {
+   "holiday": "New Year's Day in Slovenia (2023)",
+   "country": "Slovenia",
+   "local_name": "novo leto",
+   "date": "2023-01-01",
+   "weekday": "Sunday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-slovenia-2023-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Slovenia (2023)",
+   "country": "Slovenia",
+   "local_name": "novo leto",
+   "date": "2023-01-02",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-slovenia-2023-01-02"
+  },
+  {
+   "holiday": "New Year's Day in South Africa (2016)",
+   "country": "South Africa",
+   "local_name": "New Year's Day",
+   "date": "2016-01-01",
+   "weekday": "Friday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-south-africa-2016-01-01"
+  },
+  {
+   "holiday": "New Year's Day in South Africa (2017)",
+   "country": "South Africa",
+   "local_name": "New Year's Day",
+   "date": "2017-01-02",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-south-africa-2017-01-02"
+  },
+  {
+   "holiday": "New Year's Day in South Africa (2018)",
+   "country": "South Africa",
+   "local_name": "New Year's Day",
+   "date": "2018-01-01",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-south-africa-2018-01-01"
+  },
+  {
+   "holiday": "New Year's Day in South Africa (2019)",
+   "country": "South Africa",
+   "local_name": "New Year's Day",
+   "date": "2019-01-01",
+   "weekday": "Tuesday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-south-africa-2019-01-01"
+  },
+  {
+   "holiday": "New Year's Day in South Africa (2020)",
+   "country": "South Africa",
+   "local_name": "New Year's Day",
+   "date": "2020-01-01",
+   "weekday": "Wednesday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-south-africa-2020-01-01"
+  },
+  {
+   "holiday": "New Year's Day in South Africa (2021)",
+   "country": "South Africa",
+   "local_name": "New Year's Day",
+   "date": "2021-01-01",
+   "weekday": "Friday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-south-africa-2021-01-01"
+  },
+  {
+   "holiday": "New Year's Day in South Africa (2022)",
+   "country": "South Africa",
+   "local_name": "New Year's Day",
+   "date": "2022-01-01",
+   "weekday": "Saturday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-south-africa-2022-01-01"
+  },
+  {
+   "holiday": "New Year's Day in South Africa (2023)",
+   "country": "South Africa",
+   "local_name": "New Year's Day",
+   "date": "2023-01-02",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-south-africa-2023-01-02"
+  },
+  {
+   "holiday": "New Year's Day in South Korea (2016)",
+   "country": "South Korea",
+   "local_name": "\uc0c8\ud574",
+   "date": "2016-01-01",
+   "weekday": "Friday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-south-korea-2016-01-01"
+  },
+  {
+   "holiday": "New Year's Day in South Korea (2017)",
+   "country": "South Korea",
+   "local_name": "\uc0c8\ud574",
+   "date": "2017-01-01",
+   "weekday": "Sunday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-south-korea-2017-01-01"
+  },
+  {
+   "holiday": "New Year's Day in South Korea (2018)",
+   "country": "South Korea",
+   "local_name": "\uc0c8\ud574",
+   "date": "2018-01-01",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-south-korea-2018-01-01"
+  },
+  {
+   "holiday": "New Year's Day in South Korea (2019)",
+   "country": "South Korea",
+   "local_name": "\uc0c8\ud574",
+   "date": "2019-01-01",
+   "weekday": "Tuesday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-south-korea-2019-01-01"
+  },
+  {
+   "holiday": "New Year's Day in South Korea (2020)",
+   "country": "South Korea",
+   "local_name": "\uc0c8\ud574",
+   "date": "2020-01-01",
+   "weekday": "Wednesday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-south-korea-2020-01-01"
+  },
+  {
+   "holiday": "New Year's Day in South Korea (2021)",
+   "country": "South Korea",
+   "local_name": "\uc0c8\ud574",
+   "date": "2021-01-01",
+   "weekday": "Friday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-south-korea-2021-01-01"
+  },
+  {
+   "holiday": "New Year's Day in South Korea (2022)",
+   "country": "South Korea",
+   "local_name": "\uc0c8\ud574",
+   "date": "2022-01-01",
+   "weekday": "Saturday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-south-korea-2022-01-01"
+  },
+  {
+   "holiday": "New Year's Day in South Korea (2023)",
+   "country": "South Korea",
+   "local_name": "\uc0c8\ud574",
+   "date": "2023-01-01",
+   "weekday": "Sunday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-south-korea-2023-01-01"
   }
  ]
 }

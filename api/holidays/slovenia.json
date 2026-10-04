@@ -1,0 +1,137 @@
+{
+ "country": "Slovenia",
+ "page": "https://pseoare.pages.dev/hub-single-holidays",
+ "count": 16,
+ "holidays": [
+  {
+   "name": "New Year's Day in Slovenia (2016)",
+   "local_name": "novo leto",
+   "date": "2016-01-01",
+   "weekday": "Friday",
+   "weekend": false,
+   "page": "https://pseoare.pages.dev/new-year-s-day-slovenia-2016-01-01"
+  },
+  {
+   "name": "New Year's Day in Slovenia (2016)",
+   "local_name": "novo leto",
+   "date": "2016-01-02",
+   "weekday": "Saturday",
+   "weekend": true,
+   "page": "https://pseoare.pages.dev/new-year-s-day-slovenia-2016-01-02"
+  },
+  {
+   "name": "New Year's Day in Slovenia (2017)",
+   "local_name": "novo leto",
+   "date": "2017-01-01",
+   "weekday": "Sunday",
+   "weekend": true,
+   "page": "https://pseoare.pages.dev/new-year-s-day-slovenia-2017-01-01"
+  },
+  {
+   "name": "New Year's Day in Slovenia (2017)",
+   "local_name": "novo leto",
+   "date": "2017-01-02",
+   "weekday": "Monday",
+   "weekend": false,
+   "page": "https://pseoare.pages.dev/new-year-s-day-slovenia-2017-01-02"
+  },
+  {
+   "name": "New Year's Day in Slovenia (2018)",
+   "local_name": "novo leto",
+   "date": "2018-01-01",
+   "weekday": "Monday",
+   "weekend": false,
+   "page": "https://pseoare.pages.dev/new-year-s-day-slovenia-2018-01-01"
+  },
+  {
+   "name": "New Year's Day in Slovenia (2018)",
+   "local_name": "novo leto",
+   "date": "2018-01-02",
+   "weekday": "Tuesday",
+   "weekend": false,
+   "page": "https://pseoare.pages.dev/new-year-s-day-slovenia-2018-01-02"
+  },
+  {
+   "name": "New Year's Day in Slovenia (2019)",
+   "local_name": "novo leto",
+   "date": "2019-01-01",
+   "weekday": "Tuesday",
+   "weekend": false,
+   "page": "https://pseoare.pages.dev/new-year-s-day-slovenia-2019-01-01"
+  },
+  {
+   "name": "New Year's Day in Slovenia (2019)",
+   "local_name": "novo leto",
+   "date": "2019-01-02",
+   "weekday": "Wednesday",
+   "weekend": false,
+   "page": "https://pseoare.pages.dev/new-year-s-day-slovenia-2019-01-02"
+  },
+  {
+   "name": "New Year's Day in Slovenia (2020)",
+   "local_name": "novo leto",
+   "date": "2020-01-01",
+   "weekday": "Wednesday",
+   "weekend": false,
+   "page": "https://pseoare.pages.dev/new-year-s-day-slovenia-2020-01-01"
+  },
+  {
+   "name": "New Year's Day in Slovenia (2020)",
+   "local_name": "novo leto",
+   "date": "2020-01-02",
+   "weekday": "Thursday",
+   "weekend": false,
+   "page": "https://pseoare.pages.dev/new-year-s-day-slovenia-2020-01-02"
+  },
+  {
+   "name": "New Year's Day in Slovenia (2021)",
+   "local_name": "novo leto",
+   "date": "2021-01-01",
+   "weekday": "Friday",
+   "weekend": false,
+   "page": "https://pseoare.pages.dev/new-year-s-day-slovenia-2021-01-01"
+  },
+  {
+   "name": "New Year's Day in Slovenia (2021)",
+   "local_name": "novo leto",
+   "date": "2021-01-02",
+   "weekday": "Saturday",
+   "weekend": true,
+   "page": "https://pseoare.pages.dev/new-year-s-day-slovenia-2021-01-02"
+  },
+  {
+   "name": "New Year's Day in Slovenia (2022)",
+   "local_name": "novo leto",
+   "date": "2022-01-01",
+   "weekday": "Saturday",
+   "weekend": true,
+   "page": "https://pseoare.pages.dev/new-year-s-day-slovenia-2022-01-01"
+  },
+  {
+   "name": "New Year's Day in Slovenia (2022)",
+   "local_name": "novo leto",
+   "date": "2022-01-02",
+   "weekday": "Sunday",
+   "weekend": true,
+   "page": "https://pseoare.pages.dev/new-year-s-day-slovenia-2022-01-02"
+  },
+  {
+   "name": "New Year's Day in Slovenia (2023)",
+   "local_name": "novo leto",
+   "date": "2023-01-01",
+   "weekday": "Sunday",
+   "weekend": true,
+   "page": "https://pseoare.pages.dev/new-year-s-day-slovenia-2023-01-01"
+  },
+  {
+   "name": "New Year's Day in Slovenia (2023)",
+   "local_name": "novo leto",
+   "date": "2023-01-02",
+   "weekday": "Monday",
+   "weekend": false,
+   "page": "https://pseoare.pages.dev/new-year-s-day-slovenia-2023-01-02"
+  }
+ ],
+ "updated": "2026-10-04T10:34:52.413128+00:00",
+ "source": "https://pseoare.pages.dev"
+}
