@@ -24,6 +24,7 @@ from engine.enrich import (  # noqa: E402
     Enricher,
     _is_hard_failure,
     clean,
+    _months,
     fallback_copy,
     prose_and_faq,
 )
@@ -956,6 +957,57 @@ class TestRender(unittest.TestCase):
         wet = self._climate("Lagos", 30.0, 26.0, 14.0, 0.2)
         prose, _ = fallback_copy(wet)
         self.assertRegex(prose, r"season|peak")
+
+    def test_fallback_copy_never_ships_internal_build_notes(self):
+        """These sentences are about the build, not the page. They were identical on
+        every URL in the corpus, which is the pattern that gets a programmatic site
+        discounted as thin, so they must not come back."""
+        forbidden = (
+            "regenerates the sitemap",
+            "unchanged pages are left untouched",
+            "rewrites this page when a figure actually changed",
+            "caches the last good response",
+            "never blanks the page",
+            "never takes the rest of the site down",
+        )
+        names = ["Berlin", "Tokyo", "Lagos", "Cairo", "Lima", "Oslo", "Chicago", "Mumbai"]
+        pages = [self._climate(n, 22 + i, -4 + i, 3.0 + i, 0.4) for i, n in enumerate(names)]
+        for page in pages:
+            prose, faq = fallback_copy(page)
+            blob = prose + " " + " ".join(a for _, a in faq)
+            for phrase in forbidden:
+                with self.subTest(page=page.slug, phrase=phrase):
+                    self.assertNotIn(phrase, blob)
+
+    def test_climate_prose_is_unique_for_identically_shaped_cities(self):
+        """Two cities with the same figures must still not read identically, because the
+        opener and closer are chosen from the derived counts and not a fixed pool."""
+        pages = [self._climate(f"City{i}", 20.0, -2.0, 2.5, 0.6) for i in range(30)]
+        prose = [fallback_copy(p)[0] for p in pages]
+        self.assertEqual(len(set(prose)), len(prose))
+
+    def test_month_count_is_agreed_with_its_noun(self):
+        self.assertEqual(_months(1), "1 month")
+        self.assertEqual(_months(2), "2 months")
+        self.assertEqual(_months(0), "0 months")
+
+    def test_climate_prose_has_no_duplicated_units_or_bad_plurals(self):
+        pages = [self._climate(f"City{i}", 20.0 + i * 0.3, -2.0, 2.5, 0.6) for i in range(40)]
+        for page in pages:
+            prose, _ = fallback_copy(page)
+            with self.subTest(page=page.slug):
+                self.assertNotIn("C C", prose)
+                self.assertNotIn("1 months", prose)
+                self.assertNotIn("None", prose)
+
+    def test_climate_prose_reuses_the_annual_mean_the_page_publishes(self):
+        """Averaging the rounded table rows disagrees with the annual mean in the facts by
+        a tenth of a degree. The prose must not contradict the figure printed above it."""
+        page = self._climate("Kazan", 19.4, -13.9, 2.33, 1.3)
+        page.facts = [("Annual mean temperature", "3.1 C")]
+        prose, _ = fallback_copy(page)
+        self.assertIn("3.1", prose)
+        self.assertNotIn("3.0", prose)
 
     def test_fallback_copy_survives_a_page_without_a_table(self):
         page = Page(kind="country", title="Japan", h1="Japan country data", slug="japan",

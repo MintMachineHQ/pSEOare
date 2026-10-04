@@ -23,8 +23,10 @@ jobs:
     runs-on: ubuntu-latest
     # The corpus grows every run, so job time grows with it. It sat near 10 minutes
     # before the CoinGecko daily-limit latch and a rate-limit bump, and the cap has to
-    # leave room for that growth instead of killing a build mid-publish.
-    timeout-minutes: 40
+    # leave room for that growth instead of killing a build mid-publish. Raising the AI
+    # enrichment budget to 240 calls a run added roughly 8 minutes of generation on top
+    # of that baseline, so the ceiling moves to 55 to keep the headroom.
+    timeout-minutes: 55
     env:
       GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
       GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}

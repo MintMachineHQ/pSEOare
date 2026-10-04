@@ -4,8 +4,8 @@
   "language": "en",
   "limits": {
     "max_pages_per_run": 300,
-    "max_gemini_calls_per_run": 40,
-    "gemini_min_interval_seconds": 7.5,
+    "max_gemini_calls_per_run": 240,
+    "gemini_min_interval_seconds": 2.0,
     "http_concurrency": 8,
     "http_timeout_seconds": 30,
     "max_http_retries": 3

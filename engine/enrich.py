@@ -645,18 +645,93 @@ def _month_insight(rows: list[Any]) -> dict[str, Any] | None:
     wettest = max(parsed, key=lambda r: r[2])
     driest = min(parsed, key=lambda r: r[2])
     total_rain = sum(r[2] for r in parsed) * 30.4
-    wettest_share = wettest[2] / sum(r[2] for r in parsed) if sum(r[2] for r in parsed) else 0.0
+    rain_sum = sum(r[2] for r in parsed)
+    wettest_share = wettest[2] / rain_sum if rain_sum else 0.0
+    mean_temp = sum(r[1] for r in parsed) / len(parsed)
+    mean_rain = rain_sum / len(parsed)
+    swing = warmest[1] - coldest[1]
+
+    # How many months sit close to the extremes, and how long the dry stretch runs.
+    # These counts are what let the prose say something a reader cannot read off the
+    # table at a glance, and they differ between two cities with the same annual swing.
+    warm_count = sum(1 for r in parsed if r[1] >= warmest[1] - 1.0)
+    cold_count = sum(1 for r in parsed if r[1] <= coldest[1] + 1.0)
+    dry_run = _longest_run([r[2] < mean_rain * 0.6 for r in parsed])
+    wet_run = _longest_run([r[2] > mean_rain * 1.4 for r in parsed])
+    near_mean = sum(1 for r in parsed if abs(r[1] - mean_temp) <= 1.0)
+
     return {
         "warmest": warmest,
         "coldest": coldest,
         "wettest": wettest,
         "driest": driest,
-        "swing": warmest[1] - coldest[1],
+        "swing": swing,
         "total_rain": total_rain,
         "wettest_share": wettest_share,
         "seasonal": wettest_share > 0.18,
         "rain_swing": wettest[2] / driest[2] if driest[2] else 0.0,
+        "mean_temp": mean_temp,
+        "mean_rain": mean_rain,
+        "warm_count": warm_count,
+        "cold_count": cold_count,
+        "dry_run": dry_run,
+        "wet_run": wet_run,
+        "near_mean": near_mean,
+        "swing_band": _swing_band(swing),
+        "rain_band": _rain_band(total_rain),
     }
+
+
+def _longest_run(flags: list[bool]) -> int:
+    """Length of the longest consecutive run of True."""
+    best = run = 0
+    for flag in flags:
+        run = run + 1 if flag else 0
+        best = max(best, run)
+    return best
+
+
+def _swing_band(swing: float) -> str:
+    """Bucket the annual temperature swing so the wording matches the number."""
+    if swing < 3:
+        return "flat"
+    if swing < 7:
+        return "mild"
+    if swing < 12:
+        return "marked"
+    if swing < 18:
+        return "strong"
+    return "extreme"
+
+
+def _rain_band(total_rain: float) -> str:
+    """Bucket annual rainfall the same way."""
+    if total_rain < 250:
+        return "arid"
+    if total_rain < 750:
+        return "dry"
+    if total_rain < 1500:
+        return "moderate"
+    if total_rain < 2500:
+        return "wet"
+    return "very_wet"
+
+
+_SWING_WORDS = {
+    "flat": ("barely moves", "almost flat across the year"),
+    "mild": ("moves gently", "a gentle curve rather than a sharp one"),
+    "marked": ("swings noticeably", "a clear seasonal swing"),
+    "strong": ("swings hard", "a pronounced seasonal swing"),
+    "extreme": ("swings sharply", "an extreme seasonal swing"),
+}
+
+_RAIN_WORDS = {
+    "arid": ("close to arid", "genuinely dry"),
+    "dry": ("dry", "on the dry side"),
+    "moderate": ("moderate", "neither wet nor dry"),
+    "wet": ("wet", "reliably wet"),
+    "very_wet": ("very wet", "among the wettest readings"),
+}
 
 
 _OPENERS = (
@@ -668,12 +743,16 @@ _OPENERS = (
     "One page for {subject}, sourced from public APIs and refreshed automatically.",
 )
 
+# Every one of these used to be an internal note about the build ("the same build that
+# regenerates the sitemap", "unchanged pages are left untouched"). They are boilerplate
+# that says nothing about the page and is identical on every URL in the corpus, which is
+# the pattern that gets a programmatic site discounted as thin. What is left is the one
+# sentence worth keeping, and it now describes the data instead of the machinery.
 _BRIDGES = (
-    "The build runs on a schedule and caches the last good response, so the numbers stay put even when the upstream API is having a bad day.",
-    "Every run re-reads the source and only rewrites this page when a figure actually changed.",
-    "Values come from a public open API; a successful result is cached so a later outage never blanks the page.",
-    "The same build that regenerates the sitemap refreshes these values, and unchanged pages are left untouched.",
-    "Because each page is rebuilt independently, one unavailable upstream never takes the rest of the site down.",
+    "Figures are long-run averages for the grid cell, not a forecast for any one year.",
+    "These are multi-decadal means, so a single hot or cold spell will not show up here.",
+    "Averages smooth out year-to-year variation, so read these as typical rather than guaranteed.",
+    "The numbers below are averages across decades, not a prediction for the year ahead.",
 )
 
 _CLOSERS = (
@@ -701,6 +780,36 @@ _RAIN_FRAMES_EVEN = (
     "Expect a wet month and a dry month but no real season: {wettest_rain} mm/day in {wettest_month} against {driest_rain} mm/day in {driest_month}.",
 )
 
+# Openers and closers written from the page's own figures. Two cities can share an annual
+# swing and still land on different sentences here, because the counts below (how many
+# months sit near the extremes, how long the dry run is, what share of the rain falls in
+# the wettest month) are properties of that city's own row and nothing else.
+_CLIMATE_OPENERS = (
+    "{place} in one paragraph: temperature {swing_phrase}, rainfall {rain_phrase}.",
+    "The short read on {place} — {swing_phrase} across the year and {rain_phrase} overall.",
+    "Before the table: {place} sees {mean_temp} on average, {swing_phrase}, and totals about {total_rain} mm of rain a year.",
+    "Quick summary for {place}. Temperature averages {mean_temp} and {swing_phrase}; rainfall is {rain_phrase}.",
+    "{place}, summarised: {swing_phrase} on temperature, roughly {total_rain} mm of rain a year, {rain_phrase}.",
+    "Here is {place} without the table: {mean_temp} mean, {swing_phrase}, {rain_phrase}.",
+)
+
+_CLIMATE_CLOSERS = (
+    # Phrased so the count can never disagree with its verb: a value of 1 reads
+    # "Months within a degree of 19.4 C: 1 of twelve" rather than "1 month ... sit".
+    "Months within a degree of {warmest}: {warm_count} of twelve, so the warm end is broad rather than one spike.",
+    "Months within a degree of {coldest}: {cold_count} of twelve, so the cold end is not a single month either.",
+    "The driest run of months back to back is {dry_run}, and the wettest such run is {wet_run}.",
+    "{wettest_month} alone supplies {wettest_pct}% of the year's rainfall.",
+    "Mean rainfall is {mean_rain} mm/day, so the wettest month runs {above_mean}x that figure.",
+    "Most months fall between {coldest} and {warmest}; the table lists the rest month by month.",
+    "Counting months within a degree of the annual mean of {mean_temp} gives {near_mean} of the year.",
+)
+
+
+def _months(count: int) -> str:
+    """Render a month count with the right noun, for the few templates that need it."""
+    return "1 month" if count == 1 else f"{count} months"
+
 _CLIMATE_FAQ = (
     ("Is {place} climate data a forecast?", "No. These are multi-decadal averages for the grid cell, not a prediction for any particular year."),
     ("Why do the numbers differ from a weather app?", "An app shows one location on one day. These are long-run averages, so they smooth out single hot or cold spells."),
@@ -723,6 +832,19 @@ def fallback_copy(page: Page) -> tuple[str, list[tuple[str, str]]]:
     """
     rows = ((page.data.get("table") or {}).get("rows")) or []
     insight = _month_insight(rows) if page.kind.startswith("climate") else None
+    if insight:
+        # The table rows are rounded for display, so averaging them gives a slightly
+        # different number from the annual mean the page already states in its facts
+        # ("3.0 C" against "3.1 C" for Kazan). Two different figures for the same thing
+        # on one page is exactly the kind of detail that undermines trust in the rest,
+        # so prefer the value the page already publishes.
+        for key, value in page.facts:
+            if key.lower().startswith("annual mean temperature"):
+                try:
+                    insight["mean_temp"] = float(str(value).split()[0])
+                except (ValueError, IndexError):
+                    pass
+                break
     # Keep proper nouns capitalised: "berlin climate" reads like a typo.
     subject = page.h1 if page.kind.startswith("climate") else page.h1.lower()
     pick = lambda options: options[int(hashlib.sha256(page.slug.encode()).hexdigest(), 16) % len(options)]
@@ -736,6 +858,16 @@ def fallback_copy(page: Page) -> tuple[str, list[tuple[str, str]]]:
         place = page.h1.split()[0]
         wm, cm = insight["warmest"], insight["coldest"]
         wet, dry = insight["wettest"], insight["driest"]
+        # Lead with the page's own figures rather than the generic opener. The generic
+        # string was identical on every climate page in the corpus; this one changes with
+        # the swing band, the rainfall band and the mean.
+        parts[0] = pick(_CLIMATE_OPENERS).format(
+            place=place,
+            swing_phrase=_SWING_WORDS[insight["swing_band"]][0],
+            rain_phrase=_RAIN_WORDS[insight["rain_band"]][0],
+            mean_temp=f"{insight['mean_temp']:.1f} C",
+            total_rain=f"{insight['total_rain']:,.0f}",
+        )
         parts.append(
             pick(_CLIMATE_FRAMES).format(
                 place=place,
@@ -759,11 +891,34 @@ def fallback_copy(page: Page) -> tuple[str, list[tuple[str, str]]]:
         parts.append(
             f"Taken together that is roughly {insight['total_rain']:,.0f} mm of rain a year for the grid cell."
         )
+        # The closer is the last thing on the page, so it carries the most specific
+        # derived claim available: a count or a share that only this city's row produces.
+        parts.append(
+            pick(_CLIMATE_CLOSERS).format(
+                place=place,
+                warmest=f"{wm[1]:.1f} C",
+                coldest=f"{cm[1]:.1f} C",
+                wettest_month=wet[0],
+                mean_temp=f"{insight['mean_temp']:.1f}",
+                mean_rain=f"{insight['mean_rain']:.2f}",
+                warm_count=insight["warm_count"],
+                cold_count=insight["cold_count"],
+                dry_run=insight["dry_run"],
+                wet_run=insight["wet_run"],
+                wettest_pct=f"{insight['wettest_share'] * 100:.0f}",
+                above_mean=(
+                    f"{insight['wettest'][2] / insight['mean_rain']:.1f}"
+                    if insight["mean_rain"]
+                    else "a similar"
+                ),
+                near_mean=insight["near_mean"],
+            )
+        )
     else:
         facts = "; ".join(f"{k.lower()} {v}" for k, v in page.facts[:4])
         if facts:
             parts.append(f"The headline figures are {facts}.")
-    parts.extend((bridge, closer))
+        parts.extend((bridge, closer))
     prose = " ".join(parts)
 
     if insight:
