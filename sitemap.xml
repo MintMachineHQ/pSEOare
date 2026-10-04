@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://pseoare.pages.dev/</loc><lastmod>2026-10-04</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://pseoare.pages.dev/hub-holidays</loc><lastmod>2026-10-04</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://pseoare.pages.dev/hub-single-holidays</loc><lastmod>2026-10-04</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://pseoare.pages.dev/hub-climate</loc><lastmod>2026-10-04</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://pseoare.pages.dev/hub-countries</loc><lastmod>2026-10-04</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
@@ -3658,6 +3659,62 @@
   <url><loc>https://pseoare.pages.dev/new-year-s-day-south-korea-2021-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://pseoare.pages.dev/new-year-s-day-south-korea-2022-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://pseoare.pages.dev/new-year-s-day-south-korea-2023-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/new-year-s-day-spain-2016-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/new-year-s-day-spain-2017-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/new-year-s-day-spain-2018-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/new-year-s-day-spain-2019-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/new-year-s-day-spain-2020-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/new-year-s-day-spain-2021-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/new-year-s-day-spain-2022-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/new-year-s-day-spain-2023-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/new-year-s-day-sweden-2016-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/new-year-s-day-sweden-2017-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/new-year-s-day-sweden-2018-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/new-year-s-day-sweden-2019-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/new-year-s-day-sweden-2020-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/new-year-s-day-sweden-2021-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/new-year-s-day-sweden-2022-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/new-year-s-day-sweden-2023-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/new-year-s-day-switzerland-2016-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/new-year-s-day-switzerland-2017-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/new-year-s-day-switzerland-2018-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/new-year-s-day-switzerland-2019-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/new-year-s-day-switzerland-2020-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/new-year-s-day-switzerland-2021-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/new-year-s-day-switzerland-2022-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/new-year-s-day-switzerland-2023-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/new-year-s-day-turkey-2016-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/new-year-s-day-turkey-2017-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/new-year-s-day-turkey-2018-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/new-year-s-day-turkey-2019-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/new-year-s-day-turkey-2020-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/new-year-s-day-turkey-2021-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/new-year-s-day-turkey-2022-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/new-year-s-day-turkey-2023-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/new-year-s-day-ukraine-2016-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/new-year-s-day-ukraine-2017-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/new-year-s-day-ukraine-2018-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/new-year-s-day-ukraine-2019-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/new-year-s-day-ukraine-2020-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/new-year-s-day-ukraine-2021-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/new-year-s-day-ukraine-2022-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/new-year-s-day-ukraine-2023-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/new-year-s-day-united-kingdom-2016-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/new-year-s-day-united-kingdom-2017-01-02</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/new-year-s-day-united-kingdom-2018-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/new-year-s-day-united-kingdom-2019-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/new-year-s-day-united-kingdom-2020-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/new-year-s-day-united-kingdom-2021-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/new-year-s-day-united-kingdom-2022-01-03</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/new-year-s-day-united-kingdom-2023-01-02</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/new-year-s-day-united-states-2016-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/new-year-s-day-united-states-2017-01-02</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/new-year-s-day-united-states-2018-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/new-year-s-day-united-states-2019-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/new-year-s-day-united-states-2020-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/new-year-s-day-united-states-2021-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/new-year-s-day-united-states-2021-12-31</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/new-year-s-day-united-states-2023-01-02</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://pseoare.pages.dev/top-coldest-cities</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://pseoare.pages.dev/top-warmest-cities</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://pseoare.pages.dev/top-largest-seasonal-swing</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
@@ -3834,62 +3891,63 @@
   <url><loc>https://pseoare.pages.dev/holidays-2022-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://pseoare.pages.dev/holidays-2023-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://pseoare.pages.dev/widgets</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://pseoare.pages.dev/new-year-s-day-spain-2016-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://pseoare.pages.dev/new-year-s-day-spain-2017-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://pseoare.pages.dev/new-year-s-day-spain-2018-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://pseoare.pages.dev/new-year-s-day-spain-2019-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://pseoare.pages.dev/new-year-s-day-spain-2020-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://pseoare.pages.dev/new-year-s-day-spain-2021-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://pseoare.pages.dev/new-year-s-day-spain-2022-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://pseoare.pages.dev/new-year-s-day-spain-2023-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://pseoare.pages.dev/new-year-s-day-sweden-2016-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://pseoare.pages.dev/new-year-s-day-sweden-2017-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://pseoare.pages.dev/new-year-s-day-sweden-2018-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://pseoare.pages.dev/new-year-s-day-sweden-2019-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://pseoare.pages.dev/new-year-s-day-sweden-2020-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://pseoare.pages.dev/new-year-s-day-sweden-2021-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://pseoare.pages.dev/new-year-s-day-sweden-2022-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://pseoare.pages.dev/new-year-s-day-sweden-2023-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://pseoare.pages.dev/new-year-s-day-switzerland-2016-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://pseoare.pages.dev/new-year-s-day-switzerland-2017-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://pseoare.pages.dev/new-year-s-day-switzerland-2018-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://pseoare.pages.dev/new-year-s-day-switzerland-2019-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://pseoare.pages.dev/new-year-s-day-switzerland-2020-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://pseoare.pages.dev/new-year-s-day-switzerland-2021-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://pseoare.pages.dev/new-year-s-day-switzerland-2022-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://pseoare.pages.dev/new-year-s-day-switzerland-2023-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://pseoare.pages.dev/new-year-s-day-turkey-2016-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://pseoare.pages.dev/new-year-s-day-turkey-2017-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://pseoare.pages.dev/new-year-s-day-turkey-2018-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://pseoare.pages.dev/new-year-s-day-turkey-2019-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://pseoare.pages.dev/new-year-s-day-turkey-2020-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://pseoare.pages.dev/new-year-s-day-turkey-2021-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://pseoare.pages.dev/new-year-s-day-turkey-2022-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://pseoare.pages.dev/new-year-s-day-turkey-2023-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://pseoare.pages.dev/new-year-s-day-ukraine-2016-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://pseoare.pages.dev/new-year-s-day-ukraine-2017-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://pseoare.pages.dev/new-year-s-day-ukraine-2018-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://pseoare.pages.dev/new-year-s-day-ukraine-2019-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://pseoare.pages.dev/new-year-s-day-ukraine-2020-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://pseoare.pages.dev/new-year-s-day-ukraine-2021-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://pseoare.pages.dev/new-year-s-day-ukraine-2022-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://pseoare.pages.dev/new-year-s-day-ukraine-2023-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://pseoare.pages.dev/new-year-s-day-united-kingdom-2016-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://pseoare.pages.dev/new-year-s-day-united-kingdom-2017-01-02</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://pseoare.pages.dev/new-year-s-day-united-kingdom-2018-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://pseoare.pages.dev/new-year-s-day-united-kingdom-2019-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://pseoare.pages.dev/new-year-s-day-united-kingdom-2020-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://pseoare.pages.dev/new-year-s-day-united-kingdom-2021-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://pseoare.pages.dev/new-year-s-day-united-kingdom-2022-01-03</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://pseoare.pages.dev/new-year-s-day-united-kingdom-2023-01-02</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://pseoare.pages.dev/new-year-s-day-united-states-2016-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://pseoare.pages.dev/new-year-s-day-united-states-2017-01-02</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://pseoare.pages.dev/new-year-s-day-united-states-2018-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://pseoare.pages.dev/new-year-s-day-united-states-2019-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://pseoare.pages.dev/new-year-s-day-united-states-2020-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://pseoare.pages.dev/new-year-s-day-united-states-2021-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://pseoare.pages.dev/new-year-s-day-united-states-2021-12-31</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://pseoare.pages.dev/new-year-s-day-united-states-2023-01-02</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/new-year-s-day-vietnam-2016-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/new-year-s-day-vietnam-2017-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/new-year-s-day-vietnam-2018-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/new-year-s-day-vietnam-2019-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/new-year-s-day-vietnam-2020-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/new-year-s-day-vietnam-2021-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/new-year-s-day-vietnam-2022-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/new-year-s-day-vietnam-2023-01-01</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/on-1848-revolution-memorial-day-hungary-2016-03-15</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/on-1848-revolution-memorial-day-hungary-2017-03-15</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/on-1848-revolution-memorial-day-hungary-2018-03-15</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/on-1848-revolution-memorial-day-hungary-2019-03-15</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/on-1848-revolution-memorial-day-hungary-2020-03-15</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/on-1848-revolution-memorial-day-hungary-2021-03-15</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/on-1848-revolution-memorial-day-hungary-2022-03-15</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/on-1848-revolution-memorial-day-hungary-2023-03-15</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/on-2-january-united-kingdom-2016-01-02</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/on-2-january-united-kingdom-2017-01-03</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/on-2-january-united-kingdom-2018-01-02</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/on-2-january-united-kingdom-2019-01-02</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/on-2-january-united-kingdom-2020-01-02</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/on-2-january-united-kingdom-2021-01-02</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/on-2-january-united-kingdom-2022-01-04</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/on-2-january-united-kingdom-2023-01-03</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/proclamation-of-independence-morocco-2016-01-11</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/proclamation-of-independence-morocco-2017-01-11</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/proclamation-of-independence-morocco-2018-01-11</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/proclamation-of-independence-morocco-2019-01-11</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/proclamation-of-independence-morocco-2020-01-11</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/proclamation-of-independence-morocco-2021-01-11</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/proclamation-of-independence-morocco-2022-01-11</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/proclamation-of-independence-morocco-2023-01-11</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/public-holidays-argentina-2016</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/public-holidays-argentina-2017</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/public-holidays-argentina-2018</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/public-holidays-argentina-2019</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/public-holidays-argentina-2020</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/public-holidays-argentina-2021</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/public-holidays-argentina-2022</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/public-holidays-argentina-2023</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/public-holidays-australia-2016</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/public-holidays-australia-2017</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/public-holidays-australia-2018</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/public-holidays-australia-2019</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/public-holidays-australia-2020</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/public-holidays-australia-2021</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/public-holidays-australia-2022</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/public-holidays-australia-2023</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/public-holidays-austria-2016</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/public-holidays-austria-2017</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/public-holidays-austria-2018</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/public-holidays-austria-2019</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/public-holidays-austria-2020</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/public-holidays-austria-2021</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/public-holidays-austria-2022</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/public-holidays-austria-2023</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/public-holidays-belgium-2016</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://pseoare.pages.dev/amazigh-new-year-morocco-2024-01-14</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://pseoare.pages.dev/amazigh-new-year-morocco-2025-01-14</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://pseoare.pages.dev/amazigh-new-year-morocco-2026-01-14</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
@@ -4234,6 +4292,7 @@
   <url><loc>https://pseoare.pages.dev/api/holidays/ukraine.json</loc><lastmod>2026-10-04</lastmod><changefreq>daily</changefreq><priority>0.9</priority></url>
   <url><loc>https://pseoare.pages.dev/api/holidays/united-kingdom.json</loc><lastmod>2026-10-04</lastmod><changefreq>daily</changefreq><priority>0.9</priority></url>
   <url><loc>https://pseoare.pages.dev/api/holidays/united-states.json</loc><lastmod>2026-10-04</lastmod><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://pseoare.pages.dev/api/holidays/vietnam.json</loc><lastmod>2026-10-04</lastmod><changefreq>daily</changefreq><priority>0.9</priority></url>
   <url><loc>https://pseoare.pages.dev/search-index.json</loc><lastmod>2026-10-04</lastmod><changefreq>daily</changefreq><priority>0.9</priority></url>
   <url><loc>https://pseoare.pages.dev/feed-climate.xml</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
   <url><loc>https://pseoare.pages.dev/feed-crypto.xml</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>

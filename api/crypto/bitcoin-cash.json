@@ -4,11 +4,11 @@
  "range_12m": {
   "high": 654.84,
   "low": 190.35,
-  "latest": 318.01
+  "latest": 317.72
  },
- "position_in_range_pct": 27.5,
- "pct_above_low": 67.1,
- "pct_below_high": 51.4,
+ "position_in_range_pct": 27.4,
+ "pct_above_low": 66.9,
+ "pct_below_high": 51.5,
  "range_pct_of_low": 244.0,
  "monthly": [
   [
@@ -99,10 +99,10 @@
    "2026-10",
    306.13,
    319.62,
-   312.9,
-   318.01
+   312.85,
+   317.72
   ]
  ],
- "updated": "2026-10-04T10:43:50.650358+00:00",
+ "updated": "2026-10-04T11:01:43.622455+00:00",
  "source": "https://pseoare.pages.dev"
 }

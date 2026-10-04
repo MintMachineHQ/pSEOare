@@ -1,7 +1,7 @@
 {
  "country": "Morocco",
  "page": "https://pseoare.pages.dev/hub-single-holidays",
- "count": 12,
+ "count": 20,
  "holidays": [
   {
    "name": "New Year's Day in Morocco (2016)",
@@ -12,12 +12,28 @@
    "page": "https://pseoare.pages.dev/new-year-s-day-morocco-2016-01-01"
   },
   {
+   "name": "Proclamation of Independence in Morocco (2016)",
+   "local_name": "Takdim watikat al-istiqlal",
+   "date": "2016-01-11",
+   "weekday": "Monday",
+   "weekend": false,
+   "page": "https://pseoare.pages.dev/proclamation-of-independence-morocco-2016-01-11"
+  },
+  {
    "name": "New Year's Day in Morocco (2017)",
    "local_name": "Ras l' \u00e2m",
    "date": "2017-01-01",
    "weekday": "Sunday",
    "weekend": true,
    "page": "https://pseoare.pages.dev/new-year-s-day-morocco-2017-01-01"
+  },
+  {
+   "name": "Proclamation of Independence in Morocco (2017)",
+   "local_name": "Takdim watikat al-istiqlal",
+   "date": "2017-01-11",
+   "weekday": "Wednesday",
+   "weekend": false,
+   "page": "https://pseoare.pages.dev/proclamation-of-independence-morocco-2017-01-11"
   },
   {
    "name": "New Year's Day in Morocco (2018)",
@@ -28,12 +44,28 @@
    "page": "https://pseoare.pages.dev/new-year-s-day-morocco-2018-01-01"
   },
   {
+   "name": "Proclamation of Independence in Morocco (2018)",
+   "local_name": "Takdim watikat al-istiqlal",
+   "date": "2018-01-11",
+   "weekday": "Thursday",
+   "weekend": false,
+   "page": "https://pseoare.pages.dev/proclamation-of-independence-morocco-2018-01-11"
+  },
+  {
    "name": "New Year's Day in Morocco (2019)",
    "local_name": "Ras l' \u00e2m",
    "date": "2019-01-01",
    "weekday": "Tuesday",
    "weekend": false,
    "page": "https://pseoare.pages.dev/new-year-s-day-morocco-2019-01-01"
+  },
+  {
+   "name": "Proclamation of Independence in Morocco (2019)",
+   "local_name": "Takdim watikat al-istiqlal",
+   "date": "2019-01-11",
+   "weekday": "Friday",
+   "weekend": false,
+   "page": "https://pseoare.pages.dev/proclamation-of-independence-morocco-2019-01-11"
   },
   {
    "name": "New Year's Day in Morocco (2020)",
@@ -44,12 +76,28 @@
    "page": "https://pseoare.pages.dev/new-year-s-day-morocco-2020-01-01"
   },
   {
+   "name": "Proclamation of Independence in Morocco (2020)",
+   "local_name": "Takdim watikat al-istiqlal",
+   "date": "2020-01-11",
+   "weekday": "Saturday",
+   "weekend": true,
+   "page": "https://pseoare.pages.dev/proclamation-of-independence-morocco-2020-01-11"
+  },
+  {
    "name": "New Year's Day in Morocco (2021)",
    "local_name": "Ras l' \u00e2m",
    "date": "2021-01-01",
    "weekday": "Friday",
    "weekend": false,
    "page": "https://pseoare.pages.dev/new-year-s-day-morocco-2021-01-01"
+  },
+  {
+   "name": "Proclamation of Independence in Morocco (2021)",
+   "local_name": "Takdim watikat al-istiqlal",
+   "date": "2021-01-11",
+   "weekday": "Monday",
+   "weekend": false,
+   "page": "https://pseoare.pages.dev/proclamation-of-independence-morocco-2021-01-11"
   },
   {
    "name": "New Year's Day in Morocco (2022)",
@@ -60,12 +108,28 @@
    "page": "https://pseoare.pages.dev/new-year-s-day-morocco-2022-01-01"
   },
   {
+   "name": "Proclamation of Independence in Morocco (2022)",
+   "local_name": "Takdim watikat al-istiqlal",
+   "date": "2022-01-11",
+   "weekday": "Tuesday",
+   "weekend": false,
+   "page": "https://pseoare.pages.dev/proclamation-of-independence-morocco-2022-01-11"
+  },
+  {
    "name": "New Year's Day in Morocco (2023)",
    "local_name": "Ras l' \u00e2m",
    "date": "2023-01-01",
    "weekday": "Sunday",
    "weekend": true,
    "page": "https://pseoare.pages.dev/new-year-s-day-morocco-2023-01-01"
+  },
+  {
+   "name": "Proclamation of Independence in Morocco (2023)",
+   "local_name": "Takdim watikat al-istiqlal",
+   "date": "2023-01-11",
+   "weekday": "Wednesday",
+   "weekend": false,
+   "page": "https://pseoare.pages.dev/proclamation-of-independence-morocco-2023-01-11"
   },
   {
    "name": "Amazigh New Year in Morocco (2024)",
@@ -100,6 +164,6 @@
    "page": "https://pseoare.pages.dev/amazigh-new-year-morocco-2027-01-14"
   }
  ],
- "updated": "2026-10-04T10:43:50.650358+00:00",
+ "updated": "2026-10-04T11:01:43.622455+00:00",
  "source": "https://pseoare.pages.dev"
 }
