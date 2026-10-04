@@ -608,7 +608,7 @@ def entity_endpoints(store: MetricsStore, stamp: str) -> list[tuple[str, str]]:
     """
     out: list[tuple[str, str]] = []
     for row in store.climates():
-        out.append((f"api/cities/{row.slug}.json", json.dumps({
+        out.append((f"api/cities/{_alias(row)}.json", json.dumps({
             "city": row.data.get("name"), "page": link(row.path),
             "annual_mean_c": row.data.get("annual_mean"),
             "warmest_month": row.data.get("warmest_month"),
@@ -626,7 +626,7 @@ def entity_endpoints(store: MetricsStore, stamp: str) -> list[tuple[str, str]]:
             "updated": stamp, "source": _SITE["origin"],
         }, indent=1)))
     for row in store.cryptos():
-        out.append((f"api/crypto/{row.slug}.json", json.dumps({
+        out.append((f"api/crypto/{_alias(row)}.json", json.dumps({
             "asset": row.data.get("name"), "page": link(row.path),
             "range_12m": {"high": row.data.get("high"), "low": row.data.get("low"),
                           "latest": row.data.get("last")},
@@ -654,6 +654,16 @@ def entity_endpoints(store: MetricsStore, stamp: str) -> list[tuple[str, str]]:
             "updated": stamp, "source": _SITE["origin"],
         }, indent=1)))
     return out
+
+
+def _alias(row: Metrics) -> str:
+    """The endpoint slug: the entity's own name, not its page filename.
+
+    Page slugs carry the dataset suffix ("bitcoin-price-by-month"), which is right for a
+    page and wrong for an API path. Nobody requests /api/crypto/bitcoin-price-by-month.json
+    when they typed "bitcoin".
+    """
+    return slugify(str(row.data.get("name") or row.slug))
 
 
 def slugify(text: str) -> str:

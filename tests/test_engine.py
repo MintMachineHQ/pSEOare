@@ -2473,3 +2473,36 @@ class TestEntityApiAndSearchAndEvents(unittest.TestCase):
         docs = hub_documents([page], cfg, theme, build_css(theme), '<form id="ask"></form>')
         index = dict(docs)["index.html"]
         self.assertIn('id="ask"', index)
+
+
+class TestApiEndpointSlugs(unittest.TestCase):
+    """An API path should be the entity's name. Page slugs carry the dataset suffix,
+    and nobody requests /api/crypto/bitcoin-price-by-month.json having typed bitcoin."""
+
+    def test_endpoints_use_the_entity_name(self):
+        from engine import explore
+
+        out = dict(explore.entity_endpoints(
+            TestExploreSurfaces()._store(Path(tempfile.mkdtemp())), "2026-10-04T00:00:00Z"
+        ))
+        self.assertIn("api/cities/city0.json", out)
+        self.assertIn("api/crypto/coin0.json", out)
+        self.assertNotIn("api/crypto/coin0-price-by-month.json", out)
+
+    def test_alias_slugifies_the_name(self):
+        from engine.metrics import Metrics
+        from engine.explore import _alias
+
+        row = Metrics(path="bitcoin-price-by-month.html", kind="crypto_12m",
+                      title="Bitcoin", slug="bitcoin-price-by-month",
+                      data={"name": "Bitcoin"})
+        self.assertEqual(_alias(row), "bitcoin")
+
+    def test_the_docs_page_advertises_the_alias(self):
+        from engine import explore
+
+        explore.configure("https://pseoare.pages.dev", "pSEOare")
+        store = TestExploreSurfaces()._store(Path(tempfile.mkdtemp()))
+        _, html, _ = explore.api_docs(store, "2026-10-04T00:00:00Z")
+        self.assertIn("/api/cities/city0.json", html)
+        self.assertNotIn("price-by-month.json", html)
