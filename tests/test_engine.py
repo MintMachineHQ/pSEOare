@@ -29,6 +29,8 @@ from engine.enrich import (  # noqa: E402
 )
 from engine.hubs import (
     LINKS_PER_PAGE,
+    rss_date,
+    rss_feed,
     assign_related,
     hub_documents,
     hub_filenames,
@@ -1146,6 +1148,37 @@ class TestRender(unittest.TestCase):
         prose, faq = pick_copy(page, {"climate:berlin": "Enriched prose.\nFAQ: Q?|A."})
         self.assertEqual(prose, "Enriched prose.")
         self.assertEqual(len(faq), 1)
+
+
+class TestRssDate(unittest.TestCase):
+    # A parser rejects the whole channel date when pubDate is not RFC 822. Feedrabbit
+    # reported "Only UTC times are supported" for a stamp that was UTC but written as
+    # ISO 8601, which is valid Atom and not valid RSS.
+    def test_iso_stamp_becomes_rfc822_in_utc(self):
+        self.assertEqual(
+            rss_date("2026-10-03T21:41:45.365613+00:00"),
+            "Sat, 03 Oct 2026 21:41:45 GMT",
+        )
+
+    def test_non_utc_offset_is_converted_not_stripped(self):
+        self.assertEqual(
+            rss_date("2026-10-03T23:41:45+02:00"),
+            "Sat, 03 Oct 2026 21:41:45 GMT",
+        )
+
+    def test_z_suffix_and_unparseable_input_are_handled(self):
+        self.assertEqual(rss_date("2026-10-03T21:41:45Z"), "Sat, 03 Oct 2026 21:41:45 GMT")
+        # Garbage must not raise: a bad stamp cannot be allowed to fail a build.
+        self.assertRegex(rss_date("not-a-date"), r"^[A-Z][a-z]{2}, [0-9]{2} [A-Z][a-z]{2} [0-9]{4}")
+
+    def test_feed_emits_rfc822_pubdate_and_lastbuilddate(self):
+        tmp = Path(tempfile.mkdtemp())
+        cfg = make_cfg(tmp)
+        feed = rss_feed([sample_page(cfg)], cfg, "2026-10-03T21:41:45+00:00")
+        self.assertIn("<lastBuildDate>Sat, 03 Oct 2026 21:41:45 GMT</lastBuildDate>", feed)
+        self.assertIn("<pubDate>Sat, 03 Oct 2026 21:41:45 GMT</pubDate>", feed)
+        # No ISO offset may survive anywhere in the feed.
+        self.assertNotIn("+00:00", feed)
 
 
 class TestWriter(unittest.TestCase):

@@ -116,7 +116,8 @@
     "randomize_dom": true,
     "adsense_like": false,
     "verification_files": {
-      "googleeba8f39aab451061.html": "google-site-verification: googleeba8f39aab451061.html"
+      "googleeba8f39aab451061.html": "google-site-verification: googleeba8f39aab451061.html",
+      "yandex_30854088cc731057.html": "<html>\n    <head>\n        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n    </head>\n    <body>Verification: 30854088cc731057</body>\n</html>"
     },
     "mirror_note": "Cloudflare Pages (pseoare.pages.dev) is the only published host. The gh-pages branch is the build artifact the mirror workflow reads; it is not advertised, because clean URLs would not resolve there.",
     "url_style": "clean",

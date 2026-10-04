@@ -347,6 +347,25 @@ under one of the hubs below, and the full list is in the sitemap.</p>
 """
 
 
+def rss_date(stamp: str) -> str:
+    """Convert an ISO-8601 stamp into the RFC 822 form RSS 2.0 requires.
+
+    RSS ``pubDate`` and ``lastBuildDate`` are RFC 822, not ISO 8601: ``Sat, 03 Oct 2026
+    21:41:45 GMT``. We were emitting the raw ISO stamp, so a parser rejects the whole
+    channel-level date and reports the feed as broken rather than showing an item date.
+    Feedrabbit returned exactly that, "Only UTC times are supported", for a feed whose
+    timestamp was already UTC in a form it could not read. An ISO string with a ``+00:00``
+    offset is valid Atom, not valid RSS.
+    """
+    try:
+        when = datetime.fromisoformat(stamp.replace("Z", "+00:00"))
+    except ValueError:
+        when = datetime.now(timezone.utc)
+    if when.tzinfo is None:
+        when = when.replace(tzinfo=timezone.utc)
+    return when.astimezone(timezone.utc).strftime("%a, %d %b %Y %H:%M:%S GMT")
+
+
 def rss_feed(pages: list[Page], cfg: Config, stamp: str, limit: int = 200) -> str:
     """RSS 2.0 feed of the most recently generated pages.
 
@@ -354,7 +373,7 @@ def rss_feed(pages: list[Page], cfg: Config, stamp: str, limit: int = 200) -> st
     to, and it costs one file. The full corpus is too large to send, so this carries the
     newest slice.
     """
-    stamp = stamp or datetime.now(timezone.utc).isoformat()
+    stamp = rss_date(stamp or datetime.now(timezone.utc).isoformat())
     from xml.sax.saxutils import escape as xml_escape
 
     items = []
