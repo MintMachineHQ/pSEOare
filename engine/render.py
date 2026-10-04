@@ -153,6 +153,125 @@ def related_html(links: list[Link]) -> str:
     </section>"""
 
 
+def dataset_ld(page: Page, cfg: Config, canonical: str, stamp: str) -> dict[str, Any]:
+    """A Dataset node complete enough for Google Dataset Search.
+
+    The old node carried only a name and a description, which is not what dataset search
+    ranks on. The fields that matter are the ones that describe the *shape* of the data:
+    what is measured, where and when it applies, how it is distributed, and whether it
+    can be linked to. Those are all knowable from the page, so omitting them was leaving a
+    free discovery channel unused.
+    """
+    facts = dict(page.facts)
+    node: dict[str, Any] = {
+        "@type": "Dataset",
+        "name": page.title,
+        "description": page.summary[:300],
+        "url": canonical,
+        "@id": canonical,
+        "dateModified": stamp,
+        "keywords": ", ".join(page.keywords),
+        "creator": {"@type": "Organization", "name": cfg.site_name},
+        "license": cfg.raw.get("dataset_license")
+        or "https://creativecommons.org/licenses/by/4.0/",
+        "isAccessibleForFree": True,
+        "distribution": [
+            {
+                "@type": "DataDownload",
+                "encodingFormat": "text/html",
+                "contentUrl": canonical,
+            },
+            {
+                "@type": "DataDownload",
+                "encodingFormat": "application/xml",
+                "contentUrl": cfg.url_for("sitemap.xml"),
+            },
+        ],
+        "includedInDataCatalog": {
+            "@type": "DataCatalog",
+            "name": cfg.site_name,
+            "url": cfg.url_for("index.html"),
+        },
+    }
+    # A place is where the data applies, not something the dataset measures.
+    measured = [
+        k
+        for k in facts
+        if k not in ("Country", "Region", "City", "Source", "Date", "Year")
+    ]
+    if measured:
+        node["variableMeasured"] = measured
+    place = facts.get("City") or facts.get("Country")
+    if place:
+        node["spatialCoverage"] = place
+    year = facts.get("Year")
+    if year:
+        node["temporalCoverage"] = str(year)
+    source = facts.get("Source")
+    if source:
+        node["variableMeasured"] = measured or [page.h1]
+        node["description"] = f"{page.summary[:260]} Source: {source}"[:300]
+    return node
+
+
+ANSWER_CSS = """
+.answer-block{display:block;border-left:4px solid var(--accent);padding:12px 16px;margin:0 0 18px;
+  background:#f8fafc;border-radius:0 8px 8px 0}
+.answer-block .ab-kicker{display:block;font-size:.72rem;letter-spacing:.09em;text-transform:uppercase;
+  color:#64748b;margin-bottom:4px}
+.answer-block p{margin:.35rem 0 0}
+""".strip()
+
+# Facts that only restate the page title carry no information, so they are kept out of the
+# answer block and the count below is what the block promises.
+ANSWER_FACT_LIMIT = 6
+
+
+def answer_sentence(page: Page) -> str:
+    """One sentence that answers the page's question, built only from the data.
+
+    This is what a voice assistant or an AI answer engine needs to quote, and it is
+    deterministic: it is assembled from the same facts as the rest of the page, so it can
+    never drift from the numbers or hallucinate. Restating the H1 alone is not an answer,
+    so the leading facts are carried into the sentence with it.
+    """
+    head = page.h1.rstrip(". ")
+    # Source and Year restate what the title already says; the rest is the answer.
+    bits = [
+        f"{k.lower()} {v}" for k, v in page.facts if k not in ("Source", "Year")
+    ][:3]
+    if not bits:
+        return f"{head}."
+    return f"{head}: " + "; ".join(bits) + "."
+
+
+def answer_html(page: Page) -> str:
+    """The answer-first block: a direct sentence plus the few numbers that settle it.
+
+    Every page here answers a single factual question, so the answer belongs above the
+    prose. Answer engines and voice assistants quote a short extract with a clear answer
+    near the top; burying it under a paragraph of context means never being quoted.
+    """
+    if not page.facts:
+        return ""
+    facts = dict(page.facts)
+    skip = {"Source"}
+    rows = [(k, v) for k, v in page.facts if k not in skip][:ANSWER_FACT_LIMIT]
+    if not rows:
+        return ""
+    items = "\n".join(f"      <li><b>{_esc(k)}:</b> {_esc(v)}</li>" for k, v in rows)
+    source = facts.get("Source")
+    source_note = f'<p class="ab-src">Source: {_esc(source)}</p>' if source else ""
+    return f"""    <section class="answer-block" aria-label="Quick answer">
+      <span class="ab-kicker">Quick answer</span>
+      <p><b>{_esc(answer_sentence(page))}</b></p>
+      <ul>
+{items}
+      </ul>
+{source_note}
+    </section>"""
+
+
 def json_ld(page: Page, cfg: Config, canonical: str, stamp: str) -> str:
     graph: list[dict] = [
         {
@@ -165,6 +284,10 @@ def json_ld(page: Page, cfg: Config, canonical: str, stamp: str) -> str:
             "dateModified": stamp,
             "isPartOf": {"@type": "WebSite", "name": cfg.site_name, "url": cfg.domain},
             "publisher": {"@type": "Organization", "name": cfg.site_name},
+            "speakable": {
+                "@type": "SpeakableSpecification",
+                "cssSelector": [".answer-block"],
+            },
         }
     ]
     if page.schema_type == "Event":
@@ -179,17 +302,7 @@ def json_ld(page: Page, cfg: Config, canonical: str, stamp: str) -> str:
             }
         )
     if page.facts:
-        graph.append(
-            {
-                "@type": "Dataset",
-                "name": page.title,
-                "description": page.summary[:300],
-                "url": canonical,
-                "dateModified": stamp,
-                "keywords": ", ".join(page.keywords),
-                "creator": {"@type": "Organization", "name": cfg.site_name},
-            }
-        )
+        graph.append(dataset_ld(page, cfg, canonical, stamp))
     if page.breadcrumbs:
         graph.append(
             {
@@ -476,6 +589,7 @@ def render_page(
 {items}
     </section>"""
     crumbs = f'<nav class="crumb" aria-label="Breadcrumb">{breadcrumb_html(page.breadcrumbs)}</nav>' if page.breadcrumbs else ""
+    answer = answer_html(page)
     related = related_html(page.related)
     meta_desc = page.summary[:158]
     cache_badge = ""
@@ -502,6 +616,7 @@ def render_page(
 {css}
 {NATIVE_BANNER_CSS}
 {HOUSE_AD_CSS}
+{ANSWER_CSS}
 </style>
 {head_ads(cfg)}
 </head>
@@ -510,6 +625,7 @@ def render_page(
 {crumbs}
 <article class="{theme['card']}">
 <h1 class="{theme['title']}">{_esc(page.h1)}{cache_badge}</h1>
+{answer}
 <p class="lede">{_esc(prose or page.summary)}</p>
 </article>
 {facts}

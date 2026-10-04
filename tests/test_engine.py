@@ -28,7 +28,11 @@ from engine.enrich import (  # noqa: E402
     prose_and_faq,
 )
 from engine.hubs import (
+    AI_CRAWLERS,
     LINKS_PER_PAGE,
+    SECTIONS,
+    llms_txt,
+    robots_txt,
     rss_date,
     rss_feed,
     assign_related,
@@ -37,7 +41,13 @@ from engine.hubs import (
     not_found_html,
     sitemap_xml,
 )  # noqa: E402
-from engine.render import ad_exempt_hosts, build_css, build_theme  # noqa: E402
+from engine.render import (  # noqa: E402
+    ad_exempt_hosts,
+    answer_sentence,
+    build_css,
+    build_theme,
+    dataset_ld,
+)
 from engine.http import Http, QuotaExhausted, _is_quota_exhausted, write_json_cache  # noqa: E402
 from engine.indexing import key_file_is_reachable, remember_pending, take_pending  # noqa: E402
 from engine.models import Link, Page, slugify  # noqa: E402
@@ -1179,6 +1189,102 @@ class TestRssDate(unittest.TestCase):
         self.assertIn("<pubDate>Sat, 03 Oct 2026 21:41:45 GMT</pubDate>", feed)
         # No ISO offset may survive anywhere in the feed.
         self.assertNotIn("+00:00", feed)
+
+
+class TestAnswerBlock(unittest.TestCase):
+    # Answer engines quote a short extract with a clear answer near the top of the page.
+    # Everything here is derived from page.facts, so it cannot drift from the numbers.
+
+    def test_answer_sentence_is_built_from_the_page_facts(self):
+        tmp = Path(tempfile.mkdtemp())
+        cfg = make_cfg(tmp)
+        page = sample_page(cfg)
+        page.facts = [("City", "Berlin"), ("Warmest month", "Jul (20.5 C)")]
+        sentence = answer_sentence(page)
+        self.assertTrue(sentence.startswith("Berlin climate"))
+        # The numbers must be in the sentence, not just the heading repeated.
+        self.assertIn("warmest month Jul", sentence)
+        self.assertTrue(sentence.endswith("."))
+        # A page with no facts still produces an answer rather than nothing.
+        page.facts = []
+        self.assertEqual(answer_sentence(page), "Berlin climate.")
+
+    def test_dataset_node_carries_the_fields_dataset_search_needs(self):
+        tmp = Path(tempfile.mkdtemp())
+        cfg = make_cfg(tmp)
+        page = sample_page(cfg)
+        page.facts = [
+            ("City", "Berlin"),
+            ("Warmest month", "Jul (20.5 C)"),
+            ("Source", "NASA POWER"),
+            ("Country", "Germany"),
+        ]
+        node = dataset_ld(page, cfg, "https://example.org/p", "2026-10-04T00:00:00+00:00")
+        for field in (
+            "variableMeasured",
+            "spatialCoverage",
+            "distribution",
+            "license",
+            "isAccessibleForFree",
+            "includedInDataCatalog",
+        ):
+            self.assertIn(field, node, f"Dataset node is missing {field}")
+        self.assertEqual(node["spatialCoverage"], "Berlin")
+        # A page with no place fact must not invent one.
+        page.facts = [("Warmest month", "Jul (20.5 C)")]
+        self.assertNotIn("spatialCoverage", dataset_ld(page, cfg, "https://example.org/p", "s"))
+
+    def test_page_carries_answer_block_and_speakable_selector(self):
+        tmp = Path(tempfile.mkdtemp())
+        cfg = make_cfg(tmp)
+        theme = build_theme()
+        doc = render_page(
+            sample_page(cfg), cfg, theme, build_css(theme), "prose", [], "2026-10-04T00:00:00+00:00"
+        )
+        self.assertIn('class="answer-block"', doc)
+        self.assertIn("Quick answer", doc)
+        # The selector named in speakable must actually match an element on the page.
+        self.assertIn('"speakable"', doc)
+        self.assertIn(".answer-block", doc)
+        # It has to sit above the long prose, or it is not an answer-first layout.
+        self.assertLess(doc.index("answer-block"), doc.index("lede"))
+
+    def test_answer_block_is_omitted_when_there_are_no_facts(self):
+        tmp = Path(tempfile.mkdtemp())
+        cfg = make_cfg(tmp)
+        theme = build_theme()
+        page = sample_page(cfg)
+        page.facts = []
+        doc = render_page(page, cfg, theme, build_css(theme), "prose", [], "2026-10-04T00:00:00+00:00")
+        # The stylesheet always ships; only the rendered block must disappear.
+        self.assertNotIn('class="answer-block"', doc)
+        self.assertNotIn("Quick answer", doc)
+
+
+class TestAiDiscoveryFiles(unittest.TestCase):
+    def test_robots_names_the_ai_crawlers_and_the_sitemap(self):
+        tmp = Path(tempfile.mkdtemp())
+        cfg = make_cfg(tmp)
+        text = robots_txt(cfg)
+        for agent in AI_CRAWLERS:
+            self.assertIn(f"User-agent: {agent}", text)
+        self.assertIn("Sitemap: ", text)
+        self.assertIn("llms.txt", text)
+        # The wildcard rule must survive alongside the named agents.
+        self.assertIn("User-agent: *\nAllow: /", text)
+
+    def test_llms_txt_lists_every_hub_and_the_core_endpoints(self):
+        tmp = Path(tempfile.mkdtemp())
+        cfg = make_cfg(tmp)
+        text = llms_txt(cfg)
+        self.assertIn("hub-climate", text)
+        self.assertIn("hub-holidays", text)
+        self.assertIn("hub-crypto", text)
+        self.assertIn("sitemap.xml", text)
+        self.assertIn("feed.xml", text)
+        # Every hub slug the generator can emit must be reachable from the file.
+        for spec in SECTIONS.values():
+            self.assertIn(spec["slug"], text, f"{spec['slug']} missing from llms.txt")
 
 
 class TestWriter(unittest.TestCase):

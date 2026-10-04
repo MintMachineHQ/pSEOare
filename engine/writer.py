@@ -82,6 +82,7 @@ class Writer:
             "sitemap.xml",
             "feed.xml",
             "robots.txt",
+            "llms.txt",
             ".nojekyll",
         }
         keep |= extra_keep or set()

@@ -297,12 +297,70 @@ def sitemap_xml(
 """
 
 
+AI_CRAWLERS = (
+    "GPTBot", "OAI-SearchBot", "ChatGPT-User", "ClaudeBot", "Claude-User",
+    "anthropic-ai", "PerplexityBot", "Perplexity-User", "Google-Extended",
+    "Applebot-Extended", "CCBot", "Bingbot", "DuckAssistBot",
+)
+
+
 def robots_txt(cfg: Config) -> str:
+    """robots.txt, with the AI crawlers named explicitly.
+
+    ``User-agent: *`` already allows them, so the explicit list is not needed to permit
+    anything. It is here because these agents are the ones actually indexing new hosts
+    quickly right now, and naming them makes the intent reviewable instead of implicit.
+    Google-Extended is granted separately from Googlebot on purpose: it governs Gemini
+    training and AI Overviews use, not classic search ranking.
+    """
+    lines = []
+    for agent in AI_CRAWLERS:
+        lines.append(f"User-agent: {agent}\nAllow: /\n")
     return (
-        "User-agent: *\nAllow: /\n"
+        "".join(lines)
+        + "User-agent: *\nAllow: /\n"
         f"Sitemap: {cfg.url_for('sitemap.xml')}\n"
         f"# RSS feed: {cfg.url_for('feed.xml')}\n"
+        f"# Plain-text guide for AI agents: {cfg.url_for('llms.txt')}\n"
     )
+
+
+def llms_txt(cfg: Config) -> str:
+    """A plain-text map of the site for language-model crawlers.
+
+    The llms.txt convention is a Markdown index of what a site publishes and where. It
+    costs one file, needs no submission anywhere, and is the cheapest way to make a large
+    generated corpus legible to an agent that would otherwise have to guess our structure.
+    """
+    lines = [
+        f"# {cfg.site_name}",
+        "",
+        f"> {cfg.raw.get('site_description') or 'Reference pages rebuilt daily from public data APIs.'}",
+        "",
+        f"{cfg.domain}/",
+        "",
+        "Every page below is rebuilt daily from public data APIs and cites its source.",
+        "",
+        "## Dataset hubs",
+        "",
+    ]
+    for slug, title in sorted({s["slug"]: s["h1"] for s in SECTIONS.values()}.items()):
+        lines.append(f"- [{title}]({cfg.url_for(slug)}): index of this dataset.")
+    lines += [
+        "",
+        "## Other",
+        "",
+        f"- [Full dataset index]({cfg.url_for('index.html')}): every page on the site.",
+        f"- [RSS feed]({cfg.url_for('feed.xml')}): newest 200 pages.",
+        f"- [Sitemap]({cfg.url_for('sitemap.xml')}): every URL.",
+        "",
+        "## Optional",
+        "",
+        f"- [RSS feed]({cfg.url_for('feed.xml')})",
+        f"- [Sitemap]({cfg.url_for('sitemap.xml')})",
+        "",
+    ]
+    return "\n".join(lines)
 
 def not_found_html(cfg: Config, theme: dict[str, Any], css: str, stamp: str) -> str:
     """A real 404 document.
