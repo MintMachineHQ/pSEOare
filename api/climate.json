@@ -1,11 +1,11 @@
 {
- "updated": "2026-10-04T08:57:37.004949+00:00",
+ "updated": "2026-10-04T09:44:28.397084+00:00",
  "count": 75,
  "source": "https://pseoare.pages.dev",
  "results": [
   {
    "city": "6th of October City",
-   "page": "https://pseoare.pages.dev/6th-of-october-city-average-monthly-temperature-rainfall.html",
+   "page": "https://pseoare.pages.dev/6th-of-october-city-average-monthly-temperature-rainfall",
    "annual_mean_c": 21.8,
    "warmest_month": "Jul",
    "coldest_month": "Jan",
@@ -15,7 +15,7 @@
   },
   {
    "city": "A Coruna",
-   "page": "https://pseoare.pages.dev/a-coruna-average-monthly-temperature-rainfall.html",
+   "page": "https://pseoare.pages.dev/a-coruna-average-monthly-temperature-rainfall",
    "annual_mean_c": 13.4,
    "warmest_month": "Aug",
    "coldest_month": "Feb",
@@ -25,7 +25,7 @@
   },
   {
    "city": "Aba",
-   "page": "https://pseoare.pages.dev/aba-average-monthly-temperature-rainfall.html",
+   "page": "https://pseoare.pages.dev/aba-average-monthly-temperature-rainfall",
    "annual_mean_c": 25.7,
    "warmest_month": "Mar",
    "coldest_month": "Aug",
@@ -35,7 +35,7 @@
   },
   {
    "city": "Abeokuta",
-   "page": "https://pseoare.pages.dev/abeokuta-average-monthly-temperature-rainfall.html",
+   "page": "https://pseoare.pages.dev/abeokuta-average-monthly-temperature-rainfall",
    "annual_mean_c": 25.7,
    "warmest_month": "Mar",
    "coldest_month": "Aug",
@@ -45,7 +45,7 @@
   },
   {
    "city": "Abidjan",
-   "page": "https://pseoare.pages.dev/abidjan-average-monthly-temperature-rainfall.html",
+   "page": "https://pseoare.pages.dev/abidjan-average-monthly-temperature-rainfall",
    "annual_mean_c": 26.3,
    "warmest_month": "Feb",
    "coldest_month": "Aug",
@@ -55,7 +55,7 @@
   },
   {
    "city": "Abobo",
-   "page": "https://pseoare.pages.dev/abobo-average-monthly-temperature-rainfall.html",
+   "page": "https://pseoare.pages.dev/abobo-average-monthly-temperature-rainfall",
    "annual_mean_c": 26.3,
    "warmest_month": "Feb",
    "coldest_month": "Aug",
@@ -65,7 +65,7 @@
   },
   {
    "city": "Abomey-Calavi",
-   "page": "https://pseoare.pages.dev/abomey-calavi-average-monthly-temperature-rainfall.html",
+   "page": "https://pseoare.pages.dev/abomey-calavi-average-monthly-temperature-rainfall",
    "annual_mean_c": 26.4,
    "warmest_month": "Mar",
    "coldest_month": "Aug",
@@ -75,7 +75,7 @@
   },
   {
    "city": "Abu al-Kahsib",
-   "page": "https://pseoare.pages.dev/abu-al-kahsib-average-monthly-temperature-rainfall.html",
+   "page": "https://pseoare.pages.dev/abu-al-kahsib-average-monthly-temperature-rainfall",
    "annual_mean_c": 26.7,
    "warmest_month": "Jul",
    "coldest_month": "Jan",
@@ -85,7 +85,7 @@
   },
   {
    "city": "Abu Dhabi",
-   "page": "https://pseoare.pages.dev/abu-dhabi-average-monthly-temperature-rainfall.html",
+   "page": "https://pseoare.pages.dev/abu-dhabi-average-monthly-temperature-rainfall",
    "annual_mean_c": 28.2,
    "warmest_month": "Aug",
    "coldest_month": "Jan",
@@ -95,7 +95,7 @@
   },
   {
    "city": "Abu Ghurayb",
-   "page": "https://pseoare.pages.dev/abu-ghurayb-average-monthly-temperature-rainfall.html",
+   "page": "https://pseoare.pages.dev/abu-ghurayb-average-monthly-temperature-rainfall",
    "annual_mean_c": 23.9,
    "warmest_month": "Jul",
    "coldest_month": "Jan",
@@ -105,7 +105,7 @@
   },
   {
    "city": "Abuja",
-   "page": "https://pseoare.pages.dev/abuja-average-monthly-temperature-rainfall.html",
+   "page": "https://pseoare.pages.dev/abuja-average-monthly-temperature-rainfall",
    "annual_mean_c": 25.6,
    "warmest_month": "Mar",
    "coldest_month": "Aug",
@@ -115,7 +115,7 @@
   },
   {
    "city": "Acapulco de Juarez",
-   "page": "https://pseoare.pages.dev/acapulco-de-juarez-average-monthly-temperature-rainfall.html",
+   "page": "https://pseoare.pages.dev/acapulco-de-juarez-average-monthly-temperature-rainfall",
    "annual_mean_c": 25.6,
    "warmest_month": "May",
    "coldest_month": "Dec",
@@ -125,7 +125,7 @@
   },
   {
    "city": "Accra",
-   "page": "https://pseoare.pages.dev/accra-average-monthly-temperature-rainfall.html",
+   "page": "https://pseoare.pages.dev/accra-average-monthly-temperature-rainfall",
    "annual_mean_c": 26.5,
    "warmest_month": "Mar",
    "coldest_month": "Aug",
@@ -135,7 +135,7 @@
   },
   {
    "city": "Adachi",
-   "page": "https://pseoare.pages.dev/adachi-average-monthly-temperature-rainfall.html",
+   "page": "https://pseoare.pages.dev/adachi-average-monthly-temperature-rainfall",
    "annual_mean_c": 14.8,
    "warmest_month": "Aug",
    "coldest_month": "Jan",
@@ -145,7 +145,7 @@
   },
   {
    "city": "Adana",
-   "page": "https://pseoare.pages.dev/adana-average-monthly-temperature-rainfall.html",
+   "page": "https://pseoare.pages.dev/adana-average-monthly-temperature-rainfall",
    "annual_mean_c": 19.4,
    "warmest_month": "Aug",
    "coldest_month": "Jan",
@@ -155,7 +155,7 @@
   },
   {
    "city": "Addis Ababa",
-   "page": "https://pseoare.pages.dev/addis-ababa-average-monthly-temperature-rainfall.html",
+   "page": "https://pseoare.pages.dev/addis-ababa-average-monthly-temperature-rainfall",
    "annual_mean_c": 16.1,
    "warmest_month": "May",
    "coldest_month": "Nov",
@@ -165,7 +165,7 @@
   },
   {
    "city": "Adelaide",
-   "page": "https://pseoare.pages.dev/adelaide-average-monthly-temperature-rainfall.html",
+   "page": "https://pseoare.pages.dev/adelaide-average-monthly-temperature-rainfall",
    "annual_mean_c": 15.9,
    "warmest_month": "Jan",
    "coldest_month": "Jul",
@@ -175,7 +175,7 @@
   },
   {
    "city": "Aden",
-   "page": "https://pseoare.pages.dev/aden-average-monthly-temperature-rainfall.html",
+   "page": "https://pseoare.pages.dev/aden-average-monthly-temperature-rainfall",
    "annual_mean_c": 28.7,
    "warmest_month": "Jul",
    "coldest_month": "Jan",
@@ -185,7 +185,7 @@
   },
   {
    "city": "Agadir",
-   "page": "https://pseoare.pages.dev/agadir-average-monthly-temperature-rainfall.html",
+   "page": "https://pseoare.pages.dev/agadir-average-monthly-temperature-rainfall",
    "annual_mean_c": 21.1,
    "warmest_month": "Jul",
    "coldest_month": "Jan",
@@ -195,7 +195,7 @@
   },
   {
    "city": "Agege",
-   "page": "https://pseoare.pages.dev/agege-average-monthly-temperature-rainfall.html",
+   "page": "https://pseoare.pages.dev/agege-average-monthly-temperature-rainfall",
    "annual_mean_c": 26.4,
    "warmest_month": "Mar",
    "coldest_month": "Aug",
@@ -205,7 +205,7 @@
   },
   {
    "city": "Agra",
-   "page": "https://pseoare.pages.dev/agra-average-monthly-temperature-rainfall.html",
+   "page": "https://pseoare.pages.dev/agra-average-monthly-temperature-rainfall",
    "annual_mean_c": 26.5,
    "warmest_month": "Jun",
    "coldest_month": "Jan",
@@ -215,7 +215,7 @@
   },
   {
    "city": "Aguascalientes",
-   "page": "https://pseoare.pages.dev/aguascalientes-average-monthly-temperature-rainfall.html",
+   "page": "https://pseoare.pages.dev/aguascalientes-average-monthly-temperature-rainfall",
    "annual_mean_c": 17.0,
    "warmest_month": "May",
    "coldest_month": "Jan",
@@ -225,7 +225,7 @@
   },
   {
    "city": "Ahmedabad",
-   "page": "https://pseoare.pages.dev/ahmedabad-average-monthly-temperature-rainfall.html",
+   "page": "https://pseoare.pages.dev/ahmedabad-average-monthly-temperature-rainfall",
    "annual_mean_c": 27.6,
    "warmest_month": "May",
    "coldest_month": "Jan",
@@ -235,7 +235,7 @@
   },
   {
    "city": "Ahvaz",
-   "page": "https://pseoare.pages.dev/ahvaz-average-monthly-temperature-rainfall.html",
+   "page": "https://pseoare.pages.dev/ahvaz-average-monthly-temperature-rainfall",
    "annual_mean_c": 26.7,
    "warmest_month": "Jul",
    "coldest_month": "Jan",
@@ -245,7 +245,7 @@
   },
   {
    "city": "Aihara",
-   "page": "https://pseoare.pages.dev/aihara-average-monthly-temperature-rainfall.html",
+   "page": "https://pseoare.pages.dev/aihara-average-monthly-temperature-rainfall",
    "annual_mean_c": 13.9,
    "warmest_month": "Aug",
    "coldest_month": "Jan",
@@ -255,7 +255,7 @@
   },
   {
    "city": "Ajegunle",
-   "page": "https://pseoare.pages.dev/ajegunle-average-monthly-temperature-rainfall.html",
+   "page": "https://pseoare.pages.dev/ajegunle-average-monthly-temperature-rainfall",
    "annual_mean_c": 26.4,
    "warmest_month": "Mar",
    "coldest_month": "Aug",
@@ -265,7 +265,7 @@
   },
   {
    "city": "Ajman",
-   "page": "https://pseoare.pages.dev/ajman-average-monthly-temperature-rainfall.html",
+   "page": "https://pseoare.pages.dev/ajman-average-monthly-temperature-rainfall",
    "annual_mean_c": 28.6,
    "warmest_month": "Jul",
    "coldest_month": "Jan",
@@ -275,7 +275,7 @@
   },
   {
    "city": "Aktobe",
-   "page": "https://pseoare.pages.dev/aktobe-average-monthly-temperature-rainfall.html",
+   "page": "https://pseoare.pages.dev/aktobe-average-monthly-temperature-rainfall",
    "annual_mean_c": 4.9,
    "warmest_month": "Jul",
    "coldest_month": "Jan",
@@ -285,7 +285,7 @@
   },
   {
    "city": "Akure",
-   "page": "https://pseoare.pages.dev/akure-average-monthly-temperature-rainfall.html",
+   "page": "https://pseoare.pages.dev/akure-average-monthly-temperature-rainfall",
    "annual_mean_c": 24.6,
    "warmest_month": "Mar",
    "coldest_month": "Aug",
@@ -295,7 +295,7 @@
   },
   {
    "city": "Al Ahmadi",
-   "page": "https://pseoare.pages.dev/al-ahmadi-average-monthly-temperature-rainfall.html",
+   "page": "https://pseoare.pages.dev/al-ahmadi-average-monthly-temperature-rainfall",
    "annual_mean_c": 26.5,
    "warmest_month": "Jul",
    "coldest_month": "Jan",
@@ -305,7 +305,7 @@
   },
   {
    "city": "Al Ain City",
-   "page": "https://pseoare.pages.dev/al-ain-city-average-monthly-temperature-rainfall.html",
+   "page": "https://pseoare.pages.dev/al-ain-city-average-monthly-temperature-rainfall",
    "annual_mean_c": 28.9,
    "warmest_month": "Jul",
    "coldest_month": "Jan",
@@ -315,7 +315,7 @@
   },
   {
    "city": "Al 'Amarah",
-   "page": "https://pseoare.pages.dev/al-amarah-average-monthly-temperature-rainfall.html",
+   "page": "https://pseoare.pages.dev/al-amarah-average-monthly-temperature-rainfall",
    "annual_mean_c": 25.8,
    "warmest_month": "Jul",
    "coldest_month": "Jan",
@@ -325,7 +325,7 @@
   },
   {
    "city": "Al Diwaniyah",
-   "page": "https://pseoare.pages.dev/al-diwaniyah-average-monthly-temperature-rainfall.html",
+   "page": "https://pseoare.pages.dev/al-diwaniyah-average-monthly-temperature-rainfall",
    "annual_mean_c": 25.1,
    "warmest_month": "Jul",
    "coldest_month": "Jan",
@@ -335,7 +335,7 @@
   },
   {
    "city": "Al Fayyum",
-   "page": "https://pseoare.pages.dev/al-fayyum-average-monthly-temperature-rainfall.html",
+   "page": "https://pseoare.pages.dev/al-fayyum-average-monthly-temperature-rainfall",
    "annual_mean_c": 22.1,
    "warmest_month": "Aug",
    "coldest_month": "Jan",
@@ -345,7 +345,7 @@
   },
   {
    "city": "Al Hasakah",
-   "page": "https://pseoare.pages.dev/al-hasakah-average-monthly-temperature-rainfall.html",
+   "page": "https://pseoare.pages.dev/al-hasakah-average-monthly-temperature-rainfall",
    "annual_mean_c": 19.3,
    "warmest_month": "Jul",
    "coldest_month": "Jan",
@@ -355,7 +355,7 @@
   },
   {
    "city": "Al Hillah",
-   "page": "https://pseoare.pages.dev/al-hillah-average-monthly-temperature-rainfall.html",
+   "page": "https://pseoare.pages.dev/al-hillah-average-monthly-temperature-rainfall",
    "annual_mean_c": 24.4,
    "warmest_month": "Jul",
    "coldest_month": "Jan",
@@ -365,7 +365,7 @@
   },
   {
    "city": "Al Hoceima",
-   "page": "https://pseoare.pages.dev/al-hoceima-average-monthly-temperature-rainfall.html",
+   "page": "https://pseoare.pages.dev/al-hoceima-average-monthly-temperature-rainfall",
    "annual_mean_c": 19.0,
    "warmest_month": "Aug",
    "coldest_month": "Feb",
@@ -375,7 +375,7 @@
   },
   {
    "city": "Al Hudaydah",
-   "page": "https://pseoare.pages.dev/al-hudaydah-average-monthly-temperature-rainfall.html",
+   "page": "https://pseoare.pages.dev/al-hudaydah-average-monthly-temperature-rainfall",
    "annual_mean_c": 30.3,
    "warmest_month": "Jun",
    "coldest_month": "Jan",
@@ -385,7 +385,7 @@
   },
   {
    "city": "Al Hufuf",
-   "page": "https://pseoare.pages.dev/al-hufuf-average-monthly-temperature-rainfall.html",
+   "page": "https://pseoare.pages.dev/al-hufuf-average-monthly-temperature-rainfall",
    "annual_mean_c": 27.0,
    "warmest_month": "Jul",
    "coldest_month": "Jan",
@@ -395,7 +395,7 @@
   },
   {
    "city": "Al Kharj",
-   "page": "https://pseoare.pages.dev/al-kharj-average-monthly-temperature-rainfall.html",
+   "page": "https://pseoare.pages.dev/al-kharj-average-monthly-temperature-rainfall",
    "annual_mean_c": 26.8,
    "warmest_month": "Jul",
    "coldest_month": "Jan",
@@ -405,7 +405,7 @@
   },
   {
    "city": "Al Khusus",
-   "page": "https://pseoare.pages.dev/al-khusus-average-monthly-temperature-rainfall.html",
+   "page": "https://pseoare.pages.dev/al-khusus-average-monthly-temperature-rainfall",
    "annual_mean_c": 21.8,
    "warmest_month": "Jul",
    "coldest_month": "Jan",
@@ -415,7 +415,7 @@
   },
   {
    "city": "Al-Kut",
-   "page": "https://pseoare.pages.dev/al-kut-average-monthly-temperature-rainfall.html",
+   "page": "https://pseoare.pages.dev/al-kut-average-monthly-temperature-rainfall",
    "annual_mean_c": 25.0,
    "warmest_month": "Jul",
    "coldest_month": "Jan",
@@ -425,7 +425,7 @@
   },
   {
    "city": "Al Madinah",
-   "page": "https://pseoare.pages.dev/al-madinah-average-monthly-temperature-rainfall.html",
+   "page": "https://pseoare.pages.dev/al-madinah-average-monthly-temperature-rainfall",
    "annual_mean_c": 26.4,
    "warmest_month": "Jul",
    "coldest_month": "Jan",
@@ -435,7 +435,7 @@
   },
   {
    "city": "Al Mahallah al Kubra",
-   "page": "https://pseoare.pages.dev/al-mahallah-al-kubra-average-monthly-temperature-rainfall.html",
+   "page": "https://pseoare.pages.dev/al-mahallah-al-kubra-average-monthly-temperature-rainfall",
    "annual_mean_c": 22.1,
    "warmest_month": "Jul",
    "coldest_month": "Jan",
@@ -445,7 +445,7 @@
   },
   {
    "city": "Al Mahmudiyah",
-   "page": "https://pseoare.pages.dev/al-mahmudiyah-average-monthly-temperature-rainfall.html",
+   "page": "https://pseoare.pages.dev/al-mahmudiyah-average-monthly-temperature-rainfall",
    "annual_mean_c": 24.2,
    "warmest_month": "Jul",
    "coldest_month": "Jan",
@@ -455,7 +455,7 @@
   },
   {
    "city": "Al Mansurah",
-   "page": "https://pseoare.pages.dev/al-mansurah-average-monthly-temperature-rainfall.html",
+   "page": "https://pseoare.pages.dev/al-mansurah-average-monthly-temperature-rainfall",
    "annual_mean_c": 22.1,
    "warmest_month": "Jul",
    "coldest_month": "Jan",
@@ -465,7 +465,7 @@
   },
   {
    "city": "Al Mawsil al Jadidah",
-   "page": "https://pseoare.pages.dev/al-mawsil-al-jadidah-average-monthly-temperature-rainfall.html",
+   "page": "https://pseoare.pages.dev/al-mawsil-al-jadidah-average-monthly-temperature-rainfall",
    "annual_mean_c": 20.5,
    "warmest_month": "Jul",
    "coldest_month": "Jan",
@@ -475,7 +475,7 @@
   },
   {
    "city": "Al Mubarraz",
-   "page": "https://pseoare.pages.dev/al-mubarraz-average-monthly-temperature-rainfall.html",
+   "page": "https://pseoare.pages.dev/al-mubarraz-average-monthly-temperature-rainfall",
    "annual_mean_c": 27.0,
    "warmest_month": "Jul",
    "coldest_month": "Jan",
@@ -485,7 +485,7 @@
   },
   {
    "city": "Al Qadarif",
-   "page": "https://pseoare.pages.dev/al-qadarif-average-monthly-temperature-rainfall.html",
+   "page": "https://pseoare.pages.dev/al-qadarif-average-monthly-temperature-rainfall",
    "annual_mean_c": 28.0,
    "warmest_month": "May",
    "coldest_month": "Jan",
@@ -495,7 +495,7 @@
   },
   {
    "city": "Al Qahirah al Jadidah",
-   "page": "https://pseoare.pages.dev/al-qahirah-al-jadidah-average-monthly-temperature-rainfall.html",
+   "page": "https://pseoare.pages.dev/al-qahirah-al-jadidah-average-monthly-temperature-rainfall",
    "annual_mean_c": 21.8,
    "warmest_month": "Jul",
    "coldest_month": "Jan",
@@ -505,7 +505,7 @@
   },
   {
    "city": "Aleppo",
-   "page": "https://pseoare.pages.dev/aleppo-average-monthly-temperature-rainfall.html",
+   "page": "https://pseoare.pages.dev/aleppo-average-monthly-temperature-rainfall",
    "annual_mean_c": 17.9,
    "warmest_month": "Jul",
    "coldest_month": "Jan",
@@ -515,7 +515,7 @@
   },
   {
    "city": "Alexandria",
-   "page": "https://pseoare.pages.dev/alexandria-average-monthly-temperature-rainfall.html",
+   "page": "https://pseoare.pages.dev/alexandria-average-monthly-temperature-rainfall",
    "annual_mean_c": 21.4,
    "warmest_month": "Aug",
    "coldest_month": "Jan",
@@ -525,7 +525,7 @@
   },
   {
    "city": "Algiers",
-   "page": "https://pseoare.pages.dev/algiers-average-monthly-temperature-rainfall.html",
+   "page": "https://pseoare.pages.dev/algiers-average-monthly-temperature-rainfall",
    "annual_mean_c": 17.5,
    "warmest_month": "Jul",
    "coldest_month": "Jan",
@@ -535,7 +535,7 @@
   },
   {
    "city": "Alicante",
-   "page": "https://pseoare.pages.dev/alicante-average-monthly-temperature-rainfall.html",
+   "page": "https://pseoare.pages.dev/alicante-average-monthly-temperature-rainfall",
    "annual_mean_c": 16.7,
    "warmest_month": "Jul",
    "coldest_month": "Jan",
@@ -545,7 +545,7 @@
   },
   {
    "city": "Almaty",
-   "page": "https://pseoare.pages.dev/almaty-average-monthly-temperature-rainfall.html",
+   "page": "https://pseoare.pages.dev/almaty-average-monthly-temperature-rainfall",
    "annual_mean_c": 12.9,
    "warmest_month": "Jul",
    "coldest_month": "Jan",
@@ -555,7 +555,7 @@
   },
   {
    "city": "Alor Setar",
-   "page": "https://pseoare.pages.dev/alor-setar-average-monthly-temperature-rainfall.html",
+   "page": "https://pseoare.pages.dev/alor-setar-average-monthly-temperature-rainfall",
    "annual_mean_c": 26.3,
    "warmest_month": "Apr",
    "coldest_month": "Jan",
@@ -565,7 +565,7 @@
   },
   {
    "city": "Alto Barinas",
-   "page": "https://pseoare.pages.dev/alto-barinas-average-monthly-temperature-rainfall.html",
+   "page": "https://pseoare.pages.dev/alto-barinas-average-monthly-temperature-rainfall",
    "annual_mean_c": 27.1,
    "warmest_month": "Mar",
    "coldest_month": "Jul",
@@ -575,7 +575,7 @@
   },
   {
    "city": "Alvaro Obregon",
-   "page": "https://pseoare.pages.dev/alvaro-obregon-average-monthly-temperature-rainfall.html",
+   "page": "https://pseoare.pages.dev/alvaro-obregon-average-monthly-temperature-rainfall",
    "annual_mean_c": 13.8,
    "warmest_month": "May",
    "coldest_month": "Jan",
@@ -585,7 +585,7 @@
   },
   {
    "city": "Ambato",
-   "page": "https://pseoare.pages.dev/ambato-average-monthly-temperature-rainfall.html",
+   "page": "https://pseoare.pages.dev/ambato-average-monthly-temperature-rainfall",
    "annual_mean_c": 11.5,
    "warmest_month": "Jan",
    "coldest_month": "Jul",
@@ -595,7 +595,7 @@
   },
   {
    "city": "Amman",
-   "page": "https://pseoare.pages.dev/amman-average-monthly-temperature-rainfall.html",
+   "page": "https://pseoare.pages.dev/amman-average-monthly-temperature-rainfall",
    "annual_mean_c": 17.9,
    "warmest_month": "Jul",
    "coldest_month": "Jan",
@@ -605,7 +605,7 @@
   },
   {
    "city": "Amsterdam",
-   "page": "https://pseoare.pages.dev/amsterdam-average-monthly-temperature-rainfall.html",
+   "page": "https://pseoare.pages.dev/amsterdam-average-monthly-temperature-rainfall",
    "annual_mean_c": 10.5,
    "warmest_month": "Aug",
    "coldest_month": "Jan",
@@ -615,7 +615,7 @@
   },
   {
    "city": "Andijon",
-   "page": "https://pseoare.pages.dev/andijon-average-monthly-temperature-rainfall.html",
+   "page": "https://pseoare.pages.dev/andijon-average-monthly-temperature-rainfall",
    "annual_mean_c": 15.1,
    "warmest_month": "Jul",
    "coldest_month": "Jan",
@@ -625,7 +625,7 @@
   },
   {
    "city": "Angeles City",
-   "page": "https://pseoare.pages.dev/angeles-city-average-monthly-temperature-rainfall.html",
+   "page": "https://pseoare.pages.dev/angeles-city-average-monthly-temperature-rainfall",
    "annual_mean_c": 26.5,
    "warmest_month": "Apr",
    "coldest_month": "Jan",
@@ -635,7 +635,7 @@
   },
   {
    "city": "Ankara",
-   "page": "https://pseoare.pages.dev/ankara-average-monthly-temperature-rainfall.html",
+   "page": "https://pseoare.pages.dev/ankara-average-monthly-temperature-rainfall",
    "annual_mean_c": 10.3,
    "warmest_month": "Aug",
    "coldest_month": "Jan",
@@ -645,7 +645,7 @@
   },
   {
    "city": "Annaba",
-   "page": "https://pseoare.pages.dev/annaba-average-monthly-temperature-rainfall.html",
+   "page": "https://pseoare.pages.dev/annaba-average-monthly-temperature-rainfall",
    "annual_mean_c": 19.1,
    "warmest_month": "Aug",
    "coldest_month": "Feb",
@@ -655,7 +655,7 @@
   },
   {
    "city": "Ansan-si",
-   "page": "https://pseoare.pages.dev/ansan-si-average-monthly-temperature-rainfall.html",
+   "page": "https://pseoare.pages.dev/ansan-si-average-monthly-temperature-rainfall",
    "annual_mean_c": 11.3,
    "warmest_month": "Aug",
    "coldest_month": "Jan",
@@ -665,7 +665,7 @@
   },
   {
    "city": "Antalya",
-   "page": "https://pseoare.pages.dev/antalya-average-monthly-temperature-rainfall.html",
+   "page": "https://pseoare.pages.dev/antalya-average-monthly-temperature-rainfall",
    "annual_mean_c": 17.5,
    "warmest_month": "Aug",
    "coldest_month": "Jan",
@@ -675,7 +675,7 @@
   },
   {
    "city": "Antananarivo",
-   "page": "https://pseoare.pages.dev/antananarivo-average-monthly-temperature-rainfall.html",
+   "page": "https://pseoare.pages.dev/antananarivo-average-monthly-temperature-rainfall",
    "annual_mean_c": 16.5,
    "warmest_month": "Dec",
    "coldest_month": "Jul",
@@ -685,7 +685,7 @@
   },
   {
    "city": "Antipolo",
-   "page": "https://pseoare.pages.dev/antipolo-average-monthly-temperature-rainfall.html",
+   "page": "https://pseoare.pages.dev/antipolo-average-monthly-temperature-rainfall",
    "annual_mean_c": 25.8,
    "warmest_month": "May",
    "coldest_month": "Jan",
@@ -695,7 +695,7 @@
   },
   {
    "city": "Antofagasta",
-   "page": "https://pseoare.pages.dev/antofagasta-average-monthly-temperature-rainfall.html",
+   "page": "https://pseoare.pages.dev/antofagasta-average-monthly-temperature-rainfall",
    "annual_mean_c": 17.6,
    "warmest_month": "Feb",
    "coldest_month": "Aug",
@@ -705,7 +705,7 @@
   },
   {
    "city": "Antsirabe",
-   "page": "https://pseoare.pages.dev/antsirabe-average-monthly-temperature-rainfall.html",
+   "page": "https://pseoare.pages.dev/antsirabe-average-monthly-temperature-rainfall",
    "annual_mean_c": 16.6,
    "warmest_month": "Dec",
    "coldest_month": "Jul",
@@ -715,7 +715,7 @@
   },
   {
    "city": "Antwerp",
-   "page": "https://pseoare.pages.dev/antwerp-average-monthly-temperature-rainfall.html",
+   "page": "https://pseoare.pages.dev/antwerp-average-monthly-temperature-rainfall",
    "annual_mean_c": 10.4,
    "warmest_month": "Jul",
    "coldest_month": "Jan",
@@ -725,7 +725,7 @@
   },
   {
    "city": "Anyang-si",
-   "page": "https://pseoare.pages.dev/anyang-si-average-monthly-temperature-rainfall.html",
+   "page": "https://pseoare.pages.dev/anyang-si-average-monthly-temperature-rainfall",
    "annual_mean_c": 11.3,
    "warmest_month": "Aug",
    "coldest_month": "Jan",
@@ -735,7 +735,7 @@
   },
   {
    "city": "Ar Raqqah",
-   "page": "https://pseoare.pages.dev/ar-raqqah-average-monthly-temperature-rainfall.html",
+   "page": "https://pseoare.pages.dev/ar-raqqah-average-monthly-temperature-rainfall",
    "annual_mean_c": 19.0,
    "warmest_month": "Jul",
    "coldest_month": "Jan",
@@ -745,7 +745,7 @@
   },
   {
    "city": "Ar Rayyan",
-   "page": "https://pseoare.pages.dev/ar-rayyan-average-monthly-temperature-rainfall.html",
+   "page": "https://pseoare.pages.dev/ar-rayyan-average-monthly-temperature-rainfall",
    "annual_mean_c": 27.8,
    "warmest_month": "Aug",
    "coldest_month": "Jan",

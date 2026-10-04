@@ -1,12 +1,12 @@
 {
- "updated": "2026-10-04T08:57:37.004949+00:00",
+ "updated": "2026-10-04T09:44:28.397084+00:00",
  "count": 24,
  "source": "https://pseoare.pages.dev",
  "note": "high/low/latest cover the trailing 12 months",
  "results": [
   {
    "asset": "Algorand",
-   "page": "https://pseoare.pages.dev/algorand-price-by-month.html",
+   "page": "https://pseoare.pages.dev/algorand-price-by-month",
    "high_12m": 0.23,
    "low_12m": 0.08,
    "latest": 0.13,
@@ -16,7 +16,7 @@
   },
   {
    "asset": "Aptos",
-   "page": "https://pseoare.pages.dev/aptos-price-by-month.html",
+   "page": "https://pseoare.pages.dev/aptos-price-by-month",
    "high_12m": 5.45,
    "low_12m": 0.52,
    "latest": 0.79,
@@ -26,7 +26,7 @@
   },
   {
    "asset": "Arbitrum",
-   "page": "https://pseoare.pages.dev/arbitrum-price-by-month.html",
+   "page": "https://pseoare.pages.dev/arbitrum-price-by-month",
    "high_12m": 0.46,
    "low_12m": 0.07,
    "latest": 0.2,
@@ -36,7 +36,7 @@
   },
   {
    "asset": "Avalanche",
-   "page": "https://pseoare.pages.dev/avalanche-price-by-month.html",
+   "page": "https://pseoare.pages.dev/avalanche-price-by-month",
    "high_12m": 30.68,
    "low_12m": 5.89,
    "latest": 11.01,
@@ -46,27 +46,27 @@
   },
   {
    "asset": "Bitcoin-cash",
-   "page": "https://pseoare.pages.dev/bitcoin-cash-price-by-month.html",
+   "page": "https://pseoare.pages.dev/bitcoin-cash-price-by-month",
    "high_12m": 654.84,
    "low_12m": 190.35,
-   "latest": 318.2,
+   "latest": 318.01,
    "range_pct_of_low": 244.0,
-   "pct_above_low": 67.2,
+   "pct_above_low": 67.1,
    "pct_below_high": 51.4
   },
   {
    "asset": "Bitcoin",
-   "page": "https://pseoare.pages.dev/bitcoin-price-by-month.html",
+   "page": "https://pseoare.pages.dev/bitcoin-price-by-month",
    "high_12m": 124739.81,
    "low_12m": 58566.09,
-   "latest": 85093.9,
+   "latest": 85287.07,
    "range_pct_of_low": 113.0,
-   "pct_above_low": 45.3,
-   "pct_below_high": 31.8
+   "pct_above_low": 45.6,
+   "pct_below_high": 31.6
   },
   {
    "asset": "Cardano",
-   "page": "https://pseoare.pages.dev/cardano-price-by-month.html",
+   "page": "https://pseoare.pages.dev/cardano-price-by-month",
    "high_12m": 0.87,
    "low_12m": 0.14,
    "latest": 0.25,
@@ -76,7 +76,7 @@
   },
   {
    "asset": "Chainlink",
-   "page": "https://pseoare.pages.dev/chainlink-price-by-month.html",
+   "page": "https://pseoare.pages.dev/chainlink-price-by-month",
    "high_12m": 23.46,
    "low_12m": 7.19,
    "latest": 13.91,
@@ -86,7 +86,7 @@
   },
   {
    "asset": "Cosmos",
-   "page": "https://pseoare.pages.dev/cosmos-price-by-month.html",
+   "page": "https://pseoare.pages.dev/cosmos-price-by-month",
    "high_12m": 4.28,
    "low_12m": 1.22,
    "latest": 1.71,
@@ -96,7 +96,7 @@
   },
   {
    "asset": "Dogecoin",
-   "page": "https://pseoare.pages.dev/dogecoin-price-by-month.html",
+   "page": "https://pseoare.pages.dev/dogecoin-price-by-month",
    "high_12m": 0.27,
    "low_12m": 0.07,
    "latest": 0.09,
@@ -106,7 +106,7 @@
   },
   {
    "asset": "Ethereum-classic",
-   "page": "https://pseoare.pages.dev/ethereum-classic-price-by-month.html",
+   "page": "https://pseoare.pages.dev/ethereum-classic-price-by-month",
    "high_12m": 20.03,
    "low_12m": 6.08,
    "latest": 8.83,
@@ -116,7 +116,7 @@
   },
   {
    "asset": "Ethereum",
-   "page": "https://pseoare.pages.dev/ethereum-price-by-month.html",
+   "page": "https://pseoare.pages.dev/ethereum-price-by-month",
    "high_12m": 4690.84,
    "low_12m": 1566.01,
    "latest": 2686.95,
@@ -126,7 +126,7 @@
   },
   {
    "asset": "Filecoin",
-   "page": "https://pseoare.pages.dev/filecoin-price-by-month.html",
+   "page": "https://pseoare.pages.dev/filecoin-price-by-month",
    "high_12m": 3.44,
    "low_12m": 0.63,
    "latest": 1.06,
@@ -136,7 +136,7 @@
   },
   {
    "asset": "Hedera",
-   "page": "https://pseoare.pages.dev/hedera-price-by-month.html",
+   "page": "https://pseoare.pages.dev/hedera-price-by-month",
    "high_12m": 0.23,
    "low_12m": 0.06,
    "latest": 0.1,
@@ -146,7 +146,7 @@
   },
   {
    "asset": "Litecoin",
-   "page": "https://pseoare.pages.dev/litecoin-price-by-month.html",
+   "page": "https://pseoare.pages.dev/litecoin-price-by-month",
    "high_12m": 125.96,
    "low_12m": 40.87,
    "latest": 69.03,
@@ -156,7 +156,7 @@
   },
   {
    "asset": "Monero",
-   "page": "https://pseoare.pages.dev/monero-price-by-month.html",
+   "page": "https://pseoare.pages.dev/monero-price-by-month",
    "high_12m": 705.59,
    "low_12m": 291.57,
    "latest": 552.78,
@@ -166,7 +166,7 @@
   },
   {
    "asset": "Near",
-   "page": "https://pseoare.pages.dev/near-price-by-month.html",
+   "page": "https://pseoare.pages.dev/near-price-by-month",
    "high_12m": 5.39,
    "low_12m": 0.96,
    "latest": 4.74,
@@ -176,7 +176,7 @@
   },
   {
    "asset": "Polkadot",
-   "page": "https://pseoare.pages.dev/polkadot-price-by-month.html",
+   "page": "https://pseoare.pages.dev/polkadot-price-by-month",
    "high_12m": 4.41,
    "low_12m": 0.75,
    "latest": 1.2,
@@ -186,7 +186,7 @@
   },
   {
    "asset": "Polygon",
-   "page": "https://pseoare.pages.dev/polygon-price-by-month.html",
+   "page": "https://pseoare.pages.dev/polygon-price-by-month",
    "high_12m": 0.25,
    "low_12m": 0.13,
    "latest": 0.13,
@@ -196,7 +196,7 @@
   },
   {
    "asset": "Solana",
-   "page": "https://pseoare.pages.dev/solana-price-by-month.html",
+   "page": "https://pseoare.pages.dev/solana-price-by-month",
    "high_12m": 233.04,
    "low_12m": 62.18,
    "latest": 119.95,
@@ -206,7 +206,7 @@
   },
   {
    "asset": "Stellar",
-   "page": "https://pseoare.pages.dev/stellar-price-by-month.html",
+   "page": "https://pseoare.pages.dev/stellar-price-by-month",
    "high_12m": 0.41,
    "low_12m": 0.14,
    "latest": 0.22,
@@ -216,7 +216,7 @@
   },
   {
    "asset": "Tezos",
-   "page": "https://pseoare.pages.dev/tezos-price-by-month.html",
+   "page": "https://pseoare.pages.dev/tezos-price-by-month",
    "high_12m": 0.72,
    "low_12m": 0.19,
    "latest": 0.32,
@@ -226,7 +226,7 @@
   },
   {
    "asset": "Uniswap",
-   "page": "https://pseoare.pages.dev/uniswap-price-by-month.html",
+   "page": "https://pseoare.pages.dev/uniswap-price-by-month",
    "high_12m": 10.22,
    "low_12m": 2.39,
    "latest": 9.01,
@@ -236,7 +236,7 @@
   },
   {
    "asset": "XRP",
-   "page": "https://pseoare.pages.dev/xrp-price-by-month.html",
+   "page": "https://pseoare.pages.dev/xrp-price-by-month",
    "high_12m": 3.04,
    "low_12m": 0.99,
    "latest": 1.49,
