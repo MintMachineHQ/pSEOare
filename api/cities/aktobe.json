@@ -1,0 +1,79 @@
+{
+ "city": "Aktobe",
+ "page": "https://pseoare.pages.dev/aktobe-average-monthly-temperature-rainfall",
+ "annual_mean_c": 4.9,
+ "warmest_month": "Jul",
+ "warmest_c": 23.2,
+ "coldest_month": "Jan",
+ "coldest_c": -14.8,
+ "seasonal_swing_c": 38.0,
+ "annual_rainfall_mm": 349.0,
+ "wettest_month": "Oct",
+ "wettest_mm_per_day": 1.17,
+ "driest_month": "Aug",
+ "driest_mm_per_day": 0.61,
+ "monthly": [
+  {
+   "month": "Jan",
+   "mean_c": -14.8,
+   "rain_mm_per_day": 0.83
+  },
+  {
+   "month": "Feb",
+   "mean_c": -12.6,
+   "rain_mm_per_day": 0.89
+  },
+  {
+   "month": "Mar",
+   "mean_c": -4.7,
+   "rain_mm_per_day": 1.16
+  },
+  {
+   "month": "Apr",
+   "mean_c": 6.2,
+   "rain_mm_per_day": 1.14
+  },
+  {
+   "month": "May",
+   "mean_c": 14.9,
+   "rain_mm_per_day": 1.1
+  },
+  {
+   "month": "Jun",
+   "mean_c": 20.4,
+   "rain_mm_per_day": 0.97
+  },
+  {
+   "month": "Jul",
+   "mean_c": 23.2,
+   "rain_mm_per_day": 0.97
+  },
+  {
+   "month": "Aug",
+   "mean_c": 21.9,
+   "rain_mm_per_day": 0.61
+  },
+  {
+   "month": "Sep",
+   "mean_c": 14.3,
+   "rain_mm_per_day": 0.7
+  },
+  {
+   "month": "Oct",
+   "mean_c": 5.0,
+   "rain_mm_per_day": 1.17
+  },
+  {
+   "month": "Nov",
+   "mean_c": -3.9,
+   "rain_mm_per_day": 0.99
+  },
+  {
+   "month": "Dec",
+   "mean_c": -11.5,
+   "rain_mm_per_day": 0.94
+  }
+ ],
+ "updated": "2026-10-04T10:43:50.650358+00:00",
+ "source": "https://pseoare.pages.dev"
+}

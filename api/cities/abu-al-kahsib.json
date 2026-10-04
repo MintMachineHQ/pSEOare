@@ -1,0 +1,79 @@
+{
+ "city": "Abu al-Kahsib",
+ "page": "https://pseoare.pages.dev/abu-al-kahsib-average-monthly-temperature-rainfall",
+ "annual_mean_c": 26.7,
+ "warmest_month": "Jul",
+ "warmest_c": 39.2,
+ "coldest_month": "Jan",
+ "coldest_c": 12.3,
+ "seasonal_swing_c": 26.9,
+ "annual_rainfall_mm": 119.0,
+ "wettest_month": "Jan",
+ "wettest_mm_per_day": 0.83,
+ "driest_month": "Sep",
+ "driest_mm_per_day": 0.0,
+ "monthly": [
+  {
+   "month": "Jan",
+   "mean_c": 12.3,
+   "rain_mm_per_day": 0.83
+  },
+  {
+   "month": "Feb",
+   "mean_c": 14.8,
+   "rain_mm_per_day": 0.39
+  },
+  {
+   "month": "Mar",
+   "mean_c": 20.3,
+   "rain_mm_per_day": 0.37
+  },
+  {
+   "month": "Apr",
+   "mean_c": 26.1,
+   "rain_mm_per_day": 0.31
+  },
+  {
+   "month": "May",
+   "mean_c": 33.0,
+   "rain_mm_per_day": 0.07
+  },
+  {
+   "month": "Jun",
+   "mean_c": 37.4,
+   "rain_mm_per_day": 0.12
+  },
+  {
+   "month": "Jul",
+   "mean_c": 39.2,
+   "rain_mm_per_day": 0.09
+  },
+  {
+   "month": "Aug",
+   "mean_c": 38.9,
+   "rain_mm_per_day": 0.03
+  },
+  {
+   "month": "Sep",
+   "mean_c": 34.9,
+   "rain_mm_per_day": 0.0
+  },
+  {
+   "month": "Oct",
+   "mean_c": 29.1,
+   "rain_mm_per_day": 0.19
+  },
+  {
+   "month": "Nov",
+   "mean_c": 19.8,
+   "rain_mm_per_day": 0.75
+  },
+  {
+   "month": "Dec",
+   "mean_c": 13.9,
+   "rain_mm_per_day": 0.77
+  }
+ ],
+ "updated": "2026-10-04T10:43:50.650358+00:00",
+ "source": "https://pseoare.pages.dev"
+}

@@ -1,0 +1,73 @@
+{
+ "country": "United States",
+ "page": "https://pseoare.pages.dev/hub-single-holidays",
+ "count": 8,
+ "holidays": [
+  {
+   "name": "New Year's Day in United States (2016)",
+   "local_name": "New Year's Day",
+   "date": "2016-01-01",
+   "weekday": "Friday",
+   "weekend": false,
+   "page": "https://pseoare.pages.dev/new-year-s-day-united-states-2016-01-01"
+  },
+  {
+   "name": "New Year's Day in United States (2017)",
+   "local_name": "New Year's Day",
+   "date": "2017-01-02",
+   "weekday": "Monday",
+   "weekend": false,
+   "page": "https://pseoare.pages.dev/new-year-s-day-united-states-2017-01-02"
+  },
+  {
+   "name": "New Year's Day in United States (2018)",
+   "local_name": "New Year's Day",
+   "date": "2018-01-01",
+   "weekday": "Monday",
+   "weekend": false,
+   "page": "https://pseoare.pages.dev/new-year-s-day-united-states-2018-01-01"
+  },
+  {
+   "name": "New Year's Day in United States (2019)",
+   "local_name": "New Year's Day",
+   "date": "2019-01-01",
+   "weekday": "Tuesday",
+   "weekend": false,
+   "page": "https://pseoare.pages.dev/new-year-s-day-united-states-2019-01-01"
+  },
+  {
+   "name": "New Year's Day in United States (2020)",
+   "local_name": "New Year's Day",
+   "date": "2020-01-01",
+   "weekday": "Wednesday",
+   "weekend": false,
+   "page": "https://pseoare.pages.dev/new-year-s-day-united-states-2020-01-01"
+  },
+  {
+   "name": "New Year's Day in United States (2021)",
+   "local_name": "New Year's Day",
+   "date": "2021-01-01",
+   "weekday": "Friday",
+   "weekend": false,
+   "page": "https://pseoare.pages.dev/new-year-s-day-united-states-2021-01-01"
+  },
+  {
+   "name": "New Year's Day in United States (2022)",
+   "local_name": "New Year's Day",
+   "date": "2021-12-31",
+   "weekday": "Friday",
+   "weekend": false,
+   "page": "https://pseoare.pages.dev/new-year-s-day-united-states-2021-12-31"
+  },
+  {
+   "name": "New Year's Day in United States (2023)",
+   "local_name": "New Year's Day",
+   "date": "2023-01-02",
+   "weekday": "Monday",
+   "weekend": false,
+   "page": "https://pseoare.pages.dev/new-year-s-day-united-states-2023-01-02"
+  }
+ ],
+ "updated": "2026-10-04T10:43:50.650358+00:00",
+ "source": "https://pseoare.pages.dev"
+}

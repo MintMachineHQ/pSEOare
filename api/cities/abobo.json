@@ -1,0 +1,79 @@
+{
+ "city": "Abobo",
+ "page": "https://pseoare.pages.dev/abobo-average-monthly-temperature-rainfall",
+ "annual_mean_c": 26.3,
+ "warmest_month": "Feb",
+ "warmest_c": 27.9,
+ "coldest_month": "Aug",
+ "coldest_c": 24.4,
+ "seasonal_swing_c": 3.5,
+ "annual_rainfall_mm": 1422.0,
+ "wettest_month": "Jun",
+ "wettest_mm_per_day": 8.68,
+ "driest_month": "Jan",
+ "driest_mm_per_day": 0.84,
+ "monthly": [
+  {
+   "month": "Jan",
+   "mean_c": 27.3,
+   "rain_mm_per_day": 0.84
+  },
+  {
+   "month": "Feb",
+   "mean_c": 27.9,
+   "rain_mm_per_day": 2.24
+  },
+  {
+   "month": "Mar",
+   "mean_c": 27.5,
+   "rain_mm_per_day": 4.18
+  },
+  {
+   "month": "Apr",
+   "mean_c": 27.1,
+   "rain_mm_per_day": 5.25
+  },
+  {
+   "month": "May",
+   "mean_c": 26.6,
+   "rain_mm_per_day": 6.48
+  },
+  {
+   "month": "Jun",
+   "mean_c": 25.6,
+   "rain_mm_per_day": 8.68
+  },
+  {
+   "month": "Jul",
+   "mean_c": 24.6,
+   "rain_mm_per_day": 3.17
+  },
+  {
+   "month": "Aug",
+   "mean_c": 24.4,
+   "rain_mm_per_day": 1.5
+  },
+  {
+   "month": "Sep",
+   "mean_c": 25.2,
+   "rain_mm_per_day": 3.29
+  },
+  {
+   "month": "Oct",
+   "mean_c": 25.9,
+   "rain_mm_per_day": 5.89
+  },
+  {
+   "month": "Nov",
+   "mean_c": 26.6,
+   "rain_mm_per_day": 3.67
+  },
+  {
+   "month": "Dec",
+   "mean_c": 26.9,
+   "rain_mm_per_day": 1.6
+  }
+ ],
+ "updated": "2026-10-04T10:43:50.650358+00:00",
+ "source": "https://pseoare.pages.dev"
+}

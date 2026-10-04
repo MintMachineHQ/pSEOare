@@ -1,0 +1,73 @@
+{
+ "country": "Ukraine",
+ "page": "https://pseoare.pages.dev/hub-single-holidays",
+ "count": 8,
+ "holidays": [
+  {
+   "name": "New Year's Day in Ukraine (2016)",
+   "local_name": "\u041d\u043e\u0432\u0438\u0439 \u0420\u0456\u043a",
+   "date": "2016-01-01",
+   "weekday": "Friday",
+   "weekend": false,
+   "page": "https://pseoare.pages.dev/new-year-s-day-ukraine-2016-01-01"
+  },
+  {
+   "name": "New Year's Day in Ukraine (2017)",
+   "local_name": "\u041d\u043e\u0432\u0438\u0439 \u0420\u0456\u043a",
+   "date": "2017-01-01",
+   "weekday": "Sunday",
+   "weekend": true,
+   "page": "https://pseoare.pages.dev/new-year-s-day-ukraine-2017-01-01"
+  },
+  {
+   "name": "New Year's Day in Ukraine (2018)",
+   "local_name": "\u041d\u043e\u0432\u0438\u0439 \u0420\u0456\u043a",
+   "date": "2018-01-01",
+   "weekday": "Monday",
+   "weekend": false,
+   "page": "https://pseoare.pages.dev/new-year-s-day-ukraine-2018-01-01"
+  },
+  {
+   "name": "New Year's Day in Ukraine (2019)",
+   "local_name": "\u041d\u043e\u0432\u0438\u0439 \u0420\u0456\u043a",
+   "date": "2019-01-01",
+   "weekday": "Tuesday",
+   "weekend": false,
+   "page": "https://pseoare.pages.dev/new-year-s-day-ukraine-2019-01-01"
+  },
+  {
+   "name": "New Year's Day in Ukraine (2020)",
+   "local_name": "\u041d\u043e\u0432\u0438\u0439 \u0420\u0456\u043a",
+   "date": "2020-01-01",
+   "weekday": "Wednesday",
+   "weekend": false,
+   "page": "https://pseoare.pages.dev/new-year-s-day-ukraine-2020-01-01"
+  },
+  {
+   "name": "New Year's Day in Ukraine (2021)",
+   "local_name": "\u041d\u043e\u0432\u0438\u0439 \u0420\u0456\u043a",
+   "date": "2021-01-01",
+   "weekday": "Friday",
+   "weekend": false,
+   "page": "https://pseoare.pages.dev/new-year-s-day-ukraine-2021-01-01"
+  },
+  {
+   "name": "New Year's Day in Ukraine (2022)",
+   "local_name": "\u041d\u043e\u0432\u0438\u0439 \u0420\u0456\u043a",
+   "date": "2022-01-01",
+   "weekday": "Saturday",
+   "weekend": true,
+   "page": "https://pseoare.pages.dev/new-year-s-day-ukraine-2022-01-01"
+  },
+  {
+   "name": "New Year's Day in Ukraine (2023)",
+   "local_name": "\u041d\u043e\u0432\u0438\u0439 \u0420\u0456\u043a",
+   "date": "2023-01-01",
+   "weekday": "Sunday",
+   "weekend": true,
+   "page": "https://pseoare.pages.dev/new-year-s-day-ukraine-2023-01-01"
+  }
+ ],
+ "updated": "2026-10-04T10:43:50.650358+00:00",
+ "source": "https://pseoare.pages.dev"
+}

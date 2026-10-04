@@ -1,0 +1,79 @@
+{
+ "city": "Al Mahallah al Kubra",
+ "page": "https://pseoare.pages.dev/al-mahallah-al-kubra-average-monthly-temperature-rainfall",
+ "annual_mean_c": 22.1,
+ "warmest_month": "Jul",
+ "warmest_c": 29.6,
+ "coldest_month": "Jan",
+ "coldest_c": 13.2,
+ "seasonal_swing_c": 16.4,
+ "annual_rainfall_mm": 75.0,
+ "wettest_month": "Jan",
+ "wettest_mm_per_day": 0.45,
+ "driest_month": "Aug",
+ "driest_mm_per_day": 0.0,
+ "monthly": [
+  {
+   "month": "Jan",
+   "mean_c": 13.2,
+   "rain_mm_per_day": 0.45
+  },
+  {
+   "month": "Feb",
+   "mean_c": 14.3,
+   "rain_mm_per_day": 0.39
+  },
+  {
+   "month": "Mar",
+   "mean_c": 17.1,
+   "rain_mm_per_day": 0.31
+  },
+  {
+   "month": "Apr",
+   "mean_c": 20.5,
+   "rain_mm_per_day": 0.4
+  },
+  {
+   "month": "May",
+   "mean_c": 24.8,
+   "rain_mm_per_day": 0.03
+  },
+  {
+   "month": "Jun",
+   "mean_c": 28.1,
+   "rain_mm_per_day": 0.03
+  },
+  {
+   "month": "Jul",
+   "mean_c": 29.6,
+   "rain_mm_per_day": 0.01
+  },
+  {
+   "month": "Aug",
+   "mean_c": 29.6,
+   "rain_mm_per_day": 0.0
+  },
+  {
+   "month": "Sep",
+   "mean_c": 27.5,
+   "rain_mm_per_day": 0.0
+  },
+  {
+   "month": "Oct",
+   "mean_c": 24.2,
+   "rain_mm_per_day": 0.21
+  },
+  {
+   "month": "Nov",
+   "mean_c": 19.9,
+   "rain_mm_per_day": 0.29
+  },
+  {
+   "month": "Dec",
+   "mean_c": 15.3,
+   "rain_mm_per_day": 0.35
+  }
+ ],
+ "updated": "2026-10-04T10:43:50.650358+00:00",
+ "source": "https://pseoare.pages.dev"
+}

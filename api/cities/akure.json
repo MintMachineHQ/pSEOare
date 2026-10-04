@@ -1,0 +1,79 @@
+{
+ "city": "Akure",
+ "page": "https://pseoare.pages.dev/akure-average-monthly-temperature-rainfall",
+ "annual_mean_c": 24.6,
+ "warmest_month": "Mar",
+ "warmest_c": 26.1,
+ "coldest_month": "Aug",
+ "coldest_c": 23.5,
+ "seasonal_swing_c": 2.6,
+ "annual_rainfall_mm": 1543.0,
+ "wettest_month": "Sep",
+ "wettest_mm_per_day": 9.78,
+ "driest_month": "Jan",
+ "driest_mm_per_day": 0.45,
+ "monthly": [
+  {
+   "month": "Jan",
+   "mean_c": 23.9,
+   "rain_mm_per_day": 0.45
+  },
+  {
+   "month": "Feb",
+   "mean_c": 25.5,
+   "rain_mm_per_day": 0.9
+  },
+  {
+   "month": "Mar",
+   "mean_c": 26.1,
+   "rain_mm_per_day": 1.68
+  },
+  {
+   "month": "Apr",
+   "mean_c": 25.8,
+   "rain_mm_per_day": 3.75
+  },
+  {
+   "month": "May",
+   "mean_c": 25.2,
+   "rain_mm_per_day": 5.08
+  },
+  {
+   "month": "Jun",
+   "mean_c": 24.4,
+   "rain_mm_per_day": 7.06
+  },
+  {
+   "month": "Jul",
+   "mean_c": 23.7,
+   "rain_mm_per_day": 7.32
+  },
+  {
+   "month": "Aug",
+   "mean_c": 23.5,
+   "rain_mm_per_day": 6.77
+  },
+  {
+   "month": "Sep",
+   "mean_c": 23.9,
+   "rain_mm_per_day": 9.78
+  },
+  {
+   "month": "Oct",
+   "mean_c": 24.5,
+   "rain_mm_per_day": 6.04
+  },
+  {
+   "month": "Nov",
+   "mean_c": 24.7,
+   "rain_mm_per_day": 1.43
+  },
+  {
+   "month": "Dec",
+   "mean_c": 24.0,
+   "rain_mm_per_day": 0.51
+  }
+ ],
+ "updated": "2026-10-04T10:43:50.650358+00:00",
+ "source": "https://pseoare.pages.dev"
+}

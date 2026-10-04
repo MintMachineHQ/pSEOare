@@ -1,0 +1,79 @@
+{
+ "city": "Antofagasta",
+ "page": "https://pseoare.pages.dev/antofagasta-average-monthly-temperature-rainfall",
+ "annual_mean_c": 17.6,
+ "warmest_month": "Feb",
+ "warmest_c": 21.5,
+ "coldest_month": "Aug",
+ "coldest_c": 14.8,
+ "seasonal_swing_c": 6.7,
+ "annual_rainfall_mm": 9.0,
+ "wettest_month": "Jun",
+ "wettest_mm_per_day": 0.08,
+ "driest_month": "May",
+ "driest_mm_per_day": 0.0,
+ "monthly": [
+  {
+   "month": "Jan",
+   "mean_c": 20.9,
+   "rain_mm_per_day": 0.02
+  },
+  {
+   "month": "Feb",
+   "mean_c": 21.5,
+   "rain_mm_per_day": 0.06
+  },
+  {
+   "month": "Mar",
+   "mean_c": 20.4,
+   "rain_mm_per_day": 0.03
+  },
+  {
+   "month": "Apr",
+   "mean_c": 18.7,
+   "rain_mm_per_day": 0.01
+  },
+  {
+   "month": "May",
+   "mean_c": 17.1,
+   "rain_mm_per_day": 0.0
+  },
+  {
+   "month": "Jun",
+   "mean_c": 15.9,
+   "rain_mm_per_day": 0.08
+  },
+  {
+   "month": "Jul",
+   "mean_c": 14.9,
+   "rain_mm_per_day": 0.02
+  },
+  {
+   "month": "Aug",
+   "mean_c": 14.8,
+   "rain_mm_per_day": 0.05
+  },
+  {
+   "month": "Sep",
+   "mean_c": 15.1,
+   "rain_mm_per_day": 0.0
+  },
+  {
+   "month": "Oct",
+   "mean_c": 16.0,
+   "rain_mm_per_day": 0.01
+  },
+  {
+   "month": "Nov",
+   "mean_c": 17.4,
+   "rain_mm_per_day": 0.0
+  },
+  {
+   "month": "Dec",
+   "mean_c": 19.1,
+   "rain_mm_per_day": 0.02
+  }
+ ],
+ "updated": "2026-10-04T10:43:50.650358+00:00",
+ "source": "https://pseoare.pages.dev"
+}

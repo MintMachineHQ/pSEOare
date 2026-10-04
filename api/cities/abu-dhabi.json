@@ -1,0 +1,79 @@
+{
+ "city": "Abu Dhabi",
+ "page": "https://pseoare.pages.dev/abu-dhabi-average-monthly-temperature-rainfall",
+ "annual_mean_c": 28.2,
+ "warmest_month": "Aug",
+ "warmest_c": 35.2,
+ "coldest_month": "Jan",
+ "coldest_c": 19.9,
+ "seasonal_swing_c": 15.3,
+ "annual_rainfall_mm": 64.0,
+ "wettest_month": "Mar",
+ "wettest_mm_per_day": 0.43,
+ "driest_month": "Jul",
+ "driest_mm_per_day": 0.02,
+ "monthly": [
+  {
+   "month": "Jan",
+   "mean_c": 19.9,
+   "rain_mm_per_day": 0.37
+  },
+  {
+   "month": "Feb",
+   "mean_c": 20.6,
+   "rain_mm_per_day": 0.19
+  },
+  {
+   "month": "Mar",
+   "mean_c": 23.1,
+   "rain_mm_per_day": 0.43
+  },
+  {
+   "month": "Apr",
+   "mean_c": 26.9,
+   "rain_mm_per_day": 0.19
+  },
+  {
+   "month": "May",
+   "mean_c": 30.8,
+   "rain_mm_per_day": 0.09
+  },
+  {
+   "month": "Jun",
+   "mean_c": 32.8,
+   "rain_mm_per_day": 0.1
+  },
+  {
+   "month": "Jul",
+   "mean_c": 34.7,
+   "rain_mm_per_day": 0.02
+  },
+  {
+   "month": "Aug",
+   "mean_c": 35.2,
+   "rain_mm_per_day": 0.03
+  },
+  {
+   "month": "Sep",
+   "mean_c": 33.6,
+   "rain_mm_per_day": 0.15
+  },
+  {
+   "month": "Oct",
+   "mean_c": 30.8,
+   "rain_mm_per_day": 0.03
+  },
+  {
+   "month": "Nov",
+   "mean_c": 26.6,
+   "rain_mm_per_day": 0.19
+  },
+  {
+   "month": "Dec",
+   "mean_c": 22.5,
+   "rain_mm_per_day": 0.3
+  }
+ ],
+ "updated": "2026-10-04T10:43:50.650358+00:00",
+ "source": "https://pseoare.pages.dev"
+}

@@ -1,0 +1,79 @@
+{
+ "city": "Ahvaz",
+ "page": "https://pseoare.pages.dev/ahvaz-average-monthly-temperature-rainfall",
+ "annual_mean_c": 26.7,
+ "warmest_month": "Jul",
+ "warmest_c": 39.6,
+ "coldest_month": "Jan",
+ "coldest_c": 12.3,
+ "seasonal_swing_c": 27.3,
+ "annual_rainfall_mm": 197.0,
+ "wettest_month": "Dec",
+ "wettest_mm_per_day": 1.36,
+ "driest_month": "Aug",
+ "driest_mm_per_day": 0.01,
+ "monthly": [
+  {
+   "month": "Jan",
+   "mean_c": 12.3,
+   "rain_mm_per_day": 1.16
+  },
+  {
+   "month": "Feb",
+   "mean_c": 14.6,
+   "rain_mm_per_day": 0.66
+  },
+  {
+   "month": "Mar",
+   "mean_c": 19.7,
+   "rain_mm_per_day": 0.66
+  },
+  {
+   "month": "Apr",
+   "mean_c": 25.6,
+   "rain_mm_per_day": 0.55
+  },
+  {
+   "month": "May",
+   "mean_c": 32.8,
+   "rain_mm_per_day": 0.18
+  },
+  {
+   "month": "Jun",
+   "mean_c": 37.5,
+   "rain_mm_per_day": 0.22
+  },
+  {
+   "month": "Jul",
+   "mean_c": 39.6,
+   "rain_mm_per_day": 0.15
+  },
+  {
+   "month": "Aug",
+   "mean_c": 39.3,
+   "rain_mm_per_day": 0.01
+  },
+  {
+   "month": "Sep",
+   "mean_c": 35.1,
+   "rain_mm_per_day": 0.01
+  },
+  {
+   "month": "Oct",
+   "mean_c": 29.3,
+   "rain_mm_per_day": 0.33
+  },
+  {
+   "month": "Nov",
+   "mean_c": 19.9,
+   "rain_mm_per_day": 1.18
+  },
+  {
+   "month": "Dec",
+   "mean_c": 14.0,
+   "rain_mm_per_day": 1.36
+  }
+ ],
+ "updated": "2026-10-04T10:43:50.650358+00:00",
+ "source": "https://pseoare.pages.dev"
+}

@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-04T10:34:52.413128+00:00",
- "count": 360,
+ "updated": "2026-10-04T10:43:50.650358+00:00",
+ "count": 416,
  "source": "https://pseoare.pages.dev",
  "results": [
   {
@@ -2882,6 +2882,454 @@
    "date": "2023-01-01",
    "weekday": "Sunday",
    "page": "https://pseoare.pages.dev/new-year-s-day-south-korea-2023-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Spain (2016)",
+   "country": "Spain",
+   "local_name": "A\u00f1o Nuevo",
+   "date": "2016-01-01",
+   "weekday": "Friday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-spain-2016-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Spain (2017)",
+   "country": "Spain",
+   "local_name": "A\u00f1o Nuevo",
+   "date": "2017-01-01",
+   "weekday": "Sunday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-spain-2017-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Spain (2018)",
+   "country": "Spain",
+   "local_name": "A\u00f1o Nuevo",
+   "date": "2018-01-01",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-spain-2018-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Spain (2019)",
+   "country": "Spain",
+   "local_name": "A\u00f1o Nuevo",
+   "date": "2019-01-01",
+   "weekday": "Tuesday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-spain-2019-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Spain (2020)",
+   "country": "Spain",
+   "local_name": "A\u00f1o Nuevo",
+   "date": "2020-01-01",
+   "weekday": "Wednesday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-spain-2020-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Spain (2021)",
+   "country": "Spain",
+   "local_name": "A\u00f1o Nuevo",
+   "date": "2021-01-01",
+   "weekday": "Friday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-spain-2021-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Spain (2022)",
+   "country": "Spain",
+   "local_name": "A\u00f1o Nuevo",
+   "date": "2022-01-01",
+   "weekday": "Saturday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-spain-2022-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Spain (2023)",
+   "country": "Spain",
+   "local_name": "A\u00f1o Nuevo",
+   "date": "2023-01-01",
+   "weekday": "Sunday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-spain-2023-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Sweden (2016)",
+   "country": "Sweden",
+   "local_name": "Ny\u00e5rsdagen",
+   "date": "2016-01-01",
+   "weekday": "Friday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-sweden-2016-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Sweden (2017)",
+   "country": "Sweden",
+   "local_name": "Ny\u00e5rsdagen",
+   "date": "2017-01-01",
+   "weekday": "Sunday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-sweden-2017-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Sweden (2018)",
+   "country": "Sweden",
+   "local_name": "Ny\u00e5rsdagen",
+   "date": "2018-01-01",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-sweden-2018-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Sweden (2019)",
+   "country": "Sweden",
+   "local_name": "Ny\u00e5rsdagen",
+   "date": "2019-01-01",
+   "weekday": "Tuesday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-sweden-2019-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Sweden (2020)",
+   "country": "Sweden",
+   "local_name": "Ny\u00e5rsdagen",
+   "date": "2020-01-01",
+   "weekday": "Wednesday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-sweden-2020-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Sweden (2021)",
+   "country": "Sweden",
+   "local_name": "Ny\u00e5rsdagen",
+   "date": "2021-01-01",
+   "weekday": "Friday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-sweden-2021-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Sweden (2022)",
+   "country": "Sweden",
+   "local_name": "Ny\u00e5rsdagen",
+   "date": "2022-01-01",
+   "weekday": "Saturday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-sweden-2022-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Sweden (2023)",
+   "country": "Sweden",
+   "local_name": "Ny\u00e5rsdagen",
+   "date": "2023-01-01",
+   "weekday": "Sunday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-sweden-2023-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Switzerland (2016)",
+   "country": "Switzerland",
+   "local_name": "Neujahr",
+   "date": "2016-01-01",
+   "weekday": "Friday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-switzerland-2016-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Switzerland (2017)",
+   "country": "Switzerland",
+   "local_name": "Neujahr",
+   "date": "2017-01-01",
+   "weekday": "Sunday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-switzerland-2017-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Switzerland (2018)",
+   "country": "Switzerland",
+   "local_name": "Neujahr",
+   "date": "2018-01-01",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-switzerland-2018-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Switzerland (2019)",
+   "country": "Switzerland",
+   "local_name": "Neujahr",
+   "date": "2019-01-01",
+   "weekday": "Tuesday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-switzerland-2019-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Switzerland (2020)",
+   "country": "Switzerland",
+   "local_name": "Neujahr",
+   "date": "2020-01-01",
+   "weekday": "Wednesday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-switzerland-2020-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Switzerland (2021)",
+   "country": "Switzerland",
+   "local_name": "Neujahr",
+   "date": "2021-01-01",
+   "weekday": "Friday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-switzerland-2021-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Switzerland (2022)",
+   "country": "Switzerland",
+   "local_name": "Neujahr",
+   "date": "2022-01-01",
+   "weekday": "Saturday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-switzerland-2022-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Switzerland (2023)",
+   "country": "Switzerland",
+   "local_name": "Neujahr",
+   "date": "2023-01-01",
+   "weekday": "Sunday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-switzerland-2023-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Turkey (2016)",
+   "country": "Turkey",
+   "local_name": "Y\u0131lba\u015f\u0131",
+   "date": "2016-01-01",
+   "weekday": "Friday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-turkey-2016-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Turkey (2017)",
+   "country": "Turkey",
+   "local_name": "Y\u0131lba\u015f\u0131",
+   "date": "2017-01-01",
+   "weekday": "Sunday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-turkey-2017-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Turkey (2018)",
+   "country": "Turkey",
+   "local_name": "Y\u0131lba\u015f\u0131",
+   "date": "2018-01-01",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-turkey-2018-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Turkey (2019)",
+   "country": "Turkey",
+   "local_name": "Y\u0131lba\u015f\u0131",
+   "date": "2019-01-01",
+   "weekday": "Tuesday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-turkey-2019-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Turkey (2020)",
+   "country": "Turkey",
+   "local_name": "Y\u0131lba\u015f\u0131",
+   "date": "2020-01-01",
+   "weekday": "Wednesday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-turkey-2020-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Turkey (2021)",
+   "country": "Turkey",
+   "local_name": "Y\u0131lba\u015f\u0131",
+   "date": "2021-01-01",
+   "weekday": "Friday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-turkey-2021-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Turkey (2022)",
+   "country": "Turkey",
+   "local_name": "Y\u0131lba\u015f\u0131",
+   "date": "2022-01-01",
+   "weekday": "Saturday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-turkey-2022-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Turkey (2023)",
+   "country": "Turkey",
+   "local_name": "Y\u0131lba\u015f\u0131",
+   "date": "2023-01-01",
+   "weekday": "Sunday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-turkey-2023-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Ukraine (2016)",
+   "country": "Ukraine",
+   "local_name": "\u041d\u043e\u0432\u0438\u0439 \u0420\u0456\u043a",
+   "date": "2016-01-01",
+   "weekday": "Friday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-ukraine-2016-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Ukraine (2017)",
+   "country": "Ukraine",
+   "local_name": "\u041d\u043e\u0432\u0438\u0439 \u0420\u0456\u043a",
+   "date": "2017-01-01",
+   "weekday": "Sunday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-ukraine-2017-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Ukraine (2018)",
+   "country": "Ukraine",
+   "local_name": "\u041d\u043e\u0432\u0438\u0439 \u0420\u0456\u043a",
+   "date": "2018-01-01",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-ukraine-2018-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Ukraine (2019)",
+   "country": "Ukraine",
+   "local_name": "\u041d\u043e\u0432\u0438\u0439 \u0420\u0456\u043a",
+   "date": "2019-01-01",
+   "weekday": "Tuesday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-ukraine-2019-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Ukraine (2020)",
+   "country": "Ukraine",
+   "local_name": "\u041d\u043e\u0432\u0438\u0439 \u0420\u0456\u043a",
+   "date": "2020-01-01",
+   "weekday": "Wednesday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-ukraine-2020-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Ukraine (2021)",
+   "country": "Ukraine",
+   "local_name": "\u041d\u043e\u0432\u0438\u0439 \u0420\u0456\u043a",
+   "date": "2021-01-01",
+   "weekday": "Friday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-ukraine-2021-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Ukraine (2022)",
+   "country": "Ukraine",
+   "local_name": "\u041d\u043e\u0432\u0438\u0439 \u0420\u0456\u043a",
+   "date": "2022-01-01",
+   "weekday": "Saturday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-ukraine-2022-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Ukraine (2023)",
+   "country": "Ukraine",
+   "local_name": "\u041d\u043e\u0432\u0438\u0439 \u0420\u0456\u043a",
+   "date": "2023-01-01",
+   "weekday": "Sunday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-ukraine-2023-01-01"
+  },
+  {
+   "holiday": "New Year's Day in United Kingdom (2016)",
+   "country": "United Kingdom",
+   "local_name": "New Year's Day",
+   "date": "2016-01-01",
+   "weekday": "Friday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-united-kingdom-2016-01-01"
+  },
+  {
+   "holiday": "New Year's Day in United Kingdom (2017)",
+   "country": "United Kingdom",
+   "local_name": "New Year's Day",
+   "date": "2017-01-02",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-united-kingdom-2017-01-02"
+  },
+  {
+   "holiday": "New Year's Day in United Kingdom (2018)",
+   "country": "United Kingdom",
+   "local_name": "New Year's Day",
+   "date": "2018-01-01",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-united-kingdom-2018-01-01"
+  },
+  {
+   "holiday": "New Year's Day in United Kingdom (2019)",
+   "country": "United Kingdom",
+   "local_name": "New Year's Day",
+   "date": "2019-01-01",
+   "weekday": "Tuesday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-united-kingdom-2019-01-01"
+  },
+  {
+   "holiday": "New Year's Day in United Kingdom (2020)",
+   "country": "United Kingdom",
+   "local_name": "New Year's Day",
+   "date": "2020-01-01",
+   "weekday": "Wednesday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-united-kingdom-2020-01-01"
+  },
+  {
+   "holiday": "New Year's Day in United Kingdom (2021)",
+   "country": "United Kingdom",
+   "local_name": "New Year's Day",
+   "date": "2021-01-01",
+   "weekday": "Friday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-united-kingdom-2021-01-01"
+  },
+  {
+   "holiday": "New Year's Day in United Kingdom (2022)",
+   "country": "United Kingdom",
+   "local_name": "New Year's Day",
+   "date": "2022-01-03",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-united-kingdom-2022-01-03"
+  },
+  {
+   "holiday": "New Year's Day in United Kingdom (2023)",
+   "country": "United Kingdom",
+   "local_name": "New Year's Day",
+   "date": "2023-01-02",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-united-kingdom-2023-01-02"
+  },
+  {
+   "holiday": "New Year's Day in United States (2016)",
+   "country": "United States",
+   "local_name": "New Year's Day",
+   "date": "2016-01-01",
+   "weekday": "Friday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-united-states-2016-01-01"
+  },
+  {
+   "holiday": "New Year's Day in United States (2017)",
+   "country": "United States",
+   "local_name": "New Year's Day",
+   "date": "2017-01-02",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-united-states-2017-01-02"
+  },
+  {
+   "holiday": "New Year's Day in United States (2018)",
+   "country": "United States",
+   "local_name": "New Year's Day",
+   "date": "2018-01-01",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-united-states-2018-01-01"
+  },
+  {
+   "holiday": "New Year's Day in United States (2019)",
+   "country": "United States",
+   "local_name": "New Year's Day",
+   "date": "2019-01-01",
+   "weekday": "Tuesday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-united-states-2019-01-01"
+  },
+  {
+   "holiday": "New Year's Day in United States (2020)",
+   "country": "United States",
+   "local_name": "New Year's Day",
+   "date": "2020-01-01",
+   "weekday": "Wednesday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-united-states-2020-01-01"
+  },
+  {
+   "holiday": "New Year's Day in United States (2021)",
+   "country": "United States",
+   "local_name": "New Year's Day",
+   "date": "2021-01-01",
+   "weekday": "Friday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-united-states-2021-01-01"
+  },
+  {
+   "holiday": "New Year's Day in United States (2022)",
+   "country": "United States",
+   "local_name": "New Year's Day",
+   "date": "2021-12-31",
+   "weekday": "Friday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-united-states-2021-12-31"
+  },
+  {
+   "holiday": "New Year's Day in United States (2023)",
+   "country": "United States",
+   "local_name": "New Year's Day",
+   "date": "2023-01-02",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-united-states-2023-01-02"
   }
  ]
 }

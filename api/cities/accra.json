@@ -1,0 +1,79 @@
+{
+ "city": "Accra",
+ "page": "https://pseoare.pages.dev/accra-average-monthly-temperature-rainfall",
+ "annual_mean_c": 26.5,
+ "warmest_month": "Mar",
+ "warmest_c": 27.9,
+ "coldest_month": "Aug",
+ "coldest_c": 24.1,
+ "seasonal_swing_c": 3.8,
+ "annual_rainfall_mm": 1165.0,
+ "wettest_month": "Jun",
+ "wettest_mm_per_day": 6.58,
+ "driest_month": "Jan",
+ "driest_mm_per_day": 0.72,
+ "monthly": [
+  {
+   "month": "Jan",
+   "mean_c": 27.3,
+   "rain_mm_per_day": 0.72
+  },
+  {
+   "month": "Feb",
+   "mean_c": 27.8,
+   "rain_mm_per_day": 1.56
+  },
+  {
+   "month": "Mar",
+   "mean_c": 27.9,
+   "rain_mm_per_day": 3.36
+  },
+  {
+   "month": "Apr",
+   "mean_c": 27.7,
+   "rain_mm_per_day": 4.47
+  },
+  {
+   "month": "May",
+   "mean_c": 27.2,
+   "rain_mm_per_day": 6.31
+  },
+  {
+   "month": "Jun",
+   "mean_c": 25.9,
+   "rain_mm_per_day": 6.58
+  },
+  {
+   "month": "Jul",
+   "mean_c": 24.6,
+   "rain_mm_per_day": 2.92
+  },
+  {
+   "month": "Aug",
+   "mean_c": 24.1,
+   "rain_mm_per_day": 1.29
+  },
+  {
+   "month": "Sep",
+   "mean_c": 25.1,
+   "rain_mm_per_day": 3.4
+  },
+  {
+   "month": "Oct",
+   "mean_c": 26.1,
+   "rain_mm_per_day": 4.79
+  },
+  {
+   "month": "Nov",
+   "mean_c": 27.0,
+   "rain_mm_per_day": 2.12
+  },
+  {
+   "month": "Dec",
+   "mean_c": 27.4,
+   "rain_mm_per_day": 0.8
+  }
+ ],
+ "updated": "2026-10-04T10:43:50.650358+00:00",
+ "source": "https://pseoare.pages.dev"
+}

@@ -1,0 +1,79 @@
+{
+ "city": "Al Mawsil al Jadidah",
+ "page": "https://pseoare.pages.dev/al-mawsil-al-jadidah-average-monthly-temperature-rainfall",
+ "annual_mean_c": 20.5,
+ "warmest_month": "Jul",
+ "warmest_c": 35.2,
+ "coldest_month": "Jan",
+ "coldest_c": 6.0,
+ "seasonal_swing_c": 29.2,
+ "annual_rainfall_mm": 316.0,
+ "wettest_month": "Mar",
+ "wettest_mm_per_day": 1.74,
+ "driest_month": "Jul",
+ "driest_mm_per_day": 0.03,
+ "monthly": [
+  {
+   "month": "Jan",
+   "mean_c": 6.0,
+   "rain_mm_per_day": 1.51
+  },
+  {
+   "month": "Feb",
+   "mean_c": 8.0,
+   "rain_mm_per_day": 1.48
+  },
+  {
+   "month": "Mar",
+   "mean_c": 12.7,
+   "rain_mm_per_day": 1.74
+  },
+  {
+   "month": "Apr",
+   "mean_c": 18.0,
+   "rain_mm_per_day": 1.58
+  },
+  {
+   "month": "May",
+   "mean_c": 24.5,
+   "rain_mm_per_day": 0.6
+  },
+  {
+   "month": "Jun",
+   "mean_c": 31.4,
+   "rain_mm_per_day": 0.1
+  },
+  {
+   "month": "Jul",
+   "mean_c": 35.2,
+   "rain_mm_per_day": 0.03
+  },
+  {
+   "month": "Aug",
+   "mean_c": 34.8,
+   "rain_mm_per_day": 0.03
+  },
+  {
+   "month": "Sep",
+   "mean_c": 29.9,
+   "rain_mm_per_day": 0.07
+  },
+  {
+   "month": "Oct",
+   "mean_c": 22.9,
+   "rain_mm_per_day": 0.68
+  },
+  {
+   "month": "Nov",
+   "mean_c": 13.5,
+   "rain_mm_per_day": 1.07
+  },
+  {
+   "month": "Dec",
+   "mean_c": 8.0,
+   "rain_mm_per_day": 1.5
+  }
+ ],
+ "updated": "2026-10-04T10:43:50.650358+00:00",
+ "source": "https://pseoare.pages.dev"
+}
