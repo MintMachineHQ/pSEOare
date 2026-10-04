@@ -562,6 +562,21 @@ def api_endpoints(store: MetricsStore, stamp: str) -> list[tuple[str, str]]:
                 for r in climates
             ],
         }, indent=1)))
+    countries = store.countries()
+    if countries:
+        out.append(("api/countries.json", json.dumps({
+            "updated": stamp,
+            "count": len(countries),
+            "source": _SITE["origin"],
+            "note": "figures are World Bank indicators; country rows carry only the "
+                    "indicators present in the source release",
+            "results": [
+                {"country": r.data.get("name"), "page": link(r.path),
+                 **{k: v for k, v in r.data.items()
+                    if k not in ("name",) and isinstance(v, (int, float))}}
+                for r in countries
+            ],
+        }, indent=1)))
     holidays = store.holidays()
     if holidays:
         out.append(("api/holidays.json", json.dumps({

@@ -2993,3 +2993,44 @@ class TestDerivedPagesAreMonetised(unittest.TestCase):
             TestExploreSurfaces()._store(Path(tempfile.mkdtemp())), "2026-10-04T00:00:00Z"
         )[0]
         self.assertNotIn("all-datasets-1", html_doc)
+
+
+class TestApiAggregatesCoverEveryRankingTopic(unittest.TestCase):
+    """The MCP rankings() tool points at aggregate files by name. A topic pointing at a
+    file that is never generated is a dead tool that still passes its own tests."""
+
+    def test_climate_aggregate_carries_the_fields_the_topics_pick(self):
+        import json as _json
+
+        from engine import explore
+
+        store = TestExploreSurfaces()._store(Path(tempfile.mkdtemp()))
+        out = dict(explore.api_endpoints(store, "2026-10-04T00:00:00Z"))
+        self.assertIn("api/climate.json", out)
+        row = _json.loads(out["api/climate.json"])["results"][0]
+        for field in ("city", "annual_mean_c", "annual_rainfall_mm", "swing_c", "page"):
+            with self.subTest(field=field):
+                self.assertIn(field, row)
+
+    def test_a_countries_aggregate_is_generated(self):
+        import json as _json
+
+        from engine import explore
+
+        store = TestExploreSurfaces()._store(Path(tempfile.mkdtemp()))
+        out = dict(explore.api_endpoints(store, "2026-10-04T00:00:00Z"))
+        self.assertIn("api/countries.json", out)
+        row = _json.loads(out["api/countries.json"])["results"][0]
+        self.assertIn("country", row)
+        self.assertIn("population", row)
+
+    def test_the_country_aggregate_omits_the_display_name(self):
+        """`name` is the display label; duplicating it as a numeric field would be noise."""
+        import json as _json
+
+        from engine import explore
+
+        store = TestExploreSurfaces()._store(Path(tempfile.mkdtemp()))
+        out = dict(explore.api_endpoints(store, "2026-10-04T00:00:00Z"))
+        row = _json.loads(out["api/countries.json"])["results"][0]
+        self.assertNotIn("name", row)
