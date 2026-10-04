@@ -2396,3 +2396,80 @@ class TestBoilerplateDetection(unittest.TestCase):
             "temporarily unavailable. Use the table below for exact numbers."
         )
         self.assertTrue(is_boilerplate(live))
+
+
+class TestEntityApiAndSearchAndEvents(unittest.TestCase):
+    def _store(self):
+        return TestExploreSurfaces()._store(Path(tempfile.mkdtemp()))
+
+    def test_entity_endpoints_are_one_file_per_entity(self):
+        import json as _json
+
+        from engine import explore
+
+        out = dict(explore.entity_endpoints(self._store(), "2026-10-04T00:00:00Z"))
+        self.assertIn("api/cities/city0.json", out)
+        self.assertIn("api/crypto/coin0.json", out)
+        self.assertIn("api/holidays/country0.json", out)
+        payload = _json.loads(out["api/cities/city0.json"])
+        self.assertEqual(payload["city"], "City0")
+        self.assertIn("monthly", payload)
+        holidays = _json.loads(out["api/holidays/country0.json"])
+        self.assertIn("holidays", holidays)
+        self.assertEqual(holidays["count"], len(holidays["holidays"]))
+
+    def test_entity_endpoints_use_clean_urls(self):
+        from engine import explore
+
+        out = dict(explore.entity_endpoints(self._store(), "2026-10-04T00:00:00Z"))
+        self.assertFalse(out["api/cities/city0.json"].count(".html"))
+
+    def test_search_index_is_sorted_and_deduplicated(self):
+        import json as _json
+
+        from engine import explore
+
+        out = dict(explore.search_index(self._store(), "2026-10-04T00:00:00Z"))
+        payload = _json.loads(out["search-index.json"])
+        keys = [e["q"] for e in payload["entries"]]
+        self.assertEqual(keys, sorted(keys))
+        self.assertEqual(len(keys), len(set(k.lower() for k in keys)))
+        self.assertTrue(all(e["url"].startswith("http") for e in payload["entries"]))
+
+    def test_event_pages_cover_windows_and_months(self):
+        from engine import explore
+
+        docs = dict((f, k) for f, _, k in explore.event_pages(self._store(), "2026-10-04T00:00:00Z"))
+        self.assertIn("holidays-this-week.html", docs)
+        self.assertIn("holidays-next-week.html", docs)
+        self.assertIn("holidays-this-month.html", docs)
+        self.assertIn("holidays-2027-01.html", docs)
+
+    def test_topic_feeds_are_rss(self):
+        from xml.etree import ElementTree
+
+        from engine import explore
+
+        out = dict(explore.topic_feeds(self._store(), "2026-10-04T00:00:00Z"))
+        self.assertIn("feed-climate.xml", out)
+        self.assertIn("feed-crypto.xml", out)
+        root = ElementTree.fromstring(out["feed-climate.xml"])
+        self.assertEqual(root.tag, "rss")
+        self.assertTrue(root.findall(".//item"))
+
+    def test_search_box_resolves_a_query(self):
+        from engine import explore
+
+        box = explore.SEARCH_BOX
+        self.assertIn('id="ask-input"', box)
+        self.assertIn("search-index.json", box)
+        # The suggestion list must be escaped, or typing a quote breaks the markup.
+        self.assertNotIn("innerHTML = index.slice", box.replace("options.innerHTML", "X"))
+
+    def test_hub_accepts_an_index_extra_block(self):
+        cfg = make_cfg(Path(tempfile.mkdtemp()))
+        page = sample_page(cfg)
+        theme = build_theme()
+        docs = hub_documents([page], cfg, theme, build_css(theme), '<form id="ask"></form>')
+        index = dict(docs)["index.html"]
+        self.assertIn('id="ask"', index)

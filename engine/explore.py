@@ -596,31 +596,120 @@ def api_endpoints(store: MetricsStore, stamp: str) -> list[tuple[str, str]]:
     return out
 
 
+def entity_endpoints(store: MetricsStore, stamp: str) -> list[tuple[str, str]]:
+    """One JSON file per tracked entity, so a lookup is a plain static GET.
+
+    This is what makes "GET /api/climate/Denver" possible without a server: Cloudflare
+    Pages serves a file at a path, so the route *is* a filename. A single aggregate file
+    forces every consumer to download the whole dataset to read one city.
+
+    Country folders hold several hundred files, which is why the writer keeps only the
+    directory rather than each filename as an orphan-sweep keep entry.
+    """
+    out: list[tuple[str, str]] = []
+    for row in store.climates():
+        out.append((f"api/cities/{row.slug}.json", json.dumps({
+            "city": row.data.get("name"), "page": link(row.path),
+            "annual_mean_c": row.data.get("annual_mean"),
+            "warmest_month": row.data.get("warmest_month"),
+            "warmest_c": row.data.get("warmest"),
+            "coldest_month": row.data.get("coldest_month"),
+            "coldest_c": row.data.get("coldest"),
+            "seasonal_swing_c": row.data.get("swing"),
+            "annual_rainfall_mm": row.data.get("annual_rain"),
+            "wettest_month": row.data.get("wettest_month"),
+            "wettest_mm_per_day": row.data.get("wettest_rain"),
+            "driest_month": row.data.get("driest_month"),
+            "driest_mm_per_day": row.data.get("driest_rain"),
+            "monthly": [{"month": m[0], "mean_c": m[1], "rain_mm_per_day": m[2]}
+                        for m in row.data.get("months", [])],
+            "updated": stamp, "source": _SITE["origin"],
+        }, indent=1)))
+    for row in store.cryptos():
+        out.append((f"api/crypto/{row.slug}.json", json.dumps({
+            "asset": row.data.get("name"), "page": link(row.path),
+            "range_12m": {"high": row.data.get("high"), "low": row.data.get("low"),
+                          "latest": row.data.get("last")},
+            "position_in_range_pct": row.data.get("position"),
+            "pct_above_low": row.data.get("above_low_pct"),
+            "pct_below_high": row.data.get("below_high_pct"),
+            "range_pct_of_low": row.data.get("range_pct"),
+            "monthly": row.data.get("months", []),
+            "updated": stamp, "source": _SITE["origin"],
+        }, indent=1)))
+    by_country: dict[str, list[Metrics]] = {}
+    for row in store.holidays():
+        country = str(row.data.get("country") or "unknown")
+        by_country.setdefault(country, []).append(row)
+    for country, rows in by_country.items():
+        slug = slugify(country)
+        rows = sorted(rows, key=lambda r: str(r.data.get("date", "")))
+        out.append((f"api/holidays/{slug}.json", json.dumps({
+            "country": country, "page": link(f"hub-single-holidays.html"),
+            "count": len(rows),
+            "holidays": [{"name": r.data.get("name"), "local_name": r.data.get("local_name"),
+                          "date": r.data.get("date"), "weekday": r.data.get("weekday"),
+                          "weekend": r.data.get("weekend"), "page": link(r.path)}
+                         for r in rows],
+            "updated": stamp, "source": _SITE["origin"],
+        }, indent=1)))
+    return out
+
+
+def slugify(text: str) -> str:
+    import re as _re
+
+    slug = _re.sub(r"[^a-z0-9]+", "-", str(text).lower().strip()).strip("-")
+    return slug[:80] or "item"
+
+
 def api_docs(store: MetricsStore, stamp: str) -> tuple[str, str, str]:
     site = _SITE
     blocks = []
     for name, blurb, example in (
-        ("climate", "Monthly climate averages for every tracked city.",
+        ("cities", "One request per city. Monthly climate averages for that city.",
          '{\n  "city": "Kazan",\n  "annual_mean_c": 3.1,\n  "warmest_month": "Jul",\n'
          '  "swing_c": 33.3\n}'),
-        ("holidays", "Public holidays with dates, weekdays and local names.",
+        ("holidays", "Public holidays for one country, or for every tracked country.",
          '{\n  "country": "Cyprus",\n  "local_name": "Χριστούγεννα",\n'
          '  "date": "2027-12-25",\n  "weekday": "Saturday"\n}'),
-        ("crypto", "365-day high, low and latest for each tracked asset.",
+        ("crypto", "365-day high, low, latest and range position for each tracked asset.",
          '{\n  "asset": "Bitcoin",\n  "high_12m": 124739.81,\n  "low_12m": 58566.09,\n'
          '  "pct_above_low": 44.8\n}'),
     ):
         blocks.append(f"""
 <h2 id="{name}">{name.title()} API</h2>
 <p>{blurb} No key, no rate limit, no attribution required.</p>
-<p>Endpoint: <code>{link('api/' + name + '.json')}</code></p>
+<p>Aggregate: <code>{link('api/' + name + '.json')}</code></p>
 <pre><code>{_esc(example)}</code></pre>""")
+    rows = []
+    for row in sorted(store.climates(), key=lambda r: str(r.data.get("name", "")))[:4]:
+        rows.append(f'<tr><td><code>GET {link("api/cities/" + row.slug + ".json")}</code></td>'
+                    f'<td>{_esc(row.data.get("name"))}</td></tr>')
+    for row in sorted(store.cryptos(), key=lambda r: str(r.data.get("name", "")))[:3]:
+        rows.append(f'<tr><td><code>GET {link("api/crypto/" + row.slug + ".json")}</code></td>'
+                    f'<td>{_esc(row.data.get("name"))}</td></tr>')
+    for row in sorted(store.holidays(), key=lambda r: str(r.data.get("country", "")))[:4]:
+        slug = slugify(str(row.data.get("country") or ""))
+        rows.append(f'<tr><td><code>GET {link("api/holidays/" + slug + ".json")}</code></td>'
+                    f'<td>{_esc(row.data.get("country"))}</td></tr>')
+    sample = f"""
+<h2>One request, one entity</h2>
+<p>No key, no rate limit, no payment. These are static files, so a lookup is a plain GET
+and there is nothing to authenticate against.</p>
+<table><caption>Per-entity endpoints</caption>
+<thead><tr><th>Request</th><th>Returns</th></tr></thead>
+<tbody>{"".join(rows)}</tbody></table>
+<p>Each city, asset and country has one. The slugs match the page filenames, so
+<code>/api/cities/kazan.json</code> is the same record behind
+<code>{link('kazan-average-monthly-temperature-rainfall.html')}</code>.</p>"""
     body = f"""
 <h1>Data API</h1>
 <p class="lede">The same figures behind every page on this site, as JSON. Free, key-free
 and rebuilt daily.</p>
 <p class="meta">Updated: {_esc(_updated(stamp))} &middot;
  {len(store.rows)} pages indexed.</p>
+{sample}
 {"".join(blocks)}
 <h2>Terms</h2>
 <ul>
@@ -786,3 +875,206 @@ def _document(title: str, description: str, body: str, stamp: str, bare: bool = 
             f'<link rel="alternate" type="application/rss+xml" href="{link("feed.xml")}">'
         )
     return f"<!doctype html><html lang=\"en\"><head>{head}</head><body>{body}</body></html>"
+
+# ---------------------------------------------------------------------------
+# search + events + topic feeds
+# ---------------------------------------------------------------------------
+
+def search_index(store: MetricsStore, stamp: str) -> list[tuple[str, str]]:
+    """A JSON index the homepage search box resolves against, client-side.
+
+    The alternative is a round trip per keystroke, which for a static site means no
+    search at all. The index is small enough to inline next to the box: it carries one
+    label and one URL per tracked entity.
+    """
+    entries = []
+    for row in store.climates():
+        name = str(row.data.get("name") or "")
+        entries.append({"q": f"{name} climate", "label": f"{name} — climate averages",
+                        "url": link(row.path), "kind": "climate"})
+    for row in store.cryptos():
+        name = str(row.data.get("name") or "")
+        entries.append({"q": f"{name} price", "label": f"{name} — 12-month price range",
+                        "url": link(row.path), "kind": "crypto"})
+    for row in store.countries():
+        name = str(row.data.get("name") or "")
+        if name:
+            entries.append({"q": name, "label": f"{name} — country data",
+                            "url": link(row.path), "kind": "country"})
+    seen: set[str] = set()
+    unique = []
+    for entry in entries:
+        key = entry["q"].lower()
+        if key in seen:
+            continue
+        seen.add(key)
+        unique.append(entry)
+    unique.sort(key=lambda e: e["q"])
+    return [("search-index.json", json.dumps(
+        {"updated": stamp, "count": len(unique), "entries": unique}, separators=(",", ":")))]
+
+
+SEARCH_BOX = """
+<form class="ask" id="ask" role="search" autocomplete="off">
+  <label for="ask-input">What do you want to know?</label>
+  <input id="ask-input" name="q" type="search" placeholder="Denver climate, Bitcoin range, Japan holidays" list="ask-options">
+  <datalist id="ask-options"></datalist>
+  <button type="submit">Search</button>
+  <ul id="ask-results" hidden></ul>
+</form>
+<script>
+(function () {
+  var form = document.getElementById('ask'), input = document.getElementById('ask-input'),
+      results = document.getElementById('ask-results'), options = document.getElementById('ask-options');
+  if (!form || !input) return;
+  var index = [];
+  fetch('search-index.json').then(function (r) { return r.json(); }).then(function (d) {
+    index = d.entries || [];
+    options.innerHTML = index.slice(0, 500).map(function (e) {
+      var o = document.createElement('option'); o.value = e.q; return o.outerHTML;
+    }).join('');
+  }).catch(function () {});
+  function score(entry, q) {
+    var label = entry.q.toLowerCase(), i = label.indexOf(q);
+    if (i < 0) return 0;
+    // An exact prefix beats a mid-string hit, which beats a match that starts late.
+    return (i === 0 ? 1000 : 500 - i) + (entry.label.toLowerCase().startsWith(q) ? 200 : 0);
+  }
+  function render(q) {
+    q = q.trim().toLowerCase();
+    if (q.length < 2) { results.hidden = true; return; }
+    var hits = [];
+    for (var i = 0; i < index.length; i++) {
+      var s = score(index[i], q);
+      if (s > 0) hits.push([s, index[i]]);
+    }
+    hits.sort(function (a, b) { return b[0] - a[0]; });
+    results.innerHTML = hits.slice(0, 8).map(function (h) {
+      return '<li><a href="' + h[1].url + '">' + h[1].label + '</a></li>';
+    }).join('');
+    results.hidden = hits.length === 0;
+  }
+  input.addEventListener('input', function () { render(input.value); });
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var q = input.value.trim().toLowerCase(), best = null, bestScore = 0;
+    for (var i = 0; i < index.length; i++) {
+      var s = score(index[i], q);
+      if (s > bestScore) { bestScore = s; best = index[i]; }
+    }
+    if (best) window.location.href = best.url;
+  });
+})();
+</script>
+"""
+
+
+def event_pages(store: MetricsStore, stamp: str, when: date | None = None) -> list[tuple[str, str, str]]:
+    """Date-anchored pages for recurring demand.
+
+    "Public holidays this week" is searched every week of the year and answered by a page
+    that is rebuilt from the same holiday rows every run. These are the pages that
+    earn a revisit rather than a one-off click.
+    """
+    site = _SITE
+    day = when or datetime.now(timezone.utc).date()
+    rows = sorted((r for r in store.holidays() if r.data.get("date")), key=lambda r: r.data["date"])
+    docs: list[tuple[str, str, str]] = []
+    if not rows:
+        return docs
+
+    def table(subset: list[Metrics], caption: str) -> str:
+        body = "".join(
+            f'<tr><td>{_esc(r.data.get("local_name") or r.data.get("name"))}</td>'
+            f'<td>{_esc(r.data.get("country"))}</td>'
+            f'<td>{_esc(r.data.get("date"))}</td><td>{_esc(r.data.get("weekday"))}</td>'
+            f'<td><a href="{link(r.path)}">detail</a></td></tr>'
+            for r in subset
+        ) or '<tr><td colspan="5">None recorded.</td></tr>'
+        return (f'<table><caption>{_esc(caption)}</caption><thead><tr><th>Holiday</th>'
+                f'<th>Country</th><th>Date</th><th>Weekday</th><th></th></tr></thead>'
+                f'<tbody>{body}</tbody></table>')
+
+    from datetime import timedelta
+
+    windows = [
+        ("this-week", day, 7, "Public holidays this week"),
+        ("next-week", day + timedelta(days=7), 7, "Public holidays next week"),
+        ("this-month", day.replace(day=1), None, "Public holidays this month"),
+    ]
+    for slug, start, span, title in windows:
+        if span:
+            end = start + timedelta(days=span - 1)
+        else:
+            end = (start.replace(day=28) + timedelta(days=4)).replace(day=1) - timedelta(days=1)
+        subset = [r for r in rows if start.isoformat() <= str(r.data["date"]) <= end.isoformat()]
+        heading = f"{title} ({start.isoformat()} to {end.isoformat()})"
+        body = f"""
+<h1>{_esc(heading)}</h1>
+<p class="lede">Every public holiday on record between {_esc(start.isoformat())} and
+{_esc(end.isoformat())}, rebuilt from the tracked calendars on every run.</p>
+<p class="meta">Updated: {_esc(_updated(stamp))} &middot; {len(subset)} holidays in this window.</p>
+{table(subset, heading)}
+<p class="note">Country-by-country calendars are on the
+<a href="{link('hub-single-holidays.html')}">holidays hub</a>, and the same data is
+available as JSON at <code>{link('api/holidays.json')}</code>.</p>
+"""
+        docs.append((f"holidays-{slug}.html", _document(
+            heading, f"Every public holiday between {start.isoformat()} and {end.isoformat()}.",
+            body, stamp), "event"))
+
+    # Per-month calendars, which is where the durable recurring search volume sits.
+    by_month: dict[str, list[Metrics]] = {}
+    for row in rows:
+        by_month.setdefault(str(row.data["date"])[:7], []).append(row)
+    for month, subset in sorted(by_month.items()):
+        if len(subset) < 3:
+            continue
+        title = f"Public holidays in {month}"
+        body = f"""
+<h1>{_esc(title)}</h1>
+<p class="lede">Every public holiday on record for {_esc(month)}, by country.</p>
+<p class="meta">Updated: {_esc(_updated(stamp))} &middot; {len(subset)} holidays.</p>
+{table(subset, title)}
+"""
+        docs.append((f"holidays-{month}.html", _document(
+            title, f"Public holidays falling in {month}.", body, stamp), "event"))
+    return docs
+
+
+def topic_feeds(store: MetricsStore, stamp: str) -> list[tuple[str, str]]:
+    """Per-topic RSS, so a reader or aggregator can follow one dataset.
+
+    A single site-wide feed has to mix climate averages with price ranges, and most
+    subscribers want one or the other. Each feed is generated, so it costs nothing.
+    """
+    from xml.sax.saxutils import escape as xml_escape
+
+    out: list[tuple[str, str]] = []
+    groups = (
+        ("climate", "Climate updates", store.climates(), "climate_city"),
+        ("crypto", "Crypto range updates", store.cryptos(), "crypto_12m"),
+        ("holidays", "Holiday updates", store.holidays(), "holiday_single"),
+    )
+    for slug, title, rows, kind in groups:
+        rows = sorted(rows, key=lambda r: str(r.data.get("name", "")))[:100]
+        if not rows:
+            continue
+        items = "".join(
+            f"<item><title>{xml_escape(str(r.data.get('name') or r.title))}</title>"
+            f"<link>{xml_escape(link(r.path))}</link>"
+            f"<guid isPermaLink=\"true\">{xml_escape(link(r.path))}</guid>"
+            f"<pubDate>{stamp}</pubDate></item>"
+            for r in rows
+        )
+        feed = f"""<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"><channel>
+<title>{xml_escape(title)} | {_SITE['name']}</title>
+<link>{xml_escape(link('index.html'))}</link>
+<description>{xml_escape(title)} from {_esc(_SITE['origin'])}</description>
+<lastBuildDate>{stamp}</lastBuildDate>
+{items}
+</channel></rss>
+"""
+        out.append((f"feed-{slug}.xml", feed))
+    return out

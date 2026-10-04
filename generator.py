@@ -143,7 +143,7 @@ async def run(args: argparse.Namespace) -> int:
         # datasets. Cheap, and a failure here must never fail the build.
         save_entity_index(cfg.paths.cache, pages)
 
-        for filename, html_doc in hub_documents(pages, cfg, theme, css):
+        for filename, html_doc in hub_documents(pages, cfg, theme, css, explore.SEARCH_BOX):
             writer.write_raw(filename, html_doc)
         # Derived surfaces: rankings, comparisons, Today, the JSON API, widgets and the
         # charts that feed them. These are built from the metrics store rather than from
@@ -160,6 +160,7 @@ async def run(args: argparse.Namespace) -> int:
             + [explore.today_page(store, stamp)]
             + [explore.api_docs(store, stamp)]
             + explore.widget_pages(store, stamp)
+            + explore.event_pages(store, stamp)
             + [explore.embed_snippet(store, stamp)]
         )
         derived_paths: list[str] = []
@@ -168,7 +169,12 @@ async def run(args: argparse.Namespace) -> int:
             writer.write_raw(filename, html_doc)
             derived_paths.append(filename)
             derived_titles[filename] = kind
-        for filename, payload in explore.api_endpoints(store, stamp):
+        for filename, payload in (
+            explore.api_endpoints(store, stamp)
+            + explore.entity_endpoints(store, stamp)
+            + explore.search_index(store, stamp)
+            + explore.topic_feeds(store, stamp)
+        ):
             writer.write_raw(filename, payload)
             derived_paths.append(filename)
             derived_titles[filename] = "api"
@@ -180,7 +186,13 @@ async def run(args: argparse.Namespace) -> int:
         if cfg.seo.get("generate_sitemap", True):
             # Nested paths such as api/climate.json contribute their directory to the
             # orphan keep set, never their filename.
-            extra_dirs = {p.split("/")[0] + "/" for p in derived_paths if "/" in p}
+            # Every ancestor directory of a nested derived path, not just the first
+            # segment: api/cities/ holds hundreds of files and needs keeping as a set.
+            extra_dirs = {
+                "/".join(p.split("/")[:i]) + "/"
+                for p in derived_paths if "/" in p
+                for i in range(1, len(p.split("/")))
+            }
             writer.write_raw(
                 "sitemap.xml",
                 sitemap_xml(

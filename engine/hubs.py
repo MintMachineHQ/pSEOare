@@ -138,7 +138,7 @@ def hashlib_offset(text: str) -> int:
 
 
 def hub_documents(
-    pages: list[Page], cfg: Config, theme: dict, css: str
+    pages: list[Page], cfg: Config, theme: dict, css: str, index_extra: str = ""
 ) -> list[tuple[str, str]]:
     """Return [(filename, html)] for the root index plus a paginated hub per section."""
     stamp = datetime.now(timezone.utc).isoformat()
@@ -170,6 +170,7 @@ def hub_documents(
                 stamp=stamp,
                 canonical="index.html",
                 section_title="All datasets",
+                extra_body=index_extra,
             ),
         )
     )

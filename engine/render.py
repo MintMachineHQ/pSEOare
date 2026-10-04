@@ -666,6 +666,7 @@ def render_hub(
     page_index: int = 1,
     total_pages: int = 1,
     extra_schema: dict | None = None,
+    extra_body: str = "",
 ) -> str:
     anchor_list = "\n".join(
         f'      <li><a href="{_esc(l.url)}">{_esc(l.label)}</a></li>' for l in links
@@ -729,6 +730,7 @@ nav.pager a {{ color: var(--accent); }}
 <article class="{theme['card']}">
 <h1 class="{theme['title']}">{_esc(h1)}</h1>
 <p class="lede">{_esc(intro)}</p>
+{extra_body}
 </article>
 <p><a href="{_esc(cfg.url_for('index.html'))}">Home</a> &rsaquo; {_esc(section_title)}</p>
 <nav class="{theme['card']}" aria-label="{_esc(section_title)}">
