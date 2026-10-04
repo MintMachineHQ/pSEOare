@@ -99,6 +99,13 @@ def trim_to_budget(pages: list[Page], budget: CallBudget) -> list[Page]:
     directly would put the pages we have already published at the front of the queue.
     Every run would then regenerate the same alphabetical head of the list and the
     corpus would never grow past the first page_budget rows.
+
+    A quarter of the budget is reserved for refreshing already-published pages. Without
+    that reserve a source with more unseen candidates than budget spends every run on
+    new pages and never revisits the old ones, so anything that must be applied to the
+    whole corpus later (a presentation or ad-unit change) can never reach them. The
+    reserve is what lets a thousand-page corpus converge on a config change instead of
+    trickling.
     """
     ordered = sorted(pages, key=lambda page: (not budget.is_new(page.path), page.slug))
     # Report the split. A source whose candidate list is entirely "seen" is a saturated
@@ -113,8 +120,15 @@ def trim_to_budget(pages: list[Page], budget: CallBudget) -> list[Page]:
             len(ordered) - unseen,
             budget.remaining,
         )
+    unseen_pages = [page for page in ordered if budget.is_new(page.path)]
+    known_pages = [page for page in ordered if not budget.is_new(page.path)]
+    reserve = min(len(known_pages), budget.remaining // 4) if budget.remaining >= 8 else 0
     allowed: list[Page] = []
-    for page in ordered:
+    for page in unseen_pages[: max(0, budget.remaining - reserve)]:
+        if not budget.take():
+            break
+        allowed.append(page)
+    for page in known_pages:
         if not budget.take():
             break
         allowed.append(page)

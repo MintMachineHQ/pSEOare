@@ -50,7 +50,7 @@ from engine.render import (  # noqa: E402
 )
 from engine.http import Http, QuotaExhausted, _is_quota_exhausted, write_json_cache  # noqa: E402
 from engine.indexing import key_file_is_reachable, remember_pending, take_pending  # noqa: E402
-from engine.models import Link, Page, slugify  # noqa: E402
+from engine.models import Link, Page, set_render_signature, slugify  # noqa: E402
 from engine.ratelimit import CallBudget  # noqa: E402
 from engine.sources.base import cached_fetch, trim_to_budget  # noqa: E402
 from engine.render import build_css, build_theme, ad_block, pick_copy, render_page, waterfall_js  # noqa: E402
@@ -735,6 +735,40 @@ class TestRender(unittest.TestCase):
             ["page-015", "page-016", "page-017", "page-018", "page-019"],
         )
 
+    def test_budget_reserves_a_share_for_refreshing_published_pages(self):
+        # A source with far more unseen candidates than budget would otherwise spend
+        # every run on new pages and never revisit the published ones, so a whole-corpus
+        # change could never reach them. A quarter of the budget goes to refreshes.
+        cfg = make_cfg(Path(tempfile.mkdtemp()))
+        pages = []
+        for i in range(200):
+            page = sample_page(cfg)
+            page.slug = f"page-{i:03d}"
+            pages.append(page)
+        seen = {p.path for p in pages[:80]}
+        budget = CallBudget(limit=40, seen=seen)
+        chosen = trim_to_budget(pages, budget)
+        self.assertEqual(len(chosen), 40)
+        slugs = [p.slug for p in chosen]
+        self.assertEqual(sum(1 for s in slugs if s >= "page-080"), 30)  # unseen first
+        self.assertEqual(sum(1 for s in slugs if s < "page-080"), 10)  # refresh reserve
+
+    def test_budget_reserve_is_skipped_for_a_tiny_budget(self):
+        # Below the threshold the reserve would eat most of the run, so growth wins.
+        cfg = make_cfg(Path(tempfile.mkdtemp()))
+        pages = []
+        for i in range(20):
+            page = sample_page(cfg)
+            page.slug = f"page-{i:03d}"
+            pages.append(page)
+        seen = {p.path for p in pages[:15]}
+        budget = CallBudget(limit=5, seen=seen)
+        chosen = trim_to_budget(pages, budget)
+        self.assertEqual(
+            [p.slug for p in chosen],
+            ["page-015", "page-016", "page-017", "page-018", "page-019"],
+        )
+
     def test_indexnow_defers_to_the_next_run(self):
         # IndexNow validates every submitted URL. A page produced during this run is not
         # published until after generation, so notifying on the same run gets the batch
@@ -1387,6 +1421,33 @@ class TestCopyHash(unittest.TestCase):
         page.data["copy_hash"] = "abc123"
         self.assertNotEqual(before, page.content_hash)
         page.data["copy_hash"] = "abc123"
+        self.assertEqual(page.content_hash, page.content_hash)
+
+
+class TestRenderSignature(unittest.TestCase):
+    """A monetization or theme change must invalidate every page, not just new ones."""
+
+    def tearDown(self) -> None:
+        set_render_signature("")
+
+    def test_signature_change_invalidates_the_hash(self):
+        cfg = make_cfg(Path(tempfile.mkdtemp()))
+        page = sample_page(cfg)
+        set_render_signature("sig-a")
+        before = page.content_hash
+        set_render_signature("sig-b")
+        self.assertNotEqual(before, page.content_hash)
+
+    def test_stable_signature_keeps_the_hash(self):
+        cfg = make_cfg(Path(tempfile.mkdtemp()))
+        page = sample_page(cfg)
+        set_render_signature("sig-a")
+        before = page.content_hash
+        self.assertEqual(before, page.content_hash)
+
+    def test_default_signature_matches_unset(self):
+        cfg = make_cfg(Path(tempfile.mkdtemp()))
+        page = sample_page(cfg)
         self.assertEqual(page.content_hash, page.content_hash)
 
 

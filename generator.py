@@ -40,7 +40,7 @@ from engine.hubs import (  # noqa: E402
 )
 from engine.http import Http  # noqa: E402
 from engine.indexing import notify  # noqa: E402
-from engine.models import Page  # noqa: E402
+from engine.models import Page, set_render_signature  # noqa: E402
 from engine.ratelimit import CallBudget  # noqa: E402
 from engine.render import build_css, build_theme, pick_copy, render_page  # noqa: E402
 from engine.sources import collect_all  # noqa: E402
@@ -75,6 +75,21 @@ async def run(args: argparse.Namespace) -> int:
         log.warning("config.domain is still the placeholder: %s", cfg.domain)
 
     stamp = datetime.now(timezone.utc).isoformat()
+    # Presentation config is part of the page hash, so an ad-unit or theme change
+    # rewrites every page instead of only the ones this run regenerates.
+    set_render_signature(
+        hashlib.sha256(
+            json.dumps(
+                {
+                    "monetization": cfg.raw.get("monetization", {}),
+                    "site": cfg.raw.get("site", {}),
+                    "theme": cfg.raw.get("theme", {}),
+                },
+                sort_keys=True,
+                default=str,
+            ).encode()
+        ).hexdigest()[:16]
+    )
     limits = cfg.limits
     writer = Writer(cfg.paths.output, cfg.paths.cache)
     page_budget = CallBudget(int(limits.get("max_pages_per_run", 100)), seen=set(writer.previous))

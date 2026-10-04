@@ -9,6 +9,20 @@ from typing import Any
 
 _SLUG_RE = re.compile(r"[^a-z0-9]+")
 
+# Presentation config that changes rendered markup but not page data. Set once per run
+# by the generator so that toggling an ad unit or restyling the site rewrites the whole
+# corpus instead of only the pages a run happens to regenerate.
+_RENDER_SIGNATURE = ""
+
+
+def set_render_signature(value: str) -> None:
+    global _RENDER_SIGNATURE
+    _RENDER_SIGNATURE = value
+
+
+def render_signature(_data: Any = None) -> str:
+    return _RENDER_SIGNATURE
+
 
 def slugify(text: str, max_len: int = 80) -> str:
     slug = _SLUG_RE.sub("-", text.lower().strip())
@@ -53,6 +67,10 @@ class Page:
         copy_hash carries the prose, so a page whose AI copy is written days later
         (after the daily Gemini quota frees up) is treated as changed and rewritten.
         Without it, enriched copy would never reach disk.
+
+        render_signature carries the presentation config (monetization, theme, house
+        ad). Without it, switching the native banner on rewrites only the pages a run
+        happens to regenerate, and the rest keep serving the old markup forever.
         """
         payload = json.dumps(
             {
@@ -61,6 +79,7 @@ class Page:
                 "s": self.summary,
                 "c": self.data.get("copy_hash", ""),
                 "f": self.facts,
+                "r": render_signature(self.data),
             },
             sort_keys=True,
             default=str,
