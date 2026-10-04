@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-04T09:44:28.397084+00:00",
- "count": 189,
+ "updated": "2026-10-04T10:12:05.527071+00:00",
+ "count": 246,
  "source": "https://pseoare.pages.dev",
  "results": [
   {
@@ -1514,6 +1514,462 @@
    "date": "2020-01-01",
    "weekday": "Wednesday",
    "page": "https://pseoare.pages.dev/new-year-s-day-kenya-2020-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Kenya (2021)",
+   "country": "Kenya",
+   "local_name": "New Year's Day",
+   "date": "2021-01-01",
+   "weekday": "Friday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-kenya-2021-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Kenya (2022)",
+   "country": "Kenya",
+   "local_name": "New Year's Day",
+   "date": "2022-01-01",
+   "weekday": "Saturday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-kenya-2022-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Kenya (2023)",
+   "country": "Kenya",
+   "local_name": "New Year's Day",
+   "date": "2023-01-02",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-kenya-2023-01-02"
+  },
+  {
+   "holiday": "New Year's Day in Latvia (2016)",
+   "country": "Latvia",
+   "local_name": "Jaungada diena",
+   "date": "2016-01-01",
+   "weekday": "Friday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-latvia-2016-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Latvia (2017)",
+   "country": "Latvia",
+   "local_name": "Jaungada diena",
+   "date": "2017-01-01",
+   "weekday": "Sunday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-latvia-2017-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Latvia (2018)",
+   "country": "Latvia",
+   "local_name": "Jaungada diena",
+   "date": "2018-01-01",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-latvia-2018-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Latvia (2019)",
+   "country": "Latvia",
+   "local_name": "Jaungada diena",
+   "date": "2019-01-01",
+   "weekday": "Tuesday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-latvia-2019-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Latvia (2020)",
+   "country": "Latvia",
+   "local_name": "Jaungada diena",
+   "date": "2020-01-01",
+   "weekday": "Wednesday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-latvia-2020-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Latvia (2021)",
+   "country": "Latvia",
+   "local_name": "Jaungada diena",
+   "date": "2021-01-01",
+   "weekday": "Friday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-latvia-2021-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Latvia (2022)",
+   "country": "Latvia",
+   "local_name": "Jaungada diena",
+   "date": "2022-01-01",
+   "weekday": "Saturday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-latvia-2022-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Latvia (2023)",
+   "country": "Latvia",
+   "local_name": "Jaungada diena",
+   "date": "2023-01-01",
+   "weekday": "Sunday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-latvia-2023-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Lithuania (2016)",
+   "country": "Lithuania",
+   "local_name": "Naujieji metai",
+   "date": "2016-01-01",
+   "weekday": "Friday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-lithuania-2016-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Lithuania (2017)",
+   "country": "Lithuania",
+   "local_name": "Naujieji metai",
+   "date": "2017-01-01",
+   "weekday": "Sunday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-lithuania-2017-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Lithuania (2018)",
+   "country": "Lithuania",
+   "local_name": "Naujieji metai",
+   "date": "2018-01-01",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-lithuania-2018-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Lithuania (2019)",
+   "country": "Lithuania",
+   "local_name": "Naujieji metai",
+   "date": "2019-01-01",
+   "weekday": "Tuesday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-lithuania-2019-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Lithuania (2020)",
+   "country": "Lithuania",
+   "local_name": "Naujieji metai",
+   "date": "2020-01-01",
+   "weekday": "Wednesday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-lithuania-2020-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Lithuania (2021)",
+   "country": "Lithuania",
+   "local_name": "Naujieji metai",
+   "date": "2021-01-01",
+   "weekday": "Friday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-lithuania-2021-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Lithuania (2022)",
+   "country": "Lithuania",
+   "local_name": "Naujieji metai",
+   "date": "2022-01-01",
+   "weekday": "Saturday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-lithuania-2022-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Lithuania (2023)",
+   "country": "Lithuania",
+   "local_name": "Naujieji metai",
+   "date": "2023-01-01",
+   "weekday": "Sunday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-lithuania-2023-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Luxembourg (2016)",
+   "country": "Luxembourg",
+   "local_name": "Neijoerschdag",
+   "date": "2016-01-01",
+   "weekday": "Friday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-luxembourg-2016-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Luxembourg (2017)",
+   "country": "Luxembourg",
+   "local_name": "Neijoerschdag",
+   "date": "2017-01-01",
+   "weekday": "Sunday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-luxembourg-2017-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Luxembourg (2018)",
+   "country": "Luxembourg",
+   "local_name": "Neijoerschdag",
+   "date": "2018-01-01",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-luxembourg-2018-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Luxembourg (2019)",
+   "country": "Luxembourg",
+   "local_name": "Neijoerschdag",
+   "date": "2019-01-01",
+   "weekday": "Tuesday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-luxembourg-2019-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Luxembourg (2020)",
+   "country": "Luxembourg",
+   "local_name": "Neijoerschdag",
+   "date": "2020-01-01",
+   "weekday": "Wednesday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-luxembourg-2020-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Luxembourg (2021)",
+   "country": "Luxembourg",
+   "local_name": "Neijoerschdag",
+   "date": "2021-01-01",
+   "weekday": "Friday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-luxembourg-2021-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Luxembourg (2022)",
+   "country": "Luxembourg",
+   "local_name": "Neijoerschdag",
+   "date": "2022-01-01",
+   "weekday": "Saturday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-luxembourg-2022-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Luxembourg (2023)",
+   "country": "Luxembourg",
+   "local_name": "Neijoerschdag",
+   "date": "2023-01-01",
+   "weekday": "Sunday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-luxembourg-2023-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Mexico (2016)",
+   "country": "Mexico",
+   "local_name": "A\u00f1o Nuevo",
+   "date": "2016-01-01",
+   "weekday": "Friday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-mexico-2016-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Mexico (2017)",
+   "country": "Mexico",
+   "local_name": "A\u00f1o Nuevo",
+   "date": "2017-01-02",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-mexico-2017-01-02"
+  },
+  {
+   "holiday": "New Year's Day in Mexico (2018)",
+   "country": "Mexico",
+   "local_name": "A\u00f1o Nuevo",
+   "date": "2018-01-01",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-mexico-2018-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Mexico (2019)",
+   "country": "Mexico",
+   "local_name": "A\u00f1o Nuevo",
+   "date": "2019-01-01",
+   "weekday": "Tuesday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-mexico-2019-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Mexico (2020)",
+   "country": "Mexico",
+   "local_name": "A\u00f1o Nuevo",
+   "date": "2020-01-01",
+   "weekday": "Wednesday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-mexico-2020-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Mexico (2021)",
+   "country": "Mexico",
+   "local_name": "A\u00f1o Nuevo",
+   "date": "2021-01-01",
+   "weekday": "Friday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-mexico-2021-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Mexico (2022)",
+   "country": "Mexico",
+   "local_name": "A\u00f1o Nuevo",
+   "date": "2021-12-31",
+   "weekday": "Friday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-mexico-2021-12-31"
+  },
+  {
+   "holiday": "New Year's Day in Mexico (2023)",
+   "country": "Mexico",
+   "local_name": "A\u00f1o Nuevo",
+   "date": "2023-01-02",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-mexico-2023-01-02"
+  },
+  {
+   "holiday": "New Year's Day in Morocco (2016)",
+   "country": "Morocco",
+   "local_name": "Ras l' \u00e2m",
+   "date": "2016-01-01",
+   "weekday": "Friday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-morocco-2016-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Morocco (2017)",
+   "country": "Morocco",
+   "local_name": "Ras l' \u00e2m",
+   "date": "2017-01-01",
+   "weekday": "Sunday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-morocco-2017-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Morocco (2018)",
+   "country": "Morocco",
+   "local_name": "Ras l' \u00e2m",
+   "date": "2018-01-01",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-morocco-2018-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Morocco (2019)",
+   "country": "Morocco",
+   "local_name": "Ras l' \u00e2m",
+   "date": "2019-01-01",
+   "weekday": "Tuesday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-morocco-2019-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Morocco (2020)",
+   "country": "Morocco",
+   "local_name": "Ras l' \u00e2m",
+   "date": "2020-01-01",
+   "weekday": "Wednesday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-morocco-2020-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Morocco (2021)",
+   "country": "Morocco",
+   "local_name": "Ras l' \u00e2m",
+   "date": "2021-01-01",
+   "weekday": "Friday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-morocco-2021-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Morocco (2022)",
+   "country": "Morocco",
+   "local_name": "Ras l' \u00e2m",
+   "date": "2022-01-01",
+   "weekday": "Saturday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-morocco-2022-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Morocco (2023)",
+   "country": "Morocco",
+   "local_name": "Ras l' \u00e2m",
+   "date": "2023-01-01",
+   "weekday": "Sunday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-morocco-2023-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Netherlands (2016)",
+   "country": "Netherlands",
+   "local_name": "Nieuwjaarsdag",
+   "date": "2016-01-01",
+   "weekday": "Friday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-netherlands-2016-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Netherlands (2017)",
+   "country": "Netherlands",
+   "local_name": "Nieuwjaarsdag",
+   "date": "2017-01-01",
+   "weekday": "Sunday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-netherlands-2017-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Netherlands (2018)",
+   "country": "Netherlands",
+   "local_name": "Nieuwjaarsdag",
+   "date": "2018-01-01",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-netherlands-2018-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Netherlands (2019)",
+   "country": "Netherlands",
+   "local_name": "Nieuwjaarsdag",
+   "date": "2019-01-01",
+   "weekday": "Tuesday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-netherlands-2019-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Netherlands (2020)",
+   "country": "Netherlands",
+   "local_name": "Nieuwjaarsdag",
+   "date": "2020-01-01",
+   "weekday": "Wednesday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-netherlands-2020-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Netherlands (2021)",
+   "country": "Netherlands",
+   "local_name": "Nieuwjaarsdag",
+   "date": "2021-01-01",
+   "weekday": "Friday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-netherlands-2021-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Netherlands (2022)",
+   "country": "Netherlands",
+   "local_name": "Nieuwjaarsdag",
+   "date": "2022-01-01",
+   "weekday": "Saturday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-netherlands-2022-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Netherlands (2023)",
+   "country": "Netherlands",
+   "local_name": "Nieuwjaarsdag",
+   "date": "2023-01-01",
+   "weekday": "Sunday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-netherlands-2023-01-01"
+  },
+  {
+   "holiday": "New Year's Day in New Zealand (2016)",
+   "country": "New Zealand",
+   "local_name": "New Year's Day",
+   "date": "2016-01-01",
+   "weekday": "Friday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-new-zealand-2016-01-01"
+  },
+  {
+   "holiday": "New Year's Day in New Zealand (2017)",
+   "country": "New Zealand",
+   "local_name": "New Year's Day",
+   "date": "2017-01-02",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-new-zealand-2017-01-02"
+  },
+  {
+   "holiday": "New Year's Day in New Zealand (2018)",
+   "country": "New Zealand",
+   "local_name": "New Year's Day",
+   "date": "2018-01-01",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-new-zealand-2018-01-01"
+  },
+  {
+   "holiday": "New Year's Day in New Zealand (2019)",
+   "country": "New Zealand",
+   "local_name": "New Year's Day",
+   "date": "2019-01-01",
+   "weekday": "Tuesday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-new-zealand-2019-01-01"
+  },
+  {
+   "holiday": "New Year's Day in New Zealand (2020)",
+   "country": "New Zealand",
+   "local_name": "New Year's Day",
+   "date": "2020-01-01",
+   "weekday": "Wednesday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-new-zealand-2020-01-01"
+  },
+  {
+   "holiday": "New Year's Day in New Zealand (2021)",
+   "country": "New Zealand",
+   "local_name": "New Year's Day",
+   "date": "2021-01-01",
+   "weekday": "Friday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-new-zealand-2021-01-01"
   }
  ]
 }
