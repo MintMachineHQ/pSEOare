@@ -3034,3 +3034,7 @@ class TestApiAggregatesCoverEveryRankingTopic(unittest.TestCase):
         out = dict(explore.api_endpoints(store, "2026-10-04T00:00:00Z"))
         row = _json.loads(out["api/countries.json"])["results"][0]
         self.assertNotIn("name", row)
+        # Keys must be usable identifiers, not display labels.
+        for key in row:
+            with self.subTest(key=key):
+                self.assertRegex(key, r"^[a-z][a-z0-9_]*$")

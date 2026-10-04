@@ -571,8 +571,11 @@ def api_endpoints(store: MetricsStore, stamp: str) -> list[tuple[str, str]]:
             "note": "figures are World Bank indicators; country rows carry only the "
                     "indicators present in the source release",
             "results": [
+                # Indicator keys are normalised to snake_case. "gdp per capita" as a
+                # JSON key is awkward for every consumer and inconsistent with the
+                # hand-written endpoints, which use annual_mean_c and so on.
                 {"country": r.data.get("name"), "page": link(r.path),
-                 **{k: v for k, v in r.data.items()
+                 **{_api_key(k): v for k, v in r.data.items()
                     if k not in ("name",) and isinstance(v, (int, float))}}
                 for r in countries
             ],
@@ -609,6 +612,11 @@ def api_endpoints(store: MetricsStore, stamp: str) -> list[tuple[str, str]]:
             ],
         }, indent=1)))
     return out
+
+
+def _api_key(label: str) -> str:
+    """'gdp per capita' -> 'gdp_per_capita', so every JSON key is a usable identifier."""
+    return "_".join(str(label).lower().replace("%", "percent").split())
 
 
 def _envelope(answer: dict[str, Any], source_path: str, title: str, stamp: str) -> str:
