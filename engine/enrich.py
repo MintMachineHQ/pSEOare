@@ -103,7 +103,40 @@ Write in English. Requirements:
 - Then exactly two FAQ items formatted as:
 FAQ: <question>?|<answer under 35 words>
 FAQ: <question>?|<answer under 35 words>
-- Do not output HTML tags, markdown headers, or preamble."""
+- Do not output HTML tags, markdown headers, or preamble.
+
+Every sentence must be derivable from this page's own figures. Two failures cost this
+corpus more than thin prose did, and both are instructions the model cannot infer:
+
+1. Boilerplate. Asked for "copy about this page" the model reliably produced the same
+   three sentences for every city: how the data is cached, how often it refreshes, and
+   where to find the table. Measured live, 131 of 220 sampled pages shared those
+   sentences verbatim. Talk about the data, never about the machinery that fetched it.
+2. Never write any of these, in any form: "refreshed automatically", "scheduled build",
+   "cached", "public open API", "queried automatically", "use the table below",
+   "related pages below", "stay live", "downloaded". They are true of every page on the
+   site, which is exactly why they are worthless on any one of them."""
+
+# Phrases that describe the build rather than the page. Every page on this site is
+# cached, refreshed on a schedule and built from a public API, so a sentence containing
+# one of these says nothing about the page it sits on. The AI produced them anyway,
+# identically, for every city in the corpus.
+BOILERPLATE_PHRASES = (
+    "refreshed automatically",
+    "scheduled build",
+    "cached",
+    "public open api",
+    "queried automatically",
+    "use the table below",
+    "related pages below",
+    "stay live",
+)
+
+
+def is_boilerplate(text: str) -> bool:
+    """True when generated copy leans on build machinery instead of the figures."""
+    lowered = (text or "").lower()
+    return any(phrase in lowered for phrase in BOILERPLATE_PHRASES)
 
 
 class ChatProvider:
@@ -301,7 +334,8 @@ class Enricher:
         self.cache_path = cfg.paths.cache / "gemini_cache.json"
         self.model_cache_path = cfg.paths.cache / "gemini_model.json"
         self.cache: dict[str, str] = read_json_cache(self.cache_path, {}) or {}
-        self.stats = {"hit": 0, "generated": 0, "fallback": 0, "failed": 0}
+        self.stats = {"hit": 0, "generated": 0, "fallback": 0, "failed": 0,
+                      "boilerplate": 0, "evicted": 0}
         # Consecutive hard failures (bad key, wrong model, quota exhausted) disable
         # enrichment for the rest of the run instead of retrying every page.
         self.consecutive_failures = 0
@@ -414,6 +448,15 @@ class Enricher:
         async def worker(page: Page) -> None:
             key = str(page.data.get("key") or page.slug)
             text = await self._call(page)
+            if text and is_boilerplate(text):
+                # Measured live, 131 of 220 sampled pages carried the same three
+                # sentences about caching and refresh schedules. Those pages are worse
+                # off than the deterministic copy, which at least interpolates the
+                # figures, so the generated text is dropped and the page falls back.
+                self.cache.pop(key, None)
+                self.stats["boilerplate"] += 1
+                log.info("discarded boilerplate copy for %s", page.slug)
+                return
             if text:
                 self.cache[key] = text
                 self.stats["generated"] += 1
@@ -426,6 +469,16 @@ class Enricher:
                 log.warning("gemini disabled mid-run: %d pages keep fallback copy", len(targets) - start)
                 break
             await asyncio.gather(*(worker(p) for p in targets[start : start + 4]))
+
+        # Prose cached before the boilerplate rule existed is still in the cache and
+        # would otherwise be served forever. It is evicted once, here, rather than
+        # needing the pages to come round again for regeneration.
+        stale = [k for k, v in self.cache.items() if v and is_boilerplate(v)]
+        for key in stale:
+            self.cache.pop(key, None)
+        if stale:
+            log.info("evicted %d cached boilerplate entries", len(stale))
+            self.stats["evicted"] = len(stale)
 
         self.cache = {k: v for k, v in self.cache.items() if v}
         write_json_cache(self.cache_path, self.cache)

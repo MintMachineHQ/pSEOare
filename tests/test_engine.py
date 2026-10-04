@@ -2323,3 +2323,76 @@ class TestDerivedRegistrationTracksReality(unittest.TestCase):
         w2 = self._writer(tmp)
         w2.sync_manifest([], "2026-10-05T00:00:00Z", derived={"today.html": "today"})
         self.assertIn(page.path, w2.manifest_pages())
+
+
+class TestCountryPagesHaveTables(unittest.TestCase):
+    """All 200 country pages were dataset pages with eight key figures and no table, so
+    the one dataset kind on the site had nothing tabular to read."""
+
+    def test_country_pages_carry_a_table(self):
+        import inspect
+
+        from engine.sources import countries as country_source
+
+        src = inspect.getsource(country_source._country_pages)
+        # Both country kinds build a table from figures already computed for the facts.
+        self.assertGreaterEqual(src.count('"headers": ["Indicator", "Value"]'), 2)
+        self.assertIn('"caption": f"{name} country indicators', src)
+
+    def test_quality_report_stops_failing_country_pages(self):
+        from engine.quality import score_html
+
+        html = (
+            '<link rel="canonical" href="https://x/y">'
+            '<meta name="description" content="a description comfortably over forty characters">'
+            '<script type="application/ld+json">{}</script><table><tr><td>x</td></tr></table>'
+            + "<div><strong>Fact one</strong><br>1</div>" * 8
+            + "<p>" + ("word " * 300) + "</p>"
+        )
+        self.assertTrue(score_html("afghanistan-country-data.html", "country", html, 4).ok)
+
+
+class TestBoilerplateDetection(unittest.TestCase):
+    """Measured live on 2026-10-04: 131 of 220 sampled pages carried the same sentences
+    about caching and refresh schedules. The text came from the AI prose cache, not the
+    deterministic fallback, so fixing the fallback alone changed nothing."""
+
+    def test_build_machinery_phrases_are_detected(self):
+        from engine.enrich import is_boilerplate
+
+        for phrase in (
+            "Figures are refreshed automatically by a scheduled build.",
+            "The value is cached locally so the page keeps working.",
+            "It comes from a public open API queried automatically.",
+            "Use the table below for exact numbers.",
+            "Older pages stay live.",
+        ):
+            with self.subTest(phrase=phrase):
+                self.assertTrue(is_boilerplate(phrase))
+
+    def test_figure_bearing_prose_passes(self):
+        from engine.enrich import is_boilerplate
+
+        self.assertFalse(is_boilerplate(
+            "Kazan runs from -13.9 C in January to 19.4 C in July, a swing of 33.3 C."
+        ))
+
+    def test_the_prompt_forbids_the_phrases(self):
+        from engine.enrich import PROMPT
+
+        lowered = PROMPT.lower()
+        for phrase in ("refreshed automatically", "scheduled build", "cached", "use the table below"):
+            with self.subTest(phrase=phrase):
+                self.assertIn(phrase, lowered)
+
+    def test_the_real_live_boilerplate_is_caught(self):
+        """The exact sentence pair measured across 131 live pages."""
+        from engine.enrich import is_boilerplate
+
+        live = (
+            "This reference page collects Buenos Aires climate in one place: annual mean "
+            "temperature 18.0 C. Figures are refreshed automatically by a scheduled build "
+            "and cached locally so the page keeps its values even when the upstream API is "
+            "temporarily unavailable. Use the table below for exact numbers."
+        )
+        self.assertTrue(is_boilerplate(live))

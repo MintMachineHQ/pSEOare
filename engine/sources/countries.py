@@ -154,6 +154,26 @@ def _country_pages(record: dict, v: dict[str, float], cfg, stamp: str, from_cach
         ],
         data={
             "entity": name,
+            # Country pages carried eight key figures but no table, so a dataset page on
+            # this site had no table at all. The figures are already computed here; laying
+            # them out as a table costs nothing and makes the page a usable reference
+            # rather than a summary.
+            "table": {
+                "caption": f"{name} country indicators, World Bank {INDICATOR_YEAR}",
+                "headers": ["Indicator", "Value"],
+                "rows": [
+                    ["ISO3 code", iso3],
+                    ["Population", f"{population:,.0f}" if population else "n/a"],
+                    ["Surface area", f"{area:,.0f} km2" if area else "n/a"],
+                    ["Population density", f"{fmt_num(density, 1)} /km2" if density else "n/a"],
+                    ["GDP", _money(gdp)],
+                    ["GDP per capita", _money(gdp_pc)],
+                    ["Capital", capital],
+                    ["Income group", income],
+                    ["Region", region],
+                    ["Data year", str(INDICATOR_YEAR)],
+                ],
+            },
             "sections": [
                 {
                     "heading": f"Reading the {name} profile",
@@ -203,6 +223,18 @@ def _country_pages(record: dict, v: dict[str, float], cfg, stamp: str, from_cach
         ],
         data={
             "entity": name,
+            "table": {
+                "caption": f"{name} population and land, World Bank {INDICATOR_YEAR}",
+                "headers": ["Indicator", "Value"],
+                "rows": [
+                    ["Population", f"{population:,.0f}" if population else "n/a"],
+                    ["Surface area", f"{area:,.0f} km2" if area else "n/a"],
+                    ["Population density", f"{fmt_num(density, 1)} /km2" if density else "n/a"],
+                    ["Capital", capital],
+                    ["Income group", income],
+                    ["Data year", str(INDICATOR_YEAR)],
+                ],
+            },
             "sections": [
                 {
                     "heading": f"How the {name} population figure is derived",
