@@ -1933,3 +1933,55 @@ class TestBingSubmission(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)
+
+class TestQualityScoring(unittest.TestCase):
+    def test_visible_words_ignores_scripts_and_markup(self):
+        from engine.quality import visible_words
+
+        html = "<html><script>var a='one two three four';</script><p>one two</p></html>"
+        self.assertEqual(visible_words(html), 2)
+
+    def test_extract_prose_drops_the_house_ad(self):
+        """The house ad is identical on every page by design. Counting it made the most
+        repeated 'sentence' on the site one the writer never wrote."""
+        from engine.quality import extract_prose
+
+        html = '<p>Real content here.</p><aside class="ad-zone"><p>More reference data</p></aside>'
+        prose = extract_prose(html)
+        self.assertIn("Real content", prose)
+        self.assertNotIn("More reference data", prose)
+
+    def test_a_healthy_page_scores_clean(self):
+        from engine.quality import score_html
+
+        html = (
+            '<link rel="canonical" href="https://x/y">'
+            '<meta name="description" content="a description comfortably over forty characters">'
+            '<script type="application/ld+json">{}</script>'
+            '<table><tr><td>x</td></tr></table>'
+            + "<div><strong>Fact one</strong><br>1</div>" * 5
+            + "<p>" + ("word " * 300) + "</p>"
+        )
+        score = score_html("y.html", "climate", html, related=4)
+        self.assertTrue(score.ok, score.problems)
+
+    def test_a_thin_page_is_reported_not_blocked(self):
+        from engine.quality import score_html
+
+        score = score_html("y.html", "climate", "<p>hi</p>", related=0)
+        self.assertFalse(score.ok)
+        self.assertTrue(any("thin" in p for p in score.problems))
+
+    def test_hubs_are_not_judged_as_articles(self):
+        from engine.quality import score_html
+
+        hub = score_html("hub-climate.html", "hub", "<p>Climate</p>", related=40)
+        self.assertNotIn("thin", " ".join(hub.problems))
+
+    def test_repetition_report_ranks_shared_sentences(self):
+        from engine.quality import repetition_report
+
+        shared = "This sentence is deliberately long enough to clear the repetition filter."
+        prose = {f"p{i}.html": f"Unique words {i}. {shared}" for i in range(9)}
+        top = repetition_report(prose)
+        self.assertEqual(top[0][1], 9)

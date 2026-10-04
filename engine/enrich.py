@@ -807,6 +807,52 @@ _CLIMATE_CLOSERS = (
 )
 
 
+
+_GENERIC_FAQ = (
+    (
+        "Where does the {subject} date come from?",
+        "It is read from {country}'s published public holiday calendar, refreshed from the "
+        "upstream source and cached after each successful run.",
+        "holiday",
+    ),
+    (
+        "Does {subject} fall on the same date every year?",
+        "The day and month are fixed for this holiday, so only the weekday shifts as the "
+        "year moves on.",
+        "holiday",
+    ),
+    (
+        "Why does {subject} land on a different weekday each year?",
+        "A fixed calendar date falls on a different weekday as the year shifts; movable "
+        "holidays additionally move by a few days each year.",
+        "holiday",
+    ),
+    (
+        "How is the {subject} range calculated?",
+        "The high and low are the extremes of the trailing 12 months of daily prices, and "
+        "the latest price is the most recent reading in that window.",
+        "crypto",
+    ),
+    (
+        "How often is {subject} updated?",
+        "Prices are refreshed on a daily build, so the trailing window moves forward a "
+        "little every day.",
+        "crypto",
+    ),
+    (
+        "Where do the {subject} figures come from?",
+        "A public open API is queried automatically, and the response is cached so a later "
+        "outage never blanks the page.",
+        "country",
+    ),
+    (
+        "How current are the {subject} indicators?",
+        "They come from the World Bank and are rebuilt on a scheduled run; values refresh "
+        "at least daily and older pages stay live.",
+        "country",
+    ),
+)
+
 def _months(count: int) -> str:
     """Render a month count with the right noun, for the few templates that need it."""
     return "1 month" if count == 1 else f"{count} months"
@@ -1139,14 +1185,14 @@ def fallback_copy(page: Page) -> tuple[str, list[tuple[str, str]]]:
         ][:2]
         faq = [(q.format(**fill), a.format(**fill)) for q, a in chosen]
     else:
+        # These two pairs were identical on ~970 pages. Each kind now gets a question
+        # about its own subject, so the answers carry information rather than restating
+        # that the site is automated.
+        pool = [row for row in _GENERIC_FAQ if row[2] == page.kind] or _GENERIC_FAQ[-2:]
+        start = int(hashlib.sha256((page.slug + "faq").encode()).hexdigest(), 16) % len(pool)
         faq = [
-            (
-                f"Where does the data on {subject} come from?",
-                "A public open API, queried automatically and cached after every successful run.",
-            ),
-            (
-                f"How often is {subject} updated?",
-                "The build runs on a schedule, so values refresh at least daily and older pages stay live.",
-            ),
-        ]
+            (q.format(subject=subject, country=_fact(page, "Country") or "the country"),
+             a.format(subject=subject, country=_fact(page, "Country") or "the country"))
+            for q, a, _ in pool[start:] + pool[:start]
+        ][:2]
     return prose, faq
