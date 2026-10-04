@@ -255,6 +255,8 @@ def sitemap_xml(
     cfg: Config,
     stamp: str,
     published: dict[str, Any] | None = None,
+    extra: list[str] | None = None,
+    extra_dirs: set[str] | None = None,
 ) -> str:
     """Sitemap for the whole published corpus.
 
@@ -276,6 +278,25 @@ def sitemap_xml(
         generated = (entry or {}).get("generated_at") or stamp
         urls.append((path, "0.7", "weekly", generated))
     urls += [(p.path, "0.7", "weekly", stamp) for p in pages]
+
+    # Derived surfaces: rankings, comparisons, the Today page, the API docs, the widget
+    # pages and the JSON endpoints. They are not Page objects, so they are passed in as
+    # paths. Rankings and Today change whenever the underlying figures do, so they carry
+    # a daily changefreq; the API files change with the build too. Widgets and API
+    # documents are stable, so they are weekly.
+    daily, weekly = [], []
+    for path in extra or []:
+        if path.startswith("top-") or path in ("today.html", "all-datasets-1.html"):
+            daily.append(path)
+        elif path.endswith(".json"):
+            daily.append(path)
+        else:
+            weekly.append(path)
+    urls += [(p, "0.9", "daily", stamp) for p in daily]
+    urls += [(p, "0.6", "weekly", stamp) for p in weekly]
+    # Directories such as api/ appear in the sitemap through their files; listing the
+    # directory itself would be a URL that serves a directory listing.
+    urls = [u for u in urls if u[0] not in (extra_dirs or set())]
 
     seen: set[str] = set()
     entries = []

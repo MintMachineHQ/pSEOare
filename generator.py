@@ -40,6 +40,8 @@ from engine.hubs import (  # noqa: E402
 )
 from engine.http import Http  # noqa: E402
 from engine.indexing import notify  # noqa: E402
+from engine import explore  # noqa: E402
+from engine.metrics import MetricsStore, metrics_for  # noqa: E402
 from engine.models import Page, set_render_signature  # noqa: E402
 from engine.ratelimit import CallBudget  # noqa: E402
 from engine.render import build_css, build_theme, pick_copy, render_page  # noqa: E402
@@ -143,8 +145,53 @@ async def run(args: argparse.Namespace) -> int:
 
         for filename, html_doc in hub_documents(pages, cfg, theme, css):
             writer.write_raw(filename, html_doc)
+        # Derived surfaces: rankings, comparisons, Today, the JSON API, widgets and the
+        # charts that feed them. These are built from the metrics store rather than from
+        # the pages in hand, because a run only ever collects a few hundred of ~1,700 and
+        # a ranking over 300 cities is the entire point.
+        explore.configure(cfg.domain, cfg.site_name)
+        store = MetricsStore(cfg.paths.cache)
+        for page in pages:
+            store.record(page, metrics_for(page))
+        store.save()
+        derived_docs = (
+            explore.ranking_pages(store, stamp)
+            + explore.comparison_pages(store, stamp)
+            + [explore.today_page(store, stamp)]
+            + [explore.api_docs(store, stamp)]
+            + explore.widget_pages(store, stamp)
+            + [explore.embed_snippet(store, stamp)]
+        )
+        derived_paths: list[str] = []
+        derived_titles: dict[str, str] = {}
+        for filename, html_doc, kind in derived_docs:
+            writer.write_raw(filename, html_doc)
+            derived_paths.append(filename)
+            derived_titles[filename] = kind
+        for filename, payload in explore.api_endpoints(store, stamp):
+            writer.write_raw(filename, payload)
+            derived_paths.append(filename)
+            derived_titles[filename] = "api"
+        log.info(
+            "explore: %d derived pages from %d tracked rows",
+            len(derived_paths),
+            len(store.rows),
+        )
         if cfg.seo.get("generate_sitemap", True):
-            writer.write_raw("sitemap.xml", sitemap_xml(pages, cfg, stamp, published=writer.manifest_pages()))
+            # Nested paths such as api/climate.json contribute their directory to the
+            # orphan keep set, never their filename.
+            extra_dirs = {p.split("/")[0] + "/" for p in derived_paths if "/" in p}
+            writer.write_raw(
+                "sitemap.xml",
+                sitemap_xml(
+                    pages,
+                    cfg,
+                    stamp,
+                    published=writer.manifest_pages(),
+                    extra=derived_paths,
+                    extra_dirs=extra_dirs,
+                ),
+            )
             writer.write_raw("robots.txt", robots_txt(cfg))
             writer.write_raw("llms.txt", llms_txt(cfg))
             writer.write_raw("feed.xml", rss_feed(pages, cfg, stamp))
@@ -160,7 +207,9 @@ async def run(args: argparse.Namespace) -> int:
             pages,
             stamp,
             prune=args.prune,
-            extra_keep=set((cfg.seo.get("verification_files") or {}).keys()),
+            extra_keep=set((cfg.seo.get("verification_files") or {}).keys())
+            | extra_dirs,
+            derived=derived_titles,
         )
 
         urls = [cfg.url_for(path) for path in new_files]

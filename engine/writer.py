@@ -1,6 +1,7 @@
 """Delta-aware output writer: only rewrites pages whose content hash changed."""
 from __future__ import annotations
 
+import hashlib
 import logging
 import shutil
 from dataclasses import asdict
@@ -43,7 +44,11 @@ class Writer:
         return new_urls, written
 
     def write_raw(self, filename: str, content: str) -> None:
-        (self.output / filename).write_text(content, encoding="utf-8")
+        destination = self.output / filename
+        # Nested paths such as api/climate.json need their directory created. Without
+        # this the first run that emits a JSON endpoint fails the whole build.
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        destination.write_text(content, encoding="utf-8")
 
     def write_deploy_metadata(self) -> None:
         """Keep static hosts from swallowing the site: no Jekyll, no underscore dirs."""
@@ -64,6 +69,7 @@ class Writer:
         stamp: str,
         prune: bool = False,
         extra_keep: set[str] | None = None,
+        derived: dict[str, str] | None = None,
     ) -> None:
         # The manifest is cumulative: each run covers a slice of the corpus, so pages
         # produced by earlier runs must stay registered or they would be forgotten and
@@ -72,6 +78,17 @@ class Writer:
         entries = dict(previous_pages)
         for page in pages:
             entries[page.path] = asdict(ManifestEntry.from_page(page, stamp))
+        # Derived surfaces (rankings, comparisons, Today, widgets, API docs) are written
+        # as raw documents rather than Page objects, so they have to be registered here.
+        # Unregistered, the orphan sweep deletes them on the next run and the sitemap
+        # loses those URLs, which is the one failure mode the sitemap must never have:
+        # a URL that was published once and then silently dropped.
+        for path, title in (derived or {}).items():
+            entries[path] = asdict(
+                ManifestEntry(path=path, kind="derived", title=title,
+                              content_hash=hashlib.sha256(path.encode()).hexdigest()[:16],
+                              generated_at=stamp)
+            )
         write_json_cache(self.manifest_path, {"updated_at": stamp, "pages": entries})
 
         # 404.html must survive the orphan sweep, otherwise the host falls back to

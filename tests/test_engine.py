@@ -51,6 +51,7 @@ from engine.render import (  # noqa: E402
 )
 from engine.http import Http, QuotaExhausted, _is_quota_exhausted, write_json_cache  # noqa: E402
 from engine.indexing import key_file_is_reachable, remember_pending, take_pending  # noqa: E402
+from engine.metrics import Metrics as _Metrics  # noqa: E402
 from engine.models import Link, Page, set_render_signature, slugify  # noqa: E402
 from engine.ratelimit import CallBudget  # noqa: E402
 from engine.sources.base import cached_fetch, trim_to_budget  # noqa: E402
@@ -1985,3 +1986,225 @@ class TestQualityScoring(unittest.TestCase):
         prose = {f"p{i}.html": f"Unique words {i}. {shared}" for i in range(9)}
         top = repetition_report(prose)
         self.assertEqual(top[0][1], 9)
+
+
+class TestExploreSurfaces(unittest.TestCase):
+    """Rankings, comparisons, Today, the API and widgets are built from the metrics
+    store, so they must be generated without network access and without raising."""
+
+    def _store(self, tmp=None, climates=6, cryptos=2, countries=3, holidays=4):
+        import tempfile as tf
+
+        from engine.metrics import MetricsStore
+
+        store = MetricsStore(Path(tmp or tf.mkdtemp()))
+        store.record_rows = True
+        months = [[m, 20.0 + i, 2.0] for i, m in enumerate(
+            ["January", "February", "March", "April", "May", "June",
+             "July", "August", "September", "October", "November", "December"])]
+        for i in range(climates):
+            store.rows[f"city{i}.html"] = _Metrics(
+                path=f"city{i}.html", kind="climate_city", title=f"City{i} climate",
+                slug=f"city{i}", entity=f"city{i}",
+                data={"name": f"City{i}", "annual_mean": 10.0 + i * 3, "swing": 5.0 + i,
+                      "annual_rain": 400 + i * 300, "warmest_month": "Jul",
+                      "coldest_month": "Jan", "warmest": 20.0 + i, "coldest": 1.0,
+                      "wettest_month": "Mar", "wettest_rain": 3.0, "driest_month": "Aug",
+                      "driest_rain": 0.5, "months": months},
+            )
+        for i in range(cryptos):
+            store.rows[f"coin{i}.html"] = _Metrics(
+                path=f"coin{i}.html", kind="crypto_12m", title=f"Coin{i}", slug=f"coin{i}",
+                entity=f"coin{i}",
+                data={"name": f"Coin{i}", "high": 200.0, "low": 100.0, "last": 150.0,
+                      "range_pct": 100.0, "above_low_pct": 50.0, "below_high_pct": 25.0,
+                      "months": []},
+            )
+        for i in range(countries):
+            store.rows[f"country{i}.html"] = _Metrics(
+                path=f"country{i}.html", kind="country_profile", title=f"Country{i}",
+                slug=f"country{i}", entity=f"country{i}",
+                data={"name": f"Country{i}", "population": 1000000 * (i + 1),
+                      "life expectancy": 60 + i, "fertility rate": 3.0 - i * 0.4},
+            )
+        for i in range(holidays):
+            store.rows[f"hol{i}.html"] = _Metrics(
+                path=f"hol{i}.html", kind="holiday_single", title=f"Holiday{i}",
+                slug=f"hol{i}", entity=f"country{i % 3}",
+                data={"name": f"Holiday{i}", "date": f"2027-01-{10 + i:02d}",
+                      "month": 1, "day": 10 + i, "weekday": "Sunday",
+                      "weekend": True, "country": f"Country{i % 3}",
+                      "local_name": f"Local{i}", "next_date": "2028-01-10"},
+            )
+        return store
+
+    def test_rankings_are_generated_for_each_supported_figure(self):
+        from engine import explore
+
+        docs = dict((f, k) for f, _, k in explore.ranking_pages(self._store(), "2026-10-04T00:00:00Z"))
+        self.assertIn("top-coldest-cities.html", docs)
+        self.assertIn("top-warmest-cities.html", docs)
+        self.assertIn("top-largest-seasonal-swing.html", docs)
+        self.assertIn("top-most-populous-countries.html", docs)
+        self.assertIn("top-crypto-largest-range.html", docs)
+        # 12 months x 4 seasonal figures
+        seasonal = [f for f in docs if "-cities-in-" in f]
+        self.assertEqual(len(seasonal), 48)
+
+    def test_rankings_are_ordered_by_the_named_field(self):
+        from engine import explore
+
+        store = self._store()
+        pages = dict((f, h) for f, h, _ in explore.ranking_pages(store, "2026-10-04T00:00:00Z"))
+        html = pages["top-coldest-cities.html"]
+        # annual_mean rises with the index, so the coldest ranking must list City0 first.
+        self.assertLess(html.index("City0<"), html.index("City5<"))
+
+    def test_seasonal_ranking_headers_name_the_column(self):
+        """The seasonal rankings rank on a column index, so the header has to come from
+        a label. Passing the int through produced a crash on the first run."""
+        from engine import explore
+
+        pages = dict((f, h) for f, h, _ in explore.ranking_pages(self._store(), "2026-10-04T00:00:00Z"))
+        html = pages["top-coldest-cities-in-january.html"]
+        self.assertIn("Mean temperature", html)
+        self.assertNotIn("replace", html)
+
+    def test_comparison_pages_state_which_side_wins(self):
+        from engine import explore
+
+        docs = explore.comparison_pages(self._store(), "2026-10-04T00:00:00Z")
+        self.assertTrue(docs)
+        html = docs[0][1]
+        self.assertIn("is the warmer of the two", html)
+        self.assertIn("smaller seasonal swing", html)
+
+    def test_today_page_lists_holidays_and_sections(self):
+        from engine import explore
+
+        name, html, kind = explore.today_page(self._store(), "2026-10-04T00:00:00Z")
+        self.assertEqual((name, kind), ("today.html", "today"))
+        self.assertIn("Climate", html)
+        self.assertIn("Crypto", html)
+        self.assertIn("Public holidays", html)
+        self.assertIn("Today&rsquo;s climate fact", html)
+
+    def test_api_endpoints_are_valid_json(self):
+        import json as _json
+
+        from engine import explore
+
+        out = dict(explore.api_endpoints(self._store(), "2026-10-04T00:00:00Z"))
+        self.assertIn("api/climate.json", out)
+        self.assertIn("api/holidays.json", out)
+        self.assertIn("api/crypto.json", out)
+        payload = _json.loads(out["api/climate.json"])
+        self.assertEqual(payload["count"], 6)
+        self.assertIn("annual_mean_c", payload["results"][0])
+
+    def test_widget_pages_are_embeddable_and_bare(self):
+        from engine import explore
+
+        docs = explore.widget_pages(self._store(), "2026-10-04T00:00:00Z")
+        self.assertTrue(docs)
+        name, html, kind = docs[0]
+        self.assertTrue(name.startswith("widget-climate-"))
+        self.assertEqual(kind, "widget")
+        # A widget must not carry the site chrome it will be embedded inside.
+        self.assertNotIn("application/ld+json", html)
+        self.assertIn("Data by", html)
+
+    def test_embed_snippet_returns_a_page(self):
+        from engine import explore
+
+        name, html, kind = explore.embed_snippet(self._store(), "2026-10-04T00:00:00Z")
+        self.assertEqual(name, "widgets.html")
+        # The snippet is shown to a reader inside <pre><code>, so the tags are escaped.
+        # An unescaped <iframe> here would be a live embed on this very page.
+        self.assertIn("&lt;iframe", html)
+        self.assertNotIn("<iframe", html)
+        self.assertIn("widget-climate-", html)
+
+    def test_an_empty_store_produces_no_rankings_rather_than_failing(self):
+        import tempfile as tf
+
+        from engine import explore
+        from engine.metrics import MetricsStore
+
+        empty = MetricsStore(Path(tf.mkdtemp()))
+        self.assertEqual(explore.ranking_pages(empty, "2026-10-04T00:00:00Z"), [])
+        self.assertEqual(explore.comparison_pages(empty, "2026-10-04T00:00:00Z"), [])
+        name, html, _ = explore.today_page(empty, "2026-10-04T00:00:00Z")
+        self.assertEqual(name, "today.html")
+
+    def test_bar_chart_is_svg_and_scales_with_the_data(self):
+        from engine.explore import bar_chart
+
+        svg = bar_chart([1, 5, 3], ["a", "b", "c"], title="t", unit=" C")
+        self.assertIn("<svg", svg)
+        self.assertIn('role="img"', svg)
+        self.assertIn(">b: 5.0 C<", svg)   # value present as text, not only geometry
+        self.assertEqual(bar_chart([], []), "")
+
+
+class TestEntityNames(unittest.TestCase):
+    """A page's h1 carries its page type. That suffix must not reach a ranking row, a
+    comparison heading, a JSON field or a widget title."""
+
+    def _name(self, h1):
+        from engine.metrics import _entity_name
+
+        page = Page(kind="x", slug="s", title="t", h1=h1, summary="x")
+        return _entity_name(page)
+
+    def test_page_type_suffixes_are_stripped(self):
+        self.assertEqual(self._name("Kemerovo climate: monthly averages"), "Kemerovo")
+        self.assertEqual(
+            self._name("Algorand price by month: 12 month high, low and average"), "Algorand"
+        )
+        self.assertEqual(self._name("Afghanistan country data"), "Afghanistan")
+
+    def test_a_name_without_a_suffix_is_left_alone(self):
+        self.assertEqual(self._name("Christmas Day in Cyprus 2027"), "Christmas Day in Cyprus 2027")
+
+
+class TestDerivedPagesSurviveRuns(unittest.TestCase):
+    """A derived page that is published once and then silently swept is worse than one
+    that was never published: the URL is submitted, then 404s."""
+
+    def _writer(self, tmp):
+        from engine.writer import Writer
+
+        return Writer(Path(tmp) / "out", Path(tmp) / "cache")
+
+    def test_derived_pages_are_registered_and_not_swept(self):
+        import tempfile as tf
+
+        tmp = Path(tf.mkdtemp())
+        w = self._writer(tmp)
+        w.write_raw("top-coldest-cities.html", "<html>coldest</html>")
+        w.sync_manifest([], "2026-10-04T00:00:00Z", derived={"top-coldest-cities.html": "ranking"})
+        # A later run that produces no derived page of its own must not delete it.
+        w2 = self._writer(tmp)
+        w2.sync_manifest([], "2026-10-05T00:00:00Z")
+        self.assertTrue((tmp / "out" / "top-coldest-cities.html").exists())
+
+    def test_sitemap_includes_derived_urls(self):
+        import tempfile as tf
+
+        cfg = make_cfg(Path(tf.mkdtemp()))
+        pages = []
+        xml = sitemap_xml(pages, cfg, "2026-10-04T00:00:00Z",
+                          extra=["today.html", "top-coldest-cities.html", "api/climate.json"])
+        for path in ("today", "top-coldest-cities", "api/climate.json"):
+            self.assertIn(path, xml)
+
+    def test_rankings_are_daily_and_widgets_weekly(self):
+        import tempfile as tf
+
+        cfg = make_cfg(Path(tf.mkdtemp()))
+        xml = sitemap_xml([], cfg, "2026-10-04T00:00:00Z",
+                          extra=["today.html", "top-coldest-cities.html",
+                                 "widget-climate-kazan.html", "api/climate.json"])
+        self.assertRegex(xml, r"<loc>[^<]*today[^<]*</loc><lastmod>[^<]*</lastmod><changefreq>daily")
+        self.assertIn("<changefreq>weekly</changefreq>", xml)

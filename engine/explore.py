@@ -1,0 +1,767 @@
+"""Derived surfaces built from the metrics store: rankings, comparisons, Today, API,
+widgets and charts.
+
+These are the pages that give a corpus a reason to be revisited. A city reference page
+answers one question once; a ranking answers "which are the coldest" and changes when
+the data does, a comparison answers "colder than Denver", and the Today page answers
+"what is happening now". Each is generated deterministically from
+:mod:`engine.metrics`, so the ranking, the comparison, the widget and the API endpoint
+can never disagree about the same city.
+
+Nothing here fetches anything. If the store is thin, the pages are short, and that is
+visible rather than hidden: every surface prints how many rows it was built from.
+"""
+from __future__ import annotations
+
+import html
+import json
+import logging
+from datetime import date, datetime, timezone
+from typing import Any
+
+from .metrics import Metrics, MetricsStore
+
+log = logging.getLogger("pseo.explore")
+
+MONTH_NAMES = (
+    "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December",
+)
+
+# How many rows a listing shows. Kept modest so the page stays a readable reference
+# rather than a data dump, and so a partially-populated store still yields a useful page.
+TOP_N = 40
+COMPARE_MIN = 4
+
+
+def _fmt(value: float, suffix: str = "", digits: int = 1) -> str:
+    return f"{value:,.{digits}f}{suffix}"
+
+
+def _esc(text: Any) -> str:
+    return html.escape(str(text), quote=True)
+
+
+def _updated(stamp: str) -> str:
+    return stamp[:10]
+
+
+# ---------------------------------------------------------------------------
+# charts
+# ---------------------------------------------------------------------------
+
+def bar_chart(
+    values: list[float],
+    labels: list[str],
+    *,
+    title: str = "",
+    unit: str = "",
+    width: int = 640,
+    height: int = 220,
+    colour: str = "#3d6ea8",
+) -> str:
+    """Inline SVG bar chart.
+
+    Inline rather than a PNG: it needs no build step, no image host and no canvas, it
+    scales to any viewport, and it prints as text. The numbers are repeated in the markup
+    so the chart is readable to a crawler that ignores the geometry.
+    """
+    if not values:
+        return ""
+    peak = max(values) or 1.0
+    floor = min(0.0, min(values))
+    span = (peak - floor) or 1.0
+    pad_left, pad_top, gap = 8, 26, 6
+    plot_h = height - pad_top - 24
+    slot = (width - pad_left * 2) / len(values)
+    bar_w = max(3.0, slot - gap)
+    bars = []
+    for i, value in enumerate(values):
+        bar_h = (value - floor) / span * plot_h
+        x = pad_left + i * slot + (slot - bar_w) / 2
+        y = pad_top + plot_h - bar_h
+        safe = _esc(labels[i]) if i < len(labels) else str(i + 1)
+        bars.append(
+            f'<rect x="{x:.1f}" y="{y:.1f}" width="{bar_w:.1f}" height="{max(1.0, bar_h):.1f}"'
+            f' fill="{_esc(colour)}"><title>{safe}: {_fmt(value, unit)}</title></rect>'
+        )
+    heading = f'<text x="{pad_left}" y="16" font-size="13" fill="#333">{_esc(title)}</text>' if title else ""
+    return (
+        f'<svg class="chart" viewBox="0 0 {width} {height}" width="100%" height="{height}"'
+        f' role="img" aria-label="{_esc(title or "chart")}"'
+        f' xmlns="http://www.w3.org/2000/svg">{heading}'
+        f'<line x1="{pad_left}" y1="{pad_top + plot_h:.1f}" x2="{width - pad_left}"'
+        f' y2="{pad_top + plot_h:.1f}" stroke="#ccc"/>{"".join(bars)}</svg>'
+    )
+
+
+# ---------------------------------------------------------------------------
+# rankings
+# ---------------------------------------------------------------------------
+
+# key -> (slug, title, blurb, unit, higher-is-better)
+CLIMATE_RANKINGS: dict[str, tuple[str, str, str, str, bool]] = {
+    "coldest-cities": (
+        "coldest-cities", "Coldest cities by annual mean temperature",
+        "Ranked by the annual mean of the twelve monthly averages, lowest first.", " C", False,
+    ),
+    "warmest-cities": (
+        "warmest-cities", "Warmest cities by annual mean temperature",
+        "Ranked by the annual mean of the twelve monthly averages, highest first.", " C", True,
+    ),
+    "largest-seasonal-swing": (
+        "largest-seasonal-swing", "Cities with the largest seasonal temperature swing",
+        "The gap between the warmest and coldest month, largest first.", " C", True,
+    ),
+    "wettest-cities": (
+        "wettest-cities", "Wettest cities by annual rainfall",
+        "Total rainfall across the twelve months, highest first.", " mm", True,
+    ),
+    "driest-cities": (
+        "driest-cities", "Driest cities by annual rainfall",
+        "Total rainfall across the twelve months, lowest first.", " mm", False,
+    ),
+}
+
+CRYPTO_RANKINGS: dict[str, tuple[str, str, str, str, bool]] = {
+    "crypto-near-365-day-low": (
+        "crypto-near-365-day-low", "Cryptocurrencies closest to their 365-day low",
+        "Latest price as a percentage above the low of the trailing 12 months, lowest first.",
+        "%", False,
+    ),
+    "crypto-near-365-day-high": (
+        "crypto-near-365-day-high", "Cryptocurrencies closest to their 365-day high",
+        "Latest price as a percentage below the high of the trailing 12 months, lowest first.",
+        "%", False,
+    ),
+    "crypto-largest-range": (
+        "crypto-largest-range", "Cryptocurrencies with the largest 365-day range",
+        "The 12-month high-to-low spread as a percentage of the low, largest first.",
+        "%", True,
+    ),
+}
+
+COUNTRY_RANKINGS: dict[str, tuple[str, str, str, str, bool]] = {
+    "most-populous-countries": (
+        "most-populous-countries", "Most populous countries",
+        "Total population, highest first.", "", True,
+    ),
+    "highest-life-expectancy": (
+        "highest-life-expectancy", "Countries with the highest life expectancy",
+        "Life expectancy at birth in years, highest first.", " years", True,
+    ),
+    "lowest-fertility-rate": (
+        "lowest-fertility-rate", "Countries with the lowest fertility rate",
+        "Children per woman, lowest first.", "", False,
+    ),
+}
+
+# Month-specific climate rankings answer recurring seasonal demand, e.g. "coldest cities
+# in January", from the same rows the annual rankings use.
+# figure -> (column index in the stored month row, unit suffix, display label)
+# The label matters: the column is an int, and the table header needs a name.
+SEASONAL_FIGURES = {
+    "warmest": (1, " C", "Mean temperature"),
+    "coldest": (1, " C", "Mean temperature"),
+    "wettest": (2, " mm/day", "Rainfall"),
+    "driest": (2, " mm/day", "Rainfall"),
+}
+
+
+def _climate_rows(store: MetricsStore) -> list[Metrics]:
+    rows = [r for r in store.climates() if r.data.get("months")]
+    # Prefer rows carrying all twelve months: a seasonal ranking cannot be built from a
+    # partial table, and a city missing July would otherwise rank as though it had none.
+    return [r for r in rows if len(r.data["months"]) >= 12]
+
+
+def ranking_pages(store: MetricsStore, stamp: str) -> list[tuple[str, str, str]]:
+    """Return [(filename, html, kind)] for every ranking this store can support."""
+    docs: list[tuple[str, str, str]] = []
+    for key, (slug, title, blurb, unit, higher) in CLIMATE_RANKINGS.items():
+        figure = key.replace("-cities", "")
+        if figure == "largest-seasonal-swing":
+            field = "swing"
+        elif figure == "wettest":
+            field = "annual_rain"
+        else:
+            field = "annual_mean"
+        rows = sorted(
+            store.climates(),
+            key=lambda r: r.data[field],
+            reverse=higher,
+        )[:TOP_N]
+        if rows:
+            docs.append((f"top-{slug}.html", _render_ranking(
+                f"top-{slug}", title, blurb, stamp, store, "climate", rows, field, unit), "ranking"))
+    for key, (slug, title, blurb, unit, higher) in CRYPTO_RANKINGS.items():
+        field = {"crypto-near-365-day-low": "above_low_pct",
+                 "crypto-near-365-day-high": "below_high_pct",
+                 "crypto-largest-range": "range_pct"}[key]
+        rows = sorted(store.cryptos(), key=lambda r: r.data[field], reverse=higher)[:TOP_N]
+        if rows:
+            docs.append((f"top-{slug}.html", _render_ranking(
+                f"top-{slug}", title, blurb, stamp, store, "crypto", rows, field, unit), "ranking"))
+    for key, (slug, title, blurb, unit, higher) in COUNTRY_RANKINGS.items():
+        field = {"most-populous-countries": "population",
+                 "highest-life-expectancy": "life expectancy",
+                 "lowest-fertility-rate": "fertility rate"}[key]
+        rows = [r for r in store.countries() if field in r.data]
+        rows = sorted(rows, key=lambda r: r.data[field], reverse=higher)[:TOP_N]
+        if rows:
+            docs.append((f"top-{slug}.html", _render_ranking(
+                f"top-{slug}", title, blurb, stamp, store, "country", rows, field, unit), "ranking"))
+    docs.extend(_seasonal_rankings(store, stamp))
+    return docs
+
+
+def _seasonal_rankings(store: MetricsStore, stamp: str) -> list[tuple[str, str, str]]:
+    """Monthly climate rankings, e.g. coldest cities in January."""
+    docs: list[tuple[str, str, str]] = []
+    rows = _climate_rows(store)
+    if len(rows) < COMPARE_MIN:
+        return docs
+    for month_index in range(12):
+        month = MONTH_NAMES[month_index]
+        for figure, (column, unit, label) in SEASONAL_FIGURES.items():
+            higher = figure == "warmest" or figure == "wettest"
+            ranked = sorted(
+                rows,
+                key=lambda r, c=column, i=month_index: r.data["months"][i][c],
+                reverse=higher,
+            )[:TOP_N]
+            title = f"{figure.title()} cities in {month}"
+            slug = f"{figure}-cities-in-{month.lower()}"
+            docs.append((f"top-{slug}.html", _render_ranking(
+                f"top-{slug}", title,
+                f"Ranked by the {month} figure in the monthly table, "
+                f"{'highest' if higher else 'lowest'} first.",
+                stamp, store, "climate", ranked, column, unit, month=month,
+                field_label=label), "ranking"))
+    return docs
+
+
+def _render_ranking(
+    slug: str,
+    title: str,
+    blurb: str,
+    stamp: str,
+    store: MetricsStore,
+    kind: str,
+    rows: list[Metrics],
+    field: str,
+    unit: str,
+    month: str = "",
+    field_label: str = "",
+) -> str:
+    """One ranking page as a full HTML document."""
+    site = _SITE
+    name = site["name"]
+    description = f"{title}. {blurb} Updated daily from public data."
+    items = []
+    digits = 2 if unit == " mm/day" else (0 if unit == "%" else 1)
+    for i, row in enumerate(rows, 1):
+        if isinstance(field, int):
+            # Seasonal rankings rank on one column of the month table rather than on a
+            # stored scalar, so the value is read from that column.
+            column = field
+            source = row.data.get("months") or []
+            value = _fmt(source[MONTH_NAMES.index(month)][column], unit, digits) if source else ""
+        else:
+            raw_value = row.data.get(field)
+            value = _fmt(raw_value, unit, digits) if isinstance(raw_value, (int, float)) else ""
+        link = f"{site['origin']}/{row.path}"
+        # The full table is written out, not just the ranked figure, so the page is a
+        # usable reference and a crawler reads the numbers without running the chart.
+        detail = ""
+        if kind == "climate" and row.data.get("months"):
+            idx = MONTH_NAMES.index(month) if month else None
+            if idx is not None:
+                detail = f"{row.data['months'][idx][1]:.1f} C, {row.data['months'][idx][2]:.2f} mm/day"
+        items.append(
+            f'<tr><td>{i}</td><td><a href="{_esc(link)}">{_esc(row.data.get("name", row.title))}</a></td>'
+            f'<td class="num">{_esc(value)}</td><td>{_esc(detail)}</td></tr>'
+        )
+    rows_html = "".join(items)
+    charts = ""
+    if kind == "climate" and rows:
+        months = [r.data["months"][MONTH_NAMES.index(month)][1] for r in rows] if month else [
+            r.data.get("annual_mean", 0) for r in rows
+        ]
+        charts = bar_chart(
+            [m for m in months[:12]], [str(r.data.get("name", ""))[:14] for r in rows[:12]],
+            title=f"{month + ' ' if month else ''}{title} (first {min(12, len(rows))})",
+            unit=" C",
+        )
+    body = f"""
+<h1>{_esc(title)}</h1>
+<p class="lede">{_esc(blurb)}</p>
+<p class="meta">Updated: {_esc(_updated(stamp))} &middot; built from {len(rows)} of
+ {len(store.rows)} tracked pages.</p>
+{charts}
+<table><caption>{_esc(title)}</caption>
+<thead><tr><th>#</th><th>Name</th><th>{_esc(field_label or str(field).replace("_", " ").title())}</th><th>Detail</th></tr></thead>
+<tbody>{rows_html}</tbody></table>
+<p class="note">Figures come from public open APIs and are rebuilt on a schedule.
+<a href="{site['origin']}/all-datasets-1.html">Browse every dataset</a>.</p>
+"""
+    return _document(title, description, body, stamp)
+
+
+# ---------------------------------------------------------------------------
+# comparisons
+# ---------------------------------------------------------------------------
+
+def _pair_name(row: Metrics) -> str:
+    return str(row.data.get("name") or row.title)
+
+
+def _pair_slug(row: Metrics) -> str:
+    return row.slug or row.path.replace(".html", "")
+
+
+def comparison_pages(store: MetricsStore, stamp: str, limit: int = 60) -> list[tuple[str, str, str]]:
+    """Pairwise comparison pages, built from neighbouring rows so the set stays stable.
+
+    Pairing by sorted position rather than every combination means the corpus gains a
+    bounded number of new pages per run instead of an O(n squared) explosion, and the
+    pairs are ones a reader would plausibly want: neighbouring climates rather than two
+    random cities on opposite continents.
+    """
+    docs: list[tuple[str, str, str]] = []
+    climates = sorted(store.climates(), key=lambda r: r.data.get("annual_mean", 0))
+    for i in range(len(climates) - 1):
+        if len(docs) >= limit:
+            break
+        a, b = climates[i], climates[i + 1]
+        docs.append(_comparison_doc(a, b, "climate", stamp))
+    cryptos = sorted(store.cryptos(), key=lambda r: r.data.get("last", 0))
+    for i in range(len(cryptos) - 1):
+        if len(docs) >= limit:
+            break
+        a, b = cryptos[i], cryptos[i + 1]
+        docs.append(_comparison_doc(a, b, "crypto", stamp))
+    return docs
+
+
+def _comparison_doc(a: Metrics, b: Metrics, kind: str, stamp: str) -> tuple[str, str, str]:
+    site = _SITE
+    an, bn = _pair_name(a), _pair_name(b)
+    slug = f"compare-{_pair_slug(a)}-vs-{_pair_slug(b)}"
+    title = f"{an} vs {bn}: {kind} compared"
+    if kind == "climate":
+        am, bm = a.data.get("annual_mean", 0), b.data.get("annual_mean", 0)
+        warmer = an if am >= bm else bn
+        cooler = bn if am >= bm else an
+        asw, bsw = a.data.get("swing", 0), b.data.get("swing", 0)
+        steadier = an if asw <= bsw else bn
+        arain, brain = a.data.get("annual_rain", 0), b.data.get("annual_rain", 0)
+        wetter = an if arain >= brain else bn
+        chart = bar_chart(
+            [a.data["months"][i][1] for i in range(12)] + [b.data["months"][i][1] for i in range(12)],
+            [m[:3] for m in MONTH_NAMES] + [m[:3] for m in MONTH_NAMES],
+            title=f"Monthly mean temperature: {an} then {bn}", unit=" C",
+        )
+        rows = "".join([
+            _cmp_row("Annual mean", f"{am:.1f} C", f"{bm:.1f} C"),
+            _cmp_row("Warmest month", f"{a.data['warmest_month']} ({a.data['warmest']:.1f} C)",
+                     f"{b.data['warmest_month']} ({b.data['warmest']:.1f} C)"),
+            _cmp_row("Coldest month", f"{a.data['coldest_month']} ({a.data['coldest']:.1f} C)",
+                     f"{b.data['coldest_month']} ({b.data['coldest']:.1f} C)"),
+            _cmp_row("Seasonal swing", f"{asw:.1f} C", f"{bsw:.1f} C"),
+            _cmp_row("Annual rainfall", f"{arain:,.0f} mm", f"{brain:,.0f} mm"),
+            _cmp_row("Wettest month", f"{a.data['wettest_month']} ({a.data['wettest_rain']:.2f} mm/day)",
+                     f"{b.data['wettest_month']} ({b.data['wettest_rain']:.2f} mm/day)"),
+        ])
+        verdicts = [
+            f"{warmer} is the warmer of the two on annual mean.",
+            f"{steadier} has the smaller seasonal swing, so its months are more even.",
+            f"{wetter} gets more rainfall across the year.",
+        ]
+    else:
+        apct, bpct = a.data.get("above_low_pct", 0), b.data.get("above_low_pct", 0)
+        nearer = an if apct >= bpct else bn
+        chart = bar_chart(
+            [a.data["low"], a.data["last"], a.data["high"],
+             b.data["low"], b.data["last"], b.data["high"]],
+            [f"{an} low", f"{an} now", f"{an} high",
+             f"{bn} low", f"{bn} now", f"{bn} high"],
+            title=f"365-day range: {an} and {bn}", unit=" USD",
+        )
+        rows = "".join([
+            _cmp_row("12 month high", f"{a.data['high']:,.2f}", f"{b.data['high']:,.2f}"),
+            _cmp_row("12 month low", f"{a.data['low']:,.2f}", f"{b.data['low']:,.2f}"),
+            _cmp_row("Latest price", f"{a.data['last']:,.2f}", f"{b.data['last']:,.2f}"),
+            _cmp_row("Range as % of low", f"{a.data['range_pct']:.1f}%", f"{b.data['range_pct']:.1f}%"),
+            _cmp_row("Above 365-day low", f"{apct:.1f}%", f"{bpct:.1f}%"),
+        ])
+        verdicts = [
+            f"{nearer} is trading closer to its own 365-day high.",
+            f"{an}'s 12-month range is {a.data['range_pct']:.1f}% of its low against "
+            f"{b.data['range_pct']:.1f}% for {bn}.",
+        ]
+    body = f"""
+<h1>{an} vs {bn}</h1>
+<p class="lede">A direct comparison of {an} and {bn}, computed from the same figures
+behind their individual pages.</p>
+<p class="meta">Updated: {_esc(_updated(stamp))}</p>
+{chart}
+<table><caption>{_esc(an)} compared with {_esc(bn)}</caption>
+<thead><tr><th>Measure</th><th>{_esc(an)}</th><th>{_esc(bn)}</th></tr></thead>
+<tbody>{rows}</tbody></table>
+<h2>What the numbers mean</h2>
+<ul>{"".join(f"<li>{_esc(v)}</li>" for v in verdicts)}</ul>
+<p class="note">Individual pages:
+<a href="{site['origin']}/{a.path}">{_esc(an)}</a> &middot;
+<a href="{site['origin']}/{b.path}">{_esc(bn)}</a>.</p>
+"""
+    return f"{slug}.html", _document(title, f"{an} compared with {bn} on climate and price figures.", body, stamp), "comparison"
+
+
+def _cmp_row(measure: str, a: str, b: str) -> str:
+    return (f"<tr><th scope=\"row\">{_esc(measure)}</th><td>{_esc(a)}</td>"
+            f"<td>{_esc(b)}</td></tr>")
+
+
+# ---------------------------------------------------------------------------
+# Today
+# ---------------------------------------------------------------------------
+
+def today_page(store: MetricsStore, stamp: str, when: date | None = None) -> tuple[str, str, str]:
+    """A permanent daily destination: what is happening in the data right now."""
+    site = _SITE
+    day = when or datetime.now(timezone.utc).date()
+    sections: list[str] = []
+
+    todays = [r for r in store.holidays() if r.data.get("date") == day.isoformat()]
+    tomorrows = [r for r in store.holidays()
+                 if r.data.get("date") == (day + __import__("datetime").timedelta(days=1)).isoformat()]
+    upcoming = sorted(
+        (r for r in store.holidays() if r.data.get("date", "") > day.isoformat()),
+        key=lambda r: r.data["date"],
+    )[:12]
+    if todays or upcoming:
+        def hol_rows(rows: list[Metrics]) -> str:
+            return "".join(
+                f'<tr><td>{_esc(r.data.get("local_name") or r.data.get("name"))}</td>'
+                f'<td>{_esc(r.data.get("country"))}</td>'
+                f'<td><a href="{site["origin"]}/{r.path}">{_esc(r.data.get("date"))}</a></td>'
+                f'<td>{_esc(r.data.get("weekday"))}</td></tr>'
+                for r in rows
+            ) or '<tr><td colspan="4">None recorded for this date.</td></tr>'
+        sections.append(f"""
+<h2>Public holidays</h2>
+<h3>Today, {day.isoformat()}</h3>
+<table><caption>Holidays falling on {day.isoformat()}</caption>
+<thead><tr><th>Holiday</th><th>Country</th><th>Date</th><th>Weekday</th></tr></thead>
+<tbody>{hol_rows(todays)}</tbody></table>
+<h3>Tomorrow</h3>
+<table><caption>Holidays falling on {(day + __import__("datetime").timedelta(days=1)).isoformat()}</caption>
+<thead><tr><th>Holiday</th><th>Country</th><th>Date</th><th>Weekday</th></tr></thead>
+<tbody>{hol_rows(tomorrows)}</tbody></table>
+<h3>Coming up</h3>
+<table><caption>Next public holidays on record</caption>
+<thead><tr><th>Holiday</th><th>Country</th><th>Date</th><th>Weekday</th></tr></thead>
+<tbody>{hol_rows(upcoming)}</tbody></table>""")
+
+    climates = store.climates()
+    if len(climates) >= COMPARE_MIN:
+        warmest = sorted(climates, key=lambda r: r.data.get("annual_mean", 0), reverse=True)[:10]
+        coldest = sorted(climates, key=lambda r: r.data.get("annual_mean", 0))[:10]
+        wettest = sorted(climates, key=lambda r: r.data.get("annual_rain", 0), reverse=True)[:10]
+        sections.append(f"""
+<h2>Climate</h2>
+{_mini_table("Warmest cities by annual mean", warmest, "annual_mean", " C")}
+{_mini_table("Coldest cities by annual mean", coldest, "annual_mean", " C")}
+{_mini_table("Wettest cities by annual rainfall", wettest, "annual_rain", " mm")}""")
+
+    cryptos = store.cryptos()
+    if cryptos:
+        near_high = sorted(cryptos, key=lambda r: r.data.get("below_high_pct", 999))[:10]
+        near_low = sorted(cryptos, key=lambda r: r.data.get("above_low_pct", 999))[:10]
+        sections.append(f"""
+<h2>Crypto</h2>
+{_mini_table("Closest to the 365-day high", near_high, "below_high_pct", "% below")}
+{_mini_table("Closest to the 365-day low", near_low, "above_low_pct", "% above")}""")
+
+    fact = _daily_fact(climates, cryptos, day)
+    title = f"Today on {site['name']}: {day.isoformat()}"
+    body = f"""
+<h1>{day.strftime('%A')} {day.isoformat()}</h1>
+<p class="lede">What the tracked datasets show for today. This page is rebuilt on every
+run, so the figures and the dates move with the data.</p>
+<p class="meta">Updated: {_esc(_updated(stamp))} &middot; built from {len(store.rows)} pages.</p>
+{fact}
+{"".join(sections)}
+<p class="note">Rankings, comparisons and per-dataset pages are linked from
+<a href="{site['origin']}/index.html">the homepage</a>.</p>
+"""
+    return "today.html", _document(title, f"What is happening across the datasets on {day.isoformat()}.", body, stamp), "today"
+
+
+def _mini_table(caption: str, rows: list[Metrics], field: str, unit: str) -> str:
+    site = _SITE
+    cells = "".join(
+        f'<tr><td>{i}</td><td><a href="{site["origin"]}/{r.path}">'
+        f'{_esc(r.data.get("name", r.title))}</a></td>'
+        f'<td class="num">{_fmt(r.data.get(field, 0), unit, 0 if unit == "%" else 1)}</td></tr>'
+        for i, r in enumerate(rows, 1)
+    )
+    return (f'<table><caption>{_esc(caption)}</caption>'
+            f'<thead><tr><th>#</th><th>Name</th><th>Value</th></tr></thead>'
+            f'<tbody>{cells}</tbody></table>')
+
+
+def _daily_fact(climates: list[Metrics], cryptos: list[Metrics], day: date) -> str:
+    """One observation derived from the data, for the daily-fact surface."""
+    if len(climates) >= COMPARE_MIN:
+        swingy = max(climates, key=lambda r: r.data.get("swing", 0))
+        steady = min(climates, key=lambda r: r.data.get("swing", 0))
+        return (
+            f'<p class="fact"><strong>Today&rsquo;s climate fact.</strong> '
+            f'{_esc(swingy.data.get("name"))} has the largest seasonal swing in the dataset '
+            f'at {swingy.data.get("swing", 0):.1f} C between {swingy.data.get("coldest_month")} '
+            f'and {swingy.data.get("warmest_month")}, while {_esc(steady.data.get("name"))} '
+            f'stays within {steady.data.get("swing", 0):.1f} C all year.</p>'
+        )
+    if cryptos:
+        coin = max(cryptos, key=lambda r: r.data.get("range_pct", 0))
+        return (
+            f'<p class="fact"><strong>Today&rsquo;s range fact.</strong> '
+            f'{_esc(coin.data.get("name"))} has the widest 365-day range in the dataset at '
+            f'{coin.data.get("range_pct", 0):.0f}% of its low.</p>'
+        )
+    return ""
+
+
+# ---------------------------------------------------------------------------
+# API + widgets
+# ---------------------------------------------------------------------------
+
+def api_endpoints(store: MetricsStore, stamp: str) -> list[tuple[str, str]]:
+    """[(filename, json)] for the public read-only API.
+
+    One file per dataset, plus a manifest. Cloudflare Pages serves the files statically,
+    so this costs nothing and needs no server.
+    """
+    out: list[tuple[str, str]] = []
+    climates = store.climates()
+    if climates:
+        out.append(("api/climate.json", json.dumps({
+            "updated": stamp,
+            "count": len(climates),
+            "source": _SITE["origin"],
+            "results": [
+                {"city": r.data.get("name"), "page": f"{_SITE['origin']}/{r.path}",
+                 "annual_mean_c": r.data.get("annual_mean"),
+                 "warmest_month": r.data.get("warmest_month"),
+                 "coldest_month": r.data.get("coldest_month"),
+                 "swing_c": r.data.get("swing"),
+                 "annual_rainfall_mm": r.data.get("annual_rain"),
+                 "wettest_month": r.data.get("wettest_month")}
+                for r in climates
+            ],
+        }, indent=1)))
+    holidays = store.holidays()
+    if holidays:
+        out.append(("api/holidays.json", json.dumps({
+            "updated": stamp,
+            "count": len(holidays),
+            "source": _SITE["origin"],
+            "results": [
+                {"holiday": r.data.get("name"), "country": r.data.get("country"),
+                 "local_name": r.data.get("local_name"), "date": r.data.get("date"),
+                 "weekday": r.data.get("weekday"),
+                 "page": f"{_SITE['origin']}/{r.path}"}
+                for r in holidays
+            ],
+        }, indent=1)))
+    cryptos = store.cryptos()
+    if cryptos:
+        out.append(("api/crypto.json", json.dumps({
+            "updated": stamp,
+            "count": len(cryptos),
+            "source": _SITE["origin"],
+            "note": "high/low/latest cover the trailing 12 months",
+            "results": [
+                {"asset": r.data.get("name"), "page": f"{_SITE['origin']}/{r.path}",
+                 "high_12m": r.data.get("high"), "low_12m": r.data.get("low"),
+                 "latest": r.data.get("last"),
+                 "range_pct_of_low": r.data.get("range_pct"),
+                 "pct_above_low": r.data.get("above_low_pct"),
+                 "pct_below_high": r.data.get("below_high_pct")}
+                for r in cryptos
+            ],
+        }, indent=1)))
+    return out
+
+
+def api_docs(store: MetricsStore, stamp: str) -> tuple[str, str, str]:
+    site = _SITE
+    blocks = []
+    for name, blurb, example in (
+        ("climate", "Monthly climate averages for every tracked city.",
+         '{\n  "city": "Kazan",\n  "annual_mean_c": 3.1,\n  "warmest_month": "Jul",\n'
+         '  "swing_c": 33.3\n}'),
+        ("holidays", "Public holidays with dates, weekdays and local names.",
+         '{\n  "country": "Cyprus",\n  "local_name": "Χριστούγεννα",\n'
+         '  "date": "2027-12-25",\n  "weekday": "Saturday"\n}'),
+        ("crypto", "365-day high, low and latest for each tracked asset.",
+         '{\n  "asset": "Bitcoin",\n  "high_12m": 124739.81,\n  "low_12m": 58566.09,\n'
+         '  "pct_above_low": 44.8\n}'),
+    ):
+        blocks.append(f"""
+<h2 id="{name}">{name.title()} API</h2>
+<p>{blurb} No key, no rate limit, no attribution required.</p>
+<p>Endpoint: <code>{site['origin']}/api/{name}.json</code></p>
+<pre><code>{_esc(example)}</code></pre>""")
+    body = f"""
+<h1>Data API</h1>
+<p class="lede">The same figures behind every page on this site, as JSON. Free, key-free
+and rebuilt daily.</p>
+<p class="meta">Updated: {_esc(_updated(stamp))} &middot;
+ {len(store.rows)} pages indexed.</p>
+{"".join(blocks)}
+<h2>Terms</h2>
+<ul>
+<li>Figures come from public open APIs and are on a best-effort basis; check the source
+page before relying on a number.</li>
+<li>Attribution is appreciated but not required.</li>
+<li>Please cache rather than poll aggressively; the data only changes once a day.</li>
+</ul>
+"""
+    return ("api.html", _document("Data API", "Free JSON access to the climate, holiday and crypto data on this site.", body, stamp), "api")
+
+
+def widget_pages(store: MetricsStore, stamp: str) -> list[tuple[str, str, str]]:
+    """Embeddable iframes. Other sites embedding these become distribution."""
+    site = _SITE
+    docs: list[tuple[str, str, str]] = []
+    climates = sorted(store.climates(), key=lambda r: r.data.get("annual_mean", 0), reverse=True)
+    for row in climates[:30]:
+        name = str(row.data.get("name", ""))
+        months = row.data.get("months") or []
+        if not months:
+            continue
+        slug = f"widget-climate-{row.slug}"
+        body = f"""
+<div class="widget">
+<h2>{_esc(name)}: monthly temperature</h2>
+{bar_chart([m[1] for m in months], [m[0][:3] for m in months], title="Mean temperature by month", unit=" C")}
+<table><caption>{_esc(name)} monthly averages</caption>
+<thead><tr><th>Month</th><th>Mean C</th><th>Rain mm/day</th></tr></thead>
+<tbody>{"".join(f"<tr><td>{_esc(m[0])}</td><td>{m[1]:.1f}</td><td>{m[2]:.2f}</td></tr>" for m in months)}</tbody></table>
+<p class="attrib">Data by <a href="{site['origin']}/">pSEOare</a></p>
+</div>"""
+        docs.append((f"{slug}.html", _document(
+            f"{name} climate widget",
+            f"Embeddable monthly temperature chart for {name}.", body, stamp,
+            bare=True), "widget"))
+    for row in store.cryptos()[:15]:
+        name = str(row.data.get("name", ""))
+        d = row.data
+        body = f"""
+<div class="widget">
+<h2>{_esc(name)}: 365-day range</h2>
+<p>Latest <strong>{_fmt(d.get('last', 0), ' USD', 2)}</strong>,
+{d.get('below_high_pct', 0):.1f}% below the 12-month high of {_fmt(d.get('high', 0), ' USD', 2)},
+{d.get('above_low_pct', 0):.1f}% above the low of {_fmt(d.get('low', 0), ' USD', 2)}.</p>
+{bar_chart([d.get('low', 0), d.get('last', 0), d.get('high', 0)], ['12m low', 'latest', '12m high'], title=f"{name} 365-day range", unit=" USD", colour="#7a5c2e")}
+<p class="attrib">Data by <a href="{site['origin']}/">pSEOare</a></p>
+</div>"""
+        docs.append((f"widget-crypto-{row.slug}.html", _document(
+            f"{name} 365-day range widget",
+            f"Embeddable 365-day range widget for {name}.", body, stamp, bare=True), "widget"))
+    return docs
+
+
+def embed_snippet(store: MetricsStore, stamp: str) -> tuple[str, str, str]:
+    """The page that tells site owners how to embed a widget."""
+    site = _SITE
+    samples = []
+    for row in sorted(store.climates(), key=lambda r: r.data.get("annual_mean", 0), reverse=True)[:3]:
+        samples.append(
+            f'<iframe src="{site["origin"]}/widget-climate-{row.slug}.html" '
+            f'width="100%" height="520" loading="lazy" '
+            f'style="border:0" title="{_esc(row.data.get("name"))} monthly climate"></iframe>'
+        )
+    body = f"""
+<h1>Embed a widget</h1>
+<p class="lede">Every chart on this site can be embedded on another site as an iframe.
+No account, no key, no script.</p>
+<h2>Climate widget</h2>
+<pre><code>{_esc(chr(10).join(samples))}</code></pre>
+<p>Each widget links back to its source page and carries a small attribution line.</p>
+<h2>Crypto range widget</h2>
+<pre><code>{_esc(chr(10).join(f'<iframe src="{site["origin"]}/widget-crypto-{r.slug}.html" width="100%" height="300" loading="lazy" style="border:0" title="{_esc(r.data.get("name"))} 365-day range"></iframe>' for r in store.cryptos()[:3]))}</code></pre>
+<p class="note">Widgets are rebuilt on the same schedule as the rest of the site.</p>
+"""
+    return "widgets.html", _document("Embeddable widgets", "Embed climate charts and crypto range widgets on your own site.", body, stamp), "widgets"
+
+
+# ---------------------------------------------------------------------------
+# shared document shell
+# ---------------------------------------------------------------------------
+
+_SITE = {"name": "pSEOare", "origin": "https://pseoare.pages.dev"}
+
+
+def configure(origin: str, name: str) -> None:
+    _SITE["origin"] = origin.rstrip("/")
+    _SITE["name"] = name
+
+
+_STYLE = """
+body{font:16px/1.55 system-ui,sans-serif;margin:0;padding:1.2rem;max-width:60rem;color:#1c1c1c}
+h1{font-size:1.7rem;margin:0 0 .4rem}h2{font-size:1.2rem;margin:1.6rem 0 .5rem}
+.lede{font-size:1.05rem;color:#333;margin:.2rem 0 .6rem}
+.meta,.note{color:#666;font-size:.85rem}
+.fact{background:#f4f6f9;border-left:4px solid #3d6ea8;padding:.7rem .9rem;margin:1rem 0}
+table{border-collapse:collapse;width:100%;margin:.6rem 0 1.2rem;font-size:.92rem}
+caption{text-align:left;font-weight:600;padding:.3rem 0}
+th,td{border:1px solid #ddd;padding:.34rem .5rem;text-align:left;vertical-align:top}
+thead th{background:#f4f4f4}td.num{text-align:right;font-variant-numeric:tabular-nums}
+.chart{margin:.6rem 0;background:#fafbfc;border:1px solid #eee;border-radius:4px}
+a{color:#2c5c96}code{background:#f4f4f4;padding:.1rem .3rem;border-radius:3px}
+pre{background:#f7f7f7;padding:.7rem;overflow:auto;border-radius:4px}
+.widget{font:14px/1.5 system-ui,sans-serif}.attrib{font-size:.8rem;color:#666}
+@media(prefers-color-scheme:dark){body{background:#14171a;color:#e8e8e8}
+th,td{border-color:#333}thead th{background:#22262a}.meta,.note{color:#9aa}
+pre,.chart{background:#1b1f23}code{background:#252a2f}.fact{background:#1b2129}}
+"""
+
+
+def _document(title: str, description: str, body: str, stamp: str, bare: bool = False) -> str:
+    """Full HTML document.
+
+    `bare` drops the site chrome so a widget iframe shows only the widget. Every page gets
+    a canonical, a description and Dataset JSON-LD, because these surfaces are meant to be
+    the citable ones.
+    """
+    site = _SITE
+    payload = {
+        "@context": "https://schema.org",
+        "@type": "Dataset",
+        "name": title,
+        "description": description,
+        "url": f"{site['origin']}/",
+        "dateModified": stamp,
+        "license": "https://creativecommons.org/licenses/by/4.0/",
+        "isAccessibleForFree": True,
+    }
+    head = (
+        '<meta charset="utf-8">'
+        '<meta name="viewport" content="width=device-width,initial-scale=1">'
+        f'<title>{_esc(title)} | {_esc(site["name"])}</title>'
+        f'<meta name="description" content="{_esc(description)}">'
+        f'<link rel="canonical" href="{site["origin"]}/">'
+    )
+    if bare:
+        head += f'<style>{_STYLE}</style>'
+    else:
+        head += (
+            f'<style>{_STYLE}</style>'
+            f'<script type="application/ld+json">{json.dumps(payload)}</script>'
+            f'<link rel="alternate" type="application/rss+xml" href="{site["origin"]}/feed.xml">'
+        )
+    return f"<!doctype html><html lang=\"en\"><head>{head}</head><body>{body}</body></html>"
