@@ -4,11 +4,11 @@
  "range_12m": {
   "high": 5.45,
   "low": 0.52,
-  "latest": 0.79
+  "latest": 0.8
  },
- "position_in_range_pct": 5.5,
- "pct_above_low": 51.9,
- "pct_below_high": 85.5,
+ "position_in_range_pct": 5.7,
+ "pct_above_low": 53.8,
+ "pct_below_high": 85.3,
  "range_pct_of_low": 948.1,
  "monthly": [
   [
@@ -100,9 +100,9 @@
    0.77,
    0.8,
    0.79,
-   0.79
+   0.8
   ]
  ],
- "updated": "2026-10-04T11:01:43.622455+00:00",
+ "updated": "2026-10-04T11:13:20.306516+00:00",
  "source": "https://pseoare.pages.dev"
 }

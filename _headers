@@ -1,6 +1,7 @@
 /*
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
+  Cache-Control: public, max-age=300, must-revalidate
 
 /api/*
   Cache-Control: public, max-age=3600
@@ -8,11 +9,14 @@
 /search-index.json
   Cache-Control: public, max-age=3600
 
-/feed-*.xml
+/feed-climate.xml
   Cache-Control: public, max-age=1800
 
-/*.html
-  Cache-Control: public, max-age=300, must-revalidate
+/feed-crypto.xml
+  Cache-Control: public, max-age=1800
+
+/feed-holidays.xml
+  Cache-Control: public, max-age=1800
 
 /assets/*
   Cache-Control: public, max-age=86400
