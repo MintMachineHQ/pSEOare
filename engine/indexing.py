@@ -15,7 +15,10 @@ from .http import Http, read_json_cache, write_json_cache
 log = logging.getLogger("pseo.indexing")
 
 INDEXNOW = "https://api.indexnow.org/indexnow"
-INDEXNOW_BATCH = 100
+# IndexNow accepts up to 10,000 URLs in a single POST. Batching at 100 meant a run
+# that changed 250 pages spent three round trips to say the same thing, and each extra
+# request is another chance to fail a run that has already done its work.
+INDEXNOW_BATCH = 10000
 GOOGLE_TOKEN = "https://oauth2.googleapis.com/token"
 GOOGLE_SCOPE = "https://www.googleapis.com/auth/indexing"
 GOOGLE_ENDPOINT = "https://indexing.googleapis.com/v3/urlNotifications"

@@ -7,6 +7,7 @@ import hashlib
 import logging
 import re
 import time
+from datetime import date
 from pathlib import Path
 
 from .config import Config, env_secret
@@ -810,6 +811,152 @@ def _months(count: int) -> str:
     """Render a month count with the right noun, for the few templates that need it."""
     return "1 month" if count == 1 else f"{count} months"
 
+
+def _fact(page: Page, label: str) -> str:
+    """Value of a named fact, or '' when the page does not carry it."""
+    for key, value in page.facts:
+        if key.strip().lower() == label.lower():
+            return str(value)
+    return ""
+
+
+def _holiday_insight(page: Page) -> dict[str, Any] | None:
+    """Derive observations about a holiday date that its four facts do not state.
+
+    A holiday page publishes a date, a local name, a country and a year. Every one of
+    those is identical in structure on all ~2,600 holiday pages, so the prose built from
+    them alone reads the same everywhere. What differs is what can be *computed* from the
+    date: which weekday it lands on, whether that is a weekend, how far into the year it
+    sits, and when it next occurs.
+    """
+    raw = _fact(page, "Date")
+    year = _fact(page, "Year")
+    if not raw or not re.match(r"^\d{4}-\d{2}-\d{2}$", raw):
+        return None
+    try:
+        when = date(int(year), int(raw[5:7]), int(raw[8:10]))
+    except ValueError:
+        return None
+    weekday = when.strftime("%A")
+    weekend = when.weekday() >= 5
+    next_when = date(when.year + 1, when.month, when.day)
+    return {
+        "date": when,
+        "weekday": weekday,
+        "weekend": weekend,
+        "quarter": (when.month - 1) // 3 + 1,
+        "day_of_year": when.timetuple().tm_yday,
+        "days_left": (date(when.year, 12, 31) - when).days,
+        "next_weekday": next_when.strftime("%A"),
+        "next_date": next_when.isoformat(),
+    }
+
+
+_CRYPTO_MONTHS = (
+    "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December",
+)
+
+_CRYPTO_OPENERS = (
+    "{name} over the last year spans {low} to {high}, and the latest price of {last} sits {position}.",
+    "The last 12 months of {name} run from a low of {low} to a high of {high}; at {last} the market is {position}.",
+    "{name} traded between {low} and {high} over the past year, closing most recently at {last}.",
+)
+
+# The climate bridges talk about averages, which is wrong on a holiday page with one fixed
+# date, and the shared closers point at "adjacent locations", which is wrong on a crypto
+# page that has no location at all. Each kind gets wording that fits what it is.
+_HOLIDAY_BRIDGES = (
+    "The date comes from the country's published public holiday list for that year.",
+    "Fixed-date holidays land on the same day every year, so this date does not move.",
+    "Fixed-date holidays keep the same day and month every year, while movable ones "
+    "follow a religious or civic event and shift by a few days each year.",
+)
+
+_HOLIDAY_CLOSERS = (
+    "Check the year's other public holidays below for the dates that sit either side of this one.",
+    "The rest of {country}'s public holidays are listed on the country's holiday hub.",
+    "Weekend dates make for a long weekend; the holidays below show how close the nearest one falls.",
+    "Weekdays are more useful for leave planning than the date alone; the neighbouring holidays are listed below.",
+)
+
+_CRYPTO_BRIDGES = (
+    "A 12-month window smooths out single-day moves, so treat the range as typical rather than as a limit.",
+    "Prices are quoted in US dollars throughout, and the range covers the trailing 12 months to the latest reading.",
+    "The window is trailing rather than calendar-aligned, so the months do not line up with a single year.",
+)
+
+_CRYPTO_CLOSERS = (
+    "The month-by-month table underneath carries the low, high, average and close for each month.",
+    "Use the monthly table for exact figures, and the related pages for the other assets tracked here.",
+    "Exact values per month are in the table below; other assets are linked underneath.",
+)
+
+
+def _crypto_insight(page: Page) -> dict[str, Any] | None:
+    """Derive range position and monthly direction from a crypto page.
+
+    The published facts are a high, a low, a latest price and a percentage change. What
+    they never say, and what a reader actually wants, is where the current price sits
+    inside the year's range and which months carried the move.
+    """
+    rows = ((page.data.get("table") or {}).get("rows")) or []
+    parsed: list[tuple[str, float, float, float, float]] = []
+    for row in rows:
+        if not isinstance(row, (list, tuple)) or len(row) < 5:
+            continue
+        try:
+            parsed.append(
+                (
+                    str(row[0]),
+                    float(row[1]),
+                    float(row[2]),
+                    float(row[3]),
+                    float(row[4]),
+                )
+            )
+        except (TypeError, ValueError):
+            continue
+    if len(parsed) < 6:
+        return None
+    high = _num(_fact(page, "12 month high"))
+    low = _num(_fact(page, "12 month low"))
+    last = _num(_fact(page, "Latest price"))
+    if high is None or low is None or last is None or high <= low:
+        return None
+    position = (last - low) / (high - low) * 100
+    # Month-end versus month-average direction: which months actually carried the move.
+    up = [r for r in parsed if r[4] > r[3]]
+    down = [r for r in parsed if r[4] <= r[3]]
+    best = max(parsed, key=lambda r: r[4] - r[3])
+    worst = min(parsed, key=lambda r: r[4] - r[3])
+    return {
+        "high": high,
+        "low": low,
+        "last": last,
+        "position": position,
+        "range_width": high - low,
+        "range_pct": (high - low) / low * 100 if low else 0.0,
+        "above_high": last - high,
+        "below_low": low - last,
+        "up_months": len(up),
+        "down_months": len(down),
+        "best_month": best[0],
+        "worst_month": worst[0],
+        "name": page.h1.split()[0] if page.h1 else "the asset",
+    }
+
+
+def _num(text: str) -> float | None:
+    """First number in a fact value such as '124,739.81 USD'."""
+    match = re.search(r"-?[\d,]+(?:\.\d+)?", str(text))
+    if not match:
+        return None
+    try:
+        return float(match.group(0).replace(",", ""))
+    except ValueError:
+        return None
+
 _CLIMATE_FAQ = (
     ("Is {place} climate data a forecast?", "No. These are multi-decadal averages for the grid cell, not a prediction for any particular year."),
     ("Why do the numbers differ from a weather app?", "An app shows one location on one day. These are long-run averages, so they smooth out single hot or cold spells."),
@@ -832,6 +979,8 @@ def fallback_copy(page: Page) -> tuple[str, list[tuple[str, str]]]:
     """
     rows = ((page.data.get("table") or {}).get("rows")) or []
     insight = _month_insight(rows) if page.kind.startswith("climate") else None
+    holiday = None if insight else _holiday_insight(page)
+    crypto = None if (insight or holiday) else _crypto_insight(page)
     if insight:
         # The table rows are rounded for display, so averaging them gives a slightly
         # different number from the annual mean the page already states in its facts
@@ -914,6 +1063,63 @@ def fallback_copy(page: Page) -> tuple[str, list[tuple[str, str]]]:
                 near_mean=insight["near_mean"],
             )
         )
+    elif holiday:
+        when = holiday["date"]
+        subject_txt = page.h1.split(" in ")[0].strip() or subject
+        parts[0] = (
+            f"{subject_txt} falls on {when.strftime('%d %B %Y')}, a {holiday['weekday']}"
+            f"{' — a weekend date' if holiday['weekend'] else ''}."
+        )
+        parts.append(
+            f"That is day {holiday['day_of_year']} of the year, in Q{holiday['quarter']}, "
+            f"with {holiday['days_left']} days left after it."
+        )
+        parts.append(
+            f"It next falls on {holiday['next_date']}, which is a {holiday['next_weekday']}."
+        )
+        parts.append(pick(_HOLIDAY_BRIDGES))
+        closers = _HOLIDAY_CLOSERS
+        if holiday["weekend"]:
+            closer_text = pick(closers[:1])
+        else:
+            # "Weekend dates make for a long weekend" is nonsense on a Tuesday holiday.
+            closer_text = pick(closers[1:] or closers)
+        parts.append(closer_text.format(country=_fact(page, "Country") or "that country"))
+    elif crypto:
+        money = lambda v: f"{v:,.0f}"  # noqa: E731
+        # The latest reading can sit outside the 12-month high/low the page publishes,
+        # which would render as "sits -85% of the way through that range".
+        if crypto["position"] < 0:
+            position = "below the low recorded for this window"
+        elif crypto["position"] > 100:
+            position = "above the high recorded for this window"
+        else:
+            position = f"{crypto['position']:.0f}% of the way through that range"
+        parts[0] = pick(_CRYPTO_OPENERS).format(
+            name=crypto["name"],
+            low=money(crypto["low"]),
+            high=money(crypto["high"]),
+            last=money(crypto["last"]),
+            position=position,
+        )
+        parts.append(
+            f"Across the 12 monthly rows, {crypto['up_months']} closed above their own "
+            f"average and {crypto['down_months']} closed below; {crypto['best_month']} "
+            f"was the strongest and {crypto['worst_month']} the weakest."
+        )
+        parts.append(
+            pick(_CRYPTO_CLOSERS).format(
+                range_pct=f"{crypto['range_pct']:.0f}",
+                range_width=money(crypto["range_width"]),
+                above_high=money(abs(crypto["above_high"])),
+                below_low=money(abs(crypto["below_low"])),
+                up_months=crypto["up_months"],
+                down_months=crypto["down_months"],
+                best_month=crypto["best_month"],
+                worst_month=crypto["worst_month"],
+            )
+        )
+        parts.append(pick(_CRYPTO_BRIDGES))
     else:
         facts = "; ".join(f"{k.lower()} {v}" for k, v in page.facts[:4])
         if facts:

@@ -1503,6 +1503,79 @@ class TestRenderSignature(unittest.TestCase):
         self.assertEqual(page.content_hash, page.content_hash)
 
 
+class TestHolidayAndCryptoProse(unittest.TestCase):
+    """Holiday and crypto pages also used fixed sentence pools. Both now derive their
+    prose from the page's own date or price series."""
+
+    def _holiday(self, slug, date_str, name="Christmas Day", country="Cyprus"):
+        return Page(
+            kind="holiday", title=name, h1=f"{name} in {country} {date_str[:4]}",
+            slug=slug, summary="x", data={},
+            facts=[("Date", date_str), ("Local name", name), ("Country", country),
+                   ("Year", date_str[:4])],
+        )
+
+    def _crypto(self, slug, name, last):
+        months = ["January", "February", "March", "April", "May", "June", "July",
+                  "August", "September", "October", "November", "December"]
+        vals = [60000, 63000, 71000, 74000, 82000, 97000, 112000, 124739,
+                91000, 79000, 84500, 84802]
+        rows = [[m, vals[i], vals[i] * 1.05, vals[i] * 1.02, vals[i] * 1.01]
+                for i, m in enumerate(months)]
+        return Page(
+            kind="crypto", title=name, h1=f"{name} price by month", slug=slug, summary="x",
+            data={"table": {"rows": rows}},
+            facts=[("12 month high", "124,739.81 USD"),
+                   ("12 month low", "58,566.09 USD"),
+                   ("Latest price", f"{last:,.2f} USD")],
+        )
+
+    def test_holiday_prose_states_the_weekday_and_next_occurrence(self):
+        prose, _ = fallback_copy(self._holiday("xmas-2027", "2027-12-25"))
+        self.assertIn("Saturday", prose)
+        self.assertIn("2028-12-25", prose)
+        self.assertIn("Monday", prose)          # next year's weekday differs
+        self.assertIn("359", prose)              # day of year, derived not published
+
+    def test_holiday_closer_matches_whether_the_date_is_a_weekend(self):
+        # 2027-12-25 is a Saturday, 2027-01-01 a Friday. A weekend line on a Friday is
+        # nonsense, so the two must not render the same sentence.
+        weekend, _ = fallback_copy(self._holiday("xmas-2027", "2027-12-25"))
+        weekday, _ = fallback_copy(self._holiday("ny-2027", "2027-01-01", "New Year", "Japan"))
+        self.assertIn("weekend", weekend)
+        self.assertNotIn("Weekend dates", weekday)
+
+    def test_holiday_prose_never_says_averages(self):
+        for slug, d in [("a", "2027-12-25"), ("b", "2027-01-01"), ("c", "2026-04-03")]:
+            prose, faq = fallback_copy(self._holiday(slug, d))
+            blob = prose + " ".join(a for _, a in faq)
+            with self.subTest(slug=slug):
+                self.assertNotIn("averages", blob.lower())
+
+    def test_crypto_prose_reports_range_position_and_month_direction(self):
+        prose, _ = fallback_copy(self._crypto("bitcoin", "Bitcoin", 84802.75))
+        self.assertIn("124,740", prose)   # high
+        self.assertIn("58,566", prose)    # low
+        self.assertIn("strongest", prose)
+
+    def test_crypto_prose_never_prints_a_negative_position(self):
+        # The latest price can sit outside the published 12-month range.
+        for last in (10.0, 999999.0):
+            prose, _ = fallback_copy(self._crypto(f"c{last}", "Coin", last))
+            with self.subTest(last=last):
+                self.assertNotIn("sits -", prose)
+                self.assertNotIn("-%", prose)
+
+    def test_crypto_prose_never_mentions_locations(self):
+        prose, _ = fallback_copy(self._crypto("bitcoin", "Bitcoin", 84802.75))
+        self.assertNotIn("adjacent locations", prose)
+
+    def test_holiday_and_crypto_prose_is_unique_across_pages(self):
+        prose = [fallback_copy(self._crypto(f"c{i}", f"Coin{i}", 84802.75 + i))[0]
+                 for i in range(20)]
+        self.assertEqual(len(set(prose)), len(prose))
+
+
 class TestLinks(unittest.TestCase):
     def test_related_links_point_at_real_pages(self):
         cfg = make_cfg(Path(tempfile.mkdtemp()))
