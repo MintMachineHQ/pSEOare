@@ -596,6 +596,27 @@ def api_endpoints(store: MetricsStore, stamp: str) -> list[tuple[str, str]]:
     return out
 
 
+def _envelope(answer: dict[str, Any], source_path: str, title: str, stamp: str) -> str:
+    """The response shape an agent can use without parsing prose.
+
+    Bare figures invite a caller to invent the interpretation. Naming the answer
+    explicitly, and carrying the human-readable source with it, makes the endpoint a
+    reference rather than just a data dump -- the caller gets the number *and* somewhere
+    to send a human who wants to check it.
+    """
+    return json.dumps({
+        "answer": answer,
+        "source": {
+            "url": link(source_path),
+            "title": title,
+            "site": _SITE["origin"],
+        },
+        "updated": stamp,
+        "license": "CC-BY-4.0",
+        "attribution": f"Data by {_SITE['name']} ({_SITE['origin']})",
+    }, indent=1)
+
+
 def entity_endpoints(store: MetricsStore, stamp: str) -> list[tuple[str, str]]:
     """One JSON file per tracked entity, so a lookup is a plain static GET.
 
@@ -608,54 +629,53 @@ def entity_endpoints(store: MetricsStore, stamp: str) -> list[tuple[str, str]]:
     """
     out: list[tuple[str, str]] = []
     for row in store.climates():
-        out.append((f"api/cities/{_alias(row)}.json", json.dumps({
-            "city": row.data.get("name"), "page": link(row.path),
-            "annual_mean_c": row.data.get("annual_mean"),
-            "warmest_month": row.data.get("warmest_month"),
-            "warmest_c": row.data.get("warmest"),
-            "coldest_month": row.data.get("coldest_month"),
-            "coldest_c": row.data.get("coldest"),
-            "seasonal_swing_c": row.data.get("swing"),
-            "annual_rainfall_mm": row.data.get("annual_rain"),
-            "wettest_month": row.data.get("wettest_month"),
-            "wettest_mm_per_day": row.data.get("wettest_rain"),
-            "driest_month": row.data.get("driest_month"),
-            "driest_mm_per_day": row.data.get("driest_rain"),
+        d = row.data
+        out.append((f"api/cities/{_alias(row)}.json", _envelope({
+            "city": d.get("name"),
+            "annual_mean_c": d.get("annual_mean"),
+            "warmest_month": d.get("warmest_month"),
+            "warmest_c": d.get("warmest"),
+            "coldest_month": d.get("coldest_month"),
+            "coldest_c": d.get("coldest"),
+            "seasonal_swing_c": d.get("swing"),
+            "annual_rainfall_mm": d.get("annual_rain"),
+            "wettest_month": d.get("wettest_month"),
+            "wettest_mm_per_day": d.get("wettest_rain"),
+            "driest_month": d.get("driest_month"),
+            "driest_mm_per_day": d.get("driest_rain"),
             "monthly": [{"month": m[0], "mean_c": m[1], "rain_mm_per_day": m[2]}
-                        for m in row.data.get("months", [])],
-            "updated": stamp, "source": _SITE["origin"],
-        }, indent=1)))
+                        for m in d.get("months", [])],
+        }, row.path, f"{d.get('name')} climate averages", stamp)))
     for row in store.cryptos():
-        out.append((f"api/crypto/{_alias(row)}.json", json.dumps({
-            "asset": row.data.get("name"), "page": link(row.path),
-            "range_12m": {"high": row.data.get("high"), "low": row.data.get("low"),
-                          "latest": row.data.get("last")},
-            "position_in_range_pct": row.data.get("position"),
-            "pct_above_low": row.data.get("above_low_pct"),
-            "pct_below_high": row.data.get("below_high_pct"),
-            "range_pct_of_low": row.data.get("range_pct"),
+        d = row.data
+        out.append((f"api/crypto/{_alias(row)}.json", _envelope({
+            "asset": d.get("name"),
+            "high_12m": d.get("high"),
+            "low_12m": d.get("low"),
+            "latest": d.get("last"),
+            "position_in_range_pct": d.get("position"),
+            "pct_above_low": d.get("above_low_pct"),
+            "pct_below_high": d.get("below_high_pct"),
+            "range_pct_of_low": d.get("range_pct"),
             # Omitted rather than returned as an empty list: a store entry recorded
-            # before this page carried a table has no monthly series, and "monthly": []
+            # before its page carried a table has no monthly series, and "monthly": []
             # reads as "this asset has no monthly data" rather than "not recorded yet".
-            **({"monthly": row.data["months"]} if row.data.get("months") else {}),
-            "updated": stamp, "source": _SITE["origin"],
-        }, indent=1)))
+            **({"monthly": d["months"]} if d.get("months") else {}),
+        }, row.path, f"{d.get('name')} 12-month price range", stamp)))
     by_country: dict[str, list[Metrics]] = {}
     for row in store.holidays():
-        country = str(row.data.get("country") or "unknown")
-        by_country.setdefault(country, []).append(row)
+        by_country.setdefault(str(row.data.get("country") or "unknown"), []).append(row)
     for country, rows in by_country.items():
         slug = slugify(country)
         rows = sorted(rows, key=lambda r: str(r.data.get("date", "")))
-        out.append((f"api/holidays/{slug}.json", json.dumps({
-            "country": country, "page": link(f"hub-single-holidays.html"),
+        out.append((f"api/holidays/{slug}.json", _envelope({
+            "country": country,
             "count": len(rows),
             "holidays": [{"name": r.data.get("name"), "local_name": r.data.get("local_name"),
                           "date": r.data.get("date"), "weekday": r.data.get("weekday"),
                           "weekend": r.data.get("weekend"), "page": link(r.path)}
                          for r in rows],
-            "updated": stamp, "source": _SITE["origin"],
-        }, indent=1)))
+        }, f"hub-single-holidays.html", f"Public holidays for {country}", stamp)))
     return out
 
 
@@ -1090,4 +1110,216 @@ def topic_feeds(store: MetricsStore, stamp: str) -> list[tuple[str, str]]:
 </channel></rss>
 """
         out.append((f"feed-{slug}.xml", feed))
+    return out
+
+
+# ---------------------------------------------------------------------------
+# question engine
+# ---------------------------------------------------------------------------
+
+# A question page is only worth publishing when the answer is *surprising* given the two
+# things being compared. Two cities 2 C apart is not a story; a city that is warmer in
+# winter but cooler in summer is. These thresholds are what stop the engine producing
+# every mathematically possible pair, which is the failure mode Google's people-first
+# guidance warns about: lots of automated pages in the hope some rank.
+QUESTION_MIN_SWING_C = 4.0
+QUESTION_MIN_RAIN_MM = 250.0
+QUESTION_MIN_RANGE_PCT = 40.0
+
+
+def question_pages(store: MetricsStore, stamp: str, limit: int = 40) -> list[tuple[str, str, str]]:
+    """Answer pages for questions the data can actually settle.
+
+    One page per *question*, phrased the way someone would ask it, and only where the
+    answer is non-obvious. Every page states which side wins and by how much, so it can
+    be quoted without reading the table.
+    """
+    site = _SITE
+    docs: list[tuple[str, str, str]] = []
+    climates = sorted(store.climates(), key=lambda r: r.data.get("annual_mean", 0))
+    for i in range(len(climates) - 1):
+        if len(docs) >= limit:
+            break
+        a, b = climates[i], climates[i + 1]
+        an, bn = str(a.data.get("name")), str(b.data.get("name"))
+        swing = abs(a.data.get("swing", 0) - b.data.get("swing", 0))
+        rain = abs(a.data.get("annual_rain", 0) - b.data.get("annual_rain", 0))
+        if swing < QUESTION_MIN_SWING_C and rain < QUESTION_MIN_RAIN_MM:
+            continue
+        winter = _winter_mean(a) - _winter_mean(b)
+        summer = _summer_mean(a) - _summer_mean(b)
+        claims = []
+        if abs(winter) >= 0.5:
+            claims.append(
+                f"{an} is {abs(winter):.1f} C {'warmer' if winter > 0 else 'colder'} in "
+                f"December to February than {bn}"
+            )
+        if abs(summer) >= 0.5:
+            claims.append(
+                f"{an} is {abs(summer):.1f} C {'warmer' if summer > 0 else 'colder'} in "
+                f"June to August"
+            )
+        if rain >= QUESTION_MIN_RAIN_MM:
+            wetter = an if a.data.get("annual_rain", 0) >= b.data.get("annual_rain", 0) else bn
+            claims.append(f"{wetter} gets {rain:,.0f} mm more rain a year")
+        if swing >= QUESTION_MIN_SWING_C:
+            swingier = an if a.data.get("swing", 0) >= b.data.get("swing", 0) else bn
+            claims.append(
+                f"{swingier} has the larger seasonal swing, {swing:.1f} C more between its "
+                f"warmest and coldest month"
+            )
+        if not claims:
+            continue
+        title = f"Which is warmer, {an} or {bn}?"
+        slug = f"q-warmer-{a.slug}-or-{b.slug}"
+        chart = bar_chart(
+            [a.data["months"][m][1] for m in range(12)] + [b.data["months"][m][1] for m in range(12)],
+            [m[:3] for m in MONTH_NAMES] * 2,
+            title=f"Monthly mean temperature: {an} then {bn}", unit=" C",
+        )
+        body = f"""
+<h1>{_esc(title)}</h1>
+<p class="lede">{_esc(claims[0])}.</p>
+<p class="meta">Updated: {_esc(_updated(stamp))}</p>
+{chart}
+<h2>The short answer</h2>
+<ul>{"".join(f"<li>{_esc(c)}.</li>" for c in claims)}</ul>
+<h2>The figures</h2>
+<table><caption>{_esc(an)} and {_esc(bn)} side by side</caption>
+<thead><tr><th>Measure</th><th>{_esc(an)}</th><th>{_esc(bn)}</th></tr></thead>
+<tbody>{_cmp_row("Annual mean", f"{a.data.get('annual_mean', 0):.1f} C", f"{b.data.get('annual_mean', 0):.1f} C")}{_cmp_row("Seasonal swing", f"{a.data.get('swing', 0):.1f} C", f"{b.data.get('swing', 0):.1f} C")}{_cmp_row("Annual rainfall", f"{a.data.get('annual_rain', 0):,.0f} mm", f"{b.data.get('annual_rain', 0):,.0f} mm")}{_cmp_row("Wettest month", f"{a.data.get('wettest_month')} ({a.data.get('wettest_rain')} mm/day)", f"{b.data.get('wettest_month')} ({b.data.get('wettest_rain')} mm/day)")}</tbody></table>
+<p class="note">Full pages:
+<a href="{link(a.path)}">{_esc(an)}</a> &middot;
+<a href="{link(b.path)}">{_esc(bn)}</a>.</p>
+"""
+        docs.append((f"{slug}.html", _document(
+            title, f"{an} compared with {bn}: which is warmer, and when.", body, stamp), "question"))
+    return docs
+
+
+def _winter_mean(row: Metrics) -> float:
+    months = row.data.get("months") or []
+    idx = [11, 0, 1]  # December, January, February
+    values = [row.data["months"][m][1] for m in idx if m < len(row.data["months"])]
+    return sum(values) / len(values) if values else 0.0
+
+
+def _summer_mean(row: Metrics) -> float:
+    months = row.data.get("months") or []
+    idx = [5, 6, 7]  # June, July, August
+    values = [row.data["months"][m][1] for m in idx if m < len(row.data["months"])]
+    return sum(values) / len(values) if values else 0.0
+
+
+def latest_feed(store: MetricsStore, stamp: str, limit: int = 200) -> tuple[str, str]:
+    """A feed of the most recently rebuilt pages, for machines rather than readers."""
+    from xml.sax.saxutils import escape as xml_escape
+
+    entries: list[tuple[str, str, str]] = []
+    for row in list(store.rows.values()):
+        entries.append((link(row.path), str(row.data.get("name") or row.title), row.kind))
+    entries.sort(reverse=True)
+    items = "".join(
+        f"<item><title>{xml_escape(title)}</title><link>{xml_escape(url)}</link>"
+        f"<guid isPermaLink=\"true\">{xml_escape(url)}</guid>"
+        f"<category>{xml_escape(kind)}</category><pubDate>{stamp}</pubDate></item>"
+        for url, title, kind in entries[:limit]
+    )
+    feed = f"""<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"><channel>
+<title>Latest data pages | {_SITE['name']}</title>
+<link>{xml_escape(link('index.html'))}</link>
+<description>Every tracked page, newest first.</description>
+<lastBuildDate>{stamp}</lastBuildDate>
+{items}
+</channel></rss>
+"""
+    return "latest.xml", feed
+
+
+# ---------------------------------------------------------------------------
+# web stories
+# ---------------------------------------------------------------------------
+
+def story_pages(store: MetricsStore, stamp: str, stories: int = 6) -> list[tuple[str, str, str]]:
+    """A handful of Web Stories, one per ranking.
+
+    Deliberately capped. Google's Web Story policy requires meaningful content and
+    penalises low-quality bulk, so this is a small number of genuinely readable stories
+    rather than one per ranking. Each is a static AMP document with no JavaScript.
+    """
+    site = _SITE
+    out: list[tuple[str, str, str]] = []
+    picks = []
+    climates = sorted(store.climates(), key=lambda r: r.data.get("annual_mean", 0))
+    if climates:
+        picks.append(("coldest-cities", "The coldest cities in the dataset",
+                      climates[:10], "annual_mean", " C"))
+        picks.append(("wettest-cities", "The wettest cities in the dataset",
+                      sorted(store.climates(), key=lambda r: r.data.get("annual_rain", 0),
+                             reverse=True)[:10], "annual_rain", " mm"))
+    cryptos = store.cryptos()
+    if cryptos:
+        picks.append(("crypto-near-365-day-low", "Assets closest to their 365-day low",
+                      sorted(cryptos, key=lambda r: r.data.get("above_low_pct", 999))[:10],
+                      "above_low_pct", "% above"))
+    for slug, title, rows, field, unit in picks[:stories]:
+        if not rows:
+            continue
+        pages = [
+            {"name": str(r.data.get("name") or r.title), "path": r.path,
+             "value": r.data.get(field)}
+            for r in rows if r.data.get(field) is not None
+        ]
+        if len(pages) < 3:
+            continue
+        story_path = f"story-{slug}.html"
+        story_id = link(story_path)
+        slides = [
+            f"""<amp-story-page id="cover" background-color="#111827">
+<amp-story-grid-layer columns="12" rows="10">
+<div class="cover"><h1>{_esc(title)}</h1>
+<p>{len(pages)} entries, rebuilt daily</p></div>
+</amp-story-grid-layer></amp-story-story-page>"""
+        ]
+        for i, page in enumerate(pages, 1):
+            value = page["value"]
+            shown = _fmt(value, unit, 0 if unit == "%" else 1)
+            slides.append(f"""<amp-story-page id="s{i}" background-color="#111827">
+<amp-story-grid-layer columns="12" rows="10">
+<div class="entry"><p class="rank">{i}</p><h3>{_esc(page['name'])}</h3>
+<p class="value">{_esc(shown)}</p></div>
+</amp-story-grid-layer>
+<amp-story-page-attachment href="{_esc(link(page['path']))}" data-page-type="link">
+<amp-story-page-link href="{_esc(link(page['path']))}"><span>Full data</span></amp-story-page-link>
+</amp-story-page-attachment></amp-story-page>""")
+        body = f"""<!doctype html><html ⚡ lang="en"><head>
+<meta charset="utf-8">
+<title>{_esc(title)}</title>
+<link rel="canonical" href="{_esc(link(story_path))}">
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta property="og:title" content="{_esc(title)}">
+<meta property="og:type" content="article">
+<meta property="og:url" content="{_esc(story_id)}">
+<meta property="og:image" content="{_esc(site['origin'] + '/api/og-' + slug + '.svg')}">
+<script async src="https://cdn.ampproject.org/v0.js"></script>
+<script type="application/ld+json">{json.dumps({
+    "@context": "https://schema.org", "@type": "Dataset", "name": title,
+    "description": f"{title}: {len(pages)} entries, rebuilt daily from public data.",
+    "url": story_id, "dateModified": stamp,
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "isAccessibleForFree": True,
+})}</script>
+<script async custom-element="amp-story" src="https://cdn.ampproject.org/v0/amp-story-v1.0.js"></script>
+<style amp-boilerplate>body{{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}}@-webkit-keyframes -amp-start{{from{{visibility:hidden}}to{{visibility:visible}}}}@-moz-keyframes -amp-start{{from{{visibility:hidden}}to{{visibility:visible}}}}@-ms-keyframes -amp-start{{from{{visibility:hidden}}to{{visibility:visible}}}}@keyframes -amp-start{{from{{visibility:hidden}}to{{visibility:visible}}}}</style><noscript><style amp-boilerplate>body{{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}}</style></noscript>
+<style amp-custom>
+body{{font-family:system-ui,sans-serif;color:#fff;margin:0}}
+.cover,.entry{{grid-column:1/-1;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:2rem}}
+.cover h2{{font-size:2.2rem;margin:0 0 .6rem}}h3{{font-size:1.6rem;margin:.4rem 0}}
+.value{{font-size:2.4rem;font-weight:700}}p.rank{{font-size:1rem;opacity:.7;margin:0}}
+</style></head>
+<body><amp-story standalone title="{_esc(title)}" publisher="{_esc(site['name'])}">
+{"".join(slides)}
+</amp-story></body></html>"""
+        out.append((f"story-{slug}.html", body, "story"))
     return out

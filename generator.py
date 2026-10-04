@@ -34,6 +34,7 @@ from engine.hubs import (  # noqa: E402
     not_found_html,
     robots_txt,
     headers_file,
+    split_sitemaps,
     llms_txt,
     rss_feed,
     save_entity_index,
@@ -162,6 +163,8 @@ async def run(args: argparse.Namespace) -> int:
             + [explore.api_docs(store, stamp)]
             + explore.widget_pages(store, stamp)
             + explore.event_pages(store, stamp)
+            + explore.question_pages(store, stamp)
+            + explore.story_pages(store, stamp)
             + [explore.embed_snippet(store, stamp)]
         )
         derived_paths: list[str] = []
@@ -175,6 +178,7 @@ async def run(args: argparse.Namespace) -> int:
             + explore.entity_endpoints(store, stamp)
             + explore.search_index(store, stamp)
             + explore.topic_feeds(store, stamp)
+            + [explore.latest_feed(store, stamp)]
         ):
             writer.write_raw(filename, payload)
             derived_paths.append(filename)
@@ -194,18 +198,31 @@ async def run(args: argparse.Namespace) -> int:
                 for p in derived_paths if "/" in p
                 for i in range(1, len(p.split("/")))
             }
-            writer.write_raw(
-                "sitemap.xml",
-                sitemap_xml(
-                    pages,
-                    cfg,
-                    stamp,
-                    published=writer.manifest_pages(),
-                    extra=derived_paths,
-                    extra_dirs=extra_dirs,
-                ),
+            index, family_sitemaps = split_sitemaps(
+                pages,
+                cfg,
+                stamp,
+                published=writer.manifest_pages(),
+                extra=derived_paths,
+                extra_dirs=extra_dirs,
             )
-            writer.write_raw("robots.txt", robots_txt(cfg))
+            # sitemap.xml stays the full urlset: the daily health routine counts its
+            # <loc> entries and would read a sitemapindex as ~12 URLs, which looks like
+            # a catastrophic drop. sitemap-index.xml is the new entry point for search
+            # consoles and is what robots.txt points at.
+            writer.write_raw("sitemap.xml", sitemap_xml(
+                pages, cfg, stamp,
+                published=writer.manifest_pages(),
+                extra=derived_paths,
+                extra_dirs=extra_dirs,
+            ))
+            writer.write_raw("sitemap-index.xml", index)
+            writer.write_raw("sitemap-index.xml", index)
+            for name, body in family_sitemaps.items():
+                writer.write_raw(name, body)
+                derived_paths.append(name)
+                derived_titles[name] = "sitemap"
+            writer.write_raw("robots.txt", robots_txt(cfg, index_name="sitemap-index.xml"))
             writer.write_raw("llms.txt", llms_txt(cfg))
             writer.write_raw("_headers", headers_file())
             writer.write_raw("feed.xml", rss_feed(pages, cfg, stamp))

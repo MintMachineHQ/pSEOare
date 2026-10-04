@@ -2412,11 +2412,15 @@ class TestEntityApiAndSearchAndEvents(unittest.TestCase):
         self.assertIn("api/crypto/coin0.json", out)
         self.assertIn("api/holidays/country0.json", out)
         payload = _json.loads(out["api/cities/city0.json"])
-        self.assertEqual(payload["city"], "City0")
-        self.assertIn("monthly", payload)
+        # Agent-shaped: the figures sit under "answer" and the human-readable page is
+        # carried alongside, so a caller can cite something a person can open.
+        self.assertEqual(payload["answer"]["city"], "City0")
+        self.assertIn("monthly", payload["answer"])
+        self.assertTrue(payload["source"]["url"].startswith("http"))
+        self.assertIn("updated", payload)
         holidays = _json.loads(out["api/holidays/country0.json"])
-        self.assertIn("holidays", holidays)
-        self.assertEqual(holidays["count"], len(holidays["holidays"]))
+        self.assertIn("holidays", holidays["answer"])
+        self.assertEqual(holidays["answer"]["count"], len(holidays["answer"]["holidays"]))
 
     def test_entity_endpoints_use_clean_urls(self):
         from engine import explore
@@ -2558,5 +2562,263 @@ class TestStaticDeliveryHeaders(unittest.TestCase):
         )
         out = dict(explore.entity_endpoints(store, "2026-10-04T00:00:00Z"))
         payload = _json.loads(out["api/crypto/bitcoin.json"])
-        self.assertNotIn("monthly", payload)
-        self.assertEqual(payload["range_12m"]["latest"], 150.0)
+        self.assertNotIn("monthly", payload["answer"])
+        self.assertEqual(payload["answer"]["latest"], 150.0)
+
+
+class TestHolidayAnswerSentence(unittest.TestCase):
+    """The generic path produced "Christmas Day in Cyprus (2027): date 2027-12-25; local
+    name Xmas; country Cyprus" -- a field listing, not an answer. Holiday pages are the
+    most quotable content on the site."""
+
+    def _page(self, h1, date_str, local, country):
+        return Page(kind="holiday_single", slug="s", title=h1, h1=h1, summary="s", data={},
+                    facts=[("Date", date_str), ("Local name", local),
+                           ("Country", country), ("Year", date_str[:4])])
+
+    def test_it_says_the_date_and_weekday_as_a_person_would(self):
+        from engine.render import answer_sentence
+
+        out = answer_sentence(self._page("Christmas Day in Cyprus 2027", "2027-12-25",
+                                         "Christmas Day", "Cyprus"))
+        self.assertEqual(out, "Christmas Day in Cyprus falls on Saturday 25 December 2027, a weekend date.")
+
+    def test_a_weekday_holiday_is_not_called_a_weekend_date(self):
+        from engine.render import answer_sentence
+
+        out = answer_sentence(self._page("New Year in Japan 2027", "2027-01-01", "New Year", "Japan"))
+        self.assertIn("Friday", out)
+        self.assertNotIn("weekend", out)
+
+    def test_the_year_suffix_is_stripped_from_the_name(self):
+        from engine.render import answer_sentence
+
+        out = answer_sentence(self._page("Orthodox Easter in Greece 2027", "2027-05-02",
+                                         "Orthodox Easter", "Greece"))
+        self.assertNotIn("2027 ", out.split(" falls on ")[0])
+
+    def test_the_local_name_is_used_when_it_differs(self):
+        from engine.render import answer_sentence
+
+        out = answer_sentence(self._page("Christmas Day in Cyprus 2027", "2027-12-25",
+                                         "Χριστούγεννα", "Cyprus"))
+        self.assertIn("Χριστούγεννα", out)
+
+    def test_country_pages_keep_the_generic_answer(self):
+        from engine.render import answer_sentence
+
+        page = Page(kind="country_profile", slug="a", title="Afghanistan",
+                    h1="Afghanistan country data", summary="s", data={},
+                    facts=[("Population", "41,454,761"), ("Capital", "Kabul")])
+        self.assertIn("41,454,761", answer_sentence(page))
+
+
+class TestSitemapSplit(unittest.TestCase):
+    def test_urls_are_grouped_into_families(self):
+        from engine.hubs import _sitemap_family
+
+        self.assertEqual(_sitemap_family("top-coldest-cities.html"), "rankings")
+        self.assertEqual(_sitemap_family("compare-a-vs-b.html"), "comparisons")
+        self.assertEqual(_sitemap_family("widget-climate-kazan.html"), "widgets")
+        self.assertEqual(_sitemap_family("api/cities/kazan.json"), "api")
+        self.assertEqual(_sitemap_family("today.html"), "events")
+        self.assertEqual(
+            _sitemap_family("abidjan-average-monthly-temperature-rainfall.html"), "climate")
+        self.assertEqual(_sitemap_family("afghanistan-country-data.html"), "countries")
+
+    def test_the_index_lists_a_sitemap_per_family(self):
+        from engine.hubs import split_sitemaps
+
+        cfg = make_cfg(Path(tempfile.mkdtemp()))
+        index, files = split_sitemaps([], cfg, "2026-10-04T00:00:00Z")
+        self.assertIn("<sitemapindex", index)
+        self.assertTrue(files)
+        for name in files:
+            self.assertIn(name, index)
+
+    def test_robots_points_at_the_index_and_sitemap_xml_stays_a_urlset(self):
+        from engine.hubs import robots_txt, sitemap_xml
+
+        cfg = make_cfg(Path(tempfile.mkdtemp()))
+        self.assertIn("sitemap-index.xml", robots_txt(cfg, index_name="sitemap-index.xml"))
+        # sitemap.xml must stay a urlset: the daily health routine counts its <loc>
+        # entries, and a sitemapindex would read as a dozen URLs and look like a crash.
+        flat = sitemap_xml([], cfg, "2026-10-04T00:00:00Z")
+        self.assertIn("<urlset", flat)
+        self.assertNotIn("<sitemapindex", flat)
+
+
+class TestQuestionEngine(unittest.TestCase):
+    """A question page is only worth publishing when the answer is non-obvious. Producing
+    every possible pair is the automated-page-volume failure mode."""
+
+    def _store_with(self, climates):
+        from engine.metrics import MetricsStore
+
+        store = MetricsStore(Path(tempfile.mkdtemp()))
+        months_names = ["January", "February", "March", "April", "May", "June",
+                        "July", "August", "September", "October", "November", "December"]
+        for i, (mean, swing, rain) in enumerate(climates):
+            # The seasonal peak is deliberately offset from midwinter. A pure
+            # sin((j-6)/12 * 2pi) is symmetric about December and June, which makes the
+            # winter mean and the summer mean identical and silently disables every
+            # winter-versus-summer claim the question engine makes.
+            import math
+
+            peak = 3.0 + (i % 3)
+            rows = [[m, round(mean + swing * math.sin((j - peak) / 12 * 2 * math.pi), 1),
+                     round(rain / 12 * (1 + 0.3 * math.cos(j / 12 * 2 * math.pi)), 2)]
+                    for j, m in enumerate(months_names)]
+            store.rows[f"city{i}.html"] = _Metrics(
+                path=f"city{i}.html", kind="climate_city", title=f"City{i}", slug=f"city{i}",
+                entity=f"city{i}",
+                data={"name": f"City{i}", "annual_mean": mean, "swing": swing * 2,
+                      "annual_rain": rain, "warmest_month": "July", "coldest_month": "January",
+                      "warmest": mean + swing, "coldest": mean - swing,
+                      "wettest_month": "March", "wettest_rain": 3.0, "driest_month": "August",
+                      "driest_rain": 0.5, "months": rows},
+            )
+        return store
+
+    def test_a_meaningful_difference_produces_a_question_page(self):
+        from engine import explore
+
+        store = self._store_with([(10.0, 6.0, 800.0), (12.0, 14.0, 400.0)])
+        docs = explore.question_pages(store, "2026-10-04T00:00:00Z")
+        self.assertTrue(docs)
+        name, html, kind = docs[0]
+        self.assertEqual(kind, "question")
+        self.assertIn("Which is warmer", html)
+        self.assertIn("The short answer", html)
+        self.assertIn("in December to February", html)
+
+    def test_a_negligible_difference_produces_nothing(self):
+        from engine import explore
+
+        store = self._store_with([(10.0, 5.0, 800.0), (10.3, 5.1, 810.0)])
+        self.assertEqual(explore.question_pages(store, "2026-10-04T00:00:00Z"), [])
+
+    def test_winter_and_summer_can_disagree(self):
+        """A maritime city is warmer in winter and cooler in summer than a continental
+        one at the same annual mean. That is the interesting case."""
+        from engine import explore
+
+        store = self._store_with([(10.0, 2.0, 1000.0), (10.0, 12.0, 500.0)])
+        _n, html, _k = explore.question_pages(store, "2026-10-04T00:00:00Z")[0]
+        self.assertIn("June to August", html)
+
+    def test_question_pages_obey_the_limit(self):
+        from engine import explore
+
+        climates = [(10.0 + i, 6.0 + i * 4, 800.0 - i * 30) for i in range(20)]
+        docs = explore.question_pages(self._store_with(climates), "2026-10-04T00:00:00Z", limit=3)
+        self.assertLessEqual(len(docs), 3)
+
+    def test_latest_feed_is_valid_rss(self):
+        from xml.etree import ElementTree
+
+        from engine import explore
+
+        name, feed = explore.latest_feed(self._store_with([(10.0, 6.0, 800.0)]),
+                                         "2026-10-04T00:00:00Z")
+        self.assertEqual(name, "latest.xml")
+        root = ElementTree.fromstring(feed)
+        self.assertTrue(root.findall(".//item"))
+
+
+class TestHolidayAnswerIsQuotable(unittest.TestCase):
+    def test_a_holiday_page_gets_a_real_answer_not_a_field_listing(self):
+        from engine.render import answer_html
+
+        page = Page(kind="holiday_single", slug="s", title="Christmas Day in Cyprus 2027",
+                    h1="Christmas Day in Cyprus 2027", summary="s", data={},
+                    facts=[("Date", "2027-12-25"), ("Local name", "Christmas Day"),
+                           ("Country", "Cyprus"), ("Year", "2027")])
+        block = answer_html(page)
+        self.assertIn("answer-block", block)
+        # The quoted sentence is the answer; the bullets below it are the supporting facts.
+        import re as _re
+
+        sentence = _re.search(r"<p><b>(.*?)</b></p>", block, _re.S)
+        self.assertIsNotNone(sentence)
+        self.assertEqual(
+            " ".join(sentence.group(1).split()),
+            "Christmas Day in Cyprus falls on Saturday 25 December 2027, a weekend date.",
+        )
+
+
+class TestWebStories(unittest.TestCase):
+    """Deliberately capped. Google's Web Story policy requires meaningful content and
+    penalises bulk, so this is a handful of readable stories, not one per ranking."""
+
+    def _store(self):
+        import math
+
+        from engine.metrics import MetricsStore
+
+        store = MetricsStore(Path(tempfile.mkdtemp()))
+        names = ["January", "February", "March", "April", "May", "June",
+                 "July", "August", "September", "October", "November", "December"]
+        for i in range(8):
+            rows = [[m, round(5.0 + i * 3 + 6 * math.sin((j - 6) / 12 * 2 * math.pi), 1), 2.0]
+                    for j, m in enumerate(names)]
+            store.rows[f"city{i}.html"] = _Metrics(
+                path=f"city{i}.html", kind="climate_city", title=f"City{i}", slug=f"city{i}",
+                data={"name": f"City{i}", "annual_mean": 5.0 + i * 3, "annual_rain": 400 + i * 90,
+                      "swing": 12.0, "warmest_month": "July", "coldest_month": "January",
+                      "warmest": 20.0, "coldest": -1.0, "wettest_month": "March",
+                      "wettest_rain": 3.0, "driest_month": "August", "driest_rain": 0.5,
+                      "months": rows},
+            )
+        for i in range(4):
+            store.rows[f"coin{i}.html"] = _Metrics(
+                path=f"coin{i}.html", kind="crypto_12m", title=f"Coin{i}", slug=f"coin{i}",
+                data={"name": f"Coin{i}", "high": 200.0, "low": 100.0, "last": 120.0,
+                      "range_pct": 100.0, "above_low_pct": 20.0 + i,
+                      "below_high_pct": 40.0, "months": []},
+            )
+        return store
+
+    def test_stories_are_amp_and_bounded(self):
+        from engine import explore
+
+        docs = explore.story_pages(self._store(), "2026-10-04T00:00:00Z")
+        self.assertTrue(docs)
+        self.assertLessEqual(len(docs), 6)
+        for name, html, kind in docs:
+            with self.subTest(page=name):
+                self.assertTrue(name.startswith("story-"))
+                self.assertEqual(kind, "story")
+                self.assertIn("amp-story", html)
+                self.assertIn("<html ⚡", html)
+                # CI rejects any page without an h1 or JSON-LD. Stories failed that gate
+                # on the first run for exactly the reason the widgets once did.
+                self.assertIn("<h1", html)
+                self.assertIn("application/ld+json", html)
+                self.assertNotRegex(html, r'href="[^"]*\.html"')
+
+    def test_a_story_has_a_cover_plus_one_page_per_entry(self):
+        from engine import explore
+
+        _n, html, _k = explore.story_pages(self._store(), "2026-10-04T00:00:00Z")[0]
+        pages = html.count("<amp-story-page ")
+        self.assertGreaterEqual(pages, 4)
+        self.assertIn('id="cover"', html)
+
+    def test_no_invalid_amp_elements(self):
+        from engine import explore
+
+        for _n, html, _k in explore.story_pages(self._store(), "2026-10-04T00:00:00Z"):
+            self.assertNotIn("amp-story-page-page", html)
+
+    def test_a_thin_store_produces_no_story(self):
+        from engine import explore
+        from engine.metrics import MetricsStore
+
+        self.assertEqual(explore.story_pages(MetricsStore(Path(tempfile.mkdtemp())),
+                                             "2026-10-04T00:00:00Z"), [])
+
+    def test_story_slugs_reach_the_api_family(self):
+        from engine.hubs import _sitemap_family
+
+        self.assertEqual(_sitemap_family("story-coldest-cities.html"), "stories")

@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import json
 import logging
+import re
 from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
@@ -319,6 +320,87 @@ def sitemap_xml(
 """
 
 
+def _sitemap_family(path: str) -> str:
+    """Which sitemap a URL belongs to, so performance can be read per family.
+
+    A single 3,800-URL file tells you the site is crawled and nothing else. Split by
+    family, Search Console reports which content type is actually earning impressions.
+    """
+    if path.startswith("top-"):
+        return "rankings"
+    if path.startswith("compare-"):
+        return "comparisons"
+    if path.startswith("widget-"):
+        return "widgets"
+    if path.startswith("holidays-this") or path.startswith("holidays-next") or path.startswith("holidays-20"):
+        return "events"
+    if path.endswith(".json") or path == "api.html":
+        return "api"
+    if path == "today.html":
+        return "events"
+    if path.startswith("story-"):
+        return "stories"
+    if "average-monthly-temperature-rainfall" in path:
+        return "climate"
+    if "country-data" in path or "population-of" in path:
+        return "countries"
+    if "price-by-month" in path:
+        return "crypto"
+    if path.startswith("hub-"):
+        return "hubs"
+    return "pages"
+
+
+SITEMAP_FAMILIES = (
+    "climate", "countries", "crypto", "holidays", "rankings", "comparisons",
+    "events", "widgets", "api", "stories", "hubs", "pages",
+)
+
+
+def split_sitemaps(
+    pages: list[Page], cfg: Config, stamp: str, published: dict[str, Any] | None = None,
+    extra: list[str] | None = None, extra_dirs: set[str] | None = None,
+) -> tuple[str, dict[str, str]]:
+    """Return (sitemap-index.xml, {filename: sitemap xml}).
+
+    ``sitemap.xml`` stays as-is and points at the index, so nothing that referenced it
+    breaks. The index is what a search console should be pointed at.
+    """
+    full = sitemap_xml(pages, cfg, stamp, published, extra, extra_dirs)
+    families: dict[str, list[str]] = defaultdict(list)
+    for loc in re.findall(r"<loc>([^<]+)</loc>", full):
+        families[_sitemap_family(loc.rsplit("/", 1)[-1])].append(loc)
+    from xml.sax.saxutils import escape as xml_escape
+
+    out: dict[str, str] = {}
+    today = stamp[:10]
+    for family, locs in sorted(families.items()):
+        if not locs:
+            continue
+        body = "\n".join(
+            f"  <url><loc>{xml_escape(loc)}</loc>"
+            f"<lastmod>{today}</lastmod>"
+            f"<changefreq>weekly</changefreq><priority>0.7</priority></url>"
+            for loc in sorted(locs)
+        )
+        out[f"sitemap-{family}.xml"] = (
+            '<?xml version="1.0" encoding="UTF-8"?>\n'
+            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+            f"{body}\n</urlset>\n"
+        )
+    index_body = "\n".join(
+        f"  <sitemap><loc>{xml_escape(cfg.url_for(name))}</loc>"
+        f"<lastmod>{today}</lastmod></sitemap>"
+        for name in sorted(out)
+    )
+    index = (
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+        f"{index_body}\n</sitemapindex>\n"
+    )
+    return index, out
+
+
 AI_CRAWLERS = (
     "GPTBot", "OAI-SearchBot", "ChatGPT-User", "ClaudeBot", "Claude-User",
     "anthropic-ai", "PerplexityBot", "Perplexity-User", "Google-Extended",
@@ -326,7 +408,7 @@ AI_CRAWLERS = (
 )
 
 
-def robots_txt(cfg: Config) -> str:
+def robots_txt(cfg: Config, index_name: str = "sitemap.xml") -> str:
     """robots.txt, with the AI crawlers named explicitly.
 
     ``User-agent: *`` already allows them, so the explicit list is not needed to permit
@@ -341,7 +423,9 @@ def robots_txt(cfg: Config) -> str:
     return (
         "".join(lines)
         + "User-agent: *\nAllow: /\n"
-        f"Sitemap: {cfg.url_for('sitemap.xml')}\n"
+        # robots.txt names the sitemap index, which points at the per-family files. The
+        # full urlset stays published at sitemap.xml for anything that expects one.
+        f"Sitemap: {cfg.domain}/{index_name}\n"
         f"# RSS feed: {cfg.url_for('feed.xml')}\n"
         f"# Plain-text guide for AI agents: {cfg.url_for('llms.txt')}\n"
     )

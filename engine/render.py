@@ -5,6 +5,7 @@ import html
 import json
 import random
 import re
+from datetime import date
 import string
 from typing import Any, Iterable
 
@@ -236,6 +237,10 @@ def answer_sentence(page: Page) -> str:
     so the leading facts are carried into the sentence with it.
     """
     head = page.h1.rstrip(". ")
+    if page.kind.startswith("holiday"):
+        holiday = _holiday_answer(page)
+        if holiday:
+            return holiday
     # Source and Year restate what the title already says; the rest is the answer.
     bits = [
         f"{k.lower()} {v}" for k, v in page.facts if k not in ("Source", "Year")
@@ -243,6 +248,34 @@ def answer_sentence(page: Page) -> str:
     if not bits:
         return f"{head}."
     return f"{head}: " + "; ".join(bits) + "."
+
+
+def _holiday_answer(page: Page) -> str:
+    """A holiday answer in the form a person would say it.
+
+    The generic path produced "Christmas Day in Cyprus (2027): date 2027-12-25; local
+    name Xmas; country Cyprus" -- a field listing, not an answer. Holiday pages are the
+    most quotable content on this site, so the sentence has to be the one a voice
+    assistant would read: the name, the place, the date and the weekday.
+    """
+    facts = {str(k).strip().lower(): str(v) for k, v in page.facts}
+    raw = facts.get("date", "")
+    if not raw or len(raw) != 10:
+        return ""
+    try:
+        when = date(int(raw[:4]), int(raw[5:7]), int(raw[8:10]))
+    except ValueError:
+        return ""
+    country = facts.get("country", "")
+    local = facts.get("local name", "")
+    name = re.sub(r"\s*in\s+[^\s]+\s+\d{4}$", "", page.h1).strip()
+    name = re.sub(r"\s*\(\d{4}\)$", "", name).strip() or page.h1
+    place = f" in {country}" if country else ""
+    weekday = when.strftime("%A")
+    spoken = local if (local and local.lower() != name.lower()) else name
+    subject = f"{spoken} in {country}" if country else spoken
+    weekend = ", a weekend date" if when.weekday() >= 5 else ""
+    return f"{subject} falls on {weekday} {when.strftime('%d %B %Y')}{weekend}."
 
 
 def answer_html(page: Page) -> str:

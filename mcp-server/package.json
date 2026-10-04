@@ -1,0 +1,12 @@
+{
+  "name": "pseoare-mcp",
+  "version": "1.0.0",
+  "description": "MCP server exposing pSEOare climate, holiday and crypto reference data to AI agents. Every tool returns figures plus the human-readable source page.",
+  "license": "CC-BY-4.0",
+  "type": "module",
+  "main": "index.js",
+  "bin": { "pseoare-mcp": "index.js" },
+  "files": ["index.js", "README.md"],
+  "keywords": ["mcp", "model-context-protocol", "climate", "holidays", "crypto", "reference-data"],
+  "engines": { "node": ">=18" }
+}
