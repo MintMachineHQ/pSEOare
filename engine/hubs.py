@@ -496,9 +496,14 @@ def headers_file() -> str:
     one: it changes daily and carries the ad tags, and a crawler should see the current
     build rather than a cached copy of yesterday's.
     """
+    # Pages matches these patterns against the *request path*, and this site is served
+    # extensionless, so a "/*.html" rule never fires: every page is requested as
+    # "/top-coldest-cities". The catch-all below is therefore the rule that actually
+    # applies to HTML, with the data files overridden after it.
     return """/*
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
+  Cache-Control: public, max-age=300, must-revalidate
 
 /api/*
   Cache-Control: public, max-age=3600
@@ -506,11 +511,14 @@ def headers_file() -> str:
 /search-index.json
   Cache-Control: public, max-age=3600
 
-/feed-*.xml
+/feed-climate.xml
   Cache-Control: public, max-age=1800
 
-/*.html
-  Cache-Control: public, max-age=300, must-revalidate
+/feed-crypto.xml
+  Cache-Control: public, max-age=1800
+
+/feed-holidays.xml
+  Cache-Control: public, max-age=1800
 
 /assets/*
   Cache-Control: public, max-age=86400

@@ -2519,8 +2519,11 @@ class TestStaticDeliveryHeaders(unittest.TestCase):
         text = headers_file()
         self.assertIn("/api/*", text)
         self.assertIn("Cache-Control: public, max-age=3600", text)
-        self.assertIn("/*.html", text)
-        self.assertIn("must-revalidate", text)
+        # Pages matches on the request path and this site is served extensionless, so a
+        # "/*.html" rule never fires. The catch-all is what actually applies to HTML.
+        self.assertIn("Cache-Control: public, max-age=300, must-revalidate", text)
+        self.assertNotIn("/*.html", text)
+        self.assertIn("/search-index.json", text)
 
     def test_headers_survive_the_orphan_sweep(self):
         import tempfile as tf
