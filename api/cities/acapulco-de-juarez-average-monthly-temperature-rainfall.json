@@ -1,0 +1,79 @@
+{
+ "city": "Acapulco de Juarez",
+ "page": "https://pseoare.pages.dev/acapulco-de-juarez-average-monthly-temperature-rainfall",
+ "annual_mean_c": 25.6,
+ "warmest_month": "May",
+ "warmest_c": 27.1,
+ "coldest_month": "Dec",
+ "coldest_c": 24.8,
+ "seasonal_swing_c": 2.3,
+ "annual_rainfall_mm": 1234.0,
+ "wettest_month": "Sep",
+ "wettest_mm_per_day": 9.99,
+ "driest_month": "Apr",
+ "driest_mm_per_day": 0.07,
+ "monthly": [
+  {
+   "month": "Jan",
+   "mean_c": 24.9,
+   "rain_mm_per_day": 0.32
+  },
+  {
+   "month": "Feb",
+   "mean_c": 25.2,
+   "rain_mm_per_day": 0.29
+  },
+  {
+   "month": "Mar",
+   "mean_c": 25.6,
+   "rain_mm_per_day": 0.17
+  },
+  {
+   "month": "Apr",
+   "mean_c": 26.6,
+   "rain_mm_per_day": 0.07
+  },
+  {
+   "month": "May",
+   "mean_c": 27.1,
+   "rain_mm_per_day": 1.61
+  },
+  {
+   "month": "Jun",
+   "mean_c": 26.1,
+   "rain_mm_per_day": 7.07
+  },
+  {
+   "month": "Jul",
+   "mean_c": 26.0,
+   "rain_mm_per_day": 6.36
+  },
+  {
+   "month": "Aug",
+   "mean_c": 25.8,
+   "rain_mm_per_day": 9.01
+  },
+  {
+   "month": "Sep",
+   "mean_c": 25.3,
+   "rain_mm_per_day": 9.99
+  },
+  {
+   "month": "Oct",
+   "mean_c": 25.4,
+   "rain_mm_per_day": 4.57
+  },
+  {
+   "month": "Nov",
+   "mean_c": 25.0,
+   "rain_mm_per_day": 1.0
+  },
+  {
+   "month": "Dec",
+   "mean_c": 24.8,
+   "rain_mm_per_day": 0.13
+  }
+ ],
+ "updated": "2026-10-04T10:23:06.513626+00:00",
+ "source": "https://pseoare.pages.dev"
+}

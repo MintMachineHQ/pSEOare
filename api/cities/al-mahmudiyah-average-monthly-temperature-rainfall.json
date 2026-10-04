@@ -1,0 +1,79 @@
+{
+ "city": "Al Mahmudiyah",
+ "page": "https://pseoare.pages.dev/al-mahmudiyah-average-monthly-temperature-rainfall",
+ "annual_mean_c": 24.2,
+ "warmest_month": "Jul",
+ "warmest_c": 37.6,
+ "coldest_month": "Jan",
+ "coldest_c": 9.4,
+ "seasonal_swing_c": 28.2,
+ "annual_rainfall_mm": 182.0,
+ "wettest_month": "Jan",
+ "wettest_mm_per_day": 1.09,
+ "driest_month": "Jun",
+ "driest_mm_per_day": 0.0,
+ "monthly": [
+  {
+   "month": "Jan",
+   "mean_c": 9.4,
+   "rain_mm_per_day": 1.09
+  },
+  {
+   "month": "Feb",
+   "mean_c": 11.9,
+   "rain_mm_per_day": 1.05
+  },
+  {
+   "month": "Mar",
+   "mean_c": 17.1,
+   "rain_mm_per_day": 0.85
+  },
+  {
+   "month": "Apr",
+   "mean_c": 22.9,
+   "rain_mm_per_day": 0.73
+  },
+  {
+   "month": "May",
+   "mean_c": 29.8,
+   "rain_mm_per_day": 0.22
+  },
+  {
+   "month": "Jun",
+   "mean_c": 35.2,
+   "rain_mm_per_day": 0.0
+  },
+  {
+   "month": "Jul",
+   "mean_c": 37.6,
+   "rain_mm_per_day": 0.0
+  },
+  {
+   "month": "Aug",
+   "mean_c": 37.4,
+   "rain_mm_per_day": 0.0
+  },
+  {
+   "month": "Sep",
+   "mean_c": 33.2,
+   "rain_mm_per_day": 0.03
+  },
+  {
+   "month": "Oct",
+   "mean_c": 26.9,
+   "rain_mm_per_day": 0.36
+  },
+  {
+   "month": "Nov",
+   "mean_c": 17.0,
+   "rain_mm_per_day": 0.88
+  },
+  {
+   "month": "Dec",
+   "mean_c": 11.1,
+   "rain_mm_per_day": 0.77
+  }
+ ],
+ "updated": "2026-10-04T10:23:06.513626+00:00",
+ "source": "https://pseoare.pages.dev"
+}

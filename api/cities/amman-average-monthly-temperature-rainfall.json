@@ -1,0 +1,79 @@
+{
+ "city": "Amman",
+ "page": "https://pseoare.pages.dev/amman-average-monthly-temperature-rainfall",
+ "annual_mean_c": 17.9,
+ "warmest_month": "Jul",
+ "warmest_c": 26.7,
+ "coldest_month": "Jan",
+ "coldest_c": 7.5,
+ "seasonal_swing_c": 19.2,
+ "annual_rainfall_mm": 189.0,
+ "wettest_month": "Feb",
+ "wettest_mm_per_day": 1.53,
+ "driest_month": "Jul",
+ "driest_mm_per_day": 0.02,
+ "monthly": [
+  {
+   "month": "Jan",
+   "mean_c": 7.5,
+   "rain_mm_per_day": 1.42
+  },
+  {
+   "month": "Feb",
+   "mean_c": 9.1,
+   "rain_mm_per_day": 1.53
+  },
+  {
+   "month": "Mar",
+   "mean_c": 12.7,
+   "rain_mm_per_day": 0.73
+  },
+  {
+   "month": "Apr",
+   "mean_c": 16.6,
+   "rain_mm_per_day": 0.37
+  },
+  {
+   "month": "May",
+   "mean_c": 21.4,
+   "rain_mm_per_day": 0.13
+  },
+  {
+   "month": "Jun",
+   "mean_c": 24.8,
+   "rain_mm_per_day": 0.03
+  },
+  {
+   "month": "Jul",
+   "mean_c": 26.7,
+   "rain_mm_per_day": 0.02
+  },
+  {
+   "month": "Aug",
+   "mean_c": 26.6,
+   "rain_mm_per_day": 0.04
+  },
+  {
+   "month": "Sep",
+   "mean_c": 24.7,
+   "rain_mm_per_day": 0.03
+  },
+  {
+   "month": "Oct",
+   "mean_c": 20.9,
+   "rain_mm_per_day": 0.18
+  },
+  {
+   "month": "Nov",
+   "mean_c": 14.3,
+   "rain_mm_per_day": 0.6
+  },
+  {
+   "month": "Dec",
+   "mean_c": 9.4,
+   "rain_mm_per_day": 1.13
+  }
+ ],
+ "updated": "2026-10-04T10:23:06.513626+00:00",
+ "source": "https://pseoare.pages.dev"
+}

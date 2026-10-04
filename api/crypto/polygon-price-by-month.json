@@ -1,0 +1,38 @@
+{
+ "asset": "Polygon",
+ "page": "https://pseoare.pages.dev/polygon-price-by-month",
+ "range_12m": {
+  "high": 0.25,
+  "low": 0.13,
+  "latest": 0.13
+ },
+ "position_in_range_pct": 0.0,
+ "pct_above_low": 0.0,
+ "pct_below_high": 48.0,
+ "range_pct_of_low": 92.3,
+ "monthly": [
+  [
+   "2025-10",
+   0.18,
+   0.25,
+   0.22,
+   0.19
+  ],
+  [
+   "2026-01",
+   0.15,
+   0.2,
+   0.16,
+   0.15
+  ],
+  [
+   "2026-02",
+   0.13,
+   0.13,
+   0.13,
+   0.13
+  ]
+ ],
+ "updated": "2026-10-04T10:23:06.513626+00:00",
+ "source": "https://pseoare.pages.dev"
+}

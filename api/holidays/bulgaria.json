@@ -1,0 +1,73 @@
+{
+ "country": "Bulgaria",
+ "page": "https://pseoare.pages.dev/hub-single-holidays",
+ "count": 8,
+ "holidays": [
+  {
+   "name": "New Year's Day in Bulgaria (2016)",
+   "local_name": "\u041d\u043e\u0432\u0430 \u0433\u043e\u0434\u0438\u043d\u0430",
+   "date": "2016-01-01",
+   "weekday": "Friday",
+   "weekend": false,
+   "page": "https://pseoare.pages.dev/new-year-s-day-bulgaria-2016-01-01"
+  },
+  {
+   "name": "New Year's Day in Bulgaria (2017)",
+   "local_name": "\u041d\u043e\u0432\u0430 \u0433\u043e\u0434\u0438\u043d\u0430",
+   "date": "2017-01-02",
+   "weekday": "Monday",
+   "weekend": false,
+   "page": "https://pseoare.pages.dev/new-year-s-day-bulgaria-2017-01-02"
+  },
+  {
+   "name": "New Year's Day in Bulgaria (2018)",
+   "local_name": "\u041d\u043e\u0432\u0430 \u0433\u043e\u0434\u0438\u043d\u0430",
+   "date": "2018-01-01",
+   "weekday": "Monday",
+   "weekend": false,
+   "page": "https://pseoare.pages.dev/new-year-s-day-bulgaria-2018-01-01"
+  },
+  {
+   "name": "New Year's Day in Bulgaria (2019)",
+   "local_name": "\u041d\u043e\u0432\u0430 \u0433\u043e\u0434\u0438\u043d\u0430",
+   "date": "2019-01-01",
+   "weekday": "Tuesday",
+   "weekend": false,
+   "page": "https://pseoare.pages.dev/new-year-s-day-bulgaria-2019-01-01"
+  },
+  {
+   "name": "New Year's Day in Bulgaria (2020)",
+   "local_name": "\u041d\u043e\u0432\u0430 \u0433\u043e\u0434\u0438\u043d\u0430",
+   "date": "2020-01-01",
+   "weekday": "Wednesday",
+   "weekend": false,
+   "page": "https://pseoare.pages.dev/new-year-s-day-bulgaria-2020-01-01"
+  },
+  {
+   "name": "New Year's Day in Bulgaria (2021)",
+   "local_name": "\u041d\u043e\u0432\u0430 \u0433\u043e\u0434\u0438\u043d\u0430",
+   "date": "2021-01-01",
+   "weekday": "Friday",
+   "weekend": false,
+   "page": "https://pseoare.pages.dev/new-year-s-day-bulgaria-2021-01-01"
+  },
+  {
+   "name": "New Year's Day in Bulgaria (2022)",
+   "local_name": "\u041d\u043e\u0432\u0430 \u0433\u043e\u0434\u0438\u043d\u0430",
+   "date": "2022-01-03",
+   "weekday": "Monday",
+   "weekend": false,
+   "page": "https://pseoare.pages.dev/new-year-s-day-bulgaria-2022-01-03"
+  },
+  {
+   "name": "New Year's Day in Bulgaria (2023)",
+   "local_name": "\u041d\u043e\u0432\u0430 \u0433\u043e\u0434\u0438\u043d\u0430",
+   "date": "2023-01-02",
+   "weekday": "Monday",
+   "weekend": false,
+   "page": "https://pseoare.pages.dev/new-year-s-day-bulgaria-2023-01-02"
+  }
+ ],
+ "updated": "2026-10-04T10:23:06.513626+00:00",
+ "source": "https://pseoare.pages.dev"
+}

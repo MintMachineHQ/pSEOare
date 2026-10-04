@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-04T10:12:05.527071+00:00",
- "count": 246,
+ "updated": "2026-10-04T10:23:06.513626+00:00",
+ "count": 303,
  "source": "https://pseoare.pages.dev",
  "results": [
   {
@@ -1970,6 +1970,462 @@
    "date": "2021-01-01",
    "weekday": "Friday",
    "page": "https://pseoare.pages.dev/new-year-s-day-new-zealand-2021-01-01"
+  },
+  {
+   "holiday": "New Year's Day in New Zealand (2022)",
+   "country": "New Zealand",
+   "local_name": "New Year's Day",
+   "date": "2022-01-03",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-new-zealand-2022-01-03"
+  },
+  {
+   "holiday": "New Year's Day in New Zealand (2023)",
+   "country": "New Zealand",
+   "local_name": "New Year's Day",
+   "date": "2023-01-02",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-new-zealand-2023-01-02"
+  },
+  {
+   "holiday": "New Year's Day in Nigeria (2016)",
+   "country": "Nigeria",
+   "local_name": "New Year's Day",
+   "date": "2016-01-01",
+   "weekday": "Friday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-nigeria-2016-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Nigeria (2017)",
+   "country": "Nigeria",
+   "local_name": "New Year's Day",
+   "date": "2017-01-01",
+   "weekday": "Sunday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-nigeria-2017-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Nigeria (2018)",
+   "country": "Nigeria",
+   "local_name": "New Year's Day",
+   "date": "2018-01-01",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-nigeria-2018-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Nigeria (2019)",
+   "country": "Nigeria",
+   "local_name": "New Year's Day",
+   "date": "2019-01-01",
+   "weekday": "Tuesday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-nigeria-2019-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Nigeria (2020)",
+   "country": "Nigeria",
+   "local_name": "New Year's Day",
+   "date": "2020-01-01",
+   "weekday": "Wednesday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-nigeria-2020-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Nigeria (2021)",
+   "country": "Nigeria",
+   "local_name": "New Year's Day",
+   "date": "2021-01-01",
+   "weekday": "Friday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-nigeria-2021-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Nigeria (2022)",
+   "country": "Nigeria",
+   "local_name": "New Year's Day",
+   "date": "2022-01-01",
+   "weekday": "Saturday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-nigeria-2022-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Nigeria (2023)",
+   "country": "Nigeria",
+   "local_name": "New Year's Day",
+   "date": "2023-01-01",
+   "weekday": "Sunday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-nigeria-2023-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Norway (2016)",
+   "country": "Norway",
+   "local_name": "F\u00f8rste nytt\u00e5rsdag",
+   "date": "2016-01-01",
+   "weekday": "Friday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-norway-2016-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Norway (2017)",
+   "country": "Norway",
+   "local_name": "F\u00f8rste nytt\u00e5rsdag",
+   "date": "2017-01-01",
+   "weekday": "Sunday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-norway-2017-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Norway (2018)",
+   "country": "Norway",
+   "local_name": "F\u00f8rste nytt\u00e5rsdag",
+   "date": "2018-01-01",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-norway-2018-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Norway (2019)",
+   "country": "Norway",
+   "local_name": "F\u00f8rste nytt\u00e5rsdag",
+   "date": "2019-01-01",
+   "weekday": "Tuesday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-norway-2019-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Norway (2020)",
+   "country": "Norway",
+   "local_name": "F\u00f8rste nytt\u00e5rsdag",
+   "date": "2020-01-01",
+   "weekday": "Wednesday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-norway-2020-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Norway (2021)",
+   "country": "Norway",
+   "local_name": "F\u00f8rste nytt\u00e5rsdag",
+   "date": "2021-01-01",
+   "weekday": "Friday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-norway-2021-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Norway (2022)",
+   "country": "Norway",
+   "local_name": "F\u00f8rste nytt\u00e5rsdag",
+   "date": "2022-01-01",
+   "weekday": "Saturday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-norway-2022-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Norway (2023)",
+   "country": "Norway",
+   "local_name": "F\u00f8rste nytt\u00e5rsdag",
+   "date": "2023-01-01",
+   "weekday": "Sunday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-norway-2023-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Peru (2016)",
+   "country": "Peru",
+   "local_name": "A\u00f1o Nuevo",
+   "date": "2016-01-01",
+   "weekday": "Friday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-peru-2016-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Peru (2017)",
+   "country": "Peru",
+   "local_name": "A\u00f1o Nuevo",
+   "date": "2017-01-01",
+   "weekday": "Sunday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-peru-2017-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Peru (2018)",
+   "country": "Peru",
+   "local_name": "A\u00f1o Nuevo",
+   "date": "2018-01-01",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-peru-2018-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Peru (2019)",
+   "country": "Peru",
+   "local_name": "A\u00f1o Nuevo",
+   "date": "2019-01-01",
+   "weekday": "Tuesday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-peru-2019-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Peru (2020)",
+   "country": "Peru",
+   "local_name": "A\u00f1o Nuevo",
+   "date": "2020-01-01",
+   "weekday": "Wednesday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-peru-2020-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Peru (2021)",
+   "country": "Peru",
+   "local_name": "A\u00f1o Nuevo",
+   "date": "2021-01-01",
+   "weekday": "Friday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-peru-2021-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Peru (2022)",
+   "country": "Peru",
+   "local_name": "A\u00f1o Nuevo",
+   "date": "2022-01-01",
+   "weekday": "Saturday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-peru-2022-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Peru (2023)",
+   "country": "Peru",
+   "local_name": "A\u00f1o Nuevo",
+   "date": "2023-01-01",
+   "weekday": "Sunday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-peru-2023-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Philippines (2016)",
+   "country": "Philippines",
+   "local_name": "Bagong Taon",
+   "date": "2016-01-01",
+   "weekday": "Friday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-philippines-2016-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Philippines (2017)",
+   "country": "Philippines",
+   "local_name": "Bagong Taon",
+   "date": "2017-01-01",
+   "weekday": "Sunday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-philippines-2017-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Philippines (2018)",
+   "country": "Philippines",
+   "local_name": "Bagong Taon",
+   "date": "2018-01-01",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-philippines-2018-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Philippines (2019)",
+   "country": "Philippines",
+   "local_name": "Bagong Taon",
+   "date": "2019-01-01",
+   "weekday": "Tuesday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-philippines-2019-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Philippines (2020)",
+   "country": "Philippines",
+   "local_name": "Bagong Taon",
+   "date": "2020-01-01",
+   "weekday": "Wednesday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-philippines-2020-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Philippines (2021)",
+   "country": "Philippines",
+   "local_name": "Bagong Taon",
+   "date": "2021-01-01",
+   "weekday": "Friday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-philippines-2021-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Philippines (2022)",
+   "country": "Philippines",
+   "local_name": "Bagong Taon",
+   "date": "2022-01-01",
+   "weekday": "Saturday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-philippines-2022-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Philippines (2023)",
+   "country": "Philippines",
+   "local_name": "Bagong Taon",
+   "date": "2023-01-01",
+   "weekday": "Sunday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-philippines-2023-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Poland (2016)",
+   "country": "Poland",
+   "local_name": "Nowy Rok",
+   "date": "2016-01-01",
+   "weekday": "Friday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-poland-2016-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Poland (2017)",
+   "country": "Poland",
+   "local_name": "Nowy Rok",
+   "date": "2017-01-01",
+   "weekday": "Sunday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-poland-2017-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Poland (2018)",
+   "country": "Poland",
+   "local_name": "Nowy Rok",
+   "date": "2018-01-01",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-poland-2018-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Poland (2019)",
+   "country": "Poland",
+   "local_name": "Nowy Rok",
+   "date": "2019-01-01",
+   "weekday": "Tuesday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-poland-2019-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Poland (2020)",
+   "country": "Poland",
+   "local_name": "Nowy Rok",
+   "date": "2020-01-01",
+   "weekday": "Wednesday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-poland-2020-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Poland (2021)",
+   "country": "Poland",
+   "local_name": "Nowy Rok",
+   "date": "2021-01-01",
+   "weekday": "Friday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-poland-2021-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Poland (2022)",
+   "country": "Poland",
+   "local_name": "Nowy Rok",
+   "date": "2022-01-01",
+   "weekday": "Saturday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-poland-2022-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Poland (2023)",
+   "country": "Poland",
+   "local_name": "Nowy Rok",
+   "date": "2023-01-01",
+   "weekday": "Sunday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-poland-2023-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Portugal (2016)",
+   "country": "Portugal",
+   "local_name": "Ano Novo",
+   "date": "2016-01-01",
+   "weekday": "Friday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-portugal-2016-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Portugal (2017)",
+   "country": "Portugal",
+   "local_name": "Ano Novo",
+   "date": "2017-01-01",
+   "weekday": "Sunday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-portugal-2017-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Portugal (2018)",
+   "country": "Portugal",
+   "local_name": "Ano Novo",
+   "date": "2018-01-01",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-portugal-2018-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Portugal (2019)",
+   "country": "Portugal",
+   "local_name": "Ano Novo",
+   "date": "2019-01-01",
+   "weekday": "Tuesday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-portugal-2019-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Portugal (2020)",
+   "country": "Portugal",
+   "local_name": "Ano Novo",
+   "date": "2020-01-01",
+   "weekday": "Wednesday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-portugal-2020-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Portugal (2021)",
+   "country": "Portugal",
+   "local_name": "Ano Novo",
+   "date": "2021-01-01",
+   "weekday": "Friday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-portugal-2021-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Portugal (2022)",
+   "country": "Portugal",
+   "local_name": "Ano Novo",
+   "date": "2022-01-01",
+   "weekday": "Saturday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-portugal-2022-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Portugal (2023)",
+   "country": "Portugal",
+   "local_name": "Ano Novo",
+   "date": "2023-01-01",
+   "weekday": "Sunday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-portugal-2023-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Romania (2016)",
+   "country": "Romania",
+   "local_name": "Anul Nou",
+   "date": "2016-01-01",
+   "weekday": "Friday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-romania-2016-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Romania (2017)",
+   "country": "Romania",
+   "local_name": "Anul Nou",
+   "date": "2017-01-01",
+   "weekday": "Sunday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-romania-2017-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Romania (2018)",
+   "country": "Romania",
+   "local_name": "Anul Nou",
+   "date": "2018-01-01",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-romania-2018-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Romania (2019)",
+   "country": "Romania",
+   "local_name": "Anul Nou",
+   "date": "2019-01-01",
+   "weekday": "Tuesday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-romania-2019-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Romania (2020)",
+   "country": "Romania",
+   "local_name": "Anul Nou",
+   "date": "2020-01-01",
+   "weekday": "Wednesday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-romania-2020-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Romania (2021)",
+   "country": "Romania",
+   "local_name": "Anul Nou",
+   "date": "2021-01-01",
+   "weekday": "Friday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-romania-2021-01-01"
+  },
+  {
+   "holiday": "New Year's Day in Romania (2022)",
+   "country": "Romania",
+   "local_name": "Anul Nou",
+   "date": "2022-01-01",
+   "weekday": "Saturday",
+   "page": "https://pseoare.pages.dev/new-year-s-day-romania-2022-01-01"
   }
  ]
 }

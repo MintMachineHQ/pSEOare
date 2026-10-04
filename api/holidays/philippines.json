@@ -1,0 +1,73 @@
+{
+ "country": "Philippines",
+ "page": "https://pseoare.pages.dev/hub-single-holidays",
+ "count": 8,
+ "holidays": [
+  {
+   "name": "New Year's Day in Philippines (2016)",
+   "local_name": "Bagong Taon",
+   "date": "2016-01-01",
+   "weekday": "Friday",
+   "weekend": false,
+   "page": "https://pseoare.pages.dev/new-year-s-day-philippines-2016-01-01"
+  },
+  {
+   "name": "New Year's Day in Philippines (2017)",
+   "local_name": "Bagong Taon",
+   "date": "2017-01-01",
+   "weekday": "Sunday",
+   "weekend": true,
+   "page": "https://pseoare.pages.dev/new-year-s-day-philippines-2017-01-01"
+  },
+  {
+   "name": "New Year's Day in Philippines (2018)",
+   "local_name": "Bagong Taon",
+   "date": "2018-01-01",
+   "weekday": "Monday",
+   "weekend": false,
+   "page": "https://pseoare.pages.dev/new-year-s-day-philippines-2018-01-01"
+  },
+  {
+   "name": "New Year's Day in Philippines (2019)",
+   "local_name": "Bagong Taon",
+   "date": "2019-01-01",
+   "weekday": "Tuesday",
+   "weekend": false,
+   "page": "https://pseoare.pages.dev/new-year-s-day-philippines-2019-01-01"
+  },
+  {
+   "name": "New Year's Day in Philippines (2020)",
+   "local_name": "Bagong Taon",
+   "date": "2020-01-01",
+   "weekday": "Wednesday",
+   "weekend": false,
+   "page": "https://pseoare.pages.dev/new-year-s-day-philippines-2020-01-01"
+  },
+  {
+   "name": "New Year's Day in Philippines (2021)",
+   "local_name": "Bagong Taon",
+   "date": "2021-01-01",
+   "weekday": "Friday",
+   "weekend": false,
+   "page": "https://pseoare.pages.dev/new-year-s-day-philippines-2021-01-01"
+  },
+  {
+   "name": "New Year's Day in Philippines (2022)",
+   "local_name": "Bagong Taon",
+   "date": "2022-01-01",
+   "weekday": "Saturday",
+   "weekend": true,
+   "page": "https://pseoare.pages.dev/new-year-s-day-philippines-2022-01-01"
+  },
+  {
+   "name": "New Year's Day in Philippines (2023)",
+   "local_name": "Bagong Taon",
+   "date": "2023-01-01",
+   "weekday": "Sunday",
+   "weekend": true,
+   "page": "https://pseoare.pages.dev/new-year-s-day-philippines-2023-01-01"
+  }
+ ],
+ "updated": "2026-10-04T10:23:06.513626+00:00",
+ "source": "https://pseoare.pages.dev"
+}

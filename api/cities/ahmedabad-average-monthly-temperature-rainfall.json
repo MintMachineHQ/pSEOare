@@ -1,0 +1,79 @@
+{
+ "city": "Ahmedabad",
+ "page": "https://pseoare.pages.dev/ahmedabad-average-monthly-temperature-rainfall",
+ "annual_mean_c": 27.6,
+ "warmest_month": "May",
+ "warmest_c": 35.1,
+ "coldest_month": "Jan",
+ "coldest_c": 19.9,
+ "seasonal_swing_c": 15.2,
+ "annual_rainfall_mm": 762.0,
+ "wettest_month": "Jul",
+ "wettest_mm_per_day": 8.61,
+ "driest_month": "Jan",
+ "driest_mm_per_day": 0.03,
+ "monthly": [
+  {
+   "month": "Jan",
+   "mean_c": 19.9,
+   "rain_mm_per_day": 0.03
+  },
+  {
+   "month": "Feb",
+   "mean_c": 23.3,
+   "rain_mm_per_day": 0.03
+  },
+  {
+   "month": "Mar",
+   "mean_c": 28.1,
+   "rain_mm_per_day": 0.15
+  },
+  {
+   "month": "Apr",
+   "mean_c": 32.6,
+   "rain_mm_per_day": 0.1
+  },
+  {
+   "month": "May",
+   "mean_c": 35.1,
+   "rain_mm_per_day": 0.14
+  },
+  {
+   "month": "Jun",
+   "mean_c": 33.6,
+   "rain_mm_per_day": 3.21
+  },
+  {
+   "month": "Jul",
+   "mean_c": 29.8,
+   "rain_mm_per_day": 8.61
+  },
+  {
+   "month": "Aug",
+   "mean_c": 28.0,
+   "rain_mm_per_day": 8.27
+  },
+  {
+   "month": "Sep",
+   "mean_c": 28.0,
+   "rain_mm_per_day": 4.05
+  },
+  {
+   "month": "Oct",
+   "mean_c": 27.2,
+   "rain_mm_per_day": 0.31
+  },
+  {
+   "month": "Nov",
+   "mean_c": 24.2,
+   "rain_mm_per_day": 0.12
+  },
+  {
+   "month": "Dec",
+   "mean_c": 20.9,
+   "rain_mm_per_day": 0.03
+  }
+ ],
+ "updated": "2026-10-04T10:23:06.513626+00:00",
+ "source": "https://pseoare.pages.dev"
+}

@@ -1,0 +1,79 @@
+{
+ "city": "Agra",
+ "page": "https://pseoare.pages.dev/agra-average-monthly-temperature-rainfall",
+ "annual_mean_c": 26.5,
+ "warmest_month": "Jun",
+ "warmest_c": 36.6,
+ "coldest_month": "Jan",
+ "coldest_c": 14.9,
+ "seasonal_swing_c": 21.7,
+ "annual_rainfall_mm": 621.0,
+ "wettest_month": "Jul",
+ "wettest_mm_per_day": 5.96,
+ "driest_month": "Nov",
+ "driest_mm_per_day": 0.16,
+ "monthly": [
+  {
+   "month": "Jan",
+   "mean_c": 14.9,
+   "rain_mm_per_day": 0.41
+  },
+  {
+   "month": "Feb",
+   "mean_c": 18.8,
+   "rain_mm_per_day": 0.44
+  },
+  {
+   "month": "Mar",
+   "mean_c": 25.1,
+   "rain_mm_per_day": 0.34
+  },
+  {
+   "month": "Apr",
+   "mean_c": 31.7,
+   "rain_mm_per_day": 0.3
+  },
+  {
+   "month": "May",
+   "mean_c": 36.2,
+   "rain_mm_per_day": 0.59
+  },
+  {
+   "month": "Jun",
+   "mean_c": 36.6,
+   "rain_mm_per_day": 2.31
+  },
+  {
+   "month": "Jul",
+   "mean_c": 32.3,
+   "rain_mm_per_day": 5.96
+  },
+  {
+   "month": "Aug",
+   "mean_c": 30.0,
+   "rain_mm_per_day": 5.84
+  },
+  {
+   "month": "Sep",
+   "mean_c": 28.8,
+   "rain_mm_per_day": 3.23
+  },
+  {
+   "month": "Oct",
+   "mean_c": 26.1,
+   "rain_mm_per_day": 0.67
+  },
+  {
+   "month": "Nov",
+   "mean_c": 21.2,
+   "rain_mm_per_day": 0.16
+  },
+  {
+   "month": "Dec",
+   "mean_c": 16.5,
+   "rain_mm_per_day": 0.19
+  }
+ ],
+ "updated": "2026-10-04T10:23:06.513626+00:00",
+ "source": "https://pseoare.pages.dev"
+}

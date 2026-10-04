@@ -1,0 +1,79 @@
+{
+ "city": "Antipolo",
+ "page": "https://pseoare.pages.dev/antipolo-average-monthly-temperature-rainfall",
+ "annual_mean_c": 25.8,
+ "warmest_month": "May",
+ "warmest_c": 27.9,
+ "coldest_month": "Jan",
+ "coldest_c": 23.5,
+ "seasonal_swing_c": 4.4,
+ "annual_rainfall_mm": 2906.0,
+ "wettest_month": "Dec",
+ "wettest_mm_per_day": 12.68,
+ "driest_month": "Apr",
+ "driest_mm_per_day": 3.39,
+ "monthly": [
+  {
+   "month": "Jan",
+   "mean_c": 23.5,
+   "rain_mm_per_day": 4.77
+  },
+  {
+   "month": "Feb",
+   "mean_c": 24.0,
+   "rain_mm_per_day": 5.23
+  },
+  {
+   "month": "Mar",
+   "mean_c": 25.4,
+   "rain_mm_per_day": 3.84
+  },
+  {
+   "month": "Apr",
+   "mean_c": 27.2,
+   "rain_mm_per_day": 3.39
+  },
+  {
+   "month": "May",
+   "mean_c": 27.9,
+   "rain_mm_per_day": 5.51
+  },
+  {
+   "month": "Jun",
+   "mean_c": 27.1,
+   "rain_mm_per_day": 8.26
+  },
+  {
+   "month": "Jul",
+   "mean_c": 26.3,
+   "rain_mm_per_day": 10.07
+  },
+  {
+   "month": "Aug",
+   "mean_c": 26.1,
+   "rain_mm_per_day": 9.31
+  },
+  {
+   "month": "Sep",
+   "mean_c": 26.2,
+   "rain_mm_per_day": 10.04
+  },
+  {
+   "month": "Oct",
+   "mean_c": 25.8,
+   "rain_mm_per_day": 11.0
+  },
+  {
+   "month": "Nov",
+   "mean_c": 25.2,
+   "rain_mm_per_day": 11.5
+  },
+  {
+   "month": "Dec",
+   "mean_c": 24.3,
+   "rain_mm_per_day": 12.68
+  }
+ ],
+ "updated": "2026-10-04T10:23:06.513626+00:00",
+ "source": "https://pseoare.pages.dev"
+}

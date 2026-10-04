@@ -1,0 +1,79 @@
+{
+ "city": "Al Ahmadi",
+ "page": "https://pseoare.pages.dev/al-ahmadi-average-monthly-temperature-rainfall",
+ "annual_mean_c": 26.5,
+ "warmest_month": "Jul",
+ "warmest_c": 37.3,
+ "coldest_month": "Jan",
+ "coldest_c": 13.9,
+ "seasonal_swing_c": 23.4,
+ "annual_rainfall_mm": 49.0,
+ "wettest_month": "Feb",
+ "wettest_mm_per_day": 0.51,
+ "driest_month": "Jun",
+ "driest_mm_per_day": 0.0,
+ "monthly": [
+  {
+   "month": "Jan",
+   "mean_c": 13.9,
+   "rain_mm_per_day": 0.37
+  },
+  {
+   "month": "Feb",
+   "mean_c": 15.6,
+   "rain_mm_per_day": 0.51
+  },
+  {
+   "month": "Mar",
+   "mean_c": 20.1,
+   "rain_mm_per_day": 0.12
+  },
+  {
+   "month": "Apr",
+   "mean_c": 25.1,
+   "rain_mm_per_day": 0.25
+  },
+  {
+   "month": "May",
+   "mean_c": 31.3,
+   "rain_mm_per_day": 0.02
+  },
+  {
+   "month": "Jun",
+   "mean_c": 35.5,
+   "rain_mm_per_day": 0.0
+  },
+  {
+   "month": "Jul",
+   "mean_c": 37.3,
+   "rain_mm_per_day": 0.0
+  },
+  {
+   "month": "Aug",
+   "mean_c": 37.2,
+   "rain_mm_per_day": 0.0
+  },
+  {
+   "month": "Sep",
+   "mean_c": 34.2,
+   "rain_mm_per_day": 0.0
+  },
+  {
+   "month": "Oct",
+   "mean_c": 29.2,
+   "rain_mm_per_day": 0.01
+  },
+  {
+   "month": "Nov",
+   "mean_c": 21.6,
+   "rain_mm_per_day": 0.11
+  },
+  {
+   "month": "Dec",
+   "mean_c": 16.0,
+   "rain_mm_per_day": 0.22
+  }
+ ],
+ "updated": "2026-10-04T10:23:06.513626+00:00",
+ "source": "https://pseoare.pages.dev"
+}

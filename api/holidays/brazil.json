@@ -1,0 +1,57 @@
+{
+ "country": "Brazil",
+ "page": "https://pseoare.pages.dev/hub-single-holidays",
+ "count": 6,
+ "holidays": [
+  {
+   "name": "New Year's Day in Brazil (2018)",
+   "local_name": "Confraterniza\u00e7\u00e3o Universal",
+   "date": "2018-01-01",
+   "weekday": "Monday",
+   "weekend": false,
+   "page": "https://pseoare.pages.dev/new-year-s-day-brazil-2018-01-01"
+  },
+  {
+   "name": "New Year's Day in Brazil (2019)",
+   "local_name": "Confraterniza\u00e7\u00e3o Universal",
+   "date": "2019-01-01",
+   "weekday": "Tuesday",
+   "weekend": false,
+   "page": "https://pseoare.pages.dev/new-year-s-day-brazil-2019-01-01"
+  },
+  {
+   "name": "New Year's Day in Brazil (2020)",
+   "local_name": "Confraterniza\u00e7\u00e3o Universal",
+   "date": "2020-01-01",
+   "weekday": "Wednesday",
+   "weekend": false,
+   "page": "https://pseoare.pages.dev/new-year-s-day-brazil-2020-01-01"
+  },
+  {
+   "name": "New Year's Day in Brazil (2021)",
+   "local_name": "Confraterniza\u00e7\u00e3o Universal",
+   "date": "2021-01-01",
+   "weekday": "Friday",
+   "weekend": false,
+   "page": "https://pseoare.pages.dev/new-year-s-day-brazil-2021-01-01"
+  },
+  {
+   "name": "New Year's Day in Brazil (2022)",
+   "local_name": "Confraterniza\u00e7\u00e3o Universal",
+   "date": "2022-01-01",
+   "weekday": "Saturday",
+   "weekend": true,
+   "page": "https://pseoare.pages.dev/new-year-s-day-brazil-2022-01-01"
+  },
+  {
+   "name": "New Year's Day in Brazil (2023)",
+   "local_name": "Confraterniza\u00e7\u00e3o Universal",
+   "date": "2023-01-01",
+   "weekday": "Sunday",
+   "weekend": true,
+   "page": "https://pseoare.pages.dev/new-year-s-day-brazil-2023-01-01"
+  }
+ ],
+ "updated": "2026-10-04T10:23:06.513626+00:00",
+ "source": "https://pseoare.pages.dev"
+}

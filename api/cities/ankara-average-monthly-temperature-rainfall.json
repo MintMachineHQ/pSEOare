@@ -1,0 +1,79 @@
+{
+ "city": "Ankara",
+ "page": "https://pseoare.pages.dev/ankara-average-monthly-temperature-rainfall",
+ "annual_mean_c": 10.3,
+ "warmest_month": "Aug",
+ "warmest_c": 22.5,
+ "coldest_month": "Jan",
+ "coldest_c": -2.1,
+ "seasonal_swing_c": 24.6,
+ "annual_rainfall_mm": 418.0,
+ "wettest_month": "May",
+ "wettest_mm_per_day": 1.66,
+ "driest_month": "Jul",
+ "driest_mm_per_day": 0.42,
+ "monthly": [
+  {
+   "month": "Jan",
+   "mean_c": -2.1,
+   "rain_mm_per_day": 1.6
+  },
+  {
+   "month": "Feb",
+   "mean_c": 0.3,
+   "rain_mm_per_day": 1.28
+  },
+  {
+   "month": "Mar",
+   "mean_c": 4.2,
+   "rain_mm_per_day": 1.34
+  },
+  {
+   "month": "Apr",
+   "mean_c": 8.9,
+   "rain_mm_per_day": 1.3
+  },
+  {
+   "month": "May",
+   "mean_c": 14.2,
+   "rain_mm_per_day": 1.66
+  },
+  {
+   "month": "Jun",
+   "mean_c": 18.6,
+   "rain_mm_per_day": 1.48
+  },
+  {
+   "month": "Jul",
+   "mean_c": 22.2,
+   "rain_mm_per_day": 0.42
+  },
+  {
+   "month": "Aug",
+   "mean_c": 22.5,
+   "rain_mm_per_day": 0.44
+  },
+  {
+   "month": "Sep",
+   "mean_c": 18.0,
+   "rain_mm_per_day": 0.64
+  },
+  {
+   "month": "Oct",
+   "mean_c": 11.9,
+   "rain_mm_per_day": 1.05
+  },
+  {
+   "month": "Nov",
+   "mean_c": 5.1,
+   "rain_mm_per_day": 1.05
+  },
+  {
+   "month": "Dec",
+   "mean_c": -0.1,
+   "rain_mm_per_day": 1.5
+  }
+ ],
+ "updated": "2026-10-04T10:23:06.513626+00:00",
+ "source": "https://pseoare.pages.dev"
+}

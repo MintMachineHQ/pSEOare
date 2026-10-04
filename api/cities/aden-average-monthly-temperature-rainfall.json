@@ -1,0 +1,79 @@
+{
+ "city": "Aden",
+ "page": "https://pseoare.pages.dev/aden-average-monthly-temperature-rainfall",
+ "annual_mean_c": 28.7,
+ "warmest_month": "Jul",
+ "warmest_c": 32.7,
+ "coldest_month": "Jan",
+ "coldest_c": 24.1,
+ "seasonal_swing_c": 8.6,
+ "annual_rainfall_mm": 130.0,
+ "wettest_month": "Sep",
+ "wettest_mm_per_day": 0.78,
+ "driest_month": "Feb",
+ "driest_mm_per_day": 0.07,
+ "monthly": [
+  {
+   "month": "Jan",
+   "mean_c": 24.1,
+   "rain_mm_per_day": 0.09
+  },
+  {
+   "month": "Feb",
+   "mean_c": 24.6,
+   "rain_mm_per_day": 0.07
+  },
+  {
+   "month": "Mar",
+   "mean_c": 26.5,
+   "rain_mm_per_day": 0.09
+  },
+  {
+   "month": "Apr",
+   "mean_c": 28.8,
+   "rain_mm_per_day": 0.39
+  },
+  {
+   "month": "May",
+   "mean_c": 31.1,
+   "rain_mm_per_day": 0.37
+  },
+  {
+   "month": "Jun",
+   "mean_c": 32.5,
+   "rain_mm_per_day": 0.62
+  },
+  {
+   "month": "Jul",
+   "mean_c": 32.7,
+   "rain_mm_per_day": 0.48
+  },
+  {
+   "month": "Aug",
+   "mean_c": 32.1,
+   "rain_mm_per_day": 0.63
+  },
+  {
+   "month": "Sep",
+   "mean_c": 31.4,
+   "rain_mm_per_day": 0.78
+  },
+  {
+   "month": "Oct",
+   "mean_c": 28.8,
+   "rain_mm_per_day": 0.34
+  },
+  {
+   "month": "Nov",
+   "mean_c": 26.5,
+   "rain_mm_per_day": 0.18
+  },
+  {
+   "month": "Dec",
+   "mean_c": 24.9,
+   "rain_mm_per_day": 0.23
+  }
+ ],
+ "updated": "2026-10-04T10:23:06.513626+00:00",
+ "source": "https://pseoare.pages.dev"
+}

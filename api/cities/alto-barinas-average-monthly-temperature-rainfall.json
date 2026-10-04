@@ -1,0 +1,79 @@
+{
+ "city": "Alto Barinas",
+ "page": "https://pseoare.pages.dev/alto-barinas-average-monthly-temperature-rainfall",
+ "annual_mean_c": 27.1,
+ "warmest_month": "Mar",
+ "warmest_c": 29.6,
+ "coldest_month": "Jul",
+ "coldest_c": 25.8,
+ "seasonal_swing_c": 3.8,
+ "annual_rainfall_mm": 1332.0,
+ "wettest_month": "Jun",
+ "wettest_mm_per_day": 6.24,
+ "driest_month": "Jan",
+ "driest_mm_per_day": 0.53,
+ "monthly": [
+  {
+   "month": "Jan",
+   "mean_c": 27.1,
+   "rain_mm_per_day": 0.53
+  },
+  {
+   "month": "Feb",
+   "mean_c": 28.6,
+   "rain_mm_per_day": 0.54
+  },
+  {
+   "month": "Mar",
+   "mean_c": 29.6,
+   "rain_mm_per_day": 1.6
+  },
+  {
+   "month": "Apr",
+   "mean_c": 28.6,
+   "rain_mm_per_day": 4.44
+  },
+  {
+   "month": "May",
+   "mean_c": 27.3,
+   "rain_mm_per_day": 5.82
+  },
+  {
+   "month": "Jun",
+   "mean_c": 26.2,
+   "rain_mm_per_day": 6.24
+  },
+  {
+   "month": "Jul",
+   "mean_c": 25.8,
+   "rain_mm_per_day": 5.27
+  },
+  {
+   "month": "Aug",
+   "mean_c": 26.1,
+   "rain_mm_per_day": 5.06
+  },
+  {
+   "month": "Sep",
+   "mean_c": 26.6,
+   "rain_mm_per_day": 5.13
+  },
+  {
+   "month": "Oct",
+   "mean_c": 26.5,
+   "rain_mm_per_day": 4.77
+  },
+  {
+   "month": "Nov",
+   "mean_c": 26.3,
+   "rain_mm_per_day": 3.24
+  },
+  {
+   "month": "Dec",
+   "mean_c": 26.6,
+   "rain_mm_per_day": 1.19
+  }
+ ],
+ "updated": "2026-10-04T10:23:06.513626+00:00",
+ "source": "https://pseoare.pages.dev"
+}

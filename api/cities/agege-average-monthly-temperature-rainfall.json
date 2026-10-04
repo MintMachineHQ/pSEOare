@@ -1,0 +1,79 @@
+{
+ "city": "Agege",
+ "page": "https://pseoare.pages.dev/agege-average-monthly-temperature-rainfall",
+ "annual_mean_c": 26.4,
+ "warmest_month": "Mar",
+ "warmest_c": 27.6,
+ "coldest_month": "Aug",
+ "coldest_c": 24.7,
+ "seasonal_swing_c": 2.9,
+ "annual_rainfall_mm": 1542.0,
+ "wettest_month": "Sep",
+ "wettest_mm_per_day": 8.15,
+ "driest_month": "Dec",
+ "driest_mm_per_day": 0.79,
+ "monthly": [
+  {
+   "month": "Jan",
+   "mean_c": 26.2,
+   "rain_mm_per_day": 0.81
+  },
+  {
+   "month": "Feb",
+   "mean_c": 27.2,
+   "rain_mm_per_day": 1.12
+  },
+  {
+   "month": "Mar",
+   "mean_c": 27.6,
+   "rain_mm_per_day": 2.3
+  },
+  {
+   "month": "Apr",
+   "mean_c": 27.5,
+   "rain_mm_per_day": 4.18
+  },
+  {
+   "month": "May",
+   "mean_c": 27.1,
+   "rain_mm_per_day": 6.1
+  },
+  {
+   "month": "Jun",
+   "mean_c": 26.1,
+   "rain_mm_per_day": 8.11
+  },
+  {
+   "month": "Jul",
+   "mean_c": 25.1,
+   "rain_mm_per_day": 6.61
+  },
+  {
+   "month": "Aug",
+   "mean_c": 24.7,
+   "rain_mm_per_day": 3.68
+  },
+  {
+   "month": "Sep",
+   "mean_c": 25.3,
+   "rain_mm_per_day": 8.15
+  },
+  {
+   "month": "Oct",
+   "mean_c": 26.1,
+   "rain_mm_per_day": 6.51
+  },
+  {
+   "month": "Nov",
+   "mean_c": 26.8,
+   "rain_mm_per_day": 2.36
+  },
+  {
+   "month": "Dec",
+   "mean_c": 26.6,
+   "rain_mm_per_day": 0.79
+  }
+ ],
+ "updated": "2026-10-04T10:23:06.513626+00:00",
+ "source": "https://pseoare.pages.dev"
+}

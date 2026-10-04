@@ -1,0 +1,79 @@
+{
+ "city": "Alor Setar",
+ "page": "https://pseoare.pages.dev/alor-setar-average-monthly-temperature-rainfall",
+ "annual_mean_c": 26.3,
+ "warmest_month": "Apr",
+ "warmest_c": 27.4,
+ "coldest_month": "Jan",
+ "coldest_c": 25.4,
+ "seasonal_swing_c": 2.0,
+ "annual_rainfall_mm": 2292.0,
+ "wettest_month": "Nov",
+ "wettest_mm_per_day": 11.35,
+ "driest_month": "Feb",
+ "driest_mm_per_day": 1.76,
+ "monthly": [
+  {
+   "month": "Jan",
+   "mean_c": 25.4,
+   "rain_mm_per_day": 3.63
+  },
+  {
+   "month": "Feb",
+   "mean_c": 26.0,
+   "rain_mm_per_day": 1.76
+  },
+  {
+   "month": "Mar",
+   "mean_c": 26.9,
+   "rain_mm_per_day": 3.78
+  },
+  {
+   "month": "Apr",
+   "mean_c": 27.4,
+   "rain_mm_per_day": 5.26
+  },
+  {
+   "month": "May",
+   "mean_c": 27.2,
+   "rain_mm_per_day": 6.51
+  },
+  {
+   "month": "Jun",
+   "mean_c": 26.8,
+   "rain_mm_per_day": 5.15
+  },
+  {
+   "month": "Jul",
+   "mean_c": 26.4,
+   "rain_mm_per_day": 5.52
+  },
+  {
+   "month": "Aug",
+   "mean_c": 26.4,
+   "rain_mm_per_day": 6.42
+  },
+  {
+   "month": "Sep",
+   "mean_c": 26.1,
+   "rain_mm_per_day": 7.84
+  },
+  {
+   "month": "Oct",
+   "mean_c": 26.0,
+   "rain_mm_per_day": 9.61
+  },
+  {
+   "month": "Nov",
+   "mean_c": 25.9,
+   "rain_mm_per_day": 11.35
+  },
+  {
+   "month": "Dec",
+   "mean_c": 25.4,
+   "rain_mm_per_day": 8.56
+  }
+ ],
+ "updated": "2026-10-04T10:23:06.513626+00:00",
+ "source": "https://pseoare.pages.dev"
+}

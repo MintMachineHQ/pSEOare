@@ -1,0 +1,79 @@
+{
+ "city": "A Coruna",
+ "page": "https://pseoare.pages.dev/a-coruna-average-monthly-temperature-rainfall",
+ "annual_mean_c": 13.4,
+ "warmest_month": "Aug",
+ "warmest_c": 19.0,
+ "coldest_month": "Feb",
+ "coldest_c": 8.8,
+ "seasonal_swing_c": 10.2,
+ "annual_rainfall_mm": 1045.0,
+ "wettest_month": "Nov",
+ "wettest_mm_per_day": 4.86,
+ "driest_month": "Jul",
+ "driest_mm_per_day": 1.04,
+ "monthly": [
+  {
+   "month": "Jan",
+   "mean_c": 9.0,
+   "rain_mm_per_day": 4.35
+  },
+  {
+   "month": "Feb",
+   "mean_c": 8.8,
+   "rain_mm_per_day": 3.4
+  },
+  {
+   "month": "Mar",
+   "mean_c": 10.2,
+   "rain_mm_per_day": 3.36
+  },
+  {
+   "month": "Apr",
+   "mean_c": 11.6,
+   "rain_mm_per_day": 2.8
+  },
+  {
+   "month": "May",
+   "mean_c": 13.8,
+   "rain_mm_per_day": 2.09
+  },
+  {
+   "month": "Jun",
+   "mean_c": 16.5,
+   "rain_mm_per_day": 1.65
+  },
+  {
+   "month": "Jul",
+   "mean_c": 18.4,
+   "rain_mm_per_day": 1.04
+  },
+  {
+   "month": "Aug",
+   "mean_c": 19.0,
+   "rain_mm_per_day": 1.19
+  },
+  {
+   "month": "Sep",
+   "mean_c": 17.8,
+   "rain_mm_per_day": 1.26
+  },
+  {
+   "month": "Oct",
+   "mean_c": 15.1,
+   "rain_mm_per_day": 4.12
+  },
+  {
+   "month": "Nov",
+   "mean_c": 11.4,
+   "rain_mm_per_day": 4.86
+  },
+  {
+   "month": "Dec",
+   "mean_c": 9.5,
+   "rain_mm_per_day": 4.26
+  }
+ ],
+ "updated": "2026-10-04T10:23:06.513626+00:00",
+ "source": "https://pseoare.pages.dev"
+}

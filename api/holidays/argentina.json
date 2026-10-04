@@ -1,0 +1,25 @@
+{
+ "country": "Argentina",
+ "page": "https://pseoare.pages.dev/hub-single-holidays",
+ "count": 2,
+ "holidays": [
+  {
+   "name": "Carnival in Argentina (2016)",
+   "local_name": "Carnaval",
+   "date": "2016-02-08",
+   "weekday": "Monday",
+   "weekend": false,
+   "page": "https://pseoare.pages.dev/carnival-argentina-2016-02-08"
+  },
+  {
+   "name": "Carnival in Argentina (2017)",
+   "local_name": "Carnaval",
+   "date": "2017-02-27",
+   "weekday": "Monday",
+   "weekend": false,
+   "page": "https://pseoare.pages.dev/carnival-argentina-2017-02-27"
+  }
+ ],
+ "updated": "2026-10-04T10:23:06.513626+00:00",
+ "source": "https://pseoare.pages.dev"
+}

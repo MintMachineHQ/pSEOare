@@ -1,0 +1,79 @@
+{
+ "city": "Aihara",
+ "page": "https://pseoare.pages.dev/aihara-average-monthly-temperature-rainfall",
+ "annual_mean_c": 13.9,
+ "warmest_month": "Aug",
+ "warmest_c": 25.8,
+ "coldest_month": "Jan",
+ "coldest_c": 2.2,
+ "seasonal_swing_c": 23.6,
+ "annual_rainfall_mm": 1632.0,
+ "wettest_month": "Sep",
+ "wettest_mm_per_day": 7.17,
+ "driest_month": "Jan",
+ "driest_mm_per_day": 2.13,
+ "monthly": [
+  {
+   "month": "Jan",
+   "mean_c": 2.2,
+   "rain_mm_per_day": 2.13
+  },
+  {
+   "month": "Feb",
+   "mean_c": 3.4,
+   "rain_mm_per_day": 2.36
+  },
+  {
+   "month": "Mar",
+   "mean_c": 6.9,
+   "rain_mm_per_day": 3.7
+  },
+  {
+   "month": "Apr",
+   "mean_c": 12.0,
+   "rain_mm_per_day": 4.29
+  },
+  {
+   "month": "May",
+   "mean_c": 17.0,
+   "rain_mm_per_day": 4.58
+  },
+  {
+   "month": "Jun",
+   "mean_c": 20.8,
+   "rain_mm_per_day": 6.02
+  },
+  {
+   "month": "Jul",
+   "mean_c": 24.7,
+   "rain_mm_per_day": 5.8
+  },
+  {
+   "month": "Aug",
+   "mean_c": 25.8,
+   "rain_mm_per_day": 4.99
+  },
+  {
+   "month": "Sep",
+   "mean_c": 22.1,
+   "rain_mm_per_day": 7.17
+  },
+  {
+   "month": "Oct",
+   "mean_c": 16.1,
+   "rain_mm_per_day": 7.16
+  },
+  {
+   "month": "Nov",
+   "mean_c": 10.4,
+   "rain_mm_per_day": 3.24
+  },
+  {
+   "month": "Dec",
+   "mean_c": 4.8,
+   "rain_mm_per_day": 2.23
+  }
+ ],
+ "updated": "2026-10-04T10:23:06.513626+00:00",
+ "source": "https://pseoare.pages.dev"
+}

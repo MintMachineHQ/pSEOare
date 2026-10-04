@@ -1,0 +1,79 @@
+{
+ "city": "Adachi",
+ "page": "https://pseoare.pages.dev/adachi-average-monthly-temperature-rainfall",
+ "annual_mean_c": 14.8,
+ "warmest_month": "Aug",
+ "warmest_c": 26.9,
+ "coldest_month": "Jan",
+ "coldest_c": 2.8,
+ "seasonal_swing_c": 24.1,
+ "annual_rainfall_mm": 1514.0,
+ "wettest_month": "Oct",
+ "wettest_mm_per_day": 7.07,
+ "driest_month": "Feb",
+ "driest_mm_per_day": 2.05,
+ "monthly": [
+  {
+   "month": "Jan",
+   "mean_c": 2.8,
+   "rain_mm_per_day": 2.06
+  },
+  {
+   "month": "Feb",
+   "mean_c": 3.9,
+   "rain_mm_per_day": 2.05
+  },
+  {
+   "month": "Mar",
+   "mean_c": 7.5,
+   "rain_mm_per_day": 3.29
+  },
+  {
+   "month": "Apr",
+   "mean_c": 12.9,
+   "rain_mm_per_day": 4.02
+  },
+  {
+   "month": "May",
+   "mean_c": 18.1,
+   "rain_mm_per_day": 4.39
+  },
+  {
+   "month": "Jun",
+   "mean_c": 21.9,
+   "rain_mm_per_day": 5.37
+  },
+  {
+   "month": "Jul",
+   "mean_c": 25.8,
+   "rain_mm_per_day": 5.06
+  },
+  {
+   "month": "Aug",
+   "mean_c": 26.9,
+   "rain_mm_per_day": 4.57
+  },
+  {
+   "month": "Sep",
+   "mean_c": 23.1,
+   "rain_mm_per_day": 6.6
+  },
+  {
+   "month": "Oct",
+   "mean_c": 17.2,
+   "rain_mm_per_day": 7.07
+  },
+  {
+   "month": "Nov",
+   "mean_c": 11.2,
+   "rain_mm_per_day": 3.17
+  },
+  {
+   "month": "Dec",
+   "mean_c": 5.3,
+   "rain_mm_per_day": 2.15
+  }
+ ],
+ "updated": "2026-10-04T10:23:06.513626+00:00",
+ "source": "https://pseoare.pages.dev"
+}

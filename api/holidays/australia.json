@@ -1,0 +1,105 @@
+{
+ "country": "Australia",
+ "page": "https://pseoare.pages.dev/hub-single-holidays",
+ "count": 12,
+ "holidays": [
+  {
+   "name": "Australia Day in Australia (2016)",
+   "local_name": "Australia Day",
+   "date": "2016-01-26",
+   "weekday": "Tuesday",
+   "weekend": false,
+   "page": "https://pseoare.pages.dev/australia-day-australia-2016-01-26"
+  },
+  {
+   "name": "Australia Day in Australia (2017)",
+   "local_name": "Australia Day",
+   "date": "2017-01-26",
+   "weekday": "Thursday",
+   "weekend": false,
+   "page": "https://pseoare.pages.dev/australia-day-australia-2017-01-26"
+  },
+  {
+   "name": "Australia Day in Australia (2018)",
+   "local_name": "Australia Day",
+   "date": "2018-01-26",
+   "weekday": "Friday",
+   "weekend": false,
+   "page": "https://pseoare.pages.dev/australia-day-australia-2018-01-26"
+  },
+  {
+   "name": "Australia Day in Australia (2019)",
+   "local_name": "Australia Day",
+   "date": "2019-01-28",
+   "weekday": "Monday",
+   "weekend": false,
+   "page": "https://pseoare.pages.dev/australia-day-australia-2019-01-28"
+  },
+  {
+   "name": "Australia Day in Australia (2020)",
+   "local_name": "Australia Day",
+   "date": "2020-01-27",
+   "weekday": "Monday",
+   "weekend": false,
+   "page": "https://pseoare.pages.dev/australia-day-australia-2020-01-27"
+  },
+  {
+   "name": "Australia Day in Australia (2021)",
+   "local_name": "Australia Day",
+   "date": "2021-01-26",
+   "weekday": "Tuesday",
+   "weekend": false,
+   "page": "https://pseoare.pages.dev/australia-day-australia-2021-01-26"
+  },
+  {
+   "name": "Australia Day in Australia (2022)",
+   "local_name": "Australia Day",
+   "date": "2022-01-26",
+   "weekday": "Wednesday",
+   "weekend": false,
+   "page": "https://pseoare.pages.dev/australia-day-australia-2022-01-26"
+  },
+  {
+   "name": "Australia Day in Australia (2023)",
+   "local_name": "Australia Day",
+   "date": "2023-01-26",
+   "weekday": "Thursday",
+   "weekend": false,
+   "page": "https://pseoare.pages.dev/australia-day-australia-2023-01-26"
+  },
+  {
+   "name": "Australia Day in Australia (2024)",
+   "local_name": "Australia Day",
+   "date": "2024-01-26",
+   "weekday": "Friday",
+   "weekend": false,
+   "page": "https://pseoare.pages.dev/australia-day-australia-2024-01-26"
+  },
+  {
+   "name": "Australia Day in Australia (2025)",
+   "local_name": "Australia Day",
+   "date": "2025-01-27",
+   "weekday": "Monday",
+   "weekend": false,
+   "page": "https://pseoare.pages.dev/australia-day-australia-2025-01-27"
+  },
+  {
+   "name": "Australia Day in Australia (2026)",
+   "local_name": "Australia Day",
+   "date": "2026-01-26",
+   "weekday": "Monday",
+   "weekend": false,
+   "page": "https://pseoare.pages.dev/australia-day-australia-2026-01-26"
+  },
+  {
+   "name": "Australia Day in Australia (2027)",
+   "local_name": "Australia Day",
+   "date": "2027-01-26",
+   "weekday": "Tuesday",
+   "weekend": false,
+   "page": "https://pseoare.pages.dev/australia-day-australia-2027-01-26"
+  }
+ ],
+ "updated": "2026-10-04T10:23:06.513626+00:00",
+ "source": "https://pseoare.pages.dev"
+}

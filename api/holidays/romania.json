@@ -1,0 +1,65 @@
+{
+ "country": "Romania",
+ "page": "https://pseoare.pages.dev/hub-single-holidays",
+ "count": 7,
+ "holidays": [
+  {
+   "name": "New Year's Day in Romania (2016)",
+   "local_name": "Anul Nou",
+   "date": "2016-01-01",
+   "weekday": "Friday",
+   "weekend": false,
+   "page": "https://pseoare.pages.dev/new-year-s-day-romania-2016-01-01"
+  },
+  {
+   "name": "New Year's Day in Romania (2017)",
+   "local_name": "Anul Nou",
+   "date": "2017-01-01",
+   "weekday": "Sunday",
+   "weekend": true,
+   "page": "https://pseoare.pages.dev/new-year-s-day-romania-2017-01-01"
+  },
+  {
+   "name": "New Year's Day in Romania (2018)",
+   "local_name": "Anul Nou",
+   "date": "2018-01-01",
+   "weekday": "Monday",
+   "weekend": false,
+   "page": "https://pseoare.pages.dev/new-year-s-day-romania-2018-01-01"
+  },
+  {
+   "name": "New Year's Day in Romania (2019)",
+   "local_name": "Anul Nou",
+   "date": "2019-01-01",
+   "weekday": "Tuesday",
+   "weekend": false,
+   "page": "https://pseoare.pages.dev/new-year-s-day-romania-2019-01-01"
+  },
+  {
+   "name": "New Year's Day in Romania (2020)",
+   "local_name": "Anul Nou",
+   "date": "2020-01-01",
+   "weekday": "Wednesday",
+   "weekend": false,
+   "page": "https://pseoare.pages.dev/new-year-s-day-romania-2020-01-01"
+  },
+  {
+   "name": "New Year's Day in Romania (2021)",
+   "local_name": "Anul Nou",
+   "date": "2021-01-01",
+   "weekday": "Friday",
+   "weekend": false,
+   "page": "https://pseoare.pages.dev/new-year-s-day-romania-2021-01-01"
+  },
+  {
+   "name": "New Year's Day in Romania (2022)",
+   "local_name": "Anul Nou",
+   "date": "2022-01-01",
+   "weekday": "Saturday",
+   "weekend": true,
+   "page": "https://pseoare.pages.dev/new-year-s-day-romania-2022-01-01"
+  }
+ ],
+ "updated": "2026-10-04T10:23:06.513626+00:00",
+ "source": "https://pseoare.pages.dev"
+}

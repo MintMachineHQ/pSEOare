@@ -1,0 +1,79 @@
+{
+ "city": "Ar Rayyan",
+ "page": "https://pseoare.pages.dev/ar-rayyan-average-monthly-temperature-rainfall",
+ "annual_mean_c": 27.8,
+ "warmest_month": "Aug",
+ "warmest_c": 36.3,
+ "coldest_month": "Jan",
+ "coldest_c": 17.5,
+ "seasonal_swing_c": 18.8,
+ "annual_rainfall_mm": 41.0,
+ "wettest_month": "Nov",
+ "wettest_mm_per_day": 0.32,
+ "driest_month": "Jun",
+ "driest_mm_per_day": 0.0,
+ "monthly": [
+  {
+   "month": "Jan",
+   "mean_c": 17.5,
+   "rain_mm_per_day": 0.2
+  },
+  {
+   "month": "Feb",
+   "mean_c": 18.6,
+   "rain_mm_per_day": 0.16
+  },
+  {
+   "month": "Mar",
+   "mean_c": 22.2,
+   "rain_mm_per_day": 0.14
+  },
+  {
+   "month": "Apr",
+   "mean_c": 26.9,
+   "rain_mm_per_day": 0.17
+  },
+  {
+   "month": "May",
+   "mean_c": 32.1,
+   "rain_mm_per_day": 0.01
+  },
+  {
+   "month": "Jun",
+   "mean_c": 34.5,
+   "rain_mm_per_day": 0.0
+  },
+  {
+   "month": "Jul",
+   "mean_c": 36.1,
+   "rain_mm_per_day": 0.0
+  },
+  {
+   "month": "Aug",
+   "mean_c": 36.3,
+   "rain_mm_per_day": 0.01
+  },
+  {
+   "month": "Sep",
+   "mean_c": 34.1,
+   "rain_mm_per_day": 0.0
+  },
+  {
+   "month": "Oct",
+   "mean_c": 30.4,
+   "rain_mm_per_day": 0.06
+  },
+  {
+   "month": "Nov",
+   "mean_c": 24.9,
+   "rain_mm_per_day": 0.32
+  },
+  {
+   "month": "Dec",
+   "mean_c": 19.9,
+   "rain_mm_per_day": 0.28
+  }
+ ],
+ "updated": "2026-10-04T10:23:06.513626+00:00",
+ "source": "https://pseoare.pages.dev"
+}
