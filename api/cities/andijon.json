@@ -1,79 +1,86 @@
 {
- "city": "Andijon",
- "page": "https://pseoare.pages.dev/andijon-average-monthly-temperature-rainfall",
- "annual_mean_c": 15.1,
- "warmest_month": "Jul",
- "warmest_c": 28.9,
- "coldest_month": "Jan",
- "coldest_c": 1.5,
- "seasonal_swing_c": 27.4,
- "annual_rainfall_mm": 247.0,
- "wettest_month": "Apr",
- "wettest_mm_per_day": 1.09,
- "driest_month": "Sep",
- "driest_mm_per_day": 0.16,
- "monthly": [
-  {
-   "month": "Jan",
-   "mean_c": 1.5,
-   "rain_mm_per_day": 0.65
-  },
-  {
-   "month": "Feb",
-   "mean_c": 3.6,
-   "rain_mm_per_day": 1.01
-  },
-  {
-   "month": "Mar",
-   "mean_c": 9.9,
-   "rain_mm_per_day": 1.07
-  },
-  {
-   "month": "Apr",
-   "mean_c": 15.3,
-   "rain_mm_per_day": 1.09
-  },
-  {
-   "month": "May",
-   "mean_c": 21.0,
-   "rain_mm_per_day": 0.8
-  },
-  {
-   "month": "Jun",
-   "mean_c": 26.2,
-   "rain_mm_per_day": 0.5
-  },
-  {
-   "month": "Jul",
-   "mean_c": 28.9,
-   "rain_mm_per_day": 0.19
-  },
-  {
-   "month": "Aug",
-   "mean_c": 27.5,
-   "rain_mm_per_day": 0.17
-  },
-  {
-   "month": "Sep",
-   "mean_c": 21.9,
-   "rain_mm_per_day": 0.16
-  },
-  {
-   "month": "Oct",
-   "mean_c": 14.4,
-   "rain_mm_per_day": 0.63
-  },
-  {
-   "month": "Nov",
-   "mean_c": 7.6,
-   "rain_mm_per_day": 1.02
-  },
-  {
-   "month": "Dec",
-   "mean_c": 2.5,
-   "rain_mm_per_day": 0.85
-  }
- ],
- "updated": "2026-10-04T11:26:57.024721+00:00",
- "source": "https://pseoare.pages.dev"
+ "answer": {
+  "city": "Andijon",
+  "annual_mean_c": 15.1,
+  "warmest_month": "Jul",
+  "warmest_c": 28.9,
+  "coldest_month": "Jan",
+  "coldest_c": 1.5,
+  "seasonal_swing_c": 27.4,
+  "annual_rainfall_mm": 247.0,
+  "wettest_month": "Apr",
+  "wettest_mm_per_day": 1.09,
+  "driest_month": "Sep",
+  "driest_mm_per_day": 0.16,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 1.5,
+    "rain_mm_per_day": 0.65
+   },
+   {
+    "month": "Feb",
+    "mean_c": 3.6,
+    "rain_mm_per_day": 1.01
+   },
+   {
+    "month": "Mar",
+    "mean_c": 9.9,
+    "rain_mm_per_day": 1.07
+   },
+   {
+    "month": "Apr",
+    "mean_c": 15.3,
+    "rain_mm_per_day": 1.09
+   },
+   {
+    "month": "May",
+    "mean_c": 21.0,
+    "rain_mm_per_day": 0.8
+   },
+   {
+    "month": "Jun",
+    "mean_c": 26.2,
+    "rain_mm_per_day": 0.5
+   },
+   {
+    "month": "Jul",
+    "mean_c": 28.9,
+    "rain_mm_per_day": 0.19
+   },
+   {
+    "month": "Aug",
+    "mean_c": 27.5,
+    "rain_mm_per_day": 0.17
+   },
+   {
+    "month": "Sep",
+    "mean_c": 21.9,
+    "rain_mm_per_day": 0.16
+   },
+   {
+    "month": "Oct",
+    "mean_c": 14.4,
+    "rain_mm_per_day": 0.63
+   },
+   {
+    "month": "Nov",
+    "mean_c": 7.6,
+    "rain_mm_per_day": 1.02
+   },
+   {
+    "month": "Dec",
+    "mean_c": 2.5,
+    "rain_mm_per_day": 0.85
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/andijon-average-monthly-temperature-rainfall",
+  "title": "Andijon climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-04T12:22:42.053733+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
 }

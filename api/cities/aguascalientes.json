@@ -1,79 +1,86 @@
 {
- "city": "Aguascalientes",
- "page": "https://pseoare.pages.dev/aguascalientes-average-monthly-temperature-rainfall",
- "annual_mean_c": 17.0,
- "warmest_month": "May",
- "warmest_c": 21.2,
- "coldest_month": "Jan",
- "coldest_c": 11.8,
- "seasonal_swing_c": 9.4,
- "annual_rainfall_mm": 545.0,
- "wettest_month": "Jul",
- "wettest_mm_per_day": 4.19,
- "driest_month": "Apr",
- "driest_mm_per_day": 0.14,
- "monthly": [
-  {
-   "month": "Jan",
-   "mean_c": 11.8,
-   "rain_mm_per_day": 0.39
-  },
-  {
-   "month": "Feb",
-   "mean_c": 13.7,
-   "rain_mm_per_day": 0.6
-  },
-  {
-   "month": "Mar",
-   "mean_c": 15.9,
-   "rain_mm_per_day": 0.31
-  },
-  {
-   "month": "Apr",
-   "mean_c": 18.9,
-   "rain_mm_per_day": 0.14
-  },
-  {
-   "month": "May",
-   "mean_c": 21.2,
-   "rain_mm_per_day": 0.7
-  },
-  {
-   "month": "Jun",
-   "mean_c": 21.1,
-   "rain_mm_per_day": 3.07
-  },
-  {
-   "month": "Jul",
-   "mean_c": 19.5,
-   "rain_mm_per_day": 4.19
-  },
-  {
-   "month": "Aug",
-   "mean_c": 19.4,
-   "rain_mm_per_day": 3.47
-  },
-  {
-   "month": "Sep",
-   "mean_c": 18.5,
-   "rain_mm_per_day": 3.31
-  },
-  {
-   "month": "Oct",
-   "mean_c": 17.1,
-   "rain_mm_per_day": 1.08
-  },
-  {
-   "month": "Nov",
-   "mean_c": 14.2,
-   "rain_mm_per_day": 0.41
-  },
-  {
-   "month": "Dec",
-   "mean_c": 12.4,
-   "rain_mm_per_day": 0.25
-  }
- ],
- "updated": "2026-10-04T11:26:57.024721+00:00",
- "source": "https://pseoare.pages.dev"
+ "answer": {
+  "city": "Aguascalientes",
+  "annual_mean_c": 17.0,
+  "warmest_month": "May",
+  "warmest_c": 21.2,
+  "coldest_month": "Jan",
+  "coldest_c": 11.8,
+  "seasonal_swing_c": 9.4,
+  "annual_rainfall_mm": 545.0,
+  "wettest_month": "Jul",
+  "wettest_mm_per_day": 4.19,
+  "driest_month": "Apr",
+  "driest_mm_per_day": 0.14,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 11.8,
+    "rain_mm_per_day": 0.39
+   },
+   {
+    "month": "Feb",
+    "mean_c": 13.7,
+    "rain_mm_per_day": 0.6
+   },
+   {
+    "month": "Mar",
+    "mean_c": 15.9,
+    "rain_mm_per_day": 0.31
+   },
+   {
+    "month": "Apr",
+    "mean_c": 18.9,
+    "rain_mm_per_day": 0.14
+   },
+   {
+    "month": "May",
+    "mean_c": 21.2,
+    "rain_mm_per_day": 0.7
+   },
+   {
+    "month": "Jun",
+    "mean_c": 21.1,
+    "rain_mm_per_day": 3.07
+   },
+   {
+    "month": "Jul",
+    "mean_c": 19.5,
+    "rain_mm_per_day": 4.19
+   },
+   {
+    "month": "Aug",
+    "mean_c": 19.4,
+    "rain_mm_per_day": 3.47
+   },
+   {
+    "month": "Sep",
+    "mean_c": 18.5,
+    "rain_mm_per_day": 3.31
+   },
+   {
+    "month": "Oct",
+    "mean_c": 17.1,
+    "rain_mm_per_day": 1.08
+   },
+   {
+    "month": "Nov",
+    "mean_c": 14.2,
+    "rain_mm_per_day": 0.41
+   },
+   {
+    "month": "Dec",
+    "mean_c": 12.4,
+    "rain_mm_per_day": 0.25
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/aguascalientes-average-monthly-temperature-rainfall",
+  "title": "Aguascalientes climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-04T12:22:42.053733+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
 }

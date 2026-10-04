@@ -1,137 +1,144 @@
 {
- "country": "Hungary",
- "page": "https://pseoare.pages.dev/hub-single-holidays",
- "count": 16,
- "holidays": [
-  {
-   "name": "New Year's Day in Hungary (2016)",
-   "local_name": "\u00daj\u00e9v",
-   "date": "2016-01-01",
-   "weekday": "Friday",
-   "weekend": false,
-   "page": "https://pseoare.pages.dev/new-year-s-day-hungary-2016-01-01"
-  },
-  {
-   "name": "1848 Revolution Memorial Day in Hungary (2016)",
-   "local_name": "Nemzeti \u00fcnnep",
-   "date": "2016-03-15",
-   "weekday": "Tuesday",
-   "weekend": false,
-   "page": "https://pseoare.pages.dev/on-1848-revolution-memorial-day-hungary-2016-03-15"
-  },
-  {
-   "name": "New Year's Day in Hungary (2017)",
-   "local_name": "\u00daj\u00e9v",
-   "date": "2017-01-01",
-   "weekday": "Sunday",
-   "weekend": true,
-   "page": "https://pseoare.pages.dev/new-year-s-day-hungary-2017-01-01"
-  },
-  {
-   "name": "1848 Revolution Memorial Day in Hungary (2017)",
-   "local_name": "Nemzeti \u00fcnnep",
-   "date": "2017-03-15",
-   "weekday": "Wednesday",
-   "weekend": false,
-   "page": "https://pseoare.pages.dev/on-1848-revolution-memorial-day-hungary-2017-03-15"
-  },
-  {
-   "name": "New Year's Day in Hungary (2018)",
-   "local_name": "\u00daj\u00e9v",
-   "date": "2018-01-01",
-   "weekday": "Monday",
-   "weekend": false,
-   "page": "https://pseoare.pages.dev/new-year-s-day-hungary-2018-01-01"
-  },
-  {
-   "name": "1848 Revolution Memorial Day in Hungary (2018)",
-   "local_name": "Nemzeti \u00fcnnep",
-   "date": "2018-03-15",
-   "weekday": "Thursday",
-   "weekend": false,
-   "page": "https://pseoare.pages.dev/on-1848-revolution-memorial-day-hungary-2018-03-15"
-  },
-  {
-   "name": "New Year's Day in Hungary (2019)",
-   "local_name": "\u00daj\u00e9v",
-   "date": "2019-01-01",
-   "weekday": "Tuesday",
-   "weekend": false,
-   "page": "https://pseoare.pages.dev/new-year-s-day-hungary-2019-01-01"
-  },
-  {
-   "name": "1848 Revolution Memorial Day in Hungary (2019)",
-   "local_name": "Nemzeti \u00fcnnep",
-   "date": "2019-03-15",
-   "weekday": "Friday",
-   "weekend": false,
-   "page": "https://pseoare.pages.dev/on-1848-revolution-memorial-day-hungary-2019-03-15"
-  },
-  {
-   "name": "New Year's Day in Hungary (2020)",
-   "local_name": "\u00daj\u00e9v",
-   "date": "2020-01-01",
-   "weekday": "Wednesday",
-   "weekend": false,
-   "page": "https://pseoare.pages.dev/new-year-s-day-hungary-2020-01-01"
-  },
-  {
-   "name": "1848 Revolution Memorial Day in Hungary (2020)",
-   "local_name": "Nemzeti \u00fcnnep",
-   "date": "2020-03-15",
-   "weekday": "Sunday",
-   "weekend": true,
-   "page": "https://pseoare.pages.dev/on-1848-revolution-memorial-day-hungary-2020-03-15"
-  },
-  {
-   "name": "New Year's Day in Hungary (2021)",
-   "local_name": "\u00daj\u00e9v",
-   "date": "2021-01-01",
-   "weekday": "Friday",
-   "weekend": false,
-   "page": "https://pseoare.pages.dev/new-year-s-day-hungary-2021-01-01"
-  },
-  {
-   "name": "1848 Revolution Memorial Day in Hungary (2021)",
-   "local_name": "Nemzeti \u00fcnnep",
-   "date": "2021-03-15",
-   "weekday": "Monday",
-   "weekend": false,
-   "page": "https://pseoare.pages.dev/on-1848-revolution-memorial-day-hungary-2021-03-15"
-  },
-  {
-   "name": "New Year's Day in Hungary (2022)",
-   "local_name": "\u00daj\u00e9v",
-   "date": "2022-01-01",
-   "weekday": "Saturday",
-   "weekend": true,
-   "page": "https://pseoare.pages.dev/new-year-s-day-hungary-2022-01-01"
-  },
-  {
-   "name": "1848 Revolution Memorial Day in Hungary (2022)",
-   "local_name": "Nemzeti \u00fcnnep",
-   "date": "2022-03-15",
-   "weekday": "Tuesday",
-   "weekend": false,
-   "page": "https://pseoare.pages.dev/on-1848-revolution-memorial-day-hungary-2022-03-15"
-  },
-  {
-   "name": "New Year's Day in Hungary (2023)",
-   "local_name": "\u00daj\u00e9v",
-   "date": "2023-01-01",
-   "weekday": "Sunday",
-   "weekend": true,
-   "page": "https://pseoare.pages.dev/new-year-s-day-hungary-2023-01-01"
-  },
-  {
-   "name": "1848 Revolution Memorial Day in Hungary (2023)",
-   "local_name": "Nemzeti \u00fcnnep",
-   "date": "2023-03-15",
-   "weekday": "Wednesday",
-   "weekend": false,
-   "page": "https://pseoare.pages.dev/on-1848-revolution-memorial-day-hungary-2023-03-15"
-  }
- ],
- "updated": "2026-10-04T11:26:57.024721+00:00",
- "source": "https://pseoare.pages.dev"
+ "answer": {
+  "country": "Hungary",
+  "count": 16,
+  "holidays": [
+   {
+    "name": "New Year's Day in Hungary (2016)",
+    "local_name": "\u00daj\u00e9v",
+    "date": "2016-01-01",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/new-year-s-day-hungary-2016-01-01"
+   },
+   {
+    "name": "1848 Revolution Memorial Day in Hungary (2016)",
+    "local_name": "Nemzeti \u00fcnnep",
+    "date": "2016-03-15",
+    "weekday": "Tuesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/on-1848-revolution-memorial-day-hungary-2016-03-15"
+   },
+   {
+    "name": "New Year's Day in Hungary (2017)",
+    "local_name": "\u00daj\u00e9v",
+    "date": "2017-01-01",
+    "weekday": "Sunday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/new-year-s-day-hungary-2017-01-01"
+   },
+   {
+    "name": "1848 Revolution Memorial Day in Hungary (2017)",
+    "local_name": "Nemzeti \u00fcnnep",
+    "date": "2017-03-15",
+    "weekday": "Wednesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/on-1848-revolution-memorial-day-hungary-2017-03-15"
+   },
+   {
+    "name": "New Year's Day in Hungary (2018)",
+    "local_name": "\u00daj\u00e9v",
+    "date": "2018-01-01",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/new-year-s-day-hungary-2018-01-01"
+   },
+   {
+    "name": "1848 Revolution Memorial Day in Hungary (2018)",
+    "local_name": "Nemzeti \u00fcnnep",
+    "date": "2018-03-15",
+    "weekday": "Thursday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/on-1848-revolution-memorial-day-hungary-2018-03-15"
+   },
+   {
+    "name": "New Year's Day in Hungary (2019)",
+    "local_name": "\u00daj\u00e9v",
+    "date": "2019-01-01",
+    "weekday": "Tuesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/new-year-s-day-hungary-2019-01-01"
+   },
+   {
+    "name": "1848 Revolution Memorial Day in Hungary (2019)",
+    "local_name": "Nemzeti \u00fcnnep",
+    "date": "2019-03-15",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/on-1848-revolution-memorial-day-hungary-2019-03-15"
+   },
+   {
+    "name": "New Year's Day in Hungary (2020)",
+    "local_name": "\u00daj\u00e9v",
+    "date": "2020-01-01",
+    "weekday": "Wednesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/new-year-s-day-hungary-2020-01-01"
+   },
+   {
+    "name": "1848 Revolution Memorial Day in Hungary (2020)",
+    "local_name": "Nemzeti \u00fcnnep",
+    "date": "2020-03-15",
+    "weekday": "Sunday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/on-1848-revolution-memorial-day-hungary-2020-03-15"
+   },
+   {
+    "name": "New Year's Day in Hungary (2021)",
+    "local_name": "\u00daj\u00e9v",
+    "date": "2021-01-01",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/new-year-s-day-hungary-2021-01-01"
+   },
+   {
+    "name": "1848 Revolution Memorial Day in Hungary (2021)",
+    "local_name": "Nemzeti \u00fcnnep",
+    "date": "2021-03-15",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/on-1848-revolution-memorial-day-hungary-2021-03-15"
+   },
+   {
+    "name": "New Year's Day in Hungary (2022)",
+    "local_name": "\u00daj\u00e9v",
+    "date": "2022-01-01",
+    "weekday": "Saturday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/new-year-s-day-hungary-2022-01-01"
+   },
+   {
+    "name": "1848 Revolution Memorial Day in Hungary (2022)",
+    "local_name": "Nemzeti \u00fcnnep",
+    "date": "2022-03-15",
+    "weekday": "Tuesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/on-1848-revolution-memorial-day-hungary-2022-03-15"
+   },
+   {
+    "name": "New Year's Day in Hungary (2023)",
+    "local_name": "\u00daj\u00e9v",
+    "date": "2023-01-01",
+    "weekday": "Sunday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/new-year-s-day-hungary-2023-01-01"
+   },
+   {
+    "name": "1848 Revolution Memorial Day in Hungary (2023)",
+    "local_name": "Nemzeti \u00fcnnep",
+    "date": "2023-03-15",
+    "weekday": "Wednesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/on-1848-revolution-memorial-day-hungary-2023-03-15"
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/hub-single-holidays",
+  "title": "Public holidays for Hungary",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-04T12:22:42.053733+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
 }

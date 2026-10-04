@@ -1,79 +1,86 @@
 {
- "city": "Antananarivo",
- "page": "https://pseoare.pages.dev/antananarivo-average-monthly-temperature-rainfall",
- "annual_mean_c": 16.5,
- "warmest_month": "Dec",
- "warmest_c": 19.4,
- "coldest_month": "Jul",
- "coldest_c": 12.4,
- "seasonal_swing_c": 7.0,
- "annual_rainfall_mm": 2390.0,
- "wettest_month": "Jan",
- "wettest_mm_per_day": 15.31,
- "driest_month": "Sep",
- "driest_mm_per_day": 1.55,
- "monthly": [
-  {
-   "month": "Jan",
-   "mean_c": 19.2,
-   "rain_mm_per_day": 15.31
-  },
-  {
-   "month": "Feb",
-   "mean_c": 19.1,
-   "rain_mm_per_day": 13.41
-  },
-  {
-   "month": "Mar",
-   "mean_c": 18.7,
-   "rain_mm_per_day": 9.82
-  },
-  {
-   "month": "Apr",
-   "mean_c": 17.4,
-   "rain_mm_per_day": 5.31
-  },
-  {
-   "month": "May",
-   "mean_c": 15.5,
-   "rain_mm_per_day": 2.76
-  },
-  {
-   "month": "Jun",
-   "mean_c": 13.2,
-   "rain_mm_per_day": 2.8
-  },
-  {
-   "month": "Jul",
-   "mean_c": 12.4,
-   "rain_mm_per_day": 2.75
-  },
-  {
-   "month": "Aug",
-   "mean_c": 13.1,
-   "rain_mm_per_day": 1.88
-  },
-  {
-   "month": "Sep",
-   "mean_c": 14.8,
-   "rain_mm_per_day": 1.55
-  },
-  {
-   "month": "Oct",
-   "mean_c": 17.2,
-   "rain_mm_per_day": 3.11
-  },
-  {
-   "month": "Nov",
-   "mean_c": 18.7,
-   "rain_mm_per_day": 7.41
-  },
-  {
-   "month": "Dec",
-   "mean_c": 19.4,
-   "rain_mm_per_day": 12.52
-  }
- ],
- "updated": "2026-10-04T11:26:57.024721+00:00",
- "source": "https://pseoare.pages.dev"
+ "answer": {
+  "city": "Antananarivo",
+  "annual_mean_c": 16.5,
+  "warmest_month": "Dec",
+  "warmest_c": 19.4,
+  "coldest_month": "Jul",
+  "coldest_c": 12.4,
+  "seasonal_swing_c": 7.0,
+  "annual_rainfall_mm": 2390.0,
+  "wettest_month": "Jan",
+  "wettest_mm_per_day": 15.31,
+  "driest_month": "Sep",
+  "driest_mm_per_day": 1.55,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 19.2,
+    "rain_mm_per_day": 15.31
+   },
+   {
+    "month": "Feb",
+    "mean_c": 19.1,
+    "rain_mm_per_day": 13.41
+   },
+   {
+    "month": "Mar",
+    "mean_c": 18.7,
+    "rain_mm_per_day": 9.82
+   },
+   {
+    "month": "Apr",
+    "mean_c": 17.4,
+    "rain_mm_per_day": 5.31
+   },
+   {
+    "month": "May",
+    "mean_c": 15.5,
+    "rain_mm_per_day": 2.76
+   },
+   {
+    "month": "Jun",
+    "mean_c": 13.2,
+    "rain_mm_per_day": 2.8
+   },
+   {
+    "month": "Jul",
+    "mean_c": 12.4,
+    "rain_mm_per_day": 2.75
+   },
+   {
+    "month": "Aug",
+    "mean_c": 13.1,
+    "rain_mm_per_day": 1.88
+   },
+   {
+    "month": "Sep",
+    "mean_c": 14.8,
+    "rain_mm_per_day": 1.55
+   },
+   {
+    "month": "Oct",
+    "mean_c": 17.2,
+    "rain_mm_per_day": 3.11
+   },
+   {
+    "month": "Nov",
+    "mean_c": 18.7,
+    "rain_mm_per_day": 7.41
+   },
+   {
+    "month": "Dec",
+    "mean_c": 19.4,
+    "rain_mm_per_day": 12.52
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/antananarivo-average-monthly-temperature-rainfall",
+  "title": "Antananarivo climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-04T12:22:42.053733+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
 }

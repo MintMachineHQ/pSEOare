@@ -1,79 +1,86 @@
 {
- "city": "Al Khusus",
- "page": "https://pseoare.pages.dev/al-khusus-average-monthly-temperature-rainfall",
- "annual_mean_c": 21.8,
- "warmest_month": "Jul",
- "warmest_c": 29.9,
- "coldest_month": "Jan",
- "coldest_c": 12.1,
- "seasonal_swing_c": 17.8,
- "annual_rainfall_mm": 60.0,
- "wettest_month": "Nov",
- "wettest_mm_per_day": 0.56,
- "driest_month": "Aug",
- "driest_mm_per_day": 0.0,
- "monthly": [
-  {
-   "month": "Jan",
-   "mean_c": 12.1,
-   "rain_mm_per_day": 0.26
-  },
-  {
-   "month": "Feb",
-   "mean_c": 13.7,
-   "rain_mm_per_day": 0.24
-  },
-  {
-   "month": "Mar",
-   "mean_c": 17.1,
-   "rain_mm_per_day": 0.22
-  },
-  {
-   "month": "Apr",
-   "mean_c": 20.9,
-   "rain_mm_per_day": 0.3
-  },
-  {
-   "month": "May",
-   "mean_c": 25.3,
-   "rain_mm_per_day": 0.01
-  },
-  {
-   "month": "Jun",
-   "mean_c": 28.5,
-   "rain_mm_per_day": 0.01
-  },
-  {
-   "month": "Jul",
-   "mean_c": 29.9,
-   "rain_mm_per_day": 0.01
-  },
-  {
-   "month": "Aug",
-   "mean_c": 29.9,
-   "rain_mm_per_day": 0.0
-  },
-  {
-   "month": "Sep",
-   "mean_c": 27.5,
-   "rain_mm_per_day": 0.01
-  },
-  {
-   "month": "Oct",
-   "mean_c": 23.7,
-   "rain_mm_per_day": 0.15
-  },
-  {
-   "month": "Nov",
-   "mean_c": 18.7,
-   "rain_mm_per_day": 0.56
-  },
-  {
-   "month": "Dec",
-   "mean_c": 14.0,
-   "rain_mm_per_day": 0.21
-  }
- ],
- "updated": "2026-10-04T11:26:57.024721+00:00",
- "source": "https://pseoare.pages.dev"
+ "answer": {
+  "city": "Al Khusus",
+  "annual_mean_c": 21.8,
+  "warmest_month": "Jul",
+  "warmest_c": 29.9,
+  "coldest_month": "Jan",
+  "coldest_c": 12.1,
+  "seasonal_swing_c": 17.8,
+  "annual_rainfall_mm": 60.0,
+  "wettest_month": "Nov",
+  "wettest_mm_per_day": 0.56,
+  "driest_month": "Aug",
+  "driest_mm_per_day": 0.0,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 12.1,
+    "rain_mm_per_day": 0.26
+   },
+   {
+    "month": "Feb",
+    "mean_c": 13.7,
+    "rain_mm_per_day": 0.24
+   },
+   {
+    "month": "Mar",
+    "mean_c": 17.1,
+    "rain_mm_per_day": 0.22
+   },
+   {
+    "month": "Apr",
+    "mean_c": 20.9,
+    "rain_mm_per_day": 0.3
+   },
+   {
+    "month": "May",
+    "mean_c": 25.3,
+    "rain_mm_per_day": 0.01
+   },
+   {
+    "month": "Jun",
+    "mean_c": 28.5,
+    "rain_mm_per_day": 0.01
+   },
+   {
+    "month": "Jul",
+    "mean_c": 29.9,
+    "rain_mm_per_day": 0.01
+   },
+   {
+    "month": "Aug",
+    "mean_c": 29.9,
+    "rain_mm_per_day": 0.0
+   },
+   {
+    "month": "Sep",
+    "mean_c": 27.5,
+    "rain_mm_per_day": 0.01
+   },
+   {
+    "month": "Oct",
+    "mean_c": 23.7,
+    "rain_mm_per_day": 0.15
+   },
+   {
+    "month": "Nov",
+    "mean_c": 18.7,
+    "rain_mm_per_day": 0.56
+   },
+   {
+    "month": "Dec",
+    "mean_c": 14.0,
+    "rain_mm_per_day": 0.21
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/al-khusus-average-monthly-temperature-rainfall",
+  "title": "Al Khusus climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-04T12:22:42.053733+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
 }

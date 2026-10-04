@@ -1,79 +1,86 @@
 {
- "city": "Antalya",
- "page": "https://pseoare.pages.dev/antalya-average-monthly-temperature-rainfall",
- "annual_mean_c": 17.5,
- "warmest_month": "Aug",
- "warmest_c": 29.0,
- "coldest_month": "Jan",
- "coldest_c": 7.1,
- "seasonal_swing_c": 21.9,
- "annual_rainfall_mm": 827.0,
- "wettest_month": "Jan",
- "wettest_mm_per_day": 5.88,
- "driest_month": "Aug",
- "driest_mm_per_day": 0.16,
- "monthly": [
-  {
-   "month": "Jan",
-   "mean_c": 7.1,
-   "rain_mm_per_day": 5.88
-  },
-  {
-   "month": "Feb",
-   "mean_c": 8.2,
-   "rain_mm_per_day": 3.42
-  },
-  {
-   "month": "Mar",
-   "mean_c": 11.1,
-   "rain_mm_per_day": 2.21
-  },
-  {
-   "month": "Apr",
-   "mean_c": 14.7,
-   "rain_mm_per_day": 1.83
-  },
-  {
-   "month": "May",
-   "mean_c": 19.4,
-   "rain_mm_per_day": 1.36
-  },
-  {
-   "month": "Jun",
-   "mean_c": 24.4,
-   "rain_mm_per_day": 0.59
-  },
-  {
-   "month": "Jul",
-   "mean_c": 28.6,
-   "rain_mm_per_day": 0.19
-  },
-  {
-   "month": "Aug",
-   "mean_c": 29.0,
-   "rain_mm_per_day": 0.16
-  },
-  {
-   "month": "Sep",
-   "mean_c": 25.0,
-   "rain_mm_per_day": 0.82
-  },
-  {
-   "month": "Oct",
-   "mean_c": 19.4,
-   "rain_mm_per_day": 2.08
-  },
-  {
-   "month": "Nov",
-   "mean_c": 13.5,
-   "rain_mm_per_day": 3.02
-  },
-  {
-   "month": "Dec",
-   "mean_c": 9.0,
-   "rain_mm_per_day": 5.63
-  }
- ],
- "updated": "2026-10-04T11:26:57.024721+00:00",
- "source": "https://pseoare.pages.dev"
+ "answer": {
+  "city": "Antalya",
+  "annual_mean_c": 17.5,
+  "warmest_month": "Aug",
+  "warmest_c": 29.0,
+  "coldest_month": "Jan",
+  "coldest_c": 7.1,
+  "seasonal_swing_c": 21.9,
+  "annual_rainfall_mm": 827.0,
+  "wettest_month": "Jan",
+  "wettest_mm_per_day": 5.88,
+  "driest_month": "Aug",
+  "driest_mm_per_day": 0.16,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 7.1,
+    "rain_mm_per_day": 5.88
+   },
+   {
+    "month": "Feb",
+    "mean_c": 8.2,
+    "rain_mm_per_day": 3.42
+   },
+   {
+    "month": "Mar",
+    "mean_c": 11.1,
+    "rain_mm_per_day": 2.21
+   },
+   {
+    "month": "Apr",
+    "mean_c": 14.7,
+    "rain_mm_per_day": 1.83
+   },
+   {
+    "month": "May",
+    "mean_c": 19.4,
+    "rain_mm_per_day": 1.36
+   },
+   {
+    "month": "Jun",
+    "mean_c": 24.4,
+    "rain_mm_per_day": 0.59
+   },
+   {
+    "month": "Jul",
+    "mean_c": 28.6,
+    "rain_mm_per_day": 0.19
+   },
+   {
+    "month": "Aug",
+    "mean_c": 29.0,
+    "rain_mm_per_day": 0.16
+   },
+   {
+    "month": "Sep",
+    "mean_c": 25.0,
+    "rain_mm_per_day": 0.82
+   },
+   {
+    "month": "Oct",
+    "mean_c": 19.4,
+    "rain_mm_per_day": 2.08
+   },
+   {
+    "month": "Nov",
+    "mean_c": 13.5,
+    "rain_mm_per_day": 3.02
+   },
+   {
+    "month": "Dec",
+    "mean_c": 9.0,
+    "rain_mm_per_day": 5.63
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/antalya-average-monthly-temperature-rainfall",
+  "title": "Antalya climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-04T12:22:42.053733+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
 }

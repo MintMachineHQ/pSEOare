@@ -26,6 +26,6 @@ User-agent: DuckAssistBot
 Allow: /
 User-agent: *
 Allow: /
-Sitemap: https://pseoare.pages.dev/sitemap.xml
+Sitemap: https://pseoare.pages.dev/sitemap-index.xml
 # RSS feed: https://pseoare.pages.dev/feed.xml
 # Plain-text guide for AI agents: https://pseoare.pages.dev/llms.txt

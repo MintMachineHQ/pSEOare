@@ -1,79 +1,86 @@
 {
- "city": "Antsirabe",
- "page": "https://pseoare.pages.dev/antsirabe-average-monthly-temperature-rainfall",
- "annual_mean_c": 16.6,
- "warmest_month": "Dec",
- "warmest_c": 19.5,
- "coldest_month": "Jul",
- "coldest_c": 12.1,
- "seasonal_swing_c": 7.4,
- "annual_rainfall_mm": 1917.0,
- "wettest_month": "Jan",
- "wettest_mm_per_day": 14.79,
- "driest_month": "Aug",
- "driest_mm_per_day": 0.58,
- "monthly": [
-  {
-   "month": "Jan",
-   "mean_c": 19.1,
-   "rain_mm_per_day": 14.79
-  },
-  {
-   "month": "Feb",
-   "mean_c": 18.8,
-   "rain_mm_per_day": 11.76
-  },
-  {
-   "month": "Mar",
-   "mean_c": 18.5,
-   "rain_mm_per_day": 8.12
-  },
-  {
-   "month": "Apr",
-   "mean_c": 17.1,
-   "rain_mm_per_day": 3.55
-  },
-  {
-   "month": "May",
-   "mean_c": 15.0,
-   "rain_mm_per_day": 1.24
-  },
-  {
-   "month": "Jun",
-   "mean_c": 12.8,
-   "rain_mm_per_day": 1.02
-  },
-  {
-   "month": "Jul",
-   "mean_c": 12.1,
-   "rain_mm_per_day": 1.13
-  },
-  {
-   "month": "Aug",
-   "mean_c": 13.3,
-   "rain_mm_per_day": 0.58
-  },
-  {
-   "month": "Sep",
-   "mean_c": 15.6,
-   "rain_mm_per_day": 0.73
-  },
-  {
-   "month": "Oct",
-   "mean_c": 18.2,
-   "rain_mm_per_day": 2.49
-  },
-  {
-   "month": "Nov",
-   "mean_c": 19.3,
-   "rain_mm_per_day": 6.78
-  },
-  {
-   "month": "Dec",
-   "mean_c": 19.5,
-   "rain_mm_per_day": 10.87
-  }
- ],
- "updated": "2026-10-04T11:26:57.024721+00:00",
- "source": "https://pseoare.pages.dev"
+ "answer": {
+  "city": "Antsirabe",
+  "annual_mean_c": 16.6,
+  "warmest_month": "Dec",
+  "warmest_c": 19.5,
+  "coldest_month": "Jul",
+  "coldest_c": 12.1,
+  "seasonal_swing_c": 7.4,
+  "annual_rainfall_mm": 1917.0,
+  "wettest_month": "Jan",
+  "wettest_mm_per_day": 14.79,
+  "driest_month": "Aug",
+  "driest_mm_per_day": 0.58,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 19.1,
+    "rain_mm_per_day": 14.79
+   },
+   {
+    "month": "Feb",
+    "mean_c": 18.8,
+    "rain_mm_per_day": 11.76
+   },
+   {
+    "month": "Mar",
+    "mean_c": 18.5,
+    "rain_mm_per_day": 8.12
+   },
+   {
+    "month": "Apr",
+    "mean_c": 17.1,
+    "rain_mm_per_day": 3.55
+   },
+   {
+    "month": "May",
+    "mean_c": 15.0,
+    "rain_mm_per_day": 1.24
+   },
+   {
+    "month": "Jun",
+    "mean_c": 12.8,
+    "rain_mm_per_day": 1.02
+   },
+   {
+    "month": "Jul",
+    "mean_c": 12.1,
+    "rain_mm_per_day": 1.13
+   },
+   {
+    "month": "Aug",
+    "mean_c": 13.3,
+    "rain_mm_per_day": 0.58
+   },
+   {
+    "month": "Sep",
+    "mean_c": 15.6,
+    "rain_mm_per_day": 0.73
+   },
+   {
+    "month": "Oct",
+    "mean_c": 18.2,
+    "rain_mm_per_day": 2.49
+   },
+   {
+    "month": "Nov",
+    "mean_c": 19.3,
+    "rain_mm_per_day": 6.78
+   },
+   {
+    "month": "Dec",
+    "mean_c": 19.5,
+    "rain_mm_per_day": 10.87
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/antsirabe-average-monthly-temperature-rainfall",
+  "title": "Antsirabe climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-04T12:22:42.053733+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
 }

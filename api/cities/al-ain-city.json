@@ -1,79 +1,86 @@
 {
- "city": "Al Ain City",
- "page": "https://pseoare.pages.dev/al-ain-city-average-monthly-temperature-rainfall",
- "annual_mean_c": 28.9,
- "warmest_month": "Jul",
- "warmest_c": 37.6,
- "coldest_month": "Jan",
- "coldest_c": 18.1,
- "seasonal_swing_c": 19.5,
- "annual_rainfall_mm": 62.0,
- "wettest_month": "Mar",
- "wettest_mm_per_day": 0.47,
- "driest_month": "Oct",
- "driest_mm_per_day": 0.04,
- "monthly": [
-  {
-   "month": "Jan",
-   "mean_c": 18.1,
-   "rain_mm_per_day": 0.35
-  },
-  {
-   "month": "Feb",
-   "mean_c": 20.2,
-   "rain_mm_per_day": 0.17
-  },
-  {
-   "month": "Mar",
-   "mean_c": 24.0,
-   "rain_mm_per_day": 0.47
-  },
-  {
-   "month": "Apr",
-   "mean_c": 29.0,
-   "rain_mm_per_day": 0.22
-  },
-  {
-   "month": "May",
-   "mean_c": 33.7,
-   "rain_mm_per_day": 0.14
-  },
-  {
-   "month": "Jun",
-   "mean_c": 36.1,
-   "rain_mm_per_day": 0.09
-  },
-  {
-   "month": "Jul",
-   "mean_c": 37.6,
-   "rain_mm_per_day": 0.07
-  },
-  {
-   "month": "Aug",
-   "mean_c": 37.5,
-   "rain_mm_per_day": 0.09
-  },
-  {
-   "month": "Sep",
-   "mean_c": 34.6,
-   "rain_mm_per_day": 0.05
-  },
-  {
-   "month": "Oct",
-   "mean_c": 30.2,
-   "rain_mm_per_day": 0.04
-  },
-  {
-   "month": "Nov",
-   "mean_c": 24.6,
-   "rain_mm_per_day": 0.13
-  },
-  {
-   "month": "Dec",
-   "mean_c": 20.1,
-   "rain_mm_per_day": 0.23
-  }
- ],
- "updated": "2026-10-04T11:26:57.024721+00:00",
- "source": "https://pseoare.pages.dev"
+ "answer": {
+  "city": "Al Ain City",
+  "annual_mean_c": 28.9,
+  "warmest_month": "Jul",
+  "warmest_c": 37.6,
+  "coldest_month": "Jan",
+  "coldest_c": 18.1,
+  "seasonal_swing_c": 19.5,
+  "annual_rainfall_mm": 62.0,
+  "wettest_month": "Mar",
+  "wettest_mm_per_day": 0.47,
+  "driest_month": "Oct",
+  "driest_mm_per_day": 0.04,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 18.1,
+    "rain_mm_per_day": 0.35
+   },
+   {
+    "month": "Feb",
+    "mean_c": 20.2,
+    "rain_mm_per_day": 0.17
+   },
+   {
+    "month": "Mar",
+    "mean_c": 24.0,
+    "rain_mm_per_day": 0.47
+   },
+   {
+    "month": "Apr",
+    "mean_c": 29.0,
+    "rain_mm_per_day": 0.22
+   },
+   {
+    "month": "May",
+    "mean_c": 33.7,
+    "rain_mm_per_day": 0.14
+   },
+   {
+    "month": "Jun",
+    "mean_c": 36.1,
+    "rain_mm_per_day": 0.09
+   },
+   {
+    "month": "Jul",
+    "mean_c": 37.6,
+    "rain_mm_per_day": 0.07
+   },
+   {
+    "month": "Aug",
+    "mean_c": 37.5,
+    "rain_mm_per_day": 0.09
+   },
+   {
+    "month": "Sep",
+    "mean_c": 34.6,
+    "rain_mm_per_day": 0.05
+   },
+   {
+    "month": "Oct",
+    "mean_c": 30.2,
+    "rain_mm_per_day": 0.04
+   },
+   {
+    "month": "Nov",
+    "mean_c": 24.6,
+    "rain_mm_per_day": 0.13
+   },
+   {
+    "month": "Dec",
+    "mean_c": 20.1,
+    "rain_mm_per_day": 0.23
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/al-ain-city-average-monthly-temperature-rainfall",
+  "title": "Al Ain City climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-04T12:22:42.053733+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
 }

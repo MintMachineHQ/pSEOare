@@ -1,79 +1,86 @@
 {
- "city": "Alexandria",
- "page": "https://pseoare.pages.dev/alexandria-average-monthly-temperature-rainfall",
- "annual_mean_c": 21.4,
- "warmest_month": "Aug",
- "warmest_c": 28.2,
- "coldest_month": "Jan",
- "coldest_c": 13.9,
- "seasonal_swing_c": 14.3,
- "annual_rainfall_mm": 105.0,
- "wettest_month": "Jan",
- "wettest_mm_per_day": 0.75,
- "driest_month": "Aug",
- "driest_mm_per_day": 0.0,
- "monthly": [
-  {
-   "month": "Jan",
-   "mean_c": 13.9,
-   "rain_mm_per_day": 0.75
-  },
-  {
-   "month": "Feb",
-   "mean_c": 14.6,
-   "rain_mm_per_day": 0.55
-  },
-  {
-   "month": "Mar",
-   "mean_c": 16.7,
-   "rain_mm_per_day": 0.29
-  },
-  {
-   "month": "Apr",
-   "mean_c": 19.4,
-   "rain_mm_per_day": 0.45
-  },
-  {
-   "month": "May",
-   "mean_c": 23.1,
-   "rain_mm_per_day": 0.04
-  },
-  {
-   "month": "Jun",
-   "mean_c": 26.1,
-   "rain_mm_per_day": 0.02
-  },
-  {
-   "month": "Jul",
-   "mean_c": 27.8,
-   "rain_mm_per_day": 0.03
-  },
-  {
-   "month": "Aug",
-   "mean_c": 28.2,
-   "rain_mm_per_day": 0.0
-  },
-  {
-   "month": "Sep",
-   "mean_c": 26.7,
-   "rain_mm_per_day": 0.01
-  },
-  {
-   "month": "Oct",
-   "mean_c": 23.8,
-   "rain_mm_per_day": 0.24
-  },
-  {
-   "month": "Nov",
-   "mean_c": 19.9,
-   "rain_mm_per_day": 0.44
-  },
-  {
-   "month": "Dec",
-   "mean_c": 16.0,
-   "rain_mm_per_day": 0.64
-  }
- ],
- "updated": "2026-10-04T11:26:57.024721+00:00",
- "source": "https://pseoare.pages.dev"
+ "answer": {
+  "city": "Alexandria",
+  "annual_mean_c": 21.4,
+  "warmest_month": "Aug",
+  "warmest_c": 28.2,
+  "coldest_month": "Jan",
+  "coldest_c": 13.9,
+  "seasonal_swing_c": 14.3,
+  "annual_rainfall_mm": 105.0,
+  "wettest_month": "Jan",
+  "wettest_mm_per_day": 0.75,
+  "driest_month": "Aug",
+  "driest_mm_per_day": 0.0,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 13.9,
+    "rain_mm_per_day": 0.75
+   },
+   {
+    "month": "Feb",
+    "mean_c": 14.6,
+    "rain_mm_per_day": 0.55
+   },
+   {
+    "month": "Mar",
+    "mean_c": 16.7,
+    "rain_mm_per_day": 0.29
+   },
+   {
+    "month": "Apr",
+    "mean_c": 19.4,
+    "rain_mm_per_day": 0.45
+   },
+   {
+    "month": "May",
+    "mean_c": 23.1,
+    "rain_mm_per_day": 0.04
+   },
+   {
+    "month": "Jun",
+    "mean_c": 26.1,
+    "rain_mm_per_day": 0.02
+   },
+   {
+    "month": "Jul",
+    "mean_c": 27.8,
+    "rain_mm_per_day": 0.03
+   },
+   {
+    "month": "Aug",
+    "mean_c": 28.2,
+    "rain_mm_per_day": 0.0
+   },
+   {
+    "month": "Sep",
+    "mean_c": 26.7,
+    "rain_mm_per_day": 0.01
+   },
+   {
+    "month": "Oct",
+    "mean_c": 23.8,
+    "rain_mm_per_day": 0.24
+   },
+   {
+    "month": "Nov",
+    "mean_c": 19.9,
+    "rain_mm_per_day": 0.44
+   },
+   {
+    "month": "Dec",
+    "mean_c": 16.0,
+    "rain_mm_per_day": 0.64
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/alexandria-average-monthly-temperature-rainfall",
+  "title": "Alexandria climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-04T12:22:42.053733+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
 }

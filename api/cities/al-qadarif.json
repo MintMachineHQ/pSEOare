@@ -1,79 +1,86 @@
 {
- "city": "Al Qadarif",
- "page": "https://pseoare.pages.dev/al-qadarif-average-monthly-temperature-rainfall",
- "annual_mean_c": 28.0,
- "warmest_month": "May",
- "warmest_c": 31.3,
- "coldest_month": "Jan",
- "coldest_c": 24.6,
- "seasonal_swing_c": 6.7,
- "annual_rainfall_mm": 537.0,
- "wettest_month": "Aug",
- "wettest_mm_per_day": 5.46,
- "driest_month": "Jan",
- "driest_mm_per_day": 0.0,
- "monthly": [
-  {
-   "month": "Jan",
-   "mean_c": 24.6,
-   "rain_mm_per_day": 0.0
-  },
-  {
-   "month": "Feb",
-   "mean_c": 26.7,
-   "rain_mm_per_day": 0.01
-  },
-  {
-   "month": "Mar",
-   "mean_c": 28.8,
-   "rain_mm_per_day": 0.02
-  },
-  {
-   "month": "Apr",
-   "mean_c": 31.1,
-   "rain_mm_per_day": 0.21
-  },
-  {
-   "month": "May",
-   "mean_c": 31.3,
-   "rain_mm_per_day": 1.29
-  },
-  {
-   "month": "Jun",
-   "mean_c": 29.5,
-   "rain_mm_per_day": 1.63
-  },
-  {
-   "month": "Jul",
-   "mean_c": 27.2,
-   "rain_mm_per_day": 4.57
-  },
-  {
-   "month": "Aug",
-   "mean_c": 26.1,
-   "rain_mm_per_day": 5.46
-  },
-  {
-   "month": "Sep",
-   "mean_c": 27.4,
-   "rain_mm_per_day": 2.81
-  },
-  {
-   "month": "Oct",
-   "mean_c": 29.7,
-   "rain_mm_per_day": 1.52
-  },
-  {
-   "month": "Nov",
-   "mean_c": 28.0,
-   "rain_mm_per_day": 0.11
-  },
-  {
-   "month": "Dec",
-   "mean_c": 25.6,
-   "rain_mm_per_day": 0.03
-  }
- ],
- "updated": "2026-10-04T11:26:57.024721+00:00",
- "source": "https://pseoare.pages.dev"
+ "answer": {
+  "city": "Al Qadarif",
+  "annual_mean_c": 28.0,
+  "warmest_month": "May",
+  "warmest_c": 31.3,
+  "coldest_month": "Jan",
+  "coldest_c": 24.6,
+  "seasonal_swing_c": 6.7,
+  "annual_rainfall_mm": 537.0,
+  "wettest_month": "Aug",
+  "wettest_mm_per_day": 5.46,
+  "driest_month": "Jan",
+  "driest_mm_per_day": 0.0,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 24.6,
+    "rain_mm_per_day": 0.0
+   },
+   {
+    "month": "Feb",
+    "mean_c": 26.7,
+    "rain_mm_per_day": 0.01
+   },
+   {
+    "month": "Mar",
+    "mean_c": 28.8,
+    "rain_mm_per_day": 0.02
+   },
+   {
+    "month": "Apr",
+    "mean_c": 31.1,
+    "rain_mm_per_day": 0.21
+   },
+   {
+    "month": "May",
+    "mean_c": 31.3,
+    "rain_mm_per_day": 1.29
+   },
+   {
+    "month": "Jun",
+    "mean_c": 29.5,
+    "rain_mm_per_day": 1.63
+   },
+   {
+    "month": "Jul",
+    "mean_c": 27.2,
+    "rain_mm_per_day": 4.57
+   },
+   {
+    "month": "Aug",
+    "mean_c": 26.1,
+    "rain_mm_per_day": 5.46
+   },
+   {
+    "month": "Sep",
+    "mean_c": 27.4,
+    "rain_mm_per_day": 2.81
+   },
+   {
+    "month": "Oct",
+    "mean_c": 29.7,
+    "rain_mm_per_day": 1.52
+   },
+   {
+    "month": "Nov",
+    "mean_c": 28.0,
+    "rain_mm_per_day": 0.11
+   },
+   {
+    "month": "Dec",
+    "mean_c": 25.6,
+    "rain_mm_per_day": 0.03
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/al-qadarif-average-monthly-temperature-rainfall",
+  "title": "Al Qadarif climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-04T12:22:42.053733+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
 }

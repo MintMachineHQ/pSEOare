@@ -1,79 +1,86 @@
 {
- "city": "Agadir",
- "page": "https://pseoare.pages.dev/agadir-average-monthly-temperature-rainfall",
- "annual_mean_c": 21.1,
- "warmest_month": "Jul",
- "warmest_c": 29.4,
- "coldest_month": "Jan",
- "coldest_c": 13.8,
- "seasonal_swing_c": 15.6,
- "annual_rainfall_mm": 268.0,
- "wettest_month": "Nov",
- "wettest_mm_per_day": 2.04,
- "driest_month": "Jul",
- "driest_mm_per_day": 0.04,
- "monthly": [
-  {
-   "month": "Jan",
-   "mean_c": 13.8,
-   "rain_mm_per_day": 0.84
-  },
-  {
-   "month": "Feb",
-   "mean_c": 14.9,
-   "rain_mm_per_day": 1.26
-  },
-  {
-   "month": "Mar",
-   "mean_c": 17.4,
-   "rain_mm_per_day": 1.11
-  },
-  {
-   "month": "Apr",
-   "mean_c": 19.1,
-   "rain_mm_per_day": 0.6
-  },
-  {
-   "month": "May",
-   "mean_c": 22.2,
-   "rain_mm_per_day": 0.38
-  },
-  {
-   "month": "Jun",
-   "mean_c": 25.4,
-   "rain_mm_per_day": 0.07
-  },
-  {
-   "month": "Jul",
-   "mean_c": 29.4,
-   "rain_mm_per_day": 0.04
-  },
-  {
-   "month": "Aug",
-   "mean_c": 29.2,
-   "rain_mm_per_day": 0.14
-  },
-  {
-   "month": "Sep",
-   "mean_c": 25.2,
-   "rain_mm_per_day": 0.3
-  },
-  {
-   "month": "Oct",
-   "mean_c": 22.6,
-   "rain_mm_per_day": 0.76
-  },
-  {
-   "month": "Nov",
-   "mean_c": 18.1,
-   "rain_mm_per_day": 2.04
-  },
-  {
-   "month": "Dec",
-   "mean_c": 14.9,
-   "rain_mm_per_day": 1.27
-  }
- ],
- "updated": "2026-10-04T11:26:57.024721+00:00",
- "source": "https://pseoare.pages.dev"
+ "answer": {
+  "city": "Agadir",
+  "annual_mean_c": 21.1,
+  "warmest_month": "Jul",
+  "warmest_c": 29.4,
+  "coldest_month": "Jan",
+  "coldest_c": 13.8,
+  "seasonal_swing_c": 15.6,
+  "annual_rainfall_mm": 268.0,
+  "wettest_month": "Nov",
+  "wettest_mm_per_day": 2.04,
+  "driest_month": "Jul",
+  "driest_mm_per_day": 0.04,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 13.8,
+    "rain_mm_per_day": 0.84
+   },
+   {
+    "month": "Feb",
+    "mean_c": 14.9,
+    "rain_mm_per_day": 1.26
+   },
+   {
+    "month": "Mar",
+    "mean_c": 17.4,
+    "rain_mm_per_day": 1.11
+   },
+   {
+    "month": "Apr",
+    "mean_c": 19.1,
+    "rain_mm_per_day": 0.6
+   },
+   {
+    "month": "May",
+    "mean_c": 22.2,
+    "rain_mm_per_day": 0.38
+   },
+   {
+    "month": "Jun",
+    "mean_c": 25.4,
+    "rain_mm_per_day": 0.07
+   },
+   {
+    "month": "Jul",
+    "mean_c": 29.4,
+    "rain_mm_per_day": 0.04
+   },
+   {
+    "month": "Aug",
+    "mean_c": 29.2,
+    "rain_mm_per_day": 0.14
+   },
+   {
+    "month": "Sep",
+    "mean_c": 25.2,
+    "rain_mm_per_day": 0.3
+   },
+   {
+    "month": "Oct",
+    "mean_c": 22.6,
+    "rain_mm_per_day": 0.76
+   },
+   {
+    "month": "Nov",
+    "mean_c": 18.1,
+    "rain_mm_per_day": 2.04
+   },
+   {
+    "month": "Dec",
+    "mean_c": 14.9,
+    "rain_mm_per_day": 1.27
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/agadir-average-monthly-temperature-rainfall",
+  "title": "Agadir climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-04T12:22:42.053733+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
 }

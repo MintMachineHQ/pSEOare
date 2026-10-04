@@ -1,137 +1,144 @@
 {
- "country": "United Kingdom",
- "page": "https://pseoare.pages.dev/hub-single-holidays",
- "count": 16,
- "holidays": [
-  {
-   "name": "New Year's Day in United Kingdom (2016)",
-   "local_name": "New Year's Day",
-   "date": "2016-01-01",
-   "weekday": "Friday",
-   "weekend": false,
-   "page": "https://pseoare.pages.dev/new-year-s-day-united-kingdom-2016-01-01"
-  },
-  {
-   "name": "2 January in United Kingdom (2016)",
-   "local_name": "2 January",
-   "date": "2016-01-02",
-   "weekday": "Saturday",
-   "weekend": true,
-   "page": "https://pseoare.pages.dev/on-2-january-united-kingdom-2016-01-02"
-  },
-  {
-   "name": "New Year's Day in United Kingdom (2017)",
-   "local_name": "New Year's Day",
-   "date": "2017-01-02",
-   "weekday": "Monday",
-   "weekend": false,
-   "page": "https://pseoare.pages.dev/new-year-s-day-united-kingdom-2017-01-02"
-  },
-  {
-   "name": "2 January in United Kingdom (2017)",
-   "local_name": "2 January",
-   "date": "2017-01-03",
-   "weekday": "Tuesday",
-   "weekend": false,
-   "page": "https://pseoare.pages.dev/on-2-january-united-kingdom-2017-01-03"
-  },
-  {
-   "name": "New Year's Day in United Kingdom (2018)",
-   "local_name": "New Year's Day",
-   "date": "2018-01-01",
-   "weekday": "Monday",
-   "weekend": false,
-   "page": "https://pseoare.pages.dev/new-year-s-day-united-kingdom-2018-01-01"
-  },
-  {
-   "name": "2 January in United Kingdom (2018)",
-   "local_name": "2 January",
-   "date": "2018-01-02",
-   "weekday": "Tuesday",
-   "weekend": false,
-   "page": "https://pseoare.pages.dev/on-2-january-united-kingdom-2018-01-02"
-  },
-  {
-   "name": "New Year's Day in United Kingdom (2019)",
-   "local_name": "New Year's Day",
-   "date": "2019-01-01",
-   "weekday": "Tuesday",
-   "weekend": false,
-   "page": "https://pseoare.pages.dev/new-year-s-day-united-kingdom-2019-01-01"
-  },
-  {
-   "name": "2 January in United Kingdom (2019)",
-   "local_name": "2 January",
-   "date": "2019-01-02",
-   "weekday": "Wednesday",
-   "weekend": false,
-   "page": "https://pseoare.pages.dev/on-2-january-united-kingdom-2019-01-02"
-  },
-  {
-   "name": "New Year's Day in United Kingdom (2020)",
-   "local_name": "New Year's Day",
-   "date": "2020-01-01",
-   "weekday": "Wednesday",
-   "weekend": false,
-   "page": "https://pseoare.pages.dev/new-year-s-day-united-kingdom-2020-01-01"
-  },
-  {
-   "name": "2 January in United Kingdom (2020)",
-   "local_name": "2 January",
-   "date": "2020-01-02",
-   "weekday": "Thursday",
-   "weekend": false,
-   "page": "https://pseoare.pages.dev/on-2-january-united-kingdom-2020-01-02"
-  },
-  {
-   "name": "New Year's Day in United Kingdom (2021)",
-   "local_name": "New Year's Day",
-   "date": "2021-01-01",
-   "weekday": "Friday",
-   "weekend": false,
-   "page": "https://pseoare.pages.dev/new-year-s-day-united-kingdom-2021-01-01"
-  },
-  {
-   "name": "2 January in United Kingdom (2021)",
-   "local_name": "2 January",
-   "date": "2021-01-02",
-   "weekday": "Saturday",
-   "weekend": true,
-   "page": "https://pseoare.pages.dev/on-2-january-united-kingdom-2021-01-02"
-  },
-  {
-   "name": "New Year's Day in United Kingdom (2022)",
-   "local_name": "New Year's Day",
-   "date": "2022-01-03",
-   "weekday": "Monday",
-   "weekend": false,
-   "page": "https://pseoare.pages.dev/new-year-s-day-united-kingdom-2022-01-03"
-  },
-  {
-   "name": "2 January in United Kingdom (2022)",
-   "local_name": "2 January",
-   "date": "2022-01-04",
-   "weekday": "Tuesday",
-   "weekend": false,
-   "page": "https://pseoare.pages.dev/on-2-january-united-kingdom-2022-01-04"
-  },
-  {
-   "name": "New Year's Day in United Kingdom (2023)",
-   "local_name": "New Year's Day",
-   "date": "2023-01-02",
-   "weekday": "Monday",
-   "weekend": false,
-   "page": "https://pseoare.pages.dev/new-year-s-day-united-kingdom-2023-01-02"
-  },
-  {
-   "name": "2 January in United Kingdom (2023)",
-   "local_name": "2 January",
-   "date": "2023-01-03",
-   "weekday": "Tuesday",
-   "weekend": false,
-   "page": "https://pseoare.pages.dev/on-2-january-united-kingdom-2023-01-03"
-  }
- ],
- "updated": "2026-10-04T11:26:57.024721+00:00",
- "source": "https://pseoare.pages.dev"
+ "answer": {
+  "country": "United Kingdom",
+  "count": 16,
+  "holidays": [
+   {
+    "name": "New Year's Day in United Kingdom (2016)",
+    "local_name": "New Year's Day",
+    "date": "2016-01-01",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/new-year-s-day-united-kingdom-2016-01-01"
+   },
+   {
+    "name": "2 January in United Kingdom (2016)",
+    "local_name": "2 January",
+    "date": "2016-01-02",
+    "weekday": "Saturday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/on-2-january-united-kingdom-2016-01-02"
+   },
+   {
+    "name": "New Year's Day in United Kingdom (2017)",
+    "local_name": "New Year's Day",
+    "date": "2017-01-02",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/new-year-s-day-united-kingdom-2017-01-02"
+   },
+   {
+    "name": "2 January in United Kingdom (2017)",
+    "local_name": "2 January",
+    "date": "2017-01-03",
+    "weekday": "Tuesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/on-2-january-united-kingdom-2017-01-03"
+   },
+   {
+    "name": "New Year's Day in United Kingdom (2018)",
+    "local_name": "New Year's Day",
+    "date": "2018-01-01",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/new-year-s-day-united-kingdom-2018-01-01"
+   },
+   {
+    "name": "2 January in United Kingdom (2018)",
+    "local_name": "2 January",
+    "date": "2018-01-02",
+    "weekday": "Tuesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/on-2-january-united-kingdom-2018-01-02"
+   },
+   {
+    "name": "New Year's Day in United Kingdom (2019)",
+    "local_name": "New Year's Day",
+    "date": "2019-01-01",
+    "weekday": "Tuesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/new-year-s-day-united-kingdom-2019-01-01"
+   },
+   {
+    "name": "2 January in United Kingdom (2019)",
+    "local_name": "2 January",
+    "date": "2019-01-02",
+    "weekday": "Wednesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/on-2-january-united-kingdom-2019-01-02"
+   },
+   {
+    "name": "New Year's Day in United Kingdom (2020)",
+    "local_name": "New Year's Day",
+    "date": "2020-01-01",
+    "weekday": "Wednesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/new-year-s-day-united-kingdom-2020-01-01"
+   },
+   {
+    "name": "2 January in United Kingdom (2020)",
+    "local_name": "2 January",
+    "date": "2020-01-02",
+    "weekday": "Thursday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/on-2-january-united-kingdom-2020-01-02"
+   },
+   {
+    "name": "New Year's Day in United Kingdom (2021)",
+    "local_name": "New Year's Day",
+    "date": "2021-01-01",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/new-year-s-day-united-kingdom-2021-01-01"
+   },
+   {
+    "name": "2 January in United Kingdom (2021)",
+    "local_name": "2 January",
+    "date": "2021-01-02",
+    "weekday": "Saturday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/on-2-january-united-kingdom-2021-01-02"
+   },
+   {
+    "name": "New Year's Day in United Kingdom (2022)",
+    "local_name": "New Year's Day",
+    "date": "2022-01-03",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/new-year-s-day-united-kingdom-2022-01-03"
+   },
+   {
+    "name": "2 January in United Kingdom (2022)",
+    "local_name": "2 January",
+    "date": "2022-01-04",
+    "weekday": "Tuesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/on-2-january-united-kingdom-2022-01-04"
+   },
+   {
+    "name": "New Year's Day in United Kingdom (2023)",
+    "local_name": "New Year's Day",
+    "date": "2023-01-02",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/new-year-s-day-united-kingdom-2023-01-02"
+   },
+   {
+    "name": "2 January in United Kingdom (2023)",
+    "local_name": "2 January",
+    "date": "2023-01-03",
+    "weekday": "Tuesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/on-2-january-united-kingdom-2023-01-03"
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/hub-single-holidays",
+  "title": "Public holidays for United Kingdom",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-04T12:22:42.053733+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
 }

@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-04T11:26:57.024721+00:00",
+ "updated": "2026-10-04T12:22:42.053733+00:00",
  "count": 24,
  "source": "https://pseoare.pages.dev",
  "note": "high/low/latest cover the trailing 12 months",
@@ -39,19 +39,19 @@
    "page": "https://pseoare.pages.dev/avalanche-price-by-month",
    "high_12m": 30.68,
    "low_12m": 5.89,
-   "latest": 11.03,
+   "latest": 10.98,
    "range_pct_of_low": 420.9,
-   "pct_above_low": 87.3,
-   "pct_below_high": 64.0
+   "pct_above_low": 86.4,
+   "pct_below_high": 64.2
   },
   {
    "asset": "Bitcoin-cash",
    "page": "https://pseoare.pages.dev/bitcoin-cash-price-by-month",
    "high_12m": 654.84,
    "low_12m": 190.35,
-   "latest": 317.72,
+   "latest": 317.92,
    "range_pct_of_low": 244.0,
-   "pct_above_low": 66.9,
+   "pct_above_low": 67.0,
    "pct_below_high": 51.5
   },
   {
@@ -59,7 +59,7 @@
    "page": "https://pseoare.pages.dev/bitcoin-price-by-month",
    "high_12m": 124739.81,
    "low_12m": 58566.09,
-   "latest": 85297.34,
+   "latest": 85271.87,
    "range_pct_of_low": 113.0,
    "pct_above_low": 45.6,
    "pct_below_high": 31.6

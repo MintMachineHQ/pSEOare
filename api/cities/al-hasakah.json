@@ -1,79 +1,86 @@
 {
- "city": "Al Hasakah",
- "page": "https://pseoare.pages.dev/al-hasakah-average-monthly-temperature-rainfall",
- "annual_mean_c": 19.3,
- "warmest_month": "Jul",
- "warmest_c": 33.5,
- "coldest_month": "Jan",
- "coldest_c": 5.0,
- "seasonal_swing_c": 28.5,
- "annual_rainfall_mm": 220.0,
- "wettest_month": "Feb",
- "wettest_mm_per_day": 1.18,
- "driest_month": "Jul",
- "driest_mm_per_day": 0.0,
- "monthly": [
-  {
-   "month": "Jan",
-   "mean_c": 5.0,
-   "rain_mm_per_day": 1.12
-  },
-  {
-   "month": "Feb",
-   "mean_c": 7.2,
-   "rain_mm_per_day": 1.18
-  },
-  {
-   "month": "Mar",
-   "mean_c": 11.9,
-   "rain_mm_per_day": 1.0
-  },
-  {
-   "month": "Apr",
-   "mean_c": 17.1,
-   "rain_mm_per_day": 0.93
-  },
-  {
-   "month": "May",
-   "mean_c": 23.4,
-   "rain_mm_per_day": 0.45
-  },
-  {
-   "month": "Jun",
-   "mean_c": 29.7,
-   "rain_mm_per_day": 0.04
-  },
-  {
-   "month": "Jul",
-   "mean_c": 33.5,
-   "rain_mm_per_day": 0.0
-  },
-  {
-   "month": "Aug",
-   "mean_c": 33.1,
-   "rain_mm_per_day": 0.01
-  },
-  {
-   "month": "Sep",
-   "mean_c": 28.4,
-   "rain_mm_per_day": 0.05
-  },
-  {
-   "month": "Oct",
-   "mean_c": 21.9,
-   "rain_mm_per_day": 0.52
-  },
-  {
-   "month": "Nov",
-   "mean_c": 12.7,
-   "rain_mm_per_day": 0.81
-  },
-  {
-   "month": "Dec",
-   "mean_c": 6.9,
-   "rain_mm_per_day": 1.13
-  }
- ],
- "updated": "2026-10-04T11:26:57.024721+00:00",
- "source": "https://pseoare.pages.dev"
+ "answer": {
+  "city": "Al Hasakah",
+  "annual_mean_c": 19.3,
+  "warmest_month": "Jul",
+  "warmest_c": 33.5,
+  "coldest_month": "Jan",
+  "coldest_c": 5.0,
+  "seasonal_swing_c": 28.5,
+  "annual_rainfall_mm": 220.0,
+  "wettest_month": "Feb",
+  "wettest_mm_per_day": 1.18,
+  "driest_month": "Jul",
+  "driest_mm_per_day": 0.0,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 5.0,
+    "rain_mm_per_day": 1.12
+   },
+   {
+    "month": "Feb",
+    "mean_c": 7.2,
+    "rain_mm_per_day": 1.18
+   },
+   {
+    "month": "Mar",
+    "mean_c": 11.9,
+    "rain_mm_per_day": 1.0
+   },
+   {
+    "month": "Apr",
+    "mean_c": 17.1,
+    "rain_mm_per_day": 0.93
+   },
+   {
+    "month": "May",
+    "mean_c": 23.4,
+    "rain_mm_per_day": 0.45
+   },
+   {
+    "month": "Jun",
+    "mean_c": 29.7,
+    "rain_mm_per_day": 0.04
+   },
+   {
+    "month": "Jul",
+    "mean_c": 33.5,
+    "rain_mm_per_day": 0.0
+   },
+   {
+    "month": "Aug",
+    "mean_c": 33.1,
+    "rain_mm_per_day": 0.01
+   },
+   {
+    "month": "Sep",
+    "mean_c": 28.4,
+    "rain_mm_per_day": 0.05
+   },
+   {
+    "month": "Oct",
+    "mean_c": 21.9,
+    "rain_mm_per_day": 0.52
+   },
+   {
+    "month": "Nov",
+    "mean_c": 12.7,
+    "rain_mm_per_day": 0.81
+   },
+   {
+    "month": "Dec",
+    "mean_c": 6.9,
+    "rain_mm_per_day": 1.13
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/al-hasakah-average-monthly-temperature-rainfall",
+  "title": "Al Hasakah climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-04T12:22:42.053733+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
 }

@@ -1,79 +1,86 @@
 {
- "city": "Addis Ababa",
- "page": "https://pseoare.pages.dev/addis-ababa-average-monthly-temperature-rainfall",
- "annual_mean_c": 16.1,
- "warmest_month": "May",
- "warmest_c": 18.1,
- "coldest_month": "Nov",
- "coldest_c": 14.1,
- "seasonal_swing_c": 4.0,
- "annual_rainfall_mm": 1076.0,
- "wettest_month": "Aug",
- "wettest_mm_per_day": 7.94,
- "driest_month": "Jan",
- "driest_mm_per_day": 0.38,
- "monthly": [
-  {
-   "month": "Jan",
-   "mean_c": 15.4,
-   "rain_mm_per_day": 0.38
-  },
-  {
-   "month": "Feb",
-   "mean_c": 16.9,
-   "rain_mm_per_day": 0.95
-  },
-  {
-   "month": "Mar",
-   "mean_c": 17.8,
-   "rain_mm_per_day": 1.8
-  },
-  {
-   "month": "Apr",
-   "mean_c": 17.7,
-   "rain_mm_per_day": 2.99
-  },
-  {
-   "month": "May",
-   "mean_c": 18.1,
-   "rain_mm_per_day": 2.86
-  },
-  {
-   "month": "Jun",
-   "mean_c": 17.7,
-   "rain_mm_per_day": 3.87
-  },
-  {
-   "month": "Jul",
-   "mean_c": 15.9,
-   "rain_mm_per_day": 7.72
-  },
-  {
-   "month": "Aug",
-   "mean_c": 15.6,
-   "rain_mm_per_day": 7.94
-  },
-  {
-   "month": "Sep",
-   "mean_c": 15.5,
-   "rain_mm_per_day": 4.83
-  },
-  {
-   "month": "Oct",
-   "mean_c": 14.4,
-   "rain_mm_per_day": 1.09
-  },
-  {
-   "month": "Nov",
-   "mean_c": 14.1,
-   "rain_mm_per_day": 0.53
-  },
-  {
-   "month": "Dec",
-   "mean_c": 14.1,
-   "rain_mm_per_day": 0.43
-  }
- ],
- "updated": "2026-10-04T11:26:57.024721+00:00",
- "source": "https://pseoare.pages.dev"
+ "answer": {
+  "city": "Addis Ababa",
+  "annual_mean_c": 16.1,
+  "warmest_month": "May",
+  "warmest_c": 18.1,
+  "coldest_month": "Nov",
+  "coldest_c": 14.1,
+  "seasonal_swing_c": 4.0,
+  "annual_rainfall_mm": 1076.0,
+  "wettest_month": "Aug",
+  "wettest_mm_per_day": 7.94,
+  "driest_month": "Jan",
+  "driest_mm_per_day": 0.38,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 15.4,
+    "rain_mm_per_day": 0.38
+   },
+   {
+    "month": "Feb",
+    "mean_c": 16.9,
+    "rain_mm_per_day": 0.95
+   },
+   {
+    "month": "Mar",
+    "mean_c": 17.8,
+    "rain_mm_per_day": 1.8
+   },
+   {
+    "month": "Apr",
+    "mean_c": 17.7,
+    "rain_mm_per_day": 2.99
+   },
+   {
+    "month": "May",
+    "mean_c": 18.1,
+    "rain_mm_per_day": 2.86
+   },
+   {
+    "month": "Jun",
+    "mean_c": 17.7,
+    "rain_mm_per_day": 3.87
+   },
+   {
+    "month": "Jul",
+    "mean_c": 15.9,
+    "rain_mm_per_day": 7.72
+   },
+   {
+    "month": "Aug",
+    "mean_c": 15.6,
+    "rain_mm_per_day": 7.94
+   },
+   {
+    "month": "Sep",
+    "mean_c": 15.5,
+    "rain_mm_per_day": 4.83
+   },
+   {
+    "month": "Oct",
+    "mean_c": 14.4,
+    "rain_mm_per_day": 1.09
+   },
+   {
+    "month": "Nov",
+    "mean_c": 14.1,
+    "rain_mm_per_day": 0.53
+   },
+   {
+    "month": "Dec",
+    "mean_c": 14.1,
+    "rain_mm_per_day": 0.43
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/addis-ababa-average-monthly-temperature-rainfall",
+  "title": "Addis Ababa climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-04T12:22:42.053733+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
 }
