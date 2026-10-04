@@ -646,7 +646,7 @@ def widget_pages(store: MetricsStore, stamp: str) -> list[tuple[str, str, str]]:
         slug = f"widget-climate-{row.slug}"
         body = f"""
 <div class="widget">
-<h2>{_esc(name)}: monthly temperature</h2>
+<h1>{_esc(name)}: monthly temperature</h1>
 {bar_chart([m[1] for m in months], [m[0][:3] for m in months], title="Mean temperature by month", unit=" C")}
 <table><caption>{_esc(name)} monthly averages</caption>
 <thead><tr><th>Month</th><th>Mean C</th><th>Rain mm/day</th></tr></thead>
@@ -655,14 +655,13 @@ def widget_pages(store: MetricsStore, stamp: str) -> list[tuple[str, str, str]]:
 </div>"""
         docs.append((f"{slug}.html", _document(
             f"{name} climate widget",
-            f"Embeddable monthly temperature chart for {name}.", body, stamp,
-            bare=True), "widget"))
+            f"Embeddable monthly temperature chart for {name}.", body, stamp), "widget"))
     for row in store.cryptos()[:15]:
         name = str(row.data.get("name", ""))
         d = row.data
         body = f"""
 <div class="widget">
-<h2>{_esc(name)}: 365-day range</h2>
+<h1>{_esc(name)}: 365-day range</h1>
 <p>Latest <strong>{_fmt(d.get('last', 0), ' USD', 2)}</strong>,
 {d.get('below_high_pct', 0):.1f}% below the 12-month high of {_fmt(d.get('high', 0), ' USD', 2)},
 {d.get('above_low_pct', 0):.1f}% above the low of {_fmt(d.get('low', 0), ' USD', 2)}.</p>
@@ -671,7 +670,7 @@ def widget_pages(store: MetricsStore, stamp: str) -> list[tuple[str, str, str]]:
 </div>"""
         docs.append((f"widget-crypto-{row.slug}.html", _document(
             f"{name} 365-day range widget",
-            f"Embeddable 365-day range widget for {name}.", body, stamp, bare=True), "widget"))
+            f"Embeddable 365-day range widget for {name}.", body, stamp), "widget"))
     return docs
 
 
@@ -724,7 +723,9 @@ thead th{background:#f4f4f4}td.num{text-align:right;font-variant-numeric:tabular
 .chart{margin:.6rem 0;background:#fafbfc;border:1px solid #eee;border-radius:4px}
 a{color:#2c5c96}code{background:#f4f4f4;padding:.1rem .3rem;border-radius:3px}
 pre{background:#f7f7f7;padding:.7rem;overflow:auto;border-radius:4px}
-.widget{font:14px/1.5 system-ui,sans-serif}.attrib{font-size:.8rem;color:#666}
+.widget{font:14px/1.5 system-ui,sans-serif;padding:0}
+.widget h1{font-size:1.05rem;margin:0 0 .4rem}
+.attrib{font-size:.8rem;color:#666;margin:.4rem 0 0}
 @media(prefers-color-scheme:dark){body{background:#14171a;color:#e8e8e8}
 th,td{border-color:#333}thead th{background:#22262a}.meta,.note{color:#9aa}
 pre,.chart{background:#1b1f23}code{background:#252a2f}.fact{background:#1b2129}}
@@ -734,9 +735,11 @@ pre,.chart{background:#1b1f23}code{background:#252a2f}.fact{background:#1b2129}}
 def _document(title: str, description: str, body: str, stamp: str, bare: bool = False) -> str:
     """Full HTML document.
 
-    `bare` drops the site chrome so a widget iframe shows only the widget. Every page gets
-    a canonical, a description and Dataset JSON-LD, because these surfaces are meant to be
-    the citable ones.
+    Every page gets a canonical, a description and Dataset JSON-LD, because these
+    surfaces are meant to be the citable ones. `bare` exists for a genuinely chrome-free
+    embed, but nothing uses it: the widget pages were originally built bare and the CI
+    sanity gate correctly rejected them for having no h1 and no JSON-LD. A widget is
+    still a page, and an indexable one.
     """
     site = _SITE
     payload = {

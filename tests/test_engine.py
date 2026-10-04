@@ -2102,7 +2102,7 @@ class TestExploreSurfaces(unittest.TestCase):
         self.assertEqual(payload["count"], 6)
         self.assertIn("annual_mean_c", payload["results"][0])
 
-    def test_widget_pages_are_embeddable_and_bare(self):
+    def test_widget_pages_are_embeddable_and_indexable(self):
         from engine import explore
 
         docs = explore.widget_pages(self._store(), "2026-10-04T00:00:00Z")
@@ -2110,9 +2110,14 @@ class TestExploreSurfaces(unittest.TestCase):
         name, html, kind = docs[0]
         self.assertTrue(name.startswith("widget-climate-"))
         self.assertEqual(kind, "widget")
-        # A widget must not carry the site chrome it will be embedded inside.
-        self.assertNotIn("application/ld+json", html)
+        # Embeddable: one self-contained document with a chart and an attribution line,
+        # and no site navigation to escape into when it is iframed.
+        self.assertIn("<svg", html)
         self.assertIn("Data by", html)
+        self.assertNotIn("Related data pages", html)
+        # Indexable: it is a page like any other, so the CI sanity gate applies.
+        self.assertIn("<h1", html)
+        self.assertIn("application/ld+json", html)
 
     def test_embed_snippet_returns_a_page(self):
         from engine import explore
@@ -2208,3 +2213,30 @@ class TestDerivedPagesSurviveRuns(unittest.TestCase):
                                  "widget-climate-kazan.html", "api/climate.json"])
         self.assertRegex(xml, r"<loc>[^<]*today[^<]*</loc><lastmod>[^<]*</lastmod><changefreq>daily")
         self.assertIn("<changefreq>weekly</changefreq>", xml)
+
+
+class TestDerivedPagesPassTheSanityGate(unittest.TestCase):
+    """CI fails the whole build when a published page has no <h1> or no JSON-LD. The
+    widget pages were built bare and took the build down with them."""
+
+    def test_every_generated_page_has_an_h1_and_json_ld(self):
+        import tempfile as tf
+
+        from engine import explore
+
+        store = TestExploreSurfaces()._store(Path(tf.mkdtemp()))
+        stamp = "2026-10-04T00:00:00Z"
+        docs = (
+            explore.ranking_pages(store, stamp)
+            + explore.comparison_pages(store, stamp)
+            + [explore.today_page(store, stamp)]
+            + [explore.api_docs(store, stamp)]
+            + explore.widget_pages(store, stamp)
+            + [explore.embed_snippet(store, stamp)]
+        )
+        self.assertTrue(docs)
+        for name, html_doc, _kind in docs:
+            with self.subTest(page=name):
+                self.assertIn("<h1", html_doc)
+                self.assertIn("application/ld+json", html_doc)
+                self.assertIn('rel="canonical"', html_doc)
