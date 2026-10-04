@@ -279,7 +279,7 @@ def _render_ranking(
             if idx is not None:
                 detail = f"{row.data['months'][idx][1]:.1f} C, {row.data['months'][idx][2]:.2f} mm/day"
         items.append(
-            f'<tr><td>{i}</td><td><a href="{_esc(link)}">{_esc(row.data.get("name", row.title))}</a></td>'
+            f'<tr><td>{i}</td><td><a href="{_esc(href)}">{_esc(row.data.get("name", row.title))}</a></td>'
             f'<td class="num">{_esc(value)}</td><td>{_esc(detail)}</td></tr>'
         )
     rows_html = "".join(items)
@@ -303,7 +303,7 @@ def _render_ranking(
 <thead><tr><th>#</th><th>Name</th><th>{_esc(field_label or str(field).replace("_", " ").title())}</th><th>Detail</th></tr></thead>
 <tbody>{rows_html}</tbody></table>
 <p class="note">Figures come from public open APIs and are rebuilt on a schedule.
-<a href="{link('all-datasets-1.html')}">Browse every dataset</a>.</p>
+<a href="{link('index.html')}">Browse every dataset</a>.</p>
 """
     return _document(title, description, body, stamp)
 
@@ -777,7 +777,8 @@ def widget_pages(store: MetricsStore, stamp: str) -> list[tuple[str, str, str]]:
 </div>"""
         docs.append((f"{slug}.html", _document(
             f"{name} climate widget",
-            f"Embeddable monthly temperature chart for {name}.", body, stamp), "widget"))
+            f"Embeddable monthly temperature chart for {name}.", body, stamp,
+            monetised=False), "widget"))
     for row in store.cryptos()[:15]:
         name = str(row.data.get("name", ""))
         d = row.data
@@ -792,7 +793,8 @@ def widget_pages(store: MetricsStore, stamp: str) -> list[tuple[str, str, str]]:
 </div>"""
         docs.append((f"widget-crypto-{row.slug}.html", _document(
             f"{name} 365-day range widget",
-            f"Embeddable 365-day range widget for {name}.", body, stamp), "widget"))
+            f"Embeddable 365-day range widget for {name}.", body, stamp,
+            monetised=False), "widget"))
     return docs
 
 
@@ -825,6 +827,7 @@ No account, no key, no script.</p>
 # ---------------------------------------------------------------------------
 
 _SITE = {"name": "pSEOare", "origin": "https://pseoare.pages.dev", "clean": True}
+_CFG: Any = None
 
 
 def configure(origin: str, name: str, clean: bool = True) -> None:
@@ -872,7 +875,10 @@ pre,.chart{background:#1b1f23}code{background:#252a2f}.fact{background:#1b2129}}
 """
 
 
-def _document(title: str, description: str, body: str, stamp: str, bare: bool = False) -> str:
+def _document(
+    title: str, description: str, body: str, stamp: str, bare: bool = False,
+    monetised: bool = True,
+) -> str:
     """Full HTML document.
 
     Every page gets a canonical, a description and Dataset JSON-LD, because these
@@ -907,7 +913,32 @@ def _document(title: str, description: str, body: str, stamp: str, bare: bool = 
             f'<script type="application/ld+json">{json.dumps(payload)}</script>'
             f'<link rel="alternate" type="application/rss+xml" href="{link("feed.xml")}">'
         )
+    # Rankings, comparisons, questions and Today are pages a visitor lands on, so they
+    # carry the popunder like every other page. Widgets are excluded because they are
+    # embedded in someone else's site and an ad unit inside an iframe is a complaint
+    # waiting to happen; Web Stories have a 30 KB AMP payload budget and no script room.
+    if monetised:
+        head += _popunder()
     return f"<!doctype html><html lang=\"en\"><head>{head}</head><body>{body}</body></html>"
+
+
+def configure_ads(cfg: Any) -> None:
+    """Remember the config so derived pages can be monetised like every other page."""
+    global _CFG
+    _CFG = cfg
+
+
+def _popunder() -> str:
+    # head_ads() is reused rather than reimplemented: it carries the community-referral
+    # exemption, and a second copy of that logic would eventually disagree with the first.
+    if _CFG is None:
+        return ""
+    try:
+        from .render import head_ads
+
+        return head_ads(_CFG)
+    except Exception:  # never let an ad decision break a page
+        return ""
 
 # ---------------------------------------------------------------------------
 # search + events + topic feeds

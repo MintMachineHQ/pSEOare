@@ -2882,3 +2882,114 @@ class TestWebStories(unittest.TestCase):
         from engine.hubs import _sitemap_family
 
         self.assertEqual(_sitemap_family("story-coldest-cities.html"), "stories")
+
+
+class TestDerivedPageLinksResolve(unittest.TestCase):
+    """A ranking row linked to the repr of the link() *function* for several days. Every
+    check so far asserted that a link was present; none asserted it was a URL. A presence
+    check cannot tell a working link from a broken one."""
+
+    def test_every_anchor_in_every_generated_page_is_a_url(self):
+        import re
+
+        from engine import explore
+
+        cfg = make_cfg(Path(tempfile.mkdtemp()))
+        explore.configure(cfg.domain, cfg.site_name)
+        explore.configure_ads(cfg)
+        store = TestExploreSurfaces()._store(Path(tempfile.mkdtemp()))
+        stamp = "2026-10-04T00:00:00Z"
+        docs = (
+            explore.ranking_pages(store, stamp)
+            + explore.comparison_pages(store, stamp)
+            + [explore.today_page(store, stamp)]
+            + explore.event_pages(store, stamp)
+            + explore.question_pages(store, stamp)
+            + explore.widget_pages(store, stamp)
+            + [explore.embed_snippet(store, stamp)]
+            + [explore.api_docs(store, stamp)]
+        )
+        self.assertTrue(docs)
+        # widgets.html legitimately has no anchors: its iframes are shown as escaped
+        # code inside <pre>, so it is checked for correctness but not for presence.
+        must_link = {"rankings", "comparison", "question", "event", "widget", "today"}
+        for name, html_doc, kind in docs:
+            hrefs = re.findall(r'<a href="([^"]*)"', html_doc)
+            for href in hrefs:
+                with self.subTest(page=name, href=href):
+                    self.assertTrue(
+                        href.startswith("http"),
+                        f"{name} links to {href!r}, which is not a URL",
+                    )
+            if kind in must_link:
+                with self.subTest(page=name):
+                    self.assertTrue(hrefs, f"{name} ({kind}) has no links at all")
+
+    def test_no_generated_page_leaks_a_python_repr(self):
+        from engine import explore
+
+        cfg = make_cfg(Path(tempfile.mkdtemp()))
+        explore.configure(cfg.domain, cfg.site_name)
+        store = TestExploreSurfaces()._store(Path(tempfile.mkdtemp()))
+        stamp = "2026-10-04T00:00:00Z"
+        for _n, html_doc, _k in explore.ranking_pages(store, stamp):
+            self.assertNotIn("function link", html_doc)
+            self.assertNotIn("object at 0x", html_doc)
+
+
+class TestDerivedPagesAreMonetised(unittest.TestCase):
+    """Rankings, comparisons, questions and Today are pages a visitor lands on. They
+    carried no popunder, so 111 high-intent discovery pages earned nothing."""
+
+    def _cfg(self):
+        cfg = make_cfg(Path(tempfile.mkdtemp()))
+        cfg.raw.setdefault("monetization", {})
+        cfg.raw["monetization"]["popunder_enabled"] = True
+        cfg.raw["monetization"]["popunder_script"] = (
+            '<script data-cfasync="false" src="https://abscloud.org/1/testtoken"></script>'
+        )
+        return cfg
+
+    def test_rankings_comparisons_and_today_carry_the_popunder(self):
+        from engine import explore
+
+        cfg = self._cfg()
+        explore.configure(cfg.domain, cfg.site_name)
+        explore.configure_ads(cfg)
+        store = TestExploreSurfaces()._store(Path(tempfile.mkdtemp()))
+        stamp = "2026-10-04T00:00:00Z"
+        docs = (
+            explore.ranking_pages(store, stamp)
+            + explore.comparison_pages(store, stamp)
+            + [explore.today_page(store, stamp)]
+            + explore.question_pages(store, stamp)
+        )
+        self.assertTrue(docs)
+        for name, html_doc, _kind in docs:
+            with self.subTest(page=name):
+                self.assertIn("abscloud.org", html_doc)
+
+    def test_widgets_carry_no_ads(self):
+        """A widget is embedded in someone else's site. An ad unit inside their iframe
+        is a complaint waiting to happen."""
+        from engine import explore
+
+        cfg = self._cfg()
+        explore.configure(cfg.domain, cfg.site_name)
+        explore.configure_ads(cfg)
+        for _name, html_doc, _kind in explore.widget_pages(
+            TestExploreSurfaces()._store(Path(tempfile.mkdtemp())), "2026-10-04T00:00:00Z"
+        ):
+            self.assertNotIn("abscloud.org", html_doc)
+
+    def test_the_dataset_index_link_is_not_a_404(self):
+        """all-datasets-N only exists past 250 links, so page one is the homepage."""
+        from engine import explore
+
+        cfg = self._cfg()
+        explore.configure(cfg.domain, cfg.site_name)
+        explore.configure_ads(cfg)
+        _n, html_doc, _k = explore.ranking_pages(
+            TestExploreSurfaces()._store(Path(tempfile.mkdtemp())), "2026-10-04T00:00:00Z"
+        )[0]
+        self.assertNotIn("all-datasets-1", html_doc)

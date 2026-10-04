@@ -152,6 +152,7 @@ async def run(args: argparse.Namespace) -> int:
         # the pages in hand, because a run only ever collects a few hundred of ~1,700 and
         # a ranking over 300 cities is the entire point.
         explore.configure(cfg.domain, cfg.site_name, clean=cfg.url_style == "clean")
+        explore.configure_ads(cfg)
         store = MetricsStore(cfg.paths.cache)
         for page in pages:
             store.record(page, metrics_for(page))
