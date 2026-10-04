@@ -83,7 +83,15 @@ class Writer:
         # Unregistered, the orphan sweep deletes them on the next run and the sitemap
         # loses those URLs, which is the one failure mode the sitemap must never have:
         # a URL that was published once and then silently dropped.
-        for path, title in (derived or {}).items():
+        incoming = derived or {}
+        # A derived page is rebuilt from the whole store, so its name depends on the
+        # store's contents: adding a city renames every comparison after it. Registering
+        # a page whose filename has moved leaves the sitemap advertising a 404. Derived
+        # registrations are therefore rebuilt from scratch each run, while real pages stay
+        # cumulative.
+        for path in [p for p, v in entries.items() if v.get("kind") == "derived"]:
+            entries.pop(path, None)
+        for path, title in incoming.items():
             entries[path] = asdict(
                 ManifestEntry(path=path, kind="derived", title=title,
                               content_hash=hashlib.sha256(path.encode()).hexdigest()[:16],

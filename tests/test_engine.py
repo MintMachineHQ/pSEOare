@@ -2182,17 +2182,21 @@ class TestDerivedPagesSurviveRuns(unittest.TestCase):
 
         return Writer(Path(tmp) / "out", Path(tmp) / "cache")
 
-    def test_derived_pages_are_registered_and_not_swept(self):
+    def test_a_derived_page_not_regenerated_is_de_registered_and_swept(self):
+        """Every derived page is rebuilt from the whole store, so all of them are in each
+        run's set. One that is absent was genuinely withdrawn -- a comparison whose
+        pairing moved, say -- and keeping it would leave the sitemap advertising a 404."""
         import tempfile as tf
 
         tmp = Path(tf.mkdtemp())
         w = self._writer(tmp)
         w.write_raw("top-coldest-cities.html", "<html>coldest</html>")
         w.sync_manifest([], "2026-10-04T00:00:00Z", derived={"top-coldest-cities.html": "ranking"})
-        # A later run that produces no derived page of its own must not delete it.
+        self.assertIn("top-coldest-cities.html", w.manifest_pages())
         w2 = self._writer(tmp)
         w2.sync_manifest([], "2026-10-05T00:00:00Z")
-        self.assertTrue((tmp / "out" / "top-coldest-cities.html").exists())
+        self.assertNotIn("top-coldest-cities.html", w2.manifest_pages())
+        self.assertFalse((tmp / "out" / "top-coldest-cities.html").exists())
 
     def test_sitemap_includes_derived_urls(self):
         import tempfile as tf
@@ -2283,3 +2287,39 @@ class TestExploreLinksAreClean(unittest.TestCase):
                 continue
             with self.subTest(page=name):
                 self.assertNotIn('.html"', html_doc.replace("&quot;", '"'))
+
+
+class TestDerivedRegistrationTracksReality(unittest.TestCase):
+    """Comparison filenames are derived from the store, so adding a city renames the
+    pairs after it. A registration left behind advertises a 404 in the sitemap."""
+
+    def _writer(self, tmp):
+        from engine.writer import Writer
+
+        return Writer(Path(tmp) / "out", Path(tmp) / "cache")
+
+    def test_a_renamed_derived_page_is_de_registered(self):
+        import tempfile as tf
+
+        tmp = Path(tf.mkdtemp())
+        w = self._writer(tmp)
+        w.write_raw("compare-a-vs-b.html", "x")
+        w.sync_manifest([], "2026-10-04T00:00:00Z", derived={"compare-a-vs-b.html": "comparison"})
+        w2 = self._writer(tmp)
+        w2.write_raw("compare-a-vs-c.html", "x")
+        w2.sync_manifest([], "2026-10-05T00:00:00Z", derived={"compare-a-vs-c.html": "comparison"})
+        entries = w2.manifest_pages()
+        self.assertNotIn("compare-a-vs-b.html", entries)
+        self.assertIn("compare-a-vs-c.html", entries)
+
+    def test_real_pages_stay_cumulative(self):
+        import tempfile as tf
+
+        tmp = Path(tf.mkdtemp())
+        w = self._writer(tmp)
+        page = sample_page(make_cfg(Path(tf.mkdtemp())))
+        w.write_pages([page], lambda p: "<html></html>", "2026-10-04T00:00:00Z")
+        w.sync_manifest([page], "2026-10-04T00:00:00Z")
+        w2 = self._writer(tmp)
+        w2.sync_manifest([], "2026-10-05T00:00:00Z", derived={"today.html": "today"})
+        self.assertIn(page.path, w2.manifest_pages())
