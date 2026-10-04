@@ -1,0 +1,27 @@
+# LongTail Data Atlas
+
+> Reference pages rebuilt daily from public data APIs.
+
+https://pseoare.pages.dev/
+
+Every page below is rebuilt daily from public data APIs and cites its source.
+
+## Dataset hubs
+
+- [Monthly climate averages by city](https://pseoare.pages.dev/hub-climate): index of this dataset.
+- [Country facts, population and currency](https://pseoare.pages.dev/hub-countries): index of this dataset.
+- [Crypto price by month](https://pseoare.pages.dev/hub-crypto): index of this dataset.
+- [Public holiday calendars by country and year](https://pseoare.pages.dev/hub-holidays): index of this dataset.
+- [Population by country](https://pseoare.pages.dev/hub-population): index of this dataset.
+- [Individual public holidays by date](https://pseoare.pages.dev/hub-single-holidays): index of this dataset.
+
+## Other
+
+- [Full dataset index](https://pseoare.pages.dev/): every page on the site.
+- [RSS feed](https://pseoare.pages.dev/feed.xml): newest 200 pages.
+- [Sitemap](https://pseoare.pages.dev/sitemap.xml): every URL.
+
+## Optional
+
+- [RSS feed](https://pseoare.pages.dev/feed.xml)
+- [Sitemap](https://pseoare.pages.dev/sitemap.xml)
