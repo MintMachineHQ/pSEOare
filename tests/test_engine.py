@@ -2519,11 +2519,16 @@ class TestStaticDeliveryHeaders(unittest.TestCase):
         text = headers_file()
         self.assertIn("/api/*", text)
         self.assertIn("Cache-Control: public, max-age=3600", text)
-        # Pages matches on the request path and this site is served extensionless, so a
-        # "/*.html" rule never fires. The catch-all is what actually applies to HTML.
-        self.assertIn("Cache-Control: public, max-age=300, must-revalidate", text)
         self.assertNotIn("/*.html", text)
         self.assertIn("/search-index.json", text)
+        # Pages concatenates Cache-Control when two matching rules both set it, so the
+        # catch-all must not set one at all.
+        catch_all = text.split("/api/*")[0]
+        self.assertNotIn("Cache-Control", catch_all)
+        for block in ("/api/*", "/search-index.json", "/feed-climate.xml"):
+            section = text.split(block)[1].split("\n\n")[0]
+            with self.subTest(block=block):
+                self.assertEqual(section.count("Cache-Control"), 1)
 
     def test_headers_survive_the_orphan_sweep(self):
         import tempfile as tf

@@ -500,10 +500,16 @@ def headers_file() -> str:
     # extensionless, so a "/*.html" rule never fires: every page is requested as
     # "/top-coldest-cities". The catch-all below is therefore the rule that actually
     # applies to HTML, with the data files overridden after it.
+    # No Cache-Control in the catch-all. Cloudflare Pages *concatenates* the header when
+    # two matching rules both set it, which produced
+    # "max-age=300, must-revalidate, public, max-age=3600" on every API response: two
+    # policies in one header, and what a browser or CDN does with that is undefined. HTML
+    # keeps the Pages default (max-age=0, must-revalidate), which revalidates every hit --
+    # cheap for a CDN, and it guarantees a crawler sees the current build. The files that
+    # actually need caching set their own policy and are not covered by a second rule.
     return """/*
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
-  Cache-Control: public, max-age=300, must-revalidate
 
 /api/*
   Cache-Control: public, max-age=3600
