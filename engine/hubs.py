@@ -340,6 +340,11 @@ def _sitemap_family(path: str) -> str:
         return "events"
     if path.startswith("story-"):
         return "stories"
+    # Holiday pages are named "<holiday>-<country>-<YYYY-MM-DD>", so the date suffix is
+    # the only reliable marker. Without this branch all ~1,900 of them fell into "pages"
+    # and sitemap-holidays.xml was never created at all, which defeats the split.
+    if re.search(r"-20\d{2}-\d{2}-\d{2}\.html$", path):
+        return "holidays"
     if "average-monthly-temperature-rainfall" in path:
         return "climate"
     if "country-data" in path or "population-of" in path:

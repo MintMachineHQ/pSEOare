@@ -2625,6 +2625,18 @@ class TestSitemapSplit(unittest.TestCase):
         self.assertEqual(
             _sitemap_family("abidjan-average-monthly-temperature-rainfall.html"), "climate")
         self.assertEqual(_sitemap_family("afghanistan-country-data.html"), "countries")
+        self.assertEqual(_sitemap_family("story-coldest-cities.html"), "stories")
+        # Holiday pages are the bulk of the corpus and are identified by their date suffix.
+        self.assertEqual(
+            _sitemap_family("amazigh-new-year-morocco-2024-01-14.html"), "holidays"
+        )
+        self.assertEqual(
+            _sitemap_family("christmas-day-cyprus-2027-12-25.html"), "holidays"
+        )
+        # A city page must not be mistaken for a holiday because of a stray number.
+        self.assertEqual(
+            _sitemap_family("aba-average-monthly-temperature-rainfall.html"), "climate"
+        )
 
     def test_the_index_lists_a_sitemap_per_family(self):
         from engine.hubs import split_sitemaps
@@ -2635,6 +2647,30 @@ class TestSitemapSplit(unittest.TestCase):
         self.assertTrue(files)
         for name in files:
             self.assertIn(name, index)
+
+    def test_holiday_pages_reach_the_holidays_family(self):
+        """Every family declared must be reachable, or that sitemap is never written and
+        the split silently measures nothing."""
+        from engine.hubs import SITEMAP_FAMILIES, _sitemap_family, split_sitemaps
+
+        reachable = {
+            "climate": "a-average-monthly-temperature-rainfall.html",
+            "countries": "afghanistan-country-data.html",
+            "crypto": "bitcoin-price-by-month.html",
+            "holidays": "christmas-day-cyprus-2027-12-25.html",
+            "rankings": "top-coldest-cities.html",
+            "comparisons": "compare-a-vs-b.html",
+            "events": "today.html",
+            "widgets": "widget-climate-a.html",
+            "api": "api/climate.json",
+            "stories": "story-coldest-cities.html",
+            "hubs": "hub-climate.html",
+            "pages": "some-untitled-thing.html",
+        }
+        for family in SITEMAP_FAMILIES:
+            with self.subTest(family=family):
+                self.assertIn(family, reachable, "no fixture for a declared family")
+                self.assertEqual(_sitemap_family(reachable[family]), family)
 
     def test_robots_points_at_the_index_and_sitemap_xml_stays_a_urlset(self):
         from engine.hubs import robots_txt, sitemap_xml
