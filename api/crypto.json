@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-04T12:22:42.053733+00:00",
+ "updated": "2026-10-04T12:38:52.685601+00:00",
  "count": 24,
  "source": "https://pseoare.pages.dev",
  "note": "high/low/latest cover the trailing 12 months",
@@ -39,9 +39,9 @@
    "page": "https://pseoare.pages.dev/avalanche-price-by-month",
    "high_12m": 30.68,
    "low_12m": 5.89,
-   "latest": 10.98,
+   "latest": 10.99,
    "range_pct_of_low": 420.9,
-   "pct_above_low": 86.4,
+   "pct_above_low": 86.6,
    "pct_below_high": 64.2
   },
   {
@@ -59,10 +59,10 @@
    "page": "https://pseoare.pages.dev/bitcoin-price-by-month",
    "high_12m": 124739.81,
    "low_12m": 58566.09,
-   "latest": 85271.87,
+   "latest": 85236.83,
    "range_pct_of_low": 113.0,
-   "pct_above_low": 45.6,
-   "pct_below_high": 31.6
+   "pct_above_low": 45.5,
+   "pct_below_high": 31.7
   },
   {
    "asset": "Cardano",
