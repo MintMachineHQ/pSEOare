@@ -270,7 +270,7 @@ def _render_ranking(
         else:
             raw_value = row.data.get(field)
             value = _fmt(raw_value, unit, digits) if isinstance(raw_value, (int, float)) else ""
-        link = f"{site['origin']}/{row.path}"
+        href = link(row.path)
         # The full table is written out, not just the ranked figure, so the page is a
         # usable reference and a crawler reads the numbers without running the chart.
         detail = ""
@@ -303,7 +303,7 @@ def _render_ranking(
 <thead><tr><th>#</th><th>Name</th><th>{_esc(field_label or str(field).replace("_", " ").title())}</th><th>Detail</th></tr></thead>
 <tbody>{rows_html}</tbody></table>
 <p class="note">Figures come from public open APIs and are rebuilt on a schedule.
-<a href="{site['origin']}/all-datasets-1.html">Browse every dataset</a>.</p>
+<a href="{link('all-datasets-1.html')}">Browse every dataset</a>.</p>
 """
     return _document(title, description, body, stamp)
 
@@ -412,8 +412,8 @@ behind their individual pages.</p>
 <h2>What the numbers mean</h2>
 <ul>{"".join(f"<li>{_esc(v)}</li>" for v in verdicts)}</ul>
 <p class="note">Individual pages:
-<a href="{site['origin']}/{a.path}">{_esc(an)}</a> &middot;
-<a href="{site['origin']}/{b.path}">{_esc(bn)}</a>.</p>
+<a href="{link(a.path)}">{_esc(an)}</a> &middot;
+<a href="{link(b.path)}">{_esc(bn)}</a>.</p>
 """
     return f"{slug}.html", _document(title, f"{an} compared with {bn} on climate and price figures.", body, stamp), "comparison"
 
@@ -445,7 +445,7 @@ def today_page(store: MetricsStore, stamp: str, when: date | None = None) -> tup
             return "".join(
                 f'<tr><td>{_esc(r.data.get("local_name") or r.data.get("name"))}</td>'
                 f'<td>{_esc(r.data.get("country"))}</td>'
-                f'<td><a href="{site["origin"]}/{r.path}">{_esc(r.data.get("date"))}</a></td>'
+                f'<td><a href="{link(r.path)}">{_esc(r.data.get("date"))}</a></td>'
                 f'<td>{_esc(r.data.get("weekday"))}</td></tr>'
                 for r in rows
             ) or '<tr><td colspan="4">None recorded for this date.</td></tr>'
@@ -494,7 +494,7 @@ run, so the figures and the dates move with the data.</p>
 {fact}
 {"".join(sections)}
 <p class="note">Rankings, comparisons and per-dataset pages are linked from
-<a href="{site['origin']}/index.html">the homepage</a>.</p>
+<a href="{link("index.html")}">the homepage</a>.</p>
 """
     return "today.html", _document(title, f"What is happening across the datasets on {day.isoformat()}.", body, stamp), "today"
 
@@ -502,7 +502,7 @@ run, so the figures and the dates move with the data.</p>
 def _mini_table(caption: str, rows: list[Metrics], field: str, unit: str) -> str:
     site = _SITE
     cells = "".join(
-        f'<tr><td>{i}</td><td><a href="{site["origin"]}/{r.path}">'
+        f'<tr><td>{i}</td><td><a href="{link(r.path)}">'
         f'{_esc(r.data.get("name", r.title))}</a></td>'
         f'<td class="num">{_fmt(r.data.get(field, 0), unit, 0 if unit == "%" else 1)}</td></tr>'
         for i, r in enumerate(rows, 1)
@@ -552,7 +552,7 @@ def api_endpoints(store: MetricsStore, stamp: str) -> list[tuple[str, str]]:
             "count": len(climates),
             "source": _SITE["origin"],
             "results": [
-                {"city": r.data.get("name"), "page": f"{_SITE['origin']}/{r.path}",
+                {"city": r.data.get("name"), "page": link(r.path),
                  "annual_mean_c": r.data.get("annual_mean"),
                  "warmest_month": r.data.get("warmest_month"),
                  "coldest_month": r.data.get("coldest_month"),
@@ -572,7 +572,7 @@ def api_endpoints(store: MetricsStore, stamp: str) -> list[tuple[str, str]]:
                 {"holiday": r.data.get("name"), "country": r.data.get("country"),
                  "local_name": r.data.get("local_name"), "date": r.data.get("date"),
                  "weekday": r.data.get("weekday"),
-                 "page": f"{_SITE['origin']}/{r.path}"}
+                 "page": link(r.path)}
                 for r in holidays
             ],
         }, indent=1)))
@@ -584,7 +584,7 @@ def api_endpoints(store: MetricsStore, stamp: str) -> list[tuple[str, str]]:
             "source": _SITE["origin"],
             "note": "high/low/latest cover the trailing 12 months",
             "results": [
-                {"asset": r.data.get("name"), "page": f"{_SITE['origin']}/{r.path}",
+                {"asset": r.data.get("name"), "page": link(r.path),
                  "high_12m": r.data.get("high"), "low_12m": r.data.get("low"),
                  "latest": r.data.get("last"),
                  "range_pct_of_low": r.data.get("range_pct"),
@@ -613,7 +613,7 @@ def api_docs(store: MetricsStore, stamp: str) -> tuple[str, str, str]:
         blocks.append(f"""
 <h2 id="{name}">{name.title()} API</h2>
 <p>{blurb} No key, no rate limit, no attribution required.</p>
-<p>Endpoint: <code>{site['origin']}/api/{name}.json</code></p>
+<p>Endpoint: <code>{link('api/' + name + '.json')}</code></p>
 <pre><code>{_esc(example)}</code></pre>""")
     body = f"""
 <h1>Data API</h1>
@@ -651,7 +651,7 @@ def widget_pages(store: MetricsStore, stamp: str) -> list[tuple[str, str, str]]:
 <table><caption>{_esc(name)} monthly averages</caption>
 <thead><tr><th>Month</th><th>Mean C</th><th>Rain mm/day</th></tr></thead>
 <tbody>{"".join(f"<tr><td>{_esc(m[0])}</td><td>{m[1]:.1f}</td><td>{m[2]:.2f}</td></tr>" for m in months)}</tbody></table>
-<p class="attrib">Data by <a href="{site['origin']}/">pSEOare</a></p>
+<p class="attrib">Data by <a href="{link('index.html')}">pSEOare</a></p>
 </div>"""
         docs.append((f"{slug}.html", _document(
             f"{name} climate widget",
@@ -666,7 +666,7 @@ def widget_pages(store: MetricsStore, stamp: str) -> list[tuple[str, str, str]]:
 {d.get('below_high_pct', 0):.1f}% below the 12-month high of {_fmt(d.get('high', 0), ' USD', 2)},
 {d.get('above_low_pct', 0):.1f}% above the low of {_fmt(d.get('low', 0), ' USD', 2)}.</p>
 {bar_chart([d.get('low', 0), d.get('last', 0), d.get('high', 0)], ['12m low', 'latest', '12m high'], title=f"{name} 365-day range", unit=" USD", colour="#7a5c2e")}
-<p class="attrib">Data by <a href="{site['origin']}/">pSEOare</a></p>
+<p class="attrib">Data by <a href="{link('index.html')}">pSEOare</a></p>
 </div>"""
         docs.append((f"widget-crypto-{row.slug}.html", _document(
             f"{name} 365-day range widget",
@@ -680,7 +680,7 @@ def embed_snippet(store: MetricsStore, stamp: str) -> tuple[str, str, str]:
     samples = []
     for row in sorted(store.climates(), key=lambda r: r.data.get("annual_mean", 0), reverse=True)[:3]:
         samples.append(
-            f'<iframe src="{site["origin"]}/widget-climate-{row.slug}.html" '
+            f'<iframe src="{link("widget-climate-" + row.slug + ".html")}" '
             f'width="100%" height="520" loading="lazy" '
             f'style="border:0" title="{_esc(row.data.get("name"))} monthly climate"></iframe>'
         )
@@ -692,7 +692,7 @@ No account, no key, no script.</p>
 <pre><code>{_esc(chr(10).join(samples))}</code></pre>
 <p>Each widget links back to its source page and carries a small attribution line.</p>
 <h2>Crypto range widget</h2>
-<pre><code>{_esc(chr(10).join(f'<iframe src="{site["origin"]}/widget-crypto-{r.slug}.html" width="100%" height="300" loading="lazy" style="border:0" title="{_esc(r.data.get("name"))} 365-day range"></iframe>' for r in store.cryptos()[:3]))}</code></pre>
+<pre><code>{_esc(chr(10).join(f'<iframe src="{link("widget-crypto-" + r.slug + ".html")}" width="100%" height="300" loading="lazy" style="border:0" title="{_esc(r.data.get("name"))} 365-day range"></iframe>' for r in store.cryptos()[:3]))}</code></pre>
 <p class="note">Widgets are rebuilt on the same schedule as the rest of the site.</p>
 """
     return "widgets.html", _document("Embeddable widgets", "Embed climate charts and crypto range widgets on your own site.", body, stamp), "widgets"
@@ -702,12 +702,30 @@ No account, no key, no script.</p>
 # shared document shell
 # ---------------------------------------------------------------------------
 
-_SITE = {"name": "pSEOare", "origin": "https://pseoare.pages.dev"}
+_SITE = {"name": "pSEOare", "origin": "https://pseoare.pages.dev", "clean": True}
 
 
-def configure(origin: str, name: str) -> None:
+def configure(origin: str, name: str, clean: bool = True) -> None:
     _SITE["origin"] = origin.rstrip("/")
     _SITE["name"] = name
+    _SITE["clean"] = clean
+
+
+def link(path: str) -> str:
+    """Absolute URL for a generated path.
+
+    The site is served with extensionless URLs, and Cloudflare 308-redirects the .html
+    form. Emitting .html here would give every internal link on every ranking,
+    comparison and widget a redirect hop, and a redirect hop is a pageview the crawler
+    may not follow.
+    """
+    clean = str(path).lstrip("/")
+    if _SITE["clean"]:
+        if clean == "index.html":
+            return f"{_SITE['origin']}/"
+        if clean.endswith(".html"):
+            clean = clean[: -len(".html")]
+    return f"{_SITE['origin']}/{clean}"
 
 
 _STYLE = """
@@ -747,7 +765,7 @@ def _document(title: str, description: str, body: str, stamp: str, bare: bool = 
         "@type": "Dataset",
         "name": title,
         "description": description,
-        "url": f"{site['origin']}/",
+        "url": link("index.html"),
         "dateModified": stamp,
         "license": "https://creativecommons.org/licenses/by/4.0/",
         "isAccessibleForFree": True,
@@ -757,7 +775,7 @@ def _document(title: str, description: str, body: str, stamp: str, bare: bool = 
         '<meta name="viewport" content="width=device-width,initial-scale=1">'
         f'<title>{_esc(title)} | {_esc(site["name"])}</title>'
         f'<meta name="description" content="{_esc(description)}">'
-        f'<link rel="canonical" href="{site["origin"]}/">'
+        '<link rel="canonical" href="' + link("index.html") + '">'
     )
     if bare:
         head += f'<style>{_STYLE}</style>'
@@ -765,6 +783,6 @@ def _document(title: str, description: str, body: str, stamp: str, bare: bool = 
         head += (
             f'<style>{_STYLE}</style>'
             f'<script type="application/ld+json">{json.dumps(payload)}</script>'
-            f'<link rel="alternate" type="application/rss+xml" href="{site["origin"]}/feed.xml">'
+            f'<link rel="alternate" type="application/rss+xml" href="{link("feed.xml")}">'
         )
     return f"<!doctype html><html lang=\"en\"><head>{head}</head><body>{body}</body></html>"

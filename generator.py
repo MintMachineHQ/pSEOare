@@ -149,7 +149,7 @@ async def run(args: argparse.Namespace) -> int:
         # charts that feed them. These are built from the metrics store rather than from
         # the pages in hand, because a run only ever collects a few hundred of ~1,700 and
         # a ranking over 300 cities is the entire point.
-        explore.configure(cfg.domain, cfg.site_name)
+        explore.configure(cfg.domain, cfg.site_name, clean=cfg.url_style == "clean")
         store = MetricsStore(cfg.paths.cache)
         for page in pages:
             store.record(page, metrics_for(page))

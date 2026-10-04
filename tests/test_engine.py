@@ -2240,3 +2240,46 @@ class TestDerivedPagesPassTheSanityGate(unittest.TestCase):
                 self.assertIn("<h1", html_doc)
                 self.assertIn("application/ld+json", html_doc)
                 self.assertIn('rel="canonical"', html_doc)
+
+
+class TestExploreLinksAreClean(unittest.TestCase):
+    """The site serves extensionless URLs and Cloudflare 308-redirects the .html form.
+    Every generated internal link therefore has to be emitted clean, or every ranking
+    row and comparison link costs a redirect hop."""
+
+    def test_link_strips_the_html_suffix(self):
+        from engine import explore
+
+        explore.configure("https://pseoare.pages.dev", "pSEOare", clean=True)
+        self.assertEqual(
+            explore.link("aba-average-monthly-temperature-rainfall.html"),
+            "https://pseoare.pages.dev/aba-average-monthly-temperature-rainfall",
+        )
+        self.assertEqual(explore.link("index.html"), "https://pseoare.pages.dev/")
+
+    def test_non_html_paths_are_untouched(self):
+        from engine import explore
+
+        explore.configure("https://pseoare.pages.dev", "pSEOare", clean=True)
+        self.assertEqual(explore.link("api/climate.json"), "https://pseoare.pages.dev/api/climate.json")
+
+    def test_generated_pages_contain_no_dot_html_links(self):
+        import tempfile as tf
+
+        from engine import explore
+
+        explore.configure("https://pseoare.pages.dev", "pSEOare", clean=True)
+        store = TestExploreSurfaces()._store(Path(tf.mkdtemp()))
+        stamp = "2026-10-04T00:00:00Z"
+        docs = (
+            explore.ranking_pages(store, stamp)
+            + explore.comparison_pages(store, stamp)
+            + [explore.today_page(store, stamp)]
+            + explore.widget_pages(store, stamp)
+            + [explore.embed_snippet(store, stamp)]
+        )
+        for name, html_doc, _kind in docs:
+            if name.endswith(".json"):
+                continue
+            with self.subTest(page=name):
+                self.assertNotIn('.html"', html_doc.replace("&quot;", '"'))
