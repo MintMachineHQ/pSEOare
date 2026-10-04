@@ -33,6 +33,7 @@ from engine.hubs import (  # noqa: E402
     load_entity_index,
     not_found_html,
     robots_txt,
+    headers_file,
     llms_txt,
     rss_feed,
     save_entity_index,
@@ -206,6 +207,7 @@ async def run(args: argparse.Namespace) -> int:
             )
             writer.write_raw("robots.txt", robots_txt(cfg))
             writer.write_raw("llms.txt", llms_txt(cfg))
+            writer.write_raw("_headers", headers_file())
             writer.write_raw("feed.xml", rss_feed(pages, cfg, stamp))
         # Without a 404 document the host answers every unknown path with the homepage
         # and a 200, which reads as an unbounded set of duplicate URLs to a crawler.

@@ -108,6 +108,7 @@ class Writer:
             "feed.xml",
             "robots.txt",
             "llms.txt",
+            "_headers",
             ".nojekyll",
         }
         keep |= extra_keep or set()

@@ -2506,3 +2506,49 @@ class TestApiEndpointSlugs(unittest.TestCase):
         _, html, _ = explore.api_docs(store, "2026-10-04T00:00:00Z")
         self.assertIn("/api/cities/city0.json", html)
         self.assertNotIn("price-by-month.json", html)
+
+
+class TestStaticDeliveryHeaders(unittest.TestCase):
+    """Everything here is a static file, so there is no Worker to rate-limit and no
+    per-request compute to protect. The available lever is caching: Pages defaults every
+    asset to max-age=0, must-revalidate, which revalidates on every hit."""
+
+    def test_headers_file_sets_caching_for_the_api_and_the_html(self):
+        from engine.hubs import headers_file
+
+        text = headers_file()
+        self.assertIn("/api/*", text)
+        self.assertIn("Cache-Control: public, max-age=3600", text)
+        self.assertIn("/*.html", text)
+        self.assertIn("must-revalidate", text)
+
+    def test_headers_survive_the_orphan_sweep(self):
+        import tempfile as tf
+
+        from engine.writer import Writer
+
+        out = Path(tf.mkdtemp())
+        w = Writer(out / "out", out / "cache")
+        w.write_raw("_headers", "x")
+        w.sync_manifest([], "2026-10-04T00:00:00Z")
+        self.assertTrue((out / "out" / "_headers").exists())
+
+    def test_crypto_endpoint_omits_an_unrecorded_monthly_series(self):
+        import json as _json
+
+        from engine import explore
+        from engine.metrics import Metrics, MetricsStore
+
+        tmp = Path(tempfile.mkdtemp())
+        store = MetricsStore(tmp)
+        store.rows["bitcoin-price-by-month.html"] = Metrics(
+            path="bitcoin-price-by-month.html", kind="crypto_12m", title="Bitcoin",
+            slug="bitcoin-price-by-month",
+            data={"name": "Bitcoin", "high": 200.0, "low": 100.0, "last": 150.0,
+                  "range_pct": 100.0, "above_low_pct": 50.0, "below_high_pct": 25.0,
+                  "months": []},
+        )
+        out = dict(explore.entity_endpoints(store, "2026-10-04T00:00:00Z"))
+        payload = _json.loads(out["api/crypto/bitcoin.json"])
+        self.assertNotIn("monthly", payload)
+        self.assertEqual(payload["range_12m"]["latest"], 150.0)

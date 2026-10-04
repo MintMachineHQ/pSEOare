@@ -480,3 +480,38 @@ def rss_feed(pages: list[Page], cfg: Config, stamp: str, limit: int = 200) -> st
   </channel>
 </rss>
 """
+
+
+def headers_file() -> str:
+    """Cloudflare Pages `_headers`, which is the only caching control this site has.
+
+    Everything is static, so there is no Worker to rate-limit and no per-request compute
+    to protect: a scrape of the API costs bandwidth, not CPU. What it does cost is an
+    origin round trip per request, and Pages defaults every asset to
+    `max-age=0, must-revalidate`, which forces revalidation on every single hit.
+
+    So the useful lever here is caching, not rate limiting. The derived data files change
+    at most once a day, because they are rebuilt once a day, so an hour is safe and an
+    edge hit avoids the origin entirely. HTML keeps a short max-age rather than a long
+    one: it changes daily and carries the ad tags, and a crawler should see the current
+    build rather than a cached copy of yesterday's.
+    """
+    return """/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+
+/api/*
+  Cache-Control: public, max-age=3600
+
+/search-index.json
+  Cache-Control: public, max-age=3600
+
+/feed-*.xml
+  Cache-Control: public, max-age=1800
+
+/*.html
+  Cache-Control: public, max-age=300, must-revalidate
+
+/assets/*
+  Cache-Control: public, max-age=86400
+"""

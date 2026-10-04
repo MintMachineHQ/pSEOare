@@ -634,7 +634,10 @@ def entity_endpoints(store: MetricsStore, stamp: str) -> list[tuple[str, str]]:
             "pct_above_low": row.data.get("above_low_pct"),
             "pct_below_high": row.data.get("below_high_pct"),
             "range_pct_of_low": row.data.get("range_pct"),
-            "monthly": row.data.get("months", []),
+            # Omitted rather than returned as an empty list: a store entry recorded
+            # before this page carried a table has no monthly series, and "monthly": []
+            # reads as "this asset has no monthly data" rather than "not recorded yet".
+            **({"monthly": row.data["months"]} if row.data.get("months") else {}),
             "updated": stamp, "source": _SITE["origin"],
         }, indent=1)))
     by_country: dict[str, list[Metrics]] = {}
