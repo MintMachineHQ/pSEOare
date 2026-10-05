@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Auckland",
+  "annual_mean_c": 15.7,
+  "warmest_month": "Feb",
+  "warmest_c": 20.4,
+  "coldest_month": "Jul",
+  "coldest_c": 11.4,
+  "seasonal_swing_c": 9.0,
+  "annual_rainfall_mm": 1012.0,
+  "wettest_month": "May",
+  "wettest_mm_per_day": 3.81,
+  "driest_month": "Nov",
+  "driest_mm_per_day": 1.74,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 19.8,
+    "rain_mm_per_day": 1.88
+   },
+   {
+    "month": "Feb",
+    "mean_c": 20.4,
+    "rain_mm_per_day": 2.27
+   },
+   {
+    "month": "Mar",
+    "mean_c": 19.1,
+    "rain_mm_per_day": 2.32
+   },
+   {
+    "month": "Apr",
+    "mean_c": 17.0,
+    "rain_mm_per_day": 2.78
+   },
+   {
+    "month": "May",
+    "mean_c": 14.7,
+    "rain_mm_per_day": 3.81
+   },
+   {
+    "month": "Jun",
+    "mean_c": 12.6,
+    "rain_mm_per_day": 3.53
+   },
+   {
+    "month": "Jul",
+    "mean_c": 11.4,
+    "rain_mm_per_day": 3.71
+   },
+   {
+    "month": "Aug",
+    "mean_c": 11.8,
+    "rain_mm_per_day": 3.22
+   },
+   {
+    "month": "Sep",
+    "mean_c": 12.9,
+    "rain_mm_per_day": 2.85
+   },
+   {
+    "month": "Oct",
+    "mean_c": 14.2,
+    "rain_mm_per_day": 2.57
+   },
+   {
+    "month": "Nov",
+    "mean_c": 16.0,
+    "rain_mm_per_day": 1.74
+   },
+   {
+    "month": "Dec",
+    "mean_c": 18.2,
+    "rain_mm_per_day": 2.6
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/auckland-average-monthly-temperature-rainfall",
+  "title": "Auckland climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-05T18:31:24.668441+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

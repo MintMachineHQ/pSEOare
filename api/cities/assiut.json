@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Assiut",
+  "annual_mean_c": 23.4,
+  "warmest_month": "Jul",
+  "warmest_c": 31.9,
+  "coldest_month": "Jan",
+  "coldest_c": 12.5,
+  "seasonal_swing_c": 19.4,
+  "annual_rainfall_mm": 2.0,
+  "wettest_month": "Jan",
+  "wettest_mm_per_day": 0.03,
+  "driest_month": "Apr",
+  "driest_mm_per_day": 0.0,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 12.5,
+    "rain_mm_per_day": 0.03
+   },
+   {
+    "month": "Feb",
+    "mean_c": 14.9,
+    "rain_mm_per_day": 0.02
+   },
+   {
+    "month": "Mar",
+    "mean_c": 19.1,
+    "rain_mm_per_day": 0.01
+   },
+   {
+    "month": "Apr",
+    "mean_c": 23.7,
+    "rain_mm_per_day": 0.0
+   },
+   {
+    "month": "May",
+    "mean_c": 28.2,
+    "rain_mm_per_day": 0.0
+   },
+   {
+    "month": "Jun",
+    "mean_c": 31.0,
+    "rain_mm_per_day": 0.0
+   },
+   {
+    "month": "Jul",
+    "mean_c": 31.9,
+    "rain_mm_per_day": 0.0
+   },
+   {
+    "month": "Aug",
+    "mean_c": 31.7,
+    "rain_mm_per_day": 0.0
+   },
+   {
+    "month": "Sep",
+    "mean_c": 29.1,
+    "rain_mm_per_day": 0.0
+   },
+   {
+    "month": "Oct",
+    "mean_c": 25.2,
+    "rain_mm_per_day": 0.0
+   },
+   {
+    "month": "Nov",
+    "mean_c": 19.3,
+    "rain_mm_per_day": 0.01
+   },
+   {
+    "month": "Dec",
+    "mean_c": 14.3,
+    "rain_mm_per_day": 0.01
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/assiut-average-monthly-temperature-rainfall",
+  "title": "Assiut climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-05T18:31:24.668441+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

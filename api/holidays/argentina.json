@@ -1,7 +1,7 @@
 {
  "answer": {
   "country": "Argentina",
-  "count": 12,
+  "count": 24,
   "holidays": [
    {
     "name": "Carnival in Argentina (2016)",
@@ -12,12 +12,28 @@
     "page": "https://pseoare.pages.dev/carnival-argentina-2016-02-08"
    },
    {
+    "name": "Christmas Day in Argentina (2016)",
+    "local_name": "Navidad",
+    "date": "2016-12-25",
+    "weekday": "Sunday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/christmas-day-argentina-2016-12-25"
+   },
+   {
     "name": "Carnival in Argentina (2017)",
     "local_name": "Carnaval",
     "date": "2017-02-27",
     "weekday": "Monday",
     "weekend": false,
     "page": "https://pseoare.pages.dev/carnival-argentina-2017-02-27"
+   },
+   {
+    "name": "Christmas Day in Argentina (2017)",
+    "local_name": "Navidad",
+    "date": "2017-12-25",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-argentina-2017-12-25"
    },
    {
     "name": "Carnival in Argentina (2018)",
@@ -28,12 +44,28 @@
     "page": "https://pseoare.pages.dev/carnival-argentina-2018-02-12"
    },
    {
+    "name": "Christmas Day in Argentina (2018)",
+    "local_name": "Navidad",
+    "date": "2018-12-25",
+    "weekday": "Tuesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-argentina-2018-12-25"
+   },
+   {
     "name": "Carnival in Argentina (2019)",
     "local_name": "Carnaval",
     "date": "2019-03-04",
     "weekday": "Monday",
     "weekend": false,
     "page": "https://pseoare.pages.dev/carnival-argentina-2019-03-04"
+   },
+   {
+    "name": "Christmas Day in Argentina (2019)",
+    "local_name": "Navidad",
+    "date": "2019-12-25",
+    "weekday": "Wednesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-argentina-2019-12-25"
    },
    {
     "name": "Carnival in Argentina (2020)",
@@ -44,12 +76,28 @@
     "page": "https://pseoare.pages.dev/carnival-argentina-2020-02-24"
    },
    {
+    "name": "Christmas Day in Argentina (2020)",
+    "local_name": "Navidad",
+    "date": "2020-12-25",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-argentina-2020-12-25"
+   },
+   {
     "name": "Carnival in Argentina (2021)",
     "local_name": "Carnaval",
     "date": "2021-02-15",
     "weekday": "Monday",
     "weekend": false,
     "page": "https://pseoare.pages.dev/carnival-argentina-2021-02-15"
+   },
+   {
+    "name": "Christmas Day in Argentina (2021)",
+    "local_name": "Navidad",
+    "date": "2021-12-25",
+    "weekday": "Saturday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/christmas-day-argentina-2021-12-25"
    },
    {
     "name": "Carnival in Argentina (2022)",
@@ -60,12 +108,28 @@
     "page": "https://pseoare.pages.dev/carnival-argentina-2022-02-28"
    },
    {
+    "name": "Christmas Day in Argentina (2022)",
+    "local_name": "Navidad",
+    "date": "2022-12-25",
+    "weekday": "Sunday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/christmas-day-argentina-2022-12-25"
+   },
+   {
     "name": "Carnival in Argentina (2023)",
     "local_name": "Carnaval",
     "date": "2023-02-20",
     "weekday": "Monday",
     "weekend": false,
     "page": "https://pseoare.pages.dev/carnival-argentina-2023-02-20"
+   },
+   {
+    "name": "Christmas Day in Argentina (2023)",
+    "local_name": "Navidad",
+    "date": "2023-12-25",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-argentina-2023-12-25"
    },
    {
     "name": "Carnival in Argentina (2024)",
@@ -76,12 +140,28 @@
     "page": "https://pseoare.pages.dev/carnival-argentina-2024-02-12"
    },
    {
+    "name": "Christmas Day in Argentina (2024)",
+    "local_name": "Navidad",
+    "date": "2024-12-25",
+    "weekday": "Wednesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-argentina-2024-12-25"
+   },
+   {
     "name": "Carnival in Argentina (2025)",
     "local_name": "Carnaval",
     "date": "2025-03-03",
     "weekday": "Monday",
     "weekend": false,
     "page": "https://pseoare.pages.dev/carnival-argentina-2025-03-03"
+   },
+   {
+    "name": "Christmas Day in Argentina (2025)",
+    "local_name": "Navidad",
+    "date": "2025-12-25",
+    "weekday": "Thursday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-argentina-2025-12-25"
    },
    {
     "name": "Carnival in Argentina (2026)",
@@ -92,12 +172,28 @@
     "page": "https://pseoare.pages.dev/carnival-argentina-2026-02-16"
    },
    {
+    "name": "Christmas Day in Argentina (2026)",
+    "local_name": "Navidad",
+    "date": "2026-12-25",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-argentina-2026-12-25"
+   },
+   {
     "name": "Carnival in Argentina (2027)",
     "local_name": "Carnaval",
     "date": "2027-02-08",
     "weekday": "Monday",
     "weekend": false,
     "page": "https://pseoare.pages.dev/carnival-argentina-2027-02-08"
+   },
+   {
+    "name": "Christmas Day in Argentina (2027)",
+    "local_name": "Navidad",
+    "date": "2027-12-25",
+    "weekday": "Saturday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/christmas-day-argentina-2027-12-25"
    }
   ]
  },
@@ -106,7 +202,7 @@
   "title": "Public holidays for Argentina",
   "site": "https://pseoare.pages.dev"
  },
- "updated": "2026-10-05T11:28:32.022369+00:00",
+ "updated": "2026-10-05T18:31:24.668441+00:00",
  "license": "CC-BY-4.0",
  "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
 }

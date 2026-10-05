@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Bagcilar",
+  "annual_mean_c": 15.2,
+  "warmest_month": "Aug",
+  "warmest_c": 25.5,
+  "coldest_month": "Jan",
+  "coldest_c": 5.8,
+  "seasonal_swing_c": 19.7,
+  "annual_rainfall_mm": 625.0,
+  "wettest_month": "Dec",
+  "wettest_mm_per_day": 2.65,
+  "driest_month": "Jul",
+  "driest_mm_per_day": 0.64,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 5.8,
+    "rain_mm_per_day": 2.55
+   },
+   {
+    "month": "Feb",
+    "mean_c": 6.5,
+    "rain_mm_per_day": 2.41
+   },
+   {
+    "month": "Mar",
+    "mean_c": 8.6,
+    "rain_mm_per_day": 1.72
+   },
+   {
+    "month": "Apr",
+    "mean_c": 12.1,
+    "rain_mm_per_day": 1.39
+   },
+   {
+    "month": "May",
+    "mean_c": 17.4,
+    "rain_mm_per_day": 1.14
+   },
+   {
+    "month": "Jun",
+    "mean_c": 22.3,
+    "rain_mm_per_day": 1.2
+   },
+   {
+    "month": "Jul",
+    "mean_c": 25.1,
+    "rain_mm_per_day": 0.64
+   },
+   {
+    "month": "Aug",
+    "mean_c": 25.5,
+    "rain_mm_per_day": 0.71
+   },
+   {
+    "month": "Sep",
+    "mean_c": 21.9,
+    "rain_mm_per_day": 1.81
+   },
+   {
+    "month": "Oct",
+    "mean_c": 16.9,
+    "rain_mm_per_day": 2.25
+   },
+   {
+    "month": "Nov",
+    "mean_c": 12.3,
+    "rain_mm_per_day": 2.09
+   },
+   {
+    "month": "Dec",
+    "mean_c": 7.8,
+    "rain_mm_per_day": 2.65
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/bagcilar-average-monthly-temperature-rainfall",
+  "title": "Bagcilar climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-05T18:31:24.668441+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

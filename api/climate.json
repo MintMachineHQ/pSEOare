@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-05T11:28:32.022369+00:00",
- "count": 75,
+ "updated": "2026-10-05T18:31:24.668441+00:00",
+ "count": 105,
  "source": "https://pseoare.pages.dev",
  "results": [
   {
@@ -752,6 +752,306 @@
    "swing_c": 18.8,
    "annual_rainfall_mm": 41.0,
    "wettest_month": "Nov"
+  },
+  {
+   "city": "Aracaju",
+   "page": "https://pseoare.pages.dev/aracaju-average-monthly-temperature-rainfall",
+   "annual_mean_c": 26.3,
+   "warmest_month": "Mar",
+   "coldest_month": "Aug",
+   "swing_c": 2.9,
+   "annual_rainfall_mm": 1040.0,
+   "wettest_month": "May"
+  },
+  {
+   "city": "Arak",
+   "page": "https://pseoare.pages.dev/arak-average-monthly-temperature-rainfall",
+   "annual_mean_c": 12.3,
+   "warmest_month": "Jul",
+   "coldest_month": "Jan",
+   "swing_c": 26.9,
+   "annual_rainfall_mm": 220.0,
+   "wettest_month": "Apr"
+  },
+  {
+   "city": "Ardabil",
+   "page": "https://pseoare.pages.dev/ardabil-average-monthly-temperature-rainfall",
+   "annual_mean_c": 9.6,
+   "warmest_month": "Jul",
+   "coldest_month": "Jan",
+   "swing_c": 23.3,
+   "annual_rainfall_mm": 421.0,
+   "wettest_month": "Oct"
+  },
+  {
+   "city": "Arequipa",
+   "page": "https://pseoare.pages.dev/arequipa-average-monthly-temperature-rainfall",
+   "annual_mean_c": 11.0,
+   "warmest_month": "Nov",
+   "coldest_month": "Jul",
+   "swing_c": 2.7,
+   "annual_rainfall_mm": 150.0,
+   "wettest_month": "Feb"
+  },
+  {
+   "city": "Arhus",
+   "page": "https://pseoare.pages.dev/arhus-average-monthly-temperature-rainfall",
+   "annual_mean_c": 8.5,
+   "warmest_month": "Jul",
+   "coldest_month": "Feb",
+   "swing_c": 16.1,
+   "annual_rainfall_mm": 795.0,
+   "wettest_month": "Aug"
+  },
+  {
+   "city": "Arifwala",
+   "page": "https://pseoare.pages.dev/arifwala-average-monthly-temperature-rainfall",
+   "annual_mean_c": 27.1,
+   "warmest_month": "Jun",
+   "coldest_month": "Jan",
+   "swing_c": 24.4,
+   "annual_rainfall_mm": 292.0,
+   "wettest_month": "Jul"
+  },
+  {
+   "city": "Armenia",
+   "page": "https://pseoare.pages.dev/armenia-average-monthly-temperature-rainfall",
+   "annual_mean_c": 15.1,
+   "warmest_month": "Feb",
+   "coldest_month": "Jul",
+   "swing_c": 1.1,
+   "annual_rainfall_mm": 1630.0,
+   "wettest_month": "Apr"
+  },
+  {
+   "city": "Arusha",
+   "page": "https://pseoare.pages.dev/arusha-average-monthly-temperature-rainfall",
+   "annual_mean_c": 21.8,
+   "warmest_month": "Feb",
+   "coldest_month": "Jul",
+   "swing_c": 4.9,
+   "annual_rainfall_mm": 870.0,
+   "wettest_month": "Apr"
+  },
+  {
+   "city": "Ashgabat",
+   "page": "https://pseoare.pages.dev/ashgabat-average-monthly-temperature-rainfall",
+   "annual_mean_c": 15.4,
+   "warmest_month": "Jul",
+   "coldest_month": "Jan",
+   "swing_c": 25.8,
+   "annual_rainfall_mm": 196.0,
+   "wettest_month": "Mar"
+  },
+  {
+   "city": "Asmara",
+   "page": "https://pseoare.pages.dev/asmara-average-monthly-temperature-rainfall",
+   "annual_mean_c": 22.9,
+   "warmest_month": "Jun",
+   "coldest_month": "Jan",
+   "swing_c": 7.0,
+   "annual_rainfall_mm": 411.0,
+   "wettest_month": "Aug"
+  },
+  {
+   "city": "Assiut",
+   "page": "https://pseoare.pages.dev/assiut-average-monthly-temperature-rainfall",
+   "annual_mean_c": 23.4,
+   "warmest_month": "Jul",
+   "coldest_month": "Jan",
+   "swing_c": 19.4,
+   "annual_rainfall_mm": 2.0,
+   "wettest_month": "Jan"
+  },
+  {
+   "city": "Astana",
+   "page": "https://pseoare.pages.dev/astana-average-monthly-temperature-rainfall",
+   "annual_mean_c": 3.3,
+   "warmest_month": "Jul",
+   "coldest_month": "Jan",
+   "swing_c": 37.6,
+   "annual_rainfall_mm": 369.0,
+   "wettest_month": "Jul"
+  },
+  {
+   "city": "Asuncion",
+   "page": "https://pseoare.pages.dev/asuncion-average-monthly-temperature-rainfall",
+   "annual_mean_c": 22.8,
+   "warmest_month": "Jan",
+   "coldest_month": "Jul",
+   "swing_c": 12.1,
+   "annual_rainfall_mm": 1475.0,
+   "wettest_month": "Nov"
+  },
+  {
+   "city": "Aswan",
+   "page": "https://pseoare.pages.dev/aswan-average-monthly-temperature-rainfall",
+   "annual_mean_c": 26.1,
+   "warmest_month": "Aug",
+   "coldest_month": "Jan",
+   "swing_c": 19.1,
+   "annual_rainfall_mm": 1.0,
+   "wettest_month": "Jan"
+  },
+  {
+   "city": "Athens",
+   "page": "https://pseoare.pages.dev/athens-average-monthly-temperature-rainfall",
+   "annual_mean_c": 17.9,
+   "warmest_month": "Jul",
+   "coldest_month": "Jan",
+   "swing_c": 18.3,
+   "annual_rainfall_mm": 501.0,
+   "wettest_month": "Dec"
+  },
+  {
+   "city": "Atyrau",
+   "page": "https://pseoare.pages.dev/atyrau-average-monthly-temperature-rainfall",
+   "annual_mean_c": 10.6,
+   "warmest_month": "Jul",
+   "coldest_month": "Jan",
+   "swing_c": 35.3,
+   "annual_rainfall_mm": 195.0,
+   "wettest_month": "May"
+  },
+  {
+   "city": "Auckland",
+   "page": "https://pseoare.pages.dev/auckland-average-monthly-temperature-rainfall",
+   "annual_mean_c": 15.7,
+   "warmest_month": "Feb",
+   "coldest_month": "Jul",
+   "swing_c": 9.0,
+   "annual_rainfall_mm": 1012.0,
+   "wettest_month": "May"
+  },
+  {
+   "city": "Augsburg",
+   "page": "https://pseoare.pages.dev/augsburg-average-monthly-temperature-rainfall",
+   "annual_mean_c": 9.0,
+   "warmest_month": "Jul",
+   "coldest_month": "Jan",
+   "swing_c": 19.8,
+   "annual_rainfall_mm": 789.0,
+   "wettest_month": "Jul"
+  },
+  {
+   "city": "Austin",
+   "page": "https://pseoare.pages.dev/austin-average-monthly-temperature-rainfall",
+   "annual_mean_c": 20.2,
+   "warmest_month": "Aug",
+   "coldest_month": "Jan",
+   "swing_c": 20.8,
+   "annual_rainfall_mm": 837.0,
+   "wettest_month": "May"
+  },
+  {
+   "city": "Avellaneda",
+   "page": "https://pseoare.pages.dev/avellaneda-average-monthly-temperature-rainfall",
+   "annual_mean_c": 18.0,
+   "warmest_month": "Jan",
+   "coldest_month": "Jul",
+   "swing_c": 13.7,
+   "annual_rainfall_mm": 1104.0,
+   "wettest_month": "Feb"
+  },
+  {
+   "city": "Awasa",
+   "page": "https://pseoare.pages.dev/awasa-average-monthly-temperature-rainfall",
+   "annual_mean_c": 15.7,
+   "warmest_month": "Mar",
+   "coldest_month": "Jul",
+   "swing_c": 3.3,
+   "annual_rainfall_mm": 1427.0,
+   "wettest_month": "Apr"
+  },
+  {
+   "city": "Bab Ezzouar",
+   "page": "https://pseoare.pages.dev/bab-ezzouar-average-monthly-temperature-rainfall",
+   "annual_mean_c": 17.5,
+   "warmest_month": "Jul",
+   "coldest_month": "Jan",
+   "swing_c": 18.2,
+   "annual_rainfall_mm": 643.0,
+   "wettest_month": "Nov"
+  },
+  {
+   "city": "Bac Giang",
+   "page": "https://pseoare.pages.dev/bac-giang-average-monthly-temperature-rainfall",
+   "annual_mean_c": 22.6,
+   "warmest_month": "Jun",
+   "coldest_month": "Jan",
+   "swing_c": 13.1,
+   "annual_rainfall_mm": 1539.0,
+   "wettest_month": "Aug"
+  },
+  {
+   "city": "Bac Tu Liem",
+   "page": "https://pseoare.pages.dev/bac-tu-liem-average-monthly-temperature-rainfall",
+   "annual_mean_c": 23.3,
+   "warmest_month": "Jun",
+   "coldest_month": "Jan",
+   "swing_c": 13.1,
+   "annual_rainfall_mm": 1595.0,
+   "wettest_month": "Aug"
+  },
+  {
+   "city": "Bacolod City",
+   "page": "https://pseoare.pages.dev/bacolod-city-average-monthly-temperature-rainfall",
+   "annual_mean_c": 25.2,
+   "warmest_month": "May",
+   "coldest_month": "Jan",
+   "swing_c": 3.3,
+   "annual_rainfall_mm": 2240.0,
+   "wettest_month": "Jul"
+  },
+  {
+   "city": "Bafoussam",
+   "page": "https://pseoare.pages.dev/bafoussam-average-monthly-temperature-rainfall",
+   "annual_mean_c": 20.9,
+   "warmest_month": "Mar",
+   "coldest_month": "Aug",
+   "swing_c": 2.1,
+   "annual_rainfall_mm": 1963.0,
+   "wettest_month": "Aug"
+  },
+  {
+   "city": "Bagcilar",
+   "page": "https://pseoare.pages.dev/bagcilar-average-monthly-temperature-rainfall",
+   "annual_mean_c": 15.2,
+   "warmest_month": "Aug",
+   "coldest_month": "Jan",
+   "swing_c": 19.7,
+   "annual_rainfall_mm": 625.0,
+   "wettest_month": "Dec"
+  },
+  {
+   "city": "Bagerhat",
+   "page": "https://pseoare.pages.dev/bagerhat-average-monthly-temperature-rainfall",
+   "annual_mean_c": 25.7,
+   "warmest_month": "Apr",
+   "coldest_month": "Jan",
+   "swing_c": 12.0,
+   "annual_rainfall_mm": 2322.0,
+   "wettest_month": "Jul"
+  },
+  {
+   "city": "Baghdad",
+   "page": "https://pseoare.pages.dev/baghdad-average-monthly-temperature-rainfall",
+   "annual_mean_c": 23.9,
+   "warmest_month": "Jul",
+   "coldest_month": "Jan",
+   "swing_c": 28.1,
+   "annual_rainfall_mm": 202.0,
+   "wettest_month": "Jan"
+  },
+  {
+   "city": "Bahawalpur",
+   "page": "https://pseoare.pages.dev/bahawalpur-average-monthly-temperature-rainfall",
+   "annual_mean_c": 27.7,
+   "warmest_month": "Jun",
+   "coldest_month": "Jan",
+   "swing_c": 24.2,
+   "annual_rainfall_mm": 185.0,
+   "wettest_month": "Jul"
   }
  ]
 }

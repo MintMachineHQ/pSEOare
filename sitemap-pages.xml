@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://pseoare.pages.dev/</loc><lastmod>2026-10-05</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/all-datasets-2</loc><lastmod>2026-10-05</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://pseoare.pages.dev/api</loc><lastmod>2026-10-05</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://pseoare.pages.dev/feed-climate.xml</loc><lastmod>2026-10-05</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://pseoare.pages.dev/feed-crypto.xml</loc><lastmod>2026-10-05</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>

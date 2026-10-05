@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Aswan",
+  "annual_mean_c": 26.1,
+  "warmest_month": "Aug",
+  "warmest_c": 34.2,
+  "coldest_month": "Jan",
+  "coldest_c": 15.1,
+  "seasonal_swing_c": 19.1,
+  "annual_rainfall_mm": 1.0,
+  "wettest_month": "Jan",
+  "wettest_mm_per_day": 0.01,
+  "driest_month": "Feb",
+  "driest_mm_per_day": 0.0,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 15.1,
+    "rain_mm_per_day": 0.01
+   },
+   {
+    "month": "Feb",
+    "mean_c": 17.8,
+    "rain_mm_per_day": 0.0
+   },
+   {
+    "month": "Mar",
+    "mean_c": 22.0,
+    "rain_mm_per_day": 0.0
+   },
+   {
+    "month": "Apr",
+    "mean_c": 26.7,
+    "rain_mm_per_day": 0.01
+   },
+   {
+    "month": "May",
+    "mean_c": 31.1,
+    "rain_mm_per_day": 0.01
+   },
+   {
+    "month": "Jun",
+    "mean_c": 33.4,
+    "rain_mm_per_day": 0.0
+   },
+   {
+    "month": "Jul",
+    "mean_c": 34.0,
+    "rain_mm_per_day": 0.0
+   },
+   {
+    "month": "Aug",
+    "mean_c": 34.2,
+    "rain_mm_per_day": 0.0
+   },
+   {
+    "month": "Sep",
+    "mean_c": 31.9,
+    "rain_mm_per_day": 0.0
+   },
+   {
+    "month": "Oct",
+    "mean_c": 28.4,
+    "rain_mm_per_day": 0.0
+   },
+   {
+    "month": "Nov",
+    "mean_c": 21.8,
+    "rain_mm_per_day": 0.0
+   },
+   {
+    "month": "Dec",
+    "mean_c": 16.8,
+    "rain_mm_per_day": 0.0
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/aswan-average-monthly-temperature-rainfall",
+  "title": "Aswan climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-05T18:31:24.668441+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

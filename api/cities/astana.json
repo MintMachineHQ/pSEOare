@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Astana",
+  "annual_mean_c": 3.3,
+  "warmest_month": "Jul",
+  "warmest_c": 20.7,
+  "coldest_month": "Jan",
+  "coldest_c": -16.9,
+  "seasonal_swing_c": 37.6,
+  "annual_rainfall_mm": 369.0,
+  "wettest_month": "Jul",
+  "wettest_mm_per_day": 1.77,
+  "driest_month": "Jan",
+  "driest_mm_per_day": 0.66,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": -16.9,
+    "rain_mm_per_day": 0.66
+   },
+   {
+    "month": "Feb",
+    "mean_c": -14.3,
+    "rain_mm_per_day": 0.72
+   },
+   {
+    "month": "Mar",
+    "mean_c": -5.7,
+    "rain_mm_per_day": 0.86
+   },
+   {
+    "month": "Apr",
+    "mean_c": 5.9,
+    "rain_mm_per_day": 0.96
+   },
+   {
+    "month": "May",
+    "mean_c": 13.9,
+    "rain_mm_per_day": 1.13
+   },
+   {
+    "month": "Jun",
+    "mean_c": 19.3,
+    "rain_mm_per_day": 1.37
+   },
+   {
+    "month": "Jul",
+    "mean_c": 20.7,
+    "rain_mm_per_day": 1.77
+   },
+   {
+    "month": "Aug",
+    "mean_c": 19.3,
+    "rain_mm_per_day": 0.91
+   },
+   {
+    "month": "Sep",
+    "mean_c": 12.3,
+    "rain_mm_per_day": 0.71
+   },
+   {
+    "month": "Oct",
+    "mean_c": 3.6,
+    "rain_mm_per_day": 1.06
+   },
+   {
+    "month": "Nov",
+    "mean_c": -5.8,
+    "rain_mm_per_day": 1.13
+   },
+   {
+    "month": "Dec",
+    "mean_c": -14.1,
+    "rain_mm_per_day": 0.87
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/astana-average-monthly-temperature-rainfall",
+  "title": "Astana climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-05T18:31:24.668441+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

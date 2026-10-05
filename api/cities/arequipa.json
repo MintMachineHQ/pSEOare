@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Arequipa",
+  "annual_mean_c": 11.0,
+  "warmest_month": "Nov",
+  "warmest_c": 12.1,
+  "coldest_month": "Jul",
+  "coldest_c": 9.4,
+  "seasonal_swing_c": 2.7,
+  "annual_rainfall_mm": 150.0,
+  "wettest_month": "Feb",
+  "wettest_mm_per_day": 1.66,
+  "driest_month": "Jun",
+  "driest_mm_per_day": 0.01,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 11.6,
+    "rain_mm_per_day": 1.12
+   },
+   {
+    "month": "Feb",
+    "mean_c": 11.5,
+    "rain_mm_per_day": 1.66
+   },
+   {
+    "month": "Mar",
+    "mean_c": 11.6,
+    "rain_mm_per_day": 0.8
+   },
+   {
+    "month": "Apr",
+    "mean_c": 11.4,
+    "rain_mm_per_day": 0.21
+   },
+   {
+    "month": "May",
+    "mean_c": 10.1,
+    "rain_mm_per_day": 0.07
+   },
+   {
+    "month": "Jun",
+    "mean_c": 9.7,
+    "rain_mm_per_day": 0.01
+   },
+   {
+    "month": "Jul",
+    "mean_c": 9.4,
+    "rain_mm_per_day": 0.06
+   },
+   {
+    "month": "Aug",
+    "mean_c": 10.2,
+    "rain_mm_per_day": 0.03
+   },
+   {
+    "month": "Sep",
+    "mean_c": 11.1,
+    "rain_mm_per_day": 0.11
+   },
+   {
+    "month": "Oct",
+    "mean_c": 11.8,
+    "rain_mm_per_day": 0.23
+   },
+   {
+    "month": "Nov",
+    "mean_c": 12.1,
+    "rain_mm_per_day": 0.12
+   },
+   {
+    "month": "Dec",
+    "mean_c": 11.8,
+    "rain_mm_per_day": 0.52
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/arequipa-average-monthly-temperature-rainfall",
+  "title": "Arequipa climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-05T18:31:24.668441+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Arifwala",
+  "annual_mean_c": 27.1,
+  "warmest_month": "Jun",
+  "warmest_c": 37.8,
+  "coldest_month": "Jan",
+  "coldest_c": 13.4,
+  "seasonal_swing_c": 24.4,
+  "annual_rainfall_mm": 292.0,
+  "wettest_month": "Jul",
+  "wettest_mm_per_day": 2.01,
+  "driest_month": "Oct",
+  "driest_mm_per_day": 0.12,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 13.4,
+    "rain_mm_per_day": 0.28
+   },
+   {
+    "month": "Feb",
+    "mean_c": 16.8,
+    "rain_mm_per_day": 0.5
+   },
+   {
+    "month": "Mar",
+    "mean_c": 23.1,
+    "rain_mm_per_day": 0.8
+   },
+   {
+    "month": "Apr",
+    "mean_c": 29.7,
+    "rain_mm_per_day": 0.44
+   },
+   {
+    "month": "May",
+    "mean_c": 35.5,
+    "rain_mm_per_day": 0.43
+   },
+   {
+    "month": "Jun",
+    "mean_c": 37.8,
+    "rain_mm_per_day": 1.26
+   },
+   {
+    "month": "Jul",
+    "mean_c": 36.7,
+    "rain_mm_per_day": 2.01
+   },
+   {
+    "month": "Aug",
+    "mean_c": 35.3,
+    "rain_mm_per_day": 1.37
+   },
+   {
+    "month": "Sep",
+    "mean_c": 32.4,
+    "rain_mm_per_day": 1.44
+   },
+   {
+    "month": "Oct",
+    "mean_c": 27.7,
+    "rain_mm_per_day": 0.12
+   },
+   {
+    "month": "Nov",
+    "mean_c": 21.0,
+    "rain_mm_per_day": 0.76
+   },
+   {
+    "month": "Dec",
+    "mean_c": 15.4,
+    "rain_mm_per_day": 0.21
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/arifwala-average-monthly-temperature-rainfall",
+  "title": "Arifwala climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-05T18:31:24.668441+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Arusha",
+  "annual_mean_c": 21.8,
+  "warmest_month": "Feb",
+  "warmest_c": 24.0,
+  "coldest_month": "Jul",
+  "coldest_c": 19.1,
+  "seasonal_swing_c": 4.9,
+  "annual_rainfall_mm": 870.0,
+  "wettest_month": "Apr",
+  "wettest_mm_per_day": 4.9,
+  "driest_month": "Jul",
+  "driest_mm_per_day": 0.28,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 23.6,
+    "rain_mm_per_day": 2.83
+   },
+   {
+    "month": "Feb",
+    "mean_c": 24.0,
+    "rain_mm_per_day": 2.59
+   },
+   {
+    "month": "Mar",
+    "mean_c": 23.4,
+    "rain_mm_per_day": 3.38
+   },
+   {
+    "month": "Apr",
+    "mean_c": 21.9,
+    "rain_mm_per_day": 4.9
+   },
+   {
+    "month": "May",
+    "mean_c": 20.3,
+    "rain_mm_per_day": 2.9
+   },
+   {
+    "month": "Jun",
+    "mean_c": 19.2,
+    "rain_mm_per_day": 0.6
+   },
+   {
+    "month": "Jul",
+    "mean_c": 19.1,
+    "rain_mm_per_day": 0.28
+   },
+   {
+    "month": "Aug",
+    "mean_c": 20.1,
+    "rain_mm_per_day": 0.44
+   },
+   {
+    "month": "Sep",
+    "mean_c": 21.7,
+    "rain_mm_per_day": 0.57
+   },
+   {
+    "month": "Oct",
+    "mean_c": 22.6,
+    "rain_mm_per_day": 2.13
+   },
+   {
+    "month": "Nov",
+    "mean_c": 22.8,
+    "rain_mm_per_day": 4.44
+   },
+   {
+    "month": "Dec",
+    "mean_c": 23.2,
+    "rain_mm_per_day": 3.55
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/arusha-average-monthly-temperature-rainfall",
+  "title": "Arusha climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-05T18:31:24.668441+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

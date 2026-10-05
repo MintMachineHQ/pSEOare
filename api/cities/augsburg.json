@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Augsburg",
+  "annual_mean_c": 9.0,
+  "warmest_month": "Jul",
+  "warmest_c": 18.8,
+  "coldest_month": "Jan",
+  "coldest_c": -1.0,
+  "seasonal_swing_c": 19.8,
+  "annual_rainfall_mm": 789.0,
+  "wettest_month": "Jul",
+  "wettest_mm_per_day": 3.2,
+  "driest_month": "Feb",
+  "driest_mm_per_day": 1.46,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": -1.0,
+    "rain_mm_per_day": 1.81
+   },
+   {
+    "month": "Feb",
+    "mean_c": 0.1,
+    "rain_mm_per_day": 1.46
+   },
+   {
+    "month": "Mar",
+    "mean_c": 4.2,
+    "rain_mm_per_day": 1.57
+   },
+   {
+    "month": "Apr",
+    "mean_c": 9.1,
+    "rain_mm_per_day": 1.62
+   },
+   {
+    "month": "May",
+    "mean_c": 13.3,
+    "rain_mm_per_day": 3.01
+   },
+   {
+    "month": "Jun",
+    "mean_c": 17.2,
+    "rain_mm_per_day": 2.92
+   },
+   {
+    "month": "Jul",
+    "mean_c": 18.8,
+    "rain_mm_per_day": 3.2
+   },
+   {
+    "month": "Aug",
+    "mean_c": 18.3,
+    "rain_mm_per_day": 3.06
+   },
+   {
+    "month": "Sep",
+    "mean_c": 13.9,
+    "rain_mm_per_day": 2.01
+   },
+   {
+    "month": "Oct",
+    "mean_c": 9.3,
+    "rain_mm_per_day": 1.81
+   },
+   {
+    "month": "Nov",
+    "mean_c": 3.9,
+    "rain_mm_per_day": 1.72
+   },
+   {
+    "month": "Dec",
+    "mean_c": 0.1,
+    "rain_mm_per_day": 1.75
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/augsburg-average-monthly-temperature-rainfall",
+  "title": "Augsburg climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-05T18:31:24.668441+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

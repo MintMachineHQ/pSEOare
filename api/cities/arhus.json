@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Arhus",
+  "annual_mean_c": 8.5,
+  "warmest_month": "Jul",
+  "warmest_c": 16.9,
+  "coldest_month": "Feb",
+  "coldest_c": 0.8,
+  "seasonal_swing_c": 16.1,
+  "annual_rainfall_mm": 795.0,
+  "wettest_month": "Aug",
+  "wettest_mm_per_day": 2.78,
+  "driest_month": "Apr",
+  "driest_mm_per_day": 1.45,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 0.9,
+    "rain_mm_per_day": 2.09
+   },
+   {
+    "month": "Feb",
+    "mean_c": 0.8,
+    "rain_mm_per_day": 1.83
+   },
+   {
+    "month": "Mar",
+    "mean_c": 2.7,
+    "rain_mm_per_day": 1.53
+   },
+   {
+    "month": "Apr",
+    "mean_c": 6.7,
+    "rain_mm_per_day": 1.45
+   },
+   {
+    "month": "May",
+    "mean_c": 11.2,
+    "rain_mm_per_day": 1.76
+   },
+   {
+    "month": "Jun",
+    "mean_c": 14.6,
+    "rain_mm_per_day": 2.44
+   },
+   {
+    "month": "Jul",
+    "mean_c": 16.9,
+    "rain_mm_per_day": 2.64
+   },
+   {
+    "month": "Aug",
+    "mean_c": 16.7,
+    "rain_mm_per_day": 2.78
+   },
+   {
+    "month": "Sep",
+    "mean_c": 13.6,
+    "rain_mm_per_day": 2.29
+   },
+   {
+    "month": "Oct",
+    "mean_c": 9.4,
+    "rain_mm_per_day": 2.74
+   },
+   {
+    "month": "Nov",
+    "mean_c": 5.5,
+    "rain_mm_per_day": 2.43
+   },
+   {
+    "month": "Dec",
+    "mean_c": 2.5,
+    "rain_mm_per_day": 2.17
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/arhus-average-monthly-temperature-rainfall",
+  "title": "Arhus climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-05T18:31:24.668441+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Armenia",
+  "annual_mean_c": 15.1,
+  "warmest_month": "Feb",
+  "warmest_c": 15.6,
+  "coldest_month": "Jul",
+  "coldest_c": 14.5,
+  "seasonal_swing_c": 1.1,
+  "annual_rainfall_mm": 1630.0,
+  "wettest_month": "Apr",
+  "wettest_mm_per_day": 6.42,
+  "driest_month": "Jan",
+  "driest_mm_per_day": 2.8,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 15.3,
+    "rain_mm_per_day": 2.8
+   },
+   {
+    "month": "Feb",
+    "mean_c": 15.6,
+    "rain_mm_per_day": 3.69
+   },
+   {
+    "month": "Mar",
+    "mean_c": 15.6,
+    "rain_mm_per_day": 4.67
+   },
+   {
+    "month": "Apr",
+    "mean_c": 15.5,
+    "rain_mm_per_day": 6.42
+   },
+   {
+    "month": "May",
+    "mean_c": 15.3,
+    "rain_mm_per_day": 5.43
+   },
+   {
+    "month": "Jun",
+    "mean_c": 14.6,
+    "rain_mm_per_day": 3.77
+   },
+   {
+    "month": "Jul",
+    "mean_c": 14.5,
+    "rain_mm_per_day": 2.89
+   },
+   {
+    "month": "Aug",
+    "mean_c": 14.8,
+    "rain_mm_per_day": 2.95
+   },
+   {
+    "month": "Sep",
+    "mean_c": 15.0,
+    "rain_mm_per_day": 3.65
+   },
+   {
+    "month": "Oct",
+    "mean_c": 15.0,
+    "rain_mm_per_day": 6.27
+   },
+   {
+    "month": "Nov",
+    "mean_c": 15.0,
+    "rain_mm_per_day": 6.36
+   },
+   {
+    "month": "Dec",
+    "mean_c": 15.1,
+    "rain_mm_per_day": 4.71
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/armenia-average-monthly-temperature-rainfall",
+  "title": "Armenia climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-05T18:31:24.668441+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

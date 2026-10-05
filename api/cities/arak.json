@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Arak",
+  "annual_mean_c": 12.3,
+  "warmest_month": "Jul",
+  "warmest_c": 26.0,
+  "coldest_month": "Jan",
+  "coldest_c": -0.9,
+  "seasonal_swing_c": 26.9,
+  "annual_rainfall_mm": 220.0,
+  "wettest_month": "Apr",
+  "wettest_mm_per_day": 1.38,
+  "driest_month": "Aug",
+  "driest_mm_per_day": 0.02,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": -0.9,
+    "rain_mm_per_day": 0.88
+   },
+   {
+    "month": "Feb",
+    "mean_c": 1.0,
+    "rain_mm_per_day": 0.77
+   },
+   {
+    "month": "Mar",
+    "mean_c": 5.6,
+    "rain_mm_per_day": 1.11
+   },
+   {
+    "month": "Apr",
+    "mean_c": 10.4,
+    "rain_mm_per_day": 1.38
+   },
+   {
+    "month": "May",
+    "mean_c": 16.4,
+    "rain_mm_per_day": 0.49
+   },
+   {
+    "month": "Jun",
+    "mean_c": 22.8,
+    "rain_mm_per_day": 0.28
+   },
+   {
+    "month": "Jul",
+    "mean_c": 26.0,
+    "rain_mm_per_day": 0.03
+   },
+   {
+    "month": "Aug",
+    "mean_c": 24.8,
+    "rain_mm_per_day": 0.02
+   },
+   {
+    "month": "Sep",
+    "mean_c": 20.5,
+    "rain_mm_per_day": 0.03
+   },
+   {
+    "month": "Oct",
+    "mean_c": 13.9,
+    "rain_mm_per_day": 0.45
+   },
+   {
+    "month": "Nov",
+    "mean_c": 5.3,
+    "rain_mm_per_day": 0.91
+   },
+   {
+    "month": "Dec",
+    "mean_c": 0.9,
+    "rain_mm_per_day": 0.9
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/arak-average-monthly-temperature-rainfall",
+  "title": "Arak climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-05T18:31:24.668441+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

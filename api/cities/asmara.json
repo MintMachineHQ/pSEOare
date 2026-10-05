@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Asmara",
+  "annual_mean_c": 22.9,
+  "warmest_month": "Jun",
+  "warmest_c": 26.5,
+  "coldest_month": "Jan",
+  "coldest_c": 19.5,
+  "seasonal_swing_c": 7.0,
+  "annual_rainfall_mm": 411.0,
+  "wettest_month": "Aug",
+  "wettest_mm_per_day": 4.66,
+  "driest_month": "Jan",
+  "driest_mm_per_day": 0.12,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 19.5,
+    "rain_mm_per_day": 0.12
+   },
+   {
+    "month": "Feb",
+    "mean_c": 20.9,
+    "rain_mm_per_day": 0.27
+   },
+   {
+    "month": "Mar",
+    "mean_c": 22.8,
+    "rain_mm_per_day": 0.22
+   },
+   {
+    "month": "Apr",
+    "mean_c": 24.8,
+    "rain_mm_per_day": 0.88
+   },
+   {
+    "month": "May",
+    "mean_c": 26.4,
+    "rain_mm_per_day": 0.59
+   },
+   {
+    "month": "Jun",
+    "mean_c": 26.5,
+    "rain_mm_per_day": 1.11
+   },
+   {
+    "month": "Jul",
+    "mean_c": 23.7,
+    "rain_mm_per_day": 4.04
+   },
+   {
+    "month": "Aug",
+    "mean_c": 22.8,
+    "rain_mm_per_day": 4.66
+   },
+   {
+    "month": "Sep",
+    "mean_c": 23.9,
+    "rain_mm_per_day": 1.02
+   },
+   {
+    "month": "Oct",
+    "mean_c": 22.4,
+    "rain_mm_per_day": 0.26
+   },
+   {
+    "month": "Nov",
+    "mean_c": 21.0,
+    "rain_mm_per_day": 0.21
+   },
+   {
+    "month": "Dec",
+    "mean_c": 19.6,
+    "rain_mm_per_day": 0.13
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/asmara-average-monthly-temperature-rainfall",
+  "title": "Asmara climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-05T18:31:24.668441+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-05T11:28:32.022369+00:00",
- "count": 75,
+ "updated": "2026-10-05T18:31:24.668441+00:00",
+ "count": 105,
  "source": "https://pseoare.pages.dev",
  "note": "figures are World Bank indicators; country rows carry only the indicators present in the source release",
  "results": [
@@ -524,6 +524,213 @@
    "population": 33787914.0,
    "gdp_per_capita": 2384.0,
    "surface_area": 238540.0
+  },
+  {
+   "country": "Gibraltar",
+   "page": "https://pseoare.pages.dev/gibraltar-country-data",
+   "population": 38471.0,
+   "surface_area": 10.0
+  },
+  {
+   "country": "Greece",
+   "page": "https://pseoare.pages.dev/greece-country-data",
+   "population": 10407351.0,
+   "gdp_per_capita": 23344.0,
+   "surface_area": 131960.0
+  },
+  {
+   "country": "Greenland",
+   "page": "https://pseoare.pages.dev/greenland-country-data",
+   "population": 56865.0,
+   "gdp_per_capita": 58499.0,
+   "surface_area": 410450.0
+  },
+  {
+   "country": "Grenada",
+   "page": "https://pseoare.pages.dev/grenada-country-data",
+   "population": 117081.0,
+   "gdp_per_capita": 11414.0,
+   "surface_area": 340.0
+  },
+  {
+   "country": "Guam",
+   "page": "https://pseoare.pages.dev/guam-country-data",
+   "population": 166506.0,
+   "surface_area": 540.0
+  },
+  {
+   "country": "Guatemala",
+   "page": "https://pseoare.pages.dev/guatemala-country-data",
+   "population": 18124838.0,
+   "gdp_per_capita": 5754.0,
+   "surface_area": 108890.0
+  },
+  {
+   "country": "Guinea-Bissau",
+   "page": "https://pseoare.pages.dev/guinea-bissau-country-data",
+   "population": 2153339.0,
+   "gdp_per_capita": 964.0,
+   "surface_area": 36130.0
+  },
+  {
+   "country": "Guinea",
+   "page": "https://pseoare.pages.dev/guinea-country-data",
+   "population": 14405468.0,
+   "gdp_per_capita": 1555.0,
+   "surface_area": 245860.0
+  },
+  {
+   "country": "Guyana",
+   "page": "https://pseoare.pages.dev/guyana-country-data",
+   "population": 826353.0,
+   "gdp_per_capita": 20474.0,
+   "surface_area": 214970.0
+  },
+  {
+   "country": "Haiti",
+   "page": "https://pseoare.pages.dev/haiti-country-data",
+   "population": 11637398.0,
+   "gdp_per_capita": 1682.0,
+   "surface_area": 27750.0
+  },
+  {
+   "country": "Honduras",
+   "page": "https://pseoare.pages.dev/honduras-country-data",
+   "population": 10644851.0,
+   "gdp_per_capita": 3227.0,
+   "surface_area": 112490.0
+  },
+  {
+   "country": "Hong Kong SAR, China",
+   "page": "https://pseoare.pages.dev/hong-kong-sar-china-country-data",
+   "population": 7536100.0,
+   "gdp_per_capita": 50525.0,
+   "surface_area": 1110.0
+  },
+  {
+   "country": "Hungary",
+   "page": "https://pseoare.pages.dev/hungary-country-data",
+   "population": 9592186.0,
+   "gdp_per_capita": 22209.0,
+   "surface_area": 93030.0
+  },
+  {
+   "country": "Iceland",
+   "page": "https://pseoare.pages.dev/iceland-country-data",
+   "population": 385663.0,
+   "gdp_per_capita": 82201.0,
+   "surface_area": 103000.0
+  },
+  {
+   "country": "India",
+   "page": "https://pseoare.pages.dev/india-country-data",
+   "population": 1438069596.0,
+   "gdp_per_capita": 2434.0,
+   "surface_area": 3287260.0
+  },
+  {
+   "country": "Indonesia",
+   "page": "https://pseoare.pages.dev/indonesia-country-data",
+   "population": 281190067.0,
+   "gdp_per_capita": 4876.0,
+   "surface_area": 1916862.0
+  },
+  {
+   "country": "Iran, Islamic Rep.",
+   "page": "https://pseoare.pages.dev/iran-islamic-rep-country-data",
+   "population": 90608707.0,
+   "gdp_per_capita": 5049.0,
+   "surface_area": 1745150.0
+  },
+  {
+   "country": "Iraq",
+   "page": "https://pseoare.pages.dev/iraq-country-data",
+   "population": 45074049.0,
+   "gdp_per_capita": 5965.0,
+   "surface_area": 435052.0
+  },
+  {
+   "country": "Ireland",
+   "page": "https://pseoare.pages.dev/ireland-country-data",
+   "population": 5311538.0,
+   "gdp_per_capita": 106819.0,
+   "surface_area": 70280.0
+  },
+  {
+   "country": "Isle of Man",
+   "page": "https://pseoare.pages.dev/isle-of-man-country-data",
+   "population": 84165.0,
+   "gdp_per_capita": 90015.0,
+   "surface_area": 570.0
+  },
+  {
+   "country": "Israel",
+   "page": "https://pseoare.pages.dev/israel-country-data",
+   "population": 9849000.0,
+   "gdp_per_capita": 52126.0,
+   "surface_area": 22070.0
+  },
+  {
+   "country": "Italy",
+   "page": "https://pseoare.pages.dev/italy-country-data",
+   "population": 58984216.0,
+   "gdp_per_capita": 39280.0,
+   "surface_area": 302069.0
+  },
+  {
+   "country": "Jamaica",
+   "page": "https://pseoare.pages.dev/jamaica-country-data",
+   "population": 2839786.0,
+   "gdp_per_capita": 7542.0,
+   "surface_area": 10990.0
+  },
+  {
+   "country": "Japan",
+   "page": "https://pseoare.pages.dev/japan-country-data",
+   "population": 124516650.0,
+   "gdp_per_capita": 35215.0,
+   "surface_area": 377974.0
+  },
+  {
+   "country": "Jordan",
+   "page": "https://pseoare.pages.dev/jordan-country-data",
+   "population": 11439213.0,
+   "gdp_per_capita": 4906.0,
+   "surface_area": 89320.0
+  },
+  {
+   "country": "Kazakhstan",
+   "page": "https://pseoare.pages.dev/kazakhstan-country-data",
+   "population": 20330104.0,
+   "gdp_per_capita": 12879.0,
+   "surface_area": 2724902.0
+  },
+  {
+   "country": "Kenya",
+   "page": "https://pseoare.pages.dev/kenya-country-data",
+   "population": 55339003.0,
+   "gdp_per_capita": 1943.0,
+   "surface_area": 580370.0
+  },
+  {
+   "country": "Kiribati",
+   "page": "https://pseoare.pages.dev/kiribati-country-data",
+   "population": 132530.0,
+   "gdp_per_capita": 2201.0,
+   "surface_area": 810.0
+  },
+  {
+   "country": "Korea, Dem. People's Rep.",
+   "page": "https://pseoare.pages.dev/korea-dem-people-s-rep-country-data",
+   "population": 26418204.0,
+   "surface_area": 120540.0
+  },
+  {
+   "country": "Korea, Rep.",
+   "page": "https://pseoare.pages.dev/korea-rep-country-data",
+   "population": 51712619.0,
+   "gdp_per_capita": 35674.0,
+   "surface_area": 100380.0
   }
  ]
 }

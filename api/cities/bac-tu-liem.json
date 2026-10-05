@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Bac Tu Liem",
+  "annual_mean_c": 23.3,
+  "warmest_month": "Jun",
+  "warmest_c": 28.5,
+  "coldest_month": "Jan",
+  "coldest_c": 15.4,
+  "seasonal_swing_c": 13.1,
+  "annual_rainfall_mm": 1595.0,
+  "wettest_month": "Aug",
+  "wettest_mm_per_day": 10.38,
+  "driest_month": "Feb",
+  "driest_mm_per_day": 0.77,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 15.4,
+    "rain_mm_per_day": 1.03
+   },
+   {
+    "month": "Feb",
+    "mean_c": 18.2,
+    "rain_mm_per_day": 0.77
+   },
+   {
+    "month": "Mar",
+    "mean_c": 21.4,
+    "rain_mm_per_day": 1.58
+   },
+   {
+    "month": "Apr",
+    "mean_c": 25.1,
+    "rain_mm_per_day": 2.59
+   },
+   {
+    "month": "May",
+    "mean_c": 27.5,
+    "rain_mm_per_day": 5.77
+   },
+   {
+    "month": "Jun",
+    "mean_c": 28.5,
+    "rain_mm_per_day": 6.71
+   },
+   {
+    "month": "Jul",
+    "mean_c": 28.4,
+    "rain_mm_per_day": 9.67
+   },
+   {
+    "month": "Aug",
+    "mean_c": 27.9,
+    "rain_mm_per_day": 10.38
+   },
+   {
+    "month": "Sep",
+    "mean_c": 26.7,
+    "rain_mm_per_day": 7.43
+   },
+   {
+    "month": "Oct",
+    "mean_c": 23.8,
+    "rain_mm_per_day": 4.0
+   },
+   {
+    "month": "Nov",
+    "mean_c": 20.3,
+    "rain_mm_per_day": 1.74
+   },
+   {
+    "month": "Dec",
+    "mean_c": 16.0,
+    "rain_mm_per_day": 0.81
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/bac-tu-liem-average-monthly-temperature-rainfall",
+  "title": "Bac Tu Liem climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-05T18:31:24.668441+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

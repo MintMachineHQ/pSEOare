@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Bacolod City",
+  "annual_mean_c": 25.2,
+  "warmest_month": "May",
+  "warmest_c": 27.2,
+  "coldest_month": "Jan",
+  "coldest_c": 23.9,
+  "seasonal_swing_c": 3.3,
+  "annual_rainfall_mm": 2240.0,
+  "wettest_month": "Jul",
+  "wettest_mm_per_day": 10.25,
+  "driest_month": "Apr",
+  "driest_mm_per_day": 2.11,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 23.9,
+    "rain_mm_per_day": 3.44
+   },
+   {
+    "month": "Feb",
+    "mean_c": 24.3,
+    "rain_mm_per_day": 2.65
+   },
+   {
+    "month": "Mar",
+    "mean_c": 25.5,
+    "rain_mm_per_day": 2.12
+   },
+   {
+    "month": "Apr",
+    "mean_c": 27.1,
+    "rain_mm_per_day": 2.11
+   },
+   {
+    "month": "May",
+    "mean_c": 27.2,
+    "rain_mm_per_day": 5.45
+   },
+   {
+    "month": "Jun",
+    "mean_c": 25.7,
+    "rain_mm_per_day": 9.18
+   },
+   {
+    "month": "Jul",
+    "mean_c": 25.0,
+    "rain_mm_per_day": 10.25
+   },
+   {
+    "month": "Aug",
+    "mean_c": 24.9,
+    "rain_mm_per_day": 9.41
+   },
+   {
+    "month": "Sep",
+    "mean_c": 24.9,
+    "rain_mm_per_day": 8.75
+   },
+   {
+    "month": "Oct",
+    "mean_c": 24.9,
+    "rain_mm_per_day": 8.72
+   },
+   {
+    "month": "Nov",
+    "mean_c": 24.8,
+    "rain_mm_per_day": 5.65
+   },
+   {
+    "month": "Dec",
+    "mean_c": 24.5,
+    "rain_mm_per_day": 5.95
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/bacolod-city-average-monthly-temperature-rainfall",
+  "title": "Bacolod City climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-05T18:31:24.668441+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

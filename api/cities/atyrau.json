@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Atyrau",
+  "annual_mean_c": 10.6,
+  "warmest_month": "Jul",
+  "warmest_c": 28.2,
+  "coldest_month": "Jan",
+  "coldest_c": -7.1,
+  "seasonal_swing_c": 35.3,
+  "annual_rainfall_mm": 195.0,
+  "wettest_month": "May",
+  "wettest_mm_per_day": 0.93,
+  "driest_month": "Aug",
+  "driest_mm_per_day": 0.26,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": -7.1,
+    "rain_mm_per_day": 0.54
+   },
+   {
+    "month": "Feb",
+    "mean_c": -6.1,
+    "rain_mm_per_day": 0.44
+   },
+   {
+    "month": "Mar",
+    "mean_c": 1.8,
+    "rain_mm_per_day": 0.57
+   },
+   {
+    "month": "Apr",
+    "mean_c": 10.4,
+    "rain_mm_per_day": 0.67
+   },
+   {
+    "month": "May",
+    "mean_c": 19.6,
+    "rain_mm_per_day": 0.93
+   },
+   {
+    "month": "Jun",
+    "mean_c": 25.3,
+    "rain_mm_per_day": 0.43
+   },
+   {
+    "month": "Jul",
+    "mean_c": 28.2,
+    "rain_mm_per_day": 0.4
+   },
+   {
+    "month": "Aug",
+    "mean_c": 26.5,
+    "rain_mm_per_day": 0.26
+   },
+   {
+    "month": "Sep",
+    "mean_c": 19.3,
+    "rain_mm_per_day": 0.35
+   },
+   {
+    "month": "Oct",
+    "mean_c": 10.2,
+    "rain_mm_per_day": 0.62
+   },
+   {
+    "month": "Nov",
+    "mean_c": 2.0,
+    "rain_mm_per_day": 0.57
+   },
+   {
+    "month": "Dec",
+    "mean_c": -3.8,
+    "rain_mm_per_day": 0.63
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/atyrau-average-monthly-temperature-rainfall",
+  "title": "Atyrau climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-05T18:31:24.668441+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}
