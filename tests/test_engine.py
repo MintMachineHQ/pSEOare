@@ -738,6 +738,8 @@ class TestRender(unittest.TestCase):
         )
 
     def test_budget_reserves_a_share_for_refreshing_published_pages(self):
+        from engine.sources.base import REFRESH_SHARE
+
         # A source with far more unseen candidates than budget would otherwise spend
         # every run on new pages and never revisit the published ones, so a whole-corpus
         # change could never reach them. A quarter of the budget goes to refreshes.
@@ -752,8 +754,13 @@ class TestRender(unittest.TestCase):
         chosen = trim_to_budget(pages, budget)
         self.assertEqual(len(chosen), 40)
         slugs = [p.slug for p in chosen]
-        self.assertEqual(sum(1 for s in slugs if s >= "page-080"), 30)  # unseen first
-        self.assertEqual(sum(1 for s in slugs if s < "page-080"), 10)  # refresh reserve
+        unseen = sum(1 for s in slugs if s >= "page-080")
+        refreshes = sum(1 for s in slugs if s < "page-080")
+        # Asserted as a share of the budget rather than fixed counts, so changing
+        # REFRESH_SHARE does not require rewriting the expectation.
+        self.assertEqual(unseen + refreshes, 40)
+        self.assertGreaterEqual(refreshes, int(40 * REFRESH_SHARE) - 1)
+        self.assertGreater(unseen, 0)  # growth still happens
 
     def test_budget_reserve_is_skipped_for_a_tiny_budget(self):
         # Below the threshold the reserve would eat most of the run, so growth wins.
@@ -3038,3 +3045,51 @@ class TestApiAggregatesCoverEveryRankingTopic(unittest.TestCase):
         for key in row:
             with self.subTest(key=key):
                 self.assertRegex(key, r"^[a-z][a-z0-9_]*$")
+
+
+class TestRefreshReserveIsAShareOfTheTotalBudget(unittest.TestCase):
+    """Measured: holidays runs first with thousands of candidates, so a reserve taken
+    from `remaining` was spent on new pages by the first source and left every later
+    source with almost none. ~75 refreshes a run against a 4,800-page corpus is a
+    five-week conversion for a presentation change."""
+
+    def _pages(self, count, seen_count):
+        cfg = make_cfg(Path(tempfile.mkdtemp()))
+        pages = []
+        for i in range(count):
+            page = sample_page(cfg)
+            page.slug = f"page-{i:03d}"
+            pages.append(page)
+        return pages
+
+    def test_a_later_source_still_gets_its_reserve(self):
+        from engine.ratelimit import CallBudget
+        from engine.sources.base import trim_to_budget
+
+        # 3,000 candidates, only 10 unseen: nearly everything is a refresh candidate.
+        pages = self._pages(3000, seen_count=10)
+        budget = CallBudget(limit=300, seen={p.path for p in pages[:2990]})
+        chosen = trim_to_budget(pages, budget)
+        # 0.6 of 300 is 180 refreshes; the unseen 10 must not eat the whole budget.
+        self.assertGreaterEqual(len(chosen), 180)
+
+    def test_the_reserve_never_exceeds_what_is_available(self):
+        from engine.ratelimit import CallBudget
+        from engine.sources.base import trim_to_budget
+
+        pages = self._pages(50, seen_count=10)
+        # A budget nearly exhausted must not try to reserve 0.6 of the original limit.
+        budget = CallBudget(limit=300, seen={p.path for p in pages[:40]})
+        budget.take(295)
+        chosen = trim_to_budget(pages, budget)
+        self.assertLessEqual(len(chosen), 5)
+
+    def test_a_tiny_budget_skips_the_reserve(self):
+        from engine.ratelimit import CallBudget
+        from engine.sources.base import trim_to_budget
+
+        pages = self._pages(20, seen_count=10)
+        budget = CallBudget(limit=5, seen={p.path for p in pages[:10]})
+        chosen = trim_to_budget(pages, budget)
+        self.assertEqual(len(chosen), 5)
+        self.assertTrue(all(budget.is_new(p.path) for p in chosen))

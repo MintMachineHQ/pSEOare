@@ -91,6 +91,12 @@ def take(items: Iterable[Any], n: int) -> list[Any]:
     return out
 
 
+# Share of each run's page budget spent re-rendering already-published pages.
+# Raised from 0.25 to 0.6 on 2026-10-04: the corpus is ~4,800 URLs and the old setting
+# converted roughly 3.6% of it per run, so a presentation change took a month to land.
+REFRESH_SHARE = 0.6
+
+
 def trim_to_budget(pages: list[Page], budget: CallBudget) -> list[Page]:
     """Keep pages until the per-run budget is used up, unseen pages first.
 
@@ -122,7 +128,18 @@ def trim_to_budget(pages: list[Page], budget: CallBudget) -> list[Page]:
         )
     unseen_pages = [page for page in ordered if budget.is_new(page.path)]
     known_pages = [page for page in ordered if not budget.is_new(page.path)]
-    reserve = min(len(known_pages), budget.remaining // 4) if budget.remaining >= 8 else 0
+    # The reserve is a share of the *total* budget, not of what happens to be left.
+    # Holidays runs first with thousands of candidates, so a share of `remaining` was
+    # spent almost entirely on new pages by the first source and starved every source
+    # after it: measured at roughly 75 refreshes a run against a 4,800-page corpus, which
+    # is a five-week conversion for a config change.
+    #
+    # Clamped to what is actually available, so a later source can never reserve more
+    # than it holds, and skipped entirely for a tiny budget where it would eat the run.
+    share = REFRESH_SHARE
+    reserve = 0
+    if budget.remaining >= 8 and known_pages:
+        reserve = min(len(known_pages), int(budget.limit * share), max(0, budget.remaining - 1))
     allowed: list[Page] = []
     for page in unseen_pages[: max(0, budget.remaining - reserve)]:
         if not budget.take():

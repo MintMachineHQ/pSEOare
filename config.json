@@ -3,7 +3,7 @@
   "site_name": "LongTail Data Atlas",
   "language": "en",
   "limits": {
-    "max_pages_per_run": 300,
+    "max_pages_per_run": 420,
     "max_gemini_calls_per_run": 240,
     "gemini_min_interval_seconds": 2.0,
     "http_concurrency": 8,
