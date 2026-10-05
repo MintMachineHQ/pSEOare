@@ -1,7 +1,7 @@
 {
  "answer": {
   "country": "Portugal",
-  "count": 8,
+  "count": 20,
   "holidays": [
    {
     "name": "New Year's Day in Portugal (2016)",
@@ -12,12 +12,28 @@
     "page": "https://pseoare.pages.dev/new-year-s-day-portugal-2016-01-01"
    },
    {
+    "name": "Carnival in Portugal (2016)",
+    "local_name": "Carnaval",
+    "date": "2016-02-09",
+    "weekday": "Tuesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/carnival-portugal-2016-02-09"
+   },
+   {
     "name": "New Year's Day in Portugal (2017)",
     "local_name": "Ano Novo",
     "date": "2017-01-01",
     "weekday": "Sunday",
     "weekend": true,
     "page": "https://pseoare.pages.dev/new-year-s-day-portugal-2017-01-01"
+   },
+   {
+    "name": "Carnival in Portugal (2017)",
+    "local_name": "Carnaval",
+    "date": "2017-02-28",
+    "weekday": "Tuesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/carnival-portugal-2017-02-28"
    },
    {
     "name": "New Year's Day in Portugal (2018)",
@@ -28,12 +44,28 @@
     "page": "https://pseoare.pages.dev/new-year-s-day-portugal-2018-01-01"
    },
    {
+    "name": "Carnival in Portugal (2018)",
+    "local_name": "Carnaval",
+    "date": "2018-02-13",
+    "weekday": "Tuesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/carnival-portugal-2018-02-13"
+   },
+   {
     "name": "New Year's Day in Portugal (2019)",
     "local_name": "Ano Novo",
     "date": "2019-01-01",
     "weekday": "Tuesday",
     "weekend": false,
     "page": "https://pseoare.pages.dev/new-year-s-day-portugal-2019-01-01"
+   },
+   {
+    "name": "Carnival in Portugal (2019)",
+    "local_name": "Carnaval",
+    "date": "2019-03-05",
+    "weekday": "Tuesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/carnival-portugal-2019-03-05"
    },
    {
     "name": "New Year's Day in Portugal (2020)",
@@ -44,12 +76,28 @@
     "page": "https://pseoare.pages.dev/new-year-s-day-portugal-2020-01-01"
    },
    {
+    "name": "Carnival in Portugal (2020)",
+    "local_name": "Carnaval",
+    "date": "2020-02-25",
+    "weekday": "Tuesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/carnival-portugal-2020-02-25"
+   },
+   {
     "name": "New Year's Day in Portugal (2021)",
     "local_name": "Ano Novo",
     "date": "2021-01-01",
     "weekday": "Friday",
     "weekend": false,
     "page": "https://pseoare.pages.dev/new-year-s-day-portugal-2021-01-01"
+   },
+   {
+    "name": "Carnival in Portugal (2021)",
+    "local_name": "Carnaval",
+    "date": "2021-02-16",
+    "weekday": "Tuesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/carnival-portugal-2021-02-16"
    },
    {
     "name": "New Year's Day in Portugal (2022)",
@@ -60,12 +108,60 @@
     "page": "https://pseoare.pages.dev/new-year-s-day-portugal-2022-01-01"
    },
    {
+    "name": "Carnival in Portugal (2022)",
+    "local_name": "Carnaval",
+    "date": "2022-03-01",
+    "weekday": "Tuesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/carnival-portugal-2022-03-01"
+   },
+   {
     "name": "New Year's Day in Portugal (2023)",
     "local_name": "Ano Novo",
     "date": "2023-01-01",
     "weekday": "Sunday",
     "weekend": true,
     "page": "https://pseoare.pages.dev/new-year-s-day-portugal-2023-01-01"
+   },
+   {
+    "name": "Carnival in Portugal (2023)",
+    "local_name": "Carnaval",
+    "date": "2023-02-21",
+    "weekday": "Tuesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/carnival-portugal-2023-02-21"
+   },
+   {
+    "name": "Carnival in Portugal (2024)",
+    "local_name": "Carnaval",
+    "date": "2024-02-13",
+    "weekday": "Tuesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/carnival-portugal-2024-02-13"
+   },
+   {
+    "name": "Carnival in Portugal (2025)",
+    "local_name": "Carnaval",
+    "date": "2025-03-04",
+    "weekday": "Tuesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/carnival-portugal-2025-03-04"
+   },
+   {
+    "name": "Carnival in Portugal (2026)",
+    "local_name": "Carnaval",
+    "date": "2026-02-17",
+    "weekday": "Tuesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/carnival-portugal-2026-02-17"
+   },
+   {
+    "name": "Carnival in Portugal (2027)",
+    "local_name": "Carnaval",
+    "date": "2027-02-09",
+    "weekday": "Tuesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/carnival-portugal-2027-02-09"
    }
   ]
  },
@@ -74,7 +170,7 @@
   "title": "Public holidays for Portugal",
   "site": "https://pseoare.pages.dev"
  },
- "updated": "2026-10-04T13:57:55.564289+00:00",
+ "updated": "2026-10-05T11:28:32.022369+00:00",
  "license": "CC-BY-4.0",
  "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
 }

@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-04T13:57:55.564289+00:00",
- "count": 489,
+ "updated": "2026-10-05T11:28:32.022369+00:00",
+ "count": 546,
  "source": "https://pseoare.pages.dev",
  "results": [
   {
@@ -3914,6 +3914,462 @@
    "date": "2021-02-16",
    "weekday": "Tuesday",
    "page": "https://pseoare.pages.dev/the-day-of-restoration-of-the-state-of-lithuania-lithuania-2021-02-16"
+  },
+  {
+   "holiday": "The Day of Restoration of the State of Lithuania in Lithuania (2022)",
+   "country": "Lithuania",
+   "local_name": "Lietuvos valstyb\u0117s atk\u016brimo diena",
+   "date": "2022-02-16",
+   "weekday": "Wednesday",
+   "page": "https://pseoare.pages.dev/the-day-of-restoration-of-the-state-of-lithuania-lithuania-2022-02-16"
+  },
+  {
+   "holiday": "The Day of Restoration of the State of Lithuania in Lithuania (2023)",
+   "country": "Lithuania",
+   "local_name": "Lietuvos valstyb\u0117s atk\u016brimo diena",
+   "date": "2023-02-16",
+   "weekday": "Thursday",
+   "page": "https://pseoare.pages.dev/the-day-of-restoration-of-the-state-of-lithuania-lithuania-2023-02-16"
+  },
+  {
+   "holiday": "Carnival in Argentina (2018)",
+   "country": "Argentina",
+   "local_name": "Carnaval",
+   "date": "2018-02-12",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/carnival-argentina-2018-02-12"
+  },
+  {
+   "holiday": "Carnival in Argentina (2019)",
+   "country": "Argentina",
+   "local_name": "Carnaval",
+   "date": "2019-03-04",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/carnival-argentina-2019-03-04"
+  },
+  {
+   "holiday": "Carnival in Argentina (2020)",
+   "country": "Argentina",
+   "local_name": "Carnaval",
+   "date": "2020-02-24",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/carnival-argentina-2020-02-24"
+  },
+  {
+   "holiday": "Carnival in Argentina (2021)",
+   "country": "Argentina",
+   "local_name": "Carnaval",
+   "date": "2021-02-15",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/carnival-argentina-2021-02-15"
+  },
+  {
+   "holiday": "Carnival in Argentina (2022)",
+   "country": "Argentina",
+   "local_name": "Carnaval",
+   "date": "2022-02-28",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/carnival-argentina-2022-02-28"
+  },
+  {
+   "holiday": "Carnival in Argentina (2023)",
+   "country": "Argentina",
+   "local_name": "Carnaval",
+   "date": "2023-02-20",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/carnival-argentina-2023-02-20"
+  },
+  {
+   "holiday": "Carnival in Argentina (2024)",
+   "country": "Argentina",
+   "local_name": "Carnaval",
+   "date": "2024-02-12",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/carnival-argentina-2024-02-12"
+  },
+  {
+   "holiday": "Carnival in Argentina (2025)",
+   "country": "Argentina",
+   "local_name": "Carnaval",
+   "date": "2025-03-03",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/carnival-argentina-2025-03-03"
+  },
+  {
+   "holiday": "Carnival in Argentina (2026)",
+   "country": "Argentina",
+   "local_name": "Carnaval",
+   "date": "2026-02-16",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/carnival-argentina-2026-02-16"
+  },
+  {
+   "holiday": "Carnival in Argentina (2027)",
+   "country": "Argentina",
+   "local_name": "Carnaval",
+   "date": "2027-02-08",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/carnival-argentina-2027-02-08"
+  },
+  {
+   "holiday": "Carnival in Brazil (2016)",
+   "country": "Brazil",
+   "local_name": "Carnaval",
+   "date": "2016-02-08",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/carnival-brazil-2016-02-08"
+  },
+  {
+   "holiday": "Carnival in Brazil (2017)",
+   "country": "Brazil",
+   "local_name": "Carnaval",
+   "date": "2017-02-27",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/carnival-brazil-2017-02-27"
+  },
+  {
+   "holiday": "Carnival in Brazil (2018)",
+   "country": "Brazil",
+   "local_name": "Carnaval",
+   "date": "2018-02-12",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/carnival-brazil-2018-02-12"
+  },
+  {
+   "holiday": "Carnival in Brazil (2019)",
+   "country": "Brazil",
+   "local_name": "Carnaval",
+   "date": "2019-03-04",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/carnival-brazil-2019-03-04"
+  },
+  {
+   "holiday": "Carnival in Brazil (2020)",
+   "country": "Brazil",
+   "local_name": "Carnaval",
+   "date": "2020-02-24",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/carnival-brazil-2020-02-24"
+  },
+  {
+   "holiday": "Carnival in Brazil (2021)",
+   "country": "Brazil",
+   "local_name": "Carnaval",
+   "date": "2021-02-15",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/carnival-brazil-2021-02-15"
+  },
+  {
+   "holiday": "Carnival in Brazil (2022)",
+   "country": "Brazil",
+   "local_name": "Carnaval",
+   "date": "2022-02-28",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/carnival-brazil-2022-02-28"
+  },
+  {
+   "holiday": "Carnival in Brazil (2023)",
+   "country": "Brazil",
+   "local_name": "Carnaval",
+   "date": "2023-02-20",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/carnival-brazil-2023-02-20"
+  },
+  {
+   "holiday": "Carnival in Brazil (2024)",
+   "country": "Brazil",
+   "local_name": "Carnaval",
+   "date": "2024-02-12",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/carnival-brazil-2024-02-12"
+  },
+  {
+   "holiday": "Carnival in Brazil (2025)",
+   "country": "Brazil",
+   "local_name": "Carnaval",
+   "date": "2025-03-03",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/carnival-brazil-2025-03-03"
+  },
+  {
+   "holiday": "Carnival in Brazil (2026)",
+   "country": "Brazil",
+   "local_name": "Carnaval",
+   "date": "2026-02-16",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/carnival-brazil-2026-02-16"
+  },
+  {
+   "holiday": "Carnival in Brazil (2027)",
+   "country": "Brazil",
+   "local_name": "Carnaval",
+   "date": "2027-02-08",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/carnival-brazil-2027-02-08"
+  },
+  {
+   "holiday": "Carnival in Portugal (2016)",
+   "country": "Portugal",
+   "local_name": "Carnaval",
+   "date": "2016-02-09",
+   "weekday": "Tuesday",
+   "page": "https://pseoare.pages.dev/carnival-portugal-2016-02-09"
+  },
+  {
+   "holiday": "Carnival in Portugal (2017)",
+   "country": "Portugal",
+   "local_name": "Carnaval",
+   "date": "2017-02-28",
+   "weekday": "Tuesday",
+   "page": "https://pseoare.pages.dev/carnival-portugal-2017-02-28"
+  },
+  {
+   "holiday": "Carnival in Portugal (2018)",
+   "country": "Portugal",
+   "local_name": "Carnaval",
+   "date": "2018-02-13",
+   "weekday": "Tuesday",
+   "page": "https://pseoare.pages.dev/carnival-portugal-2018-02-13"
+  },
+  {
+   "holiday": "Carnival in Portugal (2019)",
+   "country": "Portugal",
+   "local_name": "Carnaval",
+   "date": "2019-03-05",
+   "weekday": "Tuesday",
+   "page": "https://pseoare.pages.dev/carnival-portugal-2019-03-05"
+  },
+  {
+   "holiday": "Carnival in Portugal (2020)",
+   "country": "Portugal",
+   "local_name": "Carnaval",
+   "date": "2020-02-25",
+   "weekday": "Tuesday",
+   "page": "https://pseoare.pages.dev/carnival-portugal-2020-02-25"
+  },
+  {
+   "holiday": "Carnival in Portugal (2021)",
+   "country": "Portugal",
+   "local_name": "Carnaval",
+   "date": "2021-02-16",
+   "weekday": "Tuesday",
+   "page": "https://pseoare.pages.dev/carnival-portugal-2021-02-16"
+  },
+  {
+   "holiday": "Carnival in Portugal (2022)",
+   "country": "Portugal",
+   "local_name": "Carnaval",
+   "date": "2022-03-01",
+   "weekday": "Tuesday",
+   "page": "https://pseoare.pages.dev/carnival-portugal-2022-03-01"
+  },
+  {
+   "holiday": "Carnival in Portugal (2023)",
+   "country": "Portugal",
+   "local_name": "Carnaval",
+   "date": "2023-02-21",
+   "weekday": "Tuesday",
+   "page": "https://pseoare.pages.dev/carnival-portugal-2023-02-21"
+  },
+  {
+   "holiday": "Carnival in Portugal (2024)",
+   "country": "Portugal",
+   "local_name": "Carnaval",
+   "date": "2024-02-13",
+   "weekday": "Tuesday",
+   "page": "https://pseoare.pages.dev/carnival-portugal-2024-02-13"
+  },
+  {
+   "holiday": "Carnival in Portugal (2025)",
+   "country": "Portugal",
+   "local_name": "Carnaval",
+   "date": "2025-03-04",
+   "weekday": "Tuesday",
+   "page": "https://pseoare.pages.dev/carnival-portugal-2025-03-04"
+  },
+  {
+   "holiday": "Carnival in Portugal (2026)",
+   "country": "Portugal",
+   "local_name": "Carnaval",
+   "date": "2026-02-17",
+   "weekday": "Tuesday",
+   "page": "https://pseoare.pages.dev/carnival-portugal-2026-02-17"
+  },
+  {
+   "holiday": "Carnival in Portugal (2027)",
+   "country": "Portugal",
+   "local_name": "Carnaval",
+   "date": "2027-02-09",
+   "weekday": "Tuesday",
+   "page": "https://pseoare.pages.dev/carnival-portugal-2027-02-09"
+  },
+  {
+   "holiday": "Chinese New Year in Philippines (2016)",
+   "country": "Philippines",
+   "local_name": "Chinese New Year",
+   "date": "2016-02-08",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/chinese-new-year-philippines-2016-02-08"
+  },
+  {
+   "holiday": "Chinese New Year in Philippines (2017)",
+   "country": "Philippines",
+   "local_name": "Chinese New Year",
+   "date": "2017-01-28",
+   "weekday": "Saturday",
+   "page": "https://pseoare.pages.dev/chinese-new-year-philippines-2017-01-28"
+  },
+  {
+   "holiday": "Chinese New Year in Philippines (2018)",
+   "country": "Philippines",
+   "local_name": "Chinese New Year",
+   "date": "2018-02-16",
+   "weekday": "Friday",
+   "page": "https://pseoare.pages.dev/chinese-new-year-philippines-2018-02-16"
+  },
+  {
+   "holiday": "Chinese New Year in Philippines (2019)",
+   "country": "Philippines",
+   "local_name": "Chinese New Year",
+   "date": "2019-02-05",
+   "weekday": "Tuesday",
+   "page": "https://pseoare.pages.dev/chinese-new-year-philippines-2019-02-05"
+  },
+  {
+   "holiday": "Chinese New Year in Philippines (2020)",
+   "country": "Philippines",
+   "local_name": "Chinese New Year",
+   "date": "2020-01-25",
+   "weekday": "Saturday",
+   "page": "https://pseoare.pages.dev/chinese-new-year-philippines-2020-01-25"
+  },
+  {
+   "holiday": "Chinese New Year in Philippines (2021)",
+   "country": "Philippines",
+   "local_name": "Chinese New Year",
+   "date": "2021-02-12",
+   "weekday": "Friday",
+   "page": "https://pseoare.pages.dev/chinese-new-year-philippines-2021-02-12"
+  },
+  {
+   "holiday": "Chinese New Year in Philippines (2022)",
+   "country": "Philippines",
+   "local_name": "Chinese New Year",
+   "date": "2022-02-01",
+   "weekday": "Tuesday",
+   "page": "https://pseoare.pages.dev/chinese-new-year-philippines-2022-02-01"
+  },
+  {
+   "holiday": "Chinese New Year in Philippines (2023)",
+   "country": "Philippines",
+   "local_name": "Chinese New Year",
+   "date": "2023-01-22",
+   "weekday": "Sunday",
+   "page": "https://pseoare.pages.dev/chinese-new-year-philippines-2023-01-22"
+  },
+  {
+   "holiday": "Chinese New Year in Philippines (2024)",
+   "country": "Philippines",
+   "local_name": "Chinese New Year",
+   "date": "2024-02-10",
+   "weekday": "Saturday",
+   "page": "https://pseoare.pages.dev/chinese-new-year-philippines-2024-02-10"
+  },
+  {
+   "holiday": "Chinese New Year in Philippines (2025)",
+   "country": "Philippines",
+   "local_name": "Chinese New Year",
+   "date": "2025-01-29",
+   "weekday": "Wednesday",
+   "page": "https://pseoare.pages.dev/chinese-new-year-philippines-2025-01-29"
+  },
+  {
+   "holiday": "Chinese New Year in Philippines (2026)",
+   "country": "Philippines",
+   "local_name": "Chinese New Year",
+   "date": "2026-02-17",
+   "weekday": "Tuesday",
+   "page": "https://pseoare.pages.dev/chinese-new-year-philippines-2026-02-17"
+  },
+  {
+   "holiday": "Chinese New Year in Philippines (2027)",
+   "country": "Philippines",
+   "local_name": "Chinese New Year",
+   "date": "2027-02-06",
+   "weekday": "Saturday",
+   "page": "https://pseoare.pages.dev/chinese-new-year-philippines-2027-02-06"
+  },
+  {
+   "holiday": "Chinese New Year in Singapore (2016)",
+   "country": "Singapore",
+   "local_name": "Chinese New Year",
+   "date": "2016-02-08",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/chinese-new-year-singapore-2016-02-08"
+  },
+  {
+   "holiday": "Chinese New Year in Singapore (2017)",
+   "country": "Singapore",
+   "local_name": "Chinese New Year",
+   "date": "2017-01-28",
+   "weekday": "Saturday",
+   "page": "https://pseoare.pages.dev/chinese-new-year-singapore-2017-01-28"
+  },
+  {
+   "holiday": "Chinese New Year in Singapore (2018)",
+   "country": "Singapore",
+   "local_name": "Chinese New Year",
+   "date": "2018-02-16",
+   "weekday": "Friday",
+   "page": "https://pseoare.pages.dev/chinese-new-year-singapore-2018-02-16"
+  },
+  {
+   "holiday": "Chinese New Year in Singapore (2019)",
+   "country": "Singapore",
+   "local_name": "Chinese New Year",
+   "date": "2019-02-05",
+   "weekday": "Tuesday",
+   "page": "https://pseoare.pages.dev/chinese-new-year-singapore-2019-02-05"
+  },
+  {
+   "holiday": "Chinese New Year in Singapore (2020)",
+   "country": "Singapore",
+   "local_name": "Chinese New Year",
+   "date": "2020-01-25",
+   "weekday": "Saturday",
+   "page": "https://pseoare.pages.dev/chinese-new-year-singapore-2020-01-25"
+  },
+  {
+   "holiday": "Chinese New Year in Singapore (2021)",
+   "country": "Singapore",
+   "local_name": "Chinese New Year",
+   "date": "2021-02-12",
+   "weekday": "Friday",
+   "page": "https://pseoare.pages.dev/chinese-new-year-singapore-2021-02-12"
+  },
+  {
+   "holiday": "Chinese New Year in Singapore (2022)",
+   "country": "Singapore",
+   "local_name": "Chinese New Year",
+   "date": "2022-02-01",
+   "weekday": "Tuesday",
+   "page": "https://pseoare.pages.dev/chinese-new-year-singapore-2022-02-01"
+  },
+  {
+   "holiday": "Chinese New Year in Singapore (2023)",
+   "country": "Singapore",
+   "local_name": "Chinese New Year",
+   "date": "2023-01-23",
+   "weekday": "Monday",
+   "page": "https://pseoare.pages.dev/chinese-new-year-singapore-2023-01-23"
+  },
+  {
+   "holiday": "Chinese New Year in Singapore (2024)",
+   "country": "Singapore",
+   "local_name": "Chinese New Year",
+   "date": "2024-02-10",
+   "weekday": "Saturday",
+   "page": "https://pseoare.pages.dev/chinese-new-year-singapore-2024-02-10"
   }
  ]
 }

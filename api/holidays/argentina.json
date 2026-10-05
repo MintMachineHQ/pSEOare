@@ -1,7 +1,7 @@
 {
  "answer": {
   "country": "Argentina",
-  "count": 2,
+  "count": 12,
   "holidays": [
    {
     "name": "Carnival in Argentina (2016)",
@@ -18,6 +18,86 @@
     "weekday": "Monday",
     "weekend": false,
     "page": "https://pseoare.pages.dev/carnival-argentina-2017-02-27"
+   },
+   {
+    "name": "Carnival in Argentina (2018)",
+    "local_name": "Carnaval",
+    "date": "2018-02-12",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/carnival-argentina-2018-02-12"
+   },
+   {
+    "name": "Carnival in Argentina (2019)",
+    "local_name": "Carnaval",
+    "date": "2019-03-04",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/carnival-argentina-2019-03-04"
+   },
+   {
+    "name": "Carnival in Argentina (2020)",
+    "local_name": "Carnaval",
+    "date": "2020-02-24",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/carnival-argentina-2020-02-24"
+   },
+   {
+    "name": "Carnival in Argentina (2021)",
+    "local_name": "Carnaval",
+    "date": "2021-02-15",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/carnival-argentina-2021-02-15"
+   },
+   {
+    "name": "Carnival in Argentina (2022)",
+    "local_name": "Carnaval",
+    "date": "2022-02-28",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/carnival-argentina-2022-02-28"
+   },
+   {
+    "name": "Carnival in Argentina (2023)",
+    "local_name": "Carnaval",
+    "date": "2023-02-20",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/carnival-argentina-2023-02-20"
+   },
+   {
+    "name": "Carnival in Argentina (2024)",
+    "local_name": "Carnaval",
+    "date": "2024-02-12",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/carnival-argentina-2024-02-12"
+   },
+   {
+    "name": "Carnival in Argentina (2025)",
+    "local_name": "Carnaval",
+    "date": "2025-03-03",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/carnival-argentina-2025-03-03"
+   },
+   {
+    "name": "Carnival in Argentina (2026)",
+    "local_name": "Carnaval",
+    "date": "2026-02-16",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/carnival-argentina-2026-02-16"
+   },
+   {
+    "name": "Carnival in Argentina (2027)",
+    "local_name": "Carnaval",
+    "date": "2027-02-08",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/carnival-argentina-2027-02-08"
    }
   ]
  },
@@ -26,7 +106,7 @@
   "title": "Public holidays for Argentina",
   "site": "https://pseoare.pages.dev"
  },
- "updated": "2026-10-04T13:57:55.564289+00:00",
+ "updated": "2026-10-05T11:28:32.022369+00:00",
  "license": "CC-BY-4.0",
  "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
 }

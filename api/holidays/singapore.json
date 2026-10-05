@@ -1,7 +1,7 @@
 {
  "answer": {
   "country": "Singapore",
-  "count": 8,
+  "count": 17,
   "holidays": [
    {
     "name": "New Year's Day in Singapore (2016)",
@@ -12,12 +12,28 @@
     "page": "https://pseoare.pages.dev/new-year-s-day-singapore-2016-01-01"
    },
    {
+    "name": "Chinese New Year in Singapore (2016)",
+    "local_name": "Chinese New Year",
+    "date": "2016-02-08",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/chinese-new-year-singapore-2016-02-08"
+   },
+   {
     "name": "New Year's Day in Singapore (2017)",
     "local_name": "New Year's Day",
     "date": "2017-01-02",
     "weekday": "Monday",
     "weekend": false,
     "page": "https://pseoare.pages.dev/new-year-s-day-singapore-2017-01-02"
+   },
+   {
+    "name": "Chinese New Year in Singapore (2017)",
+    "local_name": "Chinese New Year",
+    "date": "2017-01-28",
+    "weekday": "Saturday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/chinese-new-year-singapore-2017-01-28"
    },
    {
     "name": "New Year's Day in Singapore (2018)",
@@ -28,12 +44,28 @@
     "page": "https://pseoare.pages.dev/new-year-s-day-singapore-2018-01-01"
    },
    {
+    "name": "Chinese New Year in Singapore (2018)",
+    "local_name": "Chinese New Year",
+    "date": "2018-02-16",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/chinese-new-year-singapore-2018-02-16"
+   },
+   {
     "name": "New Year's Day in Singapore (2019)",
     "local_name": "New Year's Day",
     "date": "2019-01-01",
     "weekday": "Tuesday",
     "weekend": false,
     "page": "https://pseoare.pages.dev/new-year-s-day-singapore-2019-01-01"
+   },
+   {
+    "name": "Chinese New Year in Singapore (2019)",
+    "local_name": "Chinese New Year",
+    "date": "2019-02-05",
+    "weekday": "Tuesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/chinese-new-year-singapore-2019-02-05"
    },
    {
     "name": "New Year's Day in Singapore (2020)",
@@ -44,12 +76,28 @@
     "page": "https://pseoare.pages.dev/new-year-s-day-singapore-2020-01-01"
    },
    {
+    "name": "Chinese New Year in Singapore (2020)",
+    "local_name": "Chinese New Year",
+    "date": "2020-01-25",
+    "weekday": "Saturday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/chinese-new-year-singapore-2020-01-25"
+   },
+   {
     "name": "New Year's Day in Singapore (2021)",
     "local_name": "New Year's Day",
     "date": "2021-01-01",
     "weekday": "Friday",
     "weekend": false,
     "page": "https://pseoare.pages.dev/new-year-s-day-singapore-2021-01-01"
+   },
+   {
+    "name": "Chinese New Year in Singapore (2021)",
+    "local_name": "Chinese New Year",
+    "date": "2021-02-12",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/chinese-new-year-singapore-2021-02-12"
    },
    {
     "name": "New Year's Day in Singapore (2022)",
@@ -60,12 +108,36 @@
     "page": "https://pseoare.pages.dev/new-year-s-day-singapore-2022-01-01"
    },
    {
+    "name": "Chinese New Year in Singapore (2022)",
+    "local_name": "Chinese New Year",
+    "date": "2022-02-01",
+    "weekday": "Tuesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/chinese-new-year-singapore-2022-02-01"
+   },
+   {
     "name": "New Year's Day in Singapore (2023)",
     "local_name": "New Year's Day",
     "date": "2023-01-02",
     "weekday": "Monday",
     "weekend": false,
     "page": "https://pseoare.pages.dev/new-year-s-day-singapore-2023-01-02"
+   },
+   {
+    "name": "Chinese New Year in Singapore (2023)",
+    "local_name": "Chinese New Year",
+    "date": "2023-01-23",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/chinese-new-year-singapore-2023-01-23"
+   },
+   {
+    "name": "Chinese New Year in Singapore (2024)",
+    "local_name": "Chinese New Year",
+    "date": "2024-02-10",
+    "weekday": "Saturday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/chinese-new-year-singapore-2024-02-10"
    }
   ]
  },
@@ -74,7 +146,7 @@
   "title": "Public holidays for Singapore",
   "site": "https://pseoare.pages.dev"
  },
- "updated": "2026-10-04T13:57:55.564289+00:00",
+ "updated": "2026-10-05T11:28:32.022369+00:00",
  "license": "CC-BY-4.0",
  "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
 }

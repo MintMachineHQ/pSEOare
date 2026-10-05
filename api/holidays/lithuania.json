@@ -1,7 +1,7 @@
 {
  "answer": {
   "country": "Lithuania",
-  "count": 14,
+  "count": 16,
   "holidays": [
    {
     "name": "New Year's Day in Lithuania (2016)",
@@ -108,12 +108,28 @@
     "page": "https://pseoare.pages.dev/new-year-s-day-lithuania-2022-01-01"
    },
    {
+    "name": "The Day of Restoration of the State of Lithuania in Lithuania (2022)",
+    "local_name": "Lietuvos valstyb\u0117s atk\u016brimo diena",
+    "date": "2022-02-16",
+    "weekday": "Wednesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/the-day-of-restoration-of-the-state-of-lithuania-lithuania-2022-02-16"
+   },
+   {
     "name": "New Year's Day in Lithuania (2023)",
     "local_name": "Naujieji metai",
     "date": "2023-01-01",
     "weekday": "Sunday",
     "weekend": true,
     "page": "https://pseoare.pages.dev/new-year-s-day-lithuania-2023-01-01"
+   },
+   {
+    "name": "The Day of Restoration of the State of Lithuania in Lithuania (2023)",
+    "local_name": "Lietuvos valstyb\u0117s atk\u016brimo diena",
+    "date": "2023-02-16",
+    "weekday": "Thursday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/the-day-of-restoration-of-the-state-of-lithuania-lithuania-2023-02-16"
    }
   ]
  },
@@ -122,7 +138,7 @@
   "title": "Public holidays for Lithuania",
   "site": "https://pseoare.pages.dev"
  },
- "updated": "2026-10-04T13:57:55.564289+00:00",
+ "updated": "2026-10-05T11:28:32.022369+00:00",
  "license": "CC-BY-4.0",
  "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
 }
