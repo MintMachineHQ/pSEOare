@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-08T11:21:46.160405+00:00",
+ "updated": "2026-10-09T11:19:36.280750+00:00",
  "count": 105,
  "source": "https://pseoare.pages.dev",
  "note": "figures are World Bank indicators; country rows carry only the indicators present in the source release",
@@ -432,7 +432,7 @@
    "country": "Eritrea",
    "page": "https://pseoare.pages.dev/eritrea-country-data",
    "population": 3470390.0,
-   "surface_area": 121665.0
+   "surface_area": 121640.0
   },
   {
    "country": "Estonia",
@@ -453,7 +453,7 @@
    "page": "https://pseoare.pages.dev/ethiopia-country-data",
    "population": 128691692.0,
    "gdp_per_capita": 1056.0,
-   "surface_area": 1136242.0
+   "surface_area": 1129818.0
   },
   {
    "country": "Faroe Islands",
