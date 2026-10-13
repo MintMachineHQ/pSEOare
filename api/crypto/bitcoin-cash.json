@@ -3,17 +3,17 @@
   "asset": "Bitcoin-cash",
   "high_12m": 654.84,
   "low_12m": 190.35,
-  "latest": 314.94,
-  "position_in_range_pct": 26.8,
-  "pct_above_low": 65.5,
-  "pct_below_high": 51.9,
+  "latest": 268.31,
+  "position_in_range_pct": 16.8,
+  "pct_above_low": 41.0,
+  "pct_below_high": 59.0,
   "range_pct_of_low": 244.0,
   "monthly": [
    [
     "2025-10",
     468.54,
-    599.56,
-    527.27,
+    558.91,
+    512.19,
     540.99
    ],
    [
@@ -95,10 +95,10 @@
    ],
    [
     "2026-10",
-    306.13,
+    265.47,
     319.62,
-    313.36,
-    314.94
+    295.78,
+    268.31
    ]
   ]
  },
@@ -107,7 +107,7 @@
   "title": "Bitcoin-cash 12-month price range",
   "site": "https://pseoare.pages.dev"
  },
- "updated": "2026-10-12T11:58:13.827548+00:00",
+ "updated": "2026-10-13T11:47:25.651715+00:00",
  "license": "CC-BY-4.0",
  "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
 }

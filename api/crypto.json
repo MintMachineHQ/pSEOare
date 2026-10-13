@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-12T11:58:13.827548+00:00",
+ "updated": "2026-10-13T11:47:25.651715+00:00",
  "count": 24,
  "source": "https://pseoare.pages.dev",
  "note": "high/low/latest cover the trailing 12 months",
@@ -9,59 +9,59 @@
    "page": "https://pseoare.pages.dev/algorand-price-by-month",
    "high_12m": 0.21,
    "low_12m": 0.08,
-   "latest": 0.13,
+   "latest": 0.12,
    "range_pct_of_low": 162.5,
-   "pct_above_low": 62.5,
-   "pct_below_high": 38.1
+   "pct_above_low": 50.0,
+   "pct_below_high": 42.9
   },
   {
    "asset": "Aptos",
    "page": "https://pseoare.pages.dev/aptos-price-by-month",
    "high_12m": 3.93,
    "low_12m": 0.52,
-   "latest": 0.87,
+   "latest": 0.82,
    "range_pct_of_low": 655.8,
-   "pct_above_low": 67.3,
-   "pct_below_high": 77.9
+   "pct_above_low": 57.7,
+   "pct_below_high": 79.1
   },
   {
    "asset": "Arbitrum",
    "page": "https://pseoare.pages.dev/arbitrum-price-by-month",
    "high_12m": 0.36,
    "low_12m": 0.07,
-   "latest": 0.19,
+   "latest": 0.18,
    "range_pct_of_low": 414.3,
-   "pct_above_low": 171.4,
-   "pct_below_high": 47.2
+   "pct_above_low": 157.1,
+   "pct_below_high": 50.0
   },
   {
    "asset": "Avalanche",
    "page": "https://pseoare.pages.dev/avalanche-price-by-month",
    "high_12m": 23.83,
    "low_12m": 5.89,
-   "latest": 10.99,
+   "latest": 10.22,
    "range_pct_of_low": 304.6,
-   "pct_above_low": 86.6,
-   "pct_below_high": 53.9
+   "pct_above_low": 73.5,
+   "pct_below_high": 57.1
   },
   {
    "asset": "Bitcoin-cash",
    "page": "https://pseoare.pages.dev/bitcoin-cash-price-by-month",
    "high_12m": 654.84,
    "low_12m": 190.35,
-   "latest": 314.94,
+   "latest": 268.31,
    "range_pct_of_low": 244.0,
-   "pct_above_low": 65.5,
-   "pct_below_high": 51.9
+   "pct_above_low": 41.0,
+   "pct_below_high": 59.0
   },
   {
    "asset": "Bitcoin",
    "page": "https://pseoare.pages.dev/bitcoin-price-by-month",
    "high_12m": 115226.58,
    "low_12m": 58566.09,
-   "latest": 83285.36,
+   "latest": 83327.14,
    "range_pct_of_low": 96.7,
-   "pct_above_low": 42.2,
+   "pct_above_low": 42.3,
    "pct_below_high": 27.7
   },
   {
