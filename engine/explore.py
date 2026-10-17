@@ -305,7 +305,7 @@ def _render_ranking(
 <p class="note">Figures come from public open APIs and are rebuilt on a schedule.
 <a href="{link('index.html')}">Browse every dataset</a>.</p>
 """
-    return _document(title, description, body, stamp, path="index.html")
+    return _document(title, description, body, stamp)
 
 
 # ---------------------------------------------------------------------------
@@ -415,7 +415,7 @@ behind their individual pages.</p>
 <a href="{link(a.path)}">{_esc(an)}</a> &middot;
 <a href="{link(b.path)}">{_esc(bn)}</a>.</p>
 """
-    return f"{slug}.html", _document(title, f"{an} compared with {bn} on climate and price figures.", body, stamp, path=f"{slug}.html"), "comparison"
+    return f"{slug}.html", _document(title, f"{an} compared with {bn} on climate and price figures.", body, stamp), "comparison"
 
 
 def _cmp_row(measure: str, a: str, b: str) -> str:
@@ -496,7 +496,7 @@ run, so the figures and the dates move with the data.</p>
 <p class="note">Rankings, comparisons and per-dataset pages are linked from
 <a href="{link("index.html")}">the homepage</a>.</p>
 """
-    return "today.html", _document(title, f"What is happening across the datasets on {day.isoformat()}.", body, stamp, path="today.html"), "today"
+    return "today.html", _document(title, f"What is happening across the datasets on {day.isoformat()}.", body, stamp), "today"
 
 
 def _mini_table(caption: str, rows: list[Metrics], field: str, unit: str) -> str:
@@ -775,7 +775,7 @@ page before relying on a number.</li>
 <li>Please cache rather than poll aggressively; the data only changes once a day.</li>
 </ul>
 """
-    return ("api.html", _document("Data API", "Free JSON access to the climate, holiday and crypto data on this site.", body, stamp, path="api.html"), "api")
+    return ("api.html", _document("Data API", "Free JSON access to the climate, holiday and crypto data on this site.", body, stamp), "api")
 
 
 def widget_pages(store: MetricsStore, stamp: str) -> list[tuple[str, str, str]]:
@@ -801,7 +801,7 @@ def widget_pages(store: MetricsStore, stamp: str) -> list[tuple[str, str, str]]:
         docs.append((f"{slug}.html", _document(
             f"{name} climate widget",
             f"Embeddable monthly temperature chart for {name}.", body, stamp,
-            monetised=False, path=f"{slug}.html"), "widget"))
+            monetised=False), "widget"))
     for row in store.cryptos()[:15]:
         name = str(row.data.get("name", ""))
         d = row.data
@@ -817,7 +817,7 @@ def widget_pages(store: MetricsStore, stamp: str) -> list[tuple[str, str, str]]:
         docs.append((f"widget-crypto-{row.slug}.html", _document(
             f"{name} 365-day range widget",
             f"Embeddable 365-day range widget for {name}.", body, stamp,
-            monetised=False, path=f"widget-crypto-{row.slug}.html"), "widget"))
+            monetised=False), "widget"))
     return docs
 
 
@@ -842,7 +842,7 @@ No account, no key, no script.</p>
 <pre><code>{_esc(chr(10).join(f'<iframe src="{link("widget-crypto-" + r.slug + ".html")}" width="100%" height="300" loading="lazy" style="border:0" title="{_esc(r.data.get("name"))} 365-day range"></iframe>' for r in store.cryptos()[:3]))}</code></pre>
 <p class="note">Widgets are rebuilt on the same schedule as the rest of the site.</p>
 """
-    return "widgets.html", _document("Embeddable widgets", "Embed climate charts and crypto range widgets on your own site.", body, stamp, path="widgets.html"), "widgets"
+    return "widgets.html", _document("Embeddable widgets", "Embed climate charts and crypto range widgets on your own site.", body, stamp), "widgets"
 
 
 # ---------------------------------------------------------------------------
@@ -900,16 +900,12 @@ pre,.chart{background:#1b1f23}code{background:#252a2f}.fact{background:#1b2129}}
 
 def _document(
     title: str, description: str, body: str, stamp: str, bare: bool = False,
-    monetised: bool = True, path: str = "index.html",
+    monetised: bool = True,
 ) -> str:
     """Full HTML document.
 
     Every page gets a canonical, a description and Dataset JSON-LD, because these
-    surfaces are meant to be the citable ones. `path` is the page's own output path and
-    must be passed by every caller: it used to be hardcoded to the homepage, so each of
-    these surfaces declared itself a duplicate of the homepage in its canonical. That is
-    an instruction to drop the page from the index, and it silently deindexed the whole
-    comparisons, questions, events, widgets and api-doc set. `bare` exists for a genuinely chrome-free
+    surfaces are meant to be the citable ones. `bare` exists for a genuinely chrome-free
     embed, but nothing uses it: the widget pages were originally built bare and the CI
     sanity gate correctly rejected them for having no h1 and no JSON-LD. A widget is
     still a page, and an indexable one.
@@ -920,7 +916,7 @@ def _document(
         "@type": "Dataset",
         "name": title,
         "description": description,
-        "url": link(path),
+        "url": link("index.html"),
         "dateModified": stamp,
         "license": "https://creativecommons.org/licenses/by/4.0/",
         "isAccessibleForFree": True,
@@ -930,7 +926,7 @@ def _document(
         '<meta name="viewport" content="width=device-width,initial-scale=1">'
         f'<title>{_esc(title)} | {_esc(site["name"])}</title>'
         f'<meta name="description" content="{_esc(description)}">'
-        '<link rel="canonical" href="' + link(path) + '">'
+        '<link rel="canonical" href="' + link("index.html") + '">'
     )
     if bare:
         head += f'<style>{_STYLE}</style>'
@@ -1112,7 +1108,7 @@ available as JSON at <code>{link('api/holidays.json')}</code>.</p>
 """
         docs.append((f"holidays-{slug}.html", _document(
             heading, f"Every public holiday between {start.isoformat()} and {end.isoformat()}.",
-            body, stamp, path=f"holidays-{slug}.html"), "event"))
+            body, stamp), "event"))
 
     # Per-month calendars, which is where the durable recurring search volume sits.
     by_month: dict[str, list[Metrics]] = {}
@@ -1129,8 +1125,7 @@ available as JSON at <code>{link('api/holidays.json')}</code>.</p>
 {table(subset, title)}
 """
         docs.append((f"holidays-{month}.html", _document(
-            title, f"Public holidays falling in {month}.", body, stamp,
-            path=f"holidays-{month}.html"), "event"))
+            title, f"Public holidays falling in {month}.", body, stamp), "event"))
     return docs
 
 
@@ -1252,8 +1247,7 @@ def question_pages(store: MetricsStore, stamp: str, limit: int = 40) -> list[tup
 <a href="{link(b.path)}">{_esc(bn)}</a>.</p>
 """
         docs.append((f"{slug}.html", _document(
-            title, f"{an} compared with {bn}: which is warmer, and when.", body, stamp,
-            path=f"{slug}.html"), "question"))
+            title, f"{an} compared with {bn}: which is warmer, and when.", body, stamp), "question"))
     return docs
 
 
