@@ -10,7 +10,11 @@ import math
 import sys
 import os
 import tempfile
+import inspect
+import re
 import unittest
+
+_SITE_URL = "https://pseoare.pages.dev"
 from unittest import mock
 from pathlib import Path
 
@@ -802,6 +806,10 @@ class TestRender(unittest.TestCase):
             "today.html": {"generated_at": "2026-01-01T00:00:00+00:00"},
             "older.html": {"generated_at": "2025-12-01T00:00:00+00:00"},
         }
+        # Both files must exist. This test used to assert only that the manifest named
+        # them, which is how 57 URLs the manifest outlived kept being advertised as 404s.
+        (cfg.paths.output / "today.html").write_text("<html></html>")
+        (cfg.paths.output / "older.html").write_text("<html></html>")
         xml = sitemap_xml(pages, cfg, "2026-02-02T00:00:00+00:00", published=published)
         self.assertIn(cfg.url_for("today.html"), xml)
         self.assertIn(cfg.url_for("older.html"), xml)
@@ -2671,6 +2679,10 @@ class TestSitemapSplit(unittest.TestCase):
             "aba-average-monthly-temperature-rainfall.html": {
                 "generated_at": "2026-10-01T00:00:00+00:00"},
         }
+        # Manifest entries only reach the sitemap when the file is really there, so a
+        # family disappearing here means the corpus shrank rather than a mis-classification.
+        for path in published:
+            (cfg.paths.output / path).write_text("<html></html>")
         _index, files = split_sitemaps(
             [], cfg, "2026-10-04T00:00:00Z", published=published,
             extra=["top-coldest-cities.html"])
@@ -3093,3 +3105,136 @@ class TestRefreshReserveIsAShareOfTheTotalBudget(unittest.TestCase):
         chosen = trim_to_budget(pages, budget)
         self.assertEqual(len(chosen), 5)
         self.assertTrue(all(budget.is_new(p.path) for p in chosen))
+
+
+class TestEveryDerivedPageCanonicalisesToItself(unittest.TestCase):
+    """Every surface built through engine.explore._document used to emit
+    `<link rel="canonical" href="https://pseoare.pages.dev/">` regardless of which page it
+    was rendering, because the canonical was hardcoded to index.html. The Dataset
+    JSON-LD `url` was hardcoded the same way, independently.
+
+    A canonical is an instruction, not a hint: pointing every comparison, question,
+    event, widget and api-doc page at the homepage tells search engines they are
+    duplicates of it and should be dropped from the index. A live audit of 127 sampled
+    pages found 48 with a canonical pointing elsewhere, all of them this bug.
+
+    The pre-existing tests only asserted a canonical was present, never that it was
+    correct, so the suite passed for as long as the bug existed."""
+
+    def _canonical(self, html: str) -> str | None:
+        import re as _re
+
+        m = _re.search(r'<link\s+rel="canonical"\s+href="([^"]+)"', html)
+        return m.group(1) if m else None
+
+    def _assert_self_canonical(self, path: str, html: str):
+        import json as _json
+        import re as _re
+
+        canon = self._canonical(html)
+        self.assertIsNotNone(canon, f"{path} has no canonical at all")
+        self.assertFalse(
+            canon.rstrip("/") == f"{_SITE_URL}".rstrip("/"),
+            f"{path} canonicalises to the homepage ({canon})",
+        )
+        self.assertTrue(
+            canon.endswith(path[: -len(".html")]),
+            f"{path} canonicalises to {canon}, not to itself",
+        )
+        # Structured data must agree with the canonical.
+        m = _re.search(r'<script type="application/ld\+json">(.*?)</script>', html, _re.S)
+        self.assertIsNotNone(m, f"{path} has no Dataset JSON-LD")
+        self.assertNotEqual(
+            _json.loads(m.group(1)).get("url"), f"{_SITE_URL}/",
+            f"{path} JSON-LD points at the homepage",
+        )
+
+    def _store_with_two_cities(self) -> MetricsStore:
+        from engine.metrics import MetricsStore
+
+        store = MetricsStore(Path(tempfile.mkdtemp()))
+        for i, name in enumerate(("Kazan", "Quito")):
+            store.record(
+                Page(kind="climate_city", title=name, h1=name, slug=slugify(name), summary="s"),
+                {
+                    "name": name, "kind": "climate_city", "country": "Testland",
+                    "annual_mean": 5.0 + i * 20, "warmest_month": "Jul",
+                    "warmest": 25.0 + i, "coldest_month": "Jan", "coldest": -5.0 + i,
+                    "swing": 30.0 + i, "annual_rain": 400.0 + i * 100,
+                    "wettest_month": "May", "wettest_rain": 4.0 + i,
+                    "months": [[m, round(5.0 + i * 2 + m, 1)] for m in range(1, 13)],
+                },
+            )
+        return store
+
+    def test_a_comparison_page_canonicalises_to_its_own_url(self):
+        from engine.explore import comparison_pages
+
+        pages = comparison_pages(self._store_with_two_cities(), "2026-01-01")
+        self.assertTrue(pages, "no comparison pages were built")
+        path, html, _kind = pages[0]
+        self._assert_self_canonical(path, html)
+
+    def test_no_derived_document_mentions_the_homepage_as_its_identity(self):
+        # Cheap and broad, and it covers callers without an obvious fixture.
+        from engine import explore
+
+        src = inspect.getsource(explore._document)
+        self.assertIn("link(path)", src)
+        self.assertNotIn('link("index.html")', src)
+
+    def test_the_today_page_canonicalises_to_its_own_url(self):
+        from engine.explore import today_page
+
+        path, html, _kind = today_page(self._store_with_two_cities(), "2026-01-01")
+        self._assert_self_canonical(path, html)
+
+
+class TestSitemapOnlyAdvertisesFilesThatExist(unittest.TestCase):
+    """The manifest is a cache that accumulates published paths across runs, so it
+    outlives the files it names. When the holiday source stopped re-emitting past-year
+    New Year's Day pages, their files stopped being written while their manifest entries
+    survived, so the sitemap kept advertising 57 URLs that return 404.
+
+    A sitemap is a promise. Advertising dead URLs spends a crawler's budget on 404s and
+    teaches it that the file is untrustworthy, so the sitemap must be a subset of what is
+    actually on disk."""
+
+    def test_a_manifest_path_with_no_file_is_dropped(self):
+        from engine.hubs import sitemap_xml
+
+        cfg = make_cfg(Path(tempfile.mkdtemp()))
+        # One page really exists in the output tree, one is only named by the manifest.
+        (cfg.paths.output / "present.html").write_text("<html></html>")
+        published = {
+            "present.html": {"generated_at": "2026-01-01"},
+            "vanished.html": {"generated_at": "2025-06-01"},
+        }
+        xml = sitemap_xml([], cfg, "2026-01-01", published=published)
+        locs = re.findall(r"<loc>([^<]+)</loc>", xml)
+        self.assertIn("present.html", " ".join(locs))
+        self.assertNotIn("vanished.html", " ".join(locs))
+
+    def test_stale_paths_are_logged_not_silently_dropped(self):
+        import logging as _logging
+
+        from engine.hubs import sitemap_xml
+
+        cfg = make_cfg(Path(tempfile.mkdtemp()))
+        published = {"gone.html": {"generated_at": "2025-06-01"}}
+        with self.assertLogs("engine.hubs", level=_logging.WARNING) as caught:
+            sitemap_xml([], cfg, "2026-01-01", published=published)
+        self.assertTrue(
+            any("no file on disk" in m for m in caught.output),
+            f"stale paths were dropped without warning: {caught.output}",
+        )
+
+    def test_a_page_rebuilt_this_run_is_always_listed(self):
+        # A page is written to disk after the sitemap is built in some code paths, so a
+        # path present in this run must never be dropped just because the stat missed it.
+        from engine.hubs import sitemap_xml
+
+        cfg = make_cfg(Path(tempfile.mkdtemp()))
+        page = sample_page(cfg)
+        xml = sitemap_xml([page], cfg, "2026-01-01", published={page.path: {}})
+        self.assertIn(page.path[: -len(".html")], xml)

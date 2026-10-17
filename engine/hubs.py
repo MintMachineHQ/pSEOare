@@ -274,8 +274,28 @@ def sitemap_xml(
 
     urls = [(name, "0.8", "daily", stamp) for name in hub_filenames(pages)]
     rebuilt = {page.path: page for page in pages}
+
+    # A sitemap may only advertise URLs that exist. The manifest is a cache that
+    # accumulates paths across runs, so it outlives the files: when the holiday source
+    # stopped re-emitting past-year New Year's Day pages their files were no longer
+    # written, but their manifest entries survived and kept being advertised. A live
+    # audit found 57 such URLs returning 404, which spends crawl budget on dead ends and
+    # teaches a crawler the sitemap is untrustworthy.
+    out = Path(cfg.paths.output)
+    stale: list[str] = []
+
+    def _on_disk(path: str) -> bool:
+        if path in rebuilt:
+            return True
+        exists = (out / path).is_file()
+        if not exists and path.endswith(".html"):
+            stale.append(path)
+        return exists
+
     for path, entry in (published or {}).items():
         if path in rebuilt or not path.endswith(".html"):
+            continue
+        if not _on_disk(path):
             continue
         generated = (entry or {}).get("generated_at") or stamp
         urls.append((path, "0.7", "weekly", generated))
@@ -294,11 +314,21 @@ def sitemap_xml(
             daily.append(path)
         else:
             weekly.append(path)
+    # `extra` is rebuilt from this run's registrations, so it cannot go stale and is not
+    # stat-checked: the writer emits these after the sitemap is built, so a stat here would
+    # drop perfectly good derived URLs.
     urls += [(p, "0.9", "daily", stamp) for p in daily]
     urls += [(p, "0.6", "weekly", stamp) for p in weekly]
     # Directories such as api/ appear in the sitemap through their files; listing the
     # directory itself would be a URL that serves a directory listing.
     urls = [u for u in urls if u[0] not in (extra_dirs or set())]
+
+    if stale:
+        # Surfaced rather than swallowed: a large number here means pages are being lost
+        # from the corpus, which is a regression, not a cleanup.
+        log.warning("sitemap dropped %d manifest paths with no file on disk", len(stale))
+        for path in stale[:10]:
+            log.warning("  stale: %s", path)
 
     seen: set[str] = set()
     entries = []
