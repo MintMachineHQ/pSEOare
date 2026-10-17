@@ -305,7 +305,7 @@ def _render_ranking(
 <p class="note">Figures come from public open APIs and are rebuilt on a schedule.
 <a href="{link('index.html')}">Browse every dataset</a>.</p>
 """
-    return _document(title, description, body, stamp, path="index.html")
+    return _document(title, description, body, stamp, path=f"{slug}.html")
 
 
 # ---------------------------------------------------------------------------

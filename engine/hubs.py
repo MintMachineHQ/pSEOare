@@ -300,6 +300,13 @@ def sitemap_xml(
     # directory itself would be a URL that serves a directory listing.
     urls = [u for u in urls if u[0] not in (extra_dirs or set())]
 
+    # JSON endpoints are not indexable pages: they carry no title, h1 or canonical, so
+    # every one of them shows up in Search Console as a submitted URL that cannot be
+    # indexed. They are still advertised where machines look -- llms.txt, the API docs
+    # and the JSON-LD on each dataset page all point at them -- so nothing is lost by
+    # keeping crawlers out of 186 dead-end fetches.
+    urls = [u for u in urls if not u[0].endswith(".json")]
+
     seen: set[str] = set()
     entries = []
     for path, priority, freq, lastmod in urls:

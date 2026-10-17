@@ -2217,8 +2217,11 @@ class TestDerivedPagesSurviveRuns(unittest.TestCase):
         pages = []
         xml = sitemap_xml(pages, cfg, "2026-10-04T00:00:00Z",
                           extra=["today.html", "top-coldest-cities.html", "api/climate.json"])
-        for path in ("today", "top-coldest-cities", "api/climate.json"):
+        for path in ("today", "top-coldest-cities"):
             self.assertIn(path, xml)
+        # JSON endpoints are reachable from llms.txt, the API docs and each dataset
+        # page's JSON-LD, but are not advertised to crawlers: they cannot be indexed.
+        self.assertNotIn("api/climate.json", xml)
 
     def test_rankings_are_daily_and_widgets_weekly(self):
         import tempfile as tf
@@ -3099,7 +3102,6 @@ class TestRefreshReserveIsAShareOfTheTotalBudget(unittest.TestCase):
         self.assertEqual(len(chosen), 5)
         self.assertTrue(all(budget.is_new(p.path) for p in chosen))
 
-
 class TestEveryDerivedPageCanonicalisesToItself(unittest.TestCase):
     """Every surface built through engine.explore._document used to emit
     `<link rel="canonical" href="https://pseoare.pages.dev/">` regardless of which page it
@@ -3177,3 +3179,41 @@ class TestEveryDerivedPageCanonicalisesToItself(unittest.TestCase):
 
         path, html, _kind = today_page(self._store_with_two_cities(), "2026-01-01")
         self._assert_self_canonical(path, html)
+
+    def test_a_ranking_page_canonicalises_to_its_own_url(self):
+        # Ranking pages go through _render_ranking, which had its own hardcoded
+        # path="index.html" and so also pointed every `top-*` page at the homepage.
+        from engine.explore import ranking_pages
+
+        store = self._store_with_two_cities()
+        pages = [p for p in ranking_pages(store, "2026-01-01") if p[0].startswith("top-")]
+        self.assertTrue(pages, "no ranking pages were built")
+        path, html, _kind = pages[0]
+        self._assert_self_canonical(path, html)
+
+
+class TestSitemapsDoNotAdvertiseJsonEndpoints(unittest.TestCase):
+    """The corpus carries 186 JSON endpoints and they were all in the sitemap. A JSON
+    response has no title, no h1 and no canonical, so every one of them lands in Search
+    Console as a submitted URL that cannot be indexed, which is exactly the kind of
+    noise that erodes trust in the whole sitemap."""
+
+    def test_json_endpoints_are_excluded(self):
+        from engine.hubs import sitemap_xml
+
+        cfg = make_cfg(Path(tempfile.mkdtemp()))
+        xml = sitemap_xml([], cfg, "2026-10-04T00:00:00Z",
+                          extra=["today.html", "api/climate.json",
+                                 "api/cities/kazan.json"])
+        self.assertIn("today", xml)
+        self.assertNotIn("api/climate.json", xml)
+        self.assertNotIn("api/cities/kazan.json", xml)
+
+    def test_html_pages_are_unaffected(self):
+        from engine.hubs import sitemap_xml
+
+        cfg = make_cfg(Path(tempfile.mkdtemp()))
+        xml = sitemap_xml([], cfg, "2026-10-04T00:00:00Z",
+                          extra=["today.html", "widgets.html"])
+        self.assertIn("today", xml)
+        self.assertIn("widgets", xml)
