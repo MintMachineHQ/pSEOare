@@ -6,12 +6,17 @@ from __future__ import annotations
 
 import json
 import asyncio
+import inspect
 import math
+import re
 import sys
 import os
 import tempfile
 import unittest
 from unittest import mock
+
+_SITE_URL = "https://pseoare.pages.dev"
+
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
@@ -3093,3 +3098,82 @@ class TestRefreshReserveIsAShareOfTheTotalBudget(unittest.TestCase):
         chosen = trim_to_budget(pages, budget)
         self.assertEqual(len(chosen), 5)
         self.assertTrue(all(budget.is_new(p.path) for p in chosen))
+
+
+class TestEveryDerivedPageCanonicalisesToItself(unittest.TestCase):
+    """Every surface built through engine.explore._document used to emit
+    `<link rel="canonical" href="https://pseoare.pages.dev/">` regardless of which page it
+    was rendering, because the canonical was hardcoded to index.html. The Dataset
+    JSON-LD `url` was hardcoded the same way, independently.
+
+    A canonical is an instruction, not a hint: pointing every comparison, question,
+    event, widget and api-doc page at the homepage tells search engines they are
+    duplicates of it and should be dropped from the index. A live audit of 127 sampled
+    pages found 48 with a canonical pointing elsewhere, all of them this bug.
+
+    The pre-existing tests only asserted a canonical was present, never that it was
+    correct, so the suite passed for as long as the bug existed."""
+
+    def _canonical(self, html: str) -> str | None:
+        m = re.search(r'<link\s+rel="canonical"\s+href="([^"]+)"', html)
+        return m.group(1) if m else None
+
+    def _assert_self_canonical(self, path: str, html: str):
+        import json as _json
+
+        canon = self._canonical(html)
+        self.assertIsNotNone(canon, f"{path} has no canonical at all")
+        self.assertFalse(
+            canon.rstrip("/") == _SITE_URL.rstrip("/"),
+            f"{path} canonicalises to the homepage ({canon})",
+        )
+        self.assertTrue(
+            canon.endswith(path[: -len(".html")]),
+            f"{path} canonicalises to {canon}, not to itself",
+        )
+        m = re.search(r'<script type="application/ld\+json">(.*?)</script>', html, re.S)
+        self.assertIsNotNone(m, f"{path} has no Dataset JSON-LD")
+        self.assertNotEqual(
+            _json.loads(m.group(1)).get("url"), f"{_SITE_URL}/",
+            f"{path} JSON-LD points at the homepage",
+        )
+
+    def _store_with_two_cities(self) -> MetricsStore:
+        from engine.metrics import MetricsStore
+
+        store = MetricsStore(Path(tempfile.mkdtemp()))
+        for i, name in enumerate(("Kazan", "Quito")):
+            store.record(
+                Page(kind="climate_city", title=name, h1=name, slug=slugify(name),
+                     summary="s"),
+                {
+                    "name": name, "kind": "climate_city", "country": "Testland",
+                    "annual_mean": 5.0 + i * 20, "warmest_month": "Jul",
+                    "warmest": 25.0 + i, "coldest_month": "Jan", "coldest": -5.0 + i,
+                    "swing": 30.0 + i, "annual_rain": 400.0 + i * 100,
+                    "wettest_month": "May", "wettest_rain": 4.0 + i,
+                    "months": [[m, round(5.0 + i * 2 + m, 1)] for m in range(1, 13)],
+                },
+            )
+        return store
+
+    def test_a_comparison_page_canonicalises_to_its_own_url(self):
+        from engine.explore import comparison_pages
+
+        pages = comparison_pages(self._store_with_two_cities(), "2026-01-01")
+        self.assertTrue(pages, "no comparison pages were built")
+        path, html, _kind = pages[0]
+        self._assert_self_canonical(path, html)
+
+    def test_no_derived_document_mentions_the_homepage_as_its_identity(self):
+        from engine import explore
+
+        src = inspect.getsource(explore._document)
+        self.assertIn("link(path)", src)
+        self.assertNotIn('link("index.html")', src)
+
+    def test_the_today_page_canonicalises_to_its_own_url(self):
+        from engine.explore import today_page
+
+        path, html, _kind = today_page(self._store_with_two_cities(), "2026-01-01")
+        self._assert_self_canonical(path, html)
