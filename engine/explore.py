@@ -893,6 +893,12 @@ pre{background:#f7f7f7;padding:.7rem;overflow:auto;border-radius:4px}
 .widget{font:14px/1.5 system-ui,sans-serif;padding:0}
 .widget h1{font-size:1.05rem;margin:0 0 .4rem}
 .attrib{font-size:.8rem;color:#666;margin:.4rem 0 0}
+.ad-zone{margin:1.6rem 0 0;padding:0}
+.native-banner{display:block;width:100%;min-height:90px;margin:0 auto;overflow:hidden}
+.smartlink{display:block;margin:10px auto 0;max-width:728px;padding:9px 14px;border:1px solid #e2e8f0;
+  border-radius:8px;background:#f8fafc;color:#475569;font-size:.82rem;letter-spacing:.04em;
+  text-decoration:none;text-align:center}
+@media (max-width:820px){.native-banner{min-height:250px}}
 @media(prefers-color-scheme:dark){body{background:#14171a;color:#e8e8e8}
 th,td{border-color:#333}thead th{background:#22262a}.meta,.note{color:#9aa}
 pre,.chart{background:#1b1f23}code{background:#252a2f}.fact{background:#1b2129}}
@@ -947,7 +953,28 @@ def _document(
     # waiting to happen; Web Stories have a 30 KB AMP payload budget and no script room.
     if monetised:
         head += _popunder()
+        zone = _ad_zone()
+        if zone:
+            body = body + "\n" + zone
     return f"<!doctype html><html lang=\"en\"><head>{head}</head><body>{body}</body></html>"
+
+
+def _ad_zone() -> str:
+    """The ad zone the regular pages carry, for the derived surfaces.
+
+    Rankings, comparisons, questions and Today are pages a visitor lands on and they
+    were the only pages on the site with no banner slot at all: about 1,600 URLs, a
+    third of the corpus, earning nothing from the native banner. The markup comes from
+    render.py so the two paths cannot drift apart.
+    """
+    if _CFG is None:
+        return ""
+    try:
+        from .render import ad_block, build_theme
+
+        return ad_block(_CFG, build_theme(), "foot")
+    except Exception:  # never let an ad decision break a page
+        return ""
 
 
 def configure_ads(cfg: Any) -> None:

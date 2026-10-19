@@ -94,7 +94,27 @@
     "cpa_fallback_image": "https://placehold.co/728x90.png?text=Recommended+Deal",
     "cpa_fallback_text": "Recommended deal for you",
     "popunder_script": "<script data-cfasync=\"false\" src=\"https://abscloud.org/1/ab24cc73abe03a1b2a5a5b4e33bbf3c7\"></script>",
-    "popunder_exempt_hosts": ["reddit.com", "stackoverflow.com", "stackexchange.com", "superuser.com", "serverfault.com", "askubuntu.com", "quora.com", "linkedin.com", "facebook.com", "instagram.com", "news.ycombinator.com", "lobste.rs", "tiktok.com", "youtube.com", "pinterest.com", "tumblr.com", "medium.com", "discord.com", "wikipedia.org"],
+    "popunder_exempt_hosts": [
+      "reddit.com",
+      "stackoverflow.com",
+      "stackexchange.com",
+      "superuser.com",
+      "serverfault.com",
+      "askubuntu.com",
+      "quora.com",
+      "linkedin.com",
+      "facebook.com",
+      "instagram.com",
+      "news.ycombinator.com",
+      "lobste.rs",
+      "tiktok.com",
+      "youtube.com",
+      "pinterest.com",
+      "tumblr.com",
+      "medium.com",
+      "discord.com",
+      "wikipedia.org"
+    ],
     "popunder_exempt_hosts_note": "Referrer hosts on which the popunder loader is never injected. Community referral traffic is the traffic we cannot buy and cannot afford to lose: an instant popunder on a referred visit is what gets a link removed and an account banned. Matching is on the referrer host and its subdomains. Set to [] to load the popunder for every visitor, or set popunder_enabled false to remove it entirely.",
     "social_bar_script": "",
     "note": "The popunder is a page-wide loader and is emitted once before </head>. The native banner carries a fixed container id, so it is rendered in native_banner_slot only. Every other slot gets the house ad, and the waterfall JS remains as a last-resort fill for a slot that renders empty.",
@@ -108,6 +128,12 @@
       "headline": "Browse every dataset on this site",
       "text": "Country indicators, city climate averages, holiday dates and 365-day crypto ranges, each page linked to its neighbours.",
       "note": "Fills any slot no ad network occupies, so top and mid are not dead space. Target must be a path that actually exists: index.html is the full dataset list. Set enabled false to disable. A CPA offer can replace it by setting cpa_fallback_url once there is a real link."
+    },
+    "smartlink": {
+      "enabled": true,
+      "url": "https://asiafilm.org/4/a4429f0555256832fe25361bc1b6455d",
+      "label": "Sponsored link",
+      "note": "Adsterra smartlink (placement 31551326 on domain smart-link-3497624). A monetised redirect, labelled and rel=nofollow sponsored. The URL is read from the publisher API."
     }
   },
   "seo": {

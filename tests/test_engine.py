@@ -2176,6 +2176,75 @@ class TestQualityScoring(unittest.TestCase):
         self.assertEqual(top[0][1], 9)
 
 
+class TestDerivedSurfacesCarryTheAdSlots(unittest.TestCase):
+    """Rankings, comparisons and questions are landing pages, so they carry the ad
+    slots like every other page.
+
+    They were the only pages on the site with no banner slot: about 1,600 URLs, a third
+    of the corpus, with nothing to earn from. Widgets stay clean because they are
+    embedded in someone else's site.
+    """
+
+    def _cfg(self):
+        tmp = Path(tempfile.mkdtemp())
+        cfg = make_cfg(tmp)
+        cfg.raw["monetization"] = dict(cfg.raw.get("monetization") or {})
+        cfg.raw["monetization"]["adsterra_script"] = (
+            '<script async="async" data-cfasync="false" '
+            'src="https://bauval.org/21/f1f54edba8f1e63e97bdd455dd7245ec"></script>\n'
+            '<div id="container-f1f54edba8f1e63e97bdd455dd7245ec"></div>'
+        )
+        cfg.raw["monetization"]["smartlink"] = {
+            "enabled": True,
+            "url": "https://asiafilm.org/4/a4429f0555256832fe25361bc1b6455d",
+            "label": "Sponsored link",
+        }
+        return cfg
+
+    def test_a_ranking_page_carries_the_banner_and_the_smartlink(self):
+        from engine import explore
+
+        cfg = self._cfg()
+        explore.configure_ads(cfg)
+        store = TestExploreSurfaces()._store(tmp=str(cfg.paths.cache))
+        docs = dict((f, h) for f, h, _ in explore.ranking_pages(
+            store, "2026-10-19T00:00:00Z"
+        ))
+        self.assertTrue(docs, "expected at least one ranking page")
+        html = next(iter(docs.values()))
+        self.assertIn("bauval.org", html)
+        self.assertIn("container-f1f54edba8f1e63e97bdd455dd7245ec", html)
+        self.assertIn("asiafilm.org", html)
+
+    def test_the_smartlink_is_labelled_and_marked_as_sponsored(self):
+        from engine.render import smartlink_html
+
+        cfg = self._cfg()
+        html = smartlink_html(cfg)
+        self.assertIn("asiafilm.org", html)
+        self.assertIn('rel="nofollow sponsored noopener"', html)
+        self.assertIn("Sponsored link", html)
+
+    def test_no_smartlink_when_it_is_switched_off(self):
+        from engine.render import smartlink_html
+
+        cfg = self._cfg()
+        cfg.raw["monetization"]["smartlink"]["enabled"] = False
+        self.assertEqual(smartlink_html(cfg), "")
+
+    def test_a_widget_stays_free_of_ads(self):
+        from engine import explore
+
+        cfg = self._cfg()
+        explore.configure_ads(cfg)
+        html = explore._document(
+            "Widget", "A widget", "<p>chart</p>", "2026-10-19T00:00:00Z",
+            monetised=False, path="widget-test.html",
+        )
+        self.assertNotIn("bauval.org", html)
+        self.assertNotIn("asiafilm.org", html)
+
+
 class TestExploreSurfaces(unittest.TestCase):
     """Rankings, comparisons, Today, the API and widgets are built from the metrics
     store, so they must be generated without network access and without raising."""

@@ -478,6 +478,14 @@ def split_native_banner(raw: str) -> tuple[str, str] | None:
     return loader, match.group(1)
 
 
+SMARTLINK_CSS = """
+.smartlink{display:block;margin:10px auto 0;max-width:728px;padding:9px 14px;border:1px solid #e2e8f0;
+  border-radius:8px;background:#f8fafc;color:#475569;font-size:.82rem;letter-spacing:.04em;
+  text-decoration:none;text-align:center}
+.smartlink:hover{border-color:#94a3b8;color:#1e293b}
+""".strip()
+
+
 HOUSE_AD_CSS = """
 .house-ad{display:block;border:1px solid #e2e8f0;border-left:3px solid var(--accent);
   border-radius:8px;padding:14px 16px;background:#f8fafc;color:inherit;text-decoration:none}
@@ -515,6 +523,26 @@ def house_ad_html(cfg: Config, theme: dict[str, Any], slot: str) -> str:
       </a>"""
 
 
+def smartlink_html(cfg: Config) -> str:
+    """A clearly labelled link to Adsterra's smartlink.
+
+    The smartlink is a monetised redirect: a visitor who follows it lands on a page
+    Adsterra monetises. It is labelled and marked ``rel="nofollow sponsored"`` so it
+    is never mistaken for one of the site's own references.
+    """
+    smart = cfg.monetization.get("smartlink") or {}
+    if smart.get("enabled") is False:
+        return ""
+    url = (smart.get("url") or "").strip()
+    if not url:
+        return ""
+    label = (smart.get("label") or "Sponsored link").strip()
+    return (
+        f'      <a class="smartlink" href="{_esc(url)}" rel="nofollow sponsored noopener" '
+        f'target="_blank">{_esc(label)}</a>'
+    )
+
+
 def ad_block(cfg: Config, theme: dict[str, Any], slot: str) -> str:
     money = cfg.monetization
     native_slot = (money.get("native_banner_slot") or "foot").strip()
@@ -538,6 +566,9 @@ def ad_block(cfg: Config, theme: dict[str, Any], slot: str) -> str:
         parts.append(f"    {loader}")
         parts.append(f'    <div class="native-banner" id="{container_id}"></div>')
     body = "\n".join(parts) if parts else house_ad_html(cfg, theme, slot)
+    smart = smartlink_html(cfg)
+    if smart:
+        body = body + "\n" + smart
     if not body.strip():
         body = '      <span class="ad-hint">ad slot</span>'
     return f"""    <aside class="ad-zone {theme['page']}-ad-{slot}" data-ad-slot="{slot}" aria-label="Advertisement">
