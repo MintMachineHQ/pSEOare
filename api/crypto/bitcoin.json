@@ -3,7 +3,7 @@
   "asset": "Bitcoin",
   "high_12m": 114419.22,
   "low_12m": 58566.09,
-  "latest": 81943.22,
+  "latest": 81945.63,
   "position_in_range_pct": 41.9,
   "pct_above_low": 39.9,
   "pct_below_high": 28.4,
@@ -14,7 +14,7 @@
   "title": "Bitcoin 12-month price range",
   "site": "https://pseoare.pages.dev"
  },
- "updated": "2026-10-19T20:28:21.016378+00:00",
+ "updated": "2026-10-19T20:41:30.228277+00:00",
  "license": "CC-BY-4.0",
  "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
 }
