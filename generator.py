@@ -96,7 +96,11 @@ async def run(args: argparse.Namespace) -> int:
     )
     limits = cfg.limits
     writer = Writer(cfg.paths.output, cfg.paths.cache)
-    page_budget = CallBudget(int(limits.get("max_pages_per_run", 100)), seen=set(writer.previous))
+    page_budget = CallBudget(
+        int(limits.get("max_pages_per_run", 100)),
+        seen=set(writer.previous),
+        published_hashes=writer.previous,
+    )
 
     async with Http(
         concurrency=int(limits.get("http_concurrency", 8)),

@@ -39,7 +39,9 @@ async def collect_all(cfg: Config, http: Http, budget: CallBudget) -> list[Page]
 
     pages: list[Page] = []
     for name in names:
-        sub_budget = CallBudget(shares[name], seen=budget.seen)
+        sub_budget = CallBudget(
+            shares[name], seen=budget.seen, published_hashes=budget.published_hashes
+        )
         try:
             produced = await _import(name).collect(cfg, http, sub_budget)
             log.info("source %s produced %d/%d pages", name, len(produced), shares[name])

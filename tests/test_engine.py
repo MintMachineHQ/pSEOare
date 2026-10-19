@@ -767,6 +767,39 @@ class TestRender(unittest.TestCase):
         self.assertGreaterEqual(refreshes, int(40 * REFRESH_SHARE) - 1)
         self.assertGreater(unseen, 0)  # growth still happens
 
+    def test_the_refresh_reserve_picks_pages_that_actually_changed(self):
+        # A published page whose content hash still matches was written already, and the
+        # writer skips it. Spending the reserve on those leaves the pages that really
+        # need rewriting untouched, so a change that applies to the whole corpus never
+        # reaches the rest of the corpus.
+        cfg = make_cfg(Path(tempfile.mkdtemp()))
+        pages = []
+        for i in range(20):
+            page = sample_page(cfg)
+            page.slug = f"page-{i:03d}"
+            pages.append(page)
+        published = {p.path: p.content_hash for p in pages[:10]}
+        # The first five published pages changed; the next five did not.
+        for page in pages[:5]:
+            page.title = page.title + " (updated)"
+        stale = {p.slug for p in pages[:5]}
+        budget = CallBudget(limit=8, seen=set(published), published_hashes=published)
+        chosen = trim_to_budget(pages, budget)
+        slugs = {p.slug for p in chosen}
+        refreshes = {s for s in slugs if s < "page-010"}
+        # Every published page that was picked has to be one that actually changed:
+        # a fresh page would be skipped by the writer, wasting the slot.
+        self.assertTrue(refreshes)
+        self.assertTrue(refreshes.issubset(stale))
+        self.assertGreaterEqual(len(refreshes), 4)
+
+    def test_a_stale_page_is_not_treated_as_new(self):
+        budget = CallBudget(limit=10, seen={"a.html"}, published_hashes={"a.html": "old"})
+        self.assertFalse(budget.is_new("a.html"))
+        self.assertTrue(budget.is_stale("a.html", "new"))
+        self.assertFalse(budget.is_stale("a.html", "old"))
+        self.assertFalse(budget.is_stale("b.html", "new"))
+
     def test_budget_reserve_is_skipped_for_a_tiny_budget(self):
         # Below the threshold the reserve would eat most of the run, so growth wins.
         cfg = make_cfg(Path(tempfile.mkdtemp()))
@@ -1872,6 +1905,9 @@ class TestSources(unittest.TestCase):
         class Budget:
             def is_new(self, path):
                 return True
+
+            def is_stale(self, path, content_hash):
+                return False
 
             @property
             def remaining(self):

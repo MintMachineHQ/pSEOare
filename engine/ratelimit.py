@@ -55,16 +55,33 @@ class TokenBucket:
 class CallBudget:
     """Hard cap on total calls per run so a cron job can never burn the quota."""
 
-    def __init__(self, limit: int, seen: set[str] | None = None) -> None:
+    def __init__(
+        self,
+        limit: int,
+        seen: set[str] | None = None,
+        published_hashes: dict[str, str] | None = None,
+    ) -> None:
         self.limit = limit
         self.used = 0
         # Page paths already published by earlier runs. Sources order their output so
         # unseen pages come first, which makes each scheduled run add new pages
         # instead of regenerating the same alphabetical head of the list.
         self.seen: set[str] = seen if seen is not None else set()
+        # Content hashes of the pages that are already published. A published page whose
+        # hash no longer matches its current content is stale: it has to be rewritten
+        # before the change reaches a reader, and refreshing it is exactly what the
+        # refresh reserve is for. Without this the reserve picks the same alphabetical
+        # pages every run, so a change that applies to the whole corpus never reaches
+        # the rest of the corpus.
+        self.published_hashes: dict[str, str] = published_hashes or {}
 
     def is_new(self, path: str) -> bool:
         return path not in self.seen
+
+    def is_stale(self, path: str, content_hash: str) -> bool:
+        """True when a published page no longer matches what was published."""
+        known = self.published_hashes.get(path)
+        return known is not None and known != content_hash
 
     @property
     def remaining(self) -> int:

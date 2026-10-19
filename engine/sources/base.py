@@ -113,7 +113,17 @@ def trim_to_budget(pages: list[Page], budget: CallBudget) -> list[Page]:
     reserve is what lets a thousand-page corpus converge on a config change instead of
     trickling.
     """
-    ordered = sorted(pages, key=lambda page: (not budget.is_new(page.path), page.slug))
+    # Unseen pages first, then the published pages whose content has changed since
+    # they were written. A published page that has not changed is a wasted slot: the
+    # writer skips it and the run spends its refresh reserve on nothing.
+    ordered = sorted(
+        pages,
+        key=lambda page: (
+            not budget.is_new(page.path),
+            not budget.is_stale(page.path, page.content_hash),
+            page.slug,
+        ),
+    )
     # Report the split. A source whose candidate list is entirely "seen" is a saturated
     # dataset, and knowing that per source is the only way to tell "the corpus is full"
     # apart from "the budget is being spent on refreshes while unpublished pages wait".
