@@ -1,7 +1,7 @@
 {
  "answer": {
   "country": "Turkey",
-  "count": 32,
+  "count": 36,
   "holidays": [
    {
     "name": "New Year's Day in Turkey (2016)",
@@ -196,6 +196,14 @@
     "page": "https://pseoare.pages.dev/eid-al-fitr-second-day-turkey-2023-04-22"
    },
    {
+    "name": "New Year's Day in Turkey (2024)",
+    "local_name": "Y\u0131lba\u015f\u0131",
+    "date": "2024-01-01",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/new-year-s-day-turkey-2024-01-01"
+   },
+   {
     "name": "Eid al-Fitr First Day in Turkey (2024)",
     "local_name": "Ramazan Bayram\u0131 1. G\u00fcn",
     "date": "2024-04-10",
@@ -210,6 +218,14 @@
     "weekday": "Thursday",
     "weekend": false,
     "page": "https://pseoare.pages.dev/eid-al-fitr-second-day-turkey-2024-04-11"
+   },
+   {
+    "name": "New Year's Day in Turkey (2025)",
+    "local_name": "Y\u0131lba\u015f\u0131",
+    "date": "2025-01-01",
+    "weekday": "Wednesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/new-year-s-day-turkey-2025-01-01"
    },
    {
     "name": "Eid al-Fitr First Day in Turkey (2025)",
@@ -228,6 +244,14 @@
     "page": "https://pseoare.pages.dev/eid-al-fitr-second-day-turkey-2025-03-31"
    },
    {
+    "name": "New Year's Day in Turkey (2026)",
+    "local_name": "Y\u0131lba\u015f\u0131",
+    "date": "2026-01-01",
+    "weekday": "Thursday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/new-year-s-day-turkey-2026-01-01"
+   },
+   {
     "name": "Eid al-Fitr First Day in Turkey (2026)",
     "local_name": "Ramazan Bayram\u0131 1. G\u00fcn",
     "date": "2026-03-20",
@@ -242,6 +266,14 @@
     "weekday": "Saturday",
     "weekend": true,
     "page": "https://pseoare.pages.dev/eid-al-fitr-second-day-turkey-2026-03-21"
+   },
+   {
+    "name": "New Year's Day in Turkey (2027)",
+    "local_name": "Y\u0131lba\u015f\u0131",
+    "date": "2027-01-01",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/new-year-s-day-turkey-2027-01-01"
    },
    {
     "name": "Eid al-Fitr First Day (Tentative Date) in Turkey (2027)",
@@ -266,7 +298,7 @@
   "title": "Public holidays for Turkey",
   "site": "https://pseoare.pages.dev"
  },
- "updated": "2026-10-19T20:49:39.946179+00:00",
+ "updated": "2026-10-19T21:31:23.957377+00:00",
  "license": "CC-BY-4.0",
  "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
 }

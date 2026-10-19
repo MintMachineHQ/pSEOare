@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Valledupar",
+  "annual_mean_c": 22.8,
+  "warmest_month": "Aug",
+  "warmest_c": 23.8,
+  "coldest_month": "Jan",
+  "coldest_c": 21.4,
+  "seasonal_swing_c": 2.4,
+  "annual_rainfall_mm": 714.0,
+  "wettest_month": "Oct",
+  "wettest_mm_per_day": 4.53,
+  "driest_month": "Jan",
+  "driest_mm_per_day": 0.13,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 21.4,
+    "rain_mm_per_day": 0.13
+   },
+   {
+    "month": "Feb",
+    "mean_c": 22.2,
+    "rain_mm_per_day": 0.14
+   },
+   {
+    "month": "Mar",
+    "mean_c": 23.0,
+    "rain_mm_per_day": 0.64
+   },
+   {
+    "month": "Apr",
+    "mean_c": 23.5,
+    "rain_mm_per_day": 1.48
+   },
+   {
+    "month": "May",
+    "mean_c": 23.5,
+    "rain_mm_per_day": 3.61
+   },
+   {
+    "month": "Jun",
+    "mean_c": 23.6,
+    "rain_mm_per_day": 2.27
+   },
+   {
+    "month": "Jul",
+    "mean_c": 23.5,
+    "rain_mm_per_day": 1.61
+   },
+   {
+    "month": "Aug",
+    "mean_c": 23.8,
+    "rain_mm_per_day": 2.25
+   },
+   {
+    "month": "Sep",
+    "mean_c": 23.4,
+    "rain_mm_per_day": 3.01
+   },
+   {
+    "month": "Oct",
+    "mean_c": 22.6,
+    "rain_mm_per_day": 4.53
+   },
+   {
+    "month": "Nov",
+    "mean_c": 22.0,
+    "rain_mm_per_day": 2.78
+   },
+   {
+    "month": "Dec",
+    "mean_c": 21.6,
+    "rain_mm_per_day": 1.03
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/valledupar-average-monthly-temperature-rainfall",
+  "title": "Valledupar climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T21:31:23.957377+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

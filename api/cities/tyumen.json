@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Tyumen",
+  "annual_mean_c": 1.4,
+  "warmest_month": "Jul",
+  "warmest_c": 19.3,
+  "coldest_month": "Jan",
+  "coldest_c": -18.9,
+  "seasonal_swing_c": 38.2,
+  "annual_rainfall_mm": 501.0,
+  "wettest_month": "Jun",
+  "wettest_mm_per_day": 2.3,
+  "driest_month": "Feb",
+  "driest_mm_per_day": 0.64,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": -18.9,
+    "rain_mm_per_day": 0.7
+   },
+   {
+    "month": "Feb",
+    "mean_c": -15.8,
+    "rain_mm_per_day": 0.64
+   },
+   {
+    "month": "Mar",
+    "mean_c": -6.8,
+    "rain_mm_per_day": 1.0
+   },
+   {
+    "month": "Apr",
+    "mean_c": 2.8,
+    "rain_mm_per_day": 1.11
+   },
+   {
+    "month": "May",
+    "mean_c": 11.5,
+    "rain_mm_per_day": 1.87
+   },
+   {
+    "month": "Jun",
+    "mean_c": 16.8,
+    "rain_mm_per_day": 2.3
+   },
+   {
+    "month": "Jul",
+    "mean_c": 19.3,
+    "rain_mm_per_day": 2.07
+   },
+   {
+    "month": "Aug",
+    "mean_c": 17.3,
+    "rain_mm_per_day": 1.73
+   },
+   {
+    "month": "Sep",
+    "mean_c": 10.7,
+    "rain_mm_per_day": 1.63
+   },
+   {
+    "month": "Oct",
+    "mean_c": 2.2,
+    "rain_mm_per_day": 1.41
+   },
+   {
+    "month": "Nov",
+    "mean_c": -7.8,
+    "rain_mm_per_day": 1.22
+   },
+   {
+    "month": "Dec",
+    "mean_c": -16.1,
+    "rain_mm_per_day": 0.8
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/tyumen-average-monthly-temperature-rainfall",
+  "title": "Tyumen climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T21:31:23.957377+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

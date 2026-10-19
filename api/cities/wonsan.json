@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Wonsan",
+  "annual_mean_c": 9.2,
+  "warmest_month": "Aug",
+  "warmest_c": 22.7,
+  "coldest_month": "Jan",
+  "coldest_c": -5.8,
+  "seasonal_swing_c": 28.5,
+  "annual_rainfall_mm": 1282.0,
+  "wettest_month": "Jul",
+  "wettest_mm_per_day": 11.58,
+  "driest_month": "Jan",
+  "driest_mm_per_day": 0.56,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": -5.8,
+    "rain_mm_per_day": 0.56
+   },
+   {
+    "month": "Feb",
+    "mean_c": -3.4,
+    "rain_mm_per_day": 0.96
+   },
+   {
+    "month": "Mar",
+    "mean_c": 1.8,
+    "rain_mm_per_day": 1.06
+   },
+   {
+    "month": "Apr",
+    "mean_c": 8.0,
+    "rain_mm_per_day": 2.19
+   },
+   {
+    "month": "May",
+    "mean_c": 14.5,
+    "rain_mm_per_day": 2.74
+   },
+   {
+    "month": "Jun",
+    "mean_c": 19.3,
+    "rain_mm_per_day": 3.62
+   },
+   {
+    "month": "Jul",
+    "mean_c": 22.2,
+    "rain_mm_per_day": 11.58
+   },
+   {
+    "month": "Aug",
+    "mean_c": 22.7,
+    "rain_mm_per_day": 9.35
+   },
+   {
+    "month": "Sep",
+    "mean_c": 18.0,
+    "rain_mm_per_day": 5.03
+   },
+   {
+    "month": "Oct",
+    "mean_c": 11.7,
+    "rain_mm_per_day": 2.1
+   },
+   {
+    "month": "Nov",
+    "mean_c": 4.0,
+    "rain_mm_per_day": 2.21
+   },
+   {
+    "month": "Dec",
+    "mean_c": -3.6,
+    "rain_mm_per_day": 0.78
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/wonsan-average-monthly-temperature-rainfall",
+  "title": "Wonsan climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T21:31:23.957377+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

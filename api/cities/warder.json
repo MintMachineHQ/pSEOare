@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Warder",
+  "annual_mean_c": 27.0,
+  "warmest_month": "Sep",
+  "warmest_c": 28.6,
+  "coldest_month": "Jan",
+  "coldest_c": 25.0,
+  "seasonal_swing_c": 3.6,
+  "annual_rainfall_mm": 362.0,
+  "wettest_month": "Apr",
+  "wettest_mm_per_day": 3.45,
+  "driest_month": "Jan",
+  "driest_mm_per_day": 0.04,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 25.0,
+    "rain_mm_per_day": 0.04
+   },
+   {
+    "month": "Feb",
+    "mean_c": 26.4,
+    "rain_mm_per_day": 0.07
+   },
+   {
+    "month": "Mar",
+    "mean_c": 28.2,
+    "rain_mm_per_day": 0.33
+   },
+   {
+    "month": "Apr",
+    "mean_c": 28.4,
+    "rain_mm_per_day": 3.45
+   },
+   {
+    "month": "May",
+    "mean_c": 27.6,
+    "rain_mm_per_day": 1.79
+   },
+   {
+    "month": "Jun",
+    "mean_c": 27.3,
+    "rain_mm_per_day": 0.38
+   },
+   {
+    "month": "Jul",
+    "mean_c": 26.8,
+    "rain_mm_per_day": 0.16
+   },
+   {
+    "month": "Aug",
+    "mean_c": 27.5,
+    "rain_mm_per_day": 0.34
+   },
+   {
+    "month": "Sep",
+    "mean_c": 28.6,
+    "rain_mm_per_day": 0.96
+   },
+   {
+    "month": "Oct",
+    "mean_c": 27.5,
+    "rain_mm_per_day": 2.37
+   },
+   {
+    "month": "Nov",
+    "mean_c": 25.8,
+    "rain_mm_per_day": 1.83
+   },
+   {
+    "month": "Dec",
+    "mean_c": 25.0,
+    "rain_mm_per_day": 0.2
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/warder-average-monthly-temperature-rainfall",
+  "title": "Warder climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T21:31:23.957377+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

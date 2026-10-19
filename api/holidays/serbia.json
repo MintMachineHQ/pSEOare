@@ -1,7 +1,7 @@
 {
  "answer": {
   "country": "Serbia",
-  "count": 28,
+  "count": 36,
   "holidays": [
    {
     "name": "New Year's Day in Serbia (2016)",
@@ -196,12 +196,44 @@
     "page": "https://pseoare.pages.dev/christmas-day-serbia-2023-01-07"
    },
    {
+    "name": "New Year's Day in Serbia (2024)",
+    "local_name": "Nova Godina",
+    "date": "2024-01-01",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/new-year-s-day-serbia-2024-01-01"
+   },
+   {
+    "name": "New Year's Day in Serbia (2024)",
+    "local_name": "Nova Godina",
+    "date": "2024-01-02",
+    "weekday": "Tuesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/new-year-s-day-serbia-2024-01-02"
+   },
+   {
     "name": "Christmas Day in Serbia (2024)",
     "local_name": "Bo\u017ei\u0107",
     "date": "2024-01-07",
     "weekday": "Sunday",
     "weekend": true,
     "page": "https://pseoare.pages.dev/christmas-day-serbia-2024-01-07"
+   },
+   {
+    "name": "New Year's Day in Serbia (2025)",
+    "local_name": "Nova Godina",
+    "date": "2025-01-01",
+    "weekday": "Wednesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/new-year-s-day-serbia-2025-01-01"
+   },
+   {
+    "name": "New Year's Day in Serbia (2025)",
+    "local_name": "Nova Godina",
+    "date": "2025-01-02",
+    "weekday": "Thursday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/new-year-s-day-serbia-2025-01-02"
    },
    {
     "name": "Christmas Day in Serbia (2025)",
@@ -212,12 +244,44 @@
     "page": "https://pseoare.pages.dev/christmas-day-serbia-2025-01-07"
    },
    {
+    "name": "New Year's Day in Serbia (2026)",
+    "local_name": "Nova Godina",
+    "date": "2026-01-01",
+    "weekday": "Thursday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/new-year-s-day-serbia-2026-01-01"
+   },
+   {
+    "name": "New Year's Day in Serbia (2026)",
+    "local_name": "Nova Godina",
+    "date": "2026-01-02",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/new-year-s-day-serbia-2026-01-02"
+   },
+   {
     "name": "Christmas Day in Serbia (2026)",
     "local_name": "Bo\u017ei\u0107",
     "date": "2026-01-07",
     "weekday": "Wednesday",
     "weekend": false,
     "page": "https://pseoare.pages.dev/christmas-day-serbia-2026-01-07"
+   },
+   {
+    "name": "New Year's Day in Serbia (2027)",
+    "local_name": "Nova Godina",
+    "date": "2027-01-01",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/new-year-s-day-serbia-2027-01-01"
+   },
+   {
+    "name": "New Year's Day in Serbia (2027)",
+    "local_name": "Nova Godina",
+    "date": "2027-01-02",
+    "weekday": "Saturday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/new-year-s-day-serbia-2027-01-02"
    },
    {
     "name": "Christmas Day in Serbia (2027)",
@@ -234,7 +298,7 @@
   "title": "Public holidays for Serbia",
   "site": "https://pseoare.pages.dev"
  },
- "updated": "2026-10-19T20:49:39.946179+00:00",
+ "updated": "2026-10-19T21:31:23.957377+00:00",
  "license": "CC-BY-4.0",
  "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
 }

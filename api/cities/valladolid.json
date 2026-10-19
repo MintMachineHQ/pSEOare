@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Valladolid",
+  "annual_mean_c": 12.5,
+  "warmest_month": "Jul",
+  "warmest_c": 22.4,
+  "coldest_month": "Jan",
+  "coldest_c": 3.9,
+  "seasonal_swing_c": 18.5,
+  "annual_rainfall_mm": 422.0,
+  "wettest_month": "Oct",
+  "wettest_mm_per_day": 1.89,
+  "driest_month": "Aug",
+  "driest_mm_per_day": 0.42,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 3.9,
+    "rain_mm_per_day": 1.32
+   },
+   {
+    "month": "Feb",
+    "mean_c": 4.7,
+    "rain_mm_per_day": 1.08
+   },
+   {
+    "month": "Mar",
+    "mean_c": 7.7,
+    "rain_mm_per_day": 1.25
+   },
+   {
+    "month": "Apr",
+    "mean_c": 10.7,
+    "rain_mm_per_day": 1.62
+   },
+   {
+    "month": "May",
+    "mean_c": 14.7,
+    "rain_mm_per_day": 1.32
+   },
+   {
+    "month": "Jun",
+    "mean_c": 19.7,
+    "rain_mm_per_day": 0.92
+   },
+   {
+    "month": "Jul",
+    "mean_c": 22.4,
+    "rain_mm_per_day": 0.43
+   },
+   {
+    "month": "Aug",
+    "mean_c": 22.2,
+    "rain_mm_per_day": 0.42
+   },
+   {
+    "month": "Sep",
+    "mean_c": 18.4,
+    "rain_mm_per_day": 0.83
+   },
+   {
+    "month": "Oct",
+    "mean_c": 13.3,
+    "rain_mm_per_day": 1.89
+   },
+   {
+    "month": "Nov",
+    "mean_c": 7.4,
+    "rain_mm_per_day": 1.59
+   },
+   {
+    "month": "Dec",
+    "mean_c": 4.3,
+    "rain_mm_per_day": 1.21
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/valladolid-average-monthly-temperature-rainfall",
+  "title": "Valladolid climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T21:31:23.957377+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

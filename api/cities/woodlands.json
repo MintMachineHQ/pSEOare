@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Woodlands",
+  "annual_mean_c": 27.1,
+  "warmest_month": "May",
+  "warmest_c": 28.1,
+  "coldest_month": "Jan",
+  "coldest_c": 25.9,
+  "seasonal_swing_c": 2.2,
+  "annual_rainfall_mm": 2358.0,
+  "wettest_month": "Dec",
+  "wettest_mm_per_day": 9.69,
+  "driest_month": "Feb",
+  "driest_mm_per_day": 3.62,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 25.9,
+    "rain_mm_per_day": 7.57
+   },
+   {
+    "month": "Feb",
+    "mean_c": 26.2,
+    "rain_mm_per_day": 3.62
+   },
+   {
+    "month": "Mar",
+    "mean_c": 27.0,
+    "rain_mm_per_day": 5.43
+   },
+   {
+    "month": "Apr",
+    "mean_c": 27.8,
+    "rain_mm_per_day": 6.43
+   },
+   {
+    "month": "May",
+    "mean_c": 28.1,
+    "rain_mm_per_day": 6.41
+   },
+   {
+    "month": "Jun",
+    "mean_c": 27.6,
+    "rain_mm_per_day": 5.45
+   },
+   {
+    "month": "Jul",
+    "mean_c": 27.1,
+    "rain_mm_per_day": 5.62
+   },
+   {
+    "month": "Aug",
+    "mean_c": 27.1,
+    "rain_mm_per_day": 5.58
+   },
+   {
+    "month": "Sep",
+    "mean_c": 27.1,
+    "rain_mm_per_day": 5.56
+   },
+   {
+    "month": "Oct",
+    "mean_c": 27.3,
+    "rain_mm_per_day": 6.76
+   },
+   {
+    "month": "Nov",
+    "mean_c": 26.9,
+    "rain_mm_per_day": 9.44
+   },
+   {
+    "month": "Dec",
+    "mean_c": 26.3,
+    "rain_mm_per_day": 9.69
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/woodlands-average-monthly-temperature-rainfall",
+  "title": "Woodlands climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T21:31:23.957377+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

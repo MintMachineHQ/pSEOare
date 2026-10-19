@@ -1,7 +1,7 @@
 {
  "answer": {
   "country": "Cyprus",
-  "count": 32,
+  "count": 36,
   "holidays": [
    {
     "name": "New Year's Day in Cyprus (2016)",
@@ -196,6 +196,14 @@
     "page": "https://pseoare.pages.dev/christmas-day-cyprus-2023-12-25"
    },
    {
+    "name": "New Year's Day in Cyprus (2024)",
+    "local_name": "\u03a0\u03c1\u03c9\u03c4\u03bf\u03c7\u03c1\u03bf\u03bd\u03b9\u03ac",
+    "date": "2024-01-01",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/new-year-s-day-cyprus-2024-01-01"
+   },
+   {
     "name": "Epiphany in Cyprus (2024)",
     "local_name": "\u0398\u03b5\u03bf\u03c6\u03ac\u03bd\u03b5\u03b9\u03b1",
     "date": "2024-01-06",
@@ -210,6 +218,14 @@
     "weekday": "Wednesday",
     "weekend": false,
     "page": "https://pseoare.pages.dev/christmas-day-cyprus-2024-12-25"
+   },
+   {
+    "name": "New Year's Day in Cyprus (2025)",
+    "local_name": "\u03a0\u03c1\u03c9\u03c4\u03bf\u03c7\u03c1\u03bf\u03bd\u03b9\u03ac",
+    "date": "2025-01-01",
+    "weekday": "Wednesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/new-year-s-day-cyprus-2025-01-01"
    },
    {
     "name": "Epiphany in Cyprus (2025)",
@@ -228,6 +244,14 @@
     "page": "https://pseoare.pages.dev/christmas-day-cyprus-2025-12-25"
    },
    {
+    "name": "New Year's Day in Cyprus (2026)",
+    "local_name": "\u03a0\u03c1\u03c9\u03c4\u03bf\u03c7\u03c1\u03bf\u03bd\u03b9\u03ac",
+    "date": "2026-01-01",
+    "weekday": "Thursday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/new-year-s-day-cyprus-2026-01-01"
+   },
+   {
     "name": "Epiphany in Cyprus (2026)",
     "local_name": "\u0398\u03b5\u03bf\u03c6\u03ac\u03bd\u03b5\u03b9\u03b1",
     "date": "2026-01-06",
@@ -242,6 +266,14 @@
     "weekday": "Friday",
     "weekend": false,
     "page": "https://pseoare.pages.dev/christmas-day-cyprus-2026-12-25"
+   },
+   {
+    "name": "New Year's Day in Cyprus (2027)",
+    "local_name": "\u03a0\u03c1\u03c9\u03c4\u03bf\u03c7\u03c1\u03bf\u03bd\u03b9\u03ac",
+    "date": "2027-01-01",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/new-year-s-day-cyprus-2027-01-01"
    },
    {
     "name": "Epiphany in Cyprus (2027)",
@@ -266,7 +298,7 @@
   "title": "Public holidays for Cyprus",
   "site": "https://pseoare.pages.dev"
  },
- "updated": "2026-10-19T20:49:39.946179+00:00",
+ "updated": "2026-10-19T21:31:23.957377+00:00",
  "license": "CC-BY-4.0",
  "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
 }

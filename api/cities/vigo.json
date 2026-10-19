@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Vigo",
+  "annual_mean_c": 14.4,
+  "warmest_month": "Aug",
+  "warmest_c": 20.6,
+  "coldest_month": "Jan",
+  "coldest_c": 9.2,
+  "seasonal_swing_c": 11.4,
+  "annual_rainfall_mm": 1163.0,
+  "wettest_month": "Nov",
+  "wettest_mm_per_day": 5.12,
+  "driest_month": "Jul",
+  "driest_mm_per_day": 0.79,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 9.2,
+    "rain_mm_per_day": 4.95
+   },
+   {
+    "month": "Feb",
+    "mean_c": 9.3,
+    "rain_mm_per_day": 3.64
+   },
+   {
+    "month": "Mar",
+    "mean_c": 11.0,
+    "rain_mm_per_day": 4.11
+   },
+   {
+    "month": "Apr",
+    "mean_c": 12.7,
+    "rain_mm_per_day": 3.29
+   },
+   {
+    "month": "May",
+    "mean_c": 15.1,
+    "rain_mm_per_day": 2.3
+   },
+   {
+    "month": "Jun",
+    "mean_c": 18.1,
+    "rain_mm_per_day": 1.45
+   },
+   {
+    "month": "Jul",
+    "mean_c": 20.3,
+    "rain_mm_per_day": 0.79
+   },
+   {
+    "month": "Aug",
+    "mean_c": 20.6,
+    "rain_mm_per_day": 1.07
+   },
+   {
+    "month": "Sep",
+    "mean_c": 19.1,
+    "rain_mm_per_day": 1.62
+   },
+   {
+    "month": "Oct",
+    "mean_c": 15.9,
+    "rain_mm_per_day": 5.07
+   },
+   {
+    "month": "Nov",
+    "mean_c": 11.8,
+    "rain_mm_per_day": 5.12
+   },
+   {
+    "month": "Dec",
+    "mean_c": 9.7,
+    "rain_mm_per_day": 4.84
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/vigo-average-monthly-temperature-rainfall",
+  "title": "Vigo climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T21:31:23.957377+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

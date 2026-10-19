@@ -1,7 +1,7 @@
 {
  "answer": {
   "country": "Kenya",
-  "count": 32,
+  "count": 36,
   "holidays": [
    {
     "name": "New Year's Day in Kenya (2016)",
@@ -196,6 +196,14 @@
     "page": "https://pseoare.pages.dev/christmas-day-kenya-2023-12-25"
    },
    {
+    "name": "New Year's Day in Kenya (2024)",
+    "local_name": "New Year's Day",
+    "date": "2024-01-01",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/new-year-s-day-kenya-2024-01-01"
+   },
+   {
     "name": "Good Friday in Kenya (2024)",
     "local_name": "Good Friday",
     "date": "2024-03-29",
@@ -210,6 +218,14 @@
     "weekday": "Wednesday",
     "weekend": false,
     "page": "https://pseoare.pages.dev/christmas-day-kenya-2024-12-25"
+   },
+   {
+    "name": "New Year's Day in Kenya (2025)",
+    "local_name": "New Year's Day",
+    "date": "2025-01-01",
+    "weekday": "Wednesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/new-year-s-day-kenya-2025-01-01"
    },
    {
     "name": "Good Friday in Kenya (2025)",
@@ -228,6 +244,14 @@
     "page": "https://pseoare.pages.dev/christmas-day-kenya-2025-12-25"
    },
    {
+    "name": "New Year's Day in Kenya (2026)",
+    "local_name": "New Year's Day",
+    "date": "2026-01-01",
+    "weekday": "Thursday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/new-year-s-day-kenya-2026-01-01"
+   },
+   {
     "name": "Good Friday in Kenya (2026)",
     "local_name": "Good Friday",
     "date": "2026-04-03",
@@ -242,6 +266,14 @@
     "weekday": "Friday",
     "weekend": false,
     "page": "https://pseoare.pages.dev/christmas-day-kenya-2026-12-25"
+   },
+   {
+    "name": "New Year's Day in Kenya (2027)",
+    "local_name": "New Year's Day",
+    "date": "2027-01-01",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/new-year-s-day-kenya-2027-01-01"
    },
    {
     "name": "Good Friday in Kenya (2027)",
@@ -266,7 +298,7 @@
   "title": "Public holidays for Kenya",
   "site": "https://pseoare.pages.dev"
  },
- "updated": "2026-10-19T20:49:39.946179+00:00",
+ "updated": "2026-10-19T21:31:23.957377+00:00",
  "license": "CC-BY-4.0",
  "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
 }

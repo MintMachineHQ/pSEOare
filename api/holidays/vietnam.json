@@ -1,7 +1,7 @@
 {
  "answer": {
   "country": "Vietnam",
-  "count": 28,
+  "count": 36,
   "holidays": [
    {
     "name": "New Year's Day in Vietnam (2016)",
@@ -196,12 +196,44 @@
     "page": "https://pseoare.pages.dev/labour-day-vietnam-2023-05-01"
    },
    {
+    "name": "New Year's Day in Vietnam (2024)",
+    "local_name": "T\u1ebft d\u01b0\u01a1ng l\u1ecbch",
+    "date": "2024-01-01",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/new-year-s-day-vietnam-2024-01-01"
+   },
+   {
+    "name": "Reunification Day in Vietnam (2024)",
+    "local_name": "Ng\u00e0y Gi\u1ea3i ph\u00f3ng mi\u1ec1n Nam, th\u1ed1ng nh\u1ea5t \u0111\u1ea5t n\u01b0\u1edbc",
+    "date": "2024-04-30",
+    "weekday": "Tuesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/reunification-day-vietnam-2024-04-30"
+   },
+   {
     "name": "Labour Day in Vietnam (2024)",
     "local_name": "Ng\u00e0y Qu\u1ed1c t\u1ebf lao \u0111\u1ed9ng",
     "date": "2024-05-01",
     "weekday": "Wednesday",
     "weekend": false,
     "page": "https://pseoare.pages.dev/labour-day-vietnam-2024-05-01"
+   },
+   {
+    "name": "New Year's Day in Vietnam (2025)",
+    "local_name": "T\u1ebft d\u01b0\u01a1ng l\u1ecbch",
+    "date": "2025-01-01",
+    "weekday": "Wednesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/new-year-s-day-vietnam-2025-01-01"
+   },
+   {
+    "name": "Reunification Day in Vietnam (2025)",
+    "local_name": "Ng\u00e0y Gi\u1ea3i ph\u00f3ng mi\u1ec1n Nam, th\u1ed1ng nh\u1ea5t \u0111\u1ea5t n\u01b0\u1edbc",
+    "date": "2025-04-30",
+    "weekday": "Wednesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/reunification-day-vietnam-2025-04-30"
    },
    {
     "name": "Labour Day in Vietnam (2025)",
@@ -212,12 +244,44 @@
     "page": "https://pseoare.pages.dev/labour-day-vietnam-2025-05-01"
    },
    {
+    "name": "New Year's Day in Vietnam (2026)",
+    "local_name": "T\u1ebft d\u01b0\u01a1ng l\u1ecbch",
+    "date": "2026-01-01",
+    "weekday": "Thursday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/new-year-s-day-vietnam-2026-01-01"
+   },
+   {
+    "name": "Reunification Day in Vietnam (2026)",
+    "local_name": "Ng\u00e0y Gi\u1ea3i ph\u00f3ng mi\u1ec1n Nam, th\u1ed1ng nh\u1ea5t \u0111\u1ea5t n\u01b0\u1edbc",
+    "date": "2026-04-30",
+    "weekday": "Thursday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/reunification-day-vietnam-2026-04-30"
+   },
+   {
     "name": "Labour Day in Vietnam (2026)",
     "local_name": "Ng\u00e0y Qu\u1ed1c t\u1ebf lao \u0111\u1ed9ng",
     "date": "2026-05-01",
     "weekday": "Friday",
     "weekend": false,
     "page": "https://pseoare.pages.dev/labour-day-vietnam-2026-05-01"
+   },
+   {
+    "name": "New Year's Day in Vietnam (2027)",
+    "local_name": "T\u1ebft d\u01b0\u01a1ng l\u1ecbch",
+    "date": "2027-01-01",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/new-year-s-day-vietnam-2027-01-01"
+   },
+   {
+    "name": "Reunification Day in Vietnam (2027)",
+    "local_name": "Ng\u00e0y Gi\u1ea3i ph\u00f3ng mi\u1ec1n Nam, th\u1ed1ng nh\u1ea5t \u0111\u1ea5t n\u01b0\u1edbc",
+    "date": "2027-04-30",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/reunification-day-vietnam-2027-04-30"
    },
    {
     "name": "Labour Day in Vietnam (2027)",
@@ -234,7 +298,7 @@
   "title": "Public holidays for Vietnam",
   "site": "https://pseoare.pages.dev"
  },
- "updated": "2026-10-19T20:49:39.946179+00:00",
+ "updated": "2026-10-19T21:31:23.957377+00:00",
  "license": "CC-BY-4.0",
  "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
 }

@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Warsaw",
+  "annual_mean_c": 8.6,
+  "warmest_month": "Jul",
+  "warmest_c": 20.6,
+  "coldest_month": "Jan",
+  "coldest_c": -4.0,
+  "seasonal_swing_c": 24.6,
+  "annual_rainfall_mm": 627.0,
+  "wettest_month": "Jul",
+  "wettest_mm_per_day": 2.44,
+  "driest_month": "Mar",
+  "driest_mm_per_day": 1.25,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": -4.0,
+    "rain_mm_per_day": 1.46
+   },
+   {
+    "month": "Feb",
+    "mean_c": -2.2,
+    "rain_mm_per_day": 1.36
+   },
+   {
+    "month": "Mar",
+    "mean_c": 2.3,
+    "rain_mm_per_day": 1.25
+   },
+   {
+    "month": "Apr",
+    "mean_c": 8.7,
+    "rain_mm_per_day": 1.37
+   },
+   {
+    "month": "May",
+    "mean_c": 14.4,
+    "rain_mm_per_day": 2.38
+   },
+   {
+    "month": "Jun",
+    "mean_c": 18.1,
+    "rain_mm_per_day": 2.22
+   },
+   {
+    "month": "Jul",
+    "mean_c": 20.6,
+    "rain_mm_per_day": 2.44
+   },
+   {
+    "month": "Aug",
+    "mean_c": 20.0,
+    "rain_mm_per_day": 2.0
+   },
+   {
+    "month": "Sep",
+    "mean_c": 14.7,
+    "rain_mm_per_day": 1.73
+   },
+   {
+    "month": "Oct",
+    "mean_c": 8.4,
+    "rain_mm_per_day": 1.57
+   },
+   {
+    "month": "Nov",
+    "mean_c": 3.5,
+    "rain_mm_per_day": 1.42
+   },
+   {
+    "month": "Dec",
+    "mean_c": -1.5,
+    "rain_mm_per_day": 1.42
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/warsaw-average-monthly-temperature-rainfall",
+  "title": "Warsaw climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T21:31:23.957377+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

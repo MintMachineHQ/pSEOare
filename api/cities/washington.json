@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Washington",
+  "annual_mean_c": 13.2,
+  "warmest_month": "Jul",
+  "warmest_c": 25.8,
+  "coldest_month": "Jan",
+  "coldest_c": 0.1,
+  "seasonal_swing_c": 25.7,
+  "annual_rainfall_mm": 1151.0,
+  "wettest_month": "Jun",
+  "wettest_mm_per_day": 3.94,
+  "driest_month": "Jan",
+  "driest_mm_per_day": 2.16,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 0.1,
+    "rain_mm_per_day": 2.16
+   },
+   {
+    "month": "Feb",
+    "mean_c": 1.3,
+    "rain_mm_per_day": 2.49
+   },
+   {
+    "month": "Mar",
+    "mean_c": 5.8,
+    "rain_mm_per_day": 2.7
+   },
+   {
+    "month": "Apr",
+    "mean_c": 12.2,
+    "rain_mm_per_day": 3.07
+   },
+   {
+    "month": "May",
+    "mean_c": 17.6,
+    "rain_mm_per_day": 3.53
+   },
+   {
+    "month": "Jun",
+    "mean_c": 22.8,
+    "rain_mm_per_day": 3.94
+   },
+   {
+    "month": "Jul",
+    "mean_c": 25.8,
+    "rain_mm_per_day": 3.75
+   },
+   {
+    "month": "Aug",
+    "mean_c": 25.1,
+    "rain_mm_per_day": 3.53
+   },
+   {
+    "month": "Sep",
+    "mean_c": 21.3,
+    "rain_mm_per_day": 3.57
+   },
+   {
+    "month": "Oct",
+    "mean_c": 14.4,
+    "rain_mm_per_day": 3.38
+   },
+   {
+    "month": "Nov",
+    "mean_c": 7.8,
+    "rain_mm_per_day": 2.67
+   },
+   {
+    "month": "Dec",
+    "mean_c": 2.8,
+    "rain_mm_per_day": 3.06
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/washington-average-monthly-temperature-rainfall",
+  "title": "Washington climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T21:31:23.957377+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Van",
+  "annual_mean_c": 9.9,
+  "warmest_month": "Aug",
+  "warmest_c": 24.4,
+  "coldest_month": "Jan",
+  "coldest_c": -5.6,
+  "seasonal_swing_c": 30.0,
+  "annual_rainfall_mm": 446.0,
+  "wettest_month": "Apr",
+  "wettest_mm_per_day": 2.24,
+  "driest_month": "Aug",
+  "driest_mm_per_day": 0.14,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": -5.6,
+    "rain_mm_per_day": 1.49
+   },
+   {
+    "month": "Feb",
+    "mean_c": -2.3,
+    "rain_mm_per_day": 1.51
+   },
+   {
+    "month": "Mar",
+    "mean_c": 3.1,
+    "rain_mm_per_day": 1.92
+   },
+   {
+    "month": "Apr",
+    "mean_c": 8.0,
+    "rain_mm_per_day": 2.24
+   },
+   {
+    "month": "May",
+    "mean_c": 13.5,
+    "rain_mm_per_day": 1.52
+   },
+   {
+    "month": "Jun",
+    "mean_c": 19.7,
+    "rain_mm_per_day": 0.59
+   },
+   {
+    "month": "Jul",
+    "mean_c": 24.0,
+    "rain_mm_per_day": 0.21
+   },
+   {
+    "month": "Aug",
+    "mean_c": 24.4,
+    "rain_mm_per_day": 0.14
+   },
+   {
+    "month": "Sep",
+    "mean_c": 19.4,
+    "rain_mm_per_day": 0.37
+   },
+   {
+    "month": "Oct",
+    "mean_c": 12.2,
+    "rain_mm_per_day": 1.48
+   },
+   {
+    "month": "Nov",
+    "mean_c": 4.2,
+    "rain_mm_per_day": 1.54
+   },
+   {
+    "month": "Dec",
+    "mean_c": -2.5,
+    "rain_mm_per_day": 1.67
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/van-average-monthly-temperature-rainfall",
+  "title": "Van climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T21:31:23.957377+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

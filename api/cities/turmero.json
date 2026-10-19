@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Turmero",
+  "annual_mean_c": 25.4,
+  "warmest_month": "Apr",
+  "warmest_c": 27.1,
+  "coldest_month": "Jan",
+  "coldest_c": 24.4,
+  "seasonal_swing_c": 2.7,
+  "annual_rainfall_mm": 789.0,
+  "wettest_month": "Aug",
+  "wettest_mm_per_day": 4.19,
+  "driest_month": "Mar",
+  "driest_mm_per_day": 0.22,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 24.4,
+    "rain_mm_per_day": 0.57
+   },
+   {
+    "month": "Feb",
+    "mean_c": 25.3,
+    "rain_mm_per_day": 0.39
+   },
+   {
+    "month": "Mar",
+    "mean_c": 26.4,
+    "rain_mm_per_day": 0.22
+   },
+   {
+    "month": "Apr",
+    "mean_c": 27.1,
+    "rain_mm_per_day": 1.6
+   },
+   {
+    "month": "May",
+    "mean_c": 26.6,
+    "rain_mm_per_day": 2.76
+   },
+   {
+    "month": "Jun",
+    "mean_c": 25.6,
+    "rain_mm_per_day": 3.13
+   },
+   {
+    "month": "Jul",
+    "mean_c": 25.1,
+    "rain_mm_per_day": 3.65
+   },
+   {
+    "month": "Aug",
+    "mean_c": 24.9,
+    "rain_mm_per_day": 4.19
+   },
+   {
+    "month": "Sep",
+    "mean_c": 25.0,
+    "rain_mm_per_day": 3.13
+   },
+   {
+    "month": "Oct",
+    "mean_c": 25.1,
+    "rain_mm_per_day": 3.08
+   },
+   {
+    "month": "Nov",
+    "mean_c": 25.0,
+    "rain_mm_per_day": 2.09
+   },
+   {
+    "month": "Dec",
+    "mean_c": 24.5,
+    "rain_mm_per_day": 1.15
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/turmero-average-monthly-temperature-rainfall",
+  "title": "Turmero climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T21:31:23.957377+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

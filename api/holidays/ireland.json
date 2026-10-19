@@ -1,7 +1,7 @@
 {
  "answer": {
   "country": "Ireland",
-  "count": 28,
+  "count": 36,
   "holidays": [
    {
     "name": "New Year's Day in Ireland (2016)",
@@ -196,12 +196,44 @@
     "page": "https://pseoare.pages.dev/christmas-day-ireland-2023-12-25"
    },
    {
+    "name": "New Year's Day in Ireland (2024)",
+    "local_name": "L\u00e1 Caille",
+    "date": "2024-01-01",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/new-year-s-day-ireland-2024-01-01"
+   },
+   {
+    "name": "Saint Brigid's Day in Ireland (2024)",
+    "local_name": "L\u00e1 Fh\u00e9ile Br\u00edde",
+    "date": "2024-02-05",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/saint-brigid-s-day-ireland-2024-02-05"
+   },
+   {
     "name": "Christmas Day in Ireland (2024)",
     "local_name": "L\u00e1 Nollag",
     "date": "2024-12-25",
     "weekday": "Wednesday",
     "weekend": false,
     "page": "https://pseoare.pages.dev/christmas-day-ireland-2024-12-25"
+   },
+   {
+    "name": "New Year's Day in Ireland (2025)",
+    "local_name": "L\u00e1 Caille",
+    "date": "2025-01-01",
+    "weekday": "Wednesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/new-year-s-day-ireland-2025-01-01"
+   },
+   {
+    "name": "Saint Brigid's Day in Ireland (2025)",
+    "local_name": "L\u00e1 Fh\u00e9ile Br\u00edde",
+    "date": "2025-02-03",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/saint-brigid-s-day-ireland-2025-02-03"
    },
    {
     "name": "Christmas Day in Ireland (2025)",
@@ -212,12 +244,44 @@
     "page": "https://pseoare.pages.dev/christmas-day-ireland-2025-12-25"
    },
    {
+    "name": "New Year's Day in Ireland (2026)",
+    "local_name": "L\u00e1 Caille",
+    "date": "2026-01-01",
+    "weekday": "Thursday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/new-year-s-day-ireland-2026-01-01"
+   },
+   {
+    "name": "Saint Brigid's Day in Ireland (2026)",
+    "local_name": "L\u00e1 Fh\u00e9ile Br\u00edde",
+    "date": "2026-02-02",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/saint-brigid-s-day-ireland-2026-02-02"
+   },
+   {
     "name": "Christmas Day in Ireland (2026)",
     "local_name": "L\u00e1 Nollag",
     "date": "2026-12-25",
     "weekday": "Friday",
     "weekend": false,
     "page": "https://pseoare.pages.dev/christmas-day-ireland-2026-12-25"
+   },
+   {
+    "name": "New Year's Day in Ireland (2027)",
+    "local_name": "L\u00e1 Caille",
+    "date": "2027-01-01",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/new-year-s-day-ireland-2027-01-01"
+   },
+   {
+    "name": "Saint Brigid's Day in Ireland (2027)",
+    "local_name": "L\u00e1 Fh\u00e9ile Br\u00edde",
+    "date": "2027-02-01",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/saint-brigid-s-day-ireland-2027-02-01"
    },
    {
     "name": "Christmas Day in Ireland (2027)",
@@ -234,7 +298,7 @@
   "title": "Public holidays for Ireland",
   "site": "https://pseoare.pages.dev"
  },
- "updated": "2026-10-19T20:49:39.946179+00:00",
+ "updated": "2026-10-19T21:31:23.957377+00:00",
  "license": "CC-BY-4.0",
  "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
 }

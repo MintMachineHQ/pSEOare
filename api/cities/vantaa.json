@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Vantaa",
+  "annual_mean_c": 5.1,
+  "warmest_month": "Jul",
+  "warmest_c": 17.6,
+  "coldest_month": "Feb",
+  "coldest_c": -6.3,
+  "seasonal_swing_c": 23.9,
+  "annual_rainfall_mm": 731.0,
+  "wettest_month": "Jun",
+  "wettest_mm_per_day": 2.51,
+  "driest_month": "Mar",
+  "driest_mm_per_day": 1.38,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": -6.0,
+    "rain_mm_per_day": 1.81
+   },
+   {
+    "month": "Feb",
+    "mean_c": -6.3,
+    "rain_mm_per_day": 1.61
+   },
+   {
+    "month": "Mar",
+    "mean_c": -2.7,
+    "rain_mm_per_day": 1.38
+   },
+   {
+    "month": "Apr",
+    "mean_c": 3.6,
+    "rain_mm_per_day": 1.46
+   },
+   {
+    "month": "May",
+    "mean_c": 9.9,
+    "rain_mm_per_day": 1.71
+   },
+   {
+    "month": "Jun",
+    "mean_c": 14.2,
+    "rain_mm_per_day": 2.51
+   },
+   {
+    "month": "Jul",
+    "mean_c": 17.6,
+    "rain_mm_per_day": 2.29
+   },
+   {
+    "month": "Aug",
+    "mean_c": 16.3,
+    "rain_mm_per_day": 2.26
+   },
+   {
+    "month": "Sep",
+    "mean_c": 11.6,
+    "rain_mm_per_day": 2.05
+   },
+   {
+    "month": "Oct",
+    "mean_c": 5.2,
+    "rain_mm_per_day": 2.48
+   },
+   {
+    "month": "Nov",
+    "mean_c": 0.7,
+    "rain_mm_per_day": 2.32
+   },
+   {
+    "month": "Dec",
+    "mean_c": -3.1,
+    "rain_mm_per_day": 2.15
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/vantaa-average-monthly-temperature-rainfall",
+  "title": "Vantaa climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T21:31:23.957377+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

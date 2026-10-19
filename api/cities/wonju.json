@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Wonju",
+  "annual_mean_c": 8.8,
+  "warmest_month": "Aug",
+  "warmest_c": 22.7,
+  "coldest_month": "Jan",
+  "coldest_c": -6.7,
+  "seasonal_swing_c": 29.4,
+  "annual_rainfall_mm": 1301.0,
+  "wettest_month": "Jul",
+  "wettest_mm_per_day": 11.56,
+  "driest_month": "Jan",
+  "driest_mm_per_day": 0.73,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": -6.7,
+    "rain_mm_per_day": 0.73
+   },
+   {
+    "month": "Feb",
+    "mean_c": -3.7,
+    "rain_mm_per_day": 1.22
+   },
+   {
+    "month": "Mar",
+    "mean_c": 1.6,
+    "rain_mm_per_day": 1.38
+   },
+   {
+    "month": "Apr",
+    "mean_c": 8.0,
+    "rain_mm_per_day": 2.66
+   },
+   {
+    "month": "May",
+    "mean_c": 14.6,
+    "rain_mm_per_day": 2.58
+   },
+   {
+    "month": "Jun",
+    "mean_c": 19.5,
+    "rain_mm_per_day": 4.27
+   },
+   {
+    "month": "Jul",
+    "mean_c": 22.4,
+    "rain_mm_per_day": 11.56
+   },
+   {
+    "month": "Aug",
+    "mean_c": 22.7,
+    "rain_mm_per_day": 8.76
+   },
+   {
+    "month": "Sep",
+    "mean_c": 17.5,
+    "rain_mm_per_day": 5.17
+   },
+   {
+    "month": "Oct",
+    "mean_c": 10.8,
+    "rain_mm_per_day": 2.04
+   },
+   {
+    "month": "Nov",
+    "mean_c": 3.3,
+    "rain_mm_per_day": 1.66
+   },
+   {
+    "month": "Dec",
+    "mean_c": -4.5,
+    "rain_mm_per_day": 0.76
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/wonju-average-monthly-temperature-rainfall",
+  "title": "Wonju climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T21:31:23.957377+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

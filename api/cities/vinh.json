@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Vinh",
+  "annual_mean_c": 24.9,
+  "warmest_month": "Jun",
+  "warmest_c": 29.9,
+  "coldest_month": "Jan",
+  "coldest_c": 18.0,
+  "seasonal_swing_c": 11.9,
+  "annual_rainfall_mm": 1764.0,
+  "wettest_month": "Sep",
+  "wettest_mm_per_day": 12.78,
+  "driest_month": "Feb",
+  "driest_mm_per_day": 0.94,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 18.0,
+    "rain_mm_per_day": 1.19
+   },
+   {
+    "month": "Feb",
+    "mean_c": 20.2,
+    "rain_mm_per_day": 0.94
+   },
+   {
+    "month": "Mar",
+    "mean_c": 23.5,
+    "rain_mm_per_day": 1.44
+   },
+   {
+    "month": "Apr",
+    "mean_c": 27.4,
+    "rain_mm_per_day": 1.71
+   },
+   {
+    "month": "May",
+    "mean_c": 29.4,
+    "rain_mm_per_day": 4.27
+   },
+   {
+    "month": "Jun",
+    "mean_c": 29.9,
+    "rain_mm_per_day": 3.31
+   },
+   {
+    "month": "Jul",
+    "mean_c": 29.6,
+    "rain_mm_per_day": 6.33
+   },
+   {
+    "month": "Aug",
+    "mean_c": 28.5,
+    "rain_mm_per_day": 8.12
+   },
+   {
+    "month": "Sep",
+    "mean_c": 27.2,
+    "rain_mm_per_day": 12.78
+   },
+   {
+    "month": "Oct",
+    "mean_c": 24.8,
+    "rain_mm_per_day": 12.6
+   },
+   {
+    "month": "Nov",
+    "mean_c": 22.1,
+    "rain_mm_per_day": 3.26
+   },
+   {
+    "month": "Dec",
+    "mean_c": 18.5,
+    "rain_mm_per_day": 2.06
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/vinh-average-monthly-temperature-rainfall",
+  "title": "Vinh climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T21:31:23.957377+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

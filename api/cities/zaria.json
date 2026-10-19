@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Zaria",
+  "annual_mean_c": 24.4,
+  "warmest_month": "Apr",
+  "warmest_c": 28.4,
+  "coldest_month": "Dec",
+  "coldest_c": 20.5,
+  "seasonal_swing_c": 7.9,
+  "annual_rainfall_mm": 1121.0,
+  "wettest_month": "Aug",
+  "wettest_mm_per_day": 9.3,
+  "driest_month": "Dec",
+  "driest_mm_per_day": 0.0,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 20.6,
+    "rain_mm_per_day": 0.01
+   },
+   {
+    "month": "Feb",
+    "mean_c": 24.2,
+    "rain_mm_per_day": 0.01
+   },
+   {
+    "month": "Mar",
+    "mean_c": 27.2,
+    "rain_mm_per_day": 0.28
+   },
+   {
+    "month": "Apr",
+    "mean_c": 28.4,
+    "rain_mm_per_day": 1.73
+   },
+   {
+    "month": "May",
+    "mean_c": 27.3,
+    "rain_mm_per_day": 3.36
+   },
+   {
+    "month": "Jun",
+    "mean_c": 25.7,
+    "rain_mm_per_day": 4.57
+   },
+   {
+    "month": "Jul",
+    "mean_c": 24.4,
+    "rain_mm_per_day": 8.09
+   },
+   {
+    "month": "Aug",
+    "mean_c": 23.6,
+    "rain_mm_per_day": 9.3
+   },
+   {
+    "month": "Sep",
+    "mean_c": 24.1,
+    "rain_mm_per_day": 7.24
+   },
+   {
+    "month": "Oct",
+    "mean_c": 24.4,
+    "rain_mm_per_day": 2.14
+   },
+   {
+    "month": "Nov",
+    "mean_c": 22.6,
+    "rain_mm_per_day": 0.15
+   },
+   {
+    "month": "Dec",
+    "mean_c": 20.5,
+    "rain_mm_per_day": 0.0
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/zaria-average-monthly-temperature-rainfall",
+  "title": "Zaria climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T21:31:23.957377+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Zaragoza",
+  "annual_mean_c": 14.9,
+  "warmest_month": "Jul",
+  "warmest_c": 25.1,
+  "coldest_month": "Jan",
+  "coldest_c": 6.1,
+  "seasonal_swing_c": 19.0,
+  "annual_rainfall_mm": 367.0,
+  "wettest_month": "Apr",
+  "wettest_mm_per_day": 1.53,
+  "driest_month": "Jul",
+  "driest_mm_per_day": 0.57,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 6.1,
+    "rain_mm_per_day": 0.83
+   },
+   {
+    "month": "Feb",
+    "mean_c": 6.7,
+    "rain_mm_per_day": 0.72
+   },
+   {
+    "month": "Mar",
+    "mean_c": 10.2,
+    "rain_mm_per_day": 1.14
+   },
+   {
+    "month": "Apr",
+    "mean_c": 13.4,
+    "rain_mm_per_day": 1.53
+   },
+   {
+    "month": "May",
+    "mean_c": 17.4,
+    "rain_mm_per_day": 1.41
+   },
+   {
+    "month": "Jun",
+    "mean_c": 22.4,
+    "rain_mm_per_day": 1.07
+   },
+   {
+    "month": "Jul",
+    "mean_c": 25.1,
+    "rain_mm_per_day": 0.57
+   },
+   {
+    "month": "Aug",
+    "mean_c": 24.9,
+    "rain_mm_per_day": 0.58
+   },
+   {
+    "month": "Sep",
+    "mean_c": 20.5,
+    "rain_mm_per_day": 1.04
+   },
+   {
+    "month": "Oct",
+    "mean_c": 15.9,
+    "rain_mm_per_day": 1.29
+   },
+   {
+    "month": "Nov",
+    "mean_c": 9.7,
+    "rain_mm_per_day": 1.27
+   },
+   {
+    "month": "Dec",
+    "mean_c": 6.4,
+    "rain_mm_per_day": 0.61
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/zaragoza-average-monthly-temperature-rainfall",
+  "title": "Zaragoza climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T21:31:23.957377+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

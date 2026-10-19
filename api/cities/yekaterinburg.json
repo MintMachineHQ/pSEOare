@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Yekaterinburg",
+  "annual_mean_c": 1.1,
+  "warmest_month": "Jul",
+  "warmest_c": 18.0,
+  "coldest_month": "Jan",
+  "coldest_c": -16.8,
+  "seasonal_swing_c": 34.8,
+  "annual_rainfall_mm": 621.0,
+  "wettest_month": "Jun",
+  "wettest_mm_per_day": 3.05,
+  "driest_month": "Feb",
+  "driest_mm_per_day": 0.8,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": -16.8,
+    "rain_mm_per_day": 0.87
+   },
+   {
+    "month": "Feb",
+    "mean_c": -14.9,
+    "rain_mm_per_day": 0.8
+   },
+   {
+    "month": "Mar",
+    "mean_c": -6.9,
+    "rain_mm_per_day": 1.11
+   },
+   {
+    "month": "Apr",
+    "mean_c": 1.8,
+    "rain_mm_per_day": 1.45
+   },
+   {
+    "month": "May",
+    "mean_c": 10.5,
+    "rain_mm_per_day": 2.15
+   },
+   {
+    "month": "Jun",
+    "mean_c": 15.2,
+    "rain_mm_per_day": 3.05
+   },
+   {
+    "month": "Jul",
+    "mean_c": 18.0,
+    "rain_mm_per_day": 2.84
+   },
+   {
+    "month": "Aug",
+    "mean_c": 15.9,
+    "rain_mm_per_day": 2.44
+   },
+   {
+    "month": "Sep",
+    "mean_c": 9.6,
+    "rain_mm_per_day": 2.0
+   },
+   {
+    "month": "Oct",
+    "mean_c": 1.4,
+    "rain_mm_per_day": 1.6
+   },
+   {
+    "month": "Nov",
+    "mean_c": -7.4,
+    "rain_mm_per_day": 1.23
+   },
+   {
+    "month": "Dec",
+    "mean_c": -14.6,
+    "rain_mm_per_day": 0.89
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/yekaterinburg-average-monthly-temperature-rainfall",
+  "title": "Yekaterinburg climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T21:31:23.957377+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

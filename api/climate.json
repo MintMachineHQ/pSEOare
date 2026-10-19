@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-19T20:49:39.946179+00:00",
- "count": 1250,
+ "updated": "2026-10-19T21:31:23.957377+00:00",
+ "count": 1351,
  "source": "https://pseoare.pages.dev",
  "results": [
   {
@@ -12502,6 +12502,1016 @@
    "swing_c": 12.0,
    "annual_rainfall_mm": 2169.0,
    "wettest_month": "Jul"
+  },
+  {
+   "city": "Tunis",
+   "page": "https://pseoare.pages.dev/tunis-average-monthly-temperature-rainfall",
+   "annual_mean_c": 18.8,
+   "warmest_month": "Aug",
+   "coldest_month": "Feb",
+   "swing_c": 16.6,
+   "annual_rainfall_mm": 562.0,
+   "wettest_month": "Sep"
+  },
+  {
+   "city": "Turin",
+   "page": "https://pseoare.pages.dev/turin-average-monthly-temperature-rainfall",
+   "annual_mean_c": 11.2,
+   "warmest_month": "Jul",
+   "coldest_month": "Jan",
+   "swing_c": 20.6,
+   "annual_rainfall_mm": 777.0,
+   "wettest_month": "Nov"
+  },
+  {
+   "city": "Turmero",
+   "page": "https://pseoare.pages.dev/turmero-average-monthly-temperature-rainfall",
+   "annual_mean_c": 25.4,
+   "warmest_month": "Apr",
+   "coldest_month": "Jan",
+   "swing_c": 2.7,
+   "annual_rainfall_mm": 789.0,
+   "wettest_month": "Aug"
+  },
+  {
+   "city": "Tyumen",
+   "page": "https://pseoare.pages.dev/tyumen-average-monthly-temperature-rainfall",
+   "annual_mean_c": 1.4,
+   "warmest_month": "Jul",
+   "coldest_month": "Jan",
+   "swing_c": 38.2,
+   "annual_rainfall_mm": 501.0,
+   "wettest_month": "Jun"
+  },
+  {
+   "city": "Uberlandia",
+   "page": "https://pseoare.pages.dev/uberlandia-average-monthly-temperature-rainfall",
+   "annual_mean_c": 22.0,
+   "warmest_month": "Oct",
+   "coldest_month": "Jun",
+   "swing_c": 5.8,
+   "annual_rainfall_mm": 1274.0,
+   "wettest_month": "Jan"
+  },
+  {
+   "city": "UEskuedar",
+   "page": "https://pseoare.pages.dev/ueskuedar-average-monthly-temperature-rainfall",
+   "annual_mean_c": 15.2,
+   "warmest_month": "Aug",
+   "coldest_month": "Jan",
+   "swing_c": 19.7,
+   "annual_rainfall_mm": 625.0,
+   "wettest_month": "Dec"
+  },
+  {
+   "city": "Ufa",
+   "page": "https://pseoare.pages.dev/ufa-average-monthly-temperature-rainfall",
+   "annual_mean_c": 3.1,
+   "warmest_month": "Jul",
+   "coldest_month": "Jan",
+   "swing_c": 34.7,
+   "annual_rainfall_mm": 685.0,
+   "wettest_month": "Jun"
+  },
+  {
+   "city": "Uige",
+   "page": "https://pseoare.pages.dev/uige-average-monthly-temperature-rainfall",
+   "annual_mean_c": 23.2,
+   "warmest_month": "Sep",
+   "coldest_month": "Dec",
+   "swing_c": 1.7,
+   "annual_rainfall_mm": 1188.0,
+   "wettest_month": "Nov"
+  },
+  {
+   "city": "Uijeongbu-si",
+   "page": "https://pseoare.pages.dev/uijeongbu-si-average-monthly-temperature-rainfall",
+   "annual_mean_c": 11.3,
+   "warmest_month": "Aug",
+   "coldest_month": "Jan",
+   "swing_c": 28.2,
+   "annual_rainfall_mm": 1231.0,
+   "wettest_month": "Jul"
+  },
+  {
+   "city": "Ulan Bator",
+   "page": "https://pseoare.pages.dev/ulan-bator-average-monthly-temperature-rainfall",
+   "annual_mean_c": -1.3,
+   "warmest_month": "Jul",
+   "coldest_month": "Jan",
+   "swing_c": 38.2,
+   "annual_rainfall_mm": 274.0,
+   "wettest_month": "Jul"
+  },
+  {
+   "city": "Ulsan",
+   "page": "https://pseoare.pages.dev/ulsan-average-monthly-temperature-rainfall",
+   "annual_mean_c": 14.4,
+   "warmest_month": "Aug",
+   "coldest_month": "Jan",
+   "swing_c": 23.1,
+   "annual_rainfall_mm": 1318.0,
+   "wettest_month": "Jul"
+  },
+  {
+   "city": "Ulu Bedok",
+   "page": "https://pseoare.pages.dev/ulu-bedok-average-monthly-temperature-rainfall",
+   "annual_mean_c": 27.1,
+   "warmest_month": "May",
+   "coldest_month": "Jan",
+   "swing_c": 2.2,
+   "annual_rainfall_mm": 2358.0,
+   "wettest_month": "Dec"
+  },
+  {
+   "city": "Ulyanovsk",
+   "page": "https://pseoare.pages.dev/ulyanovsk-average-monthly-temperature-rainfall",
+   "annual_mean_c": 4.2,
+   "warmest_month": "Jul",
+   "coldest_month": "Jan",
+   "swing_c": 33.9,
+   "annual_rainfall_mm": 573.0,
+   "wettest_month": "Jun"
+  },
+  {
+   "city": "Umraniye",
+   "page": "https://pseoare.pages.dev/umraniye-average-monthly-temperature-rainfall",
+   "annual_mean_c": 14.9,
+   "warmest_month": "Aug",
+   "coldest_month": "Jan",
+   "swing_c": 18.9,
+   "annual_rainfall_mm": 673.0,
+   "wettest_month": "Dec"
+  },
+  {
+   "city": "Ust-Kamenogorsk",
+   "page": "https://pseoare.pages.dev/ust-kamenogorsk-average-monthly-temperature-rainfall",
+   "annual_mean_c": 3.8,
+   "warmest_month": "Jul",
+   "coldest_month": "Jan",
+   "swing_c": 36.5,
+   "annual_rainfall_mm": 468.0,
+   "wettest_month": "Nov"
+  },
+  {
+   "city": "Utrecht",
+   "page": "https://pseoare.pages.dev/utrecht-average-monthly-temperature-rainfall",
+   "annual_mean_c": 10.3,
+   "warmest_month": "Jul",
+   "coldest_month": "Jan",
+   "swing_c": 15.7,
+   "annual_rainfall_mm": 799.0,
+   "wettest_month": "Aug"
+  },
+  {
+   "city": "Uvira",
+   "page": "https://pseoare.pages.dev/uvira-average-monthly-temperature-rainfall",
+   "annual_mean_c": 21.1,
+   "warmest_month": "Sep",
+   "coldest_month": "Jun",
+   "swing_c": 2.5,
+   "annual_rainfall_mm": 1811.0,
+   "wettest_month": "Nov"
+  },
+  {
+   "city": "Vadodara",
+   "page": "https://pseoare.pages.dev/vadodara-average-monthly-temperature-rainfall",
+   "annual_mean_c": 27.4,
+   "warmest_month": "May",
+   "coldest_month": "Jan",
+   "swing_c": 14.5,
+   "annual_rainfall_mm": 956.0,
+   "wettest_month": "Jul"
+  },
+  {
+   "city": "Valencia",
+   "page": "https://pseoare.pages.dev/valencia-average-monthly-temperature-rainfall",
+   "annual_mean_c": 16.5,
+   "warmest_month": "Jul",
+   "coldest_month": "Jan",
+   "swing_c": 17.9,
+   "annual_rainfall_mm": 394.0,
+   "wettest_month": "Sep"
+  },
+  {
+   "city": "Valenzuela",
+   "page": "https://pseoare.pages.dev/valenzuela-average-monthly-temperature-rainfall",
+   "annual_mean_c": 25.8,
+   "warmest_month": "May",
+   "coldest_month": "Jan",
+   "swing_c": 4.4,
+   "annual_rainfall_mm": 2906.0,
+   "wettest_month": "Dec"
+  },
+  {
+   "city": "Valladolid",
+   "page": "https://pseoare.pages.dev/valladolid-average-monthly-temperature-rainfall",
+   "annual_mean_c": 12.5,
+   "warmest_month": "Jul",
+   "coldest_month": "Jan",
+   "swing_c": 18.5,
+   "annual_rainfall_mm": 422.0,
+   "wettest_month": "Oct"
+  },
+  {
+   "city": "Valledupar",
+   "page": "https://pseoare.pages.dev/valledupar-average-monthly-temperature-rainfall",
+   "annual_mean_c": 22.8,
+   "warmest_month": "Aug",
+   "coldest_month": "Jan",
+   "swing_c": 2.4,
+   "annual_rainfall_mm": 714.0,
+   "wettest_month": "Oct"
+  },
+  {
+   "city": "Valparaiso",
+   "page": "https://pseoare.pages.dev/valparaiso-average-monthly-temperature-rainfall",
+   "annual_mean_c": 14.3,
+   "warmest_month": "Feb",
+   "coldest_month": "Jul",
+   "swing_c": 5.6,
+   "annual_rainfall_mm": 237.0,
+   "wettest_month": "Jun"
+  },
+  {
+   "city": "Van",
+   "page": "https://pseoare.pages.dev/van-average-monthly-temperature-rainfall",
+   "annual_mean_c": 9.9,
+   "warmest_month": "Aug",
+   "coldest_month": "Jan",
+   "swing_c": 30.0,
+   "annual_rainfall_mm": 446.0,
+   "wettest_month": "Apr"
+  },
+  {
+   "city": "Vancouver",
+   "page": "https://pseoare.pages.dev/vancouver-average-monthly-temperature-rainfall",
+   "annual_mean_c": 7.0,
+   "warmest_month": "Jul",
+   "coldest_month": "Dec",
+   "swing_c": 17.6,
+   "annual_rainfall_mm": 2170.0,
+   "wettest_month": "Nov"
+  },
+  {
+   "city": "Vantaa",
+   "page": "https://pseoare.pages.dev/vantaa-average-monthly-temperature-rainfall",
+   "annual_mean_c": 5.1,
+   "warmest_month": "Jul",
+   "coldest_month": "Feb",
+   "swing_c": 23.9,
+   "annual_rainfall_mm": 731.0,
+   "wettest_month": "Jun"
+  },
+  {
+   "city": "Varna",
+   "page": "https://pseoare.pages.dev/varna-average-monthly-temperature-rainfall",
+   "annual_mean_c": 13.9,
+   "warmest_month": "Aug",
+   "coldest_month": "Jan",
+   "swing_c": 20.8,
+   "annual_rainfall_mm": 536.0,
+   "wettest_month": "Oct"
+  },
+  {
+   "city": "Vaughan",
+   "page": "https://pseoare.pages.dev/vaughan-average-monthly-temperature-rainfall",
+   "annual_mean_c": 7.8,
+   "warmest_month": "Jul",
+   "coldest_month": "Jan",
+   "swing_c": 28.5,
+   "annual_rainfall_mm": 721.0,
+   "wettest_month": "Oct"
+  },
+  {
+   "city": "Vereeniging",
+   "page": "https://pseoare.pages.dev/vereeniging-average-monthly-temperature-rainfall",
+   "annual_mean_c": 17.0,
+   "warmest_month": "Jan",
+   "coldest_month": "Jul",
+   "swing_c": 12.4,
+   "annual_rainfall_mm": 586.0,
+   "wettest_month": "Dec"
+  },
+  {
+   "city": "Verona",
+   "page": "https://pseoare.pages.dev/verona-average-monthly-temperature-rainfall",
+   "annual_mean_c": 13.2,
+   "warmest_month": "Jul",
+   "coldest_month": "Jan",
+   "swing_c": 22.4,
+   "annual_rainfall_mm": 864.0,
+   "wettest_month": "Nov"
+  },
+  {
+   "city": "Viana",
+   "page": "https://pseoare.pages.dev/viana-average-monthly-temperature-rainfall",
+   "annual_mean_c": 25.6,
+   "warmest_month": "Mar",
+   "coldest_month": "Aug",
+   "swing_c": 6.1,
+   "annual_rainfall_mm": 326.0,
+   "wettest_month": "Apr"
+  },
+  {
+   "city": "Victoria",
+   "page": "https://pseoare.pages.dev/victoria-average-monthly-temperature-rainfall",
+   "annual_mean_c": 23.4,
+   "warmest_month": "Jul",
+   "coldest_month": "Jan",
+   "swing_c": 12.5,
+   "annual_rainfall_mm": 1395.0,
+   "wettest_month": "Jun"
+  },
+  {
+   "city": "Vienna",
+   "page": "https://pseoare.pages.dev/vienna-average-monthly-temperature-rainfall",
+   "annual_mean_c": 9.7,
+   "warmest_month": "Jul",
+   "coldest_month": "Jan",
+   "swing_c": 22.5,
+   "annual_rainfall_mm": 734.0,
+   "wettest_month": "Jun"
+  },
+  {
+   "city": "Vientiane",
+   "page": "https://pseoare.pages.dev/vientiane-average-monthly-temperature-rainfall",
+   "annual_mean_c": 25.9,
+   "warmest_month": "Apr",
+   "coldest_month": "Dec",
+   "swing_c": 9.8,
+   "annual_rainfall_mm": 1208.0,
+   "wettest_month": "Aug"
+  },
+  {
+   "city": "Viet Tri",
+   "page": "https://pseoare.pages.dev/viet-tri-average-monthly-temperature-rainfall",
+   "annual_mean_c": 23.1,
+   "warmest_month": "Jun",
+   "coldest_month": "Jan",
+   "swing_c": 13.2,
+   "annual_rainfall_mm": 1561.0,
+   "wettest_month": "Aug"
+  },
+  {
+   "city": "Vigo",
+   "page": "https://pseoare.pages.dev/vigo-average-monthly-temperature-rainfall",
+   "annual_mean_c": 14.4,
+   "warmest_month": "Aug",
+   "coldest_month": "Jan",
+   "swing_c": 11.4,
+   "annual_rainfall_mm": 1163.0,
+   "wettest_month": "Nov"
+  },
+  {
+   "city": "Vila Flor",
+   "page": "https://pseoare.pages.dev/vila-flor-average-monthly-temperature-rainfall",
+   "annual_mean_c": 25.6,
+   "warmest_month": "Mar",
+   "coldest_month": "Aug",
+   "swing_c": 6.1,
+   "annual_rainfall_mm": 326.0,
+   "wettest_month": "Apr"
+  },
+  {
+   "city": "Villa Nueva",
+   "page": "https://pseoare.pages.dev/villa-nueva-average-monthly-temperature-rainfall",
+   "annual_mean_c": 21.0,
+   "warmest_month": "Apr",
+   "coldest_month": "Dec",
+   "swing_c": 4.5,
+   "annual_rainfall_mm": 1325.0,
+   "wettest_month": "Sep"
+  },
+  {
+   "city": "Villavicencio",
+   "page": "https://pseoare.pages.dev/villavicencio-average-monthly-temperature-rainfall",
+   "annual_mean_c": 19.0,
+   "warmest_month": "Mar",
+   "coldest_month": "Jul",
+   "swing_c": 2.1,
+   "annual_rainfall_mm": 2429.0,
+   "wettest_month": "May"
+  },
+  {
+   "city": "Vilnius",
+   "page": "https://pseoare.pages.dev/vilnius-average-monthly-temperature-rainfall",
+   "annual_mean_c": 6.4,
+   "warmest_month": "Jul",
+   "coldest_month": "Jan",
+   "swing_c": 25.1,
+   "annual_rainfall_mm": 749.0,
+   "wettest_month": "Jul"
+  },
+  {
+   "city": "Vina del Mar",
+   "page": "https://pseoare.pages.dev/vina-del-mar-average-monthly-temperature-rainfall",
+   "annual_mean_c": 15.2,
+   "warmest_month": "Jan",
+   "coldest_month": "Jul",
+   "swing_c": 10.2,
+   "annual_rainfall_mm": 285.0,
+   "wettest_month": "Jun"
+  },
+  {
+   "city": "Vinh",
+   "page": "https://pseoare.pages.dev/vinh-average-monthly-temperature-rainfall",
+   "annual_mean_c": 24.9,
+   "warmest_month": "Jun",
+   "coldest_month": "Jan",
+   "swing_c": 11.9,
+   "annual_rainfall_mm": 1764.0,
+   "wettest_month": "Sep"
+  },
+  {
+   "city": "Vinnytsya",
+   "page": "https://pseoare.pages.dev/vinnytsya-average-monthly-temperature-rainfall",
+   "annual_mean_c": 8.3,
+   "warmest_month": "Jul",
+   "coldest_month": "Jan",
+   "swing_c": 26.9,
+   "annual_rainfall_mm": 589.0,
+   "wettest_month": "Jun"
+  },
+  {
+   "city": "Vitebsk",
+   "page": "https://pseoare.pages.dev/vitebsk-average-monthly-temperature-rainfall",
+   "annual_mean_c": 5.3,
+   "warmest_month": "Jul",
+   "coldest_month": "Jan",
+   "swing_c": 26.9,
+   "annual_rainfall_mm": 812.0,
+   "wettest_month": "Jul"
+  },
+  {
+   "city": "Vladivostok",
+   "page": "https://pseoare.pages.dev/vladivostok-average-monthly-temperature-rainfall",
+   "annual_mean_c": 6.4,
+   "warmest_month": "Aug",
+   "coldest_month": "Jan",
+   "swing_c": 31.0,
+   "annual_rainfall_mm": 760.0,
+   "wettest_month": "Aug"
+  },
+  {
+   "city": "Volgograd",
+   "page": "https://pseoare.pages.dev/volgograd-average-monthly-temperature-rainfall",
+   "annual_mean_c": 9.1,
+   "warmest_month": "Jul",
+   "coldest_month": "Jan",
+   "swing_c": 33.3,
+   "annual_rainfall_mm": 369.0,
+   "wettest_month": "May"
+  },
+  {
+   "city": "Voronezh",
+   "page": "https://pseoare.pages.dev/voronezh-average-monthly-temperature-rainfall",
+   "annual_mean_c": 6.8,
+   "warmest_month": "Jul",
+   "coldest_month": "Jan",
+   "swing_c": 31.6,
+   "annual_rainfall_mm": 582.0,
+   "wettest_month": "Jun"
+  },
+  {
+   "city": "Vung Tau",
+   "page": "https://pseoare.pages.dev/vung-tau-average-monthly-temperature-rainfall",
+   "annual_mean_c": 27.4,
+   "warmest_month": "Apr",
+   "coldest_month": "Jan",
+   "swing_c": 3.7,
+   "annual_rainfall_mm": 1470.0,
+   "wettest_month": "Oct"
+  },
+  {
+   "city": "Wad Medani",
+   "page": "https://pseoare.pages.dev/wad-medani-average-monthly-temperature-rainfall",
+   "annual_mean_c": 29.5,
+   "warmest_month": "May",
+   "coldest_month": "Jan",
+   "swing_c": 9.5,
+   "annual_rainfall_mm": 355.0,
+   "wettest_month": "Aug"
+  },
+  {
+   "city": "Wandsbek",
+   "page": "https://pseoare.pages.dev/wandsbek-average-monthly-temperature-rainfall",
+   "annual_mean_c": 9.2,
+   "warmest_month": "Jul",
+   "coldest_month": "Jan",
+   "swing_c": 17.7,
+   "annual_rainfall_mm": 751.0,
+   "wettest_month": "Jul"
+  },
+  {
+   "city": "Warder",
+   "page": "https://pseoare.pages.dev/warder-average-monthly-temperature-rainfall",
+   "annual_mean_c": 27.0,
+   "warmest_month": "Sep",
+   "coldest_month": "Jan",
+   "swing_c": 3.6,
+   "annual_rainfall_mm": 362.0,
+   "wettest_month": "Apr"
+  },
+  {
+   "city": "Warri",
+   "page": "https://pseoare.pages.dev/warri-average-monthly-temperature-rainfall",
+   "annual_mean_c": 25.8,
+   "warmest_month": "Mar",
+   "coldest_month": "Aug",
+   "swing_c": 2.2,
+   "annual_rainfall_mm": 1856.0,
+   "wettest_month": "Sep"
+  },
+  {
+   "city": "Warsaw",
+   "page": "https://pseoare.pages.dev/warsaw-average-monthly-temperature-rainfall",
+   "annual_mean_c": 8.6,
+   "warmest_month": "Jul",
+   "coldest_month": "Jan",
+   "swing_c": 24.6,
+   "annual_rainfall_mm": 627.0,
+   "wettest_month": "Jul"
+  },
+  {
+   "city": "Washington",
+   "page": "https://pseoare.pages.dev/washington-average-monthly-temperature-rainfall",
+   "annual_mean_c": 13.2,
+   "warmest_month": "Jul",
+   "coldest_month": "Jan",
+   "swing_c": 25.7,
+   "annual_rainfall_mm": 1151.0,
+   "wettest_month": "Jun"
+  },
+  {
+   "city": "Weifang",
+   "page": "https://pseoare.pages.dev/weifang-average-monthly-temperature-rainfall",
+   "annual_mean_c": 13.4,
+   "warmest_month": "Jul",
+   "coldest_month": "Jan",
+   "swing_c": 29.4,
+   "annual_rainfall_mm": 658.0,
+   "wettest_month": "Jul"
+  },
+  {
+   "city": "Welkom",
+   "page": "https://pseoare.pages.dev/welkom-average-monthly-temperature-rainfall",
+   "annual_mean_c": 17.6,
+   "warmest_month": "Jan",
+   "coldest_month": "Jul",
+   "swing_c": 14.9,
+   "annual_rainfall_mm": 527.0,
+   "wettest_month": "Dec"
+  },
+  {
+   "city": "Wellington",
+   "page": "https://pseoare.pages.dev/wellington-average-monthly-temperature-rainfall",
+   "annual_mean_c": 13.2,
+   "warmest_month": "Feb",
+   "coldest_month": "Jul",
+   "swing_c": 7.1,
+   "annual_rainfall_mm": 855.0,
+   "wettest_month": "Jun"
+  },
+  {
+   "city": "West Jerusalem",
+   "page": "https://pseoare.pages.dev/west-jerusalem-average-monthly-temperature-rainfall",
+   "annual_mean_c": 19.7,
+   "warmest_month": "Aug",
+   "coldest_month": "Jan",
+   "swing_c": 15.6,
+   "annual_rainfall_mm": 359.0,
+   "wettest_month": "Jan"
+  },
+  {
+   "city": "Wiesbaden",
+   "page": "https://pseoare.pages.dev/wiesbaden-average-monthly-temperature-rainfall",
+   "annual_mean_c": 9.7,
+   "warmest_month": "Jul",
+   "coldest_month": "Jan",
+   "swing_c": 19.8,
+   "annual_rainfall_mm": 699.0,
+   "wettest_month": "May"
+  },
+  {
+   "city": "Windhoek",
+   "page": "https://pseoare.pages.dev/windhoek-average-monthly-temperature-rainfall",
+   "annual_mean_c": 19.4,
+   "warmest_month": "Jan",
+   "coldest_month": "Jul",
+   "swing_c": 11.8,
+   "annual_rainfall_mm": 445.0,
+   "wettest_month": "Feb"
+  },
+  {
+   "city": "Winejok",
+   "page": "https://pseoare.pages.dev/winejok-average-monthly-temperature-rainfall",
+   "annual_mean_c": 28.6,
+   "warmest_month": "Apr",
+   "coldest_month": "Aug",
+   "swing_c": 7.2,
+   "annual_rainfall_mm": 896.0,
+   "wettest_month": "Aug"
+  },
+  {
+   "city": "Winnipeg",
+   "page": "https://pseoare.pages.dev/winnipeg-average-monthly-temperature-rainfall",
+   "annual_mean_c": 3.3,
+   "warmest_month": "Jul",
+   "coldest_month": "Jan",
+   "swing_c": 38.2,
+   "annual_rainfall_mm": 571.0,
+   "wettest_month": "Jun"
+  },
+  {
+   "city": "Wollongong",
+   "page": "https://pseoare.pages.dev/wollongong-average-monthly-temperature-rainfall",
+   "annual_mean_c": 15.6,
+   "warmest_month": "Jan",
+   "coldest_month": "Jul",
+   "swing_c": 12.5,
+   "annual_rainfall_mm": 929.0,
+   "wettest_month": "Feb"
+  },
+  {
+   "city": "Wolverhampton",
+   "page": "https://pseoare.pages.dev/wolverhampton-average-monthly-temperature-rainfall",
+   "annual_mean_c": 9.6,
+   "warmest_month": "Jul",
+   "coldest_month": "Jan",
+   "swing_c": 12.8,
+   "annual_rainfall_mm": 761.0,
+   "wettest_month": "Oct"
+  },
+  {
+   "city": "Wong Tai Sin",
+   "page": "https://pseoare.pages.dev/wong-tai-sin-average-monthly-temperature-rainfall",
+   "annual_mean_c": 23.4,
+   "warmest_month": "Jul",
+   "coldest_month": "Jan",
+   "swing_c": 12.5,
+   "annual_rainfall_mm": 1395.0,
+   "wettest_month": "Jun"
+  },
+  {
+   "city": "Wonju",
+   "page": "https://pseoare.pages.dev/wonju-average-monthly-temperature-rainfall",
+   "annual_mean_c": 8.8,
+   "warmest_month": "Aug",
+   "coldest_month": "Jan",
+   "swing_c": 29.4,
+   "annual_rainfall_mm": 1301.0,
+   "wettest_month": "Jul"
+  },
+  {
+   "city": "Wonsan",
+   "page": "https://pseoare.pages.dev/wonsan-average-monthly-temperature-rainfall",
+   "annual_mean_c": 9.2,
+   "warmest_month": "Aug",
+   "coldest_month": "Jan",
+   "swing_c": 28.5,
+   "annual_rainfall_mm": 1282.0,
+   "wettest_month": "Jul"
+  },
+  {
+   "city": "Woodlands",
+   "page": "https://pseoare.pages.dev/woodlands-average-monthly-temperature-rainfall",
+   "annual_mean_c": 27.1,
+   "warmest_month": "May",
+   "coldest_month": "Jan",
+   "swing_c": 2.2,
+   "annual_rainfall_mm": 2358.0,
+   "wettest_month": "Dec"
+  },
+  {
+   "city": "Wroclaw",
+   "page": "https://pseoare.pages.dev/wroclaw-average-monthly-temperature-rainfall",
+   "annual_mean_c": 9.1,
+   "warmest_month": "Jul",
+   "coldest_month": "Jan",
+   "swing_c": 22.7,
+   "annual_rainfall_mm": 630.0,
+   "wettest_month": "Jul"
+  },
+  {
+   "city": "Wuhan",
+   "page": "https://pseoare.pages.dev/wuhan-average-monthly-temperature-rainfall",
+   "annual_mean_c": 17.6,
+   "warmest_month": "Jul",
+   "coldest_month": "Jan",
+   "swing_c": 24.9,
+   "annual_rainfall_mm": 1330.0,
+   "wettest_month": "Jun"
+  },
+  {
+   "city": "Wuppertal",
+   "page": "https://pseoare.pages.dev/wuppertal-average-monthly-temperature-rainfall",
+   "annual_mean_c": 10.0,
+   "warmest_month": "Jul",
+   "coldest_month": "Jan",
+   "swing_c": 17.2,
+   "annual_rainfall_mm": 841.0,
+   "wettest_month": "Dec"
+  },
+  {
+   "city": "Wuzhong",
+   "page": "https://pseoare.pages.dev/wuzhong-average-monthly-temperature-rainfall",
+   "annual_mean_c": 10.3,
+   "warmest_month": "Jul",
+   "coldest_month": "Jan",
+   "swing_c": 31.8,
+   "annual_rainfall_mm": 227.0,
+   "wettest_month": "Aug"
+  },
+  {
+   "city": "Xi'an",
+   "page": "https://pseoare.pages.dev/xi-an-average-monthly-temperature-rainfall",
+   "annual_mean_c": 14.5,
+   "warmest_month": "Jul",
+   "coldest_month": "Jan",
+   "swing_c": 27.5,
+   "annual_rainfall_mm": 689.0,
+   "wettest_month": "Sep"
+  },
+  {
+   "city": "Yamoussoukro",
+   "page": "https://pseoare.pages.dev/yamoussoukro-average-monthly-temperature-rainfall",
+   "annual_mean_c": 26.6,
+   "warmest_month": "Feb",
+   "coldest_month": "Jul",
+   "swing_c": 3.9,
+   "annual_rainfall_mm": 1237.0,
+   "wettest_month": "Jun"
+  },
+  {
+   "city": "Yangon",
+   "page": "https://pseoare.pages.dev/yangon-average-monthly-temperature-rainfall",
+   "annual_mean_c": 28.1,
+   "warmest_month": "Apr",
+   "coldest_month": "Dec",
+   "swing_c": 7.3,
+   "annual_rainfall_mm": 1225.0,
+   "wettest_month": "Jul"
+  },
+  {
+   "city": "Yangsan",
+   "page": "https://pseoare.pages.dev/yangsan-average-monthly-temperature-rainfall",
+   "annual_mean_c": 11.9,
+   "warmest_month": "Aug",
+   "coldest_month": "Jan",
+   "swing_c": 27.2,
+   "annual_rainfall_mm": 1336.0,
+   "wettest_month": "Jul"
+  },
+  {
+   "city": "Yantai",
+   "page": "https://pseoare.pages.dev/yantai-average-monthly-temperature-rainfall",
+   "annual_mean_c": 12.6,
+   "warmest_month": "Jul",
+   "coldest_month": "Jan",
+   "swing_c": 27.2,
+   "annual_rainfall_mm": 701.0,
+   "wettest_month": "Aug"
+  },
+  {
+   "city": "Yaounde",
+   "page": "https://pseoare.pages.dev/yaounde-average-monthly-temperature-rainfall",
+   "annual_mean_c": 23.7,
+   "warmest_month": "Feb",
+   "coldest_month": "Aug",
+   "swing_c": 2.2,
+   "annual_rainfall_mm": 1470.0,
+   "wettest_month": "Oct"
+  },
+  {
+   "city": "Yaroslavl",
+   "page": "https://pseoare.pages.dev/yaroslavl-average-monthly-temperature-rainfall",
+   "annual_mean_c": 3.5,
+   "warmest_month": "Jul",
+   "coldest_month": "Jan",
+   "swing_c": 30.5,
+   "annual_rainfall_mm": 737.0,
+   "wettest_month": "Jul"
+  },
+  {
+   "city": "Yazd",
+   "page": "https://pseoare.pages.dev/yazd-average-monthly-temperature-rainfall",
+   "annual_mean_c": 17.3,
+   "warmest_month": "Jul",
+   "coldest_month": "Jan",
+   "swing_c": 24.7,
+   "annual_rainfall_mm": 55.0,
+   "wettest_month": "Jan"
+  },
+  {
+   "city": "Yei",
+   "page": "https://pseoare.pages.dev/yei-average-monthly-temperature-rainfall",
+   "annual_mean_c": 25.1,
+   "warmest_month": "Feb",
+   "coldest_month": "Aug",
+   "swing_c": 5.4,
+   "annual_rainfall_mm": 1157.0,
+   "wettest_month": "Aug"
+  },
+  {
+   "city": "Yekaterinburg",
+   "page": "https://pseoare.pages.dev/yekaterinburg-average-monthly-temperature-rainfall",
+   "annual_mean_c": 1.1,
+   "warmest_month": "Jul",
+   "coldest_month": "Jan",
+   "swing_c": 34.8,
+   "annual_rainfall_mm": 621.0,
+   "wettest_month": "Jun"
+  },
+  {
+   "city": "Yerevan",
+   "page": "https://pseoare.pages.dev/yerevan-average-monthly-temperature-rainfall",
+   "annual_mean_c": 13.6,
+   "warmest_month": "Jul",
+   "coldest_month": "Jan",
+   "swing_c": 27.5,
+   "annual_rainfall_mm": 353.0,
+   "wettest_month": "May"
+  },
+  {
+   "city": "Yokohama",
+   "page": "https://pseoare.pages.dev/yokohama-average-monthly-temperature-rainfall",
+   "annual_mean_c": 13.9,
+   "warmest_month": "Aug",
+   "coldest_month": "Jan",
+   "swing_c": 23.6,
+   "annual_rainfall_mm": 1632.0,
+   "wettest_month": "Sep"
+  },
+  {
+   "city": "Yunusobod",
+   "page": "https://pseoare.pages.dev/yunusobod-average-monthly-temperature-rainfall",
+   "annual_mean_c": 14.4,
+   "warmest_month": "Jul",
+   "coldest_month": "Jan",
+   "swing_c": 28.6,
+   "annual_rainfall_mm": 414.0,
+   "wettest_month": "Feb"
+  },
+  {
+   "city": "Zagazig",
+   "page": "https://pseoare.pages.dev/zagazig-average-monthly-temperature-rainfall",
+   "annual_mean_c": 22.4,
+   "warmest_month": "Jul",
+   "coldest_month": "Jan",
+   "swing_c": 17.5,
+   "annual_rainfall_mm": 60.0,
+   "wettest_month": "Apr"
+  },
+  {
+   "city": "Zagreb",
+   "page": "https://pseoare.pages.dev/zagreb-average-monthly-temperature-rainfall",
+   "annual_mean_c": 11.0,
+   "warmest_month": "Jul",
+   "coldest_month": "Jan",
+   "swing_c": 23.6,
+   "annual_rainfall_mm": 906.0,
+   "wettest_month": "Sep"
+  },
+  {
+   "city": "Zahedan",
+   "page": "https://pseoare.pages.dev/zahedan-average-monthly-temperature-rainfall",
+   "annual_mean_c": 18.2,
+   "warmest_month": "Jul",
+   "coldest_month": "Jan",
+   "swing_c": 21.6,
+   "annual_rainfall_mm": 67.0,
+   "wettest_month": "Feb"
+  },
+  {
+   "city": "Zamboanga",
+   "page": "https://pseoare.pages.dev/zamboanga-average-monthly-temperature-rainfall",
+   "annual_mean_c": 27.5,
+   "warmest_month": "Apr",
+   "coldest_month": "Jan",
+   "swing_c": 1.0,
+   "annual_rainfall_mm": 1632.0,
+   "wettest_month": "Oct"
+  },
+  {
+   "city": "Zanjan",
+   "page": "https://pseoare.pages.dev/zanjan-average-monthly-temperature-rainfall",
+   "annual_mean_c": 9.5,
+   "warmest_month": "Jul",
+   "coldest_month": "Jan",
+   "swing_c": 23.0,
+   "annual_rainfall_mm": 381.0,
+   "wettest_month": "Nov"
+  },
+  {
+   "city": "Zanzibar",
+   "page": "https://pseoare.pages.dev/zanzibar-average-monthly-temperature-rainfall",
+   "annual_mean_c": 27.2,
+   "warmest_month": "Mar",
+   "coldest_month": "Jul",
+   "swing_c": 3.1,
+   "annual_rainfall_mm": 1006.0,
+   "wettest_month": "Apr"
+  },
+  {
+   "city": "Zapopan",
+   "page": "https://pseoare.pages.dev/zapopan-average-monthly-temperature-rainfall",
+   "annual_mean_c": 19.9,
+   "warmest_month": "May",
+   "coldest_month": "Jan",
+   "swing_c": 8.5,
+   "annual_rainfall_mm": 800.0,
+   "wettest_month": "Jul"
+  },
+  {
+   "city": "Zaporizhzhya",
+   "page": "https://pseoare.pages.dev/zaporizhzhya-average-monthly-temperature-rainfall",
+   "annual_mean_c": 10.0,
+   "warmest_month": "Jul",
+   "coldest_month": "Jan",
+   "swing_c": 28.9,
+   "annual_rainfall_mm": 526.0,
+   "wettest_month": "Jun"
+  },
+  {
+   "city": "Zaragoza",
+   "page": "https://pseoare.pages.dev/zaragoza-average-monthly-temperature-rainfall",
+   "annual_mean_c": 14.9,
+   "warmest_month": "Jul",
+   "coldest_month": "Jan",
+   "swing_c": 19.0,
+   "annual_rainfall_mm": 367.0,
+   "wettest_month": "Apr"
+  },
+  {
+   "city": "Zaria",
+   "page": "https://pseoare.pages.dev/zaria-average-monthly-temperature-rainfall",
+   "annual_mean_c": 24.4,
+   "warmest_month": "Apr",
+   "coldest_month": "Dec",
+   "swing_c": 7.9,
+   "annual_rainfall_mm": 1121.0,
+   "wettest_month": "Aug"
+  },
+  {
+   "city": "Zarqa",
+   "page": "https://pseoare.pages.dev/zarqa-average-monthly-temperature-rainfall",
+   "annual_mean_c": 17.9,
+   "warmest_month": "Jul",
+   "coldest_month": "Jan",
+   "swing_c": 19.2,
+   "annual_rainfall_mm": 189.0,
+   "wettest_month": "Feb"
+  },
+  {
+   "city": "Zhengzhou",
+   "page": "https://pseoare.pages.dev/zhengzhou-average-monthly-temperature-rainfall",
+   "annual_mean_c": 15.4,
+   "warmest_month": "Jul",
+   "coldest_month": "Jan",
+   "swing_c": 28.9,
+   "annual_rainfall_mm": 640.0,
+   "wettest_month": "Jul"
+  },
+  {
+   "city": "Zhytomyr",
+   "page": "https://pseoare.pages.dev/zhytomyr-average-monthly-temperature-rainfall",
+   "annual_mean_c": 7.9,
+   "warmest_month": "Jul",
+   "coldest_month": "Jan",
+   "swing_c": 26.9,
+   "annual_rainfall_mm": 641.0,
+   "wettest_month": "Jun"
+  },
+  {
+   "city": "Zinder",
+   "page": "https://pseoare.pages.dev/zinder-average-monthly-temperature-rainfall",
+   "annual_mean_c": 27.4,
+   "warmest_month": "May",
+   "coldest_month": "Jan",
+   "swing_c": 12.8,
+   "annual_rainfall_mm": 412.0,
+   "wettest_month": "Aug"
+  },
+  {
+   "city": "Zuerich",
+   "page": "https://pseoare.pages.dev/zuerich-average-monthly-temperature-rainfall",
+   "annual_mean_c": 9.1,
+   "warmest_month": "Jul",
+   "coldest_month": "Jan",
+   "swing_c": 19.4,
+   "annual_rainfall_mm": 1308.0,
+   "wettest_month": "Aug"
+  },
+  {
+   "city": "Zurich",
+   "page": "https://pseoare.pages.dev/zurich-average-monthly-temperature-rainfall",
+   "annual_mean_c": 9.1,
+   "warmest_month": "Jul",
+   "coldest_month": "Jan",
+   "swing_c": 19.4,
+   "annual_rainfall_mm": 1308.0,
+   "wettest_month": "Aug"
   }
  ]
 }
