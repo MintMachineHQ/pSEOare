@@ -95,7 +95,7 @@ def _build_pages(
     pages.append(
         Page(
             kind="holidays_year",
-            title=f"Public holidays in {name} in {year} ({len(rows)} days)",
+            title=f"Public holidays in {name} {year}: {len(rows)} days",
             h1=f"Public holidays in {name} {year}",
             slug=slugify(f"public-holidays-{name}-{year}"),
             summary=summary,
@@ -135,7 +135,7 @@ def _build_pages(
         pages.append(
             Page(
                 kind="holiday_single",
-                title=f"{hname} in {name} {year}: date, traditions and next occurrence",
+                title=f"{hname} in {name} {year}: date & traditions",
                 h1=f"{hname} in {name} ({year})",
                 slug=slugify(f"{hname}-{name}-{hdate or year}"),
                 summary=(

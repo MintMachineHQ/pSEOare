@@ -57,7 +57,7 @@ from engine.render import (  # noqa: E402
 from engine.http import Http, QuotaExhausted, _is_quota_exhausted, write_json_cache  # noqa: E402
 from engine.indexing import key_file_is_reachable, remember_pending, take_pending  # noqa: E402
 from engine.metrics import Metrics as _Metrics  # noqa: E402
-from engine.models import Link, Page, set_render_signature, slugify  # noqa: E402
+from engine.models import Link, Page, set_render_signature, seo_title, slugify  # noqa: E402
 from engine.ratelimit import CallBudget  # noqa: E402
 from engine.sources.base import cached_fetch, trim_to_budget  # noqa: E402
 from engine.render import build_css, build_theme, ad_block, pick_copy, render_page, waterfall_js  # noqa: E402
@@ -1438,6 +1438,59 @@ class TestWriter(unittest.TestCase):
         manifest = json.loads((cfg.paths.cache / "manifest.json").read_text())
         self.assertIn("berlin-climate.html", manifest["pages"])
         self.assertIn("second-page.html", manifest["pages"])
+
+
+class TestSearchResultTitles(unittest.TestCase):
+    """A search result shows about sixty characters, so the rest is invisible.
+
+    More than three quarters of the corpus shipped titles over that limit, which put
+    the site name in the visible part and cut the words that identify the page.
+    """
+
+    def test_a_short_title_keeps_the_site_name(self):
+        self.assertEqual(
+            seo_title("Bitcoin price by month", "LongTail Data Atlas"),
+            "Bitcoin price by month | LongTail Data Atlas",
+        )
+
+    def test_the_site_name_is_dropped_before_the_description_is_cut(self):
+        title = seo_title("New Year's Day in Canada 2026: date & traditions", "LongTail Data Atlas")
+        self.assertNotIn("LongTail", title)
+        self.assertTrue(title.startswith("New Year's Day in Canada 2026"))
+
+    def test_an_over_long_description_is_cut_on_a_word_boundary(self):
+        title = seo_title("a " * 60, "LongTail Data Atlas")
+        self.assertLessEqual(len(title), 62)
+        self.assertFalse(title.endswith(" "))
+        self.assertNotIn("  ", title)
+
+    def test_every_source_pattern_fits_with_a_long_name(self):
+        cases = [
+            "Rahim Yar Khan: temperature & rainfall",
+            "United Kingdom: population, GDP, capital & income",
+            "Population of Bhutan: 787,424 (2024)",
+            "Bitcoin price by month: high, low & average",
+            "Public holidays in Germany 2026: 12 days",
+            "New Year's Day in Germany 2026: date & traditions",
+        ]
+        for description in cases:
+            title = seo_title(description, "LongTail Data Atlas")
+            self.assertLessEqual(len(title), 62, description)
+            self.assertTrue(title.startswith(description[:20]), description)
+
+    def test_the_rendered_page_carries_a_fitted_title(self):
+        tmp = Path(tempfile.mkdtemp())
+        cfg = make_cfg(tmp)
+        page = sample_page(cfg)
+        page.title = "Rijeka, Croatia: average monthly temperature and rainfall for every month"
+        theme = build_theme()
+        html = render_page(
+            page, cfg, theme, build_css(theme), "", [], "2026-01-01T00:00:00+00:00"
+        )
+        match = re.search(r"<title>(.*?)</title>", html, re.S)
+        self.assertIsNotNone(match)
+        self.assertLessEqual(len(match.group(1)), 62)
+        self.assertTrue(match.group(1).startswith("Rijeka, Croatia"))
 
 
 class TestManifestMatchesThePublishedCorpus(unittest.TestCase):

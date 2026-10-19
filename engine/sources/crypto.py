@@ -179,7 +179,7 @@ def _build_page(coin: str, data: dict, cfg, stamp: str, from_cache: bool) -> Pag
 
     return Page(
         kind="crypto_12m",
-        title=f"{name} price by month: 12 month high, low and average",
+        title=f"{name} price by month: high, low & average",
         h1=f"{name} price by month",
         slug=slugify(f"{name}-price-by-month"),
         summary=summary,

@@ -24,6 +24,24 @@ def render_signature(_data: Any = None) -> str:
     return _RENDER_SIGNATURE
 
 
+def seo_title(title: str, site_name: str, limit: int = 62) -> str:
+    """A title that fits the space a search result actually shows.
+
+    A search result truncates around sixty characters, so a long title loses the part
+    that identifies the page. The site name is the least important part of the string,
+    so it is dropped before the description is cut, and the description is only cut when
+    it is over the limit on its own. Cutting happens on a word boundary, because a
+    title sliced mid-word reads as broken.
+    """
+    brand = f" | {site_name}"
+    if len(title) + len(brand) <= limit:
+        return f"{title}{brand}"
+    if len(title) <= limit:
+        return title
+    trimmed = title[: limit - 1].rsplit(" ", 1)[0].rstrip(" ,:;-")
+    return trimmed or title[: limit - 1].rstrip(" ,:;-")
+
+
 def slugify(text: str, max_len: int = 80) -> str:
     slug = _SLUG_RE.sub("-", text.lower().strip())
     slug = slug.strip("-")[:max_len].strip("-")

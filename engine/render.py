@@ -11,7 +11,7 @@ from typing import Any, Iterable
 
 from .config import Config
 from .enrich import fallback_copy, prose_and_faq
-from .models import Link, Page
+from .models import Link, Page, seo_title
 
 AD_PLACEHOLDER_RE = "{{[a-z_]+}}"
 
@@ -624,6 +624,7 @@ def render_page(
     crumbs = f'<nav class="crumb" aria-label="Breadcrumb">{breadcrumb_html(page.breadcrumbs)}</nav>' if page.breadcrumbs else ""
     answer = answer_html(page)
     related = related_html(page.related)
+    fitted_title = seo_title(page.title, cfg.site_name)
     meta_desc = page.summary[:158]
     cache_badge = ""
     if page.data.get("from_cache"):
@@ -634,11 +635,11 @@ def render_page(
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{_esc(page.title)} | {_esc(cfg.site_name)}</title>
+<title>{_esc(fitted_title)}</title>
 <meta name="description" content="{_esc(meta_desc)}">
 <link rel="canonical" href="{_esc(canonical)}">
 <meta property="og:type" content="article">
-<meta property="og:title" content="{_esc(page.title)}">
+<meta property="og:title" content="{_esc(fitted_title)}">
 <meta property="og:description" content="{_esc(meta_desc)}">
 <meta property="og:url" content="{_esc(canonical)}">
 <meta name="twitter:card" content="summary">

@@ -20,6 +20,7 @@ from datetime import date, datetime, timezone
 from typing import Any
 
 from .metrics import Metrics, MetricsStore
+from .models import seo_title
 
 log = logging.getLogger("pseo.explore")
 
@@ -928,7 +929,7 @@ def _document(
     head = (
         '<meta charset="utf-8">'
         '<meta name="viewport" content="width=device-width,initial-scale=1">'
-        f'<title>{_esc(title)} | {_esc(site["name"])}</title>'
+        f'<title>{_esc(seo_title(title, site["name"]))}</title>'
         f'<meta name="description" content="{_esc(description)}">'
         '<link rel="canonical" href="' + link(path) + '">'
     )
@@ -1161,7 +1162,7 @@ def topic_feeds(store: MetricsStore, stamp: str) -> list[tuple[str, str]]:
         )
         feed = f"""<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0"><channel>
-<title>{xml_escape(title)} | {_SITE['name']}</title>
+<title>{xml_escape(seo_title(title, _SITE['name']))}</title>
 <link>{xml_escape(link('index.html'))}</link>
 <description>{xml_escape(title)} from {_esc(_SITE['origin'])}</description>
 <lastBuildDate>{stamp}</lastBuildDate>

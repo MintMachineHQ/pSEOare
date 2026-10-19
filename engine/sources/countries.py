@@ -124,7 +124,7 @@ def _country_pages(record: dict, v: dict[str, float], cfg, stamp: str, from_cach
 
     profile = Page(
         kind="country_profile",
-        title=f"{name} country data: population, GDP, capital and income group",
+        title=f"{name}: population, GDP, capital & income",
         h1=f"{name} country data",
         slug=slugify(f"{name}-country-data"),
         summary=(
@@ -194,7 +194,7 @@ def _country_pages(record: dict, v: dict[str, float], cfg, stamp: str, from_cach
 
     population_page = Page(
         kind="country_population",
-        title=f"Population of {name}: {population:,.0f} ({INDICATOR_YEAR} estimate)"
+        title=f"Population of {name}: {population:,.0f} ({INDICATOR_YEAR})"
         if population
         else f"Population of {name}",
         h1=f"Population of {name}",

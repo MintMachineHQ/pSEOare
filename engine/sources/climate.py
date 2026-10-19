@@ -121,7 +121,7 @@ def _build_page(city: dict, data: dict, cfg, stamp: str, from_cache: bool) -> Pa
 
     return Page(
         kind="climate_city",
-        title=f"{name} average monthly temperature and rainfall (long-term climate)",
+        title=f"{name}: temperature & rainfall",
         h1=f"{name} climate: monthly averages",
         # Prefer an explicit slug from assets/cities.json. tools/build_cities.py resolves
         # the case where two cities share a name, which a name-derived slug cannot.
