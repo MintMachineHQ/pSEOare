@@ -14,6 +14,29 @@ from .models import ManifestEntry, Page
 log = logging.getLogger("pseo.writer")
 
 MANIFEST = "manifest.json"
+PUBLISHED_TREE = "published_tree.txt"
+
+
+def load_published_tree(cache_dir: Path) -> set[str]:
+    """Paths that exist in the published corpus, as recorded before the build.
+
+    The manifest is cumulative: it remembers every page ever written, including pages
+    that have since been swept away because the source stopped producing them. The
+    sitemap is built from the manifest, so those dead pages kept being advertised and
+    answered with a 404. The published corpus is the only place that knows what is
+    actually live, and the build records it here before the engine runs.
+
+    An empty result means "no information", not "nothing is published": callers must
+    treat it as unknown and leave the manifest alone.
+    """
+    path = Path(cache_dir) / PUBLISHED_TREE
+    if not path.exists():
+        return set()
+    try:
+        lines = path.read_text(encoding="utf-8").splitlines()
+    except OSError:
+        return set()
+    return {line.strip() for line in lines if line.strip()}
 
 
 class Writer:
@@ -62,6 +85,37 @@ class Writer:
         current run's page list.
         """
         return (read_json_cache(self.manifest_path, {}) or {}).get("pages", {}) or {}
+
+    def reconcile_manifest(self, keep: set[str], published: set[str]) -> int:
+        """Drop manifest entries that are neither live nor written by this run.
+
+        The manifest outlives the files it names, so an entry can name a page that was
+        swept away in an earlier run. Advertising it asks a crawler for a 404. An entry
+        is kept when the page exists in the published corpus or when this run wrote it;
+        an entry that is neither is removed, which is what makes the sitemap honest.
+
+        Without a published tree there is no evidence, so nothing is removed. Guessing
+        would drop the whole corpus from the sitemap, which is the same class of failure
+        this fixes.
+        """
+        if not published:
+            log.warning("no published tree available; leaving the manifest as it is")
+            return 0
+        pages = (read_json_cache(self.manifest_path, {}) or {}).get("pages", {}) or {}
+        alive = {path for path in pages if path in published or path in keep}
+        dropped = [path for path in pages if path not in alive]
+        if not dropped:
+            return 0
+        stamp = datetime.now(timezone.utc).isoformat()
+        write_json_cache(
+            self.manifest_path,
+            {"updated_at": stamp, "pages": {path: pages[path] for path in alive}},
+        )
+        log.info(
+            "dropped %d manifest entries that are neither published nor rewritten",
+            len(dropped),
+        )
+        return len(dropped)
 
     def sync_manifest(
         self,

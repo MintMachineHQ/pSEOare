@@ -48,7 +48,7 @@ from engine.models import Page, set_render_signature  # noqa: E402
 from engine.ratelimit import CallBudget  # noqa: E402
 from engine.render import build_css, build_theme, pick_copy, render_page  # noqa: E402
 from engine.sources import collect_all  # noqa: E402
-from engine.writer import Writer  # noqa: E402
+from engine.writer import Writer, load_published_tree  # noqa: E402
 
 log = logging.getLogger("pseo")
 
@@ -189,6 +189,18 @@ async def run(args: argparse.Namespace) -> int:
             len(derived_paths),
             len(store.rows),
         )
+        # The manifest is cumulative and outlives the files it names, so it can name a
+        # page that was swept away in an earlier run. Advertising that page asks a
+        # crawler for a 404, and Search Console counts it as a submitted URL that fails.
+        # The published corpus says what is actually live, so the manifest is reconciled
+        # against it before the sitemap is built from the manifest.
+        published_tree = load_published_tree(cfg.paths.cache)
+        dropped = writer.reconcile_manifest(
+            {page.path for page in pages} | set(derived_paths), published_tree
+        )
+        if dropped:
+            log.info("manifest: %d entries are no longer published and are no longer advertised",
+                     dropped)
         if cfg.seo.get("generate_sitemap", True):
             # Nested paths such as api/climate.json contribute their directory to the
             # orphan keep set, never their filename.

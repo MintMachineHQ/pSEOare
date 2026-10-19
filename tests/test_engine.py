@@ -62,7 +62,7 @@ from engine.ratelimit import CallBudget  # noqa: E402
 from engine.sources.base import cached_fetch, trim_to_budget  # noqa: E402
 from engine.render import build_css, build_theme, ad_block, pick_copy, render_page, waterfall_js  # noqa: E402
 from engine.sources import climate, countries, crypto, holidays  # noqa: E402
-from engine.writer import Writer  # noqa: E402
+from engine.writer import Writer, load_published_tree  # noqa: E402
 
 
 def make_cfg(tmp: Path) -> Config:
@@ -1438,6 +1438,93 @@ class TestWriter(unittest.TestCase):
         manifest = json.loads((cfg.paths.cache / "manifest.json").read_text())
         self.assertIn("berlin-climate.html", manifest["pages"])
         self.assertIn("second-page.html", manifest["pages"])
+
+
+class TestManifestMatchesThePublishedCorpus(unittest.TestCase):
+    """The manifest is cumulative, so it can name pages that no longer exist.
+
+    The sitemap is built from the manifest, so a stale entry is a URL advertised to
+    crawlers that answers 404 - 57 of them were live before this was fixed.
+    """
+
+    def _manifest(self, cfg):
+        return json.loads((cfg.paths.cache / "manifest.json").read_text())["pages"]
+
+    def test_a_page_that_is_neither_published_nor_rewritten_is_dropped(self):
+        tmp = Path(tempfile.mkdtemp())
+        cfg = make_cfg(tmp)
+        stamp = "2026-01-01T00:00:00+00:00"
+        first = sample_page(cfg)
+        second = sample_page(cfg)
+        second.slug = "swept-away"
+        Writer(cfg.paths.output, cfg.paths.cache).sync_manifest([first, second], stamp)
+
+        writer = Writer(cfg.paths.output, cfg.paths.cache)
+        dropped = writer.reconcile_manifest(
+            keep={"berlin-climate.html"},
+            published={"berlin-climate.html"},
+        )
+        self.assertEqual(dropped, 1)
+        pages = self._manifest(cfg)
+        self.assertIn("berlin-climate.html", pages)
+        self.assertNotIn("swept-away.html", pages)
+
+    def test_a_page_written_by_this_run_is_kept(self):
+        tmp = Path(tempfile.mkdtemp())
+        cfg = make_cfg(tmp)
+        stamp = "2026-01-01T00:00:00+00:00"
+        page = sample_page(cfg)
+        Writer(cfg.paths.output, cfg.paths.cache).sync_manifest([page], stamp)
+
+        writer = Writer(cfg.paths.output, cfg.paths.cache)
+        dropped = writer.reconcile_manifest(
+            keep={"berlin-climate.html"},
+            published=set(),
+        )
+        self.assertEqual(dropped, 0)
+        self.assertIn("berlin-climate.html", self._manifest(cfg))
+
+    def test_without_a_published_tree_nothing_is_dropped(self):
+        # No list means no evidence. Dropping on a guess would take the whole corpus
+        # out of the sitemap, which is the same failure this fixes.
+        tmp = Path(tempfile.mkdtemp())
+        cfg = make_cfg(tmp)
+        stamp = "2026-01-01T00:00:00+00:00"
+        page = sample_page(cfg)
+        Writer(cfg.paths.output, cfg.paths.cache).sync_manifest([page], stamp)
+
+        writer = Writer(cfg.paths.output, cfg.paths.cache)
+        self.assertEqual(writer.reconcile_manifest(keep=set(), published=set()), 0)
+        self.assertIn("berlin-climate.html", self._manifest(cfg))
+
+    def test_the_sitemap_stops_advertising_the_dropped_page(self):
+        tmp = Path(tempfile.mkdtemp())
+        cfg = make_cfg(tmp)
+        stamp = "2026-01-01T00:00:00+00:00"
+        first = sample_page(cfg)
+        second = sample_page(cfg)
+        second.slug = "swept-away"
+        Writer(cfg.paths.output, cfg.paths.cache).sync_manifest([first, second], stamp)
+
+        writer = Writer(cfg.paths.output, cfg.paths.cache)
+        writer.reconcile_manifest(keep={"berlin-climate.html"}, published={"berlin-climate.html"})
+        xml = sitemap_xml([], cfg, stamp, published=writer.manifest_pages())
+        self.assertIn(cfg.url_for("berlin-climate.html"), xml)
+        self.assertNotIn(cfg.url_for("swept-away.html"), xml)
+
+    def test_the_published_tree_is_read_from_the_cache(self):
+        tmp = Path(tempfile.mkdtemp())
+        cfg = make_cfg(tmp)
+        (cfg.paths.cache / "published_tree.txt").write_text(
+            "index.html\napi/climate.json\n\n", encoding="utf-8"
+        )
+        tree = load_published_tree(cfg.paths.cache)
+        self.assertEqual(tree, {"index.html", "api/climate.json"})
+
+    def test_a_missing_published_tree_is_unknown_not_empty(self):
+        tmp = Path(tempfile.mkdtemp())
+        cfg = make_cfg(tmp)
+        self.assertEqual(load_published_tree(cfg.paths.cache), set())
 
 
 class TestHubPagination(unittest.TestCase):

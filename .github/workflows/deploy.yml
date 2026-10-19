@@ -61,6 +61,21 @@ jobs:
           restore-keys: |
             pseo-cache-
 
+      - name: Record the published corpus
+        # The manifest is cumulative and outlives the files it names, so it kept
+        # advertising pages that had been swept away - 57 of them were answering 404.
+        # The published corpus is the gh-pages branch, and it is the only place that
+        # knows what is actually live. The engine reconciles the manifest against this
+        # list before it builds the sitemap. An empty list means "unknown", and the
+        # engine then leaves the manifest alone.
+        run: |
+          if git fetch --depth 1 origin refs/heads/gh-pages; then
+            git ls-tree -r --name-only FETCH_HEAD > cache/published_tree.txt
+          else
+            : > cache/published_tree.txt
+          fi
+          echo "published files: $(wc -l < cache/published_tree.txt)"
+
       - name: Clear stale unavailable markers
         # A marker written for a rate limit or a daily quota is permanent and would
         # retire a working endpoint for the life of the cache, so those are cleared
