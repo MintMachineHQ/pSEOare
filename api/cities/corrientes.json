@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Corrientes",
+  "annual_mean_c": 21.7,
+  "warmest_month": "Jan",
+  "warmest_c": 27.9,
+  "coldest_month": "Jul",
+  "coldest_c": 14.7,
+  "seasonal_swing_c": 13.2,
+  "annual_rainfall_mm": 1385.0,
+  "wettest_month": "Nov",
+  "wettest_mm_per_day": 6.05,
+  "driest_month": "Jul",
+  "driest_mm_per_day": 1.17,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 27.9,
+    "rain_mm_per_day": 5.45
+   },
+   {
+    "month": "Feb",
+    "mean_c": 27.3,
+    "rain_mm_per_day": 4.41
+   },
+   {
+    "month": "Mar",
+    "mean_c": 25.4,
+    "rain_mm_per_day": 4.8
+   },
+   {
+    "month": "Apr",
+    "mean_c": 22.0,
+    "rain_mm_per_day": 5.41
+   },
+   {
+    "month": "May",
+    "mean_c": 17.6,
+    "rain_mm_per_day": 3.01
+   },
+   {
+    "month": "Jun",
+    "mean_c": 15.6,
+    "rain_mm_per_day": 2.32
+   },
+   {
+    "month": "Jul",
+    "mean_c": 14.7,
+    "rain_mm_per_day": 1.17
+   },
+   {
+    "month": "Aug",
+    "mean_c": 16.7,
+    "rain_mm_per_day": 1.24
+   },
+   {
+    "month": "Sep",
+    "mean_c": 19.4,
+    "rain_mm_per_day": 1.97
+   },
+   {
+    "month": "Oct",
+    "mean_c": 23.0,
+    "rain_mm_per_day": 4.72
+   },
+   {
+    "month": "Nov",
+    "mean_c": 24.5,
+    "rain_mm_per_day": 6.05
+   },
+   {
+    "month": "Dec",
+    "mean_c": 26.9,
+    "rain_mm_per_day": 5.02
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/corrientes-average-monthly-temperature-rainfall",
+  "title": "Corrientes climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

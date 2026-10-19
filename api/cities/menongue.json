@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Menongue",
+  "annual_mean_c": 21.4,
+  "warmest_month": "Oct",
+  "warmest_c": 26.1,
+  "coldest_month": "Jun",
+  "coldest_c": 17.4,
+  "seasonal_swing_c": 8.7,
+  "annual_rainfall_mm": 875.0,
+  "wettest_month": "Mar",
+  "wettest_mm_per_day": 5.53,
+  "driest_month": "Jul",
+  "driest_mm_per_day": 0.0,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 21.7,
+    "rain_mm_per_day": 5.33
+   },
+   {
+    "month": "Feb",
+    "mean_c": 21.6,
+    "rain_mm_per_day": 5.36
+   },
+   {
+    "month": "Mar",
+    "mean_c": 21.5,
+    "rain_mm_per_day": 5.53
+   },
+   {
+    "month": "Apr",
+    "mean_c": 21.1,
+    "rain_mm_per_day": 1.28
+   },
+   {
+    "month": "May",
+    "mean_c": 19.4,
+    "rain_mm_per_day": 0.13
+   },
+   {
+    "month": "Jun",
+    "mean_c": 17.4,
+    "rain_mm_per_day": 0.01
+   },
+   {
+    "month": "Jul",
+    "mean_c": 17.4,
+    "rain_mm_per_day": 0.0
+   },
+   {
+    "month": "Aug",
+    "mean_c": 20.7,
+    "rain_mm_per_day": 0.02
+   },
+   {
+    "month": "Sep",
+    "mean_c": 24.4,
+    "rain_mm_per_day": 0.18
+   },
+   {
+    "month": "Oct",
+    "mean_c": 26.1,
+    "rain_mm_per_day": 1.32
+   },
+   {
+    "month": "Nov",
+    "mean_c": 23.7,
+    "rain_mm_per_day": 4.66
+   },
+   {
+    "month": "Dec",
+    "mean_c": 22.2,
+    "rain_mm_per_day": 4.96
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/menongue-average-monthly-temperature-rainfall",
+  "title": "Menongue climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

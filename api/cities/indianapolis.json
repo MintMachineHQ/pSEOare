@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Indianapolis",
+  "annual_mean_c": 11.0,
+  "warmest_month": "Jul",
+  "warmest_c": 23.4,
+  "coldest_month": "Jan",
+  "coldest_c": -3.1,
+  "seasonal_swing_c": 26.5,
+  "annual_rainfall_mm": 1139.0,
+  "wettest_month": "Jun",
+  "wettest_mm_per_day": 4.48,
+  "driest_month": "Feb",
+  "driest_mm_per_day": 2.4,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": -3.1,
+    "rain_mm_per_day": 2.42
+   },
+   {
+    "month": "Feb",
+    "mean_c": -1.6,
+    "rain_mm_per_day": 2.4
+   },
+   {
+    "month": "Mar",
+    "mean_c": 4.4,
+    "rain_mm_per_day": 2.85
+   },
+   {
+    "month": "Apr",
+    "mean_c": 11.0,
+    "rain_mm_per_day": 3.7
+   },
+   {
+    "month": "May",
+    "mean_c": 16.8,
+    "rain_mm_per_day": 3.83
+   },
+   {
+    "month": "Jun",
+    "mean_c": 21.6,
+    "rain_mm_per_day": 4.48
+   },
+   {
+    "month": "Jul",
+    "mean_c": 23.4,
+    "rain_mm_per_day": 3.61
+   },
+   {
+    "month": "Aug",
+    "mean_c": 22.7,
+    "rain_mm_per_day": 3.07
+   },
+   {
+    "month": "Sep",
+    "mean_c": 19.2,
+    "rain_mm_per_day": 2.71
+   },
+   {
+    "month": "Oct",
+    "mean_c": 12.1,
+    "rain_mm_per_day": 2.99
+   },
+   {
+    "month": "Nov",
+    "mean_c": 5.1,
+    "rain_mm_per_day": 2.74
+   },
+   {
+    "month": "Dec",
+    "mean_c": -0.5,
+    "rain_mm_per_day": 2.67
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/indianapolis-average-monthly-temperature-rainfall",
+  "title": "Indianapolis climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

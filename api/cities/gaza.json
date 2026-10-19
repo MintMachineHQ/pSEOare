@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Gaza",
+  "annual_mean_c": 21.3,
+  "warmest_month": "Aug",
+  "warmest_c": 27.6,
+  "coldest_month": "Jan",
+  "coldest_c": 14.6,
+  "seasonal_swing_c": 13.0,
+  "annual_rainfall_mm": 220.0,
+  "wettest_month": "Jan",
+  "wettest_mm_per_day": 1.78,
+  "driest_month": "Aug",
+  "driest_mm_per_day": 0.0,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 14.6,
+    "rain_mm_per_day": 1.78
+   },
+   {
+    "month": "Feb",
+    "mean_c": 15.0,
+    "rain_mm_per_day": 1.21
+   },
+   {
+    "month": "Mar",
+    "mean_c": 16.7,
+    "rain_mm_per_day": 0.7
+   },
+   {
+    "month": "Apr",
+    "mean_c": 18.8,
+    "rain_mm_per_day": 0.36
+   },
+   {
+    "month": "May",
+    "mean_c": 22.1,
+    "rain_mm_per_day": 0.07
+   },
+   {
+    "month": "Jun",
+    "mean_c": 24.9,
+    "rain_mm_per_day": 0.01
+   },
+   {
+    "month": "Jul",
+    "mean_c": 27.0,
+    "rain_mm_per_day": 0.02
+   },
+   {
+    "month": "Aug",
+    "mean_c": 27.6,
+    "rain_mm_per_day": 0.0
+   },
+   {
+    "month": "Sep",
+    "mean_c": 26.6,
+    "rain_mm_per_day": 0.01
+   },
+   {
+    "month": "Oct",
+    "mean_c": 24.5,
+    "rain_mm_per_day": 0.41
+   },
+   {
+    "month": "Nov",
+    "mean_c": 20.7,
+    "rain_mm_per_day": 1.24
+   },
+   {
+    "month": "Dec",
+    "mean_c": 16.7,
+    "rain_mm_per_day": 1.44
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/gaza-average-monthly-temperature-rainfall",
+  "title": "Gaza climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Gwangju",
+  "annual_mean_c": 12.4,
+  "warmest_month": "Aug",
+  "warmest_c": 25.1,
+  "coldest_month": "Jan",
+  "coldest_c": -0.6,
+  "seasonal_swing_c": 25.7,
+  "annual_rainfall_mm": 1375.0,
+  "wettest_month": "Jul",
+  "wettest_mm_per_day": 9.36,
+  "driest_month": "Jan",
+  "driest_mm_per_day": 0.98,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": -0.6,
+    "rain_mm_per_day": 0.98
+   },
+   {
+    "month": "Feb",
+    "mean_c": 1.2,
+    "rain_mm_per_day": 1.68
+   },
+   {
+    "month": "Mar",
+    "mean_c": 5.4,
+    "rain_mm_per_day": 2.14
+   },
+   {
+    "month": "Apr",
+    "mean_c": 11.2,
+    "rain_mm_per_day": 3.62
+   },
+   {
+    "month": "May",
+    "mean_c": 16.6,
+    "rain_mm_per_day": 3.65
+   },
+   {
+    "month": "Jun",
+    "mean_c": 20.9,
+    "rain_mm_per_day": 5.32
+   },
+   {
+    "month": "Jul",
+    "mean_c": 24.5,
+    "rain_mm_per_day": 9.36
+   },
+   {
+    "month": "Aug",
+    "mean_c": 25.1,
+    "rain_mm_per_day": 8.54
+   },
+   {
+    "month": "Sep",
+    "mean_c": 20.5,
+    "rain_mm_per_day": 5.03
+   },
+   {
+    "month": "Oct",
+    "mean_c": 14.1,
+    "rain_mm_per_day": 2.14
+   },
+   {
+    "month": "Nov",
+    "mean_c": 7.7,
+    "rain_mm_per_day": 1.61
+   },
+   {
+    "month": "Dec",
+    "mean_c": 1.4,
+    "rain_mm_per_day": 1.16
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/gwangju-average-monthly-temperature-rainfall",
+  "title": "Gwangju climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

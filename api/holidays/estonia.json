@@ -1,7 +1,7 @@
 {
  "answer": {
   "country": "Estonia",
-  "count": 8,
+  "count": 32,
   "holidays": [
    {
     "name": "New Year's Day in Estonia (2016)",
@@ -12,12 +12,44 @@
     "page": "https://pseoare.pages.dev/new-year-s-day-estonia-2016-01-01"
    },
    {
+    "name": "Independence Day in Estonia (2016)",
+    "local_name": "iseseisvusp\u00e4ev",
+    "date": "2016-02-24",
+    "weekday": "Wednesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/independence-day-estonia-2016-02-24"
+   },
+   {
+    "name": "Christmas Day in Estonia (2016)",
+    "local_name": "esimene j\u00f5ulup\u00fcha",
+    "date": "2016-12-25",
+    "weekday": "Sunday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/christmas-day-estonia-2016-12-25"
+   },
+   {
     "name": "New Year's Day in Estonia (2017)",
     "local_name": "uusaasta",
     "date": "2017-01-01",
     "weekday": "Sunday",
     "weekend": true,
     "page": "https://pseoare.pages.dev/new-year-s-day-estonia-2017-01-01"
+   },
+   {
+    "name": "Independence Day in Estonia (2017)",
+    "local_name": "iseseisvusp\u00e4ev",
+    "date": "2017-02-24",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/independence-day-estonia-2017-02-24"
+   },
+   {
+    "name": "Christmas Day in Estonia (2017)",
+    "local_name": "esimene j\u00f5ulup\u00fcha",
+    "date": "2017-12-25",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-estonia-2017-12-25"
    },
    {
     "name": "New Year's Day in Estonia (2018)",
@@ -28,12 +60,44 @@
     "page": "https://pseoare.pages.dev/new-year-s-day-estonia-2018-01-01"
    },
    {
+    "name": "Independence Day in Estonia (2018)",
+    "local_name": "iseseisvusp\u00e4ev",
+    "date": "2018-02-24",
+    "weekday": "Saturday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/independence-day-estonia-2018-02-24"
+   },
+   {
+    "name": "Christmas Day in Estonia (2018)",
+    "local_name": "esimene j\u00f5ulup\u00fcha",
+    "date": "2018-12-25",
+    "weekday": "Tuesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-estonia-2018-12-25"
+   },
+   {
     "name": "New Year's Day in Estonia (2019)",
     "local_name": "uusaasta",
     "date": "2019-01-01",
     "weekday": "Tuesday",
     "weekend": false,
     "page": "https://pseoare.pages.dev/new-year-s-day-estonia-2019-01-01"
+   },
+   {
+    "name": "Independence Day in Estonia (2019)",
+    "local_name": "iseseisvusp\u00e4ev",
+    "date": "2019-02-24",
+    "weekday": "Sunday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/independence-day-estonia-2019-02-24"
+   },
+   {
+    "name": "Christmas Day in Estonia (2019)",
+    "local_name": "esimene j\u00f5ulup\u00fcha",
+    "date": "2019-12-25",
+    "weekday": "Wednesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-estonia-2019-12-25"
    },
    {
     "name": "New Year's Day in Estonia (2020)",
@@ -44,12 +108,44 @@
     "page": "https://pseoare.pages.dev/new-year-s-day-estonia-2020-01-01"
    },
    {
+    "name": "Independence Day in Estonia (2020)",
+    "local_name": "iseseisvusp\u00e4ev",
+    "date": "2020-02-24",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/independence-day-estonia-2020-02-24"
+   },
+   {
+    "name": "Christmas Day in Estonia (2020)",
+    "local_name": "esimene j\u00f5ulup\u00fcha",
+    "date": "2020-12-25",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-estonia-2020-12-25"
+   },
+   {
     "name": "New Year's Day in Estonia (2021)",
     "local_name": "uusaasta",
     "date": "2021-01-01",
     "weekday": "Friday",
     "weekend": false,
     "page": "https://pseoare.pages.dev/new-year-s-day-estonia-2021-01-01"
+   },
+   {
+    "name": "Independence Day in Estonia (2021)",
+    "local_name": "iseseisvusp\u00e4ev",
+    "date": "2021-02-24",
+    "weekday": "Wednesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/independence-day-estonia-2021-02-24"
+   },
+   {
+    "name": "Christmas Day in Estonia (2021)",
+    "local_name": "esimene j\u00f5ulup\u00fcha",
+    "date": "2021-12-25",
+    "weekday": "Saturday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/christmas-day-estonia-2021-12-25"
    },
    {
     "name": "New Year's Day in Estonia (2022)",
@@ -60,12 +156,108 @@
     "page": "https://pseoare.pages.dev/new-year-s-day-estonia-2022-01-01"
    },
    {
+    "name": "Independence Day in Estonia (2022)",
+    "local_name": "iseseisvusp\u00e4ev",
+    "date": "2022-02-24",
+    "weekday": "Thursday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/independence-day-estonia-2022-02-24"
+   },
+   {
+    "name": "Christmas Day in Estonia (2022)",
+    "local_name": "esimene j\u00f5ulup\u00fcha",
+    "date": "2022-12-25",
+    "weekday": "Sunday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/christmas-day-estonia-2022-12-25"
+   },
+   {
     "name": "New Year's Day in Estonia (2023)",
     "local_name": "uusaasta",
     "date": "2023-01-01",
     "weekday": "Sunday",
     "weekend": true,
     "page": "https://pseoare.pages.dev/new-year-s-day-estonia-2023-01-01"
+   },
+   {
+    "name": "Independence Day in Estonia (2023)",
+    "local_name": "iseseisvusp\u00e4ev",
+    "date": "2023-02-24",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/independence-day-estonia-2023-02-24"
+   },
+   {
+    "name": "Christmas Day in Estonia (2023)",
+    "local_name": "esimene j\u00f5ulup\u00fcha",
+    "date": "2023-12-25",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-estonia-2023-12-25"
+   },
+   {
+    "name": "Independence Day in Estonia (2024)",
+    "local_name": "iseseisvusp\u00e4ev",
+    "date": "2024-02-24",
+    "weekday": "Saturday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/independence-day-estonia-2024-02-24"
+   },
+   {
+    "name": "Christmas Day in Estonia (2024)",
+    "local_name": "esimene j\u00f5ulup\u00fcha",
+    "date": "2024-12-25",
+    "weekday": "Wednesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-estonia-2024-12-25"
+   },
+   {
+    "name": "Independence Day in Estonia (2025)",
+    "local_name": "iseseisvusp\u00e4ev",
+    "date": "2025-02-24",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/independence-day-estonia-2025-02-24"
+   },
+   {
+    "name": "Christmas Day in Estonia (2025)",
+    "local_name": "esimene j\u00f5ulup\u00fcha",
+    "date": "2025-12-25",
+    "weekday": "Thursday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-estonia-2025-12-25"
+   },
+   {
+    "name": "Independence Day in Estonia (2026)",
+    "local_name": "iseseisvusp\u00e4ev",
+    "date": "2026-02-24",
+    "weekday": "Tuesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/independence-day-estonia-2026-02-24"
+   },
+   {
+    "name": "Christmas Day in Estonia (2026)",
+    "local_name": "esimene j\u00f5ulup\u00fcha",
+    "date": "2026-12-25",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-estonia-2026-12-25"
+   },
+   {
+    "name": "Independence Day in Estonia (2027)",
+    "local_name": "iseseisvusp\u00e4ev",
+    "date": "2027-02-24",
+    "weekday": "Wednesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/independence-day-estonia-2027-02-24"
+   },
+   {
+    "name": "Christmas Day in Estonia (2027)",
+    "local_name": "esimene j\u00f5ulup\u00fcha",
+    "date": "2027-12-25",
+    "weekday": "Saturday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/christmas-day-estonia-2027-12-25"
    }
   ]
  },
@@ -74,7 +266,7 @@
   "title": "Public holidays for Estonia",
   "site": "https://pseoare.pages.dev"
  },
- "updated": "2026-10-19T20:41:30.228277+00:00",
+ "updated": "2026-10-19T20:49:39.946179+00:00",
  "license": "CC-BY-4.0",
  "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
 }

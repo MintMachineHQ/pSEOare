@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Multan",
+  "annual_mean_c": 27.7,
+  "warmest_month": "Jun",
+  "warmest_c": 38.6,
+  "coldest_month": "Jan",
+  "coldest_c": 13.7,
+  "seasonal_swing_c": 24.9,
+  "annual_rainfall_mm": 197.0,
+  "wettest_month": "Mar",
+  "wettest_mm_per_day": 1.1,
+  "driest_month": "Oct",
+  "driest_mm_per_day": 0.14,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 13.7,
+    "rain_mm_per_day": 0.28
+   },
+   {
+    "month": "Feb",
+    "mean_c": 17.0,
+    "rain_mm_per_day": 0.47
+   },
+   {
+    "month": "Mar",
+    "mean_c": 23.3,
+    "rain_mm_per_day": 1.1
+   },
+   {
+    "month": "Apr",
+    "mean_c": 30.1,
+    "rain_mm_per_day": 0.37
+   },
+   {
+    "month": "May",
+    "mean_c": 35.9,
+    "rain_mm_per_day": 0.37
+   },
+   {
+    "month": "Jun",
+    "mean_c": 38.6,
+    "rain_mm_per_day": 0.74
+   },
+   {
+    "month": "Jul",
+    "mean_c": 38.2,
+    "rain_mm_per_day": 0.96
+   },
+   {
+    "month": "Aug",
+    "mean_c": 36.6,
+    "rain_mm_per_day": 0.86
+   },
+   {
+    "month": "Sep",
+    "mean_c": 33.5,
+    "rain_mm_per_day": 0.77
+   },
+   {
+    "month": "Oct",
+    "mean_c": 28.1,
+    "rain_mm_per_day": 0.14
+   },
+   {
+    "month": "Nov",
+    "mean_c": 21.1,
+    "rain_mm_per_day": 0.15
+   },
+   {
+    "month": "Dec",
+    "mean_c": 15.6,
+    "rain_mm_per_day": 0.28
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/multan-average-monthly-temperature-rainfall",
+  "title": "Multan climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

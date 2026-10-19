@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Luena",
+  "annual_mean_c": 21.9,
+  "warmest_month": "Oct",
+  "warmest_c": 25.8,
+  "coldest_month": "Jun",
+  "coldest_c": 18.8,
+  "seasonal_swing_c": 7.0,
+  "annual_rainfall_mm": 976.0,
+  "wettest_month": "Mar",
+  "wettest_mm_per_day": 6.33,
+  "driest_month": "Jun",
+  "driest_mm_per_day": 0.01,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 21.7,
+    "rain_mm_per_day": 5.39
+   },
+   {
+    "month": "Feb",
+    "mean_c": 21.7,
+    "rain_mm_per_day": 5.92
+   },
+   {
+    "month": "Mar",
+    "mean_c": 21.7,
+    "rain_mm_per_day": 6.33
+   },
+   {
+    "month": "Apr",
+    "mean_c": 21.3,
+    "rain_mm_per_day": 1.49
+   },
+   {
+    "month": "May",
+    "mean_c": 20.3,
+    "rain_mm_per_day": 0.13
+   },
+   {
+    "month": "Jun",
+    "mean_c": 18.8,
+    "rain_mm_per_day": 0.01
+   },
+   {
+    "month": "Jul",
+    "mean_c": 18.8,
+    "rain_mm_per_day": 0.02
+   },
+   {
+    "month": "Aug",
+    "mean_c": 22.0,
+    "rain_mm_per_day": 0.05
+   },
+   {
+    "month": "Sep",
+    "mean_c": 25.2,
+    "rain_mm_per_day": 0.48
+   },
+   {
+    "month": "Oct",
+    "mean_c": 25.8,
+    "rain_mm_per_day": 1.86
+   },
+   {
+    "month": "Nov",
+    "mean_c": 23.4,
+    "rain_mm_per_day": 4.52
+   },
+   {
+    "month": "Dec",
+    "mean_c": 22.0,
+    "rain_mm_per_day": 5.91
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/luena-average-monthly-temperature-rainfall",
+  "title": "Luena climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

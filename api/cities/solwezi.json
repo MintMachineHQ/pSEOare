@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Solwezi",
+  "annual_mean_c": 20.2,
+  "warmest_month": "Oct",
+  "warmest_c": 25.1,
+  "coldest_month": "Jun",
+  "coldest_c": 16.1,
+  "seasonal_swing_c": 9.0,
+  "annual_rainfall_mm": 1205.0,
+  "wettest_month": "Dec",
+  "wettest_mm_per_day": 8.94,
+  "driest_month": "Jun",
+  "driest_mm_per_day": 0.01,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 20.5,
+    "rain_mm_per_day": 8.25
+   },
+   {
+    "month": "Feb",
+    "mean_c": 20.6,
+    "rain_mm_per_day": 7.31
+   },
+   {
+    "month": "Mar",
+    "mean_c": 20.4,
+    "rain_mm_per_day": 6.15
+   },
+   {
+    "month": "Apr",
+    "mean_c": 19.4,
+    "rain_mm_per_day": 2.44
+   },
+   {
+    "month": "May",
+    "mean_c": 17.7,
+    "rain_mm_per_day": 0.13
+   },
+   {
+    "month": "Jun",
+    "mean_c": 16.1,
+    "rain_mm_per_day": 0.01
+   },
+   {
+    "month": "Jul",
+    "mean_c": 16.2,
+    "rain_mm_per_day": 0.02
+   },
+   {
+    "month": "Aug",
+    "mean_c": 19.3,
+    "rain_mm_per_day": 0.08
+   },
+   {
+    "month": "Sep",
+    "mean_c": 23.1,
+    "rain_mm_per_day": 0.21
+   },
+   {
+    "month": "Oct",
+    "mean_c": 25.1,
+    "rain_mm_per_day": 1.2
+   },
+   {
+    "month": "Nov",
+    "mean_c": 22.8,
+    "rain_mm_per_day": 4.9
+   },
+   {
+    "month": "Dec",
+    "mean_c": 21.0,
+    "rain_mm_per_day": 8.94
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/solwezi-average-monthly-temperature-rainfall",
+  "title": "Solwezi climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

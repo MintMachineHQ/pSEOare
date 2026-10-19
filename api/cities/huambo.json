@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Huambo",
+  "annual_mean_c": 19.3,
+  "warmest_month": "Oct",
+  "warmest_c": 22.4,
+  "coldest_month": "Jun",
+  "coldest_c": 16.0,
+  "seasonal_swing_c": 6.4,
+  "annual_rainfall_mm": 1278.0,
+  "wettest_month": "Mar",
+  "wettest_mm_per_day": 9.26,
+  "driest_month": "Jun",
+  "driest_mm_per_day": 0.01,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 19.4,
+    "rain_mm_per_day": 5.86
+   },
+   {
+    "month": "Feb",
+    "mean_c": 19.6,
+    "rain_mm_per_day": 6.15
+   },
+   {
+    "month": "Mar",
+    "mean_c": 19.6,
+    "rain_mm_per_day": 9.26
+   },
+   {
+    "month": "Apr",
+    "mean_c": 19.4,
+    "rain_mm_per_day": 2.55
+   },
+   {
+    "month": "May",
+    "mean_c": 17.9,
+    "rain_mm_per_day": 0.23
+   },
+   {
+    "month": "Jun",
+    "mean_c": 16.0,
+    "rain_mm_per_day": 0.01
+   },
+   {
+    "month": "Jul",
+    "mean_c": 16.1,
+    "rain_mm_per_day": 0.01
+   },
+   {
+    "month": "Aug",
+    "mean_c": 19.1,
+    "rain_mm_per_day": 0.14
+   },
+   {
+    "month": "Sep",
+    "mean_c": 21.8,
+    "rain_mm_per_day": 0.69
+   },
+   {
+    "month": "Oct",
+    "mean_c": 22.4,
+    "rain_mm_per_day": 2.77
+   },
+   {
+    "month": "Nov",
+    "mean_c": 20.3,
+    "rain_mm_per_day": 8.18
+   },
+   {
+    "month": "Dec",
+    "mean_c": 19.5,
+    "rain_mm_per_day": 6.18
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/huambo-average-monthly-temperature-rainfall",
+  "title": "Huambo climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

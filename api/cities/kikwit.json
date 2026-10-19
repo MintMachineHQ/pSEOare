@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Kikwit",
+  "annual_mean_c": 25.7,
+  "warmest_month": "Aug",
+  "warmest_c": 27.4,
+  "coldest_month": "Nov",
+  "coldest_c": 24.5,
+  "seasonal_swing_c": 2.9,
+  "annual_rainfall_mm": 1335.0,
+  "wettest_month": "Nov",
+  "wettest_mm_per_day": 6.04,
+  "driest_month": "Jul",
+  "driest_mm_per_day": 0.32,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 25.2,
+    "rain_mm_per_day": 4.08
+   },
+   {
+    "month": "Feb",
+    "mean_c": 25.7,
+    "rain_mm_per_day": 4.66
+   },
+   {
+    "month": "Mar",
+    "mean_c": 25.6,
+    "rain_mm_per_day": 5.26
+   },
+   {
+    "month": "Apr",
+    "mean_c": 25.2,
+    "rain_mm_per_day": 4.63
+   },
+   {
+    "month": "May",
+    "mean_c": 25.5,
+    "rain_mm_per_day": 2.6
+   },
+   {
+    "month": "Jun",
+    "mean_c": 25.9,
+    "rain_mm_per_day": 0.61
+   },
+   {
+    "month": "Jul",
+    "mean_c": 26.9,
+    "rain_mm_per_day": 0.32
+   },
+   {
+    "month": "Aug",
+    "mean_c": 27.4,
+    "rain_mm_per_day": 1.62
+   },
+   {
+    "month": "Sep",
+    "mean_c": 26.4,
+    "rain_mm_per_day": 3.88
+   },
+   {
+    "month": "Oct",
+    "mean_c": 25.3,
+    "rain_mm_per_day": 5.36
+   },
+   {
+    "month": "Nov",
+    "mean_c": 24.5,
+    "rain_mm_per_day": 6.04
+   },
+   {
+    "month": "Dec",
+    "mean_c": 24.5,
+    "rain_mm_per_day": 4.86
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/kikwit-average-monthly-temperature-rainfall",
+  "title": "Kikwit climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

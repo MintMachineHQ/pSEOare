@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Situbondo",
+  "annual_mean_c": 28.0,
+  "warmest_month": "Nov",
+  "warmest_c": 29.3,
+  "coldest_month": "Jul",
+  "coldest_c": 27.2,
+  "seasonal_swing_c": 2.1,
+  "annual_rainfall_mm": 1653.0,
+  "wettest_month": "Feb",
+  "wettest_mm_per_day": 9.91,
+  "driest_month": "Aug",
+  "driest_mm_per_day": 0.42,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 27.6,
+    "rain_mm_per_day": 9.5
+   },
+   {
+    "month": "Feb",
+    "mean_c": 27.3,
+    "rain_mm_per_day": 9.91
+   },
+   {
+    "month": "Mar",
+    "mean_c": 27.7,
+    "rain_mm_per_day": 7.9
+   },
+   {
+    "month": "Apr",
+    "mean_c": 28.2,
+    "rain_mm_per_day": 5.58
+   },
+   {
+    "month": "May",
+    "mean_c": 28.2,
+    "rain_mm_per_day": 3.69
+   },
+   {
+    "month": "Jun",
+    "mean_c": 27.6,
+    "rain_mm_per_day": 2.11
+   },
+   {
+    "month": "Jul",
+    "mean_c": 27.2,
+    "rain_mm_per_day": 1.05
+   },
+   {
+    "month": "Aug",
+    "mean_c": 27.4,
+    "rain_mm_per_day": 0.42
+   },
+   {
+    "month": "Sep",
+    "mean_c": 28.3,
+    "rain_mm_per_day": 0.48
+   },
+   {
+    "month": "Oct",
+    "mean_c": 29.2,
+    "rain_mm_per_day": 1.66
+   },
+   {
+    "month": "Nov",
+    "mean_c": 29.3,
+    "rain_mm_per_day": 3.85
+   },
+   {
+    "month": "Dec",
+    "mean_c": 28.2,
+    "rain_mm_per_day": 8.23
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/situbondo-average-monthly-temperature-rainfall",
+  "title": "Situbondo climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

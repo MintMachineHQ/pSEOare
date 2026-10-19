@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Istaravshan",
+  "annual_mean_c": 14.6,
+  "warmest_month": "Jul",
+  "warmest_c": 28.2,
+  "coldest_month": "Jan",
+  "coldest_c": 1.6,
+  "seasonal_swing_c": 26.6,
+  "annual_rainfall_mm": 273.0,
+  "wettest_month": "Mar",
+  "wettest_mm_per_day": 1.4,
+  "driest_month": "Aug",
+  "driest_mm_per_day": 0.08,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 1.6,
+    "rain_mm_per_day": 0.77
+   },
+   {
+    "month": "Feb",
+    "mean_c": 3.2,
+    "rain_mm_per_day": 1.33
+   },
+   {
+    "month": "Mar",
+    "mean_c": 9.3,
+    "rain_mm_per_day": 1.4
+   },
+   {
+    "month": "Apr",
+    "mean_c": 14.7,
+    "rain_mm_per_day": 1.33
+   },
+   {
+    "month": "May",
+    "mean_c": 20.9,
+    "rain_mm_per_day": 0.96
+   },
+   {
+    "month": "Jun",
+    "mean_c": 26.1,
+    "rain_mm_per_day": 0.36
+   },
+   {
+    "month": "Jul",
+    "mean_c": 28.2,
+    "rain_mm_per_day": 0.12
+   },
+   {
+    "month": "Aug",
+    "mean_c": 26.7,
+    "rain_mm_per_day": 0.08
+   },
+   {
+    "month": "Sep",
+    "mean_c": 20.9,
+    "rain_mm_per_day": 0.1
+   },
+   {
+    "month": "Oct",
+    "mean_c": 13.8,
+    "rain_mm_per_day": 0.52
+   },
+   {
+    "month": "Nov",
+    "mean_c": 6.9,
+    "rain_mm_per_day": 0.98
+   },
+   {
+    "month": "Dec",
+    "mean_c": 2.2,
+    "rain_mm_per_day": 1.02
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/istaravshan-average-monthly-temperature-rainfall",
+  "title": "Istaravshan climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

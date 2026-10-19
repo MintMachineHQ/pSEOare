@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Gujranwala",
+  "annual_mean_c": 25.2,
+  "warmest_month": "Jun",
+  "warmest_c": 36.3,
+  "coldest_month": "Jan",
+  "coldest_c": 12.4,
+  "seasonal_swing_c": 23.9,
+  "annual_rainfall_mm": 713.0,
+  "wettest_month": "Jul",
+  "wettest_mm_per_day": 6.64,
+  "driest_month": "Nov",
+  "driest_mm_per_day": 0.27,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 12.4,
+    "rain_mm_per_day": 0.81
+   },
+   {
+    "month": "Feb",
+    "mean_c": 15.6,
+    "rain_mm_per_day": 1.35
+   },
+   {
+    "month": "Mar",
+    "mean_c": 21.5,
+    "rain_mm_per_day": 1.36
+   },
+   {
+    "month": "Apr",
+    "mean_c": 28.0,
+    "rain_mm_per_day": 0.85
+   },
+   {
+    "month": "May",
+    "mean_c": 34.2,
+    "rain_mm_per_day": 0.63
+   },
+   {
+    "month": "Jun",
+    "mean_c": 36.3,
+    "rain_mm_per_day": 2.51
+   },
+   {
+    "month": "Jul",
+    "mean_c": 33.9,
+    "rain_mm_per_day": 6.64
+   },
+   {
+    "month": "Aug",
+    "mean_c": 31.6,
+    "rain_mm_per_day": 5.48
+   },
+   {
+    "month": "Sep",
+    "mean_c": 29.4,
+    "rain_mm_per_day": 2.76
+   },
+   {
+    "month": "Oct",
+    "mean_c": 25.4,
+    "rain_mm_per_day": 0.38
+   },
+   {
+    "month": "Nov",
+    "mean_c": 19.5,
+    "rain_mm_per_day": 0.27
+   },
+   {
+    "month": "Dec",
+    "mean_c": 14.5,
+    "rain_mm_per_day": 0.43
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/gujranwala-average-monthly-temperature-rainfall",
+  "title": "Gujranwala climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

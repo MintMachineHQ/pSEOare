@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "San Pedro Sula",
+  "annual_mean_c": 24.7,
+  "warmest_month": "May",
+  "warmest_c": 26.6,
+  "coldest_month": "Jan",
+  "coldest_c": 22.1,
+  "seasonal_swing_c": 4.5,
+  "annual_rainfall_mm": 1543.0,
+  "wettest_month": "Oct",
+  "wettest_mm_per_day": 6.04,
+  "driest_month": "Apr",
+  "driest_mm_per_day": 1.47,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 22.1,
+    "rain_mm_per_day": 3.57
+   },
+   {
+    "month": "Feb",
+    "mean_c": 23.1,
+    "rain_mm_per_day": 2.95
+   },
+   {
+    "month": "Mar",
+    "mean_c": 24.1,
+    "rain_mm_per_day": 2.06
+   },
+   {
+    "month": "Apr",
+    "mean_c": 26.0,
+    "rain_mm_per_day": 1.47
+   },
+   {
+    "month": "May",
+    "mean_c": 26.6,
+    "rain_mm_per_day": 3.39
+   },
+   {
+    "month": "Jun",
+    "mean_c": 26.2,
+    "rain_mm_per_day": 5.68
+   },
+   {
+    "month": "Jul",
+    "mean_c": 25.8,
+    "rain_mm_per_day": 5.09
+   },
+   {
+    "month": "Aug",
+    "mean_c": 25.8,
+    "rain_mm_per_day": 4.93
+   },
+   {
+    "month": "Sep",
+    "mean_c": 25.7,
+    "rain_mm_per_day": 5.97
+   },
+   {
+    "month": "Oct",
+    "mean_c": 24.8,
+    "rain_mm_per_day": 6.04
+   },
+   {
+    "month": "Nov",
+    "mean_c": 23.2,
+    "rain_mm_per_day": 5.81
+   },
+   {
+    "month": "Dec",
+    "mean_c": 22.6,
+    "rain_mm_per_day": 3.8
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/san-pedro-sula-average-monthly-temperature-rainfall",
+  "title": "San Pedro Sula climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

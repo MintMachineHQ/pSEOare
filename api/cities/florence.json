@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Florence",
+  "annual_mean_c": 11.9,
+  "warmest_month": "Jul",
+  "warmest_c": 22.8,
+  "coldest_month": "Jan",
+  "coldest_c": 2.2,
+  "seasonal_swing_c": 20.6,
+  "annual_rainfall_mm": 737.0,
+  "wettest_month": "Nov",
+  "wettest_mm_per_day": 3.21,
+  "driest_month": "Jul",
+  "driest_mm_per_day": 1.05,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 2.2,
+    "rain_mm_per_day": 1.76
+   },
+   {
+    "month": "Feb",
+    "mean_c": 2.9,
+    "rain_mm_per_day": 2.33
+   },
+   {
+    "month": "Mar",
+    "mean_c": 6.3,
+    "rain_mm_per_day": 2.03
+   },
+   {
+    "month": "Apr",
+    "mean_c": 10.2,
+    "rain_mm_per_day": 1.89
+   },
+   {
+    "month": "May",
+    "mean_c": 14.5,
+    "rain_mm_per_day": 2.02
+   },
+   {
+    "month": "Jun",
+    "mean_c": 19.7,
+    "rain_mm_per_day": 1.48
+   },
+   {
+    "month": "Jul",
+    "mean_c": 22.8,
+    "rain_mm_per_day": 1.05
+   },
+   {
+    "month": "Aug",
+    "mean_c": 22.4,
+    "rain_mm_per_day": 1.3
+   },
+   {
+    "month": "Sep",
+    "mean_c": 17.3,
+    "rain_mm_per_day": 2.2
+   },
+   {
+    "month": "Oct",
+    "mean_c": 12.6,
+    "rain_mm_per_day": 2.71
+   },
+   {
+    "month": "Nov",
+    "mean_c": 7.6,
+    "rain_mm_per_day": 3.21
+   },
+   {
+    "month": "Dec",
+    "mean_c": 3.4,
+    "rain_mm_per_day": 2.25
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/florence-average-monthly-temperature-rainfall",
+  "title": "Florence climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

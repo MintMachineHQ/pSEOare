@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Nuremberg",
+  "annual_mean_c": 8.9,
+  "warmest_month": "Jul",
+  "warmest_c": 19.6,
+  "coldest_month": "Jan",
+  "coldest_c": -1.5,
+  "seasonal_swing_c": 21.1,
+  "annual_rainfall_mm": 704.0,
+  "wettest_month": "Jul",
+  "wettest_mm_per_day": 2.49,
+  "driest_month": "Apr",
+  "driest_mm_per_day": 1.31,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": -1.5,
+    "rain_mm_per_day": 1.88
+   },
+   {
+    "month": "Feb",
+    "mean_c": -0.5,
+    "rain_mm_per_day": 1.56
+   },
+   {
+    "month": "Mar",
+    "mean_c": 3.5,
+    "rain_mm_per_day": 1.54
+   },
+   {
+    "month": "Apr",
+    "mean_c": 8.6,
+    "rain_mm_per_day": 1.31
+   },
+   {
+    "month": "May",
+    "mean_c": 13.1,
+    "rain_mm_per_day": 2.44
+   },
+   {
+    "month": "Jun",
+    "mean_c": 17.4,
+    "rain_mm_per_day": 2.29
+   },
+   {
+    "month": "Jul",
+    "mean_c": 19.6,
+    "rain_mm_per_day": 2.49
+   },
+   {
+    "month": "Aug",
+    "mean_c": 19.1,
+    "rain_mm_per_day": 2.33
+   },
+   {
+    "month": "Sep",
+    "mean_c": 14.3,
+    "rain_mm_per_day": 1.82
+   },
+   {
+    "month": "Oct",
+    "mean_c": 8.9,
+    "rain_mm_per_day": 1.68
+   },
+   {
+    "month": "Nov",
+    "mean_c": 3.6,
+    "rain_mm_per_day": 1.89
+   },
+   {
+    "month": "Dec",
+    "mean_c": -0.3,
+    "rain_mm_per_day": 1.94
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/nuremberg-average-monthly-temperature-rainfall",
+  "title": "Nuremberg climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

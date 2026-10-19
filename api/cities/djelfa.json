@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Djelfa",
+  "annual_mean_c": 15.7,
+  "warmest_month": "Jul",
+  "warmest_c": 28.4,
+  "coldest_month": "Jan",
+  "coldest_c": 4.9,
+  "seasonal_swing_c": 23.5,
+  "annual_rainfall_mm": 288.0,
+  "wettest_month": "Oct",
+  "wettest_mm_per_day": 1.2,
+  "driest_month": "Jul",
+  "driest_mm_per_day": 0.23,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 4.9,
+    "rain_mm_per_day": 0.93
+   },
+   {
+    "month": "Feb",
+    "mean_c": 6.0,
+    "rain_mm_per_day": 0.71
+   },
+   {
+    "month": "Mar",
+    "mean_c": 9.8,
+    "rain_mm_per_day": 0.75
+   },
+   {
+    "month": "Apr",
+    "mean_c": 13.8,
+    "rain_mm_per_day": 1.07
+   },
+   {
+    "month": "May",
+    "mean_c": 18.5,
+    "rain_mm_per_day": 0.79
+   },
+   {
+    "month": "Jun",
+    "mean_c": 24.2,
+    "rain_mm_per_day": 0.38
+   },
+   {
+    "month": "Jul",
+    "mean_c": 28.4,
+    "rain_mm_per_day": 0.23
+   },
+   {
+    "month": "Aug",
+    "mean_c": 27.4,
+    "rain_mm_per_day": 0.6
+   },
+   {
+    "month": "Sep",
+    "mean_c": 22.0,
+    "rain_mm_per_day": 1.1
+   },
+   {
+    "month": "Oct",
+    "mean_c": 16.7,
+    "rain_mm_per_day": 1.2
+   },
+   {
+    "month": "Nov",
+    "mean_c": 9.5,
+    "rain_mm_per_day": 0.92
+   },
+   {
+    "month": "Dec",
+    "mean_c": 5.8,
+    "rain_mm_per_day": 0.8
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/djelfa-average-monthly-temperature-rainfall",
+  "title": "Djelfa climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

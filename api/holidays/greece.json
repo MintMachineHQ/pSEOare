@@ -1,7 +1,7 @@
 {
  "answer": {
   "country": "Greece",
-  "count": 8,
+  "count": 32,
   "holidays": [
    {
     "name": "New Year's Day in Greece (2016)",
@@ -12,12 +12,44 @@
     "page": "https://pseoare.pages.dev/new-year-s-day-greece-2016-01-01"
    },
    {
+    "name": "Epiphany in Greece (2016)",
+    "local_name": "\u0398\u03b5\u03bf\u03c6\u03ac\u03bd\u03b5\u03b9\u03b1",
+    "date": "2016-01-06",
+    "weekday": "Wednesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/epiphany-greece-2016-01-06"
+   },
+   {
+    "name": "Christmas Day in Greece (2016)",
+    "local_name": "\u03a7\u03c1\u03b9\u03c3\u03c4\u03bf\u03cd\u03b3\u03b5\u03bd\u03bd\u03b1",
+    "date": "2016-12-25",
+    "weekday": "Sunday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/christmas-day-greece-2016-12-25"
+   },
+   {
     "name": "New Year's Day in Greece (2017)",
     "local_name": "\u03a0\u03c1\u03c9\u03c4\u03bf\u03c7\u03c1\u03bf\u03bd\u03b9\u03ac",
     "date": "2017-01-01",
     "weekday": "Sunday",
     "weekend": true,
     "page": "https://pseoare.pages.dev/new-year-s-day-greece-2017-01-01"
+   },
+   {
+    "name": "Epiphany in Greece (2017)",
+    "local_name": "\u0398\u03b5\u03bf\u03c6\u03ac\u03bd\u03b5\u03b9\u03b1",
+    "date": "2017-01-06",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/epiphany-greece-2017-01-06"
+   },
+   {
+    "name": "Christmas Day in Greece (2017)",
+    "local_name": "\u03a7\u03c1\u03b9\u03c3\u03c4\u03bf\u03cd\u03b3\u03b5\u03bd\u03bd\u03b1",
+    "date": "2017-12-25",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-greece-2017-12-25"
    },
    {
     "name": "New Year's Day in Greece (2018)",
@@ -28,12 +60,44 @@
     "page": "https://pseoare.pages.dev/new-year-s-day-greece-2018-01-01"
    },
    {
+    "name": "Epiphany in Greece (2018)",
+    "local_name": "\u0398\u03b5\u03bf\u03c6\u03ac\u03bd\u03b5\u03b9\u03b1",
+    "date": "2018-01-06",
+    "weekday": "Saturday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/epiphany-greece-2018-01-06"
+   },
+   {
+    "name": "Christmas Day in Greece (2018)",
+    "local_name": "\u03a7\u03c1\u03b9\u03c3\u03c4\u03bf\u03cd\u03b3\u03b5\u03bd\u03bd\u03b1",
+    "date": "2018-12-25",
+    "weekday": "Tuesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-greece-2018-12-25"
+   },
+   {
     "name": "New Year's Day in Greece (2019)",
     "local_name": "\u03a0\u03c1\u03c9\u03c4\u03bf\u03c7\u03c1\u03bf\u03bd\u03b9\u03ac",
     "date": "2019-01-01",
     "weekday": "Tuesday",
     "weekend": false,
     "page": "https://pseoare.pages.dev/new-year-s-day-greece-2019-01-01"
+   },
+   {
+    "name": "Epiphany in Greece (2019)",
+    "local_name": "\u0398\u03b5\u03bf\u03c6\u03ac\u03bd\u03b5\u03b9\u03b1",
+    "date": "2019-01-06",
+    "weekday": "Sunday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/epiphany-greece-2019-01-06"
+   },
+   {
+    "name": "Christmas Day in Greece (2019)",
+    "local_name": "\u03a7\u03c1\u03b9\u03c3\u03c4\u03bf\u03cd\u03b3\u03b5\u03bd\u03bd\u03b1",
+    "date": "2019-12-25",
+    "weekday": "Wednesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-greece-2019-12-25"
    },
    {
     "name": "New Year's Day in Greece (2020)",
@@ -44,12 +108,44 @@
     "page": "https://pseoare.pages.dev/new-year-s-day-greece-2020-01-01"
    },
    {
+    "name": "Epiphany in Greece (2020)",
+    "local_name": "\u0398\u03b5\u03bf\u03c6\u03ac\u03bd\u03b5\u03b9\u03b1",
+    "date": "2020-01-06",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/epiphany-greece-2020-01-06"
+   },
+   {
+    "name": "Christmas Day in Greece (2020)",
+    "local_name": "\u03a7\u03c1\u03b9\u03c3\u03c4\u03bf\u03cd\u03b3\u03b5\u03bd\u03bd\u03b1",
+    "date": "2020-12-25",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-greece-2020-12-25"
+   },
+   {
     "name": "New Year's Day in Greece (2021)",
     "local_name": "\u03a0\u03c1\u03c9\u03c4\u03bf\u03c7\u03c1\u03bf\u03bd\u03b9\u03ac",
     "date": "2021-01-01",
     "weekday": "Friday",
     "weekend": false,
     "page": "https://pseoare.pages.dev/new-year-s-day-greece-2021-01-01"
+   },
+   {
+    "name": "Epiphany in Greece (2021)",
+    "local_name": "\u0398\u03b5\u03bf\u03c6\u03ac\u03bd\u03b5\u03b9\u03b1",
+    "date": "2021-01-06",
+    "weekday": "Wednesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/epiphany-greece-2021-01-06"
+   },
+   {
+    "name": "Christmas Day in Greece (2021)",
+    "local_name": "\u03a7\u03c1\u03b9\u03c3\u03c4\u03bf\u03cd\u03b3\u03b5\u03bd\u03bd\u03b1",
+    "date": "2021-12-25",
+    "weekday": "Saturday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/christmas-day-greece-2021-12-25"
    },
    {
     "name": "New Year's Day in Greece (2022)",
@@ -60,12 +156,108 @@
     "page": "https://pseoare.pages.dev/new-year-s-day-greece-2022-01-01"
    },
    {
+    "name": "Epiphany in Greece (2022)",
+    "local_name": "\u0398\u03b5\u03bf\u03c6\u03ac\u03bd\u03b5\u03b9\u03b1",
+    "date": "2022-01-06",
+    "weekday": "Thursday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/epiphany-greece-2022-01-06"
+   },
+   {
+    "name": "Christmas Day in Greece (2022)",
+    "local_name": "\u03a7\u03c1\u03b9\u03c3\u03c4\u03bf\u03cd\u03b3\u03b5\u03bd\u03bd\u03b1",
+    "date": "2022-12-25",
+    "weekday": "Sunday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/christmas-day-greece-2022-12-25"
+   },
+   {
     "name": "New Year's Day in Greece (2023)",
     "local_name": "\u03a0\u03c1\u03c9\u03c4\u03bf\u03c7\u03c1\u03bf\u03bd\u03b9\u03ac",
     "date": "2023-01-01",
     "weekday": "Sunday",
     "weekend": true,
     "page": "https://pseoare.pages.dev/new-year-s-day-greece-2023-01-01"
+   },
+   {
+    "name": "Epiphany in Greece (2023)",
+    "local_name": "\u0398\u03b5\u03bf\u03c6\u03ac\u03bd\u03b5\u03b9\u03b1",
+    "date": "2023-01-06",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/epiphany-greece-2023-01-06"
+   },
+   {
+    "name": "Christmas Day in Greece (2023)",
+    "local_name": "\u03a7\u03c1\u03b9\u03c3\u03c4\u03bf\u03cd\u03b3\u03b5\u03bd\u03bd\u03b1",
+    "date": "2023-12-25",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-greece-2023-12-25"
+   },
+   {
+    "name": "Epiphany in Greece (2024)",
+    "local_name": "\u0398\u03b5\u03bf\u03c6\u03ac\u03bd\u03b5\u03b9\u03b1",
+    "date": "2024-01-06",
+    "weekday": "Saturday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/epiphany-greece-2024-01-06"
+   },
+   {
+    "name": "Christmas Day in Greece (2024)",
+    "local_name": "\u03a7\u03c1\u03b9\u03c3\u03c4\u03bf\u03cd\u03b3\u03b5\u03bd\u03bd\u03b1",
+    "date": "2024-12-25",
+    "weekday": "Wednesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-greece-2024-12-25"
+   },
+   {
+    "name": "Epiphany in Greece (2025)",
+    "local_name": "\u0398\u03b5\u03bf\u03c6\u03ac\u03bd\u03b5\u03b9\u03b1",
+    "date": "2025-01-06",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/epiphany-greece-2025-01-06"
+   },
+   {
+    "name": "Christmas Day in Greece (2025)",
+    "local_name": "\u03a7\u03c1\u03b9\u03c3\u03c4\u03bf\u03cd\u03b3\u03b5\u03bd\u03bd\u03b1",
+    "date": "2025-12-25",
+    "weekday": "Thursday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-greece-2025-12-25"
+   },
+   {
+    "name": "Epiphany in Greece (2026)",
+    "local_name": "\u0398\u03b5\u03bf\u03c6\u03ac\u03bd\u03b5\u03b9\u03b1",
+    "date": "2026-01-06",
+    "weekday": "Tuesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/epiphany-greece-2026-01-06"
+   },
+   {
+    "name": "Christmas Day in Greece (2026)",
+    "local_name": "\u03a7\u03c1\u03b9\u03c3\u03c4\u03bf\u03cd\u03b3\u03b5\u03bd\u03bd\u03b1",
+    "date": "2026-12-25",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-greece-2026-12-25"
+   },
+   {
+    "name": "Epiphany in Greece (2027)",
+    "local_name": "\u0398\u03b5\u03bf\u03c6\u03ac\u03bd\u03b5\u03b9\u03b1",
+    "date": "2027-01-06",
+    "weekday": "Wednesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/epiphany-greece-2027-01-06"
+   },
+   {
+    "name": "Christmas Day in Greece (2027)",
+    "local_name": "\u03a7\u03c1\u03b9\u03c3\u03c4\u03bf\u03cd\u03b3\u03b5\u03bd\u03bd\u03b1",
+    "date": "2027-12-25",
+    "weekday": "Saturday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/christmas-day-greece-2027-12-25"
    }
   ]
  },
@@ -74,7 +266,7 @@
   "title": "Public holidays for Greece",
   "site": "https://pseoare.pages.dev"
  },
- "updated": "2026-10-19T20:41:30.228277+00:00",
+ "updated": "2026-10-19T20:49:39.946179+00:00",
  "license": "CC-BY-4.0",
  "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
 }

@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Surat",
+  "annual_mean_c": 27.3,
+  "warmest_month": "May",
+  "warmest_c": 32.3,
+  "coldest_month": "Jan",
+  "coldest_c": 22.9,
+  "seasonal_swing_c": 9.4,
+  "annual_rainfall_mm": 1683.0,
+  "wettest_month": "Jul",
+  "wettest_mm_per_day": 18.45,
+  "driest_month": "Jan",
+  "driest_mm_per_day": 0.02,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 22.9,
+    "rain_mm_per_day": 0.02
+   },
+   {
+    "month": "Feb",
+    "mean_c": 25.2,
+    "rain_mm_per_day": 0.12
+   },
+   {
+    "month": "Mar",
+    "mean_c": 28.6,
+    "rain_mm_per_day": 0.07
+   },
+   {
+    "month": "Apr",
+    "mean_c": 31.5,
+    "rain_mm_per_day": 0.06
+   },
+   {
+    "month": "May",
+    "mean_c": 32.3,
+    "rain_mm_per_day": 0.18
+   },
+   {
+    "month": "Jun",
+    "mean_c": 29.9,
+    "rain_mm_per_day": 11.55
+   },
+   {
+    "month": "Jul",
+    "mean_c": 27.4,
+    "rain_mm_per_day": 18.45
+   },
+   {
+    "month": "Aug",
+    "mean_c": 26.6,
+    "rain_mm_per_day": 14.11
+   },
+   {
+    "month": "Sep",
+    "mean_c": 26.9,
+    "rain_mm_per_day": 9.0
+   },
+   {
+    "month": "Oct",
+    "mean_c": 26.8,
+    "rain_mm_per_day": 1.38
+   },
+   {
+    "month": "Nov",
+    "mean_c": 25.5,
+    "rain_mm_per_day": 0.3
+   },
+   {
+    "month": "Dec",
+    "mean_c": 23.8,
+    "rain_mm_per_day": 0.11
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/surat-average-monthly-temperature-rainfall",
+  "title": "Surat climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

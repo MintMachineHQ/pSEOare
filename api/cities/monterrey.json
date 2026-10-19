@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Monterrey",
+  "annual_mean_c": 17.5,
+  "warmest_month": "Jun",
+  "warmest_c": 22.5,
+  "coldest_month": "Jan",
+  "coldest_c": 10.7,
+  "seasonal_swing_c": 11.8,
+  "annual_rainfall_mm": 529.0,
+  "wettest_month": "Sep",
+  "wettest_mm_per_day": 4.41,
+  "driest_month": "Dec",
+  "driest_mm_per_day": 0.47,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 10.7,
+    "rain_mm_per_day": 0.54
+   },
+   {
+    "month": "Feb",
+    "mean_c": 13.1,
+    "rain_mm_per_day": 0.52
+   },
+   {
+    "month": "Mar",
+    "mean_c": 15.9,
+    "rain_mm_per_day": 0.75
+   },
+   {
+    "month": "Apr",
+    "mean_c": 19.8,
+    "rain_mm_per_day": 0.78
+   },
+   {
+    "month": "May",
+    "mean_c": 21.8,
+    "rain_mm_per_day": 1.41
+   },
+   {
+    "month": "Jun",
+    "mean_c": 22.5,
+    "rain_mm_per_day": 1.84
+   },
+   {
+    "month": "Jul",
+    "mean_c": 21.8,
+    "rain_mm_per_day": 2.77
+   },
+   {
+    "month": "Aug",
+    "mean_c": 21.8,
+    "rain_mm_per_day": 1.86
+   },
+   {
+    "month": "Sep",
+    "mean_c": 19.6,
+    "rain_mm_per_day": 4.41
+   },
+   {
+    "month": "Oct",
+    "mean_c": 17.5,
+    "rain_mm_per_day": 1.4
+   },
+   {
+    "month": "Nov",
+    "mean_c": 13.9,
+    "rain_mm_per_day": 0.66
+   },
+   {
+    "month": "Dec",
+    "mean_c": 11.4,
+    "rain_mm_per_day": 0.47
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/monterrey-average-monthly-temperature-rainfall",
+  "title": "Monterrey climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

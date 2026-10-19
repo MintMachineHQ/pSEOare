@@ -1,7 +1,7 @@
 {
  "answer": {
   "country": "Spain",
-  "count": 8,
+  "count": 31,
   "holidays": [
    {
     "name": "New Year's Day in Spain (2016)",
@@ -12,12 +12,44 @@
     "page": "https://pseoare.pages.dev/new-year-s-day-spain-2016-01-01"
    },
    {
+    "name": "Epiphany in Spain (2016)",
+    "local_name": "D\u00eda de Reyes / Epifan\u00eda del Se\u00f1or",
+    "date": "2016-01-06",
+    "weekday": "Wednesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/epiphany-spain-2016-01-06"
+   },
+   {
+    "name": "Christmas Day in Spain (2016)",
+    "local_name": "Navidad",
+    "date": "2016-12-25",
+    "weekday": "Sunday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/christmas-day-spain-2016-12-25"
+   },
+   {
     "name": "New Year's Day in Spain (2017)",
     "local_name": "A\u00f1o Nuevo",
     "date": "2017-01-01",
     "weekday": "Sunday",
     "weekend": true,
     "page": "https://pseoare.pages.dev/new-year-s-day-spain-2017-01-01"
+   },
+   {
+    "name": "Epiphany in Spain (2017)",
+    "local_name": "D\u00eda de Reyes / Epifan\u00eda del Se\u00f1or",
+    "date": "2017-01-06",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/epiphany-spain-2017-01-06"
+   },
+   {
+    "name": "Christmas Day in Spain (2017)",
+    "local_name": "Navidad",
+    "date": "2017-12-25",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-spain-2017-12-25"
    },
    {
     "name": "New Year's Day in Spain (2018)",
@@ -28,12 +60,44 @@
     "page": "https://pseoare.pages.dev/new-year-s-day-spain-2018-01-01"
    },
    {
+    "name": "Epiphany in Spain (2018)",
+    "local_name": "D\u00eda de Reyes / Epifan\u00eda del Se\u00f1or",
+    "date": "2018-01-06",
+    "weekday": "Saturday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/epiphany-spain-2018-01-06"
+   },
+   {
+    "name": "Christmas Day in Spain (2018)",
+    "local_name": "Navidad",
+    "date": "2018-12-25",
+    "weekday": "Tuesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-spain-2018-12-25"
+   },
+   {
     "name": "New Year's Day in Spain (2019)",
     "local_name": "A\u00f1o Nuevo",
     "date": "2019-01-01",
     "weekday": "Tuesday",
     "weekend": false,
     "page": "https://pseoare.pages.dev/new-year-s-day-spain-2019-01-01"
+   },
+   {
+    "name": "Epiphany in Spain (2019)",
+    "local_name": "D\u00eda de Reyes / Epifan\u00eda del Se\u00f1or",
+    "date": "2019-01-06",
+    "weekday": "Sunday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/epiphany-spain-2019-01-06"
+   },
+   {
+    "name": "Christmas Day in Spain (2019)",
+    "local_name": "Navidad",
+    "date": "2019-12-25",
+    "weekday": "Wednesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-spain-2019-12-25"
    },
    {
     "name": "New Year's Day in Spain (2020)",
@@ -44,12 +108,44 @@
     "page": "https://pseoare.pages.dev/new-year-s-day-spain-2020-01-01"
    },
    {
+    "name": "Epiphany in Spain (2020)",
+    "local_name": "D\u00eda de Reyes / Epifan\u00eda del Se\u00f1or",
+    "date": "2020-01-06",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/epiphany-spain-2020-01-06"
+   },
+   {
+    "name": "Christmas Day in Spain (2020)",
+    "local_name": "Navidad",
+    "date": "2020-12-25",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-spain-2020-12-25"
+   },
+   {
     "name": "New Year's Day in Spain (2021)",
     "local_name": "A\u00f1o Nuevo",
     "date": "2021-01-01",
     "weekday": "Friday",
     "weekend": false,
     "page": "https://pseoare.pages.dev/new-year-s-day-spain-2021-01-01"
+   },
+   {
+    "name": "Epiphany in Spain (2021)",
+    "local_name": "D\u00eda de Reyes / Epifan\u00eda del Se\u00f1or",
+    "date": "2021-01-06",
+    "weekday": "Wednesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/epiphany-spain-2021-01-06"
+   },
+   {
+    "name": "Christmas Day in Spain (2021)",
+    "local_name": "Navidad",
+    "date": "2021-12-25",
+    "weekday": "Saturday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/christmas-day-spain-2021-12-25"
    },
    {
     "name": "New Year's Day in Spain (2022)",
@@ -60,12 +156,100 @@
     "page": "https://pseoare.pages.dev/new-year-s-day-spain-2022-01-01"
    },
    {
+    "name": "Epiphany in Spain (2022)",
+    "local_name": "D\u00eda de Reyes / Epifan\u00eda del Se\u00f1or",
+    "date": "2022-01-06",
+    "weekday": "Thursday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/epiphany-spain-2022-01-06"
+   },
+   {
+    "name": "Christmas Day in Spain (2022)",
+    "local_name": "Navidad",
+    "date": "2022-12-26",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-spain-2022-12-26"
+   },
+   {
     "name": "New Year's Day in Spain (2023)",
     "local_name": "A\u00f1o Nuevo",
     "date": "2023-01-01",
     "weekday": "Sunday",
     "weekend": true,
     "page": "https://pseoare.pages.dev/new-year-s-day-spain-2023-01-01"
+   },
+   {
+    "name": "Christmas Day in Spain (2023)",
+    "local_name": "Navidad",
+    "date": "2023-12-25",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-spain-2023-12-25"
+   },
+   {
+    "name": "Epiphany in Spain (2024)",
+    "local_name": "D\u00eda de Reyes / Epifan\u00eda del Se\u00f1or",
+    "date": "2024-01-06",
+    "weekday": "Saturday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/epiphany-spain-2024-01-06"
+   },
+   {
+    "name": "Christmas Day in Spain (2024)",
+    "local_name": "Navidad",
+    "date": "2024-12-25",
+    "weekday": "Wednesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-spain-2024-12-25"
+   },
+   {
+    "name": "Epiphany in Spain (2025)",
+    "local_name": "D\u00eda de Reyes / Epifan\u00eda del Se\u00f1or",
+    "date": "2025-01-06",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/epiphany-spain-2025-01-06"
+   },
+   {
+    "name": "Christmas Day in Spain (2025)",
+    "local_name": "Navidad",
+    "date": "2025-12-25",
+    "weekday": "Thursday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-spain-2025-12-25"
+   },
+   {
+    "name": "Epiphany in Spain (2026)",
+    "local_name": "D\u00eda de Reyes / Epifan\u00eda del Se\u00f1or",
+    "date": "2026-01-06",
+    "weekday": "Tuesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/epiphany-spain-2026-01-06"
+   },
+   {
+    "name": "Christmas Day in Spain (2026)",
+    "local_name": "Navidad",
+    "date": "2026-12-25",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-spain-2026-12-25"
+   },
+   {
+    "name": "Epiphany in Spain (2027)",
+    "local_name": "D\u00eda de Reyes / Epifan\u00eda del Se\u00f1or",
+    "date": "2027-01-06",
+    "weekday": "Wednesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/epiphany-spain-2027-01-06"
+   },
+   {
+    "name": "Christmas Day in Spain (2027)",
+    "local_name": "Navidad",
+    "date": "2027-12-25",
+    "weekday": "Saturday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/christmas-day-spain-2027-12-25"
    }
   ]
  },
@@ -74,7 +258,7 @@
   "title": "Public holidays for Spain",
   "site": "https://pseoare.pages.dev"
  },
- "updated": "2026-10-19T20:41:30.228277+00:00",
+ "updated": "2026-10-19T20:49:39.946179+00:00",
  "license": "CC-BY-4.0",
  "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
 }

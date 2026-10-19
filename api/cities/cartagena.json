@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Cartagena",
+  "annual_mean_c": 28.1,
+  "warmest_month": "Jun",
+  "warmest_c": 28.7,
+  "coldest_month": "Jan",
+  "coldest_c": 27.3,
+  "seasonal_swing_c": 1.4,
+  "annual_rainfall_mm": 1363.0,
+  "wettest_month": "Oct",
+  "wettest_mm_per_day": 7.81,
+  "driest_month": "Jan",
+  "driest_mm_per_day": 0.08,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 27.3,
+    "rain_mm_per_day": 0.08
+   },
+   {
+    "month": "Feb",
+    "mean_c": 27.6,
+    "rain_mm_per_day": 0.12
+   },
+   {
+    "month": "Mar",
+    "mean_c": 27.7,
+    "rain_mm_per_day": 0.33
+   },
+   {
+    "month": "Apr",
+    "mean_c": 28.1,
+    "rain_mm_per_day": 2.0
+   },
+   {
+    "month": "May",
+    "mean_c": 28.3,
+    "rain_mm_per_day": 5.73
+   },
+   {
+    "month": "Jun",
+    "mean_c": 28.7,
+    "rain_mm_per_day": 4.51
+   },
+   {
+    "month": "Jul",
+    "mean_c": 28.6,
+    "rain_mm_per_day": 5.15
+   },
+   {
+    "month": "Aug",
+    "mean_c": 28.5,
+    "rain_mm_per_day": 5.16
+   },
+   {
+    "month": "Sep",
+    "mean_c": 28.4,
+    "rain_mm_per_day": 6.08
+   },
+   {
+    "month": "Oct",
+    "mean_c": 28.1,
+    "rain_mm_per_day": 7.81
+   },
+   {
+    "month": "Nov",
+    "mean_c": 28.1,
+    "rain_mm_per_day": 6.03
+   },
+   {
+    "month": "Dec",
+    "mean_c": 27.8,
+    "rain_mm_per_day": 1.82
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/cartagena-average-monthly-temperature-rainfall",
+  "title": "Cartagena climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

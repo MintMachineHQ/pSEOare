@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Rach Gia",
+  "annual_mean_c": 27.9,
+  "warmest_month": "Apr",
+  "warmest_c": 30.4,
+  "coldest_month": "Dec",
+  "coldest_c": 26.2,
+  "seasonal_swing_c": 4.2,
+  "annual_rainfall_mm": 1470.0,
+  "wettest_month": "Sep",
+  "wettest_mm_per_day": 7.9,
+  "driest_month": "Feb",
+  "driest_mm_per_day": 0.39,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 26.6,
+    "rain_mm_per_day": 0.66
+   },
+   {
+    "month": "Feb",
+    "mean_c": 28.2,
+    "rain_mm_per_day": 0.39
+   },
+   {
+    "month": "Mar",
+    "mean_c": 29.7,
+    "rain_mm_per_day": 0.9
+   },
+   {
+    "month": "Apr",
+    "mean_c": 30.4,
+    "rain_mm_per_day": 1.97
+   },
+   {
+    "month": "May",
+    "mean_c": 29.4,
+    "rain_mm_per_day": 4.59
+   },
+   {
+    "month": "Jun",
+    "mean_c": 28.1,
+    "rain_mm_per_day": 7.03
+   },
+   {
+    "month": "Jul",
+    "mean_c": 27.5,
+    "rain_mm_per_day": 6.89
+   },
+   {
+    "month": "Aug",
+    "mean_c": 27.2,
+    "rain_mm_per_day": 6.61
+   },
+   {
+    "month": "Sep",
+    "mean_c": 27.1,
+    "rain_mm_per_day": 7.9
+   },
+   {
+    "month": "Oct",
+    "mean_c": 27.0,
+    "rain_mm_per_day": 6.2
+   },
+   {
+    "month": "Nov",
+    "mean_c": 26.7,
+    "rain_mm_per_day": 3.88
+   },
+   {
+    "month": "Dec",
+    "mean_c": 26.2,
+    "rain_mm_per_day": 1.32
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/rach-gia-average-monthly-temperature-rainfall",
+  "title": "Rach Gia climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Plymouth",
+  "annual_mean_c": 10.8,
+  "warmest_month": "Jul",
+  "warmest_c": 15.9,
+  "coldest_month": "Feb",
+  "coldest_c": 6.1,
+  "seasonal_swing_c": 9.8,
+  "annual_rainfall_mm": 1162.0,
+  "wettest_month": "Nov",
+  "wettest_mm_per_day": 4.33,
+  "driest_month": "Apr",
+  "driest_mm_per_day": 2.26,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 6.6,
+    "rain_mm_per_day": 3.97
+   },
+   {
+    "month": "Feb",
+    "mean_c": 6.1,
+    "rain_mm_per_day": 3.44
+   },
+   {
+    "month": "Mar",
+    "mean_c": 7.1,
+    "rain_mm_per_day": 2.84
+   },
+   {
+    "month": "Apr",
+    "mean_c": 9.0,
+    "rain_mm_per_day": 2.26
+   },
+   {
+    "month": "May",
+    "mean_c": 11.5,
+    "rain_mm_per_day": 2.3
+   },
+   {
+    "month": "Jun",
+    "mean_c": 14.2,
+    "rain_mm_per_day": 2.62
+   },
+   {
+    "month": "Jul",
+    "mean_c": 15.9,
+    "rain_mm_per_day": 2.87
+   },
+   {
+    "month": "Aug",
+    "mean_c": 15.9,
+    "rain_mm_per_day": 3.08
+   },
+   {
+    "month": "Sep",
+    "mean_c": 14.4,
+    "rain_mm_per_day": 2.28
+   },
+   {
+    "month": "Oct",
+    "mean_c": 12.1,
+    "rain_mm_per_day": 4.02
+   },
+   {
+    "month": "Nov",
+    "mean_c": 9.3,
+    "rain_mm_per_day": 4.33
+   },
+   {
+    "month": "Dec",
+    "mean_c": 7.4,
+    "rain_mm_per_day": 4.23
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/plymouth-average-monthly-temperature-rainfall",
+  "title": "Plymouth climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

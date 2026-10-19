@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Qui Nhon",
+  "annual_mean_c": 26.8,
+  "warmest_month": "Jun",
+  "warmest_c": 29.0,
+  "coldest_month": "Jan",
+  "coldest_c": 23.6,
+  "seasonal_swing_c": 5.4,
+  "annual_rainfall_mm": 1634.0,
+  "wettest_month": "Oct",
+  "wettest_mm_per_day": 11.35,
+  "driest_month": "Feb",
+  "driest_mm_per_day": 0.52,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 23.6,
+    "rain_mm_per_day": 1.46
+   },
+   {
+    "month": "Feb",
+    "mean_c": 23.9,
+    "rain_mm_per_day": 0.52
+   },
+   {
+    "month": "Mar",
+    "mean_c": 25.3,
+    "rain_mm_per_day": 1.02
+   },
+   {
+    "month": "Apr",
+    "mean_c": 27.0,
+    "rain_mm_per_day": 1.2
+   },
+   {
+    "month": "May",
+    "mean_c": 28.6,
+    "rain_mm_per_day": 3.29
+   },
+   {
+    "month": "Jun",
+    "mean_c": 29.0,
+    "rain_mm_per_day": 3.32
+   },
+   {
+    "month": "Jul",
+    "mean_c": 28.9,
+    "rain_mm_per_day": 3.54
+   },
+   {
+    "month": "Aug",
+    "mean_c": 29.0,
+    "rain_mm_per_day": 4.61
+   },
+   {
+    "month": "Sep",
+    "mean_c": 28.4,
+    "rain_mm_per_day": 7.92
+   },
+   {
+    "month": "Oct",
+    "mean_c": 27.2,
+    "rain_mm_per_day": 11.35
+   },
+   {
+    "month": "Nov",
+    "mean_c": 26.2,
+    "rain_mm_per_day": 11.17
+   },
+   {
+    "month": "Dec",
+    "mean_c": 24.6,
+    "rain_mm_per_day": 4.36
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/qui-nhon-average-monthly-temperature-rainfall",
+  "title": "Qui Nhon climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

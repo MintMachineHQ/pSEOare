@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Sevastopol",
+  "annual_mean_c": 12.5,
+  "warmest_month": "Aug",
+  "warmest_c": 24.1,
+  "coldest_month": "Jan",
+  "coldest_c": 2.6,
+  "seasonal_swing_c": 21.5,
+  "annual_rainfall_mm": 556.0,
+  "wettest_month": "Jan",
+  "wettest_mm_per_day": 1.88,
+  "driest_month": "Apr",
+  "driest_mm_per_day": 1.12,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 2.6,
+    "rain_mm_per_day": 1.88
+   },
+   {
+    "month": "Feb",
+    "mean_c": 2.8,
+    "rain_mm_per_day": 1.55
+   },
+   {
+    "month": "Mar",
+    "mean_c": 5.3,
+    "rain_mm_per_day": 1.25
+   },
+   {
+    "month": "Apr",
+    "mean_c": 9.5,
+    "rain_mm_per_day": 1.12
+   },
+   {
+    "month": "May",
+    "mean_c": 15.7,
+    "rain_mm_per_day": 1.51
+   },
+   {
+    "month": "Jun",
+    "mean_c": 20.6,
+    "rain_mm_per_day": 1.8
+   },
+   {
+    "month": "Jul",
+    "mean_c": 23.6,
+    "rain_mm_per_day": 1.33
+   },
+   {
+    "month": "Aug",
+    "mean_c": 24.1,
+    "rain_mm_per_day": 1.21
+   },
+   {
+    "month": "Sep",
+    "mean_c": 19.3,
+    "rain_mm_per_day": 1.41
+   },
+   {
+    "month": "Oct",
+    "mean_c": 13.4,
+    "rain_mm_per_day": 1.72
+   },
+   {
+    "month": "Nov",
+    "mean_c": 8.5,
+    "rain_mm_per_day": 1.74
+   },
+   {
+    "month": "Dec",
+    "mean_c": 4.5,
+    "rain_mm_per_day": 1.76
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/sevastopol-average-monthly-temperature-rainfall",
+  "title": "Sevastopol climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

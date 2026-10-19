@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Ciudad Guayana",
+  "annual_mean_c": 27.5,
+  "warmest_month": "Apr",
+  "warmest_c": 29.4,
+  "coldest_month": "Dec",
+  "coldest_c": 26.3,
+  "seasonal_swing_c": 3.1,
+  "annual_rainfall_mm": 1104.0,
+  "wettest_month": "Jun",
+  "wettest_mm_per_day": 5.74,
+  "driest_month": "Mar",
+  "driest_mm_per_day": 0.78,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 26.4,
+    "rain_mm_per_day": 1.51
+   },
+   {
+    "month": "Feb",
+    "mean_c": 27.3,
+    "rain_mm_per_day": 0.94
+   },
+   {
+    "month": "Mar",
+    "mean_c": 28.6,
+    "rain_mm_per_day": 0.78
+   },
+   {
+    "month": "Apr",
+    "mean_c": 29.4,
+    "rain_mm_per_day": 1.31
+   },
+   {
+    "month": "May",
+    "mean_c": 28.8,
+    "rain_mm_per_day": 2.89
+   },
+   {
+    "month": "Jun",
+    "mean_c": 27.1,
+    "rain_mm_per_day": 5.74
+   },
+   {
+    "month": "Jul",
+    "mean_c": 26.6,
+    "rain_mm_per_day": 5.31
+   },
+   {
+    "month": "Aug",
+    "mean_c": 26.9,
+    "rain_mm_per_day": 4.92
+   },
+   {
+    "month": "Sep",
+    "mean_c": 27.6,
+    "rain_mm_per_day": 3.18
+   },
+   {
+    "month": "Oct",
+    "mean_c": 27.5,
+    "rain_mm_per_day": 3.37
+   },
+   {
+    "month": "Nov",
+    "mean_c": 27.0,
+    "rain_mm_per_day": 3.58
+   },
+   {
+    "month": "Dec",
+    "mean_c": 26.3,
+    "rain_mm_per_day": 2.8
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/ciudad-guayana-average-monthly-temperature-rainfall",
+  "title": "Ciudad Guayana climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

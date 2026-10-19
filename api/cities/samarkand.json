@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Samarkand",
+  "annual_mean_c": 14.2,
+  "warmest_month": "Jul",
+  "warmest_c": 27.9,
+  "coldest_month": "Jan",
+  "coldest_c": 0.9,
+  "seasonal_swing_c": 27.0,
+  "annual_rainfall_mm": 320.0,
+  "wettest_month": "Mar",
+  "wettest_mm_per_day": 1.88,
+  "driest_month": "Aug",
+  "driest_mm_per_day": 0.04,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 0.9,
+    "rain_mm_per_day": 1.14
+   },
+   {
+    "month": "Feb",
+    "mean_c": 2.5,
+    "rain_mm_per_day": 1.7
+   },
+   {
+    "month": "Mar",
+    "mean_c": 8.5,
+    "rain_mm_per_day": 1.88
+   },
+   {
+    "month": "Apr",
+    "mean_c": 13.9,
+    "rain_mm_per_day": 1.86
+   },
+   {
+    "month": "May",
+    "mean_c": 20.1,
+    "rain_mm_per_day": 0.97
+   },
+   {
+    "month": "Jun",
+    "mean_c": 25.6,
+    "rain_mm_per_day": 0.22
+   },
+   {
+    "month": "Jul",
+    "mean_c": 27.9,
+    "rain_mm_per_day": 0.05
+   },
+   {
+    "month": "Aug",
+    "mean_c": 26.3,
+    "rain_mm_per_day": 0.04
+   },
+   {
+    "month": "Sep",
+    "mean_c": 21.0,
+    "rain_mm_per_day": 0.07
+   },
+   {
+    "month": "Oct",
+    "mean_c": 13.9,
+    "rain_mm_per_day": 0.45
+   },
+   {
+    "month": "Nov",
+    "mean_c": 6.7,
+    "rain_mm_per_day": 1.18
+   },
+   {
+    "month": "Dec",
+    "mean_c": 2.0,
+    "rain_mm_per_day": 0.98
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/samarkand-average-monthly-temperature-rainfall",
+  "title": "Samarkand climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

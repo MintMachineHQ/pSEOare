@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Rawalpindi",
+  "annual_mean_c": 22.8,
+  "warmest_month": "Jun",
+  "warmest_c": 33.6,
+  "coldest_month": "Jan",
+  "coldest_c": 10.9,
+  "seasonal_swing_c": 22.7,
+  "annual_rainfall_mm": 1001.0,
+  "wettest_month": "Jul",
+  "wettest_mm_per_day": 7.1,
+  "driest_month": "Nov",
+  "driest_mm_per_day": 0.61,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 10.9,
+    "rain_mm_per_day": 1.29
+   },
+   {
+    "month": "Feb",
+    "mean_c": 13.2,
+    "rain_mm_per_day": 3.19
+   },
+   {
+    "month": "Mar",
+    "mean_c": 18.4,
+    "rain_mm_per_day": 2.85
+   },
+   {
+    "month": "Apr",
+    "mean_c": 24.2,
+    "rain_mm_per_day": 1.97
+   },
+   {
+    "month": "May",
+    "mean_c": 30.3,
+    "rain_mm_per_day": 1.99
+   },
+   {
+    "month": "Jun",
+    "mean_c": 33.6,
+    "rain_mm_per_day": 3.74
+   },
+   {
+    "month": "Jul",
+    "mean_c": 31.7,
+    "rain_mm_per_day": 7.1
+   },
+   {
+    "month": "Aug",
+    "mean_c": 29.5,
+    "rain_mm_per_day": 5.92
+   },
+   {
+    "month": "Sep",
+    "mean_c": 27.4,
+    "rain_mm_per_day": 2.68
+   },
+   {
+    "month": "Oct",
+    "mean_c": 23.2,
+    "rain_mm_per_day": 0.78
+   },
+   {
+    "month": "Nov",
+    "mean_c": 17.4,
+    "rain_mm_per_day": 0.61
+   },
+   {
+    "month": "Dec",
+    "mean_c": 13.1,
+    "rain_mm_per_day": 0.82
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/rawalpindi-average-monthly-temperature-rainfall",
+  "title": "Rawalpindi climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

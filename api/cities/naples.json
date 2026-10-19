@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Naples",
+  "annual_mean_c": 15.8,
+  "warmest_month": "Aug",
+  "warmest_c": 25.7,
+  "coldest_month": "Jan",
+  "coldest_c": 7.2,
+  "seasonal_swing_c": 18.5,
+  "annual_rainfall_mm": 756.0,
+  "wettest_month": "Nov",
+  "wettest_mm_per_day": 3.87,
+  "driest_month": "Aug",
+  "driest_mm_per_day": 0.78,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 7.2,
+    "rain_mm_per_day": 2.83
+   },
+   {
+    "month": "Feb",
+    "mean_c": 7.6,
+    "rain_mm_per_day": 2.39
+   },
+   {
+    "month": "Mar",
+    "mean_c": 10.0,
+    "rain_mm_per_day": 2.26
+   },
+   {
+    "month": "Apr",
+    "mean_c": 13.3,
+    "rain_mm_per_day": 1.86
+   },
+   {
+    "month": "May",
+    "mean_c": 17.5,
+    "rain_mm_per_day": 1.52
+   },
+   {
+    "month": "Jun",
+    "mean_c": 22.5,
+    "rain_mm_per_day": 1.1
+   },
+   {
+    "month": "Jul",
+    "mean_c": 25.5,
+    "rain_mm_per_day": 0.81
+   },
+   {
+    "month": "Aug",
+    "mean_c": 25.7,
+    "rain_mm_per_day": 0.78
+   },
+   {
+    "month": "Sep",
+    "mean_c": 21.1,
+    "rain_mm_per_day": 2.27
+   },
+   {
+    "month": "Oct",
+    "mean_c": 17.1,
+    "rain_mm_per_day": 2.45
+   },
+   {
+    "month": "Nov",
+    "mean_c": 12.6,
+    "rain_mm_per_day": 3.87
+   },
+   {
+    "month": "Dec",
+    "mean_c": 8.5,
+    "rain_mm_per_day": 2.72
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/naples-average-monthly-temperature-rainfall",
+  "title": "Naples climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Pohang",
+  "annual_mean_c": 13.5,
+  "warmest_month": "Aug",
+  "warmest_c": 25.4,
+  "coldest_month": "Jan",
+  "coldest_c": 1.2,
+  "seasonal_swing_c": 24.2,
+  "annual_rainfall_mm": 1182.0,
+  "wettest_month": "Jul",
+  "wettest_mm_per_day": 7.28,
+  "driest_month": "Dec",
+  "driest_mm_per_day": 1.1,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 1.2,
+    "rain_mm_per_day": 1.17
+   },
+   {
+    "month": "Feb",
+    "mean_c": 3.2,
+    "rain_mm_per_day": 1.58
+   },
+   {
+    "month": "Mar",
+    "mean_c": 7.0,
+    "rain_mm_per_day": 1.97
+   },
+   {
+    "month": "Apr",
+    "mean_c": 12.1,
+    "rain_mm_per_day": 3.16
+   },
+   {
+    "month": "May",
+    "mean_c": 17.0,
+    "rain_mm_per_day": 3.07
+   },
+   {
+    "month": "Jun",
+    "mean_c": 20.9,
+    "rain_mm_per_day": 4.2
+   },
+   {
+    "month": "Jul",
+    "mean_c": 24.2,
+    "rain_mm_per_day": 7.28
+   },
+   {
+    "month": "Aug",
+    "mean_c": 25.4,
+    "rain_mm_per_day": 6.2
+   },
+   {
+    "month": "Sep",
+    "mean_c": 21.4,
+    "rain_mm_per_day": 5.28
+   },
+   {
+    "month": "Oct",
+    "mean_c": 16.3,
+    "rain_mm_per_day": 2.34
+   },
+   {
+    "month": "Nov",
+    "mean_c": 9.8,
+    "rain_mm_per_day": 1.52
+   },
+   {
+    "month": "Dec",
+    "mean_c": 3.2,
+    "rain_mm_per_day": 1.1
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/pohang-average-monthly-temperature-rainfall",
+  "title": "Pohang climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

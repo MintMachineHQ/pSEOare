@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "San Cristobal",
+  "annual_mean_c": 25.6,
+  "warmest_month": "Mar",
+  "warmest_c": 26.3,
+  "coldest_month": "Nov",
+  "coldest_c": 24.6,
+  "seasonal_swing_c": 1.7,
+  "annual_rainfall_mm": 909.0,
+  "wettest_month": "Nov",
+  "wettest_mm_per_day": 3.7,
+  "driest_month": "Jan",
+  "driest_mm_per_day": 1.22,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 25.0,
+    "rain_mm_per_day": 1.22
+   },
+   {
+    "month": "Feb",
+    "mean_c": 25.9,
+    "rain_mm_per_day": 1.48
+   },
+   {
+    "month": "Mar",
+    "mean_c": 26.3,
+    "rain_mm_per_day": 2.09
+   },
+   {
+    "month": "Apr",
+    "mean_c": 26.1,
+    "rain_mm_per_day": 3.54
+   },
+   {
+    "month": "May",
+    "mean_c": 26.0,
+    "rain_mm_per_day": 3.18
+   },
+   {
+    "month": "Jun",
+    "mean_c": 25.7,
+    "rain_mm_per_day": 2.4
+   },
+   {
+    "month": "Jul",
+    "mean_c": 25.7,
+    "rain_mm_per_day": 2.24
+   },
+   {
+    "month": "Aug",
+    "mean_c": 26.2,
+    "rain_mm_per_day": 1.87
+   },
+   {
+    "month": "Sep",
+    "mean_c": 26.3,
+    "rain_mm_per_day": 2.62
+   },
+   {
+    "month": "Oct",
+    "mean_c": 25.4,
+    "rain_mm_per_day": 3.25
+   },
+   {
+    "month": "Nov",
+    "mean_c": 24.6,
+    "rain_mm_per_day": 3.7
+   },
+   {
+    "month": "Dec",
+    "mean_c": 24.6,
+    "rain_mm_per_day": 2.31
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/san-cristobal-average-monthly-temperature-rainfall",
+  "title": "San Cristobal climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

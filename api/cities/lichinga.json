@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Lichinga",
+  "annual_mean_c": 23.6,
+  "warmest_month": "Nov",
+  "warmest_c": 28.0,
+  "coldest_month": "Jul",
+  "coldest_c": 19.5,
+  "seasonal_swing_c": 8.5,
+  "annual_rainfall_mm": 1029.0,
+  "wettest_month": "Jan",
+  "wettest_mm_per_day": 9.71,
+  "driest_month": "Sep",
+  "driest_mm_per_day": 0.1,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 24.5,
+    "rain_mm_per_day": 9.71
+   },
+   {
+    "month": "Feb",
+    "mean_c": 24.3,
+    "rain_mm_per_day": 7.85
+   },
+   {
+    "month": "Mar",
+    "mean_c": 24.0,
+    "rain_mm_per_day": 4.8
+   },
+   {
+    "month": "Apr",
+    "mean_c": 22.9,
+    "rain_mm_per_day": 1.49
+   },
+   {
+    "month": "May",
+    "mean_c": 21.3,
+    "rain_mm_per_day": 0.4
+   },
+   {
+    "month": "Jun",
+    "mean_c": 19.8,
+    "rain_mm_per_day": 0.11
+   },
+   {
+    "month": "Jul",
+    "mean_c": 19.5,
+    "rain_mm_per_day": 0.22
+   },
+   {
+    "month": "Aug",
+    "mean_c": 21.8,
+    "rain_mm_per_day": 0.27
+   },
+   {
+    "month": "Sep",
+    "mean_c": 24.7,
+    "rain_mm_per_day": 0.1
+   },
+   {
+    "month": "Oct",
+    "mean_c": 27.3,
+    "rain_mm_per_day": 0.38
+   },
+   {
+    "month": "Nov",
+    "mean_c": 28.0,
+    "rain_mm_per_day": 1.55
+   },
+   {
+    "month": "Dec",
+    "mean_c": 25.8,
+    "rain_mm_per_day": 6.98
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/lichinga-average-monthly-temperature-rainfall",
+  "title": "Lichinga climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

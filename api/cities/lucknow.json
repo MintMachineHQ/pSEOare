@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Lucknow",
+  "annual_mean_c": 26.0,
+  "warmest_month": "Jun",
+  "warmest_c": 35.7,
+  "coldest_month": "Jan",
+  "coldest_c": 14.7,
+  "seasonal_swing_c": 21.0,
+  "annual_rainfall_mm": 908.0,
+  "wettest_month": "Jul",
+  "wettest_mm_per_day": 9.13,
+  "driest_month": "Nov",
+  "driest_mm_per_day": 0.12,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 14.7,
+    "rain_mm_per_day": 0.6
+   },
+   {
+    "month": "Feb",
+    "mean_c": 18.8,
+    "rain_mm_per_day": 0.68
+   },
+   {
+    "month": "Mar",
+    "mean_c": 25.1,
+    "rain_mm_per_day": 0.39
+   },
+   {
+    "month": "Apr",
+    "mean_c": 31.8,
+    "rain_mm_per_day": 0.33
+   },
+   {
+    "month": "May",
+    "mean_c": 35.6,
+    "rain_mm_per_day": 0.86
+   },
+   {
+    "month": "Jun",
+    "mean_c": 35.7,
+    "rain_mm_per_day": 3.85
+   },
+   {
+    "month": "Jul",
+    "mean_c": 31.0,
+    "rain_mm_per_day": 9.13
+   },
+   {
+    "month": "Aug",
+    "mean_c": 29.3,
+    "rain_mm_per_day": 7.58
+   },
+   {
+    "month": "Sep",
+    "mean_c": 28.1,
+    "rain_mm_per_day": 5.18
+   },
+   {
+    "month": "Oct",
+    "mean_c": 25.1,
+    "rain_mm_per_day": 0.93
+   },
+   {
+    "month": "Nov",
+    "mean_c": 20.3,
+    "rain_mm_per_day": 0.12
+   },
+   {
+    "month": "Dec",
+    "mean_c": 15.9,
+    "rain_mm_per_day": 0.22
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/lucknow-average-monthly-temperature-rainfall",
+  "title": "Lucknow climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

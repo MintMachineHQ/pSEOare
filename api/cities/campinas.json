@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Campinas",
+  "annual_mean_c": 20.5,
+  "warmest_month": "Feb",
+  "warmest_c": 22.9,
+  "coldest_month": "Jul",
+  "coldest_c": 16.8,
+  "seasonal_swing_c": 6.1,
+  "annual_rainfall_mm": 1314.0,
+  "wettest_month": "Jan",
+  "wettest_mm_per_day": 7.85,
+  "driest_month": "Aug",
+  "driest_mm_per_day": 0.97,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 22.8,
+    "rain_mm_per_day": 7.85
+   },
+   {
+    "month": "Feb",
+    "mean_c": 22.9,
+    "rain_mm_per_day": 5.98
+   },
+   {
+    "month": "Mar",
+    "mean_c": 22.1,
+    "rain_mm_per_day": 4.33
+   },
+   {
+    "month": "Apr",
+    "mean_c": 20.6,
+    "rain_mm_per_day": 2.45
+   },
+   {
+    "month": "May",
+    "mean_c": 17.8,
+    "rain_mm_per_day": 2.01
+   },
+   {
+    "month": "Jun",
+    "mean_c": 17.0,
+    "rain_mm_per_day": 1.54
+   },
+   {
+    "month": "Jul",
+    "mean_c": 16.8,
+    "rain_mm_per_day": 1.52
+   },
+   {
+    "month": "Aug",
+    "mean_c": 18.4,
+    "rain_mm_per_day": 0.97
+   },
+   {
+    "month": "Sep",
+    "mean_c": 20.7,
+    "rain_mm_per_day": 1.96
+   },
+   {
+    "month": "Oct",
+    "mean_c": 22.2,
+    "rain_mm_per_day": 3.38
+   },
+   {
+    "month": "Nov",
+    "mean_c": 22.1,
+    "rain_mm_per_day": 5.22
+   },
+   {
+    "month": "Dec",
+    "mean_c": 22.8,
+    "rain_mm_per_day": 6.0
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/campinas-average-monthly-temperature-rainfall",
+  "title": "Campinas climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Gdynia",
+  "annual_mean_c": 8.6,
+  "warmest_month": "Aug",
+  "warmest_c": 18.5,
+  "coldest_month": "Jan",
+  "coldest_c": -0.7,
+  "seasonal_swing_c": 19.2,
+  "annual_rainfall_mm": 710.0,
+  "wettest_month": "Jul",
+  "wettest_mm_per_day": 2.78,
+  "driest_month": "Apr",
+  "driest_mm_per_day": 1.19,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": -0.7,
+    "rain_mm_per_day": 1.87
+   },
+   {
+    "month": "Feb",
+    "mean_c": -0.3,
+    "rain_mm_per_day": 1.5
+   },
+   {
+    "month": "Mar",
+    "mean_c": 2.1,
+    "rain_mm_per_day": 1.42
+   },
+   {
+    "month": "Apr",
+    "mean_c": 6.5,
+    "rain_mm_per_day": 1.19
+   },
+   {
+    "month": "May",
+    "mean_c": 11.4,
+    "rain_mm_per_day": 1.76
+   },
+   {
+    "month": "Jun",
+    "mean_c": 15.5,
+    "rain_mm_per_day": 1.92
+   },
+   {
+    "month": "Jul",
+    "mean_c": 18.3,
+    "rain_mm_per_day": 2.78
+   },
+   {
+    "month": "Aug",
+    "mean_c": 18.5,
+    "rain_mm_per_day": 2.3
+   },
+   {
+    "month": "Sep",
+    "mean_c": 14.8,
+    "rain_mm_per_day": 2.09
+   },
+   {
+    "month": "Oct",
+    "mean_c": 9.7,
+    "rain_mm_per_day": 2.15
+   },
+   {
+    "month": "Nov",
+    "mean_c": 5.2,
+    "rain_mm_per_day": 2.29
+   },
+   {
+    "month": "Dec",
+    "mean_c": 1.5,
+    "rain_mm_per_day": 2.1
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/gdynia-average-monthly-temperature-rainfall",
+  "title": "Gdynia climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

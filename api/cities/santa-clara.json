@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Santa Clara",
+  "annual_mean_c": 26.1,
+  "warmest_month": "Aug",
+  "warmest_c": 28.8,
+  "coldest_month": "Jan",
+  "coldest_c": 22.6,
+  "seasonal_swing_c": 6.2,
+  "annual_rainfall_mm": 534.0,
+  "wettest_month": "Sep",
+  "wettest_mm_per_day": 2.62,
+  "driest_month": "Jan",
+  "driest_mm_per_day": 0.43,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 22.6,
+    "rain_mm_per_day": 0.43
+   },
+   {
+    "month": "Feb",
+    "mean_c": 23.7,
+    "rain_mm_per_day": 0.62
+   },
+   {
+    "month": "Mar",
+    "mean_c": 24.7,
+    "rain_mm_per_day": 0.51
+   },
+   {
+    "month": "Apr",
+    "mean_c": 26.5,
+    "rain_mm_per_day": 0.83
+   },
+   {
+    "month": "May",
+    "mean_c": 27.3,
+    "rain_mm_per_day": 2.46
+   },
+   {
+    "month": "Jun",
+    "mean_c": 28.1,
+    "rain_mm_per_day": 2.23
+   },
+   {
+    "month": "Jul",
+    "mean_c": 28.6,
+    "rain_mm_per_day": 1.95
+   },
+   {
+    "month": "Aug",
+    "mean_c": 28.8,
+    "rain_mm_per_day": 2.27
+   },
+   {
+    "month": "Sep",
+    "mean_c": 28.1,
+    "rain_mm_per_day": 2.62
+   },
+   {
+    "month": "Oct",
+    "mean_c": 26.9,
+    "rain_mm_per_day": 2.29
+   },
+   {
+    "month": "Nov",
+    "mean_c": 24.7,
+    "rain_mm_per_day": 0.81
+   },
+   {
+    "month": "Dec",
+    "mean_c": 23.6,
+    "rain_mm_per_day": 0.55
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/santa-clara-average-monthly-temperature-rainfall",
+  "title": "Santa Clara climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

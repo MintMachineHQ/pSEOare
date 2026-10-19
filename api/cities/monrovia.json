@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Monrovia",
+  "annual_mean_c": 26.4,
+  "warmest_month": "Apr",
+  "warmest_c": 27.7,
+  "coldest_month": "Aug",
+  "coldest_c": 24.9,
+  "seasonal_swing_c": 2.8,
+  "annual_rainfall_mm": 1708.0,
+  "wettest_month": "Aug",
+  "wettest_mm_per_day": 12.86,
+  "driest_month": "Jan",
+  "driest_mm_per_day": 0.35,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 26.8,
+    "rain_mm_per_day": 0.35
+   },
+   {
+    "month": "Feb",
+    "mean_c": 27.3,
+    "rain_mm_per_day": 0.82
+   },
+   {
+    "month": "Mar",
+    "mean_c": 27.6,
+    "rain_mm_per_day": 1.43
+   },
+   {
+    "month": "Apr",
+    "mean_c": 27.7,
+    "rain_mm_per_day": 1.98
+   },
+   {
+    "month": "May",
+    "mean_c": 27.3,
+    "rain_mm_per_day": 3.53
+   },
+   {
+    "month": "Jun",
+    "mean_c": 26.2,
+    "rain_mm_per_day": 7.52
+   },
+   {
+    "month": "Jul",
+    "mean_c": 25.2,
+    "rain_mm_per_day": 8.3
+   },
+   {
+    "month": "Aug",
+    "mean_c": 24.9,
+    "rain_mm_per_day": 12.86
+   },
+   {
+    "month": "Sep",
+    "mean_c": 25.3,
+    "rain_mm_per_day": 8.84
+   },
+   {
+    "month": "Oct",
+    "mean_c": 26.0,
+    "rain_mm_per_day": 6.77
+   },
+   {
+    "month": "Nov",
+    "mean_c": 26.5,
+    "rain_mm_per_day": 2.62
+   },
+   {
+    "month": "Dec",
+    "mean_c": 26.6,
+    "rain_mm_per_day": 1.18
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/monrovia-average-monthly-temperature-rainfall",
+  "title": "Monrovia climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

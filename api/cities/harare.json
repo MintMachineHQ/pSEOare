@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Harare",
+  "annual_mean_c": 19.0,
+  "warmest_month": "Nov",
+  "warmest_c": 22.7,
+  "coldest_month": "Jul",
+  "coldest_c": 13.6,
+  "seasonal_swing_c": 9.1,
+  "annual_rainfall_mm": 790.0,
+  "wettest_month": "Dec",
+  "wettest_mm_per_day": 6.28,
+  "driest_month": "Aug",
+  "driest_mm_per_day": 0.06,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 21.3,
+    "rain_mm_per_day": 5.8
+   },
+   {
+    "month": "Feb",
+    "mean_c": 21.0,
+    "rain_mm_per_day": 4.71
+   },
+   {
+    "month": "Mar",
+    "mean_c": 20.3,
+    "rain_mm_per_day": 3.03
+   },
+   {
+    "month": "Apr",
+    "mean_c": 18.6,
+    "rain_mm_per_day": 1.04
+   },
+   {
+    "month": "May",
+    "mean_c": 16.2,
+    "rain_mm_per_day": 0.23
+   },
+   {
+    "month": "Jun",
+    "mean_c": 13.9,
+    "rain_mm_per_day": 0.1
+   },
+   {
+    "month": "Jul",
+    "mean_c": 13.6,
+    "rain_mm_per_day": 0.61
+   },
+   {
+    "month": "Aug",
+    "mean_c": 16.4,
+    "rain_mm_per_day": 0.06
+   },
+   {
+    "month": "Sep",
+    "mean_c": 19.9,
+    "rain_mm_per_day": 0.18
+   },
+   {
+    "month": "Oct",
+    "mean_c": 22.4,
+    "rain_mm_per_day": 0.82
+   },
+   {
+    "month": "Nov",
+    "mean_c": 22.7,
+    "rain_mm_per_day": 3.14
+   },
+   {
+    "month": "Dec",
+    "mean_c": 21.6,
+    "rain_mm_per_day": 6.28
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/harare-average-monthly-temperature-rainfall",
+  "title": "Harare climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

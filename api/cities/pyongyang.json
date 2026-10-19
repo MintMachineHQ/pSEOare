@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Pyongyang",
+  "annual_mean_c": 10.3,
+  "warmest_month": "Jul",
+  "warmest_c": 24.3,
+  "coldest_month": "Jan",
+  "coldest_c": -5.8,
+  "seasonal_swing_c": 30.1,
+  "annual_rainfall_mm": 992.0,
+  "wettest_month": "Jul",
+  "wettest_mm_per_day": 9.05,
+  "driest_month": "Jan",
+  "driest_mm_per_day": 0.28,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": -5.8,
+    "rain_mm_per_day": 0.28
+   },
+   {
+    "month": "Feb",
+    "mean_c": -2.9,
+    "rain_mm_per_day": 0.65
+   },
+   {
+    "month": "Mar",
+    "mean_c": 2.5,
+    "rain_mm_per_day": 0.73
+   },
+   {
+    "month": "Apr",
+    "mean_c": 9.4,
+    "rain_mm_per_day": 1.8
+   },
+   {
+    "month": "May",
+    "mean_c": 16.3,
+    "rain_mm_per_day": 2.45
+   },
+   {
+    "month": "Jun",
+    "mean_c": 21.6,
+    "rain_mm_per_day": 3.25
+   },
+   {
+    "month": "Jul",
+    "mean_c": 24.3,
+    "rain_mm_per_day": 9.05
+   },
+   {
+    "month": "Aug",
+    "mean_c": 24.2,
+    "rain_mm_per_day": 7.61
+   },
+   {
+    "month": "Sep",
+    "mean_c": 19.4,
+    "rain_mm_per_day": 3.23
+   },
+   {
+    "month": "Oct",
+    "mean_c": 12.5,
+    "rain_mm_per_day": 1.47
+   },
+   {
+    "month": "Nov",
+    "mean_c": 4.3,
+    "rain_mm_per_day": 1.56
+   },
+   {
+    "month": "Dec",
+    "mean_c": -3.5,
+    "rain_mm_per_day": 0.55
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/pyongyang-average-monthly-temperature-rainfall",
+  "title": "Pyongyang climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

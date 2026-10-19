@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Hue",
+  "annual_mean_c": 25.2,
+  "warmest_month": "Jun",
+  "warmest_c": 28.6,
+  "coldest_month": "Jan",
+  "coldest_c": 20.5,
+  "seasonal_swing_c": 8.1,
+  "annual_rainfall_mm": 2150.0,
+  "wettest_month": "Oct",
+  "wettest_mm_per_day": 18.05,
+  "driest_month": "Feb",
+  "driest_mm_per_day": 1.0,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 20.5,
+    "rain_mm_per_day": 2.38
+   },
+   {
+    "month": "Feb",
+    "mean_c": 21.4,
+    "rain_mm_per_day": 1.0
+   },
+   {
+    "month": "Mar",
+    "mean_c": 23.6,
+    "rain_mm_per_day": 1.29
+   },
+   {
+    "month": "Apr",
+    "mean_c": 26.2,
+    "rain_mm_per_day": 1.8
+   },
+   {
+    "month": "May",
+    "mean_c": 27.9,
+    "rain_mm_per_day": 2.79
+   },
+   {
+    "month": "Jun",
+    "mean_c": 28.6,
+    "rain_mm_per_day": 2.4
+   },
+   {
+    "month": "Jul",
+    "mean_c": 28.4,
+    "rain_mm_per_day": 3.41
+   },
+   {
+    "month": "Aug",
+    "mean_c": 28.1,
+    "rain_mm_per_day": 5.64
+   },
+   {
+    "month": "Sep",
+    "mean_c": 27.1,
+    "rain_mm_per_day": 12.71
+   },
+   {
+    "month": "Oct",
+    "mean_c": 25.4,
+    "rain_mm_per_day": 18.05
+   },
+   {
+    "month": "Nov",
+    "mean_c": 23.8,
+    "rain_mm_per_day": 12.34
+   },
+   {
+    "month": "Dec",
+    "mean_c": 21.4,
+    "rain_mm_per_day": 6.92
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/hue-average-monthly-temperature-rainfall",
+  "title": "Hue climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Nakuru",
+  "annual_mean_c": 15.6,
+  "warmest_month": "Mar",
+  "warmest_c": 17.3,
+  "coldest_month": "Jul",
+  "coldest_c": 14.2,
+  "seasonal_swing_c": 3.1,
+  "annual_rainfall_mm": 1229.0,
+  "wettest_month": "Apr",
+  "wettest_mm_per_day": 6.85,
+  "driest_month": "Feb",
+  "driest_mm_per_day": 1.38,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 16.1,
+    "rain_mm_per_day": 1.74
+   },
+   {
+    "month": "Feb",
+    "mean_c": 16.9,
+    "rain_mm_per_day": 1.38
+   },
+   {
+    "month": "Mar",
+    "mean_c": 17.3,
+    "rain_mm_per_day": 3.4
+   },
+   {
+    "month": "Apr",
+    "mean_c": 16.4,
+    "rain_mm_per_day": 6.85
+   },
+   {
+    "month": "May",
+    "mean_c": 15.4,
+    "rain_mm_per_day": 4.8
+   },
+   {
+    "month": "Jun",
+    "mean_c": 14.7,
+    "rain_mm_per_day": 2.75
+   },
+   {
+    "month": "Jul",
+    "mean_c": 14.2,
+    "rain_mm_per_day": 2.18
+   },
+   {
+    "month": "Aug",
+    "mean_c": 14.4,
+    "rain_mm_per_day": 2.86
+   },
+   {
+    "month": "Sep",
+    "mean_c": 15.2,
+    "rain_mm_per_day": 2.83
+   },
+   {
+    "month": "Oct",
+    "mean_c": 15.7,
+    "rain_mm_per_day": 3.72
+   },
+   {
+    "month": "Nov",
+    "mean_c": 15.7,
+    "rain_mm_per_day": 4.86
+   },
+   {
+    "month": "Dec",
+    "mean_c": 15.7,
+    "rain_mm_per_day": 3.07
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/nakuru-average-monthly-temperature-rainfall",
+  "title": "Nakuru climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

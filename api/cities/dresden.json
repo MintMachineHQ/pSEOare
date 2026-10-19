@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Dresden",
+  "annual_mean_c": 8.8,
+  "warmest_month": "Jul",
+  "warmest_c": 19.5,
+  "coldest_month": "Jan",
+  "coldest_c": -1.8,
+  "seasonal_swing_c": 21.3,
+  "annual_rainfall_mm": 714.0,
+  "wettest_month": "Jul",
+  "wettest_mm_per_day": 2.8,
+  "driest_month": "Apr",
+  "driest_mm_per_day": 1.27,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": -1.8,
+    "rain_mm_per_day": 1.97
+   },
+   {
+    "month": "Feb",
+    "mean_c": -0.7,
+    "rain_mm_per_day": 1.46
+   },
+   {
+    "month": "Mar",
+    "mean_c": 3.1,
+    "rain_mm_per_day": 1.55
+   },
+   {
+    "month": "Apr",
+    "mean_c": 8.4,
+    "rain_mm_per_day": 1.27
+   },
+   {
+    "month": "May",
+    "mean_c": 13.1,
+    "rain_mm_per_day": 2.07
+   },
+   {
+    "month": "Jun",
+    "mean_c": 17.3,
+    "rain_mm_per_day": 2.42
+   },
+   {
+    "month": "Jul",
+    "mean_c": 19.5,
+    "rain_mm_per_day": 2.8
+   },
+   {
+    "month": "Aug",
+    "mean_c": 19.1,
+    "rain_mm_per_day": 2.61
+   },
+   {
+    "month": "Sep",
+    "mean_c": 14.2,
+    "rain_mm_per_day": 1.92
+   },
+   {
+    "month": "Oct",
+    "mean_c": 8.9,
+    "rain_mm_per_day": 1.74
+   },
+   {
+    "month": "Nov",
+    "mean_c": 3.8,
+    "rain_mm_per_day": 1.88
+   },
+   {
+    "month": "Dec",
+    "mean_c": -0.2,
+    "rain_mm_per_day": 1.8
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/dresden-average-monthly-temperature-rainfall",
+  "title": "Dresden climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

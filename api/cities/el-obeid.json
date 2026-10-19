@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "El Obeid",
+  "annual_mean_c": 27.2,
+  "warmest_month": "May",
+  "warmest_c": 32.1,
+  "coldest_month": "Jan",
+  "coldest_c": 21.4,
+  "seasonal_swing_c": 10.7,
+  "annual_rainfall_mm": 359.0,
+  "wettest_month": "Aug",
+  "wettest_mm_per_day": 4.03,
+  "driest_month": "Jan",
+  "driest_mm_per_day": 0.0,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 21.4,
+    "rain_mm_per_day": 0.0
+   },
+   {
+    "month": "Feb",
+    "mean_c": 24.4,
+    "rain_mm_per_day": 0.0
+   },
+   {
+    "month": "Mar",
+    "mean_c": 27.4,
+    "rain_mm_per_day": 0.0
+   },
+   {
+    "month": "Apr",
+    "mean_c": 30.5,
+    "rain_mm_per_day": 0.02
+   },
+   {
+    "month": "May",
+    "mean_c": 32.1,
+    "rain_mm_per_day": 0.41
+   },
+   {
+    "month": "Jun",
+    "mean_c": 31.1,
+    "rain_mm_per_day": 1.17
+   },
+   {
+    "month": "Jul",
+    "mean_c": 28.3,
+    "rain_mm_per_day": 3.65
+   },
+   {
+    "month": "Aug",
+    "mean_c": 26.7,
+    "rain_mm_per_day": 4.03
+   },
+   {
+    "month": "Sep",
+    "mean_c": 27.9,
+    "rain_mm_per_day": 1.86
+   },
+   {
+    "month": "Oct",
+    "mean_c": 28.7,
+    "rain_mm_per_day": 0.67
+   },
+   {
+    "month": "Nov",
+    "mean_c": 25.2,
+    "rain_mm_per_day": 0.0
+   },
+   {
+    "month": "Dec",
+    "mean_c": 22.1,
+    "rain_mm_per_day": 0.0
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/el-obeid-average-monthly-temperature-rainfall",
+  "title": "El Obeid climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

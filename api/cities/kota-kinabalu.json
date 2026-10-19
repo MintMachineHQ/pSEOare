@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Kota Kinabalu",
+  "annual_mean_c": 24.6,
+  "warmest_month": "Apr",
+  "warmest_c": 25.4,
+  "coldest_month": "Feb",
+  "coldest_c": 23.9,
+  "seasonal_swing_c": 1.5,
+  "annual_rainfall_mm": 2704.0,
+  "wettest_month": "Oct",
+  "wettest_mm_per_day": 11.49,
+  "driest_month": "Feb",
+  "driest_mm_per_day": 3.48,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 24.0,
+    "rain_mm_per_day": 6.37
+   },
+   {
+    "month": "Feb",
+    "mean_c": 23.9,
+    "rain_mm_per_day": 3.48
+   },
+   {
+    "month": "Mar",
+    "mean_c": 24.5,
+    "rain_mm_per_day": 3.97
+   },
+   {
+    "month": "Apr",
+    "mean_c": 25.4,
+    "rain_mm_per_day": 4.59
+   },
+   {
+    "month": "May",
+    "mean_c": 25.4,
+    "rain_mm_per_day": 7.03
+   },
+   {
+    "month": "Jun",
+    "mean_c": 25.0,
+    "rain_mm_per_day": 8.76
+   },
+   {
+    "month": "Jul",
+    "mean_c": 24.6,
+    "rain_mm_per_day": 8.37
+   },
+   {
+    "month": "Aug",
+    "mean_c": 24.6,
+    "rain_mm_per_day": 7.72
+   },
+   {
+    "month": "Sep",
+    "mean_c": 24.6,
+    "rain_mm_per_day": 9.08
+   },
+   {
+    "month": "Oct",
+    "mean_c": 24.5,
+    "rain_mm_per_day": 11.49
+   },
+   {
+    "month": "Nov",
+    "mean_c": 24.6,
+    "rain_mm_per_day": 9.4
+   },
+   {
+    "month": "Dec",
+    "mean_c": 24.5,
+    "rain_mm_per_day": 8.7
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/kota-kinabalu-average-monthly-temperature-rainfall",
+  "title": "Kota Kinabalu climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

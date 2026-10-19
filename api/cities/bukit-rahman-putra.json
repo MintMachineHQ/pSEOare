@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Bukit Rahman Putra",
+  "annual_mean_c": 27.8,
+  "warmest_month": "May",
+  "warmest_c": 28.6,
+  "coldest_month": "Jan",
+  "coldest_c": 27.2,
+  "seasonal_swing_c": 1.4,
+  "annual_rainfall_mm": 2625.0,
+  "wettest_month": "Nov",
+  "wettest_mm_per_day": 10.8,
+  "driest_month": "Jun",
+  "driest_mm_per_day": 5.13,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 27.2,
+    "rain_mm_per_day": 6.75
+   },
+   {
+    "month": "Feb",
+    "mean_c": 27.5,
+    "rain_mm_per_day": 5.65
+   },
+   {
+    "month": "Mar",
+    "mean_c": 28.0,
+    "rain_mm_per_day": 6.9
+   },
+   {
+    "month": "Apr",
+    "mean_c": 28.4,
+    "rain_mm_per_day": 8.9
+   },
+   {
+    "month": "May",
+    "mean_c": 28.6,
+    "rain_mm_per_day": 6.14
+   },
+   {
+    "month": "Jun",
+    "mean_c": 28.3,
+    "rain_mm_per_day": 5.13
+   },
+   {
+    "month": "Jul",
+    "mean_c": 28.0,
+    "rain_mm_per_day": 5.6
+   },
+   {
+    "month": "Aug",
+    "mean_c": 28.0,
+    "rain_mm_per_day": 5.82
+   },
+   {
+    "month": "Sep",
+    "mean_c": 27.8,
+    "rain_mm_per_day": 6.86
+   },
+   {
+    "month": "Oct",
+    "mean_c": 27.6,
+    "rain_mm_per_day": 8.91
+   },
+   {
+    "month": "Nov",
+    "mean_c": 27.5,
+    "rain_mm_per_day": 10.8
+   },
+   {
+    "month": "Dec",
+    "mean_c": 27.3,
+    "rain_mm_per_day": 8.89
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/bukit-rahman-putra-average-monthly-temperature-rainfall",
+  "title": "Bukit Rahman Putra climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Riyadh",
+  "annual_mean_c": 26.0,
+  "warmest_month": "Jul",
+  "warmest_c": 36.0,
+  "coldest_month": "Jan",
+  "coldest_c": 13.8,
+  "seasonal_swing_c": 22.2,
+  "annual_rainfall_mm": 32.0,
+  "wettest_month": "Nov",
+  "wettest_mm_per_day": 0.23,
+  "driest_month": "Jun",
+  "driest_mm_per_day": 0.0,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 13.8,
+    "rain_mm_per_day": 0.18
+   },
+   {
+    "month": "Feb",
+    "mean_c": 16.6,
+    "rain_mm_per_day": 0.13
+   },
+   {
+    "month": "Mar",
+    "mean_c": 21.2,
+    "rain_mm_per_day": 0.08
+   },
+   {
+    "month": "Apr",
+    "mean_c": 26.5,
+    "rain_mm_per_day": 0.18
+   },
+   {
+    "month": "May",
+    "mean_c": 32.0,
+    "rain_mm_per_day": 0.03
+   },
+   {
+    "month": "Jun",
+    "mean_c": 34.5,
+    "rain_mm_per_day": 0.0
+   },
+   {
+    "month": "Jul",
+    "mean_c": 36.0,
+    "rain_mm_per_day": 0.0
+   },
+   {
+    "month": "Aug",
+    "mean_c": 35.7,
+    "rain_mm_per_day": 0.0
+   },
+   {
+    "month": "Sep",
+    "mean_c": 32.4,
+    "rain_mm_per_day": 0.0
+   },
+   {
+    "month": "Oct",
+    "mean_c": 27.1,
+    "rain_mm_per_day": 0.01
+   },
+   {
+    "month": "Nov",
+    "mean_c": 20.4,
+    "rain_mm_per_day": 0.23
+   },
+   {
+    "month": "Dec",
+    "mean_c": 15.1,
+    "rain_mm_per_day": 0.2
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/riyadh-average-monthly-temperature-rainfall",
+  "title": "Riyadh climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

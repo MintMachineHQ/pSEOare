@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Sector 3",
+  "annual_mean_c": 12.3,
+  "warmest_month": "Jul",
+  "warmest_c": 25.0,
+  "coldest_month": "Jan",
+  "coldest_c": -1.6,
+  "seasonal_swing_c": 26.6,
+  "annual_rainfall_mm": 614.0,
+  "wettest_month": "Jun",
+  "wettest_mm_per_day": 2.63,
+  "driest_month": "Feb",
+  "driest_mm_per_day": 1.21,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": -1.6,
+    "rain_mm_per_day": 1.42
+   },
+   {
+    "month": "Feb",
+    "mean_c": 1.0,
+    "rain_mm_per_day": 1.21
+   },
+   {
+    "month": "Mar",
+    "mean_c": 6.3,
+    "rain_mm_per_day": 1.27
+   },
+   {
+    "month": "Apr",
+    "mean_c": 11.9,
+    "rain_mm_per_day": 1.44
+   },
+   {
+    "month": "May",
+    "mean_c": 17.9,
+    "rain_mm_per_day": 2.09
+   },
+   {
+    "month": "Jun",
+    "mean_c": 22.4,
+    "rain_mm_per_day": 2.63
+   },
+   {
+    "month": "Jul",
+    "mean_c": 25.0,
+    "rain_mm_per_day": 2.16
+   },
+   {
+    "month": "Aug",
+    "mean_c": 25.0,
+    "rain_mm_per_day": 1.48
+   },
+   {
+    "month": "Sep",
+    "mean_c": 19.4,
+    "rain_mm_per_day": 1.72
+   },
+   {
+    "month": "Oct",
+    "mean_c": 12.5,
+    "rain_mm_per_day": 1.81
+   },
+   {
+    "month": "Nov",
+    "mean_c": 6.3,
+    "rain_mm_per_day": 1.41
+   },
+   {
+    "month": "Dec",
+    "mean_c": 0.3,
+    "rain_mm_per_day": 1.55
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/sector-3-average-monthly-temperature-rainfall",
+  "title": "Sector 3 climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

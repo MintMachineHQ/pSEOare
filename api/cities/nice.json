@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Nice",
+  "annual_mean_c": 16.7,
+  "warmest_month": "Aug",
+  "warmest_c": 24.2,
+  "coldest_month": "Feb",
+  "coldest_c": 10.5,
+  "seasonal_swing_c": 13.7,
+  "annual_rainfall_mm": 682.0,
+  "wettest_month": "Nov",
+  "wettest_mm_per_day": 4.11,
+  "driest_month": "Jul",
+  "driest_mm_per_day": 0.54,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 10.7,
+    "rain_mm_per_day": 1.78
+   },
+   {
+    "month": "Feb",
+    "mean_c": 10.5,
+    "rain_mm_per_day": 1.88
+   },
+   {
+    "month": "Mar",
+    "mean_c": 12.1,
+    "rain_mm_per_day": 2.0
+   },
+   {
+    "month": "Apr",
+    "mean_c": 14.2,
+    "rain_mm_per_day": 1.85
+   },
+   {
+    "month": "May",
+    "mean_c": 17.4,
+    "rain_mm_per_day": 1.56
+   },
+   {
+    "month": "Jun",
+    "mean_c": 21.3,
+    "rain_mm_per_day": 0.98
+   },
+   {
+    "month": "Jul",
+    "mean_c": 23.9,
+    "rain_mm_per_day": 0.54
+   },
+   {
+    "month": "Aug",
+    "mean_c": 24.2,
+    "rain_mm_per_day": 0.75
+   },
+   {
+    "month": "Sep",
+    "mean_c": 21.5,
+    "rain_mm_per_day": 1.55
+   },
+   {
+    "month": "Oct",
+    "mean_c": 18.2,
+    "rain_mm_per_day": 2.84
+   },
+   {
+    "month": "Nov",
+    "mean_c": 14.6,
+    "rain_mm_per_day": 4.11
+   },
+   {
+    "month": "Dec",
+    "mean_c": 11.9,
+    "rain_mm_per_day": 2.6
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/nice-average-monthly-temperature-rainfall",
+  "title": "Nice climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

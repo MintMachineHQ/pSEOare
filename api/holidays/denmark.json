@@ -1,7 +1,7 @@
 {
  "answer": {
   "country": "Denmark",
-  "count": 8,
+  "count": 32,
   "holidays": [
    {
     "name": "New Year's Day in Denmark (2016)",
@@ -12,12 +12,44 @@
     "page": "https://pseoare.pages.dev/new-year-s-day-denmark-2016-01-01"
    },
    {
+    "name": "Maundy Thursday in Denmark (2016)",
+    "local_name": "Sk\u00e6rtorsdag",
+    "date": "2016-03-24",
+    "weekday": "Thursday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/maundy-thursday-denmark-2016-03-24"
+   },
+   {
+    "name": "Christmas Day in Denmark (2016)",
+    "local_name": "Juledag / 1. juledag",
+    "date": "2016-12-25",
+    "weekday": "Sunday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/christmas-day-denmark-2016-12-25"
+   },
+   {
     "name": "New Year's Day in Denmark (2017)",
     "local_name": "Nyt\u00e5rsdag",
     "date": "2017-01-01",
     "weekday": "Sunday",
     "weekend": true,
     "page": "https://pseoare.pages.dev/new-year-s-day-denmark-2017-01-01"
+   },
+   {
+    "name": "Maundy Thursday in Denmark (2017)",
+    "local_name": "Sk\u00e6rtorsdag",
+    "date": "2017-04-13",
+    "weekday": "Thursday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/maundy-thursday-denmark-2017-04-13"
+   },
+   {
+    "name": "Christmas Day in Denmark (2017)",
+    "local_name": "Juledag / 1. juledag",
+    "date": "2017-12-25",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-denmark-2017-12-25"
    },
    {
     "name": "New Year's Day in Denmark (2018)",
@@ -28,12 +60,44 @@
     "page": "https://pseoare.pages.dev/new-year-s-day-denmark-2018-01-01"
    },
    {
+    "name": "Maundy Thursday in Denmark (2018)",
+    "local_name": "Sk\u00e6rtorsdag",
+    "date": "2018-03-29",
+    "weekday": "Thursday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/maundy-thursday-denmark-2018-03-29"
+   },
+   {
+    "name": "Christmas Day in Denmark (2018)",
+    "local_name": "Juledag / 1. juledag",
+    "date": "2018-12-25",
+    "weekday": "Tuesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-denmark-2018-12-25"
+   },
+   {
     "name": "New Year's Day in Denmark (2019)",
     "local_name": "Nyt\u00e5rsdag",
     "date": "2019-01-01",
     "weekday": "Tuesday",
     "weekend": false,
     "page": "https://pseoare.pages.dev/new-year-s-day-denmark-2019-01-01"
+   },
+   {
+    "name": "Maundy Thursday in Denmark (2019)",
+    "local_name": "Sk\u00e6rtorsdag",
+    "date": "2019-04-18",
+    "weekday": "Thursday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/maundy-thursday-denmark-2019-04-18"
+   },
+   {
+    "name": "Christmas Day in Denmark (2019)",
+    "local_name": "Juledag / 1. juledag",
+    "date": "2019-12-25",
+    "weekday": "Wednesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-denmark-2019-12-25"
    },
    {
     "name": "New Year's Day in Denmark (2020)",
@@ -44,12 +108,44 @@
     "page": "https://pseoare.pages.dev/new-year-s-day-denmark-2020-01-01"
    },
    {
+    "name": "Maundy Thursday in Denmark (2020)",
+    "local_name": "Sk\u00e6rtorsdag",
+    "date": "2020-04-09",
+    "weekday": "Thursday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/maundy-thursday-denmark-2020-04-09"
+   },
+   {
+    "name": "Christmas Day in Denmark (2020)",
+    "local_name": "Juledag / 1. juledag",
+    "date": "2020-12-25",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-denmark-2020-12-25"
+   },
+   {
     "name": "New Year's Day in Denmark (2021)",
     "local_name": "Nyt\u00e5rsdag",
     "date": "2021-01-01",
     "weekday": "Friday",
     "weekend": false,
     "page": "https://pseoare.pages.dev/new-year-s-day-denmark-2021-01-01"
+   },
+   {
+    "name": "Maundy Thursday in Denmark (2021)",
+    "local_name": "Sk\u00e6rtorsdag",
+    "date": "2021-04-01",
+    "weekday": "Thursday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/maundy-thursday-denmark-2021-04-01"
+   },
+   {
+    "name": "Christmas Day in Denmark (2021)",
+    "local_name": "Juledag / 1. juledag",
+    "date": "2021-12-25",
+    "weekday": "Saturday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/christmas-day-denmark-2021-12-25"
    },
    {
     "name": "New Year's Day in Denmark (2022)",
@@ -60,12 +156,108 @@
     "page": "https://pseoare.pages.dev/new-year-s-day-denmark-2022-01-01"
    },
    {
+    "name": "Maundy Thursday in Denmark (2022)",
+    "local_name": "Sk\u00e6rtorsdag",
+    "date": "2022-04-14",
+    "weekday": "Thursday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/maundy-thursday-denmark-2022-04-14"
+   },
+   {
+    "name": "Christmas Day in Denmark (2022)",
+    "local_name": "Juledag / 1. juledag",
+    "date": "2022-12-25",
+    "weekday": "Sunday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/christmas-day-denmark-2022-12-25"
+   },
+   {
     "name": "New Year's Day in Denmark (2023)",
     "local_name": "Nyt\u00e5rsdag",
     "date": "2023-01-01",
     "weekday": "Sunday",
     "weekend": true,
     "page": "https://pseoare.pages.dev/new-year-s-day-denmark-2023-01-01"
+   },
+   {
+    "name": "Maundy Thursday in Denmark (2023)",
+    "local_name": "Sk\u00e6rtorsdag",
+    "date": "2023-04-06",
+    "weekday": "Thursday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/maundy-thursday-denmark-2023-04-06"
+   },
+   {
+    "name": "Christmas Day in Denmark (2023)",
+    "local_name": "Juledag / 1. juledag",
+    "date": "2023-12-25",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-denmark-2023-12-25"
+   },
+   {
+    "name": "Maundy Thursday in Denmark (2024)",
+    "local_name": "Sk\u00e6rtorsdag",
+    "date": "2024-03-28",
+    "weekday": "Thursday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/maundy-thursday-denmark-2024-03-28"
+   },
+   {
+    "name": "Christmas Day in Denmark (2024)",
+    "local_name": "Juledag / 1. juledag",
+    "date": "2024-12-25",
+    "weekday": "Wednesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-denmark-2024-12-25"
+   },
+   {
+    "name": "Maundy Thursday in Denmark (2025)",
+    "local_name": "Sk\u00e6rtorsdag",
+    "date": "2025-04-17",
+    "weekday": "Thursday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/maundy-thursday-denmark-2025-04-17"
+   },
+   {
+    "name": "Christmas Day in Denmark (2025)",
+    "local_name": "Juledag / 1. juledag",
+    "date": "2025-12-25",
+    "weekday": "Thursday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-denmark-2025-12-25"
+   },
+   {
+    "name": "Maundy Thursday in Denmark (2026)",
+    "local_name": "Sk\u00e6rtorsdag",
+    "date": "2026-04-02",
+    "weekday": "Thursday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/maundy-thursday-denmark-2026-04-02"
+   },
+   {
+    "name": "Christmas Day in Denmark (2026)",
+    "local_name": "Juledag / 1. juledag",
+    "date": "2026-12-25",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-denmark-2026-12-25"
+   },
+   {
+    "name": "Maundy Thursday in Denmark (2027)",
+    "local_name": "Sk\u00e6rtorsdag",
+    "date": "2027-03-25",
+    "weekday": "Thursday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/maundy-thursday-denmark-2027-03-25"
+   },
+   {
+    "name": "Christmas Day in Denmark (2027)",
+    "local_name": "Juledag / 1. juledag",
+    "date": "2027-12-25",
+    "weekday": "Saturday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/christmas-day-denmark-2027-12-25"
    }
   ]
  },
@@ -74,7 +266,7 @@
   "title": "Public holidays for Denmark",
   "site": "https://pseoare.pages.dev"
  },
- "updated": "2026-10-19T20:41:30.228277+00:00",
+ "updated": "2026-10-19T20:49:39.946179+00:00",
  "license": "CC-BY-4.0",
  "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
 }

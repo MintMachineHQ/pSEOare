@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Etobicoke",
+  "annual_mean_c": 9.1,
+  "warmest_month": "Jul",
+  "warmest_c": 21.7,
+  "coldest_month": "Feb",
+  "coldest_c": -2.8,
+  "seasonal_swing_c": 24.5,
+  "annual_rainfall_mm": 772.0,
+  "wettest_month": "Jul",
+  "wettest_mm_per_day": 2.42,
+  "driest_month": "Mar",
+  "driest_mm_per_day": 1.71,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": -2.7,
+    "rain_mm_per_day": 1.74
+   },
+   {
+    "month": "Feb",
+    "mean_c": -2.8,
+    "rain_mm_per_day": 1.74
+   },
+   {
+    "month": "Mar",
+    "mean_c": 0.7,
+    "rain_mm_per_day": 1.71
+   },
+   {
+    "month": "Apr",
+    "mean_c": 5.5,
+    "rain_mm_per_day": 2.38
+   },
+   {
+    "month": "May",
+    "mean_c": 11.3,
+    "rain_mm_per_day": 2.34
+   },
+   {
+    "month": "Jun",
+    "mean_c": 17.6,
+    "rain_mm_per_day": 2.37
+   },
+   {
+    "month": "Jul",
+    "mean_c": 21.7,
+    "rain_mm_per_day": 2.42
+   },
+   {
+    "month": "Aug",
+    "mean_c": 21.6,
+    "rain_mm_per_day": 1.9
+   },
+   {
+    "month": "Sep",
+    "mean_c": 18.2,
+    "rain_mm_per_day": 2.19
+   },
+   {
+    "month": "Oct",
+    "mean_c": 11.5,
+    "rain_mm_per_day": 2.39
+   },
+   {
+    "month": "Nov",
+    "mean_c": 5.4,
+    "rain_mm_per_day": 2.21
+   },
+   {
+    "month": "Dec",
+    "mean_c": 0.5,
+    "rain_mm_per_day": 2.02
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/etobicoke-average-monthly-temperature-rainfall",
+  "title": "Etobicoke climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

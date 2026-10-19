@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Najaf",
+  "annual_mean_c": 24.6,
+  "warmest_month": "Jul",
+  "warmest_c": 37.7,
+  "coldest_month": "Jan",
+  "coldest_c": 9.7,
+  "seasonal_swing_c": 28.0,
+  "annual_rainfall_mm": 105.0,
+  "wettest_month": "Jan",
+  "wettest_mm_per_day": 0.63,
+  "driest_month": "Jun",
+  "driest_mm_per_day": 0.0,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 9.7,
+    "rain_mm_per_day": 0.63
+   },
+   {
+    "month": "Feb",
+    "mean_c": 12.4,
+    "rain_mm_per_day": 0.55
+   },
+   {
+    "month": "Mar",
+    "mean_c": 18.0,
+    "rain_mm_per_day": 0.42
+   },
+   {
+    "month": "Apr",
+    "mean_c": 23.9,
+    "rain_mm_per_day": 0.42
+   },
+   {
+    "month": "May",
+    "mean_c": 30.6,
+    "rain_mm_per_day": 0.15
+   },
+   {
+    "month": "Jun",
+    "mean_c": 35.5,
+    "rain_mm_per_day": 0.0
+   },
+   {
+    "month": "Jul",
+    "mean_c": 37.7,
+    "rain_mm_per_day": 0.0
+   },
+   {
+    "month": "Aug",
+    "mean_c": 37.5,
+    "rain_mm_per_day": 0.01
+   },
+   {
+    "month": "Sep",
+    "mean_c": 33.4,
+    "rain_mm_per_day": 0.01
+   },
+   {
+    "month": "Oct",
+    "mean_c": 27.2,
+    "rain_mm_per_day": 0.25
+   },
+   {
+    "month": "Nov",
+    "mean_c": 17.4,
+    "rain_mm_per_day": 0.61
+   },
+   {
+    "month": "Dec",
+    "mean_c": 11.4,
+    "rain_mm_per_day": 0.42
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/najaf-average-monthly-temperature-rainfall",
+  "title": "Najaf climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

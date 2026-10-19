@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Chongqing",
+  "annual_mean_c": 18.2,
+  "warmest_month": "Jul",
+  "warmest_c": 28.4,
+  "coldest_month": "Jan",
+  "coldest_c": 6.4,
+  "seasonal_swing_c": 22.0,
+  "annual_rainfall_mm": 1138.0,
+  "wettest_month": "Jun",
+  "wettest_mm_per_day": 6.82,
+  "driest_month": "Dec",
+  "driest_mm_per_day": 0.69,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 6.4,
+    "rain_mm_per_day": 0.7
+   },
+   {
+    "month": "Feb",
+    "mean_c": 9.3,
+    "rain_mm_per_day": 0.75
+   },
+   {
+    "month": "Mar",
+    "mean_c": 14.3,
+    "rain_mm_per_day": 1.74
+   },
+   {
+    "month": "Apr",
+    "mean_c": 19.3,
+    "rain_mm_per_day": 3.24
+   },
+   {
+    "month": "May",
+    "mean_c": 22.8,
+    "rain_mm_per_day": 4.28
+   },
+   {
+    "month": "Jun",
+    "mean_c": 25.5,
+    "rain_mm_per_day": 6.82
+   },
+   {
+    "month": "Jul",
+    "mean_c": 28.4,
+    "rain_mm_per_day": 5.28
+   },
+   {
+    "month": "Aug",
+    "mean_c": 28.1,
+    "rain_mm_per_day": 4.62
+   },
+   {
+    "month": "Sep",
+    "mean_c": 24.0,
+    "rain_mm_per_day": 4.67
+   },
+   {
+    "month": "Oct",
+    "mean_c": 18.7,
+    "rain_mm_per_day": 3.16
+   },
+   {
+    "month": "Nov",
+    "mean_c": 13.3,
+    "rain_mm_per_day": 1.49
+   },
+   {
+    "month": "Dec",
+    "mean_c": 7.7,
+    "rain_mm_per_day": 0.69
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/chongqing-average-monthly-temperature-rainfall",
+  "title": "Chongqing climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

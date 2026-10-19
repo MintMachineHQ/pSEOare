@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Bogor",
+  "annual_mean_c": 24.8,
+  "warmest_month": "Oct",
+  "warmest_c": 25.6,
+  "coldest_month": "Jul",
+  "coldest_c": 24.1,
+  "seasonal_swing_c": 1.5,
+  "annual_rainfall_mm": 2283.0,
+  "wettest_month": "Feb",
+  "wettest_mm_per_day": 13.2,
+  "driest_month": "Aug",
+  "driest_mm_per_day": 1.72,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 24.4,
+    "rain_mm_per_day": 10.86
+   },
+   {
+    "month": "Feb",
+    "mean_c": 24.3,
+    "rain_mm_per_day": 13.2
+   },
+   {
+    "month": "Mar",
+    "mean_c": 24.6,
+    "rain_mm_per_day": 8.49
+   },
+   {
+    "month": "Apr",
+    "mean_c": 25.0,
+    "rain_mm_per_day": 7.3
+   },
+   {
+    "month": "May",
+    "mean_c": 25.1,
+    "rain_mm_per_day": 4.87
+   },
+   {
+    "month": "Jun",
+    "mean_c": 24.6,
+    "rain_mm_per_day": 3.08
+   },
+   {
+    "month": "Jul",
+    "mean_c": 24.1,
+    "rain_mm_per_day": 2.69
+   },
+   {
+    "month": "Aug",
+    "mean_c": 24.2,
+    "rain_mm_per_day": 1.72
+   },
+   {
+    "month": "Sep",
+    "mean_c": 25.0,
+    "rain_mm_per_day": 2.75
+   },
+   {
+    "month": "Oct",
+    "mean_c": 25.6,
+    "rain_mm_per_day": 4.89
+   },
+   {
+    "month": "Nov",
+    "mean_c": 25.4,
+    "rain_mm_per_day": 7.28
+   },
+   {
+    "month": "Dec",
+    "mean_c": 24.7,
+    "rain_mm_per_day": 7.96
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/bogor-average-monthly-temperature-rainfall",
+  "title": "Bogor climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Goiania",
+  "annual_mean_c": 23.1,
+  "warmest_month": "Sep",
+  "warmest_c": 26.3,
+  "coldest_month": "Jun",
+  "coldest_c": 20.2,
+  "seasonal_swing_c": 6.1,
+  "annual_rainfall_mm": 1402.0,
+  "wettest_month": "Jan",
+  "wettest_mm_per_day": 7.7,
+  "driest_month": "Jul",
+  "driest_mm_per_day": 0.11,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 23.3,
+    "rain_mm_per_day": 7.7
+   },
+   {
+    "month": "Feb",
+    "mean_c": 23.2,
+    "rain_mm_per_day": 7.28
+   },
+   {
+    "month": "Mar",
+    "mean_c": 23.1,
+    "rain_mm_per_day": 6.75
+   },
+   {
+    "month": "Apr",
+    "mean_c": 22.4,
+    "rain_mm_per_day": 3.63
+   },
+   {
+    "month": "May",
+    "mean_c": 20.6,
+    "rain_mm_per_day": 0.77
+   },
+   {
+    "month": "Jun",
+    "mean_c": 20.2,
+    "rain_mm_per_day": 0.21
+   },
+   {
+    "month": "Jul",
+    "mean_c": 20.9,
+    "rain_mm_per_day": 0.11
+   },
+   {
+    "month": "Aug",
+    "mean_c": 23.5,
+    "rain_mm_per_day": 0.27
+   },
+   {
+    "month": "Sep",
+    "mean_c": 26.3,
+    "rain_mm_per_day": 1.45
+   },
+   {
+    "month": "Oct",
+    "mean_c": 26.1,
+    "rain_mm_per_day": 3.95
+   },
+   {
+    "month": "Nov",
+    "mean_c": 24.2,
+    "rain_mm_per_day": 6.46
+   },
+   {
+    "month": "Dec",
+    "mean_c": 23.6,
+    "rain_mm_per_day": 7.55
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/goiania-average-monthly-temperature-rainfall",
+  "title": "Goiania climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

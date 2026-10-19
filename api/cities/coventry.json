@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Coventry",
+  "annual_mean_c": 9.6,
+  "warmest_month": "Jul",
+  "warmest_c": 16.5,
+  "coldest_month": "Jan",
+  "coldest_c": 3.6,
+  "seasonal_swing_c": 12.9,
+  "annual_rainfall_mm": 746.0,
+  "wettest_month": "Oct",
+  "wettest_mm_per_day": 2.44,
+  "driest_month": "Apr",
+  "driest_mm_per_day": 1.54,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 3.6,
+    "rain_mm_per_day": 2.03
+   },
+   {
+    "month": "Feb",
+    "mean_c": 3.7,
+    "rain_mm_per_day": 1.84
+   },
+   {
+    "month": "Mar",
+    "mean_c": 5.5,
+    "rain_mm_per_day": 1.65
+   },
+   {
+    "month": "Apr",
+    "mean_c": 8.3,
+    "rain_mm_per_day": 1.54
+   },
+   {
+    "month": "May",
+    "mean_c": 11.5,
+    "rain_mm_per_day": 1.93
+   },
+   {
+    "month": "Jun",
+    "mean_c": 14.7,
+    "rain_mm_per_day": 2.2
+   },
+   {
+    "month": "Jul",
+    "mean_c": 16.5,
+    "rain_mm_per_day": 2.31
+   },
+   {
+    "month": "Aug",
+    "mean_c": 16.1,
+    "rain_mm_per_day": 2.36
+   },
+   {
+    "month": "Sep",
+    "mean_c": 13.6,
+    "rain_mm_per_day": 1.7
+   },
+   {
+    "month": "Oct",
+    "mean_c": 10.3,
+    "rain_mm_per_day": 2.44
+   },
+   {
+    "month": "Nov",
+    "mean_c": 6.5,
+    "rain_mm_per_day": 2.34
+   },
+   {
+    "month": "Dec",
+    "mean_c": 4.2,
+    "rain_mm_per_day": 2.2
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/coventry-average-monthly-temperature-rainfall",
+  "title": "Coventry climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

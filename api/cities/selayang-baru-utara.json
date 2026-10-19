@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Selayang Baru Utara",
+  "annual_mean_c": 24.6,
+  "warmest_month": "Apr",
+  "warmest_c": 25.4,
+  "coldest_month": "Jan",
+  "coldest_c": 23.8,
+  "seasonal_swing_c": 1.6,
+  "annual_rainfall_mm": 2551.0,
+  "wettest_month": "Nov",
+  "wettest_mm_per_day": 10.73,
+  "driest_month": "Jun",
+  "driest_mm_per_day": 4.73,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 23.8,
+    "rain_mm_per_day": 7.39
+   },
+   {
+    "month": "Feb",
+    "mean_c": 24.1,
+    "rain_mm_per_day": 5.63
+   },
+   {
+    "month": "Mar",
+    "mean_c": 24.9,
+    "rain_mm_per_day": 6.27
+   },
+   {
+    "month": "Apr",
+    "mean_c": 25.4,
+    "rain_mm_per_day": 8.12
+   },
+   {
+    "month": "May",
+    "mean_c": 25.4,
+    "rain_mm_per_day": 5.48
+   },
+   {
+    "month": "Jun",
+    "mean_c": 24.9,
+    "rain_mm_per_day": 4.73
+   },
+   {
+    "month": "Jul",
+    "mean_c": 24.5,
+    "rain_mm_per_day": 5.04
+   },
+   {
+    "month": "Aug",
+    "mean_c": 24.5,
+    "rain_mm_per_day": 5.58
+   },
+   {
+    "month": "Sep",
+    "mean_c": 24.6,
+    "rain_mm_per_day": 6.65
+   },
+   {
+    "month": "Oct",
+    "mean_c": 24.6,
+    "rain_mm_per_day": 8.96
+   },
+   {
+    "month": "Nov",
+    "mean_c": 24.4,
+    "rain_mm_per_day": 10.73
+   },
+   {
+    "month": "Dec",
+    "mean_c": 23.9,
+    "rain_mm_per_day": 9.34
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/selayang-baru-utara-average-monthly-temperature-rainfall",
+  "title": "Selayang Baru Utara climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

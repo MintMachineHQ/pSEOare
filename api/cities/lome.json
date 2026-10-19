@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Lome",
+  "annual_mean_c": 26.9,
+  "warmest_month": "Feb",
+  "warmest_c": 28.3,
+  "coldest_month": "Aug",
+  "coldest_c": 24.6,
+  "seasonal_swing_c": 3.7,
+  "annual_rainfall_mm": 1096.0,
+  "wettest_month": "Jun",
+  "wettest_mm_per_day": 6.03,
+  "driest_month": "Jan",
+  "driest_mm_per_day": 0.48,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 27.5,
+    "rain_mm_per_day": 0.48
+   },
+   {
+    "month": "Feb",
+    "mean_c": 28.3,
+    "rain_mm_per_day": 1.17
+   },
+   {
+    "month": "Mar",
+    "mean_c": 28.3,
+    "rain_mm_per_day": 2.78
+   },
+   {
+    "month": "Apr",
+    "mean_c": 28.0,
+    "rain_mm_per_day": 3.92
+   },
+   {
+    "month": "May",
+    "mean_c": 27.6,
+    "rain_mm_per_day": 5.51
+   },
+   {
+    "month": "Jun",
+    "mean_c": 26.2,
+    "rain_mm_per_day": 6.03
+   },
+   {
+    "month": "Jul",
+    "mean_c": 25.0,
+    "rain_mm_per_day": 3.57
+   },
+   {
+    "month": "Aug",
+    "mean_c": 24.6,
+    "rain_mm_per_day": 1.83
+   },
+   {
+    "month": "Sep",
+    "mean_c": 25.4,
+    "rain_mm_per_day": 4.41
+   },
+   {
+    "month": "Oct",
+    "mean_c": 26.4,
+    "rain_mm_per_day": 4.5
+   },
+   {
+    "month": "Nov",
+    "mean_c": 27.3,
+    "rain_mm_per_day": 1.32
+   },
+   {
+    "month": "Dec",
+    "mean_c": 27.7,
+    "rain_mm_per_day": 0.52
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/lome-average-monthly-temperature-rainfall",
+  "title": "Lome climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

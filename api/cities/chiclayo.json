@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Chiclayo",
+  "annual_mean_c": 20.3,
+  "warmest_month": "Feb",
+  "warmest_c": 23.8,
+  "coldest_month": "Sep",
+  "coldest_c": 17.9,
+  "seasonal_swing_c": 5.9,
+  "annual_rainfall_mm": 80.0,
+  "wettest_month": "Mar",
+  "wettest_mm_per_day": 0.86,
+  "driest_month": "Aug",
+  "driest_mm_per_day": 0.02,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 22.4,
+    "rain_mm_per_day": 0.25
+   },
+   {
+    "month": "Feb",
+    "mean_c": 23.8,
+    "rain_mm_per_day": 0.41
+   },
+   {
+    "month": "Mar",
+    "mean_c": 23.5,
+    "rain_mm_per_day": 0.86
+   },
+   {
+    "month": "Apr",
+    "mean_c": 21.8,
+    "rain_mm_per_day": 0.28
+   },
+   {
+    "month": "May",
+    "mean_c": 20.6,
+    "rain_mm_per_day": 0.13
+   },
+   {
+    "month": "Jun",
+    "mean_c": 19.5,
+    "rain_mm_per_day": 0.03
+   },
+   {
+    "month": "Jul",
+    "mean_c": 18.7,
+    "rain_mm_per_day": 0.03
+   },
+   {
+    "month": "Aug",
+    "mean_c": 18.2,
+    "rain_mm_per_day": 0.02
+   },
+   {
+    "month": "Sep",
+    "mean_c": 17.9,
+    "rain_mm_per_day": 0.05
+   },
+   {
+    "month": "Oct",
+    "mean_c": 18.1,
+    "rain_mm_per_day": 0.18
+   },
+   {
+    "month": "Nov",
+    "mean_c": 19.1,
+    "rain_mm_per_day": 0.2
+   },
+   {
+    "month": "Dec",
+    "mean_c": 20.6,
+    "rain_mm_per_day": 0.19
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/chiclayo-average-monthly-temperature-rainfall",
+  "title": "Chiclayo climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

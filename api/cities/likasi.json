@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Likasi",
+  "annual_mean_c": 21.7,
+  "warmest_month": "Oct",
+  "warmest_c": 26.2,
+  "coldest_month": "Jun",
+  "coldest_c": 18.1,
+  "seasonal_swing_c": 8.1,
+  "annual_rainfall_mm": 1055.0,
+  "wettest_month": "Dec",
+  "wettest_mm_per_day": 8.03,
+  "driest_month": "Jul",
+  "driest_mm_per_day": 0.01,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 21.4,
+    "rain_mm_per_day": 7.0
+   },
+   {
+    "month": "Feb",
+    "mean_c": 21.7,
+    "rain_mm_per_day": 6.08
+   },
+   {
+    "month": "Mar",
+    "mean_c": 21.6,
+    "rain_mm_per_day": 5.42
+   },
+   {
+    "month": "Apr",
+    "mean_c": 21.0,
+    "rain_mm_per_day": 1.88
+   },
+   {
+    "month": "May",
+    "mean_c": 19.7,
+    "rain_mm_per_day": 0.13
+   },
+   {
+    "month": "Jun",
+    "mean_c": 18.1,
+    "rain_mm_per_day": 0.02
+   },
+   {
+    "month": "Jul",
+    "mean_c": 18.3,
+    "rain_mm_per_day": 0.01
+   },
+   {
+    "month": "Aug",
+    "mean_c": 21.2,
+    "rain_mm_per_day": 0.03
+   },
+   {
+    "month": "Sep",
+    "mean_c": 24.8,
+    "rain_mm_per_day": 0.15
+   },
+   {
+    "month": "Oct",
+    "mean_c": 26.2,
+    "rain_mm_per_day": 1.35
+   },
+   {
+    "month": "Nov",
+    "mean_c": 24.0,
+    "rain_mm_per_day": 4.59
+   },
+   {
+    "month": "Dec",
+    "mean_c": 22.0,
+    "rain_mm_per_day": 8.03
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/likasi-average-monthly-temperature-rainfall",
+  "title": "Likasi climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

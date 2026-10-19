@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Bydgoszcz",
+  "annual_mean_c": 8.6,
+  "warmest_month": "Jul",
+  "warmest_c": 19.9,
+  "coldest_month": "Jan",
+  "coldest_c": -3.1,
+  "seasonal_swing_c": 23.0,
+  "annual_rainfall_mm": 615.0,
+  "wettest_month": "Jul",
+  "wettest_mm_per_day": 2.66,
+  "driest_month": "Apr",
+  "driest_mm_per_day": 1.09,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": -3.1,
+    "rain_mm_per_day": 1.49
+   },
+   {
+    "month": "Feb",
+    "mean_c": -1.4,
+    "rain_mm_per_day": 1.24
+   },
+   {
+    "month": "Mar",
+    "mean_c": 2.4,
+    "rain_mm_per_day": 1.24
+   },
+   {
+    "month": "Apr",
+    "mean_c": 8.3,
+    "rain_mm_per_day": 1.09
+   },
+   {
+    "month": "May",
+    "mean_c": 13.6,
+    "rain_mm_per_day": 2.11
+   },
+   {
+    "month": "Jun",
+    "mean_c": 17.4,
+    "rain_mm_per_day": 2.08
+   },
+   {
+    "month": "Jul",
+    "mean_c": 19.9,
+    "rain_mm_per_day": 2.66
+   },
+   {
+    "month": "Aug",
+    "mean_c": 19.4,
+    "rain_mm_per_day": 2.06
+   },
+   {
+    "month": "Sep",
+    "mean_c": 14.5,
+    "rain_mm_per_day": 1.66
+   },
+   {
+    "month": "Oct",
+    "mean_c": 8.6,
+    "rain_mm_per_day": 1.61
+   },
+   {
+    "month": "Nov",
+    "mean_c": 3.6,
+    "rain_mm_per_day": 1.46
+   },
+   {
+    "month": "Dec",
+    "mean_c": -0.7,
+    "rain_mm_per_day": 1.53
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/bydgoszcz-average-monthly-temperature-rainfall",
+  "title": "Bydgoszcz climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

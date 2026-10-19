@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Santa Fe",
+  "annual_mean_c": 19.2,
+  "warmest_month": "Jan",
+  "warmest_c": 27.1,
+  "coldest_month": "Jul",
+  "coldest_c": 11.3,
+  "seasonal_swing_c": 15.8,
+  "annual_rainfall_mm": 1156.0,
+  "wettest_month": "Mar",
+  "wettest_mm_per_day": 5.0,
+  "driest_month": "Jul",
+  "driest_mm_per_day": 0.8,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 27.1,
+    "rain_mm_per_day": 3.66
+   },
+   {
+    "month": "Feb",
+    "mean_c": 25.6,
+    "rain_mm_per_day": 4.89
+   },
+   {
+    "month": "Mar",
+    "mean_c": 23.0,
+    "rain_mm_per_day": 5.0
+   },
+   {
+    "month": "Apr",
+    "mean_c": 19.1,
+    "rain_mm_per_day": 4.33
+   },
+   {
+    "month": "May",
+    "mean_c": 15.0,
+    "rain_mm_per_day": 1.87
+   },
+   {
+    "month": "Jun",
+    "mean_c": 12.0,
+    "rain_mm_per_day": 1.05
+   },
+   {
+    "month": "Jul",
+    "mean_c": 11.3,
+    "rain_mm_per_day": 0.8
+   },
+   {
+    "month": "Aug",
+    "mean_c": 13.3,
+    "rain_mm_per_day": 1.18
+   },
+   {
+    "month": "Sep",
+    "mean_c": 16.1,
+    "rain_mm_per_day": 1.89
+   },
+   {
+    "month": "Oct",
+    "mean_c": 19.7,
+    "rain_mm_per_day": 3.85
+   },
+   {
+    "month": "Nov",
+    "mean_c": 23.0,
+    "rain_mm_per_day": 4.68
+   },
+   {
+    "month": "Dec",
+    "mean_c": 25.3,
+    "rain_mm_per_day": 4.82
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/santa-fe-average-monthly-temperature-rainfall",
+  "title": "Santa Fe climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

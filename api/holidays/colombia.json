@@ -1,7 +1,7 @@
 {
  "answer": {
   "country": "Colombia",
-  "count": 8,
+  "count": 32,
   "holidays": [
    {
     "name": "New Year's Day in Colombia (2016)",
@@ -12,12 +12,44 @@
     "page": "https://pseoare.pages.dev/new-year-s-day-colombia-2016-01-01"
    },
    {
+    "name": "Epiphany in Colombia (2016)",
+    "local_name": "D\u00eda de los Reyes Magos",
+    "date": "2016-01-11",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/epiphany-colombia-2016-01-11"
+   },
+   {
+    "name": "Christmas Day in Colombia (2016)",
+    "local_name": "Navidad",
+    "date": "2016-12-25",
+    "weekday": "Sunday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/christmas-day-colombia-2016-12-25"
+   },
+   {
     "name": "New Year's Day in Colombia (2017)",
     "local_name": "A\u00f1o Nuevo",
     "date": "2017-01-01",
     "weekday": "Sunday",
     "weekend": true,
     "page": "https://pseoare.pages.dev/new-year-s-day-colombia-2017-01-01"
+   },
+   {
+    "name": "Epiphany in Colombia (2017)",
+    "local_name": "D\u00eda de los Reyes Magos",
+    "date": "2017-01-09",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/epiphany-colombia-2017-01-09"
+   },
+   {
+    "name": "Christmas Day in Colombia (2017)",
+    "local_name": "Navidad",
+    "date": "2017-12-25",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-colombia-2017-12-25"
    },
    {
     "name": "New Year's Day in Colombia (2018)",
@@ -28,12 +60,44 @@
     "page": "https://pseoare.pages.dev/new-year-s-day-colombia-2018-01-01"
    },
    {
+    "name": "Epiphany in Colombia (2018)",
+    "local_name": "D\u00eda de los Reyes Magos",
+    "date": "2018-01-08",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/epiphany-colombia-2018-01-08"
+   },
+   {
+    "name": "Christmas Day in Colombia (2018)",
+    "local_name": "Navidad",
+    "date": "2018-12-25",
+    "weekday": "Tuesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-colombia-2018-12-25"
+   },
+   {
     "name": "New Year's Day in Colombia (2019)",
     "local_name": "A\u00f1o Nuevo",
     "date": "2019-01-01",
     "weekday": "Tuesday",
     "weekend": false,
     "page": "https://pseoare.pages.dev/new-year-s-day-colombia-2019-01-01"
+   },
+   {
+    "name": "Epiphany in Colombia (2019)",
+    "local_name": "D\u00eda de los Reyes Magos",
+    "date": "2019-01-07",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/epiphany-colombia-2019-01-07"
+   },
+   {
+    "name": "Christmas Day in Colombia (2019)",
+    "local_name": "Navidad",
+    "date": "2019-12-25",
+    "weekday": "Wednesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-colombia-2019-12-25"
    },
    {
     "name": "New Year's Day in Colombia (2020)",
@@ -44,12 +108,44 @@
     "page": "https://pseoare.pages.dev/new-year-s-day-colombia-2020-01-01"
    },
    {
+    "name": "Epiphany in Colombia (2020)",
+    "local_name": "D\u00eda de los Reyes Magos",
+    "date": "2020-01-06",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/epiphany-colombia-2020-01-06"
+   },
+   {
+    "name": "Christmas Day in Colombia (2020)",
+    "local_name": "Navidad",
+    "date": "2020-12-25",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-colombia-2020-12-25"
+   },
+   {
     "name": "New Year's Day in Colombia (2021)",
     "local_name": "A\u00f1o Nuevo",
     "date": "2021-01-01",
     "weekday": "Friday",
     "weekend": false,
     "page": "https://pseoare.pages.dev/new-year-s-day-colombia-2021-01-01"
+   },
+   {
+    "name": "Epiphany in Colombia (2021)",
+    "local_name": "D\u00eda de los Reyes Magos",
+    "date": "2021-01-11",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/epiphany-colombia-2021-01-11"
+   },
+   {
+    "name": "Christmas Day in Colombia (2021)",
+    "local_name": "Navidad",
+    "date": "2021-12-25",
+    "weekday": "Saturday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/christmas-day-colombia-2021-12-25"
    },
    {
     "name": "New Year's Day in Colombia (2022)",
@@ -60,12 +156,108 @@
     "page": "https://pseoare.pages.dev/new-year-s-day-colombia-2022-01-01"
    },
    {
+    "name": "Epiphany in Colombia (2022)",
+    "local_name": "D\u00eda de los Reyes Magos",
+    "date": "2022-01-10",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/epiphany-colombia-2022-01-10"
+   },
+   {
+    "name": "Christmas Day in Colombia (2022)",
+    "local_name": "Navidad",
+    "date": "2022-12-25",
+    "weekday": "Sunday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/christmas-day-colombia-2022-12-25"
+   },
+   {
     "name": "New Year's Day in Colombia (2023)",
     "local_name": "A\u00f1o Nuevo",
     "date": "2023-01-01",
     "weekday": "Sunday",
     "weekend": true,
     "page": "https://pseoare.pages.dev/new-year-s-day-colombia-2023-01-01"
+   },
+   {
+    "name": "Epiphany in Colombia (2023)",
+    "local_name": "D\u00eda de los Reyes Magos",
+    "date": "2023-01-09",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/epiphany-colombia-2023-01-09"
+   },
+   {
+    "name": "Christmas Day in Colombia (2023)",
+    "local_name": "Navidad",
+    "date": "2023-12-25",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-colombia-2023-12-25"
+   },
+   {
+    "name": "Epiphany in Colombia (2024)",
+    "local_name": "D\u00eda de los Reyes Magos",
+    "date": "2024-01-08",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/epiphany-colombia-2024-01-08"
+   },
+   {
+    "name": "Christmas Day in Colombia (2024)",
+    "local_name": "Navidad",
+    "date": "2024-12-25",
+    "weekday": "Wednesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-colombia-2024-12-25"
+   },
+   {
+    "name": "Epiphany in Colombia (2025)",
+    "local_name": "D\u00eda de los Reyes Magos",
+    "date": "2025-01-06",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/epiphany-colombia-2025-01-06"
+   },
+   {
+    "name": "Christmas Day in Colombia (2025)",
+    "local_name": "Navidad",
+    "date": "2025-12-25",
+    "weekday": "Thursday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-colombia-2025-12-25"
+   },
+   {
+    "name": "Epiphany in Colombia (2026)",
+    "local_name": "D\u00eda de los Reyes Magos",
+    "date": "2026-01-12",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/epiphany-colombia-2026-01-12"
+   },
+   {
+    "name": "Christmas Day in Colombia (2026)",
+    "local_name": "Navidad",
+    "date": "2026-12-25",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-colombia-2026-12-25"
+   },
+   {
+    "name": "Epiphany in Colombia (2027)",
+    "local_name": "D\u00eda de los Reyes Magos",
+    "date": "2027-01-11",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/epiphany-colombia-2027-01-11"
+   },
+   {
+    "name": "Christmas Day in Colombia (2027)",
+    "local_name": "Navidad",
+    "date": "2027-12-25",
+    "weekday": "Saturday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/christmas-day-colombia-2027-12-25"
    }
   ]
  },
@@ -74,7 +266,7 @@
   "title": "Public holidays for Colombia",
   "site": "https://pseoare.pages.dev"
  },
- "updated": "2026-10-19T20:41:30.228277+00:00",
+ "updated": "2026-10-19T20:49:39.946179+00:00",
  "license": "CC-BY-4.0",
  "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
 }

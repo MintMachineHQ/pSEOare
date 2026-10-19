@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Tbilisi",
+  "annual_mean_c": 13.2,
+  "warmest_month": "Jul",
+  "warmest_c": 26.0,
+  "coldest_month": "Jan",
+  "coldest_c": 1.0,
+  "seasonal_swing_c": 25.0,
+  "annual_rainfall_mm": 377.0,
+  "wettest_month": "May",
+  "wettest_mm_per_day": 1.88,
+  "driest_month": "Dec",
+  "driest_mm_per_day": 0.56,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 1.0,
+    "rain_mm_per_day": 0.57
+   },
+   {
+    "month": "Feb",
+    "mean_c": 2.6,
+    "rain_mm_per_day": 0.61
+   },
+   {
+    "month": "Mar",
+    "mean_c": 7.2,
+    "rain_mm_per_day": 0.9
+   },
+   {
+    "month": "Apr",
+    "mean_c": 11.7,
+    "rain_mm_per_day": 1.62
+   },
+   {
+    "month": "May",
+    "mean_c": 17.6,
+    "rain_mm_per_day": 1.88
+   },
+   {
+    "month": "Jun",
+    "mean_c": 22.8,
+    "rain_mm_per_day": 1.64
+   },
+   {
+    "month": "Jul",
+    "mean_c": 26.0,
+    "rain_mm_per_day": 0.87
+   },
+   {
+    "month": "Aug",
+    "mean_c": 25.6,
+    "rain_mm_per_day": 0.87
+   },
+   {
+    "month": "Sep",
+    "mean_c": 20.4,
+    "rain_mm_per_day": 0.84
+   },
+   {
+    "month": "Oct",
+    "mean_c": 14.0,
+    "rain_mm_per_day": 1.21
+   },
+   {
+    "month": "Nov",
+    "mean_c": 7.1,
+    "rain_mm_per_day": 0.82
+   },
+   {
+    "month": "Dec",
+    "mean_c": 2.2,
+    "rain_mm_per_day": 0.56
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/tbilisi-average-monthly-temperature-rainfall",
+  "title": "Tbilisi climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

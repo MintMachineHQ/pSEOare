@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Muenster",
+  "annual_mean_c": 9.9,
+  "warmest_month": "Jul",
+  "warmest_c": 18.8,
+  "coldest_month": "Jan",
+  "coldest_c": 1.4,
+  "seasonal_swing_c": 17.4,
+  "annual_rainfall_mm": 769.0,
+  "wettest_month": "Aug",
+  "wettest_mm_per_day": 2.48,
+  "driest_month": "Apr",
+  "driest_mm_per_day": 1.37,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 1.4,
+    "rain_mm_per_day": 2.46
+   },
+   {
+    "month": "Feb",
+    "mean_c": 2.1,
+    "rain_mm_per_day": 2.05
+   },
+   {
+    "month": "Mar",
+    "mean_c": 5.0,
+    "rain_mm_per_day": 1.75
+   },
+   {
+    "month": "Apr",
+    "mean_c": 9.4,
+    "rain_mm_per_day": 1.37
+   },
+   {
+    "month": "May",
+    "mean_c": 13.2,
+    "rain_mm_per_day": 1.97
+   },
+   {
+    "month": "Jun",
+    "mean_c": 16.7,
+    "rain_mm_per_day": 2.09
+   },
+   {
+    "month": "Jul",
+    "mean_c": 18.8,
+    "rain_mm_per_day": 2.42
+   },
+   {
+    "month": "Aug",
+    "mean_c": 18.4,
+    "rain_mm_per_day": 2.48
+   },
+   {
+    "month": "Sep",
+    "mean_c": 14.8,
+    "rain_mm_per_day": 1.96
+   },
+   {
+    "month": "Oct",
+    "mean_c": 10.4,
+    "rain_mm_per_day": 2.02
+   },
+   {
+    "month": "Nov",
+    "mean_c": 5.9,
+    "rain_mm_per_day": 2.29
+   },
+   {
+    "month": "Dec",
+    "mean_c": 2.5,
+    "rain_mm_per_day": 2.42
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/muenster-average-monthly-temperature-rainfall",
+  "title": "Muenster climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

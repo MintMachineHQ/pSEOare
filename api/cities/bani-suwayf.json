@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Bani Suwayf",
+  "annual_mean_c": 22.4,
+  "warmest_month": "Jul",
+  "warmest_c": 30.6,
+  "coldest_month": "Jan",
+  "coldest_c": 12.1,
+  "seasonal_swing_c": 18.5,
+  "annual_rainfall_mm": 24.0,
+  "wettest_month": "Nov",
+  "wettest_mm_per_day": 0.21,
+  "driest_month": "May",
+  "driest_mm_per_day": 0.0,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 12.1,
+    "rain_mm_per_day": 0.11
+   },
+   {
+    "month": "Feb",
+    "mean_c": 14.1,
+    "rain_mm_per_day": 0.12
+   },
+   {
+    "month": "Mar",
+    "mean_c": 17.9,
+    "rain_mm_per_day": 0.08
+   },
+   {
+    "month": "Apr",
+    "mean_c": 22.1,
+    "rain_mm_per_day": 0.05
+   },
+   {
+    "month": "May",
+    "mean_c": 26.5,
+    "rain_mm_per_day": 0.0
+   },
+   {
+    "month": "Jun",
+    "mean_c": 29.5,
+    "rain_mm_per_day": 0.0
+   },
+   {
+    "month": "Jul",
+    "mean_c": 30.6,
+    "rain_mm_per_day": 0.0
+   },
+   {
+    "month": "Aug",
+    "mean_c": 30.6,
+    "rain_mm_per_day": 0.0
+   },
+   {
+    "month": "Sep",
+    "mean_c": 28.0,
+    "rain_mm_per_day": 0.0
+   },
+   {
+    "month": "Oct",
+    "mean_c": 24.2,
+    "rain_mm_per_day": 0.05
+   },
+   {
+    "month": "Nov",
+    "mean_c": 18.8,
+    "rain_mm_per_day": 0.21
+   },
+   {
+    "month": "Dec",
+    "mean_c": 13.9,
+    "rain_mm_per_day": 0.17
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/bani-suwayf-average-monthly-temperature-rainfall",
+  "title": "Bani Suwayf climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

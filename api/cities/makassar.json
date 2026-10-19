@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Makassar",
+  "annual_mean_c": 27.4,
+  "warmest_month": "Oct",
+  "warmest_c": 28.6,
+  "coldest_month": "Jan",
+  "coldest_c": 26.7,
+  "seasonal_swing_c": 1.9,
+  "annual_rainfall_mm": 1769.0,
+  "wettest_month": "Dec",
+  "wettest_mm_per_day": 11.92,
+  "driest_month": "Aug",
+  "driest_mm_per_day": 0.38,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 26.7,
+    "rain_mm_per_day": 11.11
+   },
+   {
+    "month": "Feb",
+    "mean_c": 26.7,
+    "rain_mm_per_day": 8.81
+   },
+   {
+    "month": "Mar",
+    "mean_c": 27.1,
+    "rain_mm_per_day": 7.06
+   },
+   {
+    "month": "Apr",
+    "mean_c": 27.6,
+    "rain_mm_per_day": 5.2
+   },
+   {
+    "month": "May",
+    "mean_c": 27.7,
+    "rain_mm_per_day": 2.68
+   },
+   {
+    "month": "Jun",
+    "mean_c": 27.2,
+    "rain_mm_per_day": 2.16
+   },
+   {
+    "month": "Jul",
+    "mean_c": 26.9,
+    "rain_mm_per_day": 0.88
+   },
+   {
+    "month": "Aug",
+    "mean_c": 27.1,
+    "rain_mm_per_day": 0.38
+   },
+   {
+    "month": "Sep",
+    "mean_c": 27.9,
+    "rain_mm_per_day": 0.87
+   },
+   {
+    "month": "Oct",
+    "mean_c": 28.6,
+    "rain_mm_per_day": 2.08
+   },
+   {
+    "month": "Nov",
+    "mean_c": 28.4,
+    "rain_mm_per_day": 5.04
+   },
+   {
+    "month": "Dec",
+    "mean_c": 27.2,
+    "rain_mm_per_day": 11.92
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/makassar-average-monthly-temperature-rainfall",
+  "title": "Makassar climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

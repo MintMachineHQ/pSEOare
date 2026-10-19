@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Pasto",
+  "annual_mean_c": 13.2,
+  "warmest_month": "Feb",
+  "warmest_c": 13.7,
+  "coldest_month": "Jul",
+  "coldest_c": 12.2,
+  "seasonal_swing_c": 1.5,
+  "annual_rainfall_mm": 1038.0,
+  "wettest_month": "Nov",
+  "wettest_mm_per_day": 4.3,
+  "driest_month": "Aug",
+  "driest_mm_per_day": 1.19,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 13.5,
+    "rain_mm_per_day": 2.65
+   },
+   {
+    "month": "Feb",
+    "mean_c": 13.7,
+    "rain_mm_per_day": 2.9
+   },
+   {
+    "month": "Mar",
+    "mean_c": 13.6,
+    "rain_mm_per_day": 3.39
+   },
+   {
+    "month": "Apr",
+    "mean_c": 13.6,
+    "rain_mm_per_day": 4.08
+   },
+   {
+    "month": "May",
+    "mean_c": 13.3,
+    "rain_mm_per_day": 3.2
+   },
+   {
+    "month": "Jun",
+    "mean_c": 12.3,
+    "rain_mm_per_day": 2.5
+   },
+   {
+    "month": "Jul",
+    "mean_c": 12.2,
+    "rain_mm_per_day": 1.66
+   },
+   {
+    "month": "Aug",
+    "mean_c": 12.5,
+    "rain_mm_per_day": 1.19
+   },
+   {
+    "month": "Sep",
+    "mean_c": 13.1,
+    "rain_mm_per_day": 1.6
+   },
+   {
+    "month": "Oct",
+    "mean_c": 13.4,
+    "rain_mm_per_day": 3.29
+   },
+   {
+    "month": "Nov",
+    "mean_c": 13.5,
+    "rain_mm_per_day": 4.3
+   },
+   {
+    "month": "Dec",
+    "mean_c": 13.4,
+    "rain_mm_per_day": 3.38
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/pasto-average-monthly-temperature-rainfall",
+  "title": "Pasto climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

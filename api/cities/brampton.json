@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Brampton",
+  "annual_mean_c": 8.1,
+  "warmest_month": "Jul",
+  "warmest_c": 22.3,
+  "coldest_month": "Jan",
+  "coldest_c": -6.2,
+  "seasonal_swing_c": 28.5,
+  "annual_rainfall_mm": 769.0,
+  "wettest_month": "Jul",
+  "wettest_mm_per_day": 2.5,
+  "driest_month": "Jan",
+  "driest_mm_per_day": 1.64,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": -6.2,
+    "rain_mm_per_day": 1.64
+   },
+   {
+    "month": "Feb",
+    "mean_c": -6.0,
+    "rain_mm_per_day": 1.7
+   },
+   {
+    "month": "Mar",
+    "mean_c": -0.7,
+    "rain_mm_per_day": 1.68
+   },
+   {
+    "month": "Apr",
+    "mean_c": 5.7,
+    "rain_mm_per_day": 2.32
+   },
+   {
+    "month": "May",
+    "mean_c": 12.8,
+    "rain_mm_per_day": 2.38
+   },
+   {
+    "month": "Jun",
+    "mean_c": 18.8,
+    "rain_mm_per_day": 2.43
+   },
+   {
+    "month": "Jul",
+    "mean_c": 22.3,
+    "rain_mm_per_day": 2.5
+   },
+   {
+    "month": "Aug",
+    "mean_c": 21.5,
+    "rain_mm_per_day": 2.03
+   },
+   {
+    "month": "Sep",
+    "mean_c": 17.4,
+    "rain_mm_per_day": 2.32
+   },
+   {
+    "month": "Oct",
+    "mean_c": 9.7,
+    "rain_mm_per_day": 2.4
+   },
+   {
+    "month": "Nov",
+    "mean_c": 3.1,
+    "rain_mm_per_day": 2.09
+   },
+   {
+    "month": "Dec",
+    "mean_c": -2.7,
+    "rain_mm_per_day": 1.79
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/brampton-average-monthly-temperature-rainfall",
+  "title": "Brampton climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

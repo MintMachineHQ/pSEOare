@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Chengdu",
+  "annual_mean_c": 17.4,
+  "warmest_month": "Jul",
+  "warmest_c": 27.7,
+  "coldest_month": "Jan",
+  "coldest_c": 5.3,
+  "seasonal_swing_c": 22.4,
+  "annual_rainfall_mm": 984.0,
+  "wettest_month": "Jul",
+  "wettest_mm_per_day": 7.23,
+  "driest_month": "Dec",
+  "driest_mm_per_day": 0.37,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 5.3,
+    "rain_mm_per_day": 0.4
+   },
+   {
+    "month": "Feb",
+    "mean_c": 8.3,
+    "rain_mm_per_day": 0.49
+   },
+   {
+    "month": "Mar",
+    "mean_c": 13.7,
+    "rain_mm_per_day": 1.06
+   },
+   {
+    "month": "Apr",
+    "mean_c": 19.2,
+    "rain_mm_per_day": 2.0
+   },
+   {
+    "month": "May",
+    "mean_c": 23.1,
+    "rain_mm_per_day": 3.1
+   },
+   {
+    "month": "Jun",
+    "mean_c": 26.1,
+    "rain_mm_per_day": 4.29
+   },
+   {
+    "month": "Jul",
+    "mean_c": 27.7,
+    "rain_mm_per_day": 7.23
+   },
+   {
+    "month": "Aug",
+    "mean_c": 26.6,
+    "rain_mm_per_day": 6.49
+   },
+   {
+    "month": "Sep",
+    "mean_c": 22.6,
+    "rain_mm_per_day": 4.25
+   },
+   {
+    "month": "Oct",
+    "mean_c": 17.7,
+    "rain_mm_per_day": 1.91
+   },
+   {
+    "month": "Nov",
+    "mean_c": 12.2,
+    "rain_mm_per_day": 0.77
+   },
+   {
+    "month": "Dec",
+    "mean_c": 6.5,
+    "rain_mm_per_day": 0.37
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/chengdu-average-monthly-temperature-rainfall",
+  "title": "Chengdu climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

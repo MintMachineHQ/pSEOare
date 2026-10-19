@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Soyapango",
+  "annual_mean_c": 26.9,
+  "warmest_month": "Apr",
+  "warmest_c": 28.3,
+  "coldest_month": "Nov",
+  "coldest_c": 25.8,
+  "seasonal_swing_c": 2.5,
+  "annual_rainfall_mm": 1480.0,
+  "wettest_month": "Sep",
+  "wettest_mm_per_day": 9.42,
+  "driest_month": "Jan",
+  "driest_mm_per_day": 0.13,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 26.1,
+    "rain_mm_per_day": 0.13
+   },
+   {
+    "month": "Feb",
+    "mean_c": 27.0,
+    "rain_mm_per_day": 0.17
+   },
+   {
+    "month": "Mar",
+    "mean_c": 27.7,
+    "rain_mm_per_day": 0.25
+   },
+   {
+    "month": "Apr",
+    "mean_c": 28.3,
+    "rain_mm_per_day": 1.29
+   },
+   {
+    "month": "May",
+    "mean_c": 27.7,
+    "rain_mm_per_day": 6.21
+   },
+   {
+    "month": "Jun",
+    "mean_c": 27.0,
+    "rain_mm_per_day": 7.72
+   },
+   {
+    "month": "Jul",
+    "mean_c": 27.3,
+    "rain_mm_per_day": 6.37
+   },
+   {
+    "month": "Aug",
+    "mean_c": 27.1,
+    "rain_mm_per_day": 7.93
+   },
+   {
+    "month": "Sep",
+    "mean_c": 26.4,
+    "rain_mm_per_day": 9.42
+   },
+   {
+    "month": "Oct",
+    "mean_c": 26.2,
+    "rain_mm_per_day": 7.28
+   },
+   {
+    "month": "Nov",
+    "mean_c": 25.8,
+    "rain_mm_per_day": 1.6
+   },
+   {
+    "month": "Dec",
+    "mean_c": 25.9,
+    "rain_mm_per_day": 0.31
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/soyapango-average-monthly-temperature-rainfall",
+  "title": "Soyapango climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

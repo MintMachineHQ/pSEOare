@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Bandung",
+  "annual_mean_c": 21.4,
+  "warmest_month": "Nov",
+  "warmest_c": 22.2,
+  "coldest_month": "Jul",
+  "coldest_c": 20.5,
+  "seasonal_swing_c": 1.7,
+  "annual_rainfall_mm": 2614.0,
+  "wettest_month": "Feb",
+  "wettest_mm_per_day": 12.92,
+  "driest_month": "Aug",
+  "driest_mm_per_day": 1.42,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 21.4,
+    "rain_mm_per_day": 10.86
+   },
+   {
+    "month": "Feb",
+    "mean_c": 21.4,
+    "rain_mm_per_day": 12.92
+   },
+   {
+    "month": "Mar",
+    "mean_c": 21.6,
+    "rain_mm_per_day": 10.91
+   },
+   {
+    "month": "Apr",
+    "mean_c": 22.0,
+    "rain_mm_per_day": 9.5
+   },
+   {
+    "month": "May",
+    "mean_c": 21.8,
+    "rain_mm_per_day": 5.73
+   },
+   {
+    "month": "Jun",
+    "mean_c": 21.1,
+    "rain_mm_per_day": 3.43
+   },
+   {
+    "month": "Jul",
+    "mean_c": 20.5,
+    "rain_mm_per_day": 2.41
+   },
+   {
+    "month": "Aug",
+    "mean_c": 20.5,
+    "rain_mm_per_day": 1.42
+   },
+   {
+    "month": "Sep",
+    "mean_c": 21.2,
+    "rain_mm_per_day": 2.97
+   },
+   {
+    "month": "Oct",
+    "mean_c": 22.0,
+    "rain_mm_per_day": 5.83
+   },
+   {
+    "month": "Nov",
+    "mean_c": 22.2,
+    "rain_mm_per_day": 9.8
+   },
+   {
+    "month": "Dec",
+    "mean_c": 21.7,
+    "rain_mm_per_day": 10.21
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/bandung-average-monthly-temperature-rainfall",
+  "title": "Bandung climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

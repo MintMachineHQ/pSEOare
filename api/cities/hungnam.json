@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Hungnam",
+  "annual_mean_c": 8.2,
+  "warmest_month": "Jul",
+  "warmest_c": 22.0,
+  "coldest_month": "Jan",
+  "coldest_c": -7.5,
+  "seasonal_swing_c": 29.5,
+  "annual_rainfall_mm": 939.0,
+  "wettest_month": "Jul",
+  "wettest_mm_per_day": 8.06,
+  "driest_month": "Jan",
+  "driest_mm_per_day": 0.35,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": -7.5,
+    "rain_mm_per_day": 0.35
+   },
+   {
+    "month": "Feb",
+    "mean_c": -5.0,
+    "rain_mm_per_day": 0.65
+   },
+   {
+    "month": "Mar",
+    "mean_c": 0.8,
+    "rain_mm_per_day": 0.78
+   },
+   {
+    "month": "Apr",
+    "mean_c": 7.8,
+    "rain_mm_per_day": 1.66
+   },
+   {
+    "month": "May",
+    "mean_c": 14.7,
+    "rain_mm_per_day": 2.39
+   },
+   {
+    "month": "Jun",
+    "mean_c": 19.3,
+    "rain_mm_per_day": 2.91
+   },
+   {
+    "month": "Jul",
+    "mean_c": 22.0,
+    "rain_mm_per_day": 8.06
+   },
+   {
+    "month": "Aug",
+    "mean_c": 21.9,
+    "rain_mm_per_day": 6.8
+   },
+   {
+    "month": "Sep",
+    "mean_c": 17.0,
+    "rain_mm_per_day": 3.49
+   },
+   {
+    "month": "Oct",
+    "mean_c": 10.3,
+    "rain_mm_per_day": 1.53
+   },
+   {
+    "month": "Nov",
+    "mean_c": 1.9,
+    "rain_mm_per_day": 1.7
+   },
+   {
+    "month": "Dec",
+    "mean_c": -5.7,
+    "rain_mm_per_day": 0.57
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/hungnam-average-monthly-temperature-rainfall",
+  "title": "Hungnam climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

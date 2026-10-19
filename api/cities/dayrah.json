@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Dayrah",
+  "annual_mean_c": 27.7,
+  "warmest_month": "Aug",
+  "warmest_c": 33.7,
+  "coldest_month": "Jan",
+  "coldest_c": 21.3,
+  "seasonal_swing_c": 12.4,
+  "annual_rainfall_mm": 112.0,
+  "wettest_month": "Jan",
+  "wettest_mm_per_day": 0.81,
+  "driest_month": "Jul",
+  "driest_mm_per_day": 0.01,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 21.3,
+    "rain_mm_per_day": 0.81
+   },
+   {
+    "month": "Feb",
+    "mean_c": 21.3,
+    "rain_mm_per_day": 0.39
+   },
+   {
+    "month": "Mar",
+    "mean_c": 22.9,
+    "rain_mm_per_day": 0.61
+   },
+   {
+    "month": "Apr",
+    "mean_c": 25.6,
+    "rain_mm_per_day": 0.36
+   },
+   {
+    "month": "May",
+    "mean_c": 28.8,
+    "rain_mm_per_day": 0.1
+   },
+   {
+    "month": "Jun",
+    "mean_c": 31.2,
+    "rain_mm_per_day": 0.22
+   },
+   {
+    "month": "Jul",
+    "mean_c": 33.1,
+    "rain_mm_per_day": 0.01
+   },
+   {
+    "month": "Aug",
+    "mean_c": 33.7,
+    "rain_mm_per_day": 0.03
+   },
+   {
+    "month": "Sep",
+    "mean_c": 32.7,
+    "rain_mm_per_day": 0.06
+   },
+   {
+    "month": "Oct",
+    "mean_c": 30.8,
+    "rain_mm_per_day": 0.04
+   },
+   {
+    "month": "Nov",
+    "mean_c": 27.5,
+    "rain_mm_per_day": 0.4
+   },
+   {
+    "month": "Dec",
+    "mean_c": 23.8,
+    "rain_mm_per_day": 0.65
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/dayrah-average-monthly-temperature-rainfall",
+  "title": "Dayrah climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

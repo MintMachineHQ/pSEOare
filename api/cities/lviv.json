@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Lviv",
+  "annual_mean_c": 8.4,
+  "warmest_month": "Jul",
+  "warmest_c": 20.0,
+  "coldest_month": "Jan",
+  "coldest_c": -4.4,
+  "seasonal_swing_c": 24.4,
+  "annual_rainfall_mm": 732.0,
+  "wettest_month": "May",
+  "wettest_mm_per_day": 2.99,
+  "driest_month": "Jan",
+  "driest_mm_per_day": 1.45,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": -4.4,
+    "rain_mm_per_day": 1.45
+   },
+   {
+    "month": "Feb",
+    "mean_c": -2.7,
+    "rain_mm_per_day": 1.48
+   },
+   {
+    "month": "Mar",
+    "mean_c": 2.4,
+    "rain_mm_per_day": 1.58
+   },
+   {
+    "month": "Apr",
+    "mean_c": 8.9,
+    "rain_mm_per_day": 1.61
+   },
+   {
+    "month": "May",
+    "mean_c": 14.4,
+    "rain_mm_per_day": 2.99
+   },
+   {
+    "month": "Jun",
+    "mean_c": 18.0,
+    "rain_mm_per_day": 2.95
+   },
+   {
+    "month": "Jul",
+    "mean_c": 20.0,
+    "rain_mm_per_day": 2.93
+   },
+   {
+    "month": "Aug",
+    "mean_c": 19.6,
+    "rain_mm_per_day": 2.22
+   },
+   {
+    "month": "Sep",
+    "mean_c": 14.5,
+    "rain_mm_per_day": 2.15
+   },
+   {
+    "month": "Oct",
+    "mean_c": 8.5,
+    "rain_mm_per_day": 1.74
+   },
+   {
+    "month": "Nov",
+    "mean_c": 3.4,
+    "rain_mm_per_day": 1.5
+   },
+   {
+    "month": "Dec",
+    "mean_c": -2.1,
+    "rain_mm_per_day": 1.49
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/lviv-average-monthly-temperature-rainfall",
+  "title": "Lviv climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

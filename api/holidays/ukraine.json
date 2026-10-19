@@ -1,7 +1,7 @@
 {
  "answer": {
   "country": "Ukraine",
-  "count": 8,
+  "count": 32,
   "holidays": [
    {
     "name": "New Year's Day in Ukraine (2016)",
@@ -12,12 +12,44 @@
     "page": "https://pseoare.pages.dev/new-year-s-day-ukraine-2016-01-01"
    },
    {
+    "name": "Christmas Day (Orthodox) in Ukraine (2016)",
+    "local_name": "\u0420\u0456\u0437\u0434\u0432\u043e",
+    "date": "2016-01-07",
+    "weekday": "Thursday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-orthodox-ukraine-2016-01-07"
+   },
+   {
+    "name": "International Women's Day in Ukraine (2016)",
+    "local_name": "\u041c\u0456\u0436\u043d\u0430\u0440\u043e\u0434\u043d\u0438\u0439 \u0436\u0456\u043d\u043e\u0447\u0438\u0439 \u0434\u0435\u043d\u044c",
+    "date": "2016-03-08",
+    "weekday": "Tuesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/international-women-s-day-ukraine-2016-03-08"
+   },
+   {
     "name": "New Year's Day in Ukraine (2017)",
     "local_name": "\u041d\u043e\u0432\u0438\u0439 \u0420\u0456\u043a",
     "date": "2017-01-01",
     "weekday": "Sunday",
     "weekend": true,
     "page": "https://pseoare.pages.dev/new-year-s-day-ukraine-2017-01-01"
+   },
+   {
+    "name": "Christmas Day (Orthodox) in Ukraine (2017)",
+    "local_name": "\u0420\u0456\u0437\u0434\u0432\u043e",
+    "date": "2017-01-07",
+    "weekday": "Saturday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/christmas-day-orthodox-ukraine-2017-01-07"
+   },
+   {
+    "name": "Christmas Day in Ukraine (2017)",
+    "local_name": "\u0420\u0456\u0437\u0434\u0432\u043e \u0425\u0440\u0438\u0441\u0442\u043e\u0432\u0435",
+    "date": "2017-12-25",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-ukraine-2017-12-25"
    },
    {
     "name": "New Year's Day in Ukraine (2018)",
@@ -28,12 +60,44 @@
     "page": "https://pseoare.pages.dev/new-year-s-day-ukraine-2018-01-01"
    },
    {
+    "name": "Christmas Day (Orthodox) in Ukraine (2018)",
+    "local_name": "\u0420\u0456\u0437\u0434\u0432\u043e",
+    "date": "2018-01-07",
+    "weekday": "Sunday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/christmas-day-orthodox-ukraine-2018-01-07"
+   },
+   {
+    "name": "Christmas Day in Ukraine (2018)",
+    "local_name": "\u0420\u0456\u0437\u0434\u0432\u043e \u0425\u0440\u0438\u0441\u0442\u043e\u0432\u0435",
+    "date": "2018-12-25",
+    "weekday": "Tuesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-ukraine-2018-12-25"
+   },
+   {
     "name": "New Year's Day in Ukraine (2019)",
     "local_name": "\u041d\u043e\u0432\u0438\u0439 \u0420\u0456\u043a",
     "date": "2019-01-01",
     "weekday": "Tuesday",
     "weekend": false,
     "page": "https://pseoare.pages.dev/new-year-s-day-ukraine-2019-01-01"
+   },
+   {
+    "name": "Christmas Day (Orthodox) in Ukraine (2019)",
+    "local_name": "\u0420\u0456\u0437\u0434\u0432\u043e",
+    "date": "2019-01-07",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-orthodox-ukraine-2019-01-07"
+   },
+   {
+    "name": "Christmas Day in Ukraine (2019)",
+    "local_name": "\u0420\u0456\u0437\u0434\u0432\u043e \u0425\u0440\u0438\u0441\u0442\u043e\u0432\u0435",
+    "date": "2019-12-25",
+    "weekday": "Wednesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-ukraine-2019-12-25"
    },
    {
     "name": "New Year's Day in Ukraine (2020)",
@@ -44,12 +108,44 @@
     "page": "https://pseoare.pages.dev/new-year-s-day-ukraine-2020-01-01"
    },
    {
+    "name": "Christmas Day (Orthodox) in Ukraine (2020)",
+    "local_name": "\u0420\u0456\u0437\u0434\u0432\u043e",
+    "date": "2020-01-07",
+    "weekday": "Tuesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-orthodox-ukraine-2020-01-07"
+   },
+   {
+    "name": "Christmas Day in Ukraine (2020)",
+    "local_name": "\u0420\u0456\u0437\u0434\u0432\u043e \u0425\u0440\u0438\u0441\u0442\u043e\u0432\u0435",
+    "date": "2020-12-25",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-ukraine-2020-12-25"
+   },
+   {
     "name": "New Year's Day in Ukraine (2021)",
     "local_name": "\u041d\u043e\u0432\u0438\u0439 \u0420\u0456\u043a",
     "date": "2021-01-01",
     "weekday": "Friday",
     "weekend": false,
     "page": "https://pseoare.pages.dev/new-year-s-day-ukraine-2021-01-01"
+   },
+   {
+    "name": "Christmas Day (Orthodox) in Ukraine (2021)",
+    "local_name": "\u0420\u0456\u0437\u0434\u0432\u043e",
+    "date": "2021-01-07",
+    "weekday": "Thursday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-orthodox-ukraine-2021-01-07"
+   },
+   {
+    "name": "Christmas Day in Ukraine (2021)",
+    "local_name": "\u0420\u0456\u0437\u0434\u0432\u043e \u0425\u0440\u0438\u0441\u0442\u043e\u0432\u0435",
+    "date": "2021-12-25",
+    "weekday": "Saturday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/christmas-day-ukraine-2021-12-25"
    },
    {
     "name": "New Year's Day in Ukraine (2022)",
@@ -60,12 +156,108 @@
     "page": "https://pseoare.pages.dev/new-year-s-day-ukraine-2022-01-01"
    },
    {
+    "name": "Christmas Day (Orthodox) in Ukraine (2022)",
+    "local_name": "\u0420\u0456\u0437\u0434\u0432\u043e",
+    "date": "2022-01-07",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-orthodox-ukraine-2022-01-07"
+   },
+   {
+    "name": "Christmas Day in Ukraine (2022)",
+    "local_name": "\u0420\u0456\u0437\u0434\u0432\u043e \u0425\u0440\u0438\u0441\u0442\u043e\u0432\u0435",
+    "date": "2022-12-25",
+    "weekday": "Sunday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/christmas-day-ukraine-2022-12-25"
+   },
+   {
     "name": "New Year's Day in Ukraine (2023)",
     "local_name": "\u041d\u043e\u0432\u0438\u0439 \u0420\u0456\u043a",
     "date": "2023-01-01",
     "weekday": "Sunday",
     "weekend": true,
     "page": "https://pseoare.pages.dev/new-year-s-day-ukraine-2023-01-01"
+   },
+   {
+    "name": "Christmas Day (Orthodox) in Ukraine (2023)",
+    "local_name": "\u0420\u0456\u0437\u0434\u0432\u043e",
+    "date": "2023-01-07",
+    "weekday": "Saturday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/christmas-day-orthodox-ukraine-2023-01-07"
+   },
+   {
+    "name": "Christmas Day in Ukraine (2023)",
+    "local_name": "\u0420\u0456\u0437\u0434\u0432\u043e \u0425\u0440\u0438\u0441\u0442\u043e\u0432\u0435",
+    "date": "2023-12-25",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-ukraine-2023-12-25"
+   },
+   {
+    "name": "International Women's Day in Ukraine (2024)",
+    "local_name": "\u041c\u0456\u0436\u043d\u0430\u0440\u043e\u0434\u043d\u0438\u0439 \u0436\u0456\u043d\u043e\u0447\u0438\u0439 \u0434\u0435\u043d\u044c",
+    "date": "2024-03-08",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/international-women-s-day-ukraine-2024-03-08"
+   },
+   {
+    "name": "Christmas Day in Ukraine (2024)",
+    "local_name": "\u0420\u0456\u0437\u0434\u0432\u043e \u0425\u0440\u0438\u0441\u0442\u043e\u0432\u0435",
+    "date": "2024-12-25",
+    "weekday": "Wednesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-ukraine-2024-12-25"
+   },
+   {
+    "name": "International Women's Day in Ukraine (2025)",
+    "local_name": "\u041c\u0456\u0436\u043d\u0430\u0440\u043e\u0434\u043d\u0438\u0439 \u0436\u0456\u043d\u043e\u0447\u0438\u0439 \u0434\u0435\u043d\u044c",
+    "date": "2025-03-08",
+    "weekday": "Saturday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/international-women-s-day-ukraine-2025-03-08"
+   },
+   {
+    "name": "Christmas Day in Ukraine (2025)",
+    "local_name": "\u0420\u0456\u0437\u0434\u0432\u043e \u0425\u0440\u0438\u0441\u0442\u043e\u0432\u0435",
+    "date": "2025-12-25",
+    "weekday": "Thursday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-ukraine-2025-12-25"
+   },
+   {
+    "name": "International Women's Day in Ukraine (2026)",
+    "local_name": "\u041c\u0456\u0436\u043d\u0430\u0440\u043e\u0434\u043d\u0438\u0439 \u0436\u0456\u043d\u043e\u0447\u0438\u0439 \u0434\u0435\u043d\u044c",
+    "date": "2026-03-08",
+    "weekday": "Sunday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/international-women-s-day-ukraine-2026-03-08"
+   },
+   {
+    "name": "Christmas Day in Ukraine (2026)",
+    "local_name": "\u0420\u0456\u0437\u0434\u0432\u043e \u0425\u0440\u0438\u0441\u0442\u043e\u0432\u0435",
+    "date": "2026-12-25",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-ukraine-2026-12-25"
+   },
+   {
+    "name": "International Women's Day in Ukraine (2027)",
+    "local_name": "\u041c\u0456\u0436\u043d\u0430\u0440\u043e\u0434\u043d\u0438\u0439 \u0436\u0456\u043d\u043e\u0447\u0438\u0439 \u0434\u0435\u043d\u044c",
+    "date": "2027-03-08",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/international-women-s-day-ukraine-2027-03-08"
+   },
+   {
+    "name": "Christmas Day in Ukraine (2027)",
+    "local_name": "\u0420\u0456\u0437\u0434\u0432\u043e \u0425\u0440\u0438\u0441\u0442\u043e\u0432\u0435",
+    "date": "2027-12-25",
+    "weekday": "Saturday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/christmas-day-ukraine-2027-12-25"
    }
   ]
  },
@@ -74,7 +266,7 @@
   "title": "Public holidays for Ukraine",
   "site": "https://pseoare.pages.dev"
  },
- "updated": "2026-10-19T20:41:30.228277+00:00",
+ "updated": "2026-10-19T20:49:39.946179+00:00",
  "license": "CC-BY-4.0",
  "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
 }

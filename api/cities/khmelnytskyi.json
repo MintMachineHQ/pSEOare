@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Khmelnytskyi",
+  "annual_mean_c": 7.9,
+  "warmest_month": "Jul",
+  "warmest_c": 20.1,
+  "coldest_month": "Jan",
+  "coldest_c": -5.4,
+  "seasonal_swing_c": 25.5,
+  "annual_rainfall_mm": 659.0,
+  "wettest_month": "Jun",
+  "wettest_mm_per_day": 3.07,
+  "driest_month": "Jan",
+  "driest_mm_per_day": 1.29,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": -5.4,
+    "rain_mm_per_day": 1.29
+   },
+   {
+    "month": "Feb",
+    "mean_c": -3.8,
+    "rain_mm_per_day": 1.4
+   },
+   {
+    "month": "Mar",
+    "mean_c": 1.4,
+    "rain_mm_per_day": 1.46
+   },
+   {
+    "month": "Apr",
+    "mean_c": 8.3,
+    "rain_mm_per_day": 1.5
+   },
+   {
+    "month": "May",
+    "mean_c": 14.3,
+    "rain_mm_per_day": 2.26
+   },
+   {
+    "month": "Jun",
+    "mean_c": 18.0,
+    "rain_mm_per_day": 3.07
+   },
+   {
+    "month": "Jul",
+    "mean_c": 20.1,
+    "rain_mm_per_day": 2.75
+   },
+   {
+    "month": "Aug",
+    "mean_c": 19.7,
+    "rain_mm_per_day": 2.02
+   },
+   {
+    "month": "Sep",
+    "mean_c": 14.5,
+    "rain_mm_per_day": 1.69
+   },
+   {
+    "month": "Oct",
+    "mean_c": 7.9,
+    "rain_mm_per_day": 1.54
+   },
+   {
+    "month": "Nov",
+    "mean_c": 2.3,
+    "rain_mm_per_day": 1.39
+   },
+   {
+    "month": "Dec",
+    "mean_c": -3.1,
+    "rain_mm_per_day": 1.31
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/khmelnytskyi-average-monthly-temperature-rainfall",
+  "title": "Khmelnytskyi climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

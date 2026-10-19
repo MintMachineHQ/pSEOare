@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Columbus",
+  "annual_mean_c": 11.0,
+  "warmest_month": "Jul",
+  "warmest_c": 23.4,
+  "coldest_month": "Jan",
+  "coldest_c": -2.6,
+  "seasonal_swing_c": 26.0,
+  "annual_rainfall_mm": 984.0,
+  "wettest_month": "Jun",
+  "wettest_mm_per_day": 3.45,
+  "driest_month": "Jan",
+  "driest_mm_per_day": 2.09,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": -2.6,
+    "rain_mm_per_day": 2.09
+   },
+   {
+    "month": "Feb",
+    "mean_c": -1.4,
+    "rain_mm_per_day": 2.2
+   },
+   {
+    "month": "Mar",
+    "mean_c": 4.0,
+    "rain_mm_per_day": 2.75
+   },
+   {
+    "month": "Apr",
+    "mean_c": 10.7,
+    "rain_mm_per_day": 3.15
+   },
+   {
+    "month": "May",
+    "mean_c": 16.5,
+    "rain_mm_per_day": 3.39
+   },
+   {
+    "month": "Jun",
+    "mean_c": 21.2,
+    "rain_mm_per_day": 3.45
+   },
+   {
+    "month": "Jul",
+    "mean_c": 23.4,
+    "rain_mm_per_day": 3.0
+   },
+   {
+    "month": "Aug",
+    "mean_c": 23.1,
+    "rain_mm_per_day": 2.5
+   },
+   {
+    "month": "Sep",
+    "mean_c": 19.3,
+    "rain_mm_per_day": 2.58
+   },
+   {
+    "month": "Oct",
+    "mean_c": 12.1,
+    "rain_mm_per_day": 2.49
+   },
+   {
+    "month": "Nov",
+    "mean_c": 5.2,
+    "rain_mm_per_day": 2.36
+   },
+   {
+    "month": "Dec",
+    "mean_c": -0.1,
+    "rain_mm_per_day": 2.4
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/columbus-average-monthly-temperature-rainfall",
+  "title": "Columbus climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

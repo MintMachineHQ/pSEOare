@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Birkenhead",
+  "annual_mean_c": 9.9,
+  "warmest_month": "Jul",
+  "warmest_c": 15.7,
+  "coldest_month": "Feb",
+  "coldest_c": 4.7,
+  "seasonal_swing_c": 11.0,
+  "annual_rainfall_mm": 978.0,
+  "wettest_month": "Nov",
+  "wettest_mm_per_day": 3.35,
+  "driest_month": "Apr",
+  "driest_mm_per_day": 1.85,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 4.9,
+    "rain_mm_per_day": 2.8
+   },
+   {
+    "month": "Feb",
+    "mean_c": 4.7,
+    "rain_mm_per_day": 2.55
+   },
+   {
+    "month": "Mar",
+    "mean_c": 5.9,
+    "rain_mm_per_day": 2.13
+   },
+   {
+    "month": "Apr",
+    "mean_c": 8.2,
+    "rain_mm_per_day": 1.85
+   },
+   {
+    "month": "May",
+    "mean_c": 11.2,
+    "rain_mm_per_day": 2.07
+   },
+   {
+    "month": "Jun",
+    "mean_c": 14.1,
+    "rain_mm_per_day": 2.6
+   },
+   {
+    "month": "Jul",
+    "mean_c": 15.7,
+    "rain_mm_per_day": 2.78
+   },
+   {
+    "month": "Aug",
+    "mean_c": 15.7,
+    "rain_mm_per_day": 2.93
+   },
+   {
+    "month": "Sep",
+    "mean_c": 13.9,
+    "rain_mm_per_day": 2.66
+   },
+   {
+    "month": "Oct",
+    "mean_c": 11.1,
+    "rain_mm_per_day": 3.16
+   },
+   {
+    "month": "Nov",
+    "mean_c": 7.9,
+    "rain_mm_per_day": 3.35
+   },
+   {
+    "month": "Dec",
+    "mean_c": 5.7,
+    "rain_mm_per_day": 3.29
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/birkenhead-average-monthly-temperature-rainfall",
+  "title": "Birkenhead climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

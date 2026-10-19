@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://pseoare.pages.dev/hub-climate</loc><lastmod>2026-10-19</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/hub-climate-2</loc><lastmod>2026-10-19</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/hub-climate-3</loc><lastmod>2026-10-19</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/hub-climate-4</loc><lastmod>2026-10-19</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/hub-climate-5</loc><lastmod>2026-10-19</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://pseoare.pages.dev/hub-countries</loc><lastmod>2026-10-19</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://pseoare.pages.dev/hub-crypto</loc><lastmod>2026-10-19</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/hub-population</loc><lastmod>2026-10-19</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://pseoare.pages.dev/hub-single-holidays</loc><lastmod>2026-10-19</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/hub-single-holidays-2</loc><lastmod>2026-10-19</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/hub-single-holidays-3</loc><lastmod>2026-10-19</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/hub-single-holidays-4</loc><lastmod>2026-10-19</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/hub-single-holidays-5</loc><lastmod>2026-10-19</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
 </urlset>

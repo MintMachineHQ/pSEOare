@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Mwanza",
+  "annual_mean_c": 23.9,
+  "warmest_month": "Sep",
+  "warmest_c": 25.3,
+  "coldest_month": "May",
+  "coldest_c": 23.2,
+  "seasonal_swing_c": 2.1,
+  "annual_rainfall_mm": 1090.0,
+  "wettest_month": "Nov",
+  "wettest_mm_per_day": 6.38,
+  "driest_month": "Jul",
+  "driest_mm_per_day": 0.39,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 23.6,
+    "rain_mm_per_day": 2.84
+   },
+   {
+    "month": "Feb",
+    "mean_c": 24.2,
+    "rain_mm_per_day": 2.71
+   },
+   {
+    "month": "Mar",
+    "mean_c": 24.0,
+    "rain_mm_per_day": 4.53
+   },
+   {
+    "month": "Apr",
+    "mean_c": 23.4,
+    "rain_mm_per_day": 4.8
+   },
+   {
+    "month": "May",
+    "mean_c": 23.2,
+    "rain_mm_per_day": 2.32
+   },
+   {
+    "month": "Jun",
+    "mean_c": 23.2,
+    "rain_mm_per_day": 0.59
+   },
+   {
+    "month": "Jul",
+    "mean_c": 23.6,
+    "rain_mm_per_day": 0.39
+   },
+   {
+    "month": "Aug",
+    "mean_c": 24.7,
+    "rain_mm_per_day": 1.04
+   },
+   {
+    "month": "Sep",
+    "mean_c": 25.3,
+    "rain_mm_per_day": 1.87
+   },
+   {
+    "month": "Oct",
+    "mean_c": 24.8,
+    "rain_mm_per_day": 3.97
+   },
+   {
+    "month": "Nov",
+    "mean_c": 23.4,
+    "rain_mm_per_day": 6.38
+   },
+   {
+    "month": "Dec",
+    "mean_c": 23.2,
+    "rain_mm_per_day": 4.4
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/mwanza-average-monthly-temperature-rainfall",
+  "title": "Mwanza climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

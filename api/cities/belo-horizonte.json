@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Belo Horizonte",
+  "annual_mean_c": 20.2,
+  "warmest_month": "Oct",
+  "warmest_c": 22.3,
+  "coldest_month": "Jun",
+  "coldest_c": 17.6,
+  "seasonal_swing_c": 4.7,
+  "annual_rainfall_mm": 1209.0,
+  "wettest_month": "Dec",
+  "wettest_mm_per_day": 8.57,
+  "driest_month": "Jul",
+  "driest_mm_per_day": 0.22,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 21.6,
+    "rain_mm_per_day": 7.19
+   },
+   {
+    "month": "Feb",
+    "mean_c": 21.4,
+    "rain_mm_per_day": 4.68
+   },
+   {
+    "month": "Mar",
+    "mean_c": 21.1,
+    "rain_mm_per_day": 4.94
+   },
+   {
+    "month": "Apr",
+    "mean_c": 20.1,
+    "rain_mm_per_day": 1.77
+   },
+   {
+    "month": "May",
+    "mean_c": 18.4,
+    "rain_mm_per_day": 0.87
+   },
+   {
+    "month": "Jun",
+    "mean_c": 17.6,
+    "rain_mm_per_day": 0.37
+   },
+   {
+    "month": "Jul",
+    "mean_c": 17.6,
+    "rain_mm_per_day": 0.22
+   },
+   {
+    "month": "Aug",
+    "mean_c": 18.9,
+    "rain_mm_per_day": 0.59
+   },
+   {
+    "month": "Sep",
+    "mean_c": 21.0,
+    "rain_mm_per_day": 1.41
+   },
+   {
+    "month": "Oct",
+    "mean_c": 22.3,
+    "rain_mm_per_day": 2.83
+   },
+   {
+    "month": "Nov",
+    "mean_c": 21.5,
+    "rain_mm_per_day": 6.34
+   },
+   {
+    "month": "Dec",
+    "mean_c": 21.5,
+    "rain_mm_per_day": 8.57
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/belo-horizonte-average-monthly-temperature-rainfall",
+  "title": "Belo Horizonte climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

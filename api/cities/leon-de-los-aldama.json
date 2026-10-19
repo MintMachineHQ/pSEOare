@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Leon de los Aldama",
+  "annual_mean_c": 17.9,
+  "warmest_month": "May",
+  "warmest_c": 22.4,
+  "coldest_month": "Jan",
+  "coldest_c": 13.1,
+  "seasonal_swing_c": 9.3,
+  "annual_rainfall_mm": 680.0,
+  "wettest_month": "Jul",
+  "wettest_mm_per_day": 5.6,
+  "driest_month": "Apr",
+  "driest_mm_per_day": 0.15,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 13.1,
+    "rain_mm_per_day": 0.35
+   },
+   {
+    "month": "Feb",
+    "mean_c": 15.1,
+    "rain_mm_per_day": 0.61
+   },
+   {
+    "month": "Mar",
+    "mean_c": 17.4,
+    "rain_mm_per_day": 0.35
+   },
+   {
+    "month": "Apr",
+    "mean_c": 20.5,
+    "rain_mm_per_day": 0.15
+   },
+   {
+    "month": "May",
+    "mean_c": 22.4,
+    "rain_mm_per_day": 1.04
+   },
+   {
+    "month": "Jun",
+    "mean_c": 21.7,
+    "rain_mm_per_day": 3.9
+   },
+   {
+    "month": "Jul",
+    "mean_c": 19.9,
+    "rain_mm_per_day": 5.6
+   },
+   {
+    "month": "Aug",
+    "mean_c": 19.6,
+    "rain_mm_per_day": 4.46
+   },
+   {
+    "month": "Sep",
+    "mean_c": 18.9,
+    "rain_mm_per_day": 4.0
+   },
+   {
+    "month": "Oct",
+    "mean_c": 17.6,
+    "rain_mm_per_day": 1.28
+   },
+   {
+    "month": "Nov",
+    "mean_c": 15.1,
+    "rain_mm_per_day": 0.43
+   },
+   {
+    "month": "Dec",
+    "mean_c": 13.5,
+    "rain_mm_per_day": 0.2
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/leon-de-los-aldama-average-monthly-temperature-rainfall",
+  "title": "Leon de los Aldama climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

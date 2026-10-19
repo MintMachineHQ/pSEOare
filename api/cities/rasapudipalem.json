@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Rasapudipalem",
+  "annual_mean_c": 27.4,
+  "warmest_month": "May",
+  "warmest_c": 30.9,
+  "coldest_month": "Jan",
+  "coldest_c": 23.6,
+  "seasonal_swing_c": 7.3,
+  "annual_rainfall_mm": 1247.0,
+  "wettest_month": "Sep",
+  "wettest_mm_per_day": 7.46,
+  "driest_month": "Jan",
+  "driest_mm_per_day": 0.17,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 23.6,
+    "rain_mm_per_day": 0.17
+   },
+   {
+    "month": "Feb",
+    "mean_c": 25.5,
+    "rain_mm_per_day": 0.38
+   },
+   {
+    "month": "Mar",
+    "mean_c": 28.1,
+    "rain_mm_per_day": 0.49
+   },
+   {
+    "month": "Apr",
+    "mean_c": 29.9,
+    "rain_mm_per_day": 1.03
+   },
+   {
+    "month": "May",
+    "mean_c": 30.9,
+    "rain_mm_per_day": 2.33
+   },
+   {
+    "month": "Jun",
+    "mean_c": 29.8,
+    "rain_mm_per_day": 5.66
+   },
+   {
+    "month": "Jul",
+    "mean_c": 28.5,
+    "rain_mm_per_day": 6.49
+   },
+   {
+    "month": "Aug",
+    "mean_c": 28.1,
+    "rain_mm_per_day": 6.82
+   },
+   {
+    "month": "Sep",
+    "mean_c": 28.1,
+    "rain_mm_per_day": 7.46
+   },
+   {
+    "month": "Oct",
+    "mean_c": 27.5,
+    "rain_mm_per_day": 6.81
+   },
+   {
+    "month": "Nov",
+    "mean_c": 25.4,
+    "rain_mm_per_day": 2.67
+   },
+   {
+    "month": "Dec",
+    "mean_c": 23.6,
+    "rain_mm_per_day": 0.71
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/rasapudipalem-average-monthly-temperature-rainfall",
+  "title": "Rasapudipalem climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

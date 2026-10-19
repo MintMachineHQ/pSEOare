@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Douala",
+  "annual_mean_c": 25.9,
+  "warmest_month": "Feb",
+  "warmest_c": 26.9,
+  "coldest_month": "Aug",
+  "coldest_c": 24.5,
+  "seasonal_swing_c": 2.4,
+  "annual_rainfall_mm": 2444.0,
+  "wettest_month": "Aug",
+  "wettest_mm_per_day": 12.75,
+  "driest_month": "Dec",
+  "driest_mm_per_day": 0.9,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 26.4,
+    "rain_mm_per_day": 0.96
+   },
+   {
+    "month": "Feb",
+    "mean_c": 26.9,
+    "rain_mm_per_day": 2.47
+   },
+   {
+    "month": "Mar",
+    "mean_c": 26.7,
+    "rain_mm_per_day": 4.92
+   },
+   {
+    "month": "Apr",
+    "mean_c": 26.7,
+    "rain_mm_per_day": 6.43
+   },
+   {
+    "month": "May",
+    "mean_c": 26.5,
+    "rain_mm_per_day": 6.15
+   },
+   {
+    "month": "Jun",
+    "mean_c": 25.5,
+    "rain_mm_per_day": 9.11
+   },
+   {
+    "month": "Jul",
+    "mean_c": 24.7,
+    "rain_mm_per_day": 10.56
+   },
+   {
+    "month": "Aug",
+    "mean_c": 24.5,
+    "rain_mm_per_day": 12.75
+   },
+   {
+    "month": "Sep",
+    "mean_c": 25.1,
+    "rain_mm_per_day": 12.18
+   },
+   {
+    "month": "Oct",
+    "mean_c": 25.6,
+    "rain_mm_per_day": 8.64
+   },
+   {
+    "month": "Nov",
+    "mean_c": 26.2,
+    "rain_mm_per_day": 5.31
+   },
+   {
+    "month": "Dec",
+    "mean_c": 26.4,
+    "rain_mm_per_day": 0.9
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/douala-average-monthly-temperature-rainfall",
+  "title": "Douala climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

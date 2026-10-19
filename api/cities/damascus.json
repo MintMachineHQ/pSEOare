@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Damascus",
+  "annual_mean_c": 15.8,
+  "warmest_month": "Jul",
+  "warmest_c": 26.4,
+  "coldest_month": "Jan",
+  "coldest_c": 4.8,
+  "seasonal_swing_c": 21.6,
+  "annual_rainfall_mm": 288.0,
+  "wettest_month": "Jan",
+  "wettest_mm_per_day": 2.22,
+  "driest_month": "Jul",
+  "driest_mm_per_day": 0.01,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 4.8,
+    "rain_mm_per_day": 2.22
+   },
+   {
+    "month": "Feb",
+    "mean_c": 6.2,
+    "rain_mm_per_day": 2.02
+   },
+   {
+    "month": "Mar",
+    "mean_c": 9.6,
+    "rain_mm_per_day": 0.94
+   },
+   {
+    "month": "Apr",
+    "mean_c": 13.7,
+    "rain_mm_per_day": 0.59
+   },
+   {
+    "month": "May",
+    "mean_c": 18.8,
+    "rain_mm_per_day": 0.22
+   },
+   {
+    "month": "Jun",
+    "mean_c": 23.5,
+    "rain_mm_per_day": 0.03
+   },
+   {
+    "month": "Jul",
+    "mean_c": 26.4,
+    "rain_mm_per_day": 0.01
+   },
+   {
+    "month": "Aug",
+    "mean_c": 26.3,
+    "rain_mm_per_day": 0.01
+   },
+   {
+    "month": "Sep",
+    "mean_c": 23.3,
+    "rain_mm_per_day": 0.06
+   },
+   {
+    "month": "Oct",
+    "mean_c": 18.5,
+    "rain_mm_per_day": 0.41
+   },
+   {
+    "month": "Nov",
+    "mean_c": 11.4,
+    "rain_mm_per_day": 1.15
+   },
+   {
+    "month": "Dec",
+    "mean_c": 6.9,
+    "rain_mm_per_day": 1.83
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/damascus-average-monthly-temperature-rainfall",
+  "title": "Damascus climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

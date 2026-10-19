@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Ciudad Nezahualcoyotl",
+  "annual_mean_c": 13.6,
+  "warmest_month": "May",
+  "warmest_c": 17.0,
+  "coldest_month": "Jan",
+  "coldest_c": 10.2,
+  "seasonal_swing_c": 6.8,
+  "annual_rainfall_mm": 892.0,
+  "wettest_month": "Sep",
+  "wettest_mm_per_day": 5.7,
+  "driest_month": "Dec",
+  "driest_mm_per_day": 0.37,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 10.2,
+    "rain_mm_per_day": 0.44
+   },
+   {
+    "month": "Feb",
+    "mean_c": 12.1,
+    "rain_mm_per_day": 0.48
+   },
+   {
+    "month": "Mar",
+    "mean_c": 13.9,
+    "rain_mm_per_day": 0.68
+   },
+   {
+    "month": "Apr",
+    "mean_c": 16.3,
+    "rain_mm_per_day": 1.03
+   },
+   {
+    "month": "May",
+    "mean_c": 17.0,
+    "rain_mm_per_day": 1.98
+   },
+   {
+    "month": "Jun",
+    "mean_c": 15.9,
+    "rain_mm_per_day": 4.93
+   },
+   {
+    "month": "Jul",
+    "mean_c": 14.8,
+    "rain_mm_per_day": 4.83
+   },
+   {
+    "month": "Aug",
+    "mean_c": 14.5,
+    "rain_mm_per_day": 5.05
+   },
+   {
+    "month": "Sep",
+    "mean_c": 13.9,
+    "rain_mm_per_day": 5.7
+   },
+   {
+    "month": "Oct",
+    "mean_c": 12.8,
+    "rain_mm_per_day": 2.85
+   },
+   {
+    "month": "Nov",
+    "mean_c": 11.3,
+    "rain_mm_per_day": 0.99
+   },
+   {
+    "month": "Dec",
+    "mean_c": 10.7,
+    "rain_mm_per_day": 0.37
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/ciudad-nezahualcoyotl-average-monthly-temperature-rainfall",
+  "title": "Ciudad Nezahualcoyotl climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

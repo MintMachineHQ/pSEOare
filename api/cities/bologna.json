@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Bologna",
+  "annual_mean_c": 14.2,
+  "warmest_month": "Jul",
+  "warmest_c": 26.1,
+  "coldest_month": "Jan",
+  "coldest_c": 3.5,
+  "seasonal_swing_c": 22.6,
+  "annual_rainfall_mm": 657.0,
+  "wettest_month": "Nov",
+  "wettest_mm_per_day": 2.73,
+  "driest_month": "Jul",
+  "driest_mm_per_day": 1.26,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 3.5,
+    "rain_mm_per_day": 1.32
+   },
+   {
+    "month": "Feb",
+    "mean_c": 4.6,
+    "rain_mm_per_day": 2.06
+   },
+   {
+    "month": "Mar",
+    "mean_c": 8.6,
+    "rain_mm_per_day": 1.74
+   },
+   {
+    "month": "Apr",
+    "mean_c": 12.9,
+    "rain_mm_per_day": 1.73
+   },
+   {
+    "month": "May",
+    "mean_c": 17.7,
+    "rain_mm_per_day": 1.99
+   },
+   {
+    "month": "Jun",
+    "mean_c": 23.0,
+    "rain_mm_per_day": 1.65
+   },
+   {
+    "month": "Jul",
+    "mean_c": 26.1,
+    "rain_mm_per_day": 1.26
+   },
+   {
+    "month": "Aug",
+    "mean_c": 25.6,
+    "rain_mm_per_day": 1.26
+   },
+   {
+    "month": "Sep",
+    "mean_c": 19.9,
+    "rain_mm_per_day": 1.94
+   },
+   {
+    "month": "Oct",
+    "mean_c": 14.7,
+    "rain_mm_per_day": 2.38
+   },
+   {
+    "month": "Nov",
+    "mean_c": 9.0,
+    "rain_mm_per_day": 2.73
+   },
+   {
+    "month": "Dec",
+    "mean_c": 4.4,
+    "rain_mm_per_day": 1.56
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/bologna-average-monthly-temperature-rainfall",
+  "title": "Bologna climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

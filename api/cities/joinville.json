@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Joinville",
+  "annual_mean_c": 21.2,
+  "warmest_month": "Feb",
+  "warmest_c": 25.3,
+  "coldest_month": "Jul",
+  "coldest_c": 16.9,
+  "seasonal_swing_c": 8.4,
+  "annual_rainfall_mm": 1611.0,
+  "wettest_month": "Jan",
+  "wettest_mm_per_day": 6.79,
+  "driest_month": "Aug",
+  "driest_mm_per_day": 2.77,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 25.1,
+    "rain_mm_per_day": 6.79
+   },
+   {
+    "month": "Feb",
+    "mean_c": 25.3,
+    "rain_mm_per_day": 6.14
+   },
+   {
+    "month": "Mar",
+    "mean_c": 24.5,
+    "rain_mm_per_day": 4.58
+   },
+   {
+    "month": "Apr",
+    "mean_c": 22.7,
+    "rain_mm_per_day": 3.39
+   },
+   {
+    "month": "May",
+    "mean_c": 19.5,
+    "rain_mm_per_day": 3.58
+   },
+   {
+    "month": "Jun",
+    "mean_c": 17.7,
+    "rain_mm_per_day": 3.38
+   },
+   {
+    "month": "Jul",
+    "mean_c": 16.9,
+    "rain_mm_per_day": 3.12
+   },
+   {
+    "month": "Aug",
+    "mean_c": 17.6,
+    "rain_mm_per_day": 2.77
+   },
+   {
+    "month": "Sep",
+    "mean_c": 18.9,
+    "rain_mm_per_day": 4.49
+   },
+   {
+    "month": "Oct",
+    "mean_c": 20.7,
+    "rain_mm_per_day": 4.76
+   },
+   {
+    "month": "Nov",
+    "mean_c": 22.1,
+    "rain_mm_per_day": 4.7
+   },
+   {
+    "month": "Dec",
+    "mean_c": 24.0,
+    "rain_mm_per_day": 5.29
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/joinville-average-monthly-temperature-rainfall",
+  "title": "Joinville climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

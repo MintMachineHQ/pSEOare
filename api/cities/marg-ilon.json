@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Marg'ilon",
+  "annual_mean_c": 16.9,
+  "warmest_month": "Jul",
+  "warmest_c": 30.9,
+  "coldest_month": "Jan",
+  "coldest_c": 3.2,
+  "seasonal_swing_c": 27.7,
+  "annual_rainfall_mm": 201.0,
+  "wettest_month": "Mar",
+  "wettest_mm_per_day": 0.86,
+  "driest_month": "Sep",
+  "driest_mm_per_day": 0.12,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 3.2,
+    "rain_mm_per_day": 0.53
+   },
+   {
+    "month": "Feb",
+    "mean_c": 5.3,
+    "rain_mm_per_day": 0.81
+   },
+   {
+    "month": "Mar",
+    "mean_c": 11.7,
+    "rain_mm_per_day": 0.86
+   },
+   {
+    "month": "Apr",
+    "mean_c": 17.3,
+    "rain_mm_per_day": 0.77
+   },
+   {
+    "month": "May",
+    "mean_c": 23.2,
+    "rain_mm_per_day": 0.68
+   },
+   {
+    "month": "Jun",
+    "mean_c": 28.3,
+    "rain_mm_per_day": 0.44
+   },
+   {
+    "month": "Jul",
+    "mean_c": 30.9,
+    "rain_mm_per_day": 0.16
+   },
+   {
+    "month": "Aug",
+    "mean_c": 29.4,
+    "rain_mm_per_day": 0.25
+   },
+   {
+    "month": "Sep",
+    "mean_c": 23.9,
+    "rain_mm_per_day": 0.12
+   },
+   {
+    "month": "Oct",
+    "mean_c": 16.2,
+    "rain_mm_per_day": 0.47
+   },
+   {
+    "month": "Nov",
+    "mean_c": 9.1,
+    "rain_mm_per_day": 0.81
+   },
+   {
+    "month": "Dec",
+    "mean_c": 3.9,
+    "rain_mm_per_day": 0.72
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/marg-ilon-average-monthly-temperature-rainfall",
+  "title": "Marg'ilon climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

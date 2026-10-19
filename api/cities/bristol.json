@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Bristol",
+  "annual_mean_c": 10.3,
+  "warmest_month": "Jul",
+  "warmest_c": 17.0,
+  "coldest_month": "Jan",
+  "coldest_c": 4.6,
+  "seasonal_swing_c": 12.4,
+  "annual_rainfall_mm": 809.0,
+  "wettest_month": "Nov",
+  "wettest_mm_per_day": 2.86,
+  "driest_month": "Sep",
+  "driest_mm_per_day": 1.67,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 4.6,
+    "rain_mm_per_day": 2.44
+   },
+   {
+    "month": "Feb",
+    "mean_c": 4.6,
+    "rain_mm_per_day": 2.13
+   },
+   {
+    "month": "Mar",
+    "mean_c": 6.1,
+    "rain_mm_per_day": 1.92
+   },
+   {
+    "month": "Apr",
+    "mean_c": 8.8,
+    "rain_mm_per_day": 1.68
+   },
+   {
+    "month": "May",
+    "mean_c": 11.9,
+    "rain_mm_per_day": 1.93
+   },
+   {
+    "month": "Jun",
+    "mean_c": 15.0,
+    "rain_mm_per_day": 2.08
+   },
+   {
+    "month": "Jul",
+    "mean_c": 17.0,
+    "rain_mm_per_day": 2.21
+   },
+   {
+    "month": "Aug",
+    "mean_c": 16.7,
+    "rain_mm_per_day": 2.31
+   },
+   {
+    "month": "Sep",
+    "mean_c": 14.4,
+    "rain_mm_per_day": 1.67
+   },
+   {
+    "month": "Oct",
+    "mean_c": 11.2,
+    "rain_mm_per_day": 2.68
+   },
+   {
+    "month": "Nov",
+    "mean_c": 7.6,
+    "rain_mm_per_day": 2.86
+   },
+   {
+    "month": "Dec",
+    "mean_c": 5.3,
+    "rain_mm_per_day": 2.7
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/bristol-average-monthly-temperature-rainfall",
+  "title": "Bristol climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

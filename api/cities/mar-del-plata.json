@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Mar del Plata",
+  "annual_mean_c": 14.2,
+  "warmest_month": "Jan",
+  "warmest_c": 20.4,
+  "coldest_month": "Jul",
+  "coldest_c": 8.3,
+  "seasonal_swing_c": 12.1,
+  "annual_rainfall_mm": 1160.0,
+  "wettest_month": "Feb",
+  "wettest_mm_per_day": 4.44,
+  "driest_month": "Jun",
+  "driest_mm_per_day": 2.06,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 20.4,
+    "rain_mm_per_day": 4.03
+   },
+   {
+    "month": "Feb",
+    "mean_c": 20.3,
+    "rain_mm_per_day": 4.44
+   },
+   {
+    "month": "Mar",
+    "mean_c": 18.6,
+    "rain_mm_per_day": 3.82
+   },
+   {
+    "month": "Apr",
+    "mean_c": 15.6,
+    "rain_mm_per_day": 3.5
+   },
+   {
+    "month": "May",
+    "mean_c": 12.5,
+    "rain_mm_per_day": 2.43
+   },
+   {
+    "month": "Jun",
+    "mean_c": 9.6,
+    "rain_mm_per_day": 2.06
+   },
+   {
+    "month": "Jul",
+    "mean_c": 8.3,
+    "rain_mm_per_day": 2.27
+   },
+   {
+    "month": "Aug",
+    "mean_c": 9.1,
+    "rain_mm_per_day": 2.53
+   },
+   {
+    "month": "Sep",
+    "mean_c": 10.2,
+    "rain_mm_per_day": 2.58
+   },
+   {
+    "month": "Oct",
+    "mean_c": 12.7,
+    "rain_mm_per_day": 3.25
+   },
+   {
+    "month": "Nov",
+    "mean_c": 15.6,
+    "rain_mm_per_day": 3.54
+   },
+   {
+    "month": "Dec",
+    "mean_c": 18.6,
+    "rain_mm_per_day": 3.7
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/mar-del-plata-average-monthly-temperature-rainfall",
+  "title": "Mar del Plata climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

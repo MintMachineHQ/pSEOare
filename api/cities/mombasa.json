@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Mombasa",
+  "annual_mean_c": 26.2,
+  "warmest_month": "Feb",
+  "warmest_c": 28.4,
+  "coldest_month": "Jul",
+  "coldest_c": 23.9,
+  "seasonal_swing_c": 4.5,
+  "annual_rainfall_mm": 889.0,
+  "wettest_month": "May",
+  "wettest_mm_per_day": 7.0,
+  "driest_month": "Feb",
+  "driest_mm_per_day": 0.52,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 27.9,
+    "rain_mm_per_day": 0.79
+   },
+   {
+    "month": "Feb",
+    "mean_c": 28.4,
+    "rain_mm_per_day": 0.52
+   },
+   {
+    "month": "Mar",
+    "mean_c": 28.2,
+    "rain_mm_per_day": 1.99
+   },
+   {
+    "month": "Apr",
+    "mean_c": 26.9,
+    "rain_mm_per_day": 4.3
+   },
+   {
+    "month": "May",
+    "mean_c": 25.5,
+    "rain_mm_per_day": 7.0
+   },
+   {
+    "month": "Jun",
+    "mean_c": 24.3,
+    "rain_mm_per_day": 2.47
+   },
+   {
+    "month": "Jul",
+    "mean_c": 23.9,
+    "rain_mm_per_day": 1.15
+   },
+   {
+    "month": "Aug",
+    "mean_c": 24.3,
+    "rain_mm_per_day": 0.93
+   },
+   {
+    "month": "Sep",
+    "mean_c": 25.2,
+    "rain_mm_per_day": 1.25
+   },
+   {
+    "month": "Oct",
+    "mean_c": 26.1,
+    "rain_mm_per_day": 3.15
+   },
+   {
+    "month": "Nov",
+    "mean_c": 26.6,
+    "rain_mm_per_day": 3.46
+   },
+   {
+    "month": "Dec",
+    "mean_c": 27.4,
+    "rain_mm_per_day": 2.24
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/mombasa-average-monthly-temperature-rainfall",
+  "title": "Mombasa climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

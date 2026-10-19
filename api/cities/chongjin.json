@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Chongjin",
+  "annual_mean_c": 7.7,
+  "warmest_month": "Aug",
+  "warmest_c": 21.6,
+  "coldest_month": "Jan",
+  "coldest_c": -7.1,
+  "seasonal_swing_c": 28.7,
+  "annual_rainfall_mm": 794.0,
+  "wettest_month": "Aug",
+  "wettest_mm_per_day": 5.91,
+  "driest_month": "Jan",
+  "driest_mm_per_day": 0.31,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": -7.1,
+    "rain_mm_per_day": 0.31
+   },
+   {
+    "month": "Feb",
+    "mean_c": -4.8,
+    "rain_mm_per_day": 0.42
+   },
+   {
+    "month": "Mar",
+    "mean_c": 0.3,
+    "rain_mm_per_day": 0.68
+   },
+   {
+    "month": "Apr",
+    "mean_c": 6.4,
+    "rain_mm_per_day": 1.32
+   },
+   {
+    "month": "May",
+    "mean_c": 12.0,
+    "rain_mm_per_day": 2.92
+   },
+   {
+    "month": "Jun",
+    "mean_c": 16.6,
+    "rain_mm_per_day": 3.11
+   },
+   {
+    "month": "Jul",
+    "mean_c": 20.3,
+    "rain_mm_per_day": 5.23
+   },
+   {
+    "month": "Aug",
+    "mean_c": 21.6,
+    "rain_mm_per_day": 5.91
+   },
+   {
+    "month": "Sep",
+    "mean_c": 17.4,
+    "rain_mm_per_day": 3.18
+   },
+   {
+    "month": "Oct",
+    "mean_c": 10.9,
+    "rain_mm_per_day": 1.6
+   },
+   {
+    "month": "Nov",
+    "mean_c": 2.7,
+    "rain_mm_per_day": 1.1
+   },
+   {
+    "month": "Dec",
+    "mean_c": -4.9,
+    "rain_mm_per_day": 0.34
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/chongjin-average-monthly-temperature-rainfall",
+  "title": "Chongjin climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

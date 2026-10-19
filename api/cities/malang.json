@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Malang",
+  "annual_mean_c": 24.5,
+  "warmest_month": "Oct",
+  "warmest_c": 26.4,
+  "coldest_month": "Jul",
+  "coldest_c": 23.2,
+  "seasonal_swing_c": 3.2,
+  "annual_rainfall_mm": 1876.0,
+  "wettest_month": "Feb",
+  "wettest_mm_per_day": 11.39,
+  "driest_month": "Aug",
+  "driest_mm_per_day": 0.44,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 24.2,
+    "rain_mm_per_day": 10.35
+   },
+   {
+    "month": "Feb",
+    "mean_c": 24.2,
+    "rain_mm_per_day": 11.39
+   },
+   {
+    "month": "Mar",
+    "mean_c": 24.4,
+    "rain_mm_per_day": 9.06
+   },
+   {
+    "month": "Apr",
+    "mean_c": 24.6,
+    "rain_mm_per_day": 6.68
+   },
+   {
+    "month": "May",
+    "mean_c": 24.2,
+    "rain_mm_per_day": 4.08
+   },
+   {
+    "month": "Jun",
+    "mean_c": 23.5,
+    "rain_mm_per_day": 2.32
+   },
+   {
+    "month": "Jul",
+    "mean_c": 23.2,
+    "rain_mm_per_day": 1.18
+   },
+   {
+    "month": "Aug",
+    "mean_c": 23.7,
+    "rain_mm_per_day": 0.44
+   },
+   {
+    "month": "Sep",
+    "mean_c": 25.1,
+    "rain_mm_per_day": 0.7
+   },
+   {
+    "month": "Oct",
+    "mean_c": 26.4,
+    "rain_mm_per_day": 2.08
+   },
+   {
+    "month": "Nov",
+    "mean_c": 26.2,
+    "rain_mm_per_day": 4.62
+   },
+   {
+    "month": "Dec",
+    "mean_c": 24.8,
+    "rain_mm_per_day": 8.81
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/malang-average-monthly-temperature-rainfall",
+  "title": "Malang climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

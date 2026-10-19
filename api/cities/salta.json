@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Salta",
+  "annual_mean_c": 13.9,
+  "warmest_month": "Dec",
+  "warmest_c": 17.7,
+  "coldest_month": "Jul",
+  "coldest_c": 9.0,
+  "seasonal_swing_c": 8.7,
+  "annual_rainfall_mm": 787.0,
+  "wettest_month": "Jan",
+  "wettest_mm_per_day": 5.94,
+  "driest_month": "Jul",
+  "driest_mm_per_day": 0.07,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 17.6,
+    "rain_mm_per_day": 5.94
+   },
+   {
+    "month": "Feb",
+    "mean_c": 16.9,
+    "rain_mm_per_day": 5.81
+   },
+   {
+    "month": "Mar",
+    "mean_c": 15.8,
+    "rain_mm_per_day": 3.75
+   },
+   {
+    "month": "Apr",
+    "mean_c": 13.7,
+    "rain_mm_per_day": 1.89
+   },
+   {
+    "month": "May",
+    "mean_c": 10.6,
+    "rain_mm_per_day": 0.37
+   },
+   {
+    "month": "Jun",
+    "mean_c": 9.5,
+    "rain_mm_per_day": 0.16
+   },
+   {
+    "month": "Jul",
+    "mean_c": 9.0,
+    "rain_mm_per_day": 0.07
+   },
+   {
+    "month": "Aug",
+    "mean_c": 10.7,
+    "rain_mm_per_day": 0.1
+   },
+   {
+    "month": "Sep",
+    "mean_c": 12.8,
+    "rain_mm_per_day": 0.15
+   },
+   {
+    "month": "Oct",
+    "mean_c": 15.9,
+    "rain_mm_per_day": 0.94
+   },
+   {
+    "month": "Nov",
+    "mean_c": 17.1,
+    "rain_mm_per_day": 2.16
+   },
+   {
+    "month": "Dec",
+    "mean_c": 17.7,
+    "rain_mm_per_day": 4.54
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/salta-average-monthly-temperature-rainfall",
+  "title": "Salta climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

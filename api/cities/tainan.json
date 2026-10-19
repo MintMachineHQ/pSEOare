@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Tainan",
+  "annual_mean_c": 24.9,
+  "warmest_month": "Jul",
+  "warmest_c": 28.9,
+  "coldest_month": "Jan",
+  "coldest_c": 19.7,
+  "seasonal_swing_c": 9.2,
+  "annual_rainfall_mm": 1881.0,
+  "wettest_month": "Aug",
+  "wettest_mm_per_day": 14.24,
+  "driest_month": "Feb",
+  "driest_mm_per_day": 1.08,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 19.7,
+    "rain_mm_per_day": 1.26
+   },
+   {
+    "month": "Feb",
+    "mean_c": 20.5,
+    "rain_mm_per_day": 1.08
+   },
+   {
+    "month": "Mar",
+    "mean_c": 22.1,
+    "rain_mm_per_day": 1.55
+   },
+   {
+    "month": "Apr",
+    "mean_c": 24.7,
+    "rain_mm_per_day": 2.63
+   },
+   {
+    "month": "May",
+    "mean_c": 26.9,
+    "rain_mm_per_day": 7.19
+   },
+   {
+    "month": "Jun",
+    "mean_c": 28.2,
+    "rain_mm_per_day": 11.48
+   },
+   {
+    "month": "Jul",
+    "mean_c": 28.9,
+    "rain_mm_per_day": 9.32
+   },
+   {
+    "month": "Aug",
+    "mean_c": 28.7,
+    "rain_mm_per_day": 14.24
+   },
+   {
+    "month": "Sep",
+    "mean_c": 28.0,
+    "rain_mm_per_day": 8.08
+   },
+   {
+    "month": "Oct",
+    "mean_c": 26.2,
+    "rain_mm_per_day": 2.33
+   },
+   {
+    "month": "Nov",
+    "mean_c": 24.3,
+    "rain_mm_per_day": 1.63
+   },
+   {
+    "month": "Dec",
+    "mean_c": 21.2,
+    "rain_mm_per_day": 1.08
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/tainan-average-monthly-temperature-rainfall",
+  "title": "Tainan climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Port-de-Paix",
+  "annual_mean_c": 27.0,
+  "warmest_month": "Aug",
+  "warmest_c": 28.7,
+  "coldest_month": "Jan",
+  "coldest_c": 25.3,
+  "seasonal_swing_c": 3.4,
+  "annual_rainfall_mm": 698.0,
+  "wettest_month": "Oct",
+  "wettest_mm_per_day": 3.66,
+  "driest_month": "Feb",
+  "driest_mm_per_day": 0.8,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 25.3,
+    "rain_mm_per_day": 1.27
+   },
+   {
+    "month": "Feb",
+    "mean_c": 25.3,
+    "rain_mm_per_day": 0.8
+   },
+   {
+    "month": "Mar",
+    "mean_c": 25.4,
+    "rain_mm_per_day": 0.91
+   },
+   {
+    "month": "Apr",
+    "mean_c": 26.2,
+    "rain_mm_per_day": 1.12
+   },
+   {
+    "month": "May",
+    "mean_c": 27.1,
+    "rain_mm_per_day": 2.55
+   },
+   {
+    "month": "Jun",
+    "mean_c": 28.1,
+    "rain_mm_per_day": 2.09
+   },
+   {
+    "month": "Jul",
+    "mean_c": 28.4,
+    "rain_mm_per_day": 1.53
+   },
+   {
+    "month": "Aug",
+    "mean_c": 28.7,
+    "rain_mm_per_day": 2.12
+   },
+   {
+    "month": "Sep",
+    "mean_c": 28.6,
+    "rain_mm_per_day": 2.97
+   },
+   {
+    "month": "Oct",
+    "mean_c": 28.1,
+    "rain_mm_per_day": 3.66
+   },
+   {
+    "month": "Nov",
+    "mean_c": 26.9,
+    "rain_mm_per_day": 2.64
+   },
+   {
+    "month": "Dec",
+    "mean_c": 26.1,
+    "rain_mm_per_day": 1.29
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/port-de-paix-average-monthly-temperature-rainfall",
+  "title": "Port-de-Paix climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

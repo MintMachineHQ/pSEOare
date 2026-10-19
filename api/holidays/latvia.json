@@ -1,7 +1,7 @@
 {
  "answer": {
   "country": "Latvia",
-  "count": 8,
+  "count": 32,
   "holidays": [
    {
     "name": "New Year's Day in Latvia (2016)",
@@ -12,12 +12,44 @@
     "page": "https://pseoare.pages.dev/new-year-s-day-latvia-2016-01-01"
    },
    {
+    "name": "Commemoration Day of Defenders of the Barricades in 1991 in Latvia (2016)",
+    "local_name": "1991. gada barik\u0101\u017eu aizst\u0101vju atceres diena",
+    "date": "2016-01-20",
+    "weekday": "Wednesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/commemoration-day-of-defenders-of-the-barricades-in-1991-latvia-2016-01-20"
+   },
+   {
+    "name": "Christmas Day in Latvia (2016)",
+    "local_name": "Pirmie Ziemassv\u0113tki",
+    "date": "2016-12-25",
+    "weekday": "Sunday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/christmas-day-latvia-2016-12-25"
+   },
+   {
     "name": "New Year's Day in Latvia (2017)",
     "local_name": "Jaungada diena",
     "date": "2017-01-01",
     "weekday": "Sunday",
     "weekend": true,
     "page": "https://pseoare.pages.dev/new-year-s-day-latvia-2017-01-01"
+   },
+   {
+    "name": "Commemoration Day of Defenders of the Barricades in 1991 in Latvia (2017)",
+    "local_name": "1991. gada barik\u0101\u017eu aizst\u0101vju atceres diena",
+    "date": "2017-01-20",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/commemoration-day-of-defenders-of-the-barricades-in-1991-latvia-2017-01-20"
+   },
+   {
+    "name": "Christmas Day in Latvia (2017)",
+    "local_name": "Pirmie Ziemassv\u0113tki",
+    "date": "2017-12-25",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-latvia-2017-12-25"
    },
    {
     "name": "New Year's Day in Latvia (2018)",
@@ -28,12 +60,44 @@
     "page": "https://pseoare.pages.dev/new-year-s-day-latvia-2018-01-01"
    },
    {
+    "name": "Commemoration Day of Defenders of the Barricades in 1991 in Latvia (2018)",
+    "local_name": "1991. gada barik\u0101\u017eu aizst\u0101vju atceres diena",
+    "date": "2018-01-20",
+    "weekday": "Saturday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/commemoration-day-of-defenders-of-the-barricades-in-1991-latvia-2018-01-20"
+   },
+   {
+    "name": "Christmas Day in Latvia (2018)",
+    "local_name": "Pirmie Ziemassv\u0113tki",
+    "date": "2018-12-25",
+    "weekday": "Tuesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-latvia-2018-12-25"
+   },
+   {
     "name": "New Year's Day in Latvia (2019)",
     "local_name": "Jaungada diena",
     "date": "2019-01-01",
     "weekday": "Tuesday",
     "weekend": false,
     "page": "https://pseoare.pages.dev/new-year-s-day-latvia-2019-01-01"
+   },
+   {
+    "name": "Commemoration Day of Defenders of the Barricades in 1991 in Latvia (2019)",
+    "local_name": "1991. gada barik\u0101\u017eu aizst\u0101vju atceres diena",
+    "date": "2019-01-20",
+    "weekday": "Sunday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/commemoration-day-of-defenders-of-the-barricades-in-1991-latvia-2019-01-20"
+   },
+   {
+    "name": "Christmas Day in Latvia (2019)",
+    "local_name": "Pirmie Ziemassv\u0113tki",
+    "date": "2019-12-25",
+    "weekday": "Wednesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-latvia-2019-12-25"
    },
    {
     "name": "New Year's Day in Latvia (2020)",
@@ -44,12 +108,44 @@
     "page": "https://pseoare.pages.dev/new-year-s-day-latvia-2020-01-01"
    },
    {
+    "name": "Commemoration Day of Defenders of the Barricades in 1991 in Latvia (2020)",
+    "local_name": "1991. gada barik\u0101\u017eu aizst\u0101vju atceres diena",
+    "date": "2020-01-20",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/commemoration-day-of-defenders-of-the-barricades-in-1991-latvia-2020-01-20"
+   },
+   {
+    "name": "Christmas Day in Latvia (2020)",
+    "local_name": "Pirmie Ziemassv\u0113tki",
+    "date": "2020-12-25",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-latvia-2020-12-25"
+   },
+   {
     "name": "New Year's Day in Latvia (2021)",
     "local_name": "Jaungada diena",
     "date": "2021-01-01",
     "weekday": "Friday",
     "weekend": false,
     "page": "https://pseoare.pages.dev/new-year-s-day-latvia-2021-01-01"
+   },
+   {
+    "name": "Commemoration Day of Defenders of the Barricades in 1991 in Latvia (2021)",
+    "local_name": "1991. gada barik\u0101\u017eu aizst\u0101vju atceres diena",
+    "date": "2021-01-20",
+    "weekday": "Wednesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/commemoration-day-of-defenders-of-the-barricades-in-1991-latvia-2021-01-20"
+   },
+   {
+    "name": "Christmas Day in Latvia (2021)",
+    "local_name": "Pirmie Ziemassv\u0113tki",
+    "date": "2021-12-25",
+    "weekday": "Saturday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/christmas-day-latvia-2021-12-25"
    },
    {
     "name": "New Year's Day in Latvia (2022)",
@@ -60,12 +156,108 @@
     "page": "https://pseoare.pages.dev/new-year-s-day-latvia-2022-01-01"
    },
    {
+    "name": "Commemoration Day of Defenders of the Barricades in 1991 in Latvia (2022)",
+    "local_name": "1991. gada barik\u0101\u017eu aizst\u0101vju atceres diena",
+    "date": "2022-01-20",
+    "weekday": "Thursday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/commemoration-day-of-defenders-of-the-barricades-in-1991-latvia-2022-01-20"
+   },
+   {
+    "name": "Christmas Day in Latvia (2022)",
+    "local_name": "Pirmie Ziemassv\u0113tki",
+    "date": "2022-12-25",
+    "weekday": "Sunday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/christmas-day-latvia-2022-12-25"
+   },
+   {
     "name": "New Year's Day in Latvia (2023)",
     "local_name": "Jaungada diena",
     "date": "2023-01-01",
     "weekday": "Sunday",
     "weekend": true,
     "page": "https://pseoare.pages.dev/new-year-s-day-latvia-2023-01-01"
+   },
+   {
+    "name": "Commemoration Day of Defenders of the Barricades in 1991 in Latvia (2023)",
+    "local_name": "1991. gada barik\u0101\u017eu aizst\u0101vju atceres diena",
+    "date": "2023-01-20",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/commemoration-day-of-defenders-of-the-barricades-in-1991-latvia-2023-01-20"
+   },
+   {
+    "name": "Christmas Day in Latvia (2023)",
+    "local_name": "Pirmie Ziemassv\u0113tki",
+    "date": "2023-12-25",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-latvia-2023-12-25"
+   },
+   {
+    "name": "Commemoration Day of Defenders of the Barricades in 1991 in Latvia (2024)",
+    "local_name": "1991. gada barik\u0101\u017eu aizst\u0101vju atceres diena",
+    "date": "2024-01-20",
+    "weekday": "Saturday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/commemoration-day-of-defenders-of-the-barricades-in-1991-latvia-2024-01-20"
+   },
+   {
+    "name": "Christmas Day in Latvia (2024)",
+    "local_name": "Pirmie Ziemassv\u0113tki",
+    "date": "2024-12-25",
+    "weekday": "Wednesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-latvia-2024-12-25"
+   },
+   {
+    "name": "Commemoration Day of Defenders of the Barricades in 1991 in Latvia (2025)",
+    "local_name": "1991. gada barik\u0101\u017eu aizst\u0101vju atceres diena",
+    "date": "2025-01-20",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/commemoration-day-of-defenders-of-the-barricades-in-1991-latvia-2025-01-20"
+   },
+   {
+    "name": "Christmas Day in Latvia (2025)",
+    "local_name": "Pirmie Ziemassv\u0113tki",
+    "date": "2025-12-25",
+    "weekday": "Thursday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-latvia-2025-12-25"
+   },
+   {
+    "name": "Commemoration Day of Defenders of the Barricades in 1991 in Latvia (2026)",
+    "local_name": "1991. gada barik\u0101\u017eu aizst\u0101vju atceres diena",
+    "date": "2026-01-20",
+    "weekday": "Tuesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/commemoration-day-of-defenders-of-the-barricades-in-1991-latvia-2026-01-20"
+   },
+   {
+    "name": "Christmas Day in Latvia (2026)",
+    "local_name": "Pirmie Ziemassv\u0113tki",
+    "date": "2026-12-25",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-latvia-2026-12-25"
+   },
+   {
+    "name": "Commemoration Day of Defenders of the Barricades in 1991 in Latvia (2027)",
+    "local_name": "1991. gada barik\u0101\u017eu aizst\u0101vju atceres diena",
+    "date": "2027-01-20",
+    "weekday": "Wednesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/commemoration-day-of-defenders-of-the-barricades-in-1991-latvia-2027-01-20"
+   },
+   {
+    "name": "Christmas Day in Latvia (2027)",
+    "local_name": "Pirmie Ziemassv\u0113tki",
+    "date": "2027-12-25",
+    "weekday": "Saturday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/christmas-day-latvia-2027-12-25"
    }
   ]
  },
@@ -74,7 +266,7 @@
   "title": "Public holidays for Latvia",
   "site": "https://pseoare.pages.dev"
  },
- "updated": "2026-10-19T20:41:30.228277+00:00",
+ "updated": "2026-10-19T20:49:39.946179+00:00",
  "license": "CC-BY-4.0",
  "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
 }

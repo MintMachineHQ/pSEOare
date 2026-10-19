@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Kisumu",
+  "annual_mean_c": 20.5,
+  "warmest_month": "Mar",
+  "warmest_c": 22.1,
+  "coldest_month": "Jul",
+  "coldest_c": 19.2,
+  "seasonal_swing_c": 2.9,
+  "annual_rainfall_mm": 2004.0,
+  "wettest_month": "Apr",
+  "wettest_mm_per_day": 9.97,
+  "driest_month": "Feb",
+  "driest_mm_per_day": 2.23,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 20.8,
+    "rain_mm_per_day": 2.48
+   },
+   {
+    "month": "Feb",
+    "mean_c": 21.8,
+    "rain_mm_per_day": 2.23
+   },
+   {
+    "month": "Mar",
+    "mean_c": 22.1,
+    "rain_mm_per_day": 5.47
+   },
+   {
+    "month": "Apr",
+    "mean_c": 21.1,
+    "rain_mm_per_day": 9.97
+   },
+   {
+    "month": "May",
+    "mean_c": 20.3,
+    "rain_mm_per_day": 8.66
+   },
+   {
+    "month": "Jun",
+    "mean_c": 19.6,
+    "rain_mm_per_day": 4.77
+   },
+   {
+    "month": "Jul",
+    "mean_c": 19.2,
+    "rain_mm_per_day": 3.6
+   },
+   {
+    "month": "Aug",
+    "mean_c": 19.6,
+    "rain_mm_per_day": 4.77
+   },
+   {
+    "month": "Sep",
+    "mean_c": 20.5,
+    "rain_mm_per_day": 5.4
+   },
+   {
+    "month": "Oct",
+    "mean_c": 20.8,
+    "rain_mm_per_day": 6.8
+   },
+   {
+    "month": "Nov",
+    "mean_c": 20.4,
+    "rain_mm_per_day": 7.67
+   },
+   {
+    "month": "Dec",
+    "mean_c": 20.3,
+    "rain_mm_per_day": 4.09
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/kisumu-average-monthly-temperature-rainfall",
+  "title": "Kisumu climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

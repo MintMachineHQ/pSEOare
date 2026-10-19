@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Hobart",
+  "annual_mean_c": 12.2,
+  "warmest_month": "Jan",
+  "warmest_c": 16.6,
+  "coldest_month": "Jul",
+  "coldest_c": 8.3,
+  "seasonal_swing_c": 8.3,
+  "annual_rainfall_mm": 717.0,
+  "wettest_month": "Aug",
+  "wettest_mm_per_day": 2.41,
+  "driest_month": "Feb",
+  "driest_mm_per_day": 1.54,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 16.6,
+    "rain_mm_per_day": 1.8
+   },
+   {
+    "month": "Feb",
+    "mean_c": 16.2,
+    "rain_mm_per_day": 1.54
+   },
+   {
+    "month": "Mar",
+    "mean_c": 15.2,
+    "rain_mm_per_day": 1.84
+   },
+   {
+    "month": "Apr",
+    "mean_c": 12.8,
+    "rain_mm_per_day": 1.77
+   },
+   {
+    "month": "May",
+    "mean_c": 10.6,
+    "rain_mm_per_day": 1.78
+   },
+   {
+    "month": "Jun",
+    "mean_c": 8.9,
+    "rain_mm_per_day": 2.18
+   },
+   {
+    "month": "Jul",
+    "mean_c": 8.3,
+    "rain_mm_per_day": 1.93
+   },
+   {
+    "month": "Aug",
+    "mean_c": 8.5,
+    "rain_mm_per_day": 2.41
+   },
+   {
+    "month": "Sep",
+    "mean_c": 9.7,
+    "rain_mm_per_day": 2.22
+   },
+   {
+    "month": "Oct",
+    "mean_c": 11.3,
+    "rain_mm_per_day": 2.05
+   },
+   {
+    "month": "Nov",
+    "mean_c": 13.2,
+    "rain_mm_per_day": 2.09
+   },
+   {
+    "month": "Dec",
+    "mean_c": 14.9,
+    "rain_mm_per_day": 1.98
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/hobart-average-monthly-temperature-rainfall",
+  "title": "Hobart climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

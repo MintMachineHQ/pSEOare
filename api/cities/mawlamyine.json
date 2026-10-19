@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Mawlamyine",
+  "annual_mean_c": 27.7,
+  "warmest_month": "Apr",
+  "warmest_c": 30.8,
+  "coldest_month": "Dec",
+  "coldest_c": 25.3,
+  "seasonal_swing_c": 5.5,
+  "annual_rainfall_mm": 2197.0,
+  "wettest_month": "Jul",
+  "wettest_mm_per_day": 16.32,
+  "driest_month": "Feb",
+  "driest_mm_per_day": 0.11,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 25.7,
+    "rain_mm_per_day": 0.32
+   },
+   {
+    "month": "Feb",
+    "mean_c": 27.9,
+    "rain_mm_per_day": 0.11
+   },
+   {
+    "month": "Mar",
+    "mean_c": 29.6,
+    "rain_mm_per_day": 0.91
+   },
+   {
+    "month": "Apr",
+    "mean_c": 30.8,
+    "rain_mm_per_day": 1.69
+   },
+   {
+    "month": "May",
+    "mean_c": 29.3,
+    "rain_mm_per_day": 7.8
+   },
+   {
+    "month": "Jun",
+    "mean_c": 27.9,
+    "rain_mm_per_day": 12.93
+   },
+   {
+    "month": "Jul",
+    "mean_c": 27.2,
+    "rain_mm_per_day": 16.32
+   },
+   {
+    "month": "Aug",
+    "mean_c": 27.0,
+    "rain_mm_per_day": 14.71
+   },
+   {
+    "month": "Sep",
+    "mean_c": 27.2,
+    "rain_mm_per_day": 10.53
+   },
+   {
+    "month": "Oct",
+    "mean_c": 27.9,
+    "rain_mm_per_day": 5.82
+   },
+   {
+    "month": "Nov",
+    "mean_c": 27.1,
+    "rain_mm_per_day": 0.89
+   },
+   {
+    "month": "Dec",
+    "mean_c": 25.3,
+    "rain_mm_per_day": 0.25
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/mawlamyine-average-monthly-temperature-rainfall",
+  "title": "Mawlamyine climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

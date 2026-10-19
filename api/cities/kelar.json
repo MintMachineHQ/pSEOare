@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Kelar",
+  "annual_mean_c": 21.3,
+  "warmest_month": "Jul",
+  "warmest_c": 34.9,
+  "coldest_month": "Jan",
+  "coldest_c": 7.4,
+  "seasonal_swing_c": 27.5,
+  "annual_rainfall_mm": 331.0,
+  "wettest_month": "Feb",
+  "wettest_mm_per_day": 1.84,
+  "driest_month": "Aug",
+  "driest_mm_per_day": 0.01,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 7.4,
+    "rain_mm_per_day": 1.6
+   },
+   {
+    "month": "Feb",
+    "mean_c": 9.2,
+    "rain_mm_per_day": 1.84
+   },
+   {
+    "month": "Mar",
+    "mean_c": 13.9,
+    "rain_mm_per_day": 1.73
+   },
+   {
+    "month": "Apr",
+    "mean_c": 19.2,
+    "rain_mm_per_day": 1.41
+   },
+   {
+    "month": "May",
+    "mean_c": 25.6,
+    "rain_mm_per_day": 0.48
+   },
+   {
+    "month": "Jun",
+    "mean_c": 31.7,
+    "rain_mm_per_day": 0.02
+   },
+   {
+    "month": "Jul",
+    "mean_c": 34.9,
+    "rain_mm_per_day": 0.04
+   },
+   {
+    "month": "Aug",
+    "mean_c": 34.7,
+    "rain_mm_per_day": 0.01
+   },
+   {
+    "month": "Sep",
+    "mean_c": 30.2,
+    "rain_mm_per_day": 0.04
+   },
+   {
+    "month": "Oct",
+    "mean_c": 24.1,
+    "rain_mm_per_day": 0.68
+   },
+   {
+    "month": "Nov",
+    "mean_c": 14.6,
+    "rain_mm_per_day": 1.62
+   },
+   {
+    "month": "Dec",
+    "mean_c": 9.5,
+    "rain_mm_per_day": 1.42
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/kelar-average-monthly-temperature-rainfall",
+  "title": "Kelar climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

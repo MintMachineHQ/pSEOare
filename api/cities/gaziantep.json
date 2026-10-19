@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Gaziantep",
+  "annual_mean_c": 15.7,
+  "warmest_month": "Jul",
+  "warmest_c": 29.1,
+  "coldest_month": "Jan",
+  "coldest_c": 2.4,
+  "seasonal_swing_c": 26.7,
+  "annual_rainfall_mm": 464.0,
+  "wettest_month": "Dec",
+  "wettest_mm_per_day": 2.57,
+  "driest_month": "Jul",
+  "driest_mm_per_day": 0.07,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 2.4,
+    "rain_mm_per_day": 2.52
+   },
+   {
+    "month": "Feb",
+    "mean_c": 4.5,
+    "rain_mm_per_day": 2.45
+   },
+   {
+    "month": "Mar",
+    "mean_c": 8.9,
+    "rain_mm_per_day": 1.75
+   },
+   {
+    "month": "Apr",
+    "mean_c": 13.5,
+    "rain_mm_per_day": 1.53
+   },
+   {
+    "month": "May",
+    "mean_c": 18.9,
+    "rain_mm_per_day": 0.84
+   },
+   {
+    "month": "Jun",
+    "mean_c": 24.7,
+    "rain_mm_per_day": 0.29
+   },
+   {
+    "month": "Jul",
+    "mean_c": 29.1,
+    "rain_mm_per_day": 0.07
+   },
+   {
+    "month": "Aug",
+    "mean_c": 28.9,
+    "rain_mm_per_day": 0.11
+   },
+   {
+    "month": "Sep",
+    "mean_c": 24.5,
+    "rain_mm_per_day": 0.32
+   },
+   {
+    "month": "Oct",
+    "mean_c": 18.1,
+    "rain_mm_per_day": 1.04
+   },
+   {
+    "month": "Nov",
+    "mean_c": 9.7,
+    "rain_mm_per_day": 1.76
+   },
+   {
+    "month": "Dec",
+    "mean_c": 4.2,
+    "rain_mm_per_day": 2.57
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/gaziantep-average-monthly-temperature-rainfall",
+  "title": "Gaziantep climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

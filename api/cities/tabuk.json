@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Tabuk",
+  "annual_mean_c": 21.6,
+  "warmest_month": "Aug",
+  "warmest_c": 31.4,
+  "coldest_month": "Jan",
+  "coldest_c": 9.8,
+  "seasonal_swing_c": 21.6,
+  "annual_rainfall_mm": 22.0,
+  "wettest_month": "Jan",
+  "wettest_mm_per_day": 0.23,
+  "driest_month": "Jun",
+  "driest_mm_per_day": 0.0,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 9.8,
+    "rain_mm_per_day": 0.23
+   },
+   {
+    "month": "Feb",
+    "mean_c": 12.2,
+    "rain_mm_per_day": 0.05
+   },
+   {
+    "month": "Mar",
+    "mean_c": 16.6,
+    "rain_mm_per_day": 0.06
+   },
+   {
+    "month": "Apr",
+    "mean_c": 21.1,
+    "rain_mm_per_day": 0.05
+   },
+   {
+    "month": "May",
+    "mean_c": 25.9,
+    "rain_mm_per_day": 0.1
+   },
+   {
+    "month": "Jun",
+    "mean_c": 29.5,
+    "rain_mm_per_day": 0.0
+   },
+   {
+    "month": "Jul",
+    "mean_c": 31.2,
+    "rain_mm_per_day": 0.0
+   },
+   {
+    "month": "Aug",
+    "mean_c": 31.4,
+    "rain_mm_per_day": 0.0
+   },
+   {
+    "month": "Sep",
+    "mean_c": 28.8,
+    "rain_mm_per_day": 0.0
+   },
+   {
+    "month": "Oct",
+    "mean_c": 24.1,
+    "rain_mm_per_day": 0.02
+   },
+   {
+    "month": "Nov",
+    "mean_c": 16.8,
+    "rain_mm_per_day": 0.15
+   },
+   {
+    "month": "Dec",
+    "mean_c": 11.6,
+    "rain_mm_per_day": 0.05
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/tabuk-average-monthly-temperature-rainfall",
+  "title": "Tabuk climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Ile-Ife",
+  "annual_mean_c": 24.9,
+  "warmest_month": "Mar",
+  "warmest_c": 26.4,
+  "coldest_month": "Aug",
+  "coldest_c": 23.9,
+  "seasonal_swing_c": 2.5,
+  "annual_rainfall_mm": 1712.0,
+  "wettest_month": "Sep",
+  "wettest_mm_per_day": 10.58,
+  "driest_month": "Dec",
+  "driest_mm_per_day": 0.62,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 24.1,
+    "rain_mm_per_day": 0.7
+   },
+   {
+    "month": "Feb",
+    "mean_c": 25.9,
+    "rain_mm_per_day": 0.94
+   },
+   {
+    "month": "Mar",
+    "mean_c": 26.4,
+    "rain_mm_per_day": 2.11
+   },
+   {
+    "month": "Apr",
+    "mean_c": 26.1,
+    "rain_mm_per_day": 4.19
+   },
+   {
+    "month": "May",
+    "mean_c": 25.6,
+    "rain_mm_per_day": 5.81
+   },
+   {
+    "month": "Jun",
+    "mean_c": 24.7,
+    "rain_mm_per_day": 8.23
+   },
+   {
+    "month": "Jul",
+    "mean_c": 24.1,
+    "rain_mm_per_day": 7.83
+   },
+   {
+    "month": "Aug",
+    "mean_c": 23.9,
+    "rain_mm_per_day": 6.46
+   },
+   {
+    "month": "Sep",
+    "mean_c": 24.4,
+    "rain_mm_per_day": 10.58
+   },
+   {
+    "month": "Oct",
+    "mean_c": 24.9,
+    "rain_mm_per_day": 7.02
+   },
+   {
+    "month": "Nov",
+    "mean_c": 25.1,
+    "rain_mm_per_day": 1.83
+   },
+   {
+    "month": "Dec",
+    "mean_c": 24.3,
+    "rain_mm_per_day": 0.62
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/ile-ife-average-monthly-temperature-rainfall",
+  "title": "Ile-Ife climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

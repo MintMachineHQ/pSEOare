@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Harbin",
+  "annual_mean_c": 4.0,
+  "warmest_month": "Jul",
+  "warmest_c": 23.4,
+  "coldest_month": "Jan",
+  "coldest_c": -19.0,
+  "seasonal_swing_c": 42.4,
+  "annual_rainfall_mm": 573.0,
+  "wettest_month": "Jul",
+  "wettest_mm_per_day": 4.47,
+  "driest_month": "Jan",
+  "driest_mm_per_day": 0.19,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": -19.0,
+    "rain_mm_per_day": 0.19
+   },
+   {
+    "month": "Feb",
+    "mean_c": -14.5,
+    "rain_mm_per_day": 0.23
+   },
+   {
+    "month": "Mar",
+    "mean_c": -4.0,
+    "rain_mm_per_day": 0.42
+   },
+   {
+    "month": "Apr",
+    "mean_c": 6.4,
+    "rain_mm_per_day": 0.81
+   },
+   {
+    "month": "May",
+    "mean_c": 14.7,
+    "rain_mm_per_day": 1.94
+   },
+   {
+    "month": "Jun",
+    "mean_c": 20.8,
+    "rain_mm_per_day": 3.53
+   },
+   {
+    "month": "Jul",
+    "mean_c": 23.4,
+    "rain_mm_per_day": 4.47
+   },
+   {
+    "month": "Aug",
+    "mean_c": 21.6,
+    "rain_mm_per_day": 3.73
+   },
+   {
+    "month": "Sep",
+    "mean_c": 15.2,
+    "rain_mm_per_day": 1.92
+   },
+   {
+    "month": "Oct",
+    "mean_c": 5.3,
+    "rain_mm_per_day": 0.76
+   },
+   {
+    "month": "Nov",
+    "mean_c": -6.0,
+    "rain_mm_per_day": 0.54
+   },
+   {
+    "month": "Dec",
+    "mean_c": -16.7,
+    "rain_mm_per_day": 0.3
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/harbin-average-monthly-temperature-rainfall",
+  "title": "Harbin climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

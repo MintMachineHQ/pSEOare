@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Morogoro",
+  "annual_mean_c": 23.7,
+  "warmest_month": "Nov",
+  "warmest_c": 25.6,
+  "coldest_month": "Jun",
+  "coldest_c": 21.0,
+  "seasonal_swing_c": 4.6,
+  "annual_rainfall_mm": 1159.0,
+  "wettest_month": "Apr",
+  "wettest_mm_per_day": 6.46,
+  "driest_month": "Jul",
+  "driest_mm_per_day": 0.35,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 24.7,
+    "rain_mm_per_day": 5.76
+   },
+   {
+    "month": "Feb",
+    "mean_c": 24.7,
+    "rain_mm_per_day": 4.61
+   },
+   {
+    "month": "Mar",
+    "mean_c": 24.3,
+    "rain_mm_per_day": 6.11
+   },
+   {
+    "month": "Apr",
+    "mean_c": 23.4,
+    "rain_mm_per_day": 6.46
+   },
+   {
+    "month": "May",
+    "mean_c": 22.1,
+    "rain_mm_per_day": 2.8
+   },
+   {
+    "month": "Jun",
+    "mean_c": 21.0,
+    "rain_mm_per_day": 0.52
+   },
+   {
+    "month": "Jul",
+    "mean_c": 21.1,
+    "rain_mm_per_day": 0.35
+   },
+   {
+    "month": "Aug",
+    "mean_c": 22.4,
+    "rain_mm_per_day": 0.37
+   },
+   {
+    "month": "Sep",
+    "mean_c": 24.2,
+    "rain_mm_per_day": 0.52
+   },
+   {
+    "month": "Oct",
+    "mean_c": 25.4,
+    "rain_mm_per_day": 1.85
+   },
+   {
+    "month": "Nov",
+    "mean_c": 25.6,
+    "rain_mm_per_day": 3.51
+   },
+   {
+    "month": "Dec",
+    "mean_c": 25.3,
+    "rain_mm_per_day": 5.28
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/morogoro-average-monthly-temperature-rainfall",
+  "title": "Morogoro climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

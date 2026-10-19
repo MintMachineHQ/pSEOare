@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Port Said",
+  "annual_mean_c": 21.4,
+  "warmest_month": "Aug",
+  "warmest_c": 26.9,
+  "coldest_month": "Feb",
+  "coldest_c": 15.9,
+  "seasonal_swing_c": 11.0,
+  "annual_rainfall_mm": 156.0,
+  "wettest_month": "Jan",
+  "wettest_mm_per_day": 1.32,
+  "driest_month": "Aug",
+  "driest_mm_per_day": 0.0,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 16.1,
+    "rain_mm_per_day": 1.32
+   },
+   {
+    "month": "Feb",
+    "mean_c": 15.9,
+    "rain_mm_per_day": 0.9
+   },
+   {
+    "month": "Mar",
+    "mean_c": 16.8,
+    "rain_mm_per_day": 0.48
+   },
+   {
+    "month": "Apr",
+    "mean_c": 18.3,
+    "rain_mm_per_day": 0.24
+   },
+   {
+    "month": "May",
+    "mean_c": 21.0,
+    "rain_mm_per_day": 0.03
+   },
+   {
+    "month": "Jun",
+    "mean_c": 24.0,
+    "rain_mm_per_day": 0.01
+   },
+   {
+    "month": "Jul",
+    "mean_c": 26.0,
+    "rain_mm_per_day": 0.01
+   },
+   {
+    "month": "Aug",
+    "mean_c": 26.9,
+    "rain_mm_per_day": 0.0
+   },
+   {
+    "month": "Sep",
+    "mean_c": 26.3,
+    "rain_mm_per_day": 0.0
+   },
+   {
+    "month": "Oct",
+    "mean_c": 24.6,
+    "rain_mm_per_day": 0.3
+   },
+   {
+    "month": "Nov",
+    "mean_c": 21.8,
+    "rain_mm_per_day": 0.77
+   },
+   {
+    "month": "Dec",
+    "mean_c": 18.4,
+    "rain_mm_per_day": 1.08
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/port-said-average-monthly-temperature-rainfall",
+  "title": "Port Said climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

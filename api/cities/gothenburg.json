@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Gothenburg",
+  "annual_mean_c": 8.4,
+  "warmest_month": "Jul",
+  "warmest_c": 17.4,
+  "coldest_month": "Feb",
+  "coldest_c": 0.1,
+  "seasonal_swing_c": 17.3,
+  "annual_rainfall_mm": 1030.0,
+  "wettest_month": "Oct",
+  "wettest_mm_per_day": 3.63,
+  "driest_month": "Apr",
+  "driest_mm_per_day": 1.8,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 0.5,
+    "rain_mm_per_day": 3.04
+   },
+   {
+    "month": "Feb",
+    "mean_c": 0.1,
+    "rain_mm_per_day": 2.41
+   },
+   {
+    "month": "Mar",
+    "mean_c": 2.0,
+    "rain_mm_per_day": 1.93
+   },
+   {
+    "month": "Apr",
+    "mean_c": 6.5,
+    "rain_mm_per_day": 1.8
+   },
+   {
+    "month": "May",
+    "mean_c": 11.2,
+    "rain_mm_per_day": 2.06
+   },
+   {
+    "month": "Jun",
+    "mean_c": 14.9,
+    "rain_mm_per_day": 2.99
+   },
+   {
+    "month": "Jul",
+    "mean_c": 17.4,
+    "rain_mm_per_day": 3.06
+   },
+   {
+    "month": "Aug",
+    "mean_c": 17.1,
+    "rain_mm_per_day": 3.49
+   },
+   {
+    "month": "Sep",
+    "mean_c": 13.9,
+    "rain_mm_per_day": 2.84
+   },
+   {
+    "month": "Oct",
+    "mean_c": 9.3,
+    "rain_mm_per_day": 3.63
+   },
+   {
+    "month": "Nov",
+    "mean_c": 5.5,
+    "rain_mm_per_day": 3.33
+   },
+   {
+    "month": "Dec",
+    "mean_c": 2.3,
+    "rain_mm_per_day": 3.3
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/gothenburg-average-monthly-temperature-rainfall",
+  "title": "Gothenburg climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

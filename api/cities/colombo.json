@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Colombo",
+  "annual_mean_c": 26.4,
+  "warmest_month": "Apr",
+  "warmest_c": 27.6,
+  "coldest_month": "Jan",
+  "coldest_c": 25.4,
+  "seasonal_swing_c": 2.2,
+  "annual_rainfall_mm": 1994.0,
+  "wettest_month": "Nov",
+  "wettest_mm_per_day": 10.15,
+  "driest_month": "Jan",
+  "driest_mm_per_day": 2.44,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 25.4,
+    "rain_mm_per_day": 2.44
+   },
+   {
+    "month": "Feb",
+    "mean_c": 26.2,
+    "rain_mm_per_day": 2.51
+   },
+   {
+    "month": "Mar",
+    "mean_c": 27.4,
+    "rain_mm_per_day": 3.7
+   },
+   {
+    "month": "Apr",
+    "mean_c": 27.6,
+    "rain_mm_per_day": 7.52
+   },
+   {
+    "month": "May",
+    "mean_c": 27.3,
+    "rain_mm_per_day": 7.21
+   },
+   {
+    "month": "Jun",
+    "mean_c": 26.6,
+    "rain_mm_per_day": 4.78
+   },
+   {
+    "month": "Jul",
+    "mean_c": 26.1,
+    "rain_mm_per_day": 3.19
+   },
+   {
+    "month": "Aug",
+    "mean_c": 26.1,
+    "rain_mm_per_day": 3.64
+   },
+   {
+    "month": "Sep",
+    "mean_c": 26.2,
+    "rain_mm_per_day": 5.4
+   },
+   {
+    "month": "Oct",
+    "mean_c": 26.2,
+    "rain_mm_per_day": 9.41
+   },
+   {
+    "month": "Nov",
+    "mean_c": 26.1,
+    "rain_mm_per_day": 10.15
+   },
+   {
+    "month": "Dec",
+    "mean_c": 25.6,
+    "rain_mm_per_day": 5.65
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/colombo-average-monthly-temperature-rainfall",
+  "title": "Colombo climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

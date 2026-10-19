@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Bobo-Dioulasso",
+  "annual_mean_c": 27.1,
+  "warmest_month": "Apr",
+  "warmest_c": 31.1,
+  "coldest_month": "Dec",
+  "coldest_c": 24.2,
+  "seasonal_swing_c": 6.9,
+  "annual_rainfall_mm": 1107.0,
+  "wettest_month": "Aug",
+  "wettest_mm_per_day": 8.98,
+  "driest_month": "Dec",
+  "driest_mm_per_day": 0.0,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 24.6,
+    "rain_mm_per_day": 0.04
+   },
+   {
+    "month": "Feb",
+    "mean_c": 28.0,
+    "rain_mm_per_day": 0.2
+   },
+   {
+    "month": "Mar",
+    "mean_c": 30.7,
+    "rain_mm_per_day": 0.48
+   },
+   {
+    "month": "Apr",
+    "mean_c": 31.1,
+    "rain_mm_per_day": 1.83
+   },
+   {
+    "month": "May",
+    "mean_c": 29.8,
+    "rain_mm_per_day": 3.37
+   },
+   {
+    "month": "Jun",
+    "mean_c": 27.8,
+    "rain_mm_per_day": 4.99
+   },
+   {
+    "month": "Jul",
+    "mean_c": 25.9,
+    "rain_mm_per_day": 7.4
+   },
+   {
+    "month": "Aug",
+    "mean_c": 25.2,
+    "rain_mm_per_day": 8.98
+   },
+   {
+    "month": "Sep",
+    "mean_c": 25.4,
+    "rain_mm_per_day": 6.64
+   },
+   {
+    "month": "Oct",
+    "mean_c": 26.4,
+    "rain_mm_per_day": 2.33
+   },
+   {
+    "month": "Nov",
+    "mean_c": 25.9,
+    "rain_mm_per_day": 0.16
+   },
+   {
+    "month": "Dec",
+    "mean_c": 24.2,
+    "rain_mm_per_day": 0.0
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/bobo-dioulasso-average-monthly-temperature-rainfall",
+  "title": "Bobo-Dioulasso climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

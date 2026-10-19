@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Sakai",
+  "annual_mean_c": 14.1,
+  "warmest_month": "Aug",
+  "warmest_c": 25.9,
+  "coldest_month": "Jan",
+  "coldest_c": 2.6,
+  "seasonal_swing_c": 23.3,
+  "annual_rainfall_mm": 1749.0,
+  "wettest_month": "Sep",
+  "wettest_mm_per_day": 7.49,
+  "driest_month": "Jan",
+  "driest_mm_per_day": 2.14,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 2.6,
+    "rain_mm_per_day": 2.14
+   },
+   {
+    "month": "Feb",
+    "mean_c": 3.7,
+    "rain_mm_per_day": 2.83
+   },
+   {
+    "month": "Mar",
+    "mean_c": 6.8,
+    "rain_mm_per_day": 3.74
+   },
+   {
+    "month": "Apr",
+    "mean_c": 12.1,
+    "rain_mm_per_day": 4.5
+   },
+   {
+    "month": "May",
+    "mean_c": 17.1,
+    "rain_mm_per_day": 5.14
+   },
+   {
+    "month": "Jun",
+    "mean_c": 21.1,
+    "rain_mm_per_day": 7.09
+   },
+   {
+    "month": "Jul",
+    "mean_c": 25.1,
+    "rain_mm_per_day": 7.11
+   },
+   {
+    "month": "Aug",
+    "mean_c": 25.9,
+    "rain_mm_per_day": 5.74
+   },
+   {
+    "month": "Sep",
+    "mean_c": 22.3,
+    "rain_mm_per_day": 7.49
+   },
+   {
+    "month": "Oct",
+    "mean_c": 16.3,
+    "rain_mm_per_day": 6.18
+   },
+   {
+    "month": "Nov",
+    "mean_c": 10.6,
+    "rain_mm_per_day": 3.1
+   },
+   {
+    "month": "Dec",
+    "mean_c": 5.0,
+    "rain_mm_per_day": 2.46
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/sakai-average-monthly-temperature-rainfall",
+  "title": "Sakai climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

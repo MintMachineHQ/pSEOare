@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Muzaffarabad",
+  "annual_mean_c": 10.8,
+  "warmest_month": "Jul",
+  "warmest_c": 20.4,
+  "coldest_month": "Jan",
+  "coldest_c": -0.7,
+  "seasonal_swing_c": 21.1,
+  "annual_rainfall_mm": 854.0,
+  "wettest_month": "Jul",
+  "wettest_mm_per_day": 4.04,
+  "driest_month": "Dec",
+  "driest_mm_per_day": 0.97,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": -0.7,
+    "rain_mm_per_day": 1.76
+   },
+   {
+    "month": "Feb",
+    "mean_c": 0.7,
+    "rain_mm_per_day": 3.34
+   },
+   {
+    "month": "Mar",
+    "mean_c": 5.9,
+    "rain_mm_per_day": 3.14
+   },
+   {
+    "month": "Apr",
+    "mean_c": 11.3,
+    "rain_mm_per_day": 2.98
+   },
+   {
+    "month": "May",
+    "mean_c": 16.4,
+    "rain_mm_per_day": 1.7
+   },
+   {
+    "month": "Jun",
+    "mean_c": 19.9,
+    "rain_mm_per_day": 2.27
+   },
+   {
+    "month": "Jul",
+    "mean_c": 20.4,
+    "rain_mm_per_day": 4.04
+   },
+   {
+    "month": "Aug",
+    "mean_c": 19.0,
+    "rain_mm_per_day": 4.04
+   },
+   {
+    "month": "Sep",
+    "mean_c": 16.2,
+    "rain_mm_per_day": 1.84
+   },
+   {
+    "month": "Oct",
+    "mean_c": 11.6,
+    "rain_mm_per_day": 0.98
+   },
+   {
+    "month": "Nov",
+    "mean_c": 6.1,
+    "rain_mm_per_day": 1.04
+   },
+   {
+    "month": "Dec",
+    "mean_c": 1.9,
+    "rain_mm_per_day": 0.97
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/muzaffarabad-average-monthly-temperature-rainfall",
+  "title": "Muzaffarabad climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Canberra",
+  "annual_mean_c": 12.6,
+  "warmest_month": "Jan",
+  "warmest_c": 20.8,
+  "coldest_month": "Jul",
+  "coldest_c": 5.2,
+  "seasonal_swing_c": 15.6,
+  "annual_rainfall_mm": 709.0,
+  "wettest_month": "Feb",
+  "wettest_mm_per_day": 3.27,
+  "driest_month": "May",
+  "driest_mm_per_day": 1.01,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 20.8,
+    "rain_mm_per_day": 1.88
+   },
+   {
+    "month": "Feb",
+    "mean_c": 19.1,
+    "rain_mm_per_day": 3.27
+   },
+   {
+    "month": "Mar",
+    "mean_c": 16.5,
+    "rain_mm_per_day": 2.18
+   },
+   {
+    "month": "Apr",
+    "mean_c": 12.9,
+    "rain_mm_per_day": 1.37
+   },
+   {
+    "month": "May",
+    "mean_c": 8.8,
+    "rain_mm_per_day": 1.01
+   },
+   {
+    "month": "Jun",
+    "mean_c": 6.2,
+    "rain_mm_per_day": 2.17
+   },
+   {
+    "month": "Jul",
+    "mean_c": 5.2,
+    "rain_mm_per_day": 1.47
+   },
+   {
+    "month": "Aug",
+    "mean_c": 6.0,
+    "rain_mm_per_day": 1.72
+   },
+   {
+    "month": "Sep",
+    "mean_c": 9.2,
+    "rain_mm_per_day": 1.58
+   },
+   {
+    "month": "Oct",
+    "mean_c": 12.5,
+    "rain_mm_per_day": 1.89
+   },
+   {
+    "month": "Nov",
+    "mean_c": 16.0,
+    "rain_mm_per_day": 2.49
+   },
+   {
+    "month": "Dec",
+    "mean_c": 18.2,
+    "rain_mm_per_day": 2.28
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/canberra-average-monthly-temperature-rainfall",
+  "title": "Canberra climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

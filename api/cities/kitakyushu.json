@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Kitakyushu",
+  "annual_mean_c": 17.0,
+  "warmest_month": "Aug",
+  "warmest_c": 27.4,
+  "coldest_month": "Jan",
+  "coldest_c": 7.6,
+  "seasonal_swing_c": 19.8,
+  "annual_rainfall_mm": 1855.0,
+  "wettest_month": "Jul",
+  "wettest_mm_per_day": 10.97,
+  "driest_month": "Jan",
+  "driest_mm_per_day": 2.48,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 7.6,
+    "rain_mm_per_day": 2.48
+   },
+   {
+    "month": "Feb",
+    "mean_c": 8.3,
+    "rain_mm_per_day": 3.02
+   },
+   {
+    "month": "Mar",
+    "mean_c": 10.6,
+    "rain_mm_per_day": 3.88
+   },
+   {
+    "month": "Apr",
+    "mean_c": 14.4,
+    "rain_mm_per_day": 4.74
+   },
+   {
+    "month": "May",
+    "mean_c": 18.5,
+    "rain_mm_per_day": 5.03
+   },
+   {
+    "month": "Jun",
+    "mean_c": 22.0,
+    "rain_mm_per_day": 8.84
+   },
+   {
+    "month": "Jul",
+    "mean_c": 25.8,
+    "rain_mm_per_day": 10.97
+   },
+   {
+    "month": "Aug",
+    "mean_c": 27.4,
+    "rain_mm_per_day": 6.19
+   },
+   {
+    "month": "Sep",
+    "mean_c": 24.3,
+    "rain_mm_per_day": 6.68
+   },
+   {
+    "month": "Oct",
+    "mean_c": 19.9,
+    "rain_mm_per_day": 3.45
+   },
+   {
+    "month": "Nov",
+    "mean_c": 15.1,
+    "rain_mm_per_day": 2.95
+   },
+   {
+    "month": "Dec",
+    "mean_c": 9.9,
+    "rain_mm_per_day": 2.78
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/kitakyushu-average-monthly-temperature-rainfall",
+  "title": "Kitakyushu climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

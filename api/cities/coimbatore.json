@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Coimbatore",
+  "annual_mean_c": 24.6,
+  "warmest_month": "Apr",
+  "warmest_c": 28.4,
+  "coldest_month": "Dec",
+  "coldest_c": 22.0,
+  "seasonal_swing_c": 6.4,
+  "annual_rainfall_mm": 1137.0,
+  "wettest_month": "Oct",
+  "wettest_mm_per_day": 6.19,
+  "driest_month": "Jan",
+  "driest_mm_per_day": 0.18,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 22.8,
+    "rain_mm_per_day": 0.18
+   },
+   {
+    "month": "Feb",
+    "mean_c": 25.1,
+    "rain_mm_per_day": 0.33
+   },
+   {
+    "month": "Mar",
+    "mean_c": 27.7,
+    "rain_mm_per_day": 0.97
+   },
+   {
+    "month": "Apr",
+    "mean_c": 28.4,
+    "rain_mm_per_day": 2.0
+   },
+   {
+    "month": "May",
+    "mean_c": 26.6,
+    "rain_mm_per_day": 3.8
+   },
+   {
+    "month": "Jun",
+    "mean_c": 24.5,
+    "rain_mm_per_day": 5.41
+   },
+   {
+    "month": "Jul",
+    "mean_c": 23.8,
+    "rain_mm_per_day": 5.08
+   },
+   {
+    "month": "Aug",
+    "mean_c": 23.7,
+    "rain_mm_per_day": 4.4
+   },
+   {
+    "month": "Sep",
+    "mean_c": 23.9,
+    "rain_mm_per_day": 4.21
+   },
+   {
+    "month": "Oct",
+    "mean_c": 23.8,
+    "rain_mm_per_day": 6.19
+   },
+   {
+    "month": "Nov",
+    "mean_c": 22.8,
+    "rain_mm_per_day": 3.94
+   },
+   {
+    "month": "Dec",
+    "mean_c": 22.0,
+    "rain_mm_per_day": 0.89
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/coimbatore-average-monthly-temperature-rainfall",
+  "title": "Coimbatore climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

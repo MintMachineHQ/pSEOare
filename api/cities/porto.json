@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Porto",
+  "annual_mean_c": 15.2,
+  "warmest_month": "Aug",
+  "warmest_c": 20.3,
+  "coldest_month": "Jan",
+  "coldest_c": 10.5,
+  "seasonal_swing_c": 9.8,
+  "annual_rainfall_mm": 1009.0,
+  "wettest_month": "Nov",
+  "wettest_mm_per_day": 4.58,
+  "driest_month": "Jul",
+  "driest_mm_per_day": 0.41,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 10.5,
+    "rain_mm_per_day": 4.44
+   },
+   {
+    "month": "Feb",
+    "mean_c": 10.6,
+    "rain_mm_per_day": 3.42
+   },
+   {
+    "month": "Mar",
+    "mean_c": 12.1,
+    "rain_mm_per_day": 3.6
+   },
+   {
+    "month": "Apr",
+    "mean_c": 13.7,
+    "rain_mm_per_day": 3.02
+   },
+   {
+    "month": "May",
+    "mean_c": 15.9,
+    "rain_mm_per_day": 1.95
+   },
+   {
+    "month": "Jun",
+    "mean_c": 18.4,
+    "rain_mm_per_day": 1.08
+   },
+   {
+    "month": "Jul",
+    "mean_c": 19.9,
+    "rain_mm_per_day": 0.41
+   },
+   {
+    "month": "Aug",
+    "mean_c": 20.3,
+    "rain_mm_per_day": 0.71
+   },
+   {
+    "month": "Sep",
+    "mean_c": 19.4,
+    "rain_mm_per_day": 1.64
+   },
+   {
+    "month": "Oct",
+    "mean_c": 16.9,
+    "rain_mm_per_day": 4.41
+   },
+   {
+    "month": "Nov",
+    "mean_c": 13.2,
+    "rain_mm_per_day": 4.58
+   },
+   {
+    "month": "Dec",
+    "mean_c": 11.1,
+    "rain_mm_per_day": 3.93
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/porto-average-monthly-temperature-rainfall",
+  "title": "Porto climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

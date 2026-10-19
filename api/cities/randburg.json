@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Randburg",
+  "annual_mean_c": 17.1,
+  "warmest_month": "Jan",
+  "warmest_c": 21.6,
+  "coldest_month": "Jul",
+  "coldest_c": 9.9,
+  "seasonal_swing_c": 11.7,
+  "annual_rainfall_mm": 642.0,
+  "wettest_month": "Dec",
+  "wettest_mm_per_day": 4.09,
+  "driest_month": "Jul",
+  "driest_mm_per_day": 0.09,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 21.6,
+    "rain_mm_per_day": 3.95
+   },
+   {
+    "month": "Feb",
+    "mean_c": 21.4,
+    "rain_mm_per_day": 2.9
+   },
+   {
+    "month": "Mar",
+    "mean_c": 19.9,
+    "rain_mm_per_day": 2.36
+   },
+   {
+    "month": "Apr",
+    "mean_c": 16.7,
+    "rain_mm_per_day": 1.44
+   },
+   {
+    "month": "May",
+    "mean_c": 13.3,
+    "rain_mm_per_day": 0.51
+   },
+   {
+    "month": "Jun",
+    "mean_c": 10.0,
+    "rain_mm_per_day": 0.23
+   },
+   {
+    "month": "Jul",
+    "mean_c": 9.9,
+    "rain_mm_per_day": 0.09
+   },
+   {
+    "month": "Aug",
+    "mean_c": 13.1,
+    "rain_mm_per_day": 0.23
+   },
+   {
+    "month": "Sep",
+    "mean_c": 17.3,
+    "rain_mm_per_day": 0.53
+   },
+   {
+    "month": "Oct",
+    "mean_c": 19.9,
+    "rain_mm_per_day": 1.83
+   },
+   {
+    "month": "Nov",
+    "mean_c": 20.7,
+    "rain_mm_per_day": 2.97
+   },
+   {
+    "month": "Dec",
+    "mean_c": 21.4,
+    "rain_mm_per_day": 4.09
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/randburg-average-monthly-temperature-rainfall",
+  "title": "Randburg climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

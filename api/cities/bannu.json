@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Bannu",
+  "annual_mean_c": 22.6,
+  "warmest_month": "Jun",
+  "warmest_c": 33.1,
+  "coldest_month": "Jan",
+  "coldest_c": 9.9,
+  "seasonal_swing_c": 23.2,
+  "annual_rainfall_mm": 549.0,
+  "wettest_month": "Aug",
+  "wettest_mm_per_day": 2.52,
+  "driest_month": "Dec",
+  "driest_mm_per_day": 0.4,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 9.9,
+    "rain_mm_per_day": 0.85
+   },
+   {
+    "month": "Feb",
+    "mean_c": 12.2,
+    "rain_mm_per_day": 2.04
+   },
+   {
+    "month": "Mar",
+    "mean_c": 17.7,
+    "rain_mm_per_day": 2.28
+   },
+   {
+    "month": "Apr",
+    "mean_c": 23.6,
+    "rain_mm_per_day": 2.14
+   },
+   {
+    "month": "May",
+    "mean_c": 29.3,
+    "rain_mm_per_day": 1.25
+   },
+   {
+    "month": "Jun",
+    "mean_c": 33.1,
+    "rain_mm_per_day": 1.35
+   },
+   {
+    "month": "Jul",
+    "mean_c": 32.9,
+    "rain_mm_per_day": 2.43
+   },
+   {
+    "month": "Aug",
+    "mean_c": 31.2,
+    "rain_mm_per_day": 2.52
+   },
+   {
+    "month": "Sep",
+    "mean_c": 28.1,
+    "rain_mm_per_day": 1.48
+   },
+   {
+    "month": "Oct",
+    "mean_c": 22.9,
+    "rain_mm_per_day": 0.73
+   },
+   {
+    "month": "Nov",
+    "mean_c": 16.8,
+    "rain_mm_per_day": 0.59
+   },
+   {
+    "month": "Dec",
+    "mean_c": 12.2,
+    "rain_mm_per_day": 0.4
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/bannu-average-monthly-temperature-rainfall",
+  "title": "Bannu climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

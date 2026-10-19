@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Stockholm",
+  "annual_mean_c": 6.9,
+  "warmest_month": "Jul",
+  "warmest_c": 18.4,
+  "coldest_month": "Jan",
+  "coldest_c": -3.1,
+  "seasonal_swing_c": 21.5,
+  "annual_rainfall_mm": 664.0,
+  "wettest_month": "Jun",
+  "wettest_mm_per_day": 2.61,
+  "driest_month": "Apr",
+  "driest_mm_per_day": 1.24,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": -3.1,
+    "rain_mm_per_day": 1.5
+   },
+   {
+    "month": "Feb",
+    "mean_c": -2.7,
+    "rain_mm_per_day": 1.4
+   },
+   {
+    "month": "Mar",
+    "mean_c": 0.1,
+    "rain_mm_per_day": 1.26
+   },
+   {
+    "month": "Apr",
+    "mean_c": 5.1,
+    "rain_mm_per_day": 1.24
+   },
+   {
+    "month": "May",
+    "mean_c": 10.5,
+    "rain_mm_per_day": 1.62
+   },
+   {
+    "month": "Jun",
+    "mean_c": 15.1,
+    "rain_mm_per_day": 2.61
+   },
+   {
+    "month": "Jul",
+    "mean_c": 18.4,
+    "rain_mm_per_day": 2.25
+   },
+   {
+    "month": "Aug",
+    "mean_c": 17.4,
+    "rain_mm_per_day": 2.32
+   },
+   {
+    "month": "Sep",
+    "mean_c": 12.8,
+    "rain_mm_per_day": 1.82
+   },
+   {
+    "month": "Oct",
+    "mean_c": 6.9,
+    "rain_mm_per_day": 2.04
+   },
+   {
+    "month": "Nov",
+    "mean_c": 2.5,
+    "rain_mm_per_day": 2.03
+   },
+   {
+    "month": "Dec",
+    "mean_c": -1.2,
+    "rain_mm_per_day": 1.74
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/stockholm-average-monthly-temperature-rainfall",
+  "title": "Stockholm climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

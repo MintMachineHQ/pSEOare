@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Bhopal",
+  "annual_mean_c": 25.3,
+  "warmest_month": "May",
+  "warmest_c": 34.9,
+  "coldest_month": "Jan",
+  "coldest_c": 17.2,
+  "seasonal_swing_c": 17.7,
+  "annual_rainfall_mm": 1204.0,
+  "wettest_month": "Jul",
+  "wettest_mm_per_day": 13.47,
+  "driest_month": "Dec",
+  "driest_mm_per_day": 0.18,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 17.2,
+    "rain_mm_per_day": 0.36
+   },
+   {
+    "month": "Feb",
+    "mean_c": 20.8,
+    "rain_mm_per_day": 0.38
+   },
+   {
+    "month": "Mar",
+    "mean_c": 25.9,
+    "rain_mm_per_day": 0.4
+   },
+   {
+    "month": "Apr",
+    "mean_c": 31.4,
+    "rain_mm_per_day": 0.19
+   },
+   {
+    "month": "May",
+    "mean_c": 34.9,
+    "rain_mm_per_day": 0.43
+   },
+   {
+    "month": "Jun",
+    "mean_c": 32.0,
+    "rain_mm_per_day": 5.57
+   },
+   {
+    "month": "Jul",
+    "mean_c": 27.2,
+    "rain_mm_per_day": 13.47
+   },
+   {
+    "month": "Aug",
+    "mean_c": 25.9,
+    "rain_mm_per_day": 12.28
+   },
+   {
+    "month": "Sep",
+    "mean_c": 25.5,
+    "rain_mm_per_day": 5.18
+   },
+   {
+    "month": "Oct",
+    "mean_c": 23.8,
+    "rain_mm_per_day": 0.81
+   },
+   {
+    "month": "Nov",
+    "mean_c": 20.7,
+    "rain_mm_per_day": 0.37
+   },
+   {
+    "month": "Dec",
+    "mean_c": 17.9,
+    "rain_mm_per_day": 0.18
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/bhopal-average-monthly-temperature-rainfall",
+  "title": "Bhopal climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

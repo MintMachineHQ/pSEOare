@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Keelung",
+  "annual_mean_c": 22.9,
+  "warmest_month": "Jul",
+  "warmest_c": 28.3,
+  "coldest_month": "Jan",
+  "coldest_c": 17.0,
+  "seasonal_swing_c": 11.3,
+  "annual_rainfall_mm": 1942.0,
+  "wettest_month": "Jun",
+  "wettest_mm_per_day": 8.74,
+  "driest_month": "Jan",
+  "driest_mm_per_day": 3.19,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 17.0,
+    "rain_mm_per_day": 3.19
+   },
+   {
+    "month": "Feb",
+    "mean_c": 17.8,
+    "rain_mm_per_day": 3.24
+   },
+   {
+    "month": "Mar",
+    "mean_c": 19.1,
+    "rain_mm_per_day": 4.22
+   },
+   {
+    "month": "Apr",
+    "mean_c": 21.9,
+    "rain_mm_per_day": 4.21
+   },
+   {
+    "month": "May",
+    "mean_c": 24.8,
+    "rain_mm_per_day": 7.35
+   },
+   {
+    "month": "Jun",
+    "mean_c": 27.0,
+    "rain_mm_per_day": 8.74
+   },
+   {
+    "month": "Jul",
+    "mean_c": 28.3,
+    "rain_mm_per_day": 5.23
+   },
+   {
+    "month": "Aug",
+    "mean_c": 28.1,
+    "rain_mm_per_day": 8.47
+   },
+   {
+    "month": "Sep",
+    "mean_c": 26.7,
+    "rain_mm_per_day": 8.4
+   },
+   {
+    "month": "Oct",
+    "mean_c": 24.1,
+    "rain_mm_per_day": 3.75
+   },
+   {
+    "month": "Nov",
+    "mean_c": 21.8,
+    "rain_mm_per_day": 3.84
+   },
+   {
+    "month": "Dec",
+    "mean_c": 18.5,
+    "rain_mm_per_day": 3.24
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/keelung-average-monthly-temperature-rainfall",
+  "title": "Keelung climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

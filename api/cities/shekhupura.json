@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Shekhupura",
+  "annual_mean_c": 26.0,
+  "warmest_month": "Jun",
+  "warmest_c": 37.0,
+  "coldest_month": "Jan",
+  "coldest_c": 12.6,
+  "seasonal_swing_c": 24.4,
+  "annual_rainfall_mm": 492.0,
+  "wettest_month": "Jul",
+  "wettest_mm_per_day": 4.43,
+  "driest_month": "Oct",
+  "driest_mm_per_day": 0.23,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 12.6,
+    "rain_mm_per_day": 0.49
+   },
+   {
+    "month": "Feb",
+    "mean_c": 15.9,
+    "rain_mm_per_day": 0.91
+   },
+   {
+    "month": "Mar",
+    "mean_c": 22.1,
+    "rain_mm_per_day": 1.03
+   },
+   {
+    "month": "Apr",
+    "mean_c": 28.6,
+    "rain_mm_per_day": 0.69
+   },
+   {
+    "month": "May",
+    "mean_c": 34.7,
+    "rain_mm_per_day": 0.57
+   },
+   {
+    "month": "Jun",
+    "mean_c": 37.0,
+    "rain_mm_per_day": 2.07
+   },
+   {
+    "month": "Jul",
+    "mean_c": 35.1,
+    "rain_mm_per_day": 4.43
+   },
+   {
+    "month": "Aug",
+    "mean_c": 33.4,
+    "rain_mm_per_day": 3.18
+   },
+   {
+    "month": "Sep",
+    "mean_c": 31.0,
+    "rain_mm_per_day": 1.95
+   },
+   {
+    "month": "Oct",
+    "mean_c": 26.5,
+    "rain_mm_per_day": 0.23
+   },
+   {
+    "month": "Nov",
+    "mean_c": 20.0,
+    "rain_mm_per_day": 0.33
+   },
+   {
+    "month": "Dec",
+    "mean_c": 14.7,
+    "rain_mm_per_day": 0.29
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/shekhupura-average-monthly-temperature-rainfall",
+  "title": "Shekhupura climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

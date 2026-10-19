@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Toamasina",
+  "annual_mean_c": 23.8,
+  "warmest_month": "Feb",
+  "warmest_c": 26.1,
+  "coldest_month": "Aug",
+  "coldest_c": 21.1,
+  "seasonal_swing_c": 5.0,
+  "annual_rainfall_mm": 1954.0,
+  "wettest_month": "Jan",
+  "wettest_mm_per_day": 9.95,
+  "driest_month": "Sep",
+  "driest_mm_per_day": 1.99,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 26.0,
+    "rain_mm_per_day": 9.95
+   },
+   {
+    "month": "Feb",
+    "mean_c": 26.1,
+    "rain_mm_per_day": 9.36
+   },
+   {
+    "month": "Mar",
+    "mean_c": 25.8,
+    "rain_mm_per_day": 9.86
+   },
+   {
+    "month": "Apr",
+    "mean_c": 24.9,
+    "rain_mm_per_day": 5.96
+   },
+   {
+    "month": "May",
+    "mean_c": 23.7,
+    "rain_mm_per_day": 4.46
+   },
+   {
+    "month": "Jun",
+    "mean_c": 22.2,
+    "rain_mm_per_day": 4.16
+   },
+   {
+    "month": "Jul",
+    "mean_c": 21.2,
+    "rain_mm_per_day": 4.03
+   },
+   {
+    "month": "Aug",
+    "mean_c": 21.1,
+    "rain_mm_per_day": 2.59
+   },
+   {
+    "month": "Sep",
+    "mean_c": 21.6,
+    "rain_mm_per_day": 1.99
+   },
+   {
+    "month": "Oct",
+    "mean_c": 23.0,
+    "rain_mm_per_day": 2.24
+   },
+   {
+    "month": "Nov",
+    "mean_c": 24.3,
+    "rain_mm_per_day": 3.19
+   },
+   {
+    "month": "Dec",
+    "mean_c": 25.6,
+    "rain_mm_per_day": 6.47
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/toamasina-average-monthly-temperature-rainfall",
+  "title": "Toamasina climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

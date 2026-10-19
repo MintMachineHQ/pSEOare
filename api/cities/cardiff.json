@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Cardiff",
+  "annual_mean_c": 10.3,
+  "warmest_month": "Jul",
+  "warmest_c": 16.4,
+  "coldest_month": "Feb",
+  "coldest_c": 4.9,
+  "seasonal_swing_c": 11.5,
+  "annual_rainfall_mm": 964.0,
+  "wettest_month": "Nov",
+  "wettest_mm_per_day": 3.42,
+  "driest_month": "Apr",
+  "driest_mm_per_day": 1.86,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 5.1,
+    "rain_mm_per_day": 3.03
+   },
+   {
+    "month": "Feb",
+    "mean_c": 4.9,
+    "rain_mm_per_day": 2.6
+   },
+   {
+    "month": "Mar",
+    "mean_c": 6.2,
+    "rain_mm_per_day": 2.27
+   },
+   {
+    "month": "Apr",
+    "mean_c": 8.7,
+    "rain_mm_per_day": 1.86
+   },
+   {
+    "month": "May",
+    "mean_c": 11.7,
+    "rain_mm_per_day": 2.15
+   },
+   {
+    "month": "Jun",
+    "mean_c": 14.7,
+    "rain_mm_per_day": 2.39
+   },
+   {
+    "month": "Jul",
+    "mean_c": 16.4,
+    "rain_mm_per_day": 2.58
+   },
+   {
+    "month": "Aug",
+    "mean_c": 16.3,
+    "rain_mm_per_day": 2.72
+   },
+   {
+    "month": "Sep",
+    "mean_c": 14.4,
+    "rain_mm_per_day": 2.11
+   },
+   {
+    "month": "Oct",
+    "mean_c": 11.4,
+    "rain_mm_per_day": 3.23
+   },
+   {
+    "month": "Nov",
+    "mean_c": 8.1,
+    "rain_mm_per_day": 3.42
+   },
+   {
+    "month": "Dec",
+    "mean_c": 5.9,
+    "rain_mm_per_day": 3.36
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/cardiff-average-monthly-temperature-rainfall",
+  "title": "Cardiff climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

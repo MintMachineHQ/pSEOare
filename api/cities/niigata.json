@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Niigata",
+  "annual_mean_c": 14.5,
+  "warmest_month": "Aug",
+  "warmest_c": 26.1,
+  "coldest_month": "Feb",
+  "coldest_c": 4.7,
+  "seasonal_swing_c": 21.4,
+  "annual_rainfall_mm": 1696.0,
+  "wettest_month": "Dec",
+  "wettest_mm_per_day": 6.93,
+  "driest_month": "May",
+  "driest_mm_per_day": 2.73,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 4.9,
+    "rain_mm_per_day": 5.37
+   },
+   {
+    "month": "Feb",
+    "mean_c": 4.7,
+    "rain_mm_per_day": 3.7
+   },
+   {
+    "month": "Mar",
+    "mean_c": 6.6,
+    "rain_mm_per_day": 3.45
+   },
+   {
+    "month": "Apr",
+    "mean_c": 10.4,
+    "rain_mm_per_day": 3.16
+   },
+   {
+    "month": "May",
+    "mean_c": 15.4,
+    "rain_mm_per_day": 2.73
+   },
+   {
+    "month": "Jun",
+    "mean_c": 19.9,
+    "rain_mm_per_day": 3.75
+   },
+   {
+    "month": "Jul",
+    "mean_c": 23.9,
+    "rain_mm_per_day": 6.86
+   },
+   {
+    "month": "Aug",
+    "mean_c": 26.1,
+    "rain_mm_per_day": 4.67
+   },
+   {
+    "month": "Sep",
+    "mean_c": 23.1,
+    "rain_mm_per_day": 4.7
+   },
+   {
+    "month": "Oct",
+    "mean_c": 18.0,
+    "rain_mm_per_day": 4.87
+   },
+   {
+    "month": "Nov",
+    "mean_c": 12.8,
+    "rain_mm_per_day": 5.61
+   },
+   {
+    "month": "Dec",
+    "mean_c": 7.7,
+    "rain_mm_per_day": 6.93
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/niigata-average-monthly-temperature-rainfall",
+  "title": "Niigata climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

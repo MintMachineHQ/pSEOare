@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "La Paz",
+  "annual_mean_c": 7.6,
+  "warmest_month": "Nov",
+  "warmest_c": 9.4,
+  "coldest_month": "Jul",
+  "coldest_c": 5.1,
+  "seasonal_swing_c": 4.3,
+  "annual_rainfall_mm": 648.0,
+  "wettest_month": "Jan",
+  "wettest_mm_per_day": 4.38,
+  "driest_month": "Jun",
+  "driest_mm_per_day": 0.29,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 8.8,
+    "rain_mm_per_day": 4.38
+   },
+   {
+    "month": "Feb",
+    "mean_c": 8.6,
+    "rain_mm_per_day": 4.02
+   },
+   {
+    "month": "Mar",
+    "mean_c": 8.6,
+    "rain_mm_per_day": 2.56
+   },
+   {
+    "month": "Apr",
+    "mean_c": 8.0,
+    "rain_mm_per_day": 1.17
+   },
+   {
+    "month": "May",
+    "mean_c": 6.6,
+    "rain_mm_per_day": 0.42
+   },
+   {
+    "month": "Jun",
+    "mean_c": 5.7,
+    "rain_mm_per_day": 0.29
+   },
+   {
+    "month": "Jul",
+    "mean_c": 5.1,
+    "rain_mm_per_day": 0.5
+   },
+   {
+    "month": "Aug",
+    "mean_c": 6.0,
+    "rain_mm_per_day": 0.7
+   },
+   {
+    "month": "Sep",
+    "mean_c": 7.3,
+    "rain_mm_per_day": 0.81
+   },
+   {
+    "month": "Oct",
+    "mean_c": 8.6,
+    "rain_mm_per_day": 1.56
+   },
+   {
+    "month": "Nov",
+    "mean_c": 9.4,
+    "rain_mm_per_day": 1.48
+   },
+   {
+    "month": "Dec",
+    "mean_c": 9.1,
+    "rain_mm_per_day": 3.44
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/la-paz-average-monthly-temperature-rainfall",
+  "title": "La Paz climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Tirunelveli",
+  "annual_mean_c": 25.8,
+  "warmest_month": "Apr",
+  "warmest_c": 28.6,
+  "coldest_month": "Dec",
+  "coldest_c": 23.6,
+  "seasonal_swing_c": 5.0,
+  "annual_rainfall_mm": 1289.0,
+  "wettest_month": "Oct",
+  "wettest_mm_per_day": 7.92,
+  "driest_month": "Jan",
+  "driest_mm_per_day": 0.41,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 24.0,
+    "rain_mm_per_day": 0.41
+   },
+   {
+    "month": "Feb",
+    "mean_c": 26.1,
+    "rain_mm_per_day": 0.56
+   },
+   {
+    "month": "Mar",
+    "mean_c": 28.3,
+    "rain_mm_per_day": 1.35
+   },
+   {
+    "month": "Apr",
+    "mean_c": 28.6,
+    "rain_mm_per_day": 3.0
+   },
+   {
+    "month": "May",
+    "mean_c": 27.3,
+    "rain_mm_per_day": 4.4
+   },
+   {
+    "month": "Jun",
+    "mean_c": 25.9,
+    "rain_mm_per_day": 4.53
+   },
+   {
+    "month": "Jul",
+    "mean_c": 25.3,
+    "rain_mm_per_day": 3.56
+   },
+   {
+    "month": "Aug",
+    "mean_c": 25.4,
+    "rain_mm_per_day": 2.75
+   },
+   {
+    "month": "Sep",
+    "mean_c": 25.6,
+    "rain_mm_per_day": 4.58
+   },
+   {
+    "month": "Oct",
+    "mean_c": 25.4,
+    "rain_mm_per_day": 7.92
+   },
+   {
+    "month": "Nov",
+    "mean_c": 24.4,
+    "rain_mm_per_day": 7.35
+   },
+   {
+    "month": "Dec",
+    "mean_c": 23.6,
+    "rain_mm_per_day": 1.98
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/tirunelveli-average-monthly-temperature-rainfall",
+  "title": "Tirunelveli climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

@@ -1,7 +1,7 @@
 {
  "answer": {
   "country": "Ireland",
-  "count": 16,
+  "count": 28,
   "holidays": [
    {
     "name": "New Year's Day in Ireland (2016)",
@@ -20,6 +20,14 @@
     "page": "https://pseoare.pages.dev/saint-patrick-s-day-ireland-2016-03-17"
    },
    {
+    "name": "Christmas Day in Ireland (2016)",
+    "local_name": "L\u00e1 Nollag",
+    "date": "2016-12-25",
+    "weekday": "Sunday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/christmas-day-ireland-2016-12-25"
+   },
+   {
     "name": "New Year's Day in Ireland (2017)",
     "local_name": "L\u00e1 Caille",
     "date": "2017-01-01",
@@ -34,6 +42,14 @@
     "weekday": "Friday",
     "weekend": false,
     "page": "https://pseoare.pages.dev/saint-patrick-s-day-ireland-2017-03-17"
+   },
+   {
+    "name": "Christmas Day in Ireland (2017)",
+    "local_name": "L\u00e1 Nollag",
+    "date": "2017-12-25",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-ireland-2017-12-25"
    },
    {
     "name": "New Year's Day in Ireland (2018)",
@@ -52,6 +68,14 @@
     "page": "https://pseoare.pages.dev/saint-patrick-s-day-ireland-2018-03-17"
    },
    {
+    "name": "Christmas Day in Ireland (2018)",
+    "local_name": "L\u00e1 Nollag",
+    "date": "2018-12-25",
+    "weekday": "Tuesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-ireland-2018-12-25"
+   },
+   {
     "name": "New Year's Day in Ireland (2019)",
     "local_name": "L\u00e1 Caille",
     "date": "2019-01-01",
@@ -66,6 +90,14 @@
     "weekday": "Sunday",
     "weekend": true,
     "page": "https://pseoare.pages.dev/saint-patrick-s-day-ireland-2019-03-17"
+   },
+   {
+    "name": "Christmas Day in Ireland (2019)",
+    "local_name": "L\u00e1 Nollag",
+    "date": "2019-12-25",
+    "weekday": "Wednesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-ireland-2019-12-25"
    },
    {
     "name": "New Year's Day in Ireland (2020)",
@@ -84,6 +116,14 @@
     "page": "https://pseoare.pages.dev/saint-patrick-s-day-ireland-2020-03-17"
    },
    {
+    "name": "Christmas Day in Ireland (2020)",
+    "local_name": "L\u00e1 Nollag",
+    "date": "2020-12-25",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-ireland-2020-12-25"
+   },
+   {
     "name": "New Year's Day in Ireland (2021)",
     "local_name": "L\u00e1 Caille",
     "date": "2021-01-01",
@@ -98,6 +138,14 @@
     "weekday": "Wednesday",
     "weekend": false,
     "page": "https://pseoare.pages.dev/saint-patrick-s-day-ireland-2021-03-17"
+   },
+   {
+    "name": "Christmas Day in Ireland (2021)",
+    "local_name": "L\u00e1 Nollag",
+    "date": "2021-12-25",
+    "weekday": "Saturday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/christmas-day-ireland-2021-12-25"
    },
    {
     "name": "New Year's Day in Ireland (2022)",
@@ -116,6 +164,14 @@
     "page": "https://pseoare.pages.dev/saint-patrick-s-day-ireland-2022-03-17"
    },
    {
+    "name": "Christmas Day in Ireland (2022)",
+    "local_name": "L\u00e1 Nollag",
+    "date": "2022-12-25",
+    "weekday": "Sunday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/christmas-day-ireland-2022-12-25"
+   },
+   {
     "name": "New Year's Day in Ireland (2023)",
     "local_name": "L\u00e1 Caille",
     "date": "2023-01-01",
@@ -130,6 +186,46 @@
     "weekday": "Monday",
     "weekend": false,
     "page": "https://pseoare.pages.dev/saint-brigid-s-day-ireland-2023-02-06"
+   },
+   {
+    "name": "Christmas Day in Ireland (2023)",
+    "local_name": "L\u00e1 Nollag",
+    "date": "2023-12-25",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-ireland-2023-12-25"
+   },
+   {
+    "name": "Christmas Day in Ireland (2024)",
+    "local_name": "L\u00e1 Nollag",
+    "date": "2024-12-25",
+    "weekday": "Wednesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-ireland-2024-12-25"
+   },
+   {
+    "name": "Christmas Day in Ireland (2025)",
+    "local_name": "L\u00e1 Nollag",
+    "date": "2025-12-25",
+    "weekday": "Thursday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-ireland-2025-12-25"
+   },
+   {
+    "name": "Christmas Day in Ireland (2026)",
+    "local_name": "L\u00e1 Nollag",
+    "date": "2026-12-25",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-ireland-2026-12-25"
+   },
+   {
+    "name": "Christmas Day in Ireland (2027)",
+    "local_name": "L\u00e1 Nollag",
+    "date": "2027-12-25",
+    "weekday": "Saturday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/christmas-day-ireland-2027-12-25"
    }
   ]
  },
@@ -138,7 +234,7 @@
   "title": "Public holidays for Ireland",
   "site": "https://pseoare.pages.dev"
  },
- "updated": "2026-10-19T20:41:30.228277+00:00",
+ "updated": "2026-10-19T20:49:39.946179+00:00",
  "license": "CC-BY-4.0",
  "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
 }

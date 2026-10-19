@@ -1,7 +1,7 @@
 {
  "answer": {
   "country": "South Africa",
-  "count": 8,
+  "count": 32,
   "holidays": [
    {
     "name": "New Year's Day in South Africa (2016)",
@@ -12,12 +12,44 @@
     "page": "https://pseoare.pages.dev/new-year-s-day-south-africa-2016-01-01"
    },
    {
+    "name": "Human Rights Day in South Africa (2016)",
+    "local_name": "Human Rights Day",
+    "date": "2016-03-21",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/human-rights-day-south-africa-2016-03-21"
+   },
+   {
+    "name": "Christmas Day in South Africa (2016)",
+    "local_name": "Christmas Day",
+    "date": "2016-12-27",
+    "weekday": "Tuesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-south-africa-2016-12-27"
+   },
+   {
     "name": "New Year's Day in South Africa (2017)",
     "local_name": "New Year's Day",
     "date": "2017-01-02",
     "weekday": "Monday",
     "weekend": false,
     "page": "https://pseoare.pages.dev/new-year-s-day-south-africa-2017-01-02"
+   },
+   {
+    "name": "Human Rights Day in South Africa (2017)",
+    "local_name": "Human Rights Day",
+    "date": "2017-03-21",
+    "weekday": "Tuesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/human-rights-day-south-africa-2017-03-21"
+   },
+   {
+    "name": "Christmas Day in South Africa (2017)",
+    "local_name": "Christmas Day",
+    "date": "2017-12-25",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-south-africa-2017-12-25"
    },
    {
     "name": "New Year's Day in South Africa (2018)",
@@ -28,12 +60,44 @@
     "page": "https://pseoare.pages.dev/new-year-s-day-south-africa-2018-01-01"
    },
    {
+    "name": "Human Rights Day in South Africa (2018)",
+    "local_name": "Human Rights Day",
+    "date": "2018-03-21",
+    "weekday": "Wednesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/human-rights-day-south-africa-2018-03-21"
+   },
+   {
+    "name": "Christmas Day in South Africa (2018)",
+    "local_name": "Christmas Day",
+    "date": "2018-12-25",
+    "weekday": "Tuesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-south-africa-2018-12-25"
+   },
+   {
     "name": "New Year's Day in South Africa (2019)",
     "local_name": "New Year's Day",
     "date": "2019-01-01",
     "weekday": "Tuesday",
     "weekend": false,
     "page": "https://pseoare.pages.dev/new-year-s-day-south-africa-2019-01-01"
+   },
+   {
+    "name": "Human Rights Day in South Africa (2019)",
+    "local_name": "Human Rights Day",
+    "date": "2019-03-21",
+    "weekday": "Thursday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/human-rights-day-south-africa-2019-03-21"
+   },
+   {
+    "name": "Christmas Day in South Africa (2019)",
+    "local_name": "Christmas Day",
+    "date": "2019-12-25",
+    "weekday": "Wednesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-south-africa-2019-12-25"
    },
    {
     "name": "New Year's Day in South Africa (2020)",
@@ -44,12 +108,44 @@
     "page": "https://pseoare.pages.dev/new-year-s-day-south-africa-2020-01-01"
    },
    {
+    "name": "Human Rights Day in South Africa (2020)",
+    "local_name": "Human Rights Day",
+    "date": "2020-03-21",
+    "weekday": "Saturday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/human-rights-day-south-africa-2020-03-21"
+   },
+   {
+    "name": "Christmas Day in South Africa (2020)",
+    "local_name": "Christmas Day",
+    "date": "2020-12-25",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-south-africa-2020-12-25"
+   },
+   {
     "name": "New Year's Day in South Africa (2021)",
     "local_name": "New Year's Day",
     "date": "2021-01-01",
     "weekday": "Friday",
     "weekend": false,
     "page": "https://pseoare.pages.dev/new-year-s-day-south-africa-2021-01-01"
+   },
+   {
+    "name": "Human Rights Day in South Africa (2021)",
+    "local_name": "Human Rights Day",
+    "date": "2021-03-22",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/human-rights-day-south-africa-2021-03-22"
+   },
+   {
+    "name": "Christmas Day in South Africa (2021)",
+    "local_name": "Christmas Day",
+    "date": "2021-12-25",
+    "weekday": "Saturday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/christmas-day-south-africa-2021-12-25"
    },
    {
     "name": "New Year's Day in South Africa (2022)",
@@ -60,12 +156,108 @@
     "page": "https://pseoare.pages.dev/new-year-s-day-south-africa-2022-01-01"
    },
    {
+    "name": "Human Rights Day in South Africa (2022)",
+    "local_name": "Human Rights Day",
+    "date": "2022-03-21",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/human-rights-day-south-africa-2022-03-21"
+   },
+   {
+    "name": "Christmas Day in South Africa (2022)",
+    "local_name": "Christmas Day",
+    "date": "2022-12-27",
+    "weekday": "Tuesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-south-africa-2022-12-27"
+   },
+   {
     "name": "New Year's Day in South Africa (2023)",
     "local_name": "New Year's Day",
     "date": "2023-01-02",
     "weekday": "Monday",
     "weekend": false,
     "page": "https://pseoare.pages.dev/new-year-s-day-south-africa-2023-01-02"
+   },
+   {
+    "name": "Human Rights Day in South Africa (2023)",
+    "local_name": "Human Rights Day",
+    "date": "2023-03-21",
+    "weekday": "Tuesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/human-rights-day-south-africa-2023-03-21"
+   },
+   {
+    "name": "Christmas Day in South Africa (2023)",
+    "local_name": "Christmas Day",
+    "date": "2023-12-25",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-south-africa-2023-12-25"
+   },
+   {
+    "name": "Human Rights Day in South Africa (2024)",
+    "local_name": "Human Rights Day",
+    "date": "2024-03-21",
+    "weekday": "Thursday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/human-rights-day-south-africa-2024-03-21"
+   },
+   {
+    "name": "Christmas Day in South Africa (2024)",
+    "local_name": "Christmas Day",
+    "date": "2024-12-25",
+    "weekday": "Wednesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-south-africa-2024-12-25"
+   },
+   {
+    "name": "Human Rights Day in South Africa (2025)",
+    "local_name": "Human Rights Day",
+    "date": "2025-03-21",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/human-rights-day-south-africa-2025-03-21"
+   },
+   {
+    "name": "Christmas Day in South Africa (2025)",
+    "local_name": "Christmas Day",
+    "date": "2025-12-25",
+    "weekday": "Thursday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-south-africa-2025-12-25"
+   },
+   {
+    "name": "Human Rights Day in South Africa (2026)",
+    "local_name": "Human Rights Day",
+    "date": "2026-03-21",
+    "weekday": "Saturday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/human-rights-day-south-africa-2026-03-21"
+   },
+   {
+    "name": "Christmas Day in South Africa (2026)",
+    "local_name": "Christmas Day",
+    "date": "2026-12-25",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-south-africa-2026-12-25"
+   },
+   {
+    "name": "Human Rights Day in South Africa (2027)",
+    "local_name": "Human Rights Day",
+    "date": "2027-03-22",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/human-rights-day-south-africa-2027-03-22"
+   },
+   {
+    "name": "Christmas Day in South Africa (2027)",
+    "local_name": "Christmas Day",
+    "date": "2027-12-25",
+    "weekday": "Saturday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/christmas-day-south-africa-2027-12-25"
    }
   ]
  },
@@ -74,7 +266,7 @@
   "title": "Public holidays for South Africa",
   "site": "https://pseoare.pages.dev"
  },
- "updated": "2026-10-19T20:41:30.228277+00:00",
+ "updated": "2026-10-19T20:49:39.946179+00:00",
  "license": "CC-BY-4.0",
  "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
 }

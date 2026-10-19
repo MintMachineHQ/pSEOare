@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Buda",
+  "annual_mean_c": 10.8,
+  "warmest_month": "Jul",
+  "warmest_c": 22.8,
+  "coldest_month": "Jan",
+  "coldest_c": -1.6,
+  "seasonal_swing_c": 24.4,
+  "annual_rainfall_mm": 612.0,
+  "wettest_month": "Jun",
+  "wettest_mm_per_day": 2.34,
+  "driest_month": "Apr",
+  "driest_mm_per_day": 1.16,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": -1.6,
+    "rain_mm_per_day": 1.27
+   },
+   {
+    "month": "Feb",
+    "mean_c": 0.3,
+    "rain_mm_per_day": 1.43
+   },
+   {
+    "month": "Mar",
+    "mean_c": 5.1,
+    "rain_mm_per_day": 1.32
+   },
+   {
+    "month": "Apr",
+    "mean_c": 11.2,
+    "rain_mm_per_day": 1.16
+   },
+   {
+    "month": "May",
+    "mean_c": 16.2,
+    "rain_mm_per_day": 2.1
+   },
+   {
+    "month": "Jun",
+    "mean_c": 20.5,
+    "rain_mm_per_day": 2.34
+   },
+   {
+    "month": "Jul",
+    "mean_c": 22.8,
+    "rain_mm_per_day": 2.12
+   },
+   {
+    "month": "Aug",
+    "mean_c": 22.3,
+    "rain_mm_per_day": 2.03
+   },
+   {
+    "month": "Sep",
+    "mean_c": 16.8,
+    "rain_mm_per_day": 1.89
+   },
+   {
+    "month": "Oct",
+    "mean_c": 10.8,
+    "rain_mm_per_day": 1.63
+   },
+   {
+    "month": "Nov",
+    "mean_c": 5.1,
+    "rain_mm_per_day": 1.46
+   },
+   {
+    "month": "Dec",
+    "mean_c": -0.4,
+    "rain_mm_per_day": 1.39
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/buda-average-monthly-temperature-rainfall",
+  "title": "Buda climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Hlaingthaya",
+  "annual_mean_c": 28.1,
+  "warmest_month": "Apr",
+  "warmest_c": 32.6,
+  "coldest_month": "Dec",
+  "coldest_c": 25.3,
+  "seasonal_swing_c": 7.3,
+  "annual_rainfall_mm": 1225.0,
+  "wettest_month": "Jul",
+  "wettest_mm_per_day": 9.02,
+  "driest_month": "Feb",
+  "driest_mm_per_day": 0.03,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 25.4,
+    "rain_mm_per_day": 0.27
+   },
+   {
+    "month": "Feb",
+    "mean_c": 27.6,
+    "rain_mm_per_day": 0.03
+   },
+   {
+    "month": "Mar",
+    "mean_c": 30.3,
+    "rain_mm_per_day": 0.5
+   },
+   {
+    "month": "Apr",
+    "mean_c": 32.6,
+    "rain_mm_per_day": 0.79
+   },
+   {
+    "month": "May",
+    "mean_c": 30.6,
+    "rain_mm_per_day": 4.11
+   },
+   {
+    "month": "Jun",
+    "mean_c": 28.4,
+    "rain_mm_per_day": 7.49
+   },
+   {
+    "month": "Jul",
+    "mean_c": 27.6,
+    "rain_mm_per_day": 9.02
+   },
+   {
+    "month": "Aug",
+    "mean_c": 27.2,
+    "rain_mm_per_day": 7.95
+   },
+   {
+    "month": "Sep",
+    "mean_c": 27.4,
+    "rain_mm_per_day": 5.46
+   },
+   {
+    "month": "Oct",
+    "mean_c": 27.7,
+    "rain_mm_per_day": 3.79
+   },
+   {
+    "month": "Nov",
+    "mean_c": 27.0,
+    "rain_mm_per_day": 0.67
+   },
+   {
+    "month": "Dec",
+    "mean_c": 25.3,
+    "rain_mm_per_day": 0.21
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/hlaingthaya-average-monthly-temperature-rainfall",
+  "title": "Hlaingthaya climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

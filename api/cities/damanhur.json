@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Damanhur",
+  "annual_mean_c": 21.9,
+  "warmest_month": "Aug",
+  "warmest_c": 29.3,
+  "coldest_month": "Jan",
+  "coldest_c": 13.2,
+  "seasonal_swing_c": 16.1,
+  "annual_rainfall_mm": 100.0,
+  "wettest_month": "Jan",
+  "wettest_mm_per_day": 0.69,
+  "driest_month": "Aug",
+  "driest_mm_per_day": 0.0,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 13.2,
+    "rain_mm_per_day": 0.69
+   },
+   {
+    "month": "Feb",
+    "mean_c": 14.3,
+    "rain_mm_per_day": 0.51
+   },
+   {
+    "month": "Mar",
+    "mean_c": 17.0,
+    "rain_mm_per_day": 0.29
+   },
+   {
+    "month": "Apr",
+    "mean_c": 20.4,
+    "rain_mm_per_day": 0.47
+   },
+   {
+    "month": "May",
+    "mean_c": 24.5,
+    "rain_mm_per_day": 0.04
+   },
+   {
+    "month": "Jun",
+    "mean_c": 27.7,
+    "rain_mm_per_day": 0.02
+   },
+   {
+    "month": "Jul",
+    "mean_c": 29.2,
+    "rain_mm_per_day": 0.02
+   },
+   {
+    "month": "Aug",
+    "mean_c": 29.3,
+    "rain_mm_per_day": 0.0
+   },
+   {
+    "month": "Sep",
+    "mean_c": 27.4,
+    "rain_mm_per_day": 0.01
+   },
+   {
+    "month": "Oct",
+    "mean_c": 24.1,
+    "rain_mm_per_day": 0.24
+   },
+   {
+    "month": "Nov",
+    "mean_c": 19.9,
+    "rain_mm_per_day": 0.41
+   },
+   {
+    "month": "Dec",
+    "mean_c": 15.4,
+    "rain_mm_per_day": 0.58
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/damanhur-average-monthly-temperature-rainfall",
+  "title": "Damanhur climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

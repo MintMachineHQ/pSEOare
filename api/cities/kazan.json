@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Kazan",
+  "annual_mean_c": 3.1,
+  "warmest_month": "Jul",
+  "warmest_c": 19.4,
+  "coldest_month": "Jan",
+  "coldest_c": -13.9,
+  "seasonal_swing_c": 33.3,
+  "annual_rainfall_mm": 645.0,
+  "wettest_month": "Jul",
+  "wettest_mm_per_day": 2.33,
+  "driest_month": "Feb",
+  "driest_mm_per_day": 1.31,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": -13.9,
+    "rain_mm_per_day": 1.46
+   },
+   {
+    "month": "Feb",
+    "mean_c": -12.7,
+    "rain_mm_per_day": 1.31
+   },
+   {
+    "month": "Mar",
+    "mean_c": -5.6,
+    "rain_mm_per_day": 1.48
+   },
+   {
+    "month": "Apr",
+    "mean_c": 3.2,
+    "rain_mm_per_day": 1.48
+   },
+   {
+    "month": "May",
+    "mean_c": 12.7,
+    "rain_mm_per_day": 1.72
+   },
+   {
+    "month": "Jun",
+    "mean_c": 16.5,
+    "rain_mm_per_day": 2.31
+   },
+   {
+    "month": "Jul",
+    "mean_c": 19.4,
+    "rain_mm_per_day": 2.33
+   },
+   {
+    "month": "Aug",
+    "mean_c": 17.5,
+    "rain_mm_per_day": 1.98
+   },
+   {
+    "month": "Sep",
+    "mean_c": 11.5,
+    "rain_mm_per_day": 1.81
+   },
+   {
+    "month": "Oct",
+    "mean_c": 3.5,
+    "rain_mm_per_day": 2.02
+   },
+   {
+    "month": "Nov",
+    "mean_c": -4.4,
+    "rain_mm_per_day": 1.66
+   },
+   {
+    "month": "Dec",
+    "mean_c": -11.8,
+    "rain_mm_per_day": 1.65
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/kazan-average-monthly-temperature-rainfall",
+  "title": "Kazan climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Mbandaka",
+  "annual_mean_c": 26.3,
+  "warmest_month": "Feb",
+  "warmest_c": 27.1,
+  "coldest_month": "Oct",
+  "coldest_c": 25.7,
+  "seasonal_swing_c": 1.4,
+  "annual_rainfall_mm": 1800.0,
+  "wettest_month": "Sep",
+  "wettest_mm_per_day": 6.46,
+  "driest_month": "Jan",
+  "driest_mm_per_day": 2.61,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 27.0,
+    "rain_mm_per_day": 2.61
+   },
+   {
+    "month": "Feb",
+    "mean_c": 27.1,
+    "rain_mm_per_day": 4.82
+   },
+   {
+    "month": "Mar",
+    "mean_c": 26.6,
+    "rain_mm_per_day": 5.59
+   },
+   {
+    "month": "Apr",
+    "mean_c": 26.3,
+    "rain_mm_per_day": 5.08
+   },
+   {
+    "month": "May",
+    "mean_c": 26.4,
+    "rain_mm_per_day": 5.17
+   },
+   {
+    "month": "Jun",
+    "mean_c": 26.3,
+    "rain_mm_per_day": 4.67
+   },
+   {
+    "month": "Jul",
+    "mean_c": 26.3,
+    "rain_mm_per_day": 3.88
+   },
+   {
+    "month": "Aug",
+    "mean_c": 26.1,
+    "rain_mm_per_day": 4.39
+   },
+   {
+    "month": "Sep",
+    "mean_c": 25.8,
+    "rain_mm_per_day": 6.46
+   },
+   {
+    "month": "Oct",
+    "mean_c": 25.7,
+    "rain_mm_per_day": 6.4
+   },
+   {
+    "month": "Nov",
+    "mean_c": 25.7,
+    "rain_mm_per_day": 6.26
+   },
+   {
+    "month": "Dec",
+    "mean_c": 26.1,
+    "rain_mm_per_day": 3.88
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/mbandaka-average-monthly-temperature-rainfall",
+  "title": "Mbandaka climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

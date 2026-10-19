@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Cho Lon",
+  "annual_mean_c": 27.5,
+  "warmest_month": "Apr",
+  "warmest_c": 30.7,
+  "coldest_month": "Dec",
+  "coldest_c": 25.7,
+  "seasonal_swing_c": 5.0,
+  "annual_rainfall_mm": 1365.0,
+  "wettest_month": "Jun",
+  "wettest_mm_per_day": 7.07,
+  "driest_month": "Feb",
+  "driest_mm_per_day": 0.23,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 26.2,
+    "rain_mm_per_day": 0.34
+   },
+   {
+    "month": "Feb",
+    "mean_c": 28.0,
+    "rain_mm_per_day": 0.23
+   },
+   {
+    "month": "Mar",
+    "mean_c": 29.8,
+    "rain_mm_per_day": 0.41
+   },
+   {
+    "month": "Apr",
+    "mean_c": 30.7,
+    "rain_mm_per_day": 1.38
+   },
+   {
+    "month": "May",
+    "mean_c": 29.4,
+    "rain_mm_per_day": 5.0
+   },
+   {
+    "month": "Jun",
+    "mean_c": 27.4,
+    "rain_mm_per_day": 7.07
+   },
+   {
+    "month": "Jul",
+    "mean_c": 26.7,
+    "rain_mm_per_day": 6.68
+   },
+   {
+    "month": "Aug",
+    "mean_c": 26.6,
+    "rain_mm_per_day": 6.16
+   },
+   {
+    "month": "Sep",
+    "mean_c": 26.5,
+    "rain_mm_per_day": 6.33
+   },
+   {
+    "month": "Oct",
+    "mean_c": 26.5,
+    "rain_mm_per_day": 6.93
+   },
+   {
+    "month": "Nov",
+    "mean_c": 26.3,
+    "rain_mm_per_day": 3.33
+   },
+   {
+    "month": "Dec",
+    "mean_c": 25.7,
+    "rain_mm_per_day": 1.04
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/cho-lon-average-monthly-temperature-rainfall",
+  "title": "Cho Lon climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

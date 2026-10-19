@@ -1,7 +1,7 @@
 {
  "answer": {
   "country": "Lithuania",
-  "count": 16,
+  "count": 28,
   "holidays": [
    {
     "name": "New Year's Day in Lithuania (2016)",
@@ -20,6 +20,14 @@
     "page": "https://pseoare.pages.dev/the-day-of-restoration-of-the-state-of-lithuania-lithuania-2016-02-16"
    },
    {
+    "name": "Christmas Day in Lithuania (2016)",
+    "local_name": "\u0160v. Kal\u0117dos",
+    "date": "2016-12-25",
+    "weekday": "Sunday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/christmas-day-lithuania-2016-12-25"
+   },
+   {
     "name": "New Year's Day in Lithuania (2017)",
     "local_name": "Naujieji metai",
     "date": "2017-01-01",
@@ -34,6 +42,14 @@
     "weekday": "Thursday",
     "weekend": false,
     "page": "https://pseoare.pages.dev/the-day-of-restoration-of-the-state-of-lithuania-lithuania-2017-02-16"
+   },
+   {
+    "name": "Christmas Day in Lithuania (2017)",
+    "local_name": "\u0160v. Kal\u0117dos",
+    "date": "2017-12-25",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-lithuania-2017-12-25"
    },
    {
     "name": "New Year's Day in Lithuania (2018)",
@@ -52,6 +68,14 @@
     "page": "https://pseoare.pages.dev/the-day-of-restoration-of-the-state-of-lithuania-lithuania-2018-02-16"
    },
    {
+    "name": "Christmas Day in Lithuania (2018)",
+    "local_name": "\u0160v. Kal\u0117dos",
+    "date": "2018-12-25",
+    "weekday": "Tuesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-lithuania-2018-12-25"
+   },
+   {
     "name": "New Year's Day in Lithuania (2019)",
     "local_name": "Naujieji metai",
     "date": "2019-01-01",
@@ -66,6 +90,14 @@
     "weekday": "Saturday",
     "weekend": true,
     "page": "https://pseoare.pages.dev/the-day-of-restoration-of-the-state-of-lithuania-lithuania-2019-02-16"
+   },
+   {
+    "name": "Christmas Day in Lithuania (2019)",
+    "local_name": "\u0160v. Kal\u0117dos",
+    "date": "2019-12-25",
+    "weekday": "Wednesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-lithuania-2019-12-25"
    },
    {
     "name": "New Year's Day in Lithuania (2020)",
@@ -84,6 +116,14 @@
     "page": "https://pseoare.pages.dev/the-day-of-restoration-of-the-state-of-lithuania-lithuania-2020-02-16"
    },
    {
+    "name": "Christmas Day in Lithuania (2020)",
+    "local_name": "\u0160v. Kal\u0117dos",
+    "date": "2020-12-25",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-lithuania-2020-12-25"
+   },
+   {
     "name": "New Year's Day in Lithuania (2021)",
     "local_name": "Naujieji metai",
     "date": "2021-01-01",
@@ -98,6 +138,14 @@
     "weekday": "Tuesday",
     "weekend": false,
     "page": "https://pseoare.pages.dev/the-day-of-restoration-of-the-state-of-lithuania-lithuania-2021-02-16"
+   },
+   {
+    "name": "Christmas Day in Lithuania (2021)",
+    "local_name": "\u0160v. Kal\u0117dos",
+    "date": "2021-12-25",
+    "weekday": "Saturday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/christmas-day-lithuania-2021-12-25"
    },
    {
     "name": "New Year's Day in Lithuania (2022)",
@@ -116,6 +164,14 @@
     "page": "https://pseoare.pages.dev/the-day-of-restoration-of-the-state-of-lithuania-lithuania-2022-02-16"
    },
    {
+    "name": "Christmas Day in Lithuania (2022)",
+    "local_name": "\u0160v. Kal\u0117dos",
+    "date": "2022-12-25",
+    "weekday": "Sunday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/christmas-day-lithuania-2022-12-25"
+   },
+   {
     "name": "New Year's Day in Lithuania (2023)",
     "local_name": "Naujieji metai",
     "date": "2023-01-01",
@@ -130,6 +186,46 @@
     "weekday": "Thursday",
     "weekend": false,
     "page": "https://pseoare.pages.dev/the-day-of-restoration-of-the-state-of-lithuania-lithuania-2023-02-16"
+   },
+   {
+    "name": "Christmas Day in Lithuania (2023)",
+    "local_name": "\u0160v. Kal\u0117dos",
+    "date": "2023-12-25",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-lithuania-2023-12-25"
+   },
+   {
+    "name": "Christmas Day in Lithuania (2024)",
+    "local_name": "\u0160v. Kal\u0117dos",
+    "date": "2024-12-25",
+    "weekday": "Wednesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-lithuania-2024-12-25"
+   },
+   {
+    "name": "Christmas Day in Lithuania (2025)",
+    "local_name": "\u0160v. Kal\u0117dos",
+    "date": "2025-12-25",
+    "weekday": "Thursday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-lithuania-2025-12-25"
+   },
+   {
+    "name": "Christmas Day in Lithuania (2026)",
+    "local_name": "\u0160v. Kal\u0117dos",
+    "date": "2026-12-25",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-lithuania-2026-12-25"
+   },
+   {
+    "name": "Christmas Day in Lithuania (2027)",
+    "local_name": "\u0160v. Kal\u0117dos",
+    "date": "2027-12-25",
+    "weekday": "Saturday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/christmas-day-lithuania-2027-12-25"
    }
   ]
  },
@@ -138,7 +234,7 @@
   "title": "Public holidays for Lithuania",
   "site": "https://pseoare.pages.dev"
  },
- "updated": "2026-10-19T20:41:30.228277+00:00",
+ "updated": "2026-10-19T20:49:39.946179+00:00",
  "license": "CC-BY-4.0",
  "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
 }

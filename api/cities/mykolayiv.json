@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Mykolayiv",
+  "annual_mean_c": 11.2,
+  "warmest_month": "Jul",
+  "warmest_c": 25.1,
+  "coldest_month": "Jan",
+  "coldest_c": -2.8,
+  "seasonal_swing_c": 27.9,
+  "annual_rainfall_mm": 451.0,
+  "wettest_month": "Jun",
+  "wettest_mm_per_day": 1.79,
+  "driest_month": "Aug",
+  "driest_mm_per_day": 0.85,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": -2.8,
+    "rain_mm_per_day": 1.37
+   },
+   {
+    "month": "Feb",
+    "mean_c": -1.0,
+    "rain_mm_per_day": 1.23
+   },
+   {
+    "month": "Mar",
+    "mean_c": 4.1,
+    "rain_mm_per_day": 1.08
+   },
+   {
+    "month": "Apr",
+    "mean_c": 10.5,
+    "rain_mm_per_day": 0.94
+   },
+   {
+    "month": "May",
+    "mean_c": 17.5,
+    "rain_mm_per_day": 1.48
+   },
+   {
+    "month": "Jun",
+    "mean_c": 22.2,
+    "rain_mm_per_day": 1.79
+   },
+   {
+    "month": "Jul",
+    "mean_c": 25.1,
+    "rain_mm_per_day": 1.42
+   },
+   {
+    "month": "Aug",
+    "mean_c": 24.7,
+    "rain_mm_per_day": 0.85
+   },
+   {
+    "month": "Sep",
+    "mean_c": 18.5,
+    "rain_mm_per_day": 1.11
+   },
+   {
+    "month": "Oct",
+    "mean_c": 11.0,
+    "rain_mm_per_day": 1.25
+   },
+   {
+    "month": "Nov",
+    "mean_c": 4.7,
+    "rain_mm_per_day": 1.18
+   },
+   {
+    "month": "Dec",
+    "mean_c": -0.2,
+    "rain_mm_per_day": 1.12
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/mykolayiv-average-monthly-temperature-rainfall",
+  "title": "Mykolayiv climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

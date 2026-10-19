@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Sapporo",
+  "annual_mean_c": 6.2,
+  "warmest_month": "Aug",
+  "warmest_c": 19.9,
+  "coldest_month": "Jan",
+  "coldest_c": -6.9,
+  "seasonal_swing_c": 26.8,
+  "annual_rainfall_mm": 1270.0,
+  "wettest_month": "Aug",
+  "wettest_mm_per_day": 5.15,
+  "driest_month": "Apr",
+  "driest_mm_per_day": 2.08,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": -6.9,
+    "rain_mm_per_day": 3.33
+   },
+   {
+    "month": "Feb",
+    "mean_c": -6.7,
+    "rain_mm_per_day": 2.95
+   },
+   {
+    "month": "Mar",
+    "mean_c": -2.9,
+    "rain_mm_per_day": 2.33
+   },
+   {
+    "month": "Apr",
+    "mean_c": 3.5,
+    "rain_mm_per_day": 2.08
+   },
+   {
+    "month": "May",
+    "mean_c": 10.0,
+    "rain_mm_per_day": 2.4
+   },
+   {
+    "month": "Jun",
+    "mean_c": 14.9,
+    "rain_mm_per_day": 2.75
+   },
+   {
+    "month": "Jul",
+    "mean_c": 18.8,
+    "rain_mm_per_day": 3.91
+   },
+   {
+    "month": "Aug",
+    "mean_c": 19.9,
+    "rain_mm_per_day": 5.15
+   },
+   {
+    "month": "Sep",
+    "mean_c": 16.0,
+    "rain_mm_per_day": 4.56
+   },
+   {
+    "month": "Oct",
+    "mean_c": 9.2,
+    "rain_mm_per_day": 3.82
+   },
+   {
+    "month": "Nov",
+    "mean_c": 2.1,
+    "rain_mm_per_day": 4.31
+   },
+   {
+    "month": "Dec",
+    "mean_c": -4.6,
+    "rain_mm_per_day": 4.19
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/sapporo-average-monthly-temperature-rainfall",
+  "title": "Sapporo climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

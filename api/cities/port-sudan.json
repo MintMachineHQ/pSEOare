@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Port Sudan",
+  "annual_mean_c": 29.1,
+  "warmest_month": "Aug",
+  "warmest_c": 33.6,
+  "coldest_month": "Jan",
+  "coldest_c": 24.5,
+  "seasonal_swing_c": 9.1,
+  "annual_rainfall_mm": 45.0,
+  "wettest_month": "Nov",
+  "wettest_mm_per_day": 0.39,
+  "driest_month": "Mar",
+  "driest_mm_per_day": 0.01,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 24.5,
+    "rain_mm_per_day": 0.18
+   },
+   {
+    "month": "Feb",
+    "mean_c": 24.6,
+    "rain_mm_per_day": 0.02
+   },
+   {
+    "month": "Mar",
+    "mean_c": 25.6,
+    "rain_mm_per_day": 0.01
+   },
+   {
+    "month": "Apr",
+    "mean_c": 27.4,
+    "rain_mm_per_day": 0.1
+   },
+   {
+    "month": "May",
+    "mean_c": 30.1,
+    "rain_mm_per_day": 0.07
+   },
+   {
+    "month": "Jun",
+    "mean_c": 32.0,
+    "rain_mm_per_day": 0.01
+   },
+   {
+    "month": "Jul",
+    "mean_c": 33.4,
+    "rain_mm_per_day": 0.09
+   },
+   {
+    "month": "Aug",
+    "mean_c": 33.6,
+    "rain_mm_per_day": 0.11
+   },
+   {
+    "month": "Sep",
+    "mean_c": 32.2,
+    "rain_mm_per_day": 0.03
+   },
+   {
+    "month": "Oct",
+    "mean_c": 30.4,
+    "rain_mm_per_day": 0.23
+   },
+   {
+    "month": "Nov",
+    "mean_c": 28.5,
+    "rain_mm_per_day": 0.39
+   },
+   {
+    "month": "Dec",
+    "mean_c": 26.2,
+    "rain_mm_per_day": 0.25
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/port-sudan-average-monthly-temperature-rainfall",
+  "title": "Port Sudan climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

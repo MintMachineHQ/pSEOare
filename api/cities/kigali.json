@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Kigali",
+  "annual_mean_c": 19.8,
+  "warmest_month": "Feb",
+  "warmest_c": 20.8,
+  "coldest_month": "Jun",
+  "coldest_c": 18.8,
+  "seasonal_swing_c": 2.0,
+  "annual_rainfall_mm": 1291.0,
+  "wettest_month": "Apr",
+  "wettest_mm_per_day": 5.93,
+  "driest_month": "Jul",
+  "driest_mm_per_day": 1.01,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 20.3,
+    "rain_mm_per_day": 3.11
+   },
+   {
+    "month": "Feb",
+    "mean_c": 20.8,
+    "rain_mm_per_day": 3.6
+   },
+   {
+    "month": "Mar",
+    "mean_c": 20.2,
+    "rain_mm_per_day": 4.95
+   },
+   {
+    "month": "Apr",
+    "mean_c": 19.5,
+    "rain_mm_per_day": 5.93
+   },
+   {
+    "month": "May",
+    "mean_c": 19.2,
+    "rain_mm_per_day": 4.47
+   },
+   {
+    "month": "Jun",
+    "mean_c": 18.8,
+    "rain_mm_per_day": 1.66
+   },
+   {
+    "month": "Jul",
+    "mean_c": 19.0,
+    "rain_mm_per_day": 1.01
+   },
+   {
+    "month": "Aug",
+    "mean_c": 20.1,
+    "rain_mm_per_day": 1.81
+   },
+   {
+    "month": "Sep",
+    "mean_c": 20.5,
+    "rain_mm_per_day": 2.94
+   },
+   {
+    "month": "Oct",
+    "mean_c": 20.1,
+    "rain_mm_per_day": 4.15
+   },
+   {
+    "month": "Nov",
+    "mean_c": 19.4,
+    "rain_mm_per_day": 5.32
+   },
+   {
+    "month": "Dec",
+    "mean_c": 19.7,
+    "rain_mm_per_day": 3.52
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/kigali-average-monthly-temperature-rainfall",
+  "title": "Kigali climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

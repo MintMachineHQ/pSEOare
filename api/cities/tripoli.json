@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Tripoli",
+  "annual_mean_c": 21.0,
+  "warmest_month": "Aug",
+  "warmest_c": 28.0,
+  "coldest_month": "Feb",
+  "coldest_c": 14.3,
+  "seasonal_swing_c": 13.7,
+  "annual_rainfall_mm": 255.0,
+  "wettest_month": "Dec",
+  "wettest_mm_per_day": 1.63,
+  "driest_month": "Jul",
+  "driest_mm_per_day": 0.01,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 14.5,
+    "rain_mm_per_day": 1.42
+   },
+   {
+    "month": "Feb",
+    "mean_c": 14.3,
+    "rain_mm_per_day": 1.36
+   },
+   {
+    "month": "Mar",
+    "mean_c": 15.9,
+    "rain_mm_per_day": 0.63
+   },
+   {
+    "month": "Apr",
+    "mean_c": 18.1,
+    "rain_mm_per_day": 0.26
+   },
+   {
+    "month": "May",
+    "mean_c": 21.0,
+    "rain_mm_per_day": 0.16
+   },
+   {
+    "month": "Jun",
+    "mean_c": 24.3,
+    "rain_mm_per_day": 0.07
+   },
+   {
+    "month": "Jul",
+    "mean_c": 27.1,
+    "rain_mm_per_day": 0.01
+   },
+   {
+    "month": "Aug",
+    "mean_c": 28.0,
+    "rain_mm_per_day": 0.03
+   },
+   {
+    "month": "Sep",
+    "mean_c": 27.0,
+    "rain_mm_per_day": 0.7
+   },
+   {
+    "month": "Oct",
+    "mean_c": 24.3,
+    "rain_mm_per_day": 0.95
+   },
+   {
+    "month": "Nov",
+    "mean_c": 20.2,
+    "rain_mm_per_day": 1.18
+   },
+   {
+    "month": "Dec",
+    "mean_c": 16.4,
+    "rain_mm_per_day": 1.63
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/tripoli-average-monthly-temperature-rainfall",
+  "title": "Tripoli climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

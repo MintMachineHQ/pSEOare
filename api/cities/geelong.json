@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Geelong",
+  "annual_mean_c": 14.4,
+  "warmest_month": "Jan",
+  "warmest_c": 20.0,
+  "coldest_month": "Jul",
+  "coldest_c": 9.1,
+  "seasonal_swing_c": 10.9,
+  "annual_rainfall_mm": 598.0,
+  "wettest_month": "Nov",
+  "wettest_mm_per_day": 2.08,
+  "driest_month": "Mar",
+  "driest_mm_per_day": 1.17,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 20.0,
+    "rain_mm_per_day": 1.3
+   },
+   {
+    "month": "Feb",
+    "mean_c": 19.6,
+    "rain_mm_per_day": 1.5
+   },
+   {
+    "month": "Mar",
+    "mean_c": 18.3,
+    "rain_mm_per_day": 1.17
+   },
+   {
+    "month": "Apr",
+    "mean_c": 15.2,
+    "rain_mm_per_day": 1.67
+   },
+   {
+    "month": "May",
+    "mean_c": 12.2,
+    "rain_mm_per_day": 1.51
+   },
+   {
+    "month": "Jun",
+    "mean_c": 9.9,
+    "rain_mm_per_day": 1.86
+   },
+   {
+    "month": "Jul",
+    "mean_c": 9.1,
+    "rain_mm_per_day": 1.75
+   },
+   {
+    "month": "Aug",
+    "mean_c": 9.6,
+    "rain_mm_per_day": 1.91
+   },
+   {
+    "month": "Sep",
+    "mean_c": 11.4,
+    "rain_mm_per_day": 1.76
+   },
+   {
+    "month": "Oct",
+    "mean_c": 13.7,
+    "rain_mm_per_day": 1.67
+   },
+   {
+    "month": "Nov",
+    "mean_c": 16.2,
+    "rain_mm_per_day": 2.08
+   },
+   {
+    "month": "Dec",
+    "mean_c": 18.0,
+    "rain_mm_per_day": 1.5
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/geelong-average-monthly-temperature-rainfall",
+  "title": "Geelong climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

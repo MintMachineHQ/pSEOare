@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Pikine",
+  "annual_mean_c": 24.3,
+  "warmest_month": "Oct",
+  "warmest_c": 28.1,
+  "coldest_month": "Feb",
+  "coldest_c": 20.5,
+  "seasonal_swing_c": 7.6,
+  "annual_rainfall_mm": 511.0,
+  "wettest_month": "Aug",
+  "wettest_mm_per_day": 5.22,
+  "driest_month": "May",
+  "driest_mm_per_day": 0.09,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 21.7,
+    "rain_mm_per_day": 0.37
+   },
+   {
+    "month": "Feb",
+    "mean_c": 20.5,
+    "rain_mm_per_day": 0.53
+   },
+   {
+    "month": "Mar",
+    "mean_c": 20.6,
+    "rain_mm_per_day": 0.2
+   },
+   {
+    "month": "Apr",
+    "mean_c": 20.9,
+    "rain_mm_per_day": 0.33
+   },
+   {
+    "month": "May",
+    "mean_c": 22.4,
+    "rain_mm_per_day": 0.09
+   },
+   {
+    "month": "Jun",
+    "mean_c": 24.8,
+    "rain_mm_per_day": 0.37
+   },
+   {
+    "month": "Jul",
+    "mean_c": 26.6,
+    "rain_mm_per_day": 2.33
+   },
+   {
+    "month": "Aug",
+    "mean_c": 27.4,
+    "rain_mm_per_day": 5.22
+   },
+   {
+    "month": "Sep",
+    "mean_c": 27.9,
+    "rain_mm_per_day": 4.88
+   },
+   {
+    "month": "Oct",
+    "mean_c": 28.1,
+    "rain_mm_per_day": 1.53
+   },
+   {
+    "month": "Nov",
+    "mean_c": 26.5,
+    "rain_mm_per_day": 0.52
+   },
+   {
+    "month": "Dec",
+    "mean_c": 24.0,
+    "rain_mm_per_day": 0.45
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/pikine-average-monthly-temperature-rainfall",
+  "title": "Pikine climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

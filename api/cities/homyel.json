@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Homyel'",
+  "annual_mean_c": 6.8,
+  "warmest_month": "Jul",
+  "warmest_c": 20.4,
+  "coldest_month": "Jan",
+  "coldest_c": -7.8,
+  "seasonal_swing_c": 28.2,
+  "annual_rainfall_mm": 673.0,
+  "wettest_month": "Jul",
+  "wettest_mm_per_day": 2.66,
+  "driest_month": "Apr",
+  "driest_mm_per_day": 1.37,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": -7.8,
+    "rain_mm_per_day": 1.55
+   },
+   {
+    "month": "Feb",
+    "mean_c": -6.5,
+    "rain_mm_per_day": 1.52
+   },
+   {
+    "month": "Mar",
+    "mean_c": -0.8,
+    "rain_mm_per_day": 1.42
+   },
+   {
+    "month": "Apr",
+    "mean_c": 7.3,
+    "rain_mm_per_day": 1.37
+   },
+   {
+    "month": "May",
+    "mean_c": 14.3,
+    "rain_mm_per_day": 2.3
+   },
+   {
+    "month": "Jun",
+    "mean_c": 17.9,
+    "rain_mm_per_day": 2.37
+   },
+   {
+    "month": "Jul",
+    "mean_c": 20.4,
+    "rain_mm_per_day": 2.66
+   },
+   {
+    "month": "Aug",
+    "mean_c": 19.6,
+    "rain_mm_per_day": 1.96
+   },
+   {
+    "month": "Sep",
+    "mean_c": 13.9,
+    "rain_mm_per_day": 1.6
+   },
+   {
+    "month": "Oct",
+    "mean_c": 6.8,
+    "rain_mm_per_day": 2.06
+   },
+   {
+    "month": "Nov",
+    "mean_c": 0.7,
+    "rain_mm_per_day": 1.71
+   },
+   {
+    "month": "Dec",
+    "mean_c": -5.0,
+    "rain_mm_per_day": 1.62
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/homyel-average-monthly-temperature-rainfall",
+  "title": "Homyel' climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

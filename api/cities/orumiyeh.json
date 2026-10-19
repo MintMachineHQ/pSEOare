@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Orumiyeh",
+  "annual_mean_c": 10.8,
+  "warmest_month": "Jul",
+  "warmest_c": 24.1,
+  "coldest_month": "Jan",
+  "coldest_c": -2.8,
+  "seasonal_swing_c": 26.9,
+  "annual_rainfall_mm": 301.0,
+  "wettest_month": "Apr",
+  "wettest_mm_per_day": 1.72,
+  "driest_month": "Sep",
+  "driest_mm_per_day": 0.11,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": -2.8,
+    "rain_mm_per_day": 0.93
+   },
+   {
+    "month": "Feb",
+    "mean_c": -0.4,
+    "rain_mm_per_day": 0.95
+   },
+   {
+    "month": "Mar",
+    "mean_c": 4.2,
+    "rain_mm_per_day": 1.45
+   },
+   {
+    "month": "Apr",
+    "mean_c": 9.1,
+    "rain_mm_per_day": 1.72
+   },
+   {
+    "month": "May",
+    "mean_c": 14.8,
+    "rain_mm_per_day": 1.07
+   },
+   {
+    "month": "Jun",
+    "mean_c": 20.7,
+    "rain_mm_per_day": 0.31
+   },
+   {
+    "month": "Jul",
+    "mean_c": 24.1,
+    "rain_mm_per_day": 0.12
+   },
+   {
+    "month": "Aug",
+    "mean_c": 23.8,
+    "rain_mm_per_day": 0.14
+   },
+   {
+    "month": "Sep",
+    "mean_c": 19.4,
+    "rain_mm_per_day": 0.11
+   },
+   {
+    "month": "Oct",
+    "mean_c": 12.7,
+    "rain_mm_per_day": 0.91
+   },
+   {
+    "month": "Nov",
+    "mean_c": 4.4,
+    "rain_mm_per_day": 1.2
+   },
+   {
+    "month": "Dec",
+    "mean_c": -0.6,
+    "rain_mm_per_day": 0.99
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/orumiyeh-average-monthly-temperature-rainfall",
+  "title": "Orumiyeh climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

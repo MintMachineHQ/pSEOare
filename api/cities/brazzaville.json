@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Brazzaville",
+  "annual_mean_c": 25.1,
+  "warmest_month": "Sep",
+  "warmest_c": 25.9,
+  "coldest_month": "Jul",
+  "coldest_c": 23.7,
+  "seasonal_swing_c": 2.2,
+  "annual_rainfall_mm": 1683.0,
+  "wettest_month": "Nov",
+  "wettest_mm_per_day": 9.28,
+  "driest_month": "Jul",
+  "driest_mm_per_day": 0.11,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 25.1,
+    "rain_mm_per_day": 5.34
+   },
+   {
+    "month": "Feb",
+    "mean_c": 25.5,
+    "rain_mm_per_day": 5.84
+   },
+   {
+    "month": "Mar",
+    "mean_c": 25.5,
+    "rain_mm_per_day": 6.66
+   },
+   {
+    "month": "Apr",
+    "mean_c": 25.5,
+    "rain_mm_per_day": 6.89
+   },
+   {
+    "month": "May",
+    "mean_c": 25.2,
+    "rain_mm_per_day": 4.8
+   },
+   {
+    "month": "Jun",
+    "mean_c": 24.0,
+    "rain_mm_per_day": 0.45
+   },
+   {
+    "month": "Jul",
+    "mean_c": 23.7,
+    "rain_mm_per_day": 0.11
+   },
+   {
+    "month": "Aug",
+    "mean_c": 24.7,
+    "rain_mm_per_day": 0.42
+   },
+   {
+    "month": "Sep",
+    "mean_c": 25.9,
+    "rain_mm_per_day": 1.89
+   },
+   {
+    "month": "Oct",
+    "mean_c": 25.7,
+    "rain_mm_per_day": 5.66
+   },
+   {
+    "month": "Nov",
+    "mean_c": 25.0,
+    "rain_mm_per_day": 9.28
+   },
+   {
+    "month": "Dec",
+    "mean_c": 24.9,
+    "rain_mm_per_day": 8.03
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/brazzaville-average-monthly-temperature-rainfall",
+  "title": "Brazzaville climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

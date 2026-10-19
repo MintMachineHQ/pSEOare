@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Benghazi",
+  "annual_mean_c": 20.6,
+  "warmest_month": "Aug",
+  "warmest_c": 27.2,
+  "coldest_month": "Feb",
+  "coldest_c": 14.4,
+  "seasonal_swing_c": 12.8,
+  "annual_rainfall_mm": 222.0,
+  "wettest_month": "Dec",
+  "wettest_mm_per_day": 1.98,
+  "driest_month": "Jul",
+  "driest_mm_per_day": 0.01,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 14.7,
+    "rain_mm_per_day": 1.25
+   },
+   {
+    "month": "Feb",
+    "mean_c": 14.4,
+    "rain_mm_per_day": 1.51
+   },
+   {
+    "month": "Mar",
+    "mean_c": 15.8,
+    "rain_mm_per_day": 0.67
+   },
+   {
+    "month": "Apr",
+    "mean_c": 18.0,
+    "rain_mm_per_day": 0.12
+   },
+   {
+    "month": "May",
+    "mean_c": 21.0,
+    "rain_mm_per_day": 0.12
+   },
+   {
+    "month": "Jun",
+    "mean_c": 24.1,
+    "rain_mm_per_day": 0.04
+   },
+   {
+    "month": "Jul",
+    "mean_c": 26.4,
+    "rain_mm_per_day": 0.01
+   },
+   {
+    "month": "Aug",
+    "mean_c": 27.2,
+    "rain_mm_per_day": 0.02
+   },
+   {
+    "month": "Sep",
+    "mean_c": 26.1,
+    "rain_mm_per_day": 0.2
+   },
+   {
+    "month": "Oct",
+    "mean_c": 23.4,
+    "rain_mm_per_day": 0.58
+   },
+   {
+    "month": "Nov",
+    "mean_c": 19.7,
+    "rain_mm_per_day": 0.79
+   },
+   {
+    "month": "Dec",
+    "mean_c": 16.5,
+    "rain_mm_per_day": 1.98
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/benghazi-average-monthly-temperature-rainfall",
+  "title": "Benghazi climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

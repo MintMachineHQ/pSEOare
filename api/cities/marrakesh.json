@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Marrakesh",
+  "annual_mean_c": 18.9,
+  "warmest_month": "Aug",
+  "warmest_c": 28.9,
+  "coldest_month": "Jan",
+  "coldest_c": 10.2,
+  "seasonal_swing_c": 18.7,
+  "annual_rainfall_mm": 291.0,
+  "wettest_month": "Nov",
+  "wettest_mm_per_day": 1.81,
+  "driest_month": "Jun",
+  "driest_mm_per_day": 0.13,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 10.2,
+    "rain_mm_per_day": 1.16
+   },
+   {
+    "month": "Feb",
+    "mean_c": 11.4,
+    "rain_mm_per_day": 1.1
+   },
+   {
+    "month": "Mar",
+    "mean_c": 14.3,
+    "rain_mm_per_day": 1.28
+   },
+   {
+    "month": "Apr",
+    "mean_c": 16.6,
+    "rain_mm_per_day": 0.9
+   },
+   {
+    "month": "May",
+    "mean_c": 20.3,
+    "rain_mm_per_day": 0.5
+   },
+   {
+    "month": "Jun",
+    "mean_c": 24.4,
+    "rain_mm_per_day": 0.13
+   },
+   {
+    "month": "Jul",
+    "mean_c": 28.8,
+    "rain_mm_per_day": 0.23
+   },
+   {
+    "month": "Aug",
+    "mean_c": 28.9,
+    "rain_mm_per_day": 0.22
+   },
+   {
+    "month": "Sep",
+    "mean_c": 24.2,
+    "rain_mm_per_day": 0.47
+   },
+   {
+    "month": "Oct",
+    "mean_c": 20.5,
+    "rain_mm_per_day": 0.74
+   },
+   {
+    "month": "Nov",
+    "mean_c": 14.6,
+    "rain_mm_per_day": 1.81
+   },
+   {
+    "month": "Dec",
+    "mean_c": 11.4,
+    "rain_mm_per_day": 1.04
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/marrakesh-average-monthly-temperature-rainfall",
+  "title": "Marrakesh climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

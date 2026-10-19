@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Santiago de los Caballeros",
+  "annual_mean_c": 25.3,
+  "warmest_month": "Aug",
+  "warmest_c": 27.1,
+  "coldest_month": "Jan",
+  "coldest_c": 23.0,
+  "seasonal_swing_c": 4.1,
+  "annual_rainfall_mm": 625.0,
+  "wettest_month": "Nov",
+  "wettest_mm_per_day": 2.86,
+  "driest_month": "Feb",
+  "driest_mm_per_day": 1.02,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 23.0,
+    "rain_mm_per_day": 1.57
+   },
+   {
+    "month": "Feb",
+    "mean_c": 23.3,
+    "rain_mm_per_day": 1.02
+   },
+   {
+    "month": "Mar",
+    "mean_c": 23.9,
+    "rain_mm_per_day": 1.24
+   },
+   {
+    "month": "Apr",
+    "mean_c": 25.0,
+    "rain_mm_per_day": 1.48
+   },
+   {
+    "month": "May",
+    "mean_c": 25.9,
+    "rain_mm_per_day": 2.08
+   },
+   {
+    "month": "Jun",
+    "mean_c": 26.9,
+    "rain_mm_per_day": 1.31
+   },
+   {
+    "month": "Jul",
+    "mean_c": 26.9,
+    "rain_mm_per_day": 1.57
+   },
+   {
+    "month": "Aug",
+    "mean_c": 27.1,
+    "rain_mm_per_day": 1.77
+   },
+   {
+    "month": "Sep",
+    "mean_c": 27.1,
+    "rain_mm_per_day": 1.94
+   },
+   {
+    "month": "Oct",
+    "mean_c": 26.4,
+    "rain_mm_per_day": 1.93
+   },
+   {
+    "month": "Nov",
+    "mean_c": 24.8,
+    "rain_mm_per_day": 2.86
+   },
+   {
+    "month": "Dec",
+    "mean_c": 23.6,
+    "rain_mm_per_day": 1.8
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/santiago-de-los-caballeros-average-monthly-temperature-rainfall",
+  "title": "Santiago de los Caballeros climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

@@ -1,7 +1,7 @@
 {
  "answer": {
   "country": "Kenya",
-  "count": 8,
+  "count": 32,
   "holidays": [
    {
     "name": "New Year's Day in Kenya (2016)",
@@ -12,12 +12,44 @@
     "page": "https://pseoare.pages.dev/new-year-s-day-kenya-2016-01-01"
    },
    {
+    "name": "Good Friday in Kenya (2016)",
+    "local_name": "Good Friday",
+    "date": "2016-03-25",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/good-friday-kenya-2016-03-25"
+   },
+   {
+    "name": "Christmas Day in Kenya (2016)",
+    "local_name": "Christmas Day",
+    "date": "2016-12-26",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-kenya-2016-12-26"
+   },
+   {
     "name": "New Year's Day in Kenya (2017)",
     "local_name": "New Year's Day",
     "date": "2017-01-02",
     "weekday": "Monday",
     "weekend": false,
     "page": "https://pseoare.pages.dev/new-year-s-day-kenya-2017-01-02"
+   },
+   {
+    "name": "Good Friday in Kenya (2017)",
+    "local_name": "Good Friday",
+    "date": "2017-04-14",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/good-friday-kenya-2017-04-14"
+   },
+   {
+    "name": "Christmas Day in Kenya (2017)",
+    "local_name": "Christmas Day",
+    "date": "2017-12-25",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-kenya-2017-12-25"
    },
    {
     "name": "New Year's Day in Kenya (2018)",
@@ -28,12 +60,44 @@
     "page": "https://pseoare.pages.dev/new-year-s-day-kenya-2018-01-01"
    },
    {
+    "name": "Good Friday in Kenya (2018)",
+    "local_name": "Good Friday",
+    "date": "2018-03-30",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/good-friday-kenya-2018-03-30"
+   },
+   {
+    "name": "Christmas Day in Kenya (2018)",
+    "local_name": "Christmas Day",
+    "date": "2018-12-25",
+    "weekday": "Tuesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-kenya-2018-12-25"
+   },
+   {
     "name": "New Year's Day in Kenya (2019)",
     "local_name": "New Year's Day",
     "date": "2019-01-01",
     "weekday": "Tuesday",
     "weekend": false,
     "page": "https://pseoare.pages.dev/new-year-s-day-kenya-2019-01-01"
+   },
+   {
+    "name": "Good Friday in Kenya (2019)",
+    "local_name": "Good Friday",
+    "date": "2019-04-19",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/good-friday-kenya-2019-04-19"
+   },
+   {
+    "name": "Christmas Day in Kenya (2019)",
+    "local_name": "Christmas Day",
+    "date": "2019-12-25",
+    "weekday": "Wednesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-kenya-2019-12-25"
    },
    {
     "name": "New Year's Day in Kenya (2020)",
@@ -44,12 +108,44 @@
     "page": "https://pseoare.pages.dev/new-year-s-day-kenya-2020-01-01"
    },
    {
+    "name": "Good Friday in Kenya (2020)",
+    "local_name": "Good Friday",
+    "date": "2020-04-10",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/good-friday-kenya-2020-04-10"
+   },
+   {
+    "name": "Christmas Day in Kenya (2020)",
+    "local_name": "Christmas Day",
+    "date": "2020-12-25",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-kenya-2020-12-25"
+   },
+   {
     "name": "New Year's Day in Kenya (2021)",
     "local_name": "New Year's Day",
     "date": "2021-01-01",
     "weekday": "Friday",
     "weekend": false,
     "page": "https://pseoare.pages.dev/new-year-s-day-kenya-2021-01-01"
+   },
+   {
+    "name": "Good Friday in Kenya (2021)",
+    "local_name": "Good Friday",
+    "date": "2021-04-02",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/good-friday-kenya-2021-04-02"
+   },
+   {
+    "name": "Christmas Day in Kenya (2021)",
+    "local_name": "Christmas Day",
+    "date": "2021-12-25",
+    "weekday": "Saturday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/christmas-day-kenya-2021-12-25"
    },
    {
     "name": "New Year's Day in Kenya (2022)",
@@ -60,12 +156,108 @@
     "page": "https://pseoare.pages.dev/new-year-s-day-kenya-2022-01-01"
    },
    {
+    "name": "Good Friday in Kenya (2022)",
+    "local_name": "Good Friday",
+    "date": "2022-04-15",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/good-friday-kenya-2022-04-15"
+   },
+   {
+    "name": "Christmas Day in Kenya (2022)",
+    "local_name": "Christmas Day",
+    "date": "2022-12-26",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-kenya-2022-12-26"
+   },
+   {
     "name": "New Year's Day in Kenya (2023)",
     "local_name": "New Year's Day",
     "date": "2023-01-02",
     "weekday": "Monday",
     "weekend": false,
     "page": "https://pseoare.pages.dev/new-year-s-day-kenya-2023-01-02"
+   },
+   {
+    "name": "Good Friday in Kenya (2023)",
+    "local_name": "Good Friday",
+    "date": "2023-04-07",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/good-friday-kenya-2023-04-07"
+   },
+   {
+    "name": "Christmas Day in Kenya (2023)",
+    "local_name": "Christmas Day",
+    "date": "2023-12-25",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-kenya-2023-12-25"
+   },
+   {
+    "name": "Good Friday in Kenya (2024)",
+    "local_name": "Good Friday",
+    "date": "2024-03-29",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/good-friday-kenya-2024-03-29"
+   },
+   {
+    "name": "Christmas Day in Kenya (2024)",
+    "local_name": "Christmas Day",
+    "date": "2024-12-25",
+    "weekday": "Wednesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-kenya-2024-12-25"
+   },
+   {
+    "name": "Good Friday in Kenya (2025)",
+    "local_name": "Good Friday",
+    "date": "2025-04-18",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/good-friday-kenya-2025-04-18"
+   },
+   {
+    "name": "Christmas Day in Kenya (2025)",
+    "local_name": "Christmas Day",
+    "date": "2025-12-25",
+    "weekday": "Thursday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-kenya-2025-12-25"
+   },
+   {
+    "name": "Good Friday in Kenya (2026)",
+    "local_name": "Good Friday",
+    "date": "2026-04-03",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/good-friday-kenya-2026-04-03"
+   },
+   {
+    "name": "Christmas Day in Kenya (2026)",
+    "local_name": "Christmas Day",
+    "date": "2026-12-25",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-kenya-2026-12-25"
+   },
+   {
+    "name": "Good Friday in Kenya (2027)",
+    "local_name": "Good Friday",
+    "date": "2027-03-26",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/good-friday-kenya-2027-03-26"
+   },
+   {
+    "name": "Christmas Day in Kenya (2027)",
+    "local_name": "Christmas Day",
+    "date": "2027-12-25",
+    "weekday": "Saturday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/christmas-day-kenya-2027-12-25"
    }
   ]
  },
@@ -74,7 +266,7 @@
   "title": "Public holidays for Kenya",
   "site": "https://pseoare.pages.dev"
  },
- "updated": "2026-10-19T20:41:30.228277+00:00",
+ "updated": "2026-10-19T20:49:39.946179+00:00",
  "license": "CC-BY-4.0",
  "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
 }

@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Iloilo",
+  "annual_mean_c": 27.5,
+  "warmest_month": "May",
+  "warmest_c": 29.1,
+  "coldest_month": "Jan",
+  "coldest_c": 26.3,
+  "seasonal_swing_c": 2.8,
+  "annual_rainfall_mm": 2301.0,
+  "wettest_month": "Jul",
+  "wettest_mm_per_day": 11.1,
+  "driest_month": "Mar",
+  "driest_mm_per_day": 1.95,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 26.3,
+    "rain_mm_per_day": 3.08
+   },
+   {
+    "month": "Feb",
+    "mean_c": 26.5,
+    "rain_mm_per_day": 2.4
+   },
+   {
+    "month": "Mar",
+    "mean_c": 27.6,
+    "rain_mm_per_day": 1.95
+   },
+   {
+    "month": "Apr",
+    "mean_c": 29.0,
+    "rain_mm_per_day": 2.01
+   },
+   {
+    "month": "May",
+    "mean_c": 29.1,
+    "rain_mm_per_day": 5.64
+   },
+   {
+    "month": "Jun",
+    "mean_c": 28.1,
+    "rain_mm_per_day": 9.93
+   },
+   {
+    "month": "Jul",
+    "mean_c": 27.4,
+    "rain_mm_per_day": 11.1
+   },
+   {
+    "month": "Aug",
+    "mean_c": 27.3,
+    "rain_mm_per_day": 10.23
+   },
+   {
+    "month": "Sep",
+    "mean_c": 27.3,
+    "rain_mm_per_day": 9.3
+   },
+   {
+    "month": "Oct",
+    "mean_c": 27.4,
+    "rain_mm_per_day": 8.93
+   },
+   {
+    "month": "Nov",
+    "mean_c": 27.4,
+    "rain_mm_per_day": 5.49
+   },
+   {
+    "month": "Dec",
+    "mean_c": 26.9,
+    "rain_mm_per_day": 5.63
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/iloilo-average-monthly-temperature-rainfall",
+  "title": "Iloilo climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

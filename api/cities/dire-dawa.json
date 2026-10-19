@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Dire Dawa",
+  "annual_mean_c": 21.0,
+  "warmest_month": "May",
+  "warmest_c": 22.9,
+  "coldest_month": "Dec",
+  "coldest_c": 18.5,
+  "seasonal_swing_c": 4.4,
+  "annual_rainfall_mm": 756.0,
+  "wettest_month": "Aug",
+  "wettest_mm_per_day": 4.71,
+  "driest_month": "Jan",
+  "driest_mm_per_day": 0.19,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 19.1,
+    "rain_mm_per_day": 0.19
+   },
+   {
+    "month": "Feb",
+    "mean_c": 21.1,
+    "rain_mm_per_day": 0.46
+   },
+   {
+    "month": "Mar",
+    "mean_c": 22.5,
+    "rain_mm_per_day": 1.49
+   },
+   {
+    "month": "Apr",
+    "mean_c": 22.5,
+    "rain_mm_per_day": 3.8
+   },
+   {
+    "month": "May",
+    "mean_c": 22.9,
+    "rain_mm_per_day": 2.74
+   },
+   {
+    "month": "Jun",
+    "mean_c": 22.5,
+    "rain_mm_per_day": 1.69
+   },
+   {
+    "month": "Jul",
+    "mean_c": 21.2,
+    "rain_mm_per_day": 3.73
+   },
+   {
+    "month": "Aug",
+    "mean_c": 20.6,
+    "rain_mm_per_day": 4.71
+   },
+   {
+    "month": "Sep",
+    "mean_c": 21.0,
+    "rain_mm_per_day": 3.78
+   },
+   {
+    "month": "Oct",
+    "mean_c": 20.6,
+    "rain_mm_per_day": 1.19
+   },
+   {
+    "month": "Nov",
+    "mean_c": 19.4,
+    "rain_mm_per_day": 0.73
+   },
+   {
+    "month": "Dec",
+    "mean_c": 18.5,
+    "rain_mm_per_day": 0.35
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/dire-dawa-average-monthly-temperature-rainfall",
+  "title": "Dire Dawa climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

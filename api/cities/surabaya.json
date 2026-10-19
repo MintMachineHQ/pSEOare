@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Surabaya",
+  "annual_mean_c": 26.5,
+  "warmest_month": "Oct",
+  "warmest_c": 29.2,
+  "coldest_month": "Feb",
+  "coldest_c": 25.4,
+  "seasonal_swing_c": 3.8,
+  "annual_rainfall_mm": 1857.0,
+  "wettest_month": "Feb",
+  "wettest_mm_per_day": 11.35,
+  "driest_month": "Aug",
+  "driest_mm_per_day": 0.34,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 25.5,
+    "rain_mm_per_day": 10.52
+   },
+   {
+    "month": "Feb",
+    "mean_c": 25.4,
+    "rain_mm_per_day": 11.35
+   },
+   {
+    "month": "Mar",
+    "mean_c": 25.7,
+    "rain_mm_per_day": 9.03
+   },
+   {
+    "month": "Apr",
+    "mean_c": 26.1,
+    "rain_mm_per_day": 6.48
+   },
+   {
+    "month": "May",
+    "mean_c": 25.9,
+    "rain_mm_per_day": 3.89
+   },
+   {
+    "month": "Jun",
+    "mean_c": 25.5,
+    "rain_mm_per_day": 2.3
+   },
+   {
+    "month": "Jul",
+    "mean_c": 25.7,
+    "rain_mm_per_day": 1.11
+   },
+   {
+    "month": "Aug",
+    "mean_c": 26.7,
+    "rain_mm_per_day": 0.34
+   },
+   {
+    "month": "Sep",
+    "mean_c": 28.3,
+    "rain_mm_per_day": 0.58
+   },
+   {
+    "month": "Oct",
+    "mean_c": 29.2,
+    "rain_mm_per_day": 1.92
+   },
+   {
+    "month": "Nov",
+    "mean_c": 28.3,
+    "rain_mm_per_day": 4.42
+   },
+   {
+    "month": "Dec",
+    "mean_c": 26.3,
+    "rain_mm_per_day": 9.13
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/surabaya-average-monthly-temperature-rainfall",
+  "title": "Surabaya climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Irbid",
+  "annual_mean_c": 20.4,
+  "warmest_month": "Aug",
+  "warmest_c": 28.8,
+  "coldest_month": "Jan",
+  "coldest_c": 10.7,
+  "seasonal_swing_c": 18.1,
+  "annual_rainfall_mm": 375.0,
+  "wettest_month": "Jan",
+  "wettest_mm_per_day": 2.99,
+  "driest_month": "Jul",
+  "driest_mm_per_day": 0.0,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 10.7,
+    "rain_mm_per_day": 2.99
+   },
+   {
+    "month": "Feb",
+    "mean_c": 11.9,
+    "rain_mm_per_day": 2.8
+   },
+   {
+    "month": "Mar",
+    "mean_c": 15.0,
+    "rain_mm_per_day": 1.29
+   },
+   {
+    "month": "Apr",
+    "mean_c": 18.7,
+    "rain_mm_per_day": 0.68
+   },
+   {
+    "month": "May",
+    "mean_c": 23.3,
+    "rain_mm_per_day": 0.2
+   },
+   {
+    "month": "Jun",
+    "mean_c": 26.7,
+    "rain_mm_per_day": 0.02
+   },
+   {
+    "month": "Jul",
+    "mean_c": 28.7,
+    "rain_mm_per_day": 0.0
+   },
+   {
+    "month": "Aug",
+    "mean_c": 28.8,
+    "rain_mm_per_day": 0.03
+   },
+   {
+    "month": "Sep",
+    "mean_c": 26.9,
+    "rain_mm_per_day": 0.05
+   },
+   {
+    "month": "Oct",
+    "mean_c": 23.7,
+    "rain_mm_per_day": 0.38
+   },
+   {
+    "month": "Nov",
+    "mean_c": 17.7,
+    "rain_mm_per_day": 1.34
+   },
+   {
+    "month": "Dec",
+    "mean_c": 12.8,
+    "rain_mm_per_day": 2.54
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/irbid-average-monthly-temperature-rainfall",
+  "title": "Irbid climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

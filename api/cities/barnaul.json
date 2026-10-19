@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Barnaul",
+  "annual_mean_c": 1.9,
+  "warmest_month": "Jul",
+  "warmest_c": 20.6,
+  "coldest_month": "Jan",
+  "coldest_c": -18.9,
+  "seasonal_swing_c": 39.5,
+  "annual_rainfall_mm": 478.0,
+  "wettest_month": "Jul",
+  "wettest_mm_per_day": 1.96,
+  "driest_month": "Feb",
+  "driest_mm_per_day": 0.86,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": -18.9,
+    "rain_mm_per_day": 0.88
+   },
+   {
+    "month": "Feb",
+    "mean_c": -15.7,
+    "rain_mm_per_day": 0.86
+   },
+   {
+    "month": "Mar",
+    "mean_c": -7.0,
+    "rain_mm_per_day": 0.95
+   },
+   {
+    "month": "Apr",
+    "mean_c": 3.5,
+    "rain_mm_per_day": 1.07
+   },
+   {
+    "month": "May",
+    "mean_c": 11.5,
+    "rain_mm_per_day": 1.47
+   },
+   {
+    "month": "Jun",
+    "mean_c": 18.5,
+    "rain_mm_per_day": 1.64
+   },
+   {
+    "month": "Jul",
+    "mean_c": 20.6,
+    "rain_mm_per_day": 1.96
+   },
+   {
+    "month": "Aug",
+    "mean_c": 18.7,
+    "rain_mm_per_day": 1.21
+   },
+   {
+    "month": "Sep",
+    "mean_c": 11.4,
+    "rain_mm_per_day": 1.16
+   },
+   {
+    "month": "Oct",
+    "mean_c": 2.7,
+    "rain_mm_per_day": 1.58
+   },
+   {
+    "month": "Nov",
+    "mean_c": -7.4,
+    "rain_mm_per_day": 1.71
+   },
+   {
+    "month": "Dec",
+    "mean_c": -15.9,
+    "rain_mm_per_day": 1.23
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/barnaul-average-monthly-temperature-rainfall",
+  "title": "Barnaul climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

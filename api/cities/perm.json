@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Perm",
+  "annual_mean_c": 1.1,
+  "warmest_month": "Jul",
+  "warmest_c": 18.1,
+  "coldest_month": "Jan",
+  "coldest_c": -16.2,
+  "seasonal_swing_c": 34.3,
+  "annual_rainfall_mm": 774.0,
+  "wettest_month": "Jun",
+  "wettest_mm_per_day": 3.12,
+  "driest_month": "Feb",
+  "driest_mm_per_day": 1.21,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": -16.2,
+    "rain_mm_per_day": 1.39
+   },
+   {
+    "month": "Feb",
+    "mean_c": -14.7,
+    "rain_mm_per_day": 1.21
+   },
+   {
+    "month": "Mar",
+    "mean_c": -6.7,
+    "rain_mm_per_day": 1.65
+   },
+   {
+    "month": "Apr",
+    "mean_c": 0.9,
+    "rain_mm_per_day": 1.72
+   },
+   {
+    "month": "May",
+    "mean_c": 10.7,
+    "rain_mm_per_day": 2.28
+   },
+   {
+    "month": "Jun",
+    "mean_c": 15.1,
+    "rain_mm_per_day": 3.12
+   },
+   {
+    "month": "Jul",
+    "mean_c": 18.1,
+    "rain_mm_per_day": 3.07
+   },
+   {
+    "month": "Aug",
+    "mean_c": 15.6,
+    "rain_mm_per_day": 2.76
+   },
+   {
+    "month": "Sep",
+    "mean_c": 9.7,
+    "rain_mm_per_day": 2.43
+   },
+   {
+    "month": "Oct",
+    "mean_c": 1.6,
+    "rain_mm_per_day": 2.44
+   },
+   {
+    "month": "Nov",
+    "mean_c": -7.2,
+    "rain_mm_per_day": 1.87
+   },
+   {
+    "month": "Dec",
+    "mean_c": -14.6,
+    "rain_mm_per_day": 1.51
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/perm-average-monthly-temperature-rainfall",
+  "title": "Perm climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

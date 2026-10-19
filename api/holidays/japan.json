@@ -1,7 +1,7 @@
 {
  "answer": {
   "country": "Japan",
-  "count": 8,
+  "count": 32,
   "holidays": [
    {
     "name": "New Year's Day in Japan (2016)",
@@ -12,12 +12,44 @@
     "page": "https://pseoare.pages.dev/new-year-s-day-japan-2016-01-01"
    },
    {
+    "name": "Coming of Age Day in Japan (2016)",
+    "local_name": "\u6210\u4eba\u306e\u65e5",
+    "date": "2016-01-11",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/coming-of-age-day-japan-2016-01-11"
+   },
+   {
+    "name": "Foundation Day in Japan (2016)",
+    "local_name": "\u5efa\u56fd\u8a18\u5ff5\u306e\u65e5",
+    "date": "2016-02-11",
+    "weekday": "Thursday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/foundation-day-japan-2016-02-11"
+   },
+   {
     "name": "New Year's Day in Japan (2017)",
     "local_name": "\u5143\u65e5",
     "date": "2017-01-02",
     "weekday": "Monday",
     "weekend": false,
     "page": "https://pseoare.pages.dev/new-year-s-day-japan-2017-01-02"
+   },
+   {
+    "name": "Coming of Age Day in Japan (2017)",
+    "local_name": "\u6210\u4eba\u306e\u65e5",
+    "date": "2017-01-09",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/coming-of-age-day-japan-2017-01-09"
+   },
+   {
+    "name": "Foundation Day in Japan (2017)",
+    "local_name": "\u5efa\u56fd\u8a18\u5ff5\u306e\u65e5",
+    "date": "2017-02-11",
+    "weekday": "Saturday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/foundation-day-japan-2017-02-11"
    },
    {
     "name": "New Year's Day in Japan (2018)",
@@ -28,12 +60,44 @@
     "page": "https://pseoare.pages.dev/new-year-s-day-japan-2018-01-01"
    },
    {
+    "name": "Coming of Age Day in Japan (2018)",
+    "local_name": "\u6210\u4eba\u306e\u65e5",
+    "date": "2018-01-08",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/coming-of-age-day-japan-2018-01-08"
+   },
+   {
+    "name": "Foundation Day in Japan (2018)",
+    "local_name": "\u5efa\u56fd\u8a18\u5ff5\u306e\u65e5",
+    "date": "2018-02-12",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/foundation-day-japan-2018-02-12"
+   },
+   {
     "name": "New Year's Day in Japan (2019)",
     "local_name": "\u5143\u65e5",
     "date": "2019-01-01",
     "weekday": "Tuesday",
     "weekend": false,
     "page": "https://pseoare.pages.dev/new-year-s-day-japan-2019-01-01"
+   },
+   {
+    "name": "Coming of Age Day in Japan (2019)",
+    "local_name": "\u6210\u4eba\u306e\u65e5",
+    "date": "2019-01-14",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/coming-of-age-day-japan-2019-01-14"
+   },
+   {
+    "name": "Foundation Day in Japan (2019)",
+    "local_name": "\u5efa\u56fd\u8a18\u5ff5\u306e\u65e5",
+    "date": "2019-02-11",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/foundation-day-japan-2019-02-11"
    },
    {
     "name": "New Year's Day in Japan (2020)",
@@ -44,12 +108,44 @@
     "page": "https://pseoare.pages.dev/new-year-s-day-japan-2020-01-01"
    },
    {
+    "name": "Coming of Age Day in Japan (2020)",
+    "local_name": "\u6210\u4eba\u306e\u65e5",
+    "date": "2020-01-13",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/coming-of-age-day-japan-2020-01-13"
+   },
+   {
+    "name": "Foundation Day in Japan (2020)",
+    "local_name": "\u5efa\u56fd\u8a18\u5ff5\u306e\u65e5",
+    "date": "2020-02-11",
+    "weekday": "Tuesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/foundation-day-japan-2020-02-11"
+   },
+   {
     "name": "New Year's Day in Japan (2021)",
     "local_name": "\u5143\u65e5",
     "date": "2021-01-01",
     "weekday": "Friday",
     "weekend": false,
     "page": "https://pseoare.pages.dev/new-year-s-day-japan-2021-01-01"
+   },
+   {
+    "name": "Coming of Age Day in Japan (2021)",
+    "local_name": "\u6210\u4eba\u306e\u65e5",
+    "date": "2021-01-11",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/coming-of-age-day-japan-2021-01-11"
+   },
+   {
+    "name": "Foundation Day in Japan (2021)",
+    "local_name": "\u5efa\u56fd\u8a18\u5ff5\u306e\u65e5",
+    "date": "2021-02-11",
+    "weekday": "Thursday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/foundation-day-japan-2021-02-11"
    },
    {
     "name": "New Year's Day in Japan (2022)",
@@ -60,12 +156,108 @@
     "page": "https://pseoare.pages.dev/new-year-s-day-japan-2022-01-01"
    },
    {
+    "name": "Coming of Age Day in Japan (2022)",
+    "local_name": "\u6210\u4eba\u306e\u65e5",
+    "date": "2022-01-10",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/coming-of-age-day-japan-2022-01-10"
+   },
+   {
+    "name": "Foundation Day in Japan (2022)",
+    "local_name": "\u5efa\u56fd\u8a18\u5ff5\u306e\u65e5",
+    "date": "2022-02-11",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/foundation-day-japan-2022-02-11"
+   },
+   {
     "name": "New Year's Day in Japan (2023)",
     "local_name": "\u5143\u65e5",
     "date": "2023-01-02",
     "weekday": "Monday",
     "weekend": false,
     "page": "https://pseoare.pages.dev/new-year-s-day-japan-2023-01-02"
+   },
+   {
+    "name": "Coming of Age Day in Japan (2023)",
+    "local_name": "\u6210\u4eba\u306e\u65e5",
+    "date": "2023-01-09",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/coming-of-age-day-japan-2023-01-09"
+   },
+   {
+    "name": "Foundation Day in Japan (2023)",
+    "local_name": "\u5efa\u56fd\u8a18\u5ff5\u306e\u65e5",
+    "date": "2023-02-11",
+    "weekday": "Saturday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/foundation-day-japan-2023-02-11"
+   },
+   {
+    "name": "Coming of Age Day in Japan (2024)",
+    "local_name": "\u6210\u4eba\u306e\u65e5",
+    "date": "2024-01-08",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/coming-of-age-day-japan-2024-01-08"
+   },
+   {
+    "name": "Foundation Day in Japan (2024)",
+    "local_name": "\u5efa\u56fd\u8a18\u5ff5\u306e\u65e5",
+    "date": "2024-02-12",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/foundation-day-japan-2024-02-12"
+   },
+   {
+    "name": "Coming of Age Day in Japan (2025)",
+    "local_name": "\u6210\u4eba\u306e\u65e5",
+    "date": "2025-01-13",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/coming-of-age-day-japan-2025-01-13"
+   },
+   {
+    "name": "Foundation Day in Japan (2025)",
+    "local_name": "\u5efa\u56fd\u8a18\u5ff5\u306e\u65e5",
+    "date": "2025-02-11",
+    "weekday": "Tuesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/foundation-day-japan-2025-02-11"
+   },
+   {
+    "name": "Coming of Age Day in Japan (2026)",
+    "local_name": "\u6210\u4eba\u306e\u65e5",
+    "date": "2026-01-12",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/coming-of-age-day-japan-2026-01-12"
+   },
+   {
+    "name": "Foundation Day in Japan (2026)",
+    "local_name": "\u5efa\u56fd\u8a18\u5ff5\u306e\u65e5",
+    "date": "2026-02-11",
+    "weekday": "Wednesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/foundation-day-japan-2026-02-11"
+   },
+   {
+    "name": "Coming of Age Day in Japan (2027)",
+    "local_name": "\u6210\u4eba\u306e\u65e5",
+    "date": "2027-01-11",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/coming-of-age-day-japan-2027-01-11"
+   },
+   {
+    "name": "Foundation Day in Japan (2027)",
+    "local_name": "\u5efa\u56fd\u8a18\u5ff5\u306e\u65e5",
+    "date": "2027-02-11",
+    "weekday": "Thursday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/foundation-day-japan-2027-02-11"
    }
   ]
  },
@@ -74,7 +266,7 @@
   "title": "Public holidays for Japan",
   "site": "https://pseoare.pages.dev"
  },
- "updated": "2026-10-19T20:41:30.228277+00:00",
+ "updated": "2026-10-19T20:49:39.946179+00:00",
  "license": "CC-BY-4.0",
  "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
 }

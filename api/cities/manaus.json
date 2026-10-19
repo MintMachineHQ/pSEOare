@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Manaus",
+  "annual_mean_c": 27.1,
+  "warmest_month": "Oct",
+  "warmest_c": 29.2,
+  "coldest_month": "Jun",
+  "coldest_c": 26.0,
+  "seasonal_swing_c": 3.2,
+  "annual_rainfall_mm": 1962.0,
+  "wettest_month": "Apr",
+  "wettest_mm_per_day": 8.72,
+  "driest_month": "Aug",
+  "driest_mm_per_day": 1.61,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 26.5,
+    "rain_mm_per_day": 7.24
+   },
+   {
+    "month": "Feb",
+    "mean_c": 26.2,
+    "rain_mm_per_day": 8.36
+   },
+   {
+    "month": "Mar",
+    "mean_c": 26.2,
+    "rain_mm_per_day": 8.63
+   },
+   {
+    "month": "Apr",
+    "mean_c": 26.1,
+    "rain_mm_per_day": 8.72
+   },
+   {
+    "month": "May",
+    "mean_c": 26.2,
+    "rain_mm_per_day": 6.62
+   },
+   {
+    "month": "Jun",
+    "mean_c": 26.0,
+    "rain_mm_per_day": 3.97
+   },
+   {
+    "month": "Jul",
+    "mean_c": 26.3,
+    "rain_mm_per_day": 2.44
+   },
+   {
+    "month": "Aug",
+    "mean_c": 27.6,
+    "rain_mm_per_day": 1.61
+   },
+   {
+    "month": "Sep",
+    "mean_c": 28.9,
+    "rain_mm_per_day": 2.26
+   },
+   {
+    "month": "Oct",
+    "mean_c": 29.2,
+    "rain_mm_per_day": 3.33
+   },
+   {
+    "month": "Nov",
+    "mean_c": 28.4,
+    "rain_mm_per_day": 4.5
+   },
+   {
+    "month": "Dec",
+    "mean_c": 27.1,
+    "rain_mm_per_day": 6.87
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/manaus-average-monthly-temperature-rainfall",
+  "title": "Manaus climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Khabarovsk",
+  "annual_mean_c": 1.4,
+  "warmest_month": "Jul",
+  "warmest_c": 21.8,
+  "coldest_month": "Jan",
+  "coldest_c": -22.5,
+  "seasonal_swing_c": 44.3,
+  "annual_rainfall_mm": 689.0,
+  "wettest_month": "Jul",
+  "wettest_mm_per_day": 4.37,
+  "driest_month": "Jan",
+  "driest_mm_per_day": 0.4,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": -22.5,
+    "rain_mm_per_day": 0.4
+   },
+   {
+    "month": "Feb",
+    "mean_c": -18.2,
+    "rain_mm_per_day": 0.5
+   },
+   {
+    "month": "Mar",
+    "mean_c": -7.8,
+    "rain_mm_per_day": 0.85
+   },
+   {
+    "month": "Apr",
+    "mean_c": 3.6,
+    "rain_mm_per_day": 1.22
+   },
+   {
+    "month": "May",
+    "mean_c": 12.2,
+    "rain_mm_per_day": 2.29
+   },
+   {
+    "month": "Jun",
+    "mean_c": 18.2,
+    "rain_mm_per_day": 3.05
+   },
+   {
+    "month": "Jul",
+    "mean_c": 21.8,
+    "rain_mm_per_day": 4.37
+   },
+   {
+    "month": "Aug",
+    "mean_c": 20.2,
+    "rain_mm_per_day": 4.36
+   },
+   {
+    "month": "Sep",
+    "mean_c": 13.7,
+    "rain_mm_per_day": 2.54
+   },
+   {
+    "month": "Oct",
+    "mean_c": 3.8,
+    "rain_mm_per_day": 1.52
+   },
+   {
+    "month": "Nov",
+    "mean_c": -8.4,
+    "rain_mm_per_day": 0.87
+   },
+   {
+    "month": "Dec",
+    "mean_c": -20.5,
+    "rain_mm_per_day": 0.68
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/khabarovsk-average-monthly-temperature-rainfall",
+  "title": "Khabarovsk climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

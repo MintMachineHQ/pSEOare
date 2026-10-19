@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Maracaibo",
+  "annual_mean_c": 29.1,
+  "warmest_month": "Aug",
+  "warmest_c": 30.4,
+  "coldest_month": "Jan",
+  "coldest_c": 27.8,
+  "seasonal_swing_c": 2.6,
+  "annual_rainfall_mm": 674.0,
+  "wettest_month": "Oct",
+  "wettest_mm_per_day": 4.31,
+  "driest_month": "Feb",
+  "driest_mm_per_day": 0.19,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 27.8,
+    "rain_mm_per_day": 0.23
+   },
+   {
+    "month": "Feb",
+    "mean_c": 28.3,
+    "rain_mm_per_day": 0.19
+   },
+   {
+    "month": "Mar",
+    "mean_c": 28.9,
+    "rain_mm_per_day": 0.69
+   },
+   {
+    "month": "Apr",
+    "mean_c": 29.4,
+    "rain_mm_per_day": 1.46
+   },
+   {
+    "month": "May",
+    "mean_c": 29.6,
+    "rain_mm_per_day": 3.21
+   },
+   {
+    "month": "Jun",
+    "mean_c": 30.1,
+    "rain_mm_per_day": 1.94
+   },
+   {
+    "month": "Jul",
+    "mean_c": 30.3,
+    "rain_mm_per_day": 1.39
+   },
+   {
+    "month": "Aug",
+    "mean_c": 30.4,
+    "rain_mm_per_day": 1.93
+   },
+   {
+    "month": "Sep",
+    "mean_c": 29.7,
+    "rain_mm_per_day": 2.98
+   },
+   {
+    "month": "Oct",
+    "mean_c": 28.6,
+    "rain_mm_per_day": 4.31
+   },
+   {
+    "month": "Nov",
+    "mean_c": 27.9,
+    "rain_mm_per_day": 2.76
+   },
+   {
+    "month": "Dec",
+    "mean_c": 27.8,
+    "rain_mm_per_day": 1.09
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/maracaibo-average-monthly-temperature-rainfall",
+  "title": "Maracaibo climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

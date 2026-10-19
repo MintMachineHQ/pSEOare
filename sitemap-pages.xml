@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://pseoare.pages.dev/</loc><lastmod>2026-10-19</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/all-datasets-10</loc><lastmod>2026-10-19</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/all-datasets-11</loc><lastmod>2026-10-19</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/all-datasets-12</loc><lastmod>2026-10-19</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://pseoare.pages.dev/all-datasets-2</loc><lastmod>2026-10-19</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/all-datasets-3</loc><lastmod>2026-10-19</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/all-datasets-4</loc><lastmod>2026-10-19</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/all-datasets-5</loc><lastmod>2026-10-19</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/all-datasets-6</loc><lastmod>2026-10-19</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/all-datasets-7</loc><lastmod>2026-10-19</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/all-datasets-8</loc><lastmod>2026-10-19</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pseoare.pages.dev/all-datasets-9</loc><lastmod>2026-10-19</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://pseoare.pages.dev/api</loc><lastmod>2026-10-19</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://pseoare.pages.dev/feed-climate.xml</loc><lastmod>2026-10-19</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://pseoare.pages.dev/feed-crypto.xml</loc><lastmod>2026-10-19</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>

@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Bahia Blanca",
+  "annual_mean_c": 15.1,
+  "warmest_month": "Jan",
+  "warmest_c": 24.4,
+  "coldest_month": "Jul",
+  "coldest_c": 6.4,
+  "seasonal_swing_c": 18.0,
+  "annual_rainfall_mm": 648.0,
+  "wettest_month": "Oct",
+  "wettest_mm_per_day": 2.82,
+  "driest_month": "Jun",
+  "driest_mm_per_day": 0.71,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 24.4,
+    "rain_mm_per_day": 2.01
+   },
+   {
+    "month": "Feb",
+    "mean_c": 22.9,
+    "rain_mm_per_day": 2.32
+   },
+   {
+    "month": "Mar",
+    "mean_c": 19.8,
+    "rain_mm_per_day": 2.19
+   },
+   {
+    "month": "Apr",
+    "mean_c": 14.8,
+    "rain_mm_per_day": 1.98
+   },
+   {
+    "month": "May",
+    "mean_c": 10.5,
+    "rain_mm_per_day": 1.23
+   },
+   {
+    "month": "Jun",
+    "mean_c": 7.1,
+    "rain_mm_per_day": 0.71
+   },
+   {
+    "month": "Jul",
+    "mean_c": 6.4,
+    "rain_mm_per_day": 1.14
+   },
+   {
+    "month": "Aug",
+    "mean_c": 8.5,
+    "rain_mm_per_day": 1.03
+   },
+   {
+    "month": "Sep",
+    "mean_c": 11.4,
+    "rain_mm_per_day": 1.68
+   },
+   {
+    "month": "Oct",
+    "mean_c": 14.8,
+    "rain_mm_per_day": 2.82
+   },
+   {
+    "month": "Nov",
+    "mean_c": 18.9,
+    "rain_mm_per_day": 2.38
+   },
+   {
+    "month": "Dec",
+    "mean_c": 22.5,
+    "rain_mm_per_day": 1.81
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/bahia-blanca-average-monthly-temperature-rainfall",
+  "title": "Bahia Blanca climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

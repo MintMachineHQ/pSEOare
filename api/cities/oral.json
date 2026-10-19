@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Oral",
+  "annual_mean_c": 6.7,
+  "warmest_month": "Jul",
+  "warmest_c": 24.7,
+  "coldest_month": "Jan",
+  "coldest_c": -12.7,
+  "seasonal_swing_c": 37.4,
+  "annual_rainfall_mm": 358.0,
+  "wettest_month": "Oct",
+  "wettest_mm_per_day": 1.25,
+  "driest_month": "Aug",
+  "driest_mm_per_day": 0.6,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": -12.7,
+    "rain_mm_per_day": 0.96
+   },
+   {
+    "month": "Feb",
+    "mean_c": -11.1,
+    "rain_mm_per_day": 0.84
+   },
+   {
+    "month": "Mar",
+    "mean_c": -2.9,
+    "rain_mm_per_day": 1.1
+   },
+   {
+    "month": "Apr",
+    "mean_c": 8.0,
+    "rain_mm_per_day": 1.01
+   },
+   {
+    "month": "May",
+    "mean_c": 17.0,
+    "rain_mm_per_day": 1.07
+   },
+   {
+    "month": "Jun",
+    "mean_c": 21.8,
+    "rain_mm_per_day": 1.16
+   },
+   {
+    "month": "Jul",
+    "mean_c": 24.7,
+    "rain_mm_per_day": 0.92
+   },
+   {
+    "month": "Aug",
+    "mean_c": 23.3,
+    "rain_mm_per_day": 0.6
+   },
+   {
+    "month": "Sep",
+    "mean_c": 15.8,
+    "rain_mm_per_day": 0.9
+   },
+   {
+    "month": "Oct",
+    "mean_c": 6.5,
+    "rain_mm_per_day": 1.25
+   },
+   {
+    "month": "Nov",
+    "mean_c": -1.6,
+    "rain_mm_per_day": 1.06
+   },
+   {
+    "month": "Dec",
+    "mean_c": -9.3,
+    "rain_mm_per_day": 0.89
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/oral-average-monthly-temperature-rainfall",
+  "title": "Oral climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

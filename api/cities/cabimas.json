@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Cabimas",
+  "annual_mean_c": 29.4,
+  "warmest_month": "Jul",
+  "warmest_c": 30.6,
+  "coldest_month": "Nov",
+  "coldest_c": 28.0,
+  "seasonal_swing_c": 2.6,
+  "annual_rainfall_mm": 701.0,
+  "wettest_month": "Oct",
+  "wettest_mm_per_day": 4.19,
+  "driest_month": "Feb",
+  "driest_mm_per_day": 0.38,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 28.3,
+    "rain_mm_per_day": 0.53
+   },
+   {
+    "month": "Feb",
+    "mean_c": 29.0,
+    "rain_mm_per_day": 0.38
+   },
+   {
+    "month": "Mar",
+    "mean_c": 29.6,
+    "rain_mm_per_day": 0.92
+   },
+   {
+    "month": "Apr",
+    "mean_c": 30.0,
+    "rain_mm_per_day": 1.8
+   },
+   {
+    "month": "May",
+    "mean_c": 30.0,
+    "rain_mm_per_day": 2.64
+   },
+   {
+    "month": "Jun",
+    "mean_c": 30.4,
+    "rain_mm_per_day": 1.7
+   },
+   {
+    "month": "Jul",
+    "mean_c": 30.6,
+    "rain_mm_per_day": 1.69
+   },
+   {
+    "month": "Aug",
+    "mean_c": 30.6,
+    "rain_mm_per_day": 2.0
+   },
+   {
+    "month": "Sep",
+    "mean_c": 29.8,
+    "rain_mm_per_day": 3.16
+   },
+   {
+    "month": "Oct",
+    "mean_c": 28.6,
+    "rain_mm_per_day": 4.19
+   },
+   {
+    "month": "Nov",
+    "mean_c": 28.0,
+    "rain_mm_per_day": 2.79
+   },
+   {
+    "month": "Dec",
+    "mean_c": 28.0,
+    "rain_mm_per_day": 1.27
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/cabimas-average-monthly-temperature-rainfall",
+  "title": "Cabimas climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Ha'il",
+  "annual_mean_c": 22.6,
+  "warmest_month": "Aug",
+  "warmest_c": 33.0,
+  "coldest_month": "Jan",
+  "coldest_c": 10.2,
+  "seasonal_swing_c": 22.8,
+  "annual_rainfall_mm": 26.0,
+  "wettest_month": "Apr",
+  "wettest_mm_per_day": 0.22,
+  "driest_month": "Jun",
+  "driest_mm_per_day": 0.0,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 10.2,
+    "rain_mm_per_day": 0.13
+   },
+   {
+    "month": "Feb",
+    "mean_c": 12.7,
+    "rain_mm_per_day": 0.04
+   },
+   {
+    "month": "Mar",
+    "mean_c": 17.1,
+    "rain_mm_per_day": 0.13
+   },
+   {
+    "month": "Apr",
+    "mean_c": 22.1,
+    "rain_mm_per_day": 0.22
+   },
+   {
+    "month": "May",
+    "mean_c": 27.6,
+    "rain_mm_per_day": 0.01
+   },
+   {
+    "month": "Jun",
+    "mean_c": 31.0,
+    "rain_mm_per_day": 0.0
+   },
+   {
+    "month": "Jul",
+    "mean_c": 32.7,
+    "rain_mm_per_day": 0.0
+   },
+   {
+    "month": "Aug",
+    "mean_c": 33.0,
+    "rain_mm_per_day": 0.01
+   },
+   {
+    "month": "Sep",
+    "mean_c": 30.3,
+    "rain_mm_per_day": 0.0
+   },
+   {
+    "month": "Oct",
+    "mean_c": 25.2,
+    "rain_mm_per_day": 0.02
+   },
+   {
+    "month": "Nov",
+    "mean_c": 17.1,
+    "rain_mm_per_day": 0.21
+   },
+   {
+    "month": "Dec",
+    "mean_c": 12.1,
+    "rain_mm_per_day": 0.08
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/ha-il-average-monthly-temperature-rainfall",
+  "title": "Ha'il climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

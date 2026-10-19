@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Paris",
+  "annual_mean_c": 10.9,
+  "warmest_month": "Jul",
+  "warmest_c": 19.3,
+  "coldest_month": "Jan",
+  "coldest_c": 3.0,
+  "seasonal_swing_c": 16.3,
+  "annual_rainfall_mm": 660.0,
+  "wettest_month": "Dec",
+  "wettest_mm_per_day": 2.24,
+  "driest_month": "Apr",
+  "driest_mm_per_day": 1.31,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 3.0,
+    "rain_mm_per_day": 1.74
+   },
+   {
+    "month": "Feb",
+    "mean_c": 3.6,
+    "rain_mm_per_day": 1.77
+   },
+   {
+    "month": "Mar",
+    "mean_c": 6.7,
+    "rain_mm_per_day": 1.68
+   },
+   {
+    "month": "Apr",
+    "mean_c": 10.3,
+    "rain_mm_per_day": 1.31
+   },
+   {
+    "month": "May",
+    "mean_c": 13.8,
+    "rain_mm_per_day": 2.05
+   },
+   {
+    "month": "Jun",
+    "mean_c": 17.4,
+    "rain_mm_per_day": 2.0
+   },
+   {
+    "month": "Jul",
+    "mean_c": 19.3,
+    "rain_mm_per_day": 1.77
+   },
+   {
+    "month": "Aug",
+    "mean_c": 18.9,
+    "rain_mm_per_day": 1.89
+   },
+   {
+    "month": "Sep",
+    "mean_c": 15.6,
+    "rain_mm_per_day": 1.4
+   },
+   {
+    "month": "Oct",
+    "mean_c": 11.6,
+    "rain_mm_per_day": 1.84
+   },
+   {
+    "month": "Nov",
+    "mean_c": 6.9,
+    "rain_mm_per_day": 2.03
+   },
+   {
+    "month": "Dec",
+    "mean_c": 3.5,
+    "rain_mm_per_day": 2.24
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/paris-average-monthly-temperature-rainfall",
+  "title": "Paris climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

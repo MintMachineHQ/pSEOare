@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Djibouti",
+  "annual_mean_c": 29.3,
+  "warmest_month": "Jul",
+  "warmest_c": 34.4,
+  "coldest_month": "Jan",
+  "coldest_c": 24.3,
+  "seasonal_swing_c": 10.1,
+  "annual_rainfall_mm": 235.0,
+  "wettest_month": "Apr",
+  "wettest_mm_per_day": 1.69,
+  "driest_month": "Jan",
+  "driest_mm_per_day": 0.18,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 24.3,
+    "rain_mm_per_day": 0.18
+   },
+   {
+    "month": "Feb",
+    "mean_c": 24.8,
+    "rain_mm_per_day": 0.21
+   },
+   {
+    "month": "Mar",
+    "mean_c": 26.3,
+    "rain_mm_per_day": 0.63
+   },
+   {
+    "month": "Apr",
+    "mean_c": 28.3,
+    "rain_mm_per_day": 1.69
+   },
+   {
+    "month": "May",
+    "mean_c": 31.2,
+    "rain_mm_per_day": 0.88
+   },
+   {
+    "month": "Jun",
+    "mean_c": 34.3,
+    "rain_mm_per_day": 0.24
+   },
+   {
+    "month": "Jul",
+    "mean_c": 34.4,
+    "rain_mm_per_day": 0.54
+   },
+   {
+    "month": "Aug",
+    "mean_c": 33.9,
+    "rain_mm_per_day": 0.86
+   },
+   {
+    "month": "Sep",
+    "mean_c": 32.9,
+    "rain_mm_per_day": 1.04
+   },
+   {
+    "month": "Oct",
+    "mean_c": 29.0,
+    "rain_mm_per_day": 0.68
+   },
+   {
+    "month": "Nov",
+    "mean_c": 26.7,
+    "rain_mm_per_day": 0.32
+   },
+   {
+    "month": "Dec",
+    "mean_c": 25.0,
+    "rain_mm_per_day": 0.45
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/djibouti-average-monthly-temperature-rainfall",
+  "title": "Djibouti climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

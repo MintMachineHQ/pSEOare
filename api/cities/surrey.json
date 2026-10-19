@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Surrey",
+  "annual_mean_c": 10.6,
+  "warmest_month": "Aug",
+  "warmest_c": 18.3,
+  "coldest_month": "Dec",
+  "coldest_c": 4.3,
+  "seasonal_swing_c": 14.0,
+  "annual_rainfall_mm": 1282.0,
+  "wettest_month": "Nov",
+  "wettest_mm_per_day": 6.86,
+  "driest_month": "Jul",
+  "driest_mm_per_day": 0.83,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 4.5,
+    "rain_mm_per_day": 6.26
+   },
+   {
+    "month": "Feb",
+    "mean_c": 4.7,
+    "rain_mm_per_day": 3.63
+   },
+   {
+    "month": "Mar",
+    "mean_c": 6.5,
+    "rain_mm_per_day": 4.57
+   },
+   {
+    "month": "Apr",
+    "mean_c": 9.1,
+    "rain_mm_per_day": 2.91
+   },
+   {
+    "month": "May",
+    "mean_c": 12.8,
+    "rain_mm_per_day": 1.93
+   },
+   {
+    "month": "Jun",
+    "mean_c": 15.3,
+    "rain_mm_per_day": 1.54
+   },
+   {
+    "month": "Jul",
+    "mean_c": 18.1,
+    "rain_mm_per_day": 0.83
+   },
+   {
+    "month": "Aug",
+    "mean_c": 18.3,
+    "rain_mm_per_day": 1.07
+   },
+   {
+    "month": "Sep",
+    "mean_c": 15.3,
+    "rain_mm_per_day": 2.35
+   },
+   {
+    "month": "Oct",
+    "mean_c": 10.8,
+    "rain_mm_per_day": 4.5
+   },
+   {
+    "month": "Nov",
+    "mean_c": 6.9,
+    "rain_mm_per_day": 6.86
+   },
+   {
+    "month": "Dec",
+    "mean_c": 4.3,
+    "rain_mm_per_day": 5.72
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/surrey-average-monthly-temperature-rainfall",
+  "title": "Surrey climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

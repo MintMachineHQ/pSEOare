@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Saurimo",
+  "annual_mean_c": 23.5,
+  "warmest_month": "Sep",
+  "warmest_c": 26.5,
+  "coldest_month": "Jun",
+  "coldest_c": 22.1,
+  "seasonal_swing_c": 4.4,
+  "annual_rainfall_mm": 1017.0,
+  "wettest_month": "Dec",
+  "wettest_mm_per_day": 5.52,
+  "driest_month": "Jul",
+  "driest_mm_per_day": 0.01,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 22.7,
+    "rain_mm_per_day": 4.77
+   },
+   {
+    "month": "Feb",
+    "mean_c": 23.1,
+    "rain_mm_per_day": 5.22
+   },
+   {
+    "month": "Mar",
+    "mean_c": 23.1,
+    "rain_mm_per_day": 4.96
+   },
+   {
+    "month": "Apr",
+    "mean_c": 23.0,
+    "rain_mm_per_day": 2.5
+   },
+   {
+    "month": "May",
+    "mean_c": 23.2,
+    "rain_mm_per_day": 0.25
+   },
+   {
+    "month": "Jun",
+    "mean_c": 22.1,
+    "rain_mm_per_day": 0.05
+   },
+   {
+    "month": "Jul",
+    "mean_c": 22.2,
+    "rain_mm_per_day": 0.01
+   },
+   {
+    "month": "Aug",
+    "mean_c": 25.1,
+    "rain_mm_per_day": 0.26
+   },
+   {
+    "month": "Sep",
+    "mean_c": 26.5,
+    "rain_mm_per_day": 1.38
+   },
+   {
+    "month": "Oct",
+    "mean_c": 25.3,
+    "rain_mm_per_day": 3.37
+   },
+   {
+    "month": "Nov",
+    "mean_c": 23.6,
+    "rain_mm_per_day": 5.17
+   },
+   {
+    "month": "Dec",
+    "mean_c": 22.7,
+    "rain_mm_per_day": 5.52
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/saurimo-average-monthly-temperature-rainfall",
+  "title": "Saurimo climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

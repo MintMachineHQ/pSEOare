@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Bergen",
+  "annual_mean_c": 5.4,
+  "warmest_month": "Jul",
+  "warmest_c": 14.1,
+  "coldest_month": "Feb",
+  "coldest_c": -2.1,
+  "seasonal_swing_c": 16.2,
+  "annual_rainfall_mm": 2714.0,
+  "wettest_month": "Dec",
+  "wettest_mm_per_day": 10.3,
+  "driest_month": "May",
+  "driest_mm_per_day": 4.54,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": -2.0,
+    "rain_mm_per_day": 9.64
+   },
+   {
+    "month": "Feb",
+    "mean_c": -2.1,
+    "rain_mm_per_day": 7.72
+   },
+   {
+    "month": "Mar",
+    "mean_c": -0.3,
+    "rain_mm_per_day": 6.93
+   },
+   {
+    "month": "Apr",
+    "mean_c": 3.8,
+    "rain_mm_per_day": 5.16
+   },
+   {
+    "month": "May",
+    "mean_c": 8.0,
+    "rain_mm_per_day": 4.54
+   },
+   {
+    "month": "Jun",
+    "mean_c": 11.7,
+    "rain_mm_per_day": 5.13
+   },
+   {
+    "month": "Jul",
+    "mean_c": 14.1,
+    "rain_mm_per_day": 5.64
+   },
+   {
+    "month": "Aug",
+    "mean_c": 13.5,
+    "rain_mm_per_day": 6.6
+   },
+   {
+    "month": "Sep",
+    "mean_c": 10.2,
+    "rain_mm_per_day": 8.95
+   },
+   {
+    "month": "Oct",
+    "mean_c": 5.8,
+    "rain_mm_per_day": 8.89
+   },
+   {
+    "month": "Nov",
+    "mean_c": 1.8,
+    "rain_mm_per_day": 9.78
+   },
+   {
+    "month": "Dec",
+    "mean_c": -0.8,
+    "rain_mm_per_day": 10.3
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/bergen-average-monthly-temperature-rainfall",
+  "title": "Bergen climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

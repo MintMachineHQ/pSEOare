@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Sincelejo",
+  "annual_mean_c": 28.1,
+  "warmest_month": "Mar",
+  "warmest_c": 29.0,
+  "coldest_month": "Oct",
+  "coldest_c": 27.2,
+  "seasonal_swing_c": 1.8,
+  "annual_rainfall_mm": 1422.0,
+  "wettest_month": "Jul",
+  "wettest_mm_per_day": 6.41,
+  "driest_month": "Feb",
+  "driest_mm_per_day": 0.23,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 27.8,
+    "rain_mm_per_day": 0.38
+   },
+   {
+    "month": "Feb",
+    "mean_c": 28.6,
+    "rain_mm_per_day": 0.23
+   },
+   {
+    "month": "Mar",
+    "mean_c": 29.0,
+    "rain_mm_per_day": 0.66
+   },
+   {
+    "month": "Apr",
+    "mean_c": 28.8,
+    "rain_mm_per_day": 3.18
+   },
+   {
+    "month": "May",
+    "mean_c": 28.3,
+    "rain_mm_per_day": 6.01
+   },
+   {
+    "month": "Jun",
+    "mean_c": 28.3,
+    "rain_mm_per_day": 5.36
+   },
+   {
+    "month": "Jul",
+    "mean_c": 28.2,
+    "rain_mm_per_day": 6.41
+   },
+   {
+    "month": "Aug",
+    "mean_c": 28.1,
+    "rain_mm_per_day": 5.76
+   },
+   {
+    "month": "Sep",
+    "mean_c": 27.6,
+    "rain_mm_per_day": 5.94
+   },
+   {
+    "month": "Oct",
+    "mean_c": 27.2,
+    "rain_mm_per_day": 5.79
+   },
+   {
+    "month": "Nov",
+    "mean_c": 27.2,
+    "rain_mm_per_day": 5.12
+   },
+   {
+    "month": "Dec",
+    "mean_c": 27.6,
+    "rain_mm_per_day": 1.95
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/sincelejo-average-monthly-temperature-rainfall",
+  "title": "Sincelejo climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

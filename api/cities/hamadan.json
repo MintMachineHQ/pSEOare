@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Hamadan",
+  "annual_mean_c": 11.7,
+  "warmest_month": "Jul",
+  "warmest_c": 25.6,
+  "coldest_month": "Jan",
+  "coldest_c": -1.5,
+  "seasonal_swing_c": 27.1,
+  "annual_rainfall_mm": 285.0,
+  "wettest_month": "Apr",
+  "wettest_mm_per_day": 1.61,
+  "driest_month": "Aug",
+  "driest_mm_per_day": 0.03,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": -1.5,
+    "rain_mm_per_day": 0.93
+   },
+   {
+    "month": "Feb",
+    "mean_c": 0.3,
+    "rain_mm_per_day": 1.18
+   },
+   {
+    "month": "Mar",
+    "mean_c": 5.0,
+    "rain_mm_per_day": 1.39
+   },
+   {
+    "month": "Apr",
+    "mean_c": 9.8,
+    "rain_mm_per_day": 1.61
+   },
+   {
+    "month": "May",
+    "mean_c": 15.7,
+    "rain_mm_per_day": 0.68
+   },
+   {
+    "month": "Jun",
+    "mean_c": 21.8,
+    "rain_mm_per_day": 0.19
+   },
+   {
+    "month": "Jul",
+    "mean_c": 25.6,
+    "rain_mm_per_day": 0.08
+   },
+   {
+    "month": "Aug",
+    "mean_c": 24.6,
+    "rain_mm_per_day": 0.03
+   },
+   {
+    "month": "Sep",
+    "mean_c": 20.0,
+    "rain_mm_per_day": 0.08
+   },
+   {
+    "month": "Oct",
+    "mean_c": 13.5,
+    "rain_mm_per_day": 0.76
+   },
+   {
+    "month": "Nov",
+    "mean_c": 4.8,
+    "rain_mm_per_day": 1.35
+   },
+   {
+    "month": "Dec",
+    "mean_c": 0.2,
+    "rain_mm_per_day": 1.08
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/hamadan-average-monthly-temperature-rainfall",
+  "title": "Hamadan climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

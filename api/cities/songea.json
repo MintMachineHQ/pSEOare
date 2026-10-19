@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Songea",
+  "annual_mean_c": 21.5,
+  "warmest_month": "Nov",
+  "warmest_c": 25.7,
+  "coldest_month": "Jun",
+  "coldest_c": 17.6,
+  "seasonal_swing_c": 8.1,
+  "annual_rainfall_mm": 1287.0,
+  "wettest_month": "Jan",
+  "wettest_mm_per_day": 9.76,
+  "driest_month": "Sep",
+  "driest_mm_per_day": 0.09,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 22.1,
+    "rain_mm_per_day": 9.76
+   },
+   {
+    "month": "Feb",
+    "mean_c": 21.9,
+    "rain_mm_per_day": 8.15
+   },
+   {
+    "month": "Mar",
+    "mean_c": 21.7,
+    "rain_mm_per_day": 7.48
+   },
+   {
+    "month": "Apr",
+    "mean_c": 20.7,
+    "rain_mm_per_day": 4.22
+   },
+   {
+    "month": "May",
+    "mean_c": 19.1,
+    "rain_mm_per_day": 1.5
+   },
+   {
+    "month": "Jun",
+    "mean_c": 17.6,
+    "rain_mm_per_day": 0.47
+   },
+   {
+    "month": "Jul",
+    "mean_c": 17.7,
+    "rain_mm_per_day": 0.16
+   },
+   {
+    "month": "Aug",
+    "mean_c": 20.0,
+    "rain_mm_per_day": 0.13
+   },
+   {
+    "month": "Sep",
+    "mean_c": 22.9,
+    "rain_mm_per_day": 0.09
+   },
+   {
+    "month": "Oct",
+    "mean_c": 25.0,
+    "rain_mm_per_day": 0.54
+   },
+   {
+    "month": "Nov",
+    "mean_c": 25.7,
+    "rain_mm_per_day": 2.47
+   },
+   {
+    "month": "Dec",
+    "mean_c": 23.6,
+    "rain_mm_per_day": 7.36
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/songea-average-monthly-temperature-rainfall",
+  "title": "Songea climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

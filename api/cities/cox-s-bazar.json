@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Cox's Bazar",
+  "annual_mean_c": 26.2,
+  "warmest_month": "May",
+  "warmest_c": 28.7,
+  "coldest_month": "Jan",
+  "coldest_c": 20.8,
+  "seasonal_swing_c": 7.9,
+  "annual_rainfall_mm": 5282.0,
+  "wettest_month": "Jul",
+  "wettest_mm_per_day": 43.42,
+  "driest_month": "Jan",
+  "driest_mm_per_day": 0.34,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 20.8,
+    "rain_mm_per_day": 0.34
+   },
+   {
+    "month": "Feb",
+    "mean_c": 22.8,
+    "rain_mm_per_day": 0.76
+   },
+   {
+    "month": "Mar",
+    "mean_c": 25.9,
+    "rain_mm_per_day": 2.08
+   },
+   {
+    "month": "Apr",
+    "mean_c": 27.9,
+    "rain_mm_per_day": 6.16
+   },
+   {
+    "month": "May",
+    "mean_c": 28.7,
+    "rain_mm_per_day": 18.41
+   },
+   {
+    "month": "Jun",
+    "mean_c": 28.6,
+    "rain_mm_per_day": 32.7
+   },
+   {
+    "month": "Jul",
+    "mean_c": 28.0,
+    "rain_mm_per_day": 43.42
+   },
+   {
+    "month": "Aug",
+    "mean_c": 27.9,
+    "rain_mm_per_day": 29.22
+   },
+   {
+    "month": "Sep",
+    "mean_c": 28.1,
+    "rain_mm_per_day": 22.4
+   },
+   {
+    "month": "Oct",
+    "mean_c": 27.8,
+    "rain_mm_per_day": 14.91
+   },
+   {
+    "month": "Nov",
+    "mean_c": 25.4,
+    "rain_mm_per_day": 2.99
+   },
+   {
+    "month": "Dec",
+    "mean_c": 22.3,
+    "rain_mm_per_day": 0.36
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/cox-s-bazar-average-monthly-temperature-rainfall",
+  "title": "Cox's Bazar climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

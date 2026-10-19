@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Chimbote",
+  "annual_mean_c": 20.1,
+  "warmest_month": "Feb",
+  "warmest_c": 23.8,
+  "coldest_month": "Sep",
+  "coldest_c": 17.6,
+  "seasonal_swing_c": 6.2,
+  "annual_rainfall_mm": 66.0,
+  "wettest_month": "Mar",
+  "wettest_mm_per_day": 0.43,
+  "driest_month": "Jun",
+  "driest_mm_per_day": 0.02,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 22.5,
+    "rain_mm_per_day": 0.22
+   },
+   {
+    "month": "Feb",
+    "mean_c": 23.8,
+    "rain_mm_per_day": 0.27
+   },
+   {
+    "month": "Mar",
+    "mean_c": 23.5,
+    "rain_mm_per_day": 0.43
+   },
+   {
+    "month": "Apr",
+    "mean_c": 21.6,
+    "rain_mm_per_day": 0.26
+   },
+   {
+    "month": "May",
+    "mean_c": 20.1,
+    "rain_mm_per_day": 0.15
+   },
+   {
+    "month": "Jun",
+    "mean_c": 19.0,
+    "rain_mm_per_day": 0.02
+   },
+   {
+    "month": "Jul",
+    "mean_c": 18.2,
+    "rain_mm_per_day": 0.08
+   },
+   {
+    "month": "Aug",
+    "mean_c": 17.7,
+    "rain_mm_per_day": 0.02
+   },
+   {
+    "month": "Sep",
+    "mean_c": 17.6,
+    "rain_mm_per_day": 0.05
+   },
+   {
+    "month": "Oct",
+    "mean_c": 18.0,
+    "rain_mm_per_day": 0.15
+   },
+   {
+    "month": "Nov",
+    "mean_c": 19.1,
+    "rain_mm_per_day": 0.19
+   },
+   {
+    "month": "Dec",
+    "mean_c": 20.7,
+    "rain_mm_per_day": 0.33
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/chimbote-average-monthly-temperature-rainfall",
+  "title": "Chimbote climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

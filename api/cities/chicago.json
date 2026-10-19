@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Chicago",
+  "annual_mean_c": 9.8,
+  "warmest_month": "Aug",
+  "warmest_c": 22.6,
+  "coldest_month": "Jan",
+  "coldest_c": -2.5,
+  "seasonal_swing_c": 25.1,
+  "annual_rainfall_mm": 979.0,
+  "wettest_month": "May",
+  "wettest_mm_per_day": 3.79,
+  "driest_month": "Jan",
+  "driest_mm_per_day": 1.54,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": -2.5,
+    "rain_mm_per_day": 1.54
+   },
+   {
+    "month": "Feb",
+    "mean_c": -2.3,
+    "rain_mm_per_day": 1.9
+   },
+   {
+    "month": "Mar",
+    "mean_c": 2.0,
+    "rain_mm_per_day": 2.0
+   },
+   {
+    "month": "Apr",
+    "mean_c": 6.9,
+    "rain_mm_per_day": 3.15
+   },
+   {
+    "month": "May",
+    "mean_c": 11.8,
+    "rain_mm_per_day": 3.79
+   },
+   {
+    "month": "Jun",
+    "mean_c": 18.1,
+    "rain_mm_per_day": 3.41
+   },
+   {
+    "month": "Jul",
+    "mean_c": 22.5,
+    "rain_mm_per_day": 3.07
+   },
+   {
+    "month": "Aug",
+    "mean_c": 22.6,
+    "rain_mm_per_day": 3.4
+   },
+   {
+    "month": "Sep",
+    "mean_c": 19.1,
+    "rain_mm_per_day": 2.86
+   },
+   {
+    "month": "Oct",
+    "mean_c": 12.3,
+    "rain_mm_per_day": 3.18
+   },
+   {
+    "month": "Nov",
+    "mean_c": 6.0,
+    "rain_mm_per_day": 2.03
+   },
+   {
+    "month": "Dec",
+    "mean_c": 0.5,
+    "rain_mm_per_day": 1.88
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/chicago-average-monthly-temperature-rainfall",
+  "title": "Chicago climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

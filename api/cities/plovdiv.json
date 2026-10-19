@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Plovdiv",
+  "annual_mean_c": 12.5,
+  "warmest_month": "Aug",
+  "warmest_c": 24.2,
+  "coldest_month": "Jan",
+  "coldest_c": 0.5,
+  "seasonal_swing_c": 23.7,
+  "annual_rainfall_mm": 660.0,
+  "wettest_month": "Jun",
+  "wettest_mm_per_day": 2.36,
+  "driest_month": "Aug",
+  "driest_mm_per_day": 1.13,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 0.5,
+    "rain_mm_per_day": 1.95
+   },
+   {
+    "month": "Feb",
+    "mean_c": 2.5,
+    "rain_mm_per_day": 1.71
+   },
+   {
+    "month": "Mar",
+    "mean_c": 6.7,
+    "rain_mm_per_day": 1.8
+   },
+   {
+    "month": "Apr",
+    "mean_c": 11.2,
+    "rain_mm_per_day": 1.58
+   },
+   {
+    "month": "May",
+    "mean_c": 16.9,
+    "rain_mm_per_day": 2.16
+   },
+   {
+    "month": "Jun",
+    "mean_c": 21.4,
+    "rain_mm_per_day": 2.36
+   },
+   {
+    "month": "Jul",
+    "mean_c": 24.1,
+    "rain_mm_per_day": 1.8
+   },
+   {
+    "month": "Aug",
+    "mean_c": 24.2,
+    "rain_mm_per_day": 1.13
+   },
+   {
+    "month": "Sep",
+    "mean_c": 19.2,
+    "rain_mm_per_day": 1.68
+   },
+   {
+    "month": "Oct",
+    "mean_c": 13.1,
+    "rain_mm_per_day": 1.81
+   },
+   {
+    "month": "Nov",
+    "mean_c": 7.6,
+    "rain_mm_per_day": 1.64
+   },
+   {
+    "month": "Dec",
+    "mean_c": 2.0,
+    "rain_mm_per_day": 2.08
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/plovdiv-average-monthly-temperature-rainfall",
+  "title": "Plovdiv climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

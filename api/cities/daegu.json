@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Daegu",
+  "annual_mean_c": 11.2,
+  "warmest_month": "Aug",
+  "warmest_c": 24.5,
+  "coldest_month": "Jan",
+  "coldest_c": -3.4,
+  "seasonal_swing_c": 27.9,
+  "annual_rainfall_mm": 1194.0,
+  "wettest_month": "Jul",
+  "wettest_mm_per_day": 8.51,
+  "driest_month": "Dec",
+  "driest_mm_per_day": 0.77,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": -3.4,
+    "rain_mm_per_day": 0.82
+   },
+   {
+    "month": "Feb",
+    "mean_c": -0.6,
+    "rain_mm_per_day": 1.26
+   },
+   {
+    "month": "Mar",
+    "mean_c": 4.2,
+    "rain_mm_per_day": 1.69
+   },
+   {
+    "month": "Apr",
+    "mean_c": 10.5,
+    "rain_mm_per_day": 2.97
+   },
+   {
+    "month": "May",
+    "mean_c": 16.6,
+    "rain_mm_per_day": 2.92
+   },
+   {
+    "month": "Jun",
+    "mean_c": 21.2,
+    "rain_mm_per_day": 4.35
+   },
+   {
+    "month": "Jul",
+    "mean_c": 24.1,
+    "rain_mm_per_day": 8.51
+   },
+   {
+    "month": "Aug",
+    "mean_c": 24.5,
+    "rain_mm_per_day": 7.82
+   },
+   {
+    "month": "Sep",
+    "mean_c": 19.4,
+    "rain_mm_per_day": 4.89
+   },
+   {
+    "month": "Oct",
+    "mean_c": 13.1,
+    "rain_mm_per_day": 2.05
+   },
+   {
+    "month": "Nov",
+    "mean_c": 5.8,
+    "rain_mm_per_day": 1.24
+   },
+   {
+    "month": "Dec",
+    "mean_c": -1.4,
+    "rain_mm_per_day": 0.77
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/daegu-average-monthly-temperature-rainfall",
+  "title": "Daegu climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

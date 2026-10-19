@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Bauchi",
+  "annual_mean_c": 26.6,
+  "warmest_month": "Apr",
+  "warmest_c": 31.0,
+  "coldest_month": "Jan",
+  "coldest_c": 22.9,
+  "seasonal_swing_c": 8.1,
+  "annual_rainfall_mm": 760.0,
+  "wettest_month": "Aug",
+  "wettest_mm_per_day": 7.42,
+  "driest_month": "Dec",
+  "driest_mm_per_day": 0.0,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 22.9,
+    "rain_mm_per_day": 0.01
+   },
+   {
+    "month": "Feb",
+    "mean_c": 26.3,
+    "rain_mm_per_day": 0.01
+   },
+   {
+    "month": "Mar",
+    "mean_c": 29.4,
+    "rain_mm_per_day": 0.18
+   },
+   {
+    "month": "Apr",
+    "mean_c": 31.0,
+    "rain_mm_per_day": 1.63
+   },
+   {
+    "month": "May",
+    "mean_c": 30.0,
+    "rain_mm_per_day": 2.51
+   },
+   {
+    "month": "Jun",
+    "mean_c": 28.2,
+    "rain_mm_per_day": 2.68
+   },
+   {
+    "month": "Jul",
+    "mean_c": 26.3,
+    "rain_mm_per_day": 5.19
+   },
+   {
+    "month": "Aug",
+    "mean_c": 24.8,
+    "rain_mm_per_day": 7.42
+   },
+   {
+    "month": "Sep",
+    "mean_c": 25.2,
+    "rain_mm_per_day": 4.36
+   },
+   {
+    "month": "Oct",
+    "mean_c": 26.4,
+    "rain_mm_per_day": 0.91
+   },
+   {
+    "month": "Nov",
+    "mean_c": 25.6,
+    "rain_mm_per_day": 0.1
+   },
+   {
+    "month": "Dec",
+    "mean_c": 23.1,
+    "rain_mm_per_day": 0.0
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/bauchi-average-monthly-temperature-rainfall",
+  "title": "Bauchi climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

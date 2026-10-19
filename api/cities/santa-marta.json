@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Santa Marta",
+  "annual_mean_c": 27.3,
+  "warmest_month": "Jun",
+  "warmest_c": 27.8,
+  "coldest_month": "Jan",
+  "coldest_c": 26.6,
+  "seasonal_swing_c": 1.2,
+  "annual_rainfall_mm": 843.0,
+  "wettest_month": "Oct",
+  "wettest_mm_per_day": 5.66,
+  "driest_month": "Jan",
+  "driest_mm_per_day": 0.06,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 26.6,
+    "rain_mm_per_day": 0.06
+   },
+   {
+    "month": "Feb",
+    "mean_c": 27.1,
+    "rain_mm_per_day": 0.06
+   },
+   {
+    "month": "Mar",
+    "mean_c": 27.4,
+    "rain_mm_per_day": 0.21
+   },
+   {
+    "month": "Apr",
+    "mean_c": 27.7,
+    "rain_mm_per_day": 1.01
+   },
+   {
+    "month": "May",
+    "mean_c": 27.6,
+    "rain_mm_per_day": 3.68
+   },
+   {
+    "month": "Jun",
+    "mean_c": 27.8,
+    "rain_mm_per_day": 2.76
+   },
+   {
+    "month": "Jul",
+    "mean_c": 27.8,
+    "rain_mm_per_day": 2.54
+   },
+   {
+    "month": "Aug",
+    "mean_c": 27.8,
+    "rain_mm_per_day": 3.1
+   },
+   {
+    "month": "Sep",
+    "mean_c": 27.4,
+    "rain_mm_per_day": 4.33
+   },
+   {
+    "month": "Oct",
+    "mean_c": 26.8,
+    "rain_mm_per_day": 5.66
+   },
+   {
+    "month": "Nov",
+    "mean_c": 26.7,
+    "rain_mm_per_day": 3.47
+   },
+   {
+    "month": "Dec",
+    "mean_c": 26.7,
+    "rain_mm_per_day": 0.84
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/santa-marta-average-monthly-temperature-rainfall",
+  "title": "Santa Marta climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

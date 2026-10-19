@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Chipata",
+  "annual_mean_c": 22.3,
+  "warmest_month": "Nov",
+  "warmest_c": 27.0,
+  "coldest_month": "Jun",
+  "coldest_c": 18.3,
+  "seasonal_swing_c": 8.7,
+  "annual_rainfall_mm": 943.0,
+  "wettest_month": "Jan",
+  "wettest_mm_per_day": 8.51,
+  "driest_month": "Jul",
+  "driest_mm_per_day": 0.04,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 22.6,
+    "rain_mm_per_day": 8.51
+   },
+   {
+    "month": "Feb",
+    "mean_c": 22.4,
+    "rain_mm_per_day": 7.01
+   },
+   {
+    "month": "Mar",
+    "mean_c": 22.2,
+    "rain_mm_per_day": 4.7
+   },
+   {
+    "month": "Apr",
+    "mean_c": 21.3,
+    "rain_mm_per_day": 1.1
+   },
+   {
+    "month": "May",
+    "mean_c": 19.9,
+    "rain_mm_per_day": 0.14
+   },
+   {
+    "month": "Jun",
+    "mean_c": 18.3,
+    "rain_mm_per_day": 0.05
+   },
+   {
+    "month": "Jul",
+    "mean_c": 18.3,
+    "rain_mm_per_day": 0.04
+   },
+   {
+    "month": "Aug",
+    "mean_c": 21.0,
+    "rain_mm_per_day": 0.05
+   },
+   {
+    "month": "Sep",
+    "mean_c": 24.2,
+    "rain_mm_per_day": 0.08
+   },
+   {
+    "month": "Oct",
+    "mean_c": 26.9,
+    "rain_mm_per_day": 0.28
+   },
+   {
+    "month": "Nov",
+    "mean_c": 27.0,
+    "rain_mm_per_day": 2.03
+   },
+   {
+    "month": "Dec",
+    "mean_c": 24.0,
+    "rain_mm_per_day": 7.03
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/chipata-average-monthly-temperature-rainfall",
+  "title": "Chipata climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

@@ -1,8 +1,16 @@
 {
  "answer": {
   "country": "Egypt",
-  "count": 11,
+  "count": 30,
   "holidays": [
+   {
+    "name": "Christmas Day (Orthodox) in Egypt (2016)",
+    "local_name": "\u0639\u064a\u062f \u0627\u0644\u0645\u064a\u0644\u0627\u062f \u0627\u0644\u0645\u062c\u064a\u062f",
+    "date": "2016-01-07",
+    "weekday": "Thursday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-orthodox-egypt-2016-01-07"
+   },
    {
     "name": "Revolution Day 2011 / National Police Day in Egypt (2016)",
     "local_name": "\u0639\u064a\u062f \u0627\u0644\u062b\u0648\u0631\u0629 25 \u064a\u0646\u0627\u064a\u0631",
@@ -20,6 +28,14 @@
     "page": "https://pseoare.pages.dev/sinai-liberation-day-egypt-2016-04-25"
    },
    {
+    "name": "Christmas Day (Orthodox) in Egypt (2017)",
+    "local_name": "\u0639\u064a\u062f \u0627\u0644\u0645\u064a\u0644\u0627\u062f \u0627\u0644\u0645\u062c\u064a\u062f",
+    "date": "2017-01-07",
+    "weekday": "Saturday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/christmas-day-orthodox-egypt-2017-01-07"
+   },
+   {
     "name": "Revolution Day 2011 / National Police Day in Egypt (2017)",
     "local_name": "\u0639\u064a\u062f \u0627\u0644\u062b\u0648\u0631\u0629 25 \u064a\u0646\u0627\u064a\u0631",
     "date": "2017-01-25",
@@ -28,12 +44,44 @@
     "page": "https://pseoare.pages.dev/revolution-day-2011-national-police-day-egypt-2017-01-25"
    },
    {
+    "name": "Easter Monday in Egypt (2017)",
+    "local_name": "Sham El-Nessim",
+    "date": "2017-04-17",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/easter-monday-egypt-2017-04-17"
+   },
+   {
+    "name": "Christmas Day (Orthodox) in Egypt (2018)",
+    "local_name": "\u0639\u064a\u062f \u0627\u0644\u0645\u064a\u0644\u0627\u062f \u0627\u0644\u0645\u062c\u064a\u062f",
+    "date": "2018-01-07",
+    "weekday": "Sunday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/christmas-day-orthodox-egypt-2018-01-07"
+   },
+   {
     "name": "Revolution Day 2011 / National Police Day in Egypt (2018)",
     "local_name": "\u0639\u064a\u062f \u0627\u0644\u062b\u0648\u0631\u0629 25 \u064a\u0646\u0627\u064a\u0631",
     "date": "2018-01-25",
     "weekday": "Thursday",
     "weekend": false,
     "page": "https://pseoare.pages.dev/revolution-day-2011-national-police-day-egypt-2018-01-25"
+   },
+   {
+    "name": "Easter Monday in Egypt (2018)",
+    "local_name": "Sham El-Nessim",
+    "date": "2018-04-09",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/easter-monday-egypt-2018-04-09"
+   },
+   {
+    "name": "Christmas Day (Orthodox) in Egypt (2019)",
+    "local_name": "\u0639\u064a\u062f \u0627\u0644\u0645\u064a\u0644\u0627\u062f \u0627\u0644\u0645\u062c\u064a\u062f",
+    "date": "2019-01-07",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-orthodox-egypt-2019-01-07"
    },
    {
     "name": "Revolution Day 2011 / National Police Day in Egypt (2019)",
@@ -52,12 +100,36 @@
     "page": "https://pseoare.pages.dev/sinai-liberation-day-egypt-2019-04-25"
    },
    {
+    "name": "Christmas Day (Orthodox) in Egypt (2020)",
+    "local_name": "\u0639\u064a\u062f \u0627\u0644\u0645\u064a\u0644\u0627\u062f \u0627\u0644\u0645\u062c\u064a\u062f",
+    "date": "2020-01-07",
+    "weekday": "Tuesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-orthodox-egypt-2020-01-07"
+   },
+   {
     "name": "Revolution Day 2011 / National Police Day in Egypt (2020)",
     "local_name": "\u0639\u064a\u062f \u0627\u0644\u062b\u0648\u0631\u0629 25 \u064a\u0646\u0627\u064a\u0631",
     "date": "2020-01-25",
     "weekday": "Saturday",
     "weekend": true,
     "page": "https://pseoare.pages.dev/revolution-day-2011-national-police-day-egypt-2020-01-25"
+   },
+   {
+    "name": "Easter Monday in Egypt (2020)",
+    "local_name": "Sham El-Nessim",
+    "date": "2020-04-20",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/easter-monday-egypt-2020-04-20"
+   },
+   {
+    "name": "Christmas Day (Orthodox) in Egypt (2021)",
+    "local_name": "\u0639\u064a\u062f \u0627\u0644\u0645\u064a\u0644\u0627\u062f \u0627\u0644\u0645\u062c\u064a\u062f",
+    "date": "2021-01-07",
+    "weekday": "Thursday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-orthodox-egypt-2021-01-07"
    },
    {
     "name": "Revolution Day 2011 / National Police Day in Egypt (2021)",
@@ -76,6 +148,14 @@
     "page": "https://pseoare.pages.dev/sinai-liberation-day-egypt-2021-04-29"
    },
    {
+    "name": "Christmas Day (Orthodox) in Egypt (2022)",
+    "local_name": "\u0639\u064a\u062f \u0627\u0644\u0645\u064a\u0644\u0627\u062f \u0627\u0644\u0645\u062c\u064a\u062f",
+    "date": "2022-01-06",
+    "weekday": "Thursday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-orthodox-egypt-2022-01-06"
+   },
+   {
     "name": "Revolution Day 2011 / National Police Day in Egypt (2022)",
     "local_name": "\u0639\u064a\u062f \u0627\u0644\u062b\u0648\u0631\u0629 25 \u064a\u0646\u0627\u064a\u0631",
     "date": "2022-01-27",
@@ -84,12 +164,84 @@
     "page": "https://pseoare.pages.dev/revolution-day-2011-national-police-day-egypt-2022-01-27"
    },
    {
+    "name": "Easter Monday in Egypt (2022)",
+    "local_name": "Sham El-Nessim",
+    "date": "2022-04-25",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/easter-monday-egypt-2022-04-25"
+   },
+   {
+    "name": "Christmas Day (Orthodox) in Egypt (2023)",
+    "local_name": "\u0639\u064a\u062f \u0627\u0644\u0645\u064a\u0644\u0627\u062f \u0627\u0644\u0645\u062c\u064a\u062f",
+    "date": "2023-01-08",
+    "weekday": "Sunday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/christmas-day-orthodox-egypt-2023-01-08"
+   },
+   {
     "name": "Revolution Day 2011 / National Police Day in Egypt (2023)",
     "local_name": "\u0639\u064a\u062f \u0627\u0644\u062b\u0648\u0631\u0629 25 \u064a\u0646\u0627\u064a\u0631",
     "date": "2023-01-26",
     "weekday": "Thursday",
     "weekend": false,
     "page": "https://pseoare.pages.dev/revolution-day-2011-national-police-day-egypt-2023-01-26"
+   },
+   {
+    "name": "Easter Monday in Egypt (2023)",
+    "local_name": "Sham El-Nessim",
+    "date": "2023-04-17",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/easter-monday-egypt-2023-04-17"
+   },
+   {
+    "name": "Christmas Day (Orthodox) in Egypt (2024)",
+    "local_name": "\u0639\u064a\u062f \u0627\u0644\u0645\u064a\u0644\u0627\u062f \u0627\u0644\u0645\u062c\u064a\u062f",
+    "date": "2024-01-07",
+    "weekday": "Sunday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/christmas-day-orthodox-egypt-2024-01-07"
+   },
+   {
+    "name": "Christmas Day (Orthodox) in Egypt (2025)",
+    "local_name": "\u0639\u064a\u062f \u0627\u0644\u0645\u064a\u0644\u0627\u062f \u0627\u0644\u0645\u062c\u064a\u062f",
+    "date": "2025-01-07",
+    "weekday": "Tuesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-orthodox-egypt-2025-01-07"
+   },
+   {
+    "name": "Easter Monday in Egypt (2025)",
+    "local_name": "Sham El-Nessim",
+    "date": "2025-04-21",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/easter-monday-egypt-2025-04-21"
+   },
+   {
+    "name": "Christmas Day (Orthodox) in Egypt (2026)",
+    "local_name": "\u0639\u064a\u062f \u0627\u0644\u0645\u064a\u0644\u0627\u062f \u0627\u0644\u0645\u062c\u064a\u062f",
+    "date": "2026-01-07",
+    "weekday": "Wednesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-orthodox-egypt-2026-01-07"
+   },
+   {
+    "name": "Easter Monday in Egypt (2026)",
+    "local_name": "Sham El-Nessim",
+    "date": "2026-04-13",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/easter-monday-egypt-2026-04-13"
+   },
+   {
+    "name": "Christmas Day (Orthodox) in Egypt (2027)",
+    "local_name": "\u0639\u064a\u062f \u0627\u0644\u0645\u064a\u0644\u0627\u062f \u0627\u0644\u0645\u062c\u064a\u062f",
+    "date": "2027-01-07",
+    "weekday": "Thursday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-orthodox-egypt-2027-01-07"
    }
   ]
  },
@@ -98,7 +250,7 @@
   "title": "Public holidays for Egypt",
   "site": "https://pseoare.pages.dev"
  },
- "updated": "2026-10-19T20:41:30.228277+00:00",
+ "updated": "2026-10-19T20:49:39.946179+00:00",
  "license": "CC-BY-4.0",
  "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
 }

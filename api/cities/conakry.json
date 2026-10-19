@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Conakry",
+  "annual_mean_c": 27.1,
+  "warmest_month": "Dec",
+  "warmest_c": 27.7,
+  "coldest_month": "Aug",
+  "coldest_c": 25.9,
+  "seasonal_swing_c": 1.8,
+  "annual_rainfall_mm": 2869.0,
+  "wettest_month": "Aug",
+  "wettest_mm_per_day": 30.42,
+  "driest_month": "Jan",
+  "driest_mm_per_day": 0.01,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 27.4,
+    "rain_mm_per_day": 0.01
+   },
+   {
+    "month": "Feb",
+    "mean_c": 27.4,
+    "rain_mm_per_day": 0.06
+   },
+   {
+    "month": "Mar",
+    "mean_c": 27.3,
+    "rain_mm_per_day": 0.03
+   },
+   {
+    "month": "Apr",
+    "mean_c": 27.4,
+    "rain_mm_per_day": 0.44
+   },
+   {
+    "month": "May",
+    "mean_c": 27.5,
+    "rain_mm_per_day": 2.91
+   },
+   {
+    "month": "Jun",
+    "mean_c": 26.9,
+    "rain_mm_per_day": 11.75
+   },
+   {
+    "month": "Jul",
+    "mean_c": 26.3,
+    "rain_mm_per_day": 26.63
+   },
+   {
+    "month": "Aug",
+    "mean_c": 25.9,
+    "rain_mm_per_day": 30.42
+   },
+   {
+    "month": "Sep",
+    "mean_c": 26.3,
+    "rain_mm_per_day": 14.69
+   },
+   {
+    "month": "Oct",
+    "mean_c": 26.9,
+    "rain_mm_per_day": 5.59
+   },
+   {
+    "month": "Nov",
+    "mean_c": 27.6,
+    "rain_mm_per_day": 1.75
+   },
+   {
+    "month": "Dec",
+    "mean_c": 27.7,
+    "rain_mm_per_day": 0.08
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/conakry-average-monthly-temperature-rainfall",
+  "title": "Conakry climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

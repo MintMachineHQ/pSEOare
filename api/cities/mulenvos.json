@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Mulenvos",
+  "annual_mean_c": 25.6,
+  "warmest_month": "Mar",
+  "warmest_c": 28.1,
+  "coldest_month": "Aug",
+  "coldest_c": 22.0,
+  "seasonal_swing_c": 6.1,
+  "annual_rainfall_mm": 326.0,
+  "wettest_month": "Apr",
+  "wettest_mm_per_day": 2.62,
+  "driest_month": "Jul",
+  "driest_mm_per_day": 0.01,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 27.2,
+    "rain_mm_per_day": 0.82
+   },
+   {
+    "month": "Feb",
+    "mean_c": 27.9,
+    "rain_mm_per_day": 1.33
+   },
+   {
+    "month": "Mar",
+    "mean_c": 28.1,
+    "rain_mm_per_day": 2.2
+   },
+   {
+    "month": "Apr",
+    "mean_c": 27.5,
+    "rain_mm_per_day": 2.62
+   },
+   {
+    "month": "May",
+    "mean_c": 26.3,
+    "rain_mm_per_day": 0.77
+   },
+   {
+    "month": "Jun",
+    "mean_c": 23.8,
+    "rain_mm_per_day": 0.04
+   },
+   {
+    "month": "Jul",
+    "mean_c": 22.2,
+    "rain_mm_per_day": 0.01
+   },
+   {
+    "month": "Aug",
+    "mean_c": 22.0,
+    "rain_mm_per_day": 0.07
+   },
+   {
+    "month": "Sep",
+    "mean_c": 23.3,
+    "rain_mm_per_day": 0.18
+   },
+   {
+    "month": "Oct",
+    "mean_c": 25.4,
+    "rain_mm_per_day": 0.53
+   },
+   {
+    "month": "Nov",
+    "mean_c": 26.5,
+    "rain_mm_per_day": 1.22
+   },
+   {
+    "month": "Dec",
+    "mean_c": 26.7,
+    "rain_mm_per_day": 0.93
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/mulenvos-average-monthly-temperature-rainfall",
+  "title": "Mulenvos climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

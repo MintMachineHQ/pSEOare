@@ -1,0 +1,208 @@
+{
+ "answer": {
+  "country": "Belgium",
+  "count": 24,
+  "holidays": [
+   {
+    "name": "Good Friday in Belgium (2016)",
+    "local_name": "Goede Vrijdag",
+    "date": "2016-03-25",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/good-friday-belgium-2016-03-25"
+   },
+   {
+    "name": "Christmas Day in Belgium (2016)",
+    "local_name": "Kerstdag",
+    "date": "2016-12-25",
+    "weekday": "Sunday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/christmas-day-belgium-2016-12-25"
+   },
+   {
+    "name": "Good Friday in Belgium (2017)",
+    "local_name": "Goede Vrijdag",
+    "date": "2017-04-14",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/good-friday-belgium-2017-04-14"
+   },
+   {
+    "name": "Christmas Day in Belgium (2017)",
+    "local_name": "Kerstdag",
+    "date": "2017-12-25",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-belgium-2017-12-25"
+   },
+   {
+    "name": "Good Friday in Belgium (2018)",
+    "local_name": "Goede Vrijdag",
+    "date": "2018-03-30",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/good-friday-belgium-2018-03-30"
+   },
+   {
+    "name": "Christmas Day in Belgium (2018)",
+    "local_name": "Kerstdag",
+    "date": "2018-12-25",
+    "weekday": "Tuesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-belgium-2018-12-25"
+   },
+   {
+    "name": "Good Friday in Belgium (2019)",
+    "local_name": "Goede Vrijdag",
+    "date": "2019-04-19",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/good-friday-belgium-2019-04-19"
+   },
+   {
+    "name": "Christmas Day in Belgium (2019)",
+    "local_name": "Kerstdag",
+    "date": "2019-12-25",
+    "weekday": "Wednesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-belgium-2019-12-25"
+   },
+   {
+    "name": "Good Friday in Belgium (2020)",
+    "local_name": "Goede Vrijdag",
+    "date": "2020-04-10",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/good-friday-belgium-2020-04-10"
+   },
+   {
+    "name": "Christmas Day in Belgium (2020)",
+    "local_name": "Kerstdag",
+    "date": "2020-12-25",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-belgium-2020-12-25"
+   },
+   {
+    "name": "Good Friday in Belgium (2021)",
+    "local_name": "Goede Vrijdag",
+    "date": "2021-04-02",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/good-friday-belgium-2021-04-02"
+   },
+   {
+    "name": "Christmas Day in Belgium (2021)",
+    "local_name": "Kerstdag",
+    "date": "2021-12-25",
+    "weekday": "Saturday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/christmas-day-belgium-2021-12-25"
+   },
+   {
+    "name": "Good Friday in Belgium (2022)",
+    "local_name": "Goede Vrijdag",
+    "date": "2022-04-15",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/good-friday-belgium-2022-04-15"
+   },
+   {
+    "name": "Christmas Day in Belgium (2022)",
+    "local_name": "Kerstdag",
+    "date": "2022-12-25",
+    "weekday": "Sunday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/christmas-day-belgium-2022-12-25"
+   },
+   {
+    "name": "Good Friday in Belgium (2023)",
+    "local_name": "Goede Vrijdag",
+    "date": "2023-04-07",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/good-friday-belgium-2023-04-07"
+   },
+   {
+    "name": "Christmas Day in Belgium (2023)",
+    "local_name": "Kerstdag",
+    "date": "2023-12-25",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-belgium-2023-12-25"
+   },
+   {
+    "name": "Good Friday in Belgium (2024)",
+    "local_name": "Goede Vrijdag",
+    "date": "2024-03-29",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/good-friday-belgium-2024-03-29"
+   },
+   {
+    "name": "Christmas Day in Belgium (2024)",
+    "local_name": "Kerstdag",
+    "date": "2024-12-25",
+    "weekday": "Wednesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-belgium-2024-12-25"
+   },
+   {
+    "name": "Good Friday in Belgium (2025)",
+    "local_name": "Goede Vrijdag",
+    "date": "2025-04-18",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/good-friday-belgium-2025-04-18"
+   },
+   {
+    "name": "Christmas Day in Belgium (2025)",
+    "local_name": "Kerstdag",
+    "date": "2025-12-25",
+    "weekday": "Thursday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-belgium-2025-12-25"
+   },
+   {
+    "name": "Good Friday in Belgium (2026)",
+    "local_name": "Goede Vrijdag",
+    "date": "2026-04-03",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/good-friday-belgium-2026-04-03"
+   },
+   {
+    "name": "Christmas Day in Belgium (2026)",
+    "local_name": "Kerstdag",
+    "date": "2026-12-25",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-belgium-2026-12-25"
+   },
+   {
+    "name": "Good Friday in Belgium (2027)",
+    "local_name": "Goede Vrijdag",
+    "date": "2027-03-26",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/good-friday-belgium-2027-03-26"
+   },
+   {
+    "name": "Christmas Day in Belgium (2027)",
+    "local_name": "Kerstdag",
+    "date": "2027-12-25",
+    "weekday": "Saturday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/christmas-day-belgium-2027-12-25"
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/hub-single-holidays",
+  "title": "Public holidays for Belgium",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

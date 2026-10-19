@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Mannheim",
+  "annual_mean_c": 10.1,
+  "warmest_month": "Jul",
+  "warmest_c": 20.6,
+  "coldest_month": "Jan",
+  "coldest_c": 0.2,
+  "seasonal_swing_c": 20.4,
+  "annual_rainfall_mm": 738.0,
+  "wettest_month": "May",
+  "wettest_mm_per_day": 2.42,
+  "driest_month": "Apr",
+  "driest_mm_per_day": 1.45,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 0.2,
+    "rain_mm_per_day": 2.08
+   },
+   {
+    "month": "Feb",
+    "mean_c": 1.2,
+    "rain_mm_per_day": 1.83
+   },
+   {
+    "month": "Mar",
+    "mean_c": 4.9,
+    "rain_mm_per_day": 1.74
+   },
+   {
+    "month": "Apr",
+    "mean_c": 9.7,
+    "rain_mm_per_day": 1.45
+   },
+   {
+    "month": "May",
+    "mean_c": 14.0,
+    "rain_mm_per_day": 2.42
+   },
+   {
+    "month": "Jun",
+    "mean_c": 18.3,
+    "rain_mm_per_day": 2.08
+   },
+   {
+    "month": "Jul",
+    "mean_c": 20.6,
+    "rain_mm_per_day": 2.27
+   },
+   {
+    "month": "Aug",
+    "mean_c": 20.0,
+    "rain_mm_per_day": 2.3
+   },
+   {
+    "month": "Sep",
+    "mean_c": 15.3,
+    "rain_mm_per_day": 1.68
+   },
+   {
+    "month": "Oct",
+    "mean_c": 10.2,
+    "rain_mm_per_day": 1.98
+   },
+   {
+    "month": "Nov",
+    "mean_c": 5.0,
+    "rain_mm_per_day": 2.11
+   },
+   {
+    "month": "Dec",
+    "mean_c": 1.2,
+    "rain_mm_per_day": 2.33
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/mannheim-average-monthly-temperature-rainfall",
+  "title": "Mannheim climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

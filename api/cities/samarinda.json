@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Samarinda",
+  "annual_mean_c": 25.6,
+  "warmest_month": "May",
+  "warmest_c": 26.0,
+  "coldest_month": "Jul",
+  "coldest_c": 25.2,
+  "seasonal_swing_c": 0.8,
+  "annual_rainfall_mm": 2447.0,
+  "wettest_month": "Apr",
+  "wettest_mm_per_day": 8.24,
+  "driest_month": "Aug",
+  "driest_mm_per_day": 4.1,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 25.5,
+    "rain_mm_per_day": 7.21
+   },
+   {
+    "month": "Feb",
+    "mean_c": 25.5,
+    "rain_mm_per_day": 6.68
+   },
+   {
+    "month": "Mar",
+    "mean_c": 25.7,
+    "rain_mm_per_day": 7.68
+   },
+   {
+    "month": "Apr",
+    "mean_c": 25.9,
+    "rain_mm_per_day": 8.24
+   },
+   {
+    "month": "May",
+    "mean_c": 26.0,
+    "rain_mm_per_day": 7.67
+   },
+   {
+    "month": "Jun",
+    "mean_c": 25.5,
+    "rain_mm_per_day": 6.93
+   },
+   {
+    "month": "Jul",
+    "mean_c": 25.2,
+    "rain_mm_per_day": 5.72
+   },
+   {
+    "month": "Aug",
+    "mean_c": 25.3,
+    "rain_mm_per_day": 4.1
+   },
+   {
+    "month": "Sep",
+    "mean_c": 25.5,
+    "rain_mm_per_day": 5.02
+   },
+   {
+    "month": "Oct",
+    "mean_c": 25.9,
+    "rain_mm_per_day": 5.51
+   },
+   {
+    "month": "Nov",
+    "mean_c": 26.0,
+    "rain_mm_per_day": 7.55
+   },
+   {
+    "month": "Dec",
+    "mean_c": 25.7,
+    "rain_mm_per_day": 8.19
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/samarinda-average-monthly-temperature-rainfall",
+  "title": "Samarinda climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Rufisque",
+  "annual_mean_c": 24.3,
+  "warmest_month": "Oct",
+  "warmest_c": 28.2,
+  "coldest_month": "Feb",
+  "coldest_c": 20.5,
+  "seasonal_swing_c": 7.7,
+  "annual_rainfall_mm": 553.0,
+  "wettest_month": "Aug",
+  "wettest_mm_per_day": 6.17,
+  "driest_month": "May",
+  "driest_mm_per_day": 0.08,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 21.9,
+    "rain_mm_per_day": 0.34
+   },
+   {
+    "month": "Feb",
+    "mean_c": 20.5,
+    "rain_mm_per_day": 0.3
+   },
+   {
+    "month": "Mar",
+    "mean_c": 20.5,
+    "rain_mm_per_day": 0.1
+   },
+   {
+    "month": "Apr",
+    "mean_c": 20.6,
+    "rain_mm_per_day": 0.2
+   },
+   {
+    "month": "May",
+    "mean_c": 22.2,
+    "rain_mm_per_day": 0.08
+   },
+   {
+    "month": "Jun",
+    "mean_c": 24.9,
+    "rain_mm_per_day": 0.45
+   },
+   {
+    "month": "Jul",
+    "mean_c": 26.6,
+    "rain_mm_per_day": 2.55
+   },
+   {
+    "month": "Aug",
+    "mean_c": 27.3,
+    "rain_mm_per_day": 6.17
+   },
+   {
+    "month": "Sep",
+    "mean_c": 27.8,
+    "rain_mm_per_day": 5.68
+   },
+   {
+    "month": "Oct",
+    "mean_c": 28.2,
+    "rain_mm_per_day": 1.59
+   },
+   {
+    "month": "Nov",
+    "mean_c": 26.9,
+    "rain_mm_per_day": 0.31
+   },
+   {
+    "month": "Dec",
+    "mean_c": 24.3,
+    "rain_mm_per_day": 0.41
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/rufisque-average-monthly-temperature-rainfall",
+  "title": "Rufisque climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

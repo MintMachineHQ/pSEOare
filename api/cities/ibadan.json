@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Ibadan",
+  "annual_mean_c": 25.2,
+  "warmest_month": "Mar",
+  "warmest_c": 26.4,
+  "coldest_month": "Aug",
+  "coldest_c": 24.1,
+  "seasonal_swing_c": 2.3,
+  "annual_rainfall_mm": 1667.0,
+  "wettest_month": "Sep",
+  "wettest_mm_per_day": 10.32,
+  "driest_month": "Dec",
+  "driest_mm_per_day": 0.61,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 24.4,
+    "rain_mm_per_day": 0.74
+   },
+   {
+    "month": "Feb",
+    "mean_c": 26.0,
+    "rain_mm_per_day": 0.92
+   },
+   {
+    "month": "Mar",
+    "mean_c": 26.4,
+    "rain_mm_per_day": 2.13
+   },
+   {
+    "month": "Apr",
+    "mean_c": 26.3,
+    "rain_mm_per_day": 4.2
+   },
+   {
+    "month": "May",
+    "mean_c": 25.9,
+    "rain_mm_per_day": 5.79
+   },
+   {
+    "month": "Jun",
+    "mean_c": 25.1,
+    "rain_mm_per_day": 8.05
+   },
+   {
+    "month": "Jul",
+    "mean_c": 24.4,
+    "rain_mm_per_day": 7.42
+   },
+   {
+    "month": "Aug",
+    "mean_c": 24.1,
+    "rain_mm_per_day": 6.09
+   },
+   {
+    "month": "Sep",
+    "mean_c": 24.7,
+    "rain_mm_per_day": 10.32
+   },
+   {
+    "month": "Oct",
+    "mean_c": 25.2,
+    "rain_mm_per_day": 6.79
+   },
+   {
+    "month": "Nov",
+    "mean_c": 25.5,
+    "rain_mm_per_day": 1.79
+   },
+   {
+    "month": "Dec",
+    "mean_c": 24.7,
+    "rain_mm_per_day": 0.61
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/ibadan-average-monthly-temperature-rainfall",
+  "title": "Ibadan climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

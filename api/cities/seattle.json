@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Seattle",
+  "annual_mean_c": 10.5,
+  "warmest_month": "Aug",
+  "warmest_c": 18.3,
+  "coldest_month": "Dec",
+  "coldest_c": 3.8,
+  "seasonal_swing_c": 14.5,
+  "annual_rainfall_mm": 1232.0,
+  "wettest_month": "Nov",
+  "wettest_mm_per_day": 6.27,
+  "driest_month": "Jul",
+  "driest_mm_per_day": 0.62,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 4.4,
+    "rain_mm_per_day": 5.6
+   },
+   {
+    "month": "Feb",
+    "mean_c": 4.6,
+    "rain_mm_per_day": 3.83
+   },
+   {
+    "month": "Mar",
+    "mean_c": 6.7,
+    "rain_mm_per_day": 4.46
+   },
+   {
+    "month": "Apr",
+    "mean_c": 9.0,
+    "rain_mm_per_day": 3.18
+   },
+   {
+    "month": "May",
+    "mean_c": 12.8,
+    "rain_mm_per_day": 2.27
+   },
+   {
+    "month": "Jun",
+    "mean_c": 15.2,
+    "rain_mm_per_day": 1.71
+   },
+   {
+    "month": "Jul",
+    "mean_c": 18.2,
+    "rain_mm_per_day": 0.62
+   },
+   {
+    "month": "Aug",
+    "mean_c": 18.3,
+    "rain_mm_per_day": 0.95
+   },
+   {
+    "month": "Sep",
+    "mean_c": 15.4,
+    "rain_mm_per_day": 1.94
+   },
+   {
+    "month": "Oct",
+    "mean_c": 10.8,
+    "rain_mm_per_day": 4.03
+   },
+   {
+    "month": "Nov",
+    "mean_c": 6.7,
+    "rain_mm_per_day": 6.27
+   },
+   {
+    "month": "Dec",
+    "mean_c": 3.8,
+    "rain_mm_per_day": 5.65
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/seattle-average-monthly-temperature-rainfall",
+  "title": "Seattle climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

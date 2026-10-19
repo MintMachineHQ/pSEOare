@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Pravyi Bereh",
+  "annual_mean_c": 11.5,
+  "warmest_month": "Jul",
+  "warmest_c": 25.2,
+  "coldest_month": "Jan",
+  "coldest_c": -1.1,
+  "seasonal_swing_c": 26.3,
+  "annual_rainfall_mm": 509.0,
+  "wettest_month": "Jan",
+  "wettest_mm_per_day": 1.88,
+  "driest_month": "Aug",
+  "driest_mm_per_day": 0.9,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": -1.1,
+    "rain_mm_per_day": 1.88
+   },
+   {
+    "month": "Feb",
+    "mean_c": -0.5,
+    "rain_mm_per_day": 1.62
+   },
+   {
+    "month": "Mar",
+    "mean_c": 3.3,
+    "rain_mm_per_day": 1.27
+   },
+   {
+    "month": "Apr",
+    "mean_c": 9.7,
+    "rain_mm_per_day": 1.15
+   },
+   {
+    "month": "May",
+    "mean_c": 17.2,
+    "rain_mm_per_day": 1.4
+   },
+   {
+    "month": "Jun",
+    "mean_c": 22.3,
+    "rain_mm_per_day": 1.74
+   },
+   {
+    "month": "Jul",
+    "mean_c": 25.2,
+    "rain_mm_per_day": 1.37
+   },
+   {
+    "month": "Aug",
+    "mean_c": 24.9,
+    "rain_mm_per_day": 0.9
+   },
+   {
+    "month": "Sep",
+    "mean_c": 19.0,
+    "rain_mm_per_day": 1.19
+   },
+   {
+    "month": "Oct",
+    "mean_c": 11.8,
+    "rain_mm_per_day": 1.14
+   },
+   {
+    "month": "Nov",
+    "mean_c": 5.2,
+    "rain_mm_per_day": 1.52
+   },
+   {
+    "month": "Dec",
+    "mean_c": 0.7,
+    "rain_mm_per_day": 1.55
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/pravyi-bereh-average-monthly-temperature-rainfall",
+  "title": "Pravyi Bereh climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

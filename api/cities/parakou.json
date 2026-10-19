@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Parakou",
+  "annual_mean_c": 26.3,
+  "warmest_month": "Mar",
+  "warmest_c": 29.6,
+  "coldest_month": "Aug",
+  "coldest_c": 24.7,
+  "seasonal_swing_c": 4.9,
+  "annual_rainfall_mm": 1090.0,
+  "wettest_month": "Sep",
+  "wettest_mm_per_day": 6.85,
+  "driest_month": "Dec",
+  "driest_mm_per_day": 0.07,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 25.1,
+    "rain_mm_per_day": 0.15
+   },
+   {
+    "month": "Feb",
+    "mean_c": 28.0,
+    "rain_mm_per_day": 0.32
+   },
+   {
+    "month": "Mar",
+    "mean_c": 29.6,
+    "rain_mm_per_day": 1.06
+   },
+   {
+    "month": "Apr",
+    "mean_c": 28.7,
+    "rain_mm_per_day": 2.55
+   },
+   {
+    "month": "May",
+    "mean_c": 27.5,
+    "rain_mm_per_day": 3.73
+   },
+   {
+    "month": "Jun",
+    "mean_c": 26.1,
+    "rain_mm_per_day": 4.68
+   },
+   {
+    "month": "Jul",
+    "mean_c": 25.1,
+    "rain_mm_per_day": 5.68
+   },
+   {
+    "month": "Aug",
+    "mean_c": 24.7,
+    "rain_mm_per_day": 6.79
+   },
+   {
+    "month": "Sep",
+    "mean_c": 24.9,
+    "rain_mm_per_day": 6.85
+   },
+   {
+    "month": "Oct",
+    "mean_c": 25.6,
+    "rain_mm_per_day": 3.62
+   },
+   {
+    "month": "Nov",
+    "mean_c": 25.9,
+    "rain_mm_per_day": 0.37
+   },
+   {
+    "month": "Dec",
+    "mean_c": 24.9,
+    "rain_mm_per_day": 0.07
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/parakou-average-monthly-temperature-rainfall",
+  "title": "Parakou climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

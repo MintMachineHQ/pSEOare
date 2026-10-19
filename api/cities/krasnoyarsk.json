@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Krasnoyarsk",
+  "annual_mean_c": 0.2,
+  "warmest_month": "Jul",
+  "warmest_c": 19.0,
+  "coldest_month": "Jan",
+  "coldest_c": -20.1,
+  "seasonal_swing_c": 39.1,
+  "annual_rainfall_mm": 540.0,
+  "wettest_month": "Jul",
+  "wettest_mm_per_day": 2.53,
+  "driest_month": "Jan",
+  "driest_mm_per_day": 0.58,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": -20.1,
+    "rain_mm_per_day": 0.58
+   },
+   {
+    "month": "Feb",
+    "mean_c": -16.8,
+    "rain_mm_per_day": 0.64
+   },
+   {
+    "month": "Mar",
+    "mean_c": -7.8,
+    "rain_mm_per_day": 0.79
+   },
+   {
+    "month": "Apr",
+    "mean_c": 1.6,
+    "rain_mm_per_day": 1.12
+   },
+   {
+    "month": "May",
+    "mean_c": 8.8,
+    "rain_mm_per_day": 2.0
+   },
+   {
+    "month": "Jun",
+    "mean_c": 17.2,
+    "rain_mm_per_day": 2.34
+   },
+   {
+    "month": "Jul",
+    "mean_c": 19.0,
+    "rain_mm_per_day": 2.53
+   },
+   {
+    "month": "Aug",
+    "mean_c": 16.4,
+    "rain_mm_per_day": 2.34
+   },
+   {
+    "month": "Sep",
+    "mean_c": 9.0,
+    "rain_mm_per_day": 1.87
+   },
+   {
+    "month": "Oct",
+    "mean_c": 0.5,
+    "rain_mm_per_day": 1.38
+   },
+   {
+    "month": "Nov",
+    "mean_c": -9.3,
+    "rain_mm_per_day": 1.21
+   },
+   {
+    "month": "Dec",
+    "mean_c": -17.6,
+    "rain_mm_per_day": 0.95
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/krasnoyarsk-average-monthly-temperature-rainfall",
+  "title": "Krasnoyarsk climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

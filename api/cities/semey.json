@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Semey",
+  "annual_mean_c": 4.2,
+  "warmest_month": "Jul",
+  "warmest_c": 22.5,
+  "coldest_month": "Jan",
+  "coldest_c": -17.1,
+  "seasonal_swing_c": 39.6,
+  "annual_rainfall_mm": 311.0,
+  "wettest_month": "Jul",
+  "wettest_mm_per_day": 1.44,
+  "driest_month": "Jan",
+  "driest_mm_per_day": 0.54,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": -17.1,
+    "rain_mm_per_day": 0.54
+   },
+   {
+    "month": "Feb",
+    "mean_c": -13.8,
+    "rain_mm_per_day": 0.61
+   },
+   {
+    "month": "Mar",
+    "mean_c": -4.4,
+    "rain_mm_per_day": 0.8
+   },
+   {
+    "month": "Apr",
+    "mean_c": 7.0,
+    "rain_mm_per_day": 0.67
+   },
+   {
+    "month": "May",
+    "mean_c": 14.5,
+    "rain_mm_per_day": 0.86
+   },
+   {
+    "month": "Jun",
+    "mean_c": 21.2,
+    "rain_mm_per_day": 1.13
+   },
+   {
+    "month": "Jul",
+    "mean_c": 22.5,
+    "rain_mm_per_day": 1.44
+   },
+   {
+    "month": "Aug",
+    "mean_c": 20.6,
+    "rain_mm_per_day": 0.82
+   },
+   {
+    "month": "Sep",
+    "mean_c": 13.2,
+    "rain_mm_per_day": 0.65
+   },
+   {
+    "month": "Oct",
+    "mean_c": 4.5,
+    "rain_mm_per_day": 0.95
+   },
+   {
+    "month": "Nov",
+    "mean_c": -4.8,
+    "rain_mm_per_day": 1.0
+   },
+   {
+    "month": "Dec",
+    "mean_c": -13.3,
+    "rain_mm_per_day": 0.75
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/semey-average-monthly-temperature-rainfall",
+  "title": "Semey climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Edinburgh",
+  "annual_mean_c": 8.4,
+  "warmest_month": "Jul",
+  "warmest_c": 14.4,
+  "coldest_month": "Jan",
+  "coldest_c": 3.4,
+  "seasonal_swing_c": 11.0,
+  "annual_rainfall_mm": 886.0,
+  "wettest_month": "Aug",
+  "wettest_mm_per_day": 3.22,
+  "driest_month": "Apr",
+  "driest_mm_per_day": 1.77,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 3.4,
+    "rain_mm_per_day": 2.4
+   },
+   {
+    "month": "Feb",
+    "mean_c": 3.4,
+    "rain_mm_per_day": 2.13
+   },
+   {
+    "month": "Mar",
+    "mean_c": 4.6,
+    "rain_mm_per_day": 1.93
+   },
+   {
+    "month": "Apr",
+    "mean_c": 6.9,
+    "rain_mm_per_day": 1.77
+   },
+   {
+    "month": "May",
+    "mean_c": 9.8,
+    "rain_mm_per_day": 1.92
+   },
+   {
+    "month": "Jun",
+    "mean_c": 12.7,
+    "rain_mm_per_day": 2.74
+   },
+   {
+    "month": "Jul",
+    "mean_c": 14.4,
+    "rain_mm_per_day": 2.95
+   },
+   {
+    "month": "Aug",
+    "mean_c": 14.1,
+    "rain_mm_per_day": 3.22
+   },
+   {
+    "month": "Sep",
+    "mean_c": 12.2,
+    "rain_mm_per_day": 2.13
+   },
+   {
+    "month": "Oct",
+    "mean_c": 9.2,
+    "rain_mm_per_day": 3.0
+   },
+   {
+    "month": "Nov",
+    "mean_c": 6.1,
+    "rain_mm_per_day": 2.63
+   },
+   {
+    "month": "Dec",
+    "mean_c": 3.9,
+    "rain_mm_per_day": 2.34
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/edinburgh-average-monthly-temperature-rainfall",
+  "title": "Edinburgh climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

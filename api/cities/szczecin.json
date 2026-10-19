@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Szczecin",
+  "annual_mean_c": 9.1,
+  "warmest_month": "Jul",
+  "warmest_c": 19.5,
+  "coldest_month": "Jan",
+  "coldest_c": -1.0,
+  "seasonal_swing_c": 20.5,
+  "annual_rainfall_mm": 641.0,
+  "wettest_month": "Jul",
+  "wettest_mm_per_day": 2.75,
+  "driest_month": "Apr",
+  "driest_mm_per_day": 1.09,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": -1.0,
+    "rain_mm_per_day": 1.74
+   },
+   {
+    "month": "Feb",
+    "mean_c": -0.0,
+    "rain_mm_per_day": 1.46
+   },
+   {
+    "month": "Mar",
+    "mean_c": 3.1,
+    "rain_mm_per_day": 1.37
+   },
+   {
+    "month": "Apr",
+    "mean_c": 8.3,
+    "rain_mm_per_day": 1.09
+   },
+   {
+    "month": "May",
+    "mean_c": 13.2,
+    "rain_mm_per_day": 1.76
+   },
+   {
+    "month": "Jun",
+    "mean_c": 17.1,
+    "rain_mm_per_day": 2.04
+   },
+   {
+    "month": "Jul",
+    "mean_c": 19.5,
+    "rain_mm_per_day": 2.75
+   },
+   {
+    "month": "Aug",
+    "mean_c": 19.2,
+    "rain_mm_per_day": 2.07
+   },
+   {
+    "month": "Sep",
+    "mean_c": 14.8,
+    "rain_mm_per_day": 1.75
+   },
+   {
+    "month": "Oct",
+    "mean_c": 9.4,
+    "rain_mm_per_day": 1.7
+   },
+   {
+    "month": "Nov",
+    "mean_c": 4.5,
+    "rain_mm_per_day": 1.65
+   },
+   {
+    "month": "Dec",
+    "mean_c": 0.8,
+    "rain_mm_per_day": 1.71
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/szczecin-average-monthly-temperature-rainfall",
+  "title": "Szczecin climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

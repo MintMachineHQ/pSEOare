@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Oslo",
+  "annual_mean_c": 4.6,
+  "warmest_month": "Jul",
+  "warmest_c": 16.1,
+  "coldest_month": "Jan",
+  "coldest_c": -5.9,
+  "seasonal_swing_c": 22.0,
+  "annual_rainfall_mm": 1045.0,
+  "wettest_month": "Aug",
+  "wettest_mm_per_day": 3.94,
+  "driest_month": "Mar",
+  "driest_mm_per_day": 1.82,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": -5.9,
+    "rain_mm_per_day": 2.5
+   },
+   {
+    "month": "Feb",
+    "mean_c": -5.4,
+    "rain_mm_per_day": 2.12
+   },
+   {
+    "month": "Mar",
+    "mean_c": -1.8,
+    "rain_mm_per_day": 1.82
+   },
+   {
+    "month": "Apr",
+    "mean_c": 4.1,
+    "rain_mm_per_day": 2.03
+   },
+   {
+    "month": "May",
+    "mean_c": 9.6,
+    "rain_mm_per_day": 2.97
+   },
+   {
+    "month": "Jun",
+    "mean_c": 13.8,
+    "rain_mm_per_day": 3.2
+   },
+   {
+    "month": "Jul",
+    "mean_c": 16.1,
+    "rain_mm_per_day": 3.6
+   },
+   {
+    "month": "Aug",
+    "mean_c": 14.8,
+    "rain_mm_per_day": 3.94
+   },
+   {
+    "month": "Sep",
+    "mean_c": 10.5,
+    "rain_mm_per_day": 3.19
+   },
+   {
+    "month": "Oct",
+    "mean_c": 4.5,
+    "rain_mm_per_day": 3.35
+   },
+   {
+    "month": "Nov",
+    "mean_c": -0.5,
+    "rain_mm_per_day": 3.12
+   },
+   {
+    "month": "Dec",
+    "mean_c": -4.9,
+    "rain_mm_per_day": 2.52
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/oslo-average-monthly-temperature-rainfall",
+  "title": "Oslo climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

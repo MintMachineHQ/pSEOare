@@ -1,7 +1,7 @@
 {
  "answer": {
   "country": "New Zealand",
-  "count": 8,
+  "count": 32,
   "holidays": [
    {
     "name": "New Year's Day in New Zealand (2016)",
@@ -12,12 +12,44 @@
     "page": "https://pseoare.pages.dev/new-year-s-day-new-zealand-2016-01-01"
    },
    {
+    "name": "Day after New Year's Day in New Zealand (2016)",
+    "local_name": "Day after New Year's Day",
+    "date": "2016-01-04",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/day-after-new-year-s-day-new-zealand-2016-01-04"
+   },
+   {
+    "name": "Christmas Day in New Zealand (2016)",
+    "local_name": "Christmas Day",
+    "date": "2016-12-26",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-new-zealand-2016-12-26"
+   },
+   {
     "name": "New Year's Day in New Zealand (2017)",
     "local_name": "New Year's Day",
     "date": "2017-01-02",
     "weekday": "Monday",
     "weekend": false,
     "page": "https://pseoare.pages.dev/new-year-s-day-new-zealand-2017-01-02"
+   },
+   {
+    "name": "Day after New Year's Day in New Zealand (2017)",
+    "local_name": "Day after New Year's Day",
+    "date": "2017-01-03",
+    "weekday": "Tuesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/day-after-new-year-s-day-new-zealand-2017-01-03"
+   },
+   {
+    "name": "Christmas Day in New Zealand (2017)",
+    "local_name": "Christmas Day",
+    "date": "2017-12-25",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-new-zealand-2017-12-25"
    },
    {
     "name": "New Year's Day in New Zealand (2018)",
@@ -28,12 +60,44 @@
     "page": "https://pseoare.pages.dev/new-year-s-day-new-zealand-2018-01-01"
    },
    {
+    "name": "Day after New Year's Day in New Zealand (2018)",
+    "local_name": "Day after New Year's Day",
+    "date": "2018-01-02",
+    "weekday": "Tuesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/day-after-new-year-s-day-new-zealand-2018-01-02"
+   },
+   {
+    "name": "Christmas Day in New Zealand (2018)",
+    "local_name": "Christmas Day",
+    "date": "2018-12-25",
+    "weekday": "Tuesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-new-zealand-2018-12-25"
+   },
+   {
     "name": "New Year's Day in New Zealand (2019)",
     "local_name": "New Year's Day",
     "date": "2019-01-01",
     "weekday": "Tuesday",
     "weekend": false,
     "page": "https://pseoare.pages.dev/new-year-s-day-new-zealand-2019-01-01"
+   },
+   {
+    "name": "Day after New Year's Day in New Zealand (2019)",
+    "local_name": "Day after New Year's Day",
+    "date": "2019-01-02",
+    "weekday": "Wednesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/day-after-new-year-s-day-new-zealand-2019-01-02"
+   },
+   {
+    "name": "Christmas Day in New Zealand (2019)",
+    "local_name": "Christmas Day",
+    "date": "2019-12-25",
+    "weekday": "Wednesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-new-zealand-2019-12-25"
    },
    {
     "name": "New Year's Day in New Zealand (2020)",
@@ -44,12 +108,44 @@
     "page": "https://pseoare.pages.dev/new-year-s-day-new-zealand-2020-01-01"
    },
    {
+    "name": "Day after New Year's Day in New Zealand (2020)",
+    "local_name": "Day after New Year's Day",
+    "date": "2020-01-02",
+    "weekday": "Thursday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/day-after-new-year-s-day-new-zealand-2020-01-02"
+   },
+   {
+    "name": "Christmas Day in New Zealand (2020)",
+    "local_name": "Christmas Day",
+    "date": "2020-12-25",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-new-zealand-2020-12-25"
+   },
+   {
     "name": "New Year's Day in New Zealand (2021)",
     "local_name": "New Year's Day",
     "date": "2021-01-01",
     "weekday": "Friday",
     "weekend": false,
     "page": "https://pseoare.pages.dev/new-year-s-day-new-zealand-2021-01-01"
+   },
+   {
+    "name": "Day after New Year's Day in New Zealand (2021)",
+    "local_name": "Day after New Year's Day",
+    "date": "2021-01-04",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/day-after-new-year-s-day-new-zealand-2021-01-04"
+   },
+   {
+    "name": "Christmas Day in New Zealand (2021)",
+    "local_name": "Christmas Day",
+    "date": "2021-12-27",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-new-zealand-2021-12-27"
    },
    {
     "name": "New Year's Day in New Zealand (2022)",
@@ -60,12 +156,108 @@
     "page": "https://pseoare.pages.dev/new-year-s-day-new-zealand-2022-01-03"
    },
    {
+    "name": "Day after New Year's Day in New Zealand (2022)",
+    "local_name": "Day after New Year's Day",
+    "date": "2022-01-04",
+    "weekday": "Tuesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/day-after-new-year-s-day-new-zealand-2022-01-04"
+   },
+   {
+    "name": "Christmas Day in New Zealand (2022)",
+    "local_name": "Christmas Day",
+    "date": "2022-12-26",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-new-zealand-2022-12-26"
+   },
+   {
     "name": "New Year's Day in New Zealand (2023)",
     "local_name": "New Year's Day",
     "date": "2023-01-02",
     "weekday": "Monday",
     "weekend": false,
     "page": "https://pseoare.pages.dev/new-year-s-day-new-zealand-2023-01-02"
+   },
+   {
+    "name": "Day after New Year's Day in New Zealand (2023)",
+    "local_name": "Day after New Year's Day",
+    "date": "2023-01-03",
+    "weekday": "Tuesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/day-after-new-year-s-day-new-zealand-2023-01-03"
+   },
+   {
+    "name": "Christmas Day in New Zealand (2023)",
+    "local_name": "Christmas Day",
+    "date": "2023-12-25",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-new-zealand-2023-12-25"
+   },
+   {
+    "name": "Day after New Year's Day in New Zealand (2024)",
+    "local_name": "Day after New Year's Day",
+    "date": "2024-01-02",
+    "weekday": "Tuesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/day-after-new-year-s-day-new-zealand-2024-01-02"
+   },
+   {
+    "name": "Christmas Day in New Zealand (2024)",
+    "local_name": "Christmas Day",
+    "date": "2024-12-25",
+    "weekday": "Wednesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-new-zealand-2024-12-25"
+   },
+   {
+    "name": "Day after New Year's Day in New Zealand (2025)",
+    "local_name": "Day after New Year's Day",
+    "date": "2025-01-02",
+    "weekday": "Thursday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/day-after-new-year-s-day-new-zealand-2025-01-02"
+   },
+   {
+    "name": "Christmas Day in New Zealand (2025)",
+    "local_name": "Christmas Day",
+    "date": "2025-12-25",
+    "weekday": "Thursday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-new-zealand-2025-12-25"
+   },
+   {
+    "name": "Day after New Year's Day in New Zealand (2026)",
+    "local_name": "Day after New Year's Day",
+    "date": "2026-01-02",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/day-after-new-year-s-day-new-zealand-2026-01-02"
+   },
+   {
+    "name": "Christmas Day in New Zealand (2026)",
+    "local_name": "Christmas Day",
+    "date": "2026-12-25",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-new-zealand-2026-12-25"
+   },
+   {
+    "name": "Day after New Year's Day in New Zealand (2027)",
+    "local_name": "Day after New Year's Day",
+    "date": "2027-01-04",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/day-after-new-year-s-day-new-zealand-2027-01-04"
+   },
+   {
+    "name": "Christmas Day in New Zealand (2027)",
+    "local_name": "Christmas Day",
+    "date": "2027-12-27",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-new-zealand-2027-12-27"
    }
   ]
  },
@@ -74,7 +266,7 @@
   "title": "Public holidays for New Zealand",
   "site": "https://pseoare.pages.dev"
  },
- "updated": "2026-10-19T20:41:30.228277+00:00",
+ "updated": "2026-10-19T20:49:39.946179+00:00",
  "license": "CC-BY-4.0",
  "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
 }

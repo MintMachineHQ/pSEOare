@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Nampula",
+  "annual_mean_c": 23.9,
+  "warmest_month": "Nov",
+  "warmest_c": 28.0,
+  "coldest_month": "Jul",
+  "coldest_c": 19.8,
+  "seasonal_swing_c": 8.2,
+  "annual_rainfall_mm": 1391.0,
+  "wettest_month": "Jan",
+  "wettest_mm_per_day": 13.35,
+  "driest_month": "Sep",
+  "driest_mm_per_day": 0.26,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 25.4,
+    "rain_mm_per_day": 13.35
+   },
+   {
+    "month": "Feb",
+    "mean_c": 25.0,
+    "rain_mm_per_day": 10.22
+   },
+   {
+    "month": "Mar",
+    "mean_c": 24.6,
+    "rain_mm_per_day": 6.23
+   },
+   {
+    "month": "Apr",
+    "mean_c": 23.3,
+    "rain_mm_per_day": 3.37
+   },
+   {
+    "month": "May",
+    "mean_c": 21.6,
+    "rain_mm_per_day": 0.79
+   },
+   {
+    "month": "Jun",
+    "mean_c": 20.1,
+    "rain_mm_per_day": 0.96
+   },
+   {
+    "month": "Jul",
+    "mean_c": 19.8,
+    "rain_mm_per_day": 0.85
+   },
+   {
+    "month": "Aug",
+    "mean_c": 21.4,
+    "rain_mm_per_day": 0.59
+   },
+   {
+    "month": "Sep",
+    "mean_c": 24.1,
+    "rain_mm_per_day": 0.26
+   },
+   {
+    "month": "Oct",
+    "mean_c": 26.6,
+    "rain_mm_per_day": 0.77
+   },
+   {
+    "month": "Nov",
+    "mean_c": 28.0,
+    "rain_mm_per_day": 1.68
+   },
+   {
+    "month": "Dec",
+    "mean_c": 27.0,
+    "rain_mm_per_day": 6.69
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/nampula-average-monthly-temperature-rainfall",
+  "title": "Nampula climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

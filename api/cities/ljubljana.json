@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Ljubljana",
+  "annual_mean_c": 9.4,
+  "warmest_month": "Jul",
+  "warmest_c": 19.9,
+  "coldest_month": "Jan",
+  "coldest_c": -1.2,
+  "seasonal_swing_c": 21.1,
+  "annual_rainfall_mm": 1050.0,
+  "wettest_month": "Sep",
+  "wettest_mm_per_day": 3.92,
+  "driest_month": "Jan",
+  "driest_mm_per_day": 1.94,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": -1.2,
+    "rain_mm_per_day": 1.94
+   },
+   {
+    "month": "Feb",
+    "mean_c": -0.1,
+    "rain_mm_per_day": 2.57
+   },
+   {
+    "month": "Mar",
+    "mean_c": 4.0,
+    "rain_mm_per_day": 2.28
+   },
+   {
+    "month": "Apr",
+    "mean_c": 9.0,
+    "rain_mm_per_day": 2.42
+   },
+   {
+    "month": "May",
+    "mean_c": 13.5,
+    "rain_mm_per_day": 3.1
+   },
+   {
+    "month": "Jun",
+    "mean_c": 17.8,
+    "rain_mm_per_day": 2.92
+   },
+   {
+    "month": "Jul",
+    "mean_c": 19.9,
+    "rain_mm_per_day": 2.67
+   },
+   {
+    "month": "Aug",
+    "mean_c": 19.6,
+    "rain_mm_per_day": 3.02
+   },
+   {
+    "month": "Sep",
+    "mean_c": 14.5,
+    "rain_mm_per_day": 3.92
+   },
+   {
+    "month": "Oct",
+    "mean_c": 9.7,
+    "rain_mm_per_day": 3.36
+   },
+   {
+    "month": "Nov",
+    "mean_c": 4.9,
+    "rain_mm_per_day": 3.62
+   },
+   {
+    "month": "Dec",
+    "mean_c": 0.1,
+    "rain_mm_per_day": 2.73
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/ljubljana-average-monthly-temperature-rainfall",
+  "title": "Ljubljana climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

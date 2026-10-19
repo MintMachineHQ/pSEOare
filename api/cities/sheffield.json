@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Sheffield",
+  "annual_mean_c": 9.3,
+  "warmest_month": "Jul",
+  "warmest_c": 16.2,
+  "coldest_month": "Jan",
+  "coldest_c": 3.4,
+  "seasonal_swing_c": 12.8,
+  "annual_rainfall_mm": 737.0,
+  "wettest_month": "Aug",
+  "wettest_mm_per_day": 2.49,
+  "driest_month": "Mar",
+  "driest_mm_per_day": 1.55,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 3.4,
+    "rain_mm_per_day": 1.83
+   },
+   {
+    "month": "Feb",
+    "mean_c": 3.6,
+    "rain_mm_per_day": 1.74
+   },
+   {
+    "month": "Mar",
+    "mean_c": 5.4,
+    "rain_mm_per_day": 1.55
+   },
+   {
+    "month": "Apr",
+    "mean_c": 8.1,
+    "rain_mm_per_day": 1.55
+   },
+   {
+    "month": "May",
+    "mean_c": 11.3,
+    "rain_mm_per_day": 1.83
+   },
+   {
+    "month": "Jun",
+    "mean_c": 14.3,
+    "rain_mm_per_day": 2.48
+   },
+   {
+    "month": "Jul",
+    "mean_c": 16.2,
+    "rain_mm_per_day": 2.43
+   },
+   {
+    "month": "Aug",
+    "mean_c": 15.8,
+    "rain_mm_per_day": 2.49
+   },
+   {
+    "month": "Sep",
+    "mean_c": 13.3,
+    "rain_mm_per_day": 1.78
+   },
+   {
+    "month": "Oct",
+    "mean_c": 10.1,
+    "rain_mm_per_day": 2.32
+   },
+   {
+    "month": "Nov",
+    "mean_c": 6.4,
+    "rain_mm_per_day": 2.22
+   },
+   {
+    "month": "Dec",
+    "mean_c": 3.9,
+    "rain_mm_per_day": 2.01
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/sheffield-average-monthly-temperature-rainfall",
+  "title": "Sheffield climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

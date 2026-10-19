@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Kenema",
+  "annual_mean_c": 26.1,
+  "warmest_month": "Mar",
+  "warmest_c": 28.6,
+  "coldest_month": "Aug",
+  "coldest_c": 24.1,
+  "seasonal_swing_c": 4.5,
+  "annual_rainfall_mm": 1921.0,
+  "wettest_month": "Aug",
+  "wettest_mm_per_day": 14.74,
+  "driest_month": "Jan",
+  "driest_mm_per_day": 0.03,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 25.8,
+    "rain_mm_per_day": 0.03
+   },
+   {
+    "month": "Feb",
+    "mean_c": 27.7,
+    "rain_mm_per_day": 0.24
+   },
+   {
+    "month": "Mar",
+    "mean_c": 28.6,
+    "rain_mm_per_day": 0.53
+   },
+   {
+    "month": "Apr",
+    "mean_c": 28.6,
+    "rain_mm_per_day": 1.51
+   },
+   {
+    "month": "May",
+    "mean_c": 27.5,
+    "rain_mm_per_day": 3.75
+   },
+   {
+    "month": "Jun",
+    "mean_c": 25.8,
+    "rain_mm_per_day": 9.94
+   },
+   {
+    "month": "Jul",
+    "mean_c": 24.4,
+    "rain_mm_per_day": 12.94
+   },
+   {
+    "month": "Aug",
+    "mean_c": 24.1,
+    "rain_mm_per_day": 14.74
+   },
+   {
+    "month": "Sep",
+    "mean_c": 24.7,
+    "rain_mm_per_day": 11.84
+   },
+   {
+    "month": "Oct",
+    "mean_c": 25.4,
+    "rain_mm_per_day": 5.72
+   },
+   {
+    "month": "Nov",
+    "mean_c": 25.9,
+    "rain_mm_per_day": 1.73
+   },
+   {
+    "month": "Dec",
+    "mean_c": 25.4,
+    "rain_mm_per_day": 0.21
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/kenema-average-monthly-temperature-rainfall",
+  "title": "Kenema climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

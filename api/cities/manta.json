@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Manta",
+  "annual_mean_c": 24.7,
+  "warmest_month": "Feb",
+  "warmest_c": 25.6,
+  "coldest_month": "Sep",
+  "coldest_c": 23.9,
+  "seasonal_swing_c": 1.7,
+  "annual_rainfall_mm": 582.0,
+  "wettest_month": "Feb",
+  "wettest_mm_per_day": 5.64,
+  "driest_month": "Sep",
+  "driest_mm_per_day": 0.05,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 25.4,
+    "rain_mm_per_day": 3.36
+   },
+   {
+    "month": "Feb",
+    "mean_c": 25.6,
+    "rain_mm_per_day": 5.64
+   },
+   {
+    "month": "Mar",
+    "mean_c": 25.6,
+    "rain_mm_per_day": 4.91
+   },
+   {
+    "month": "Apr",
+    "mean_c": 25.5,
+    "rain_mm_per_day": 2.74
+   },
+   {
+    "month": "May",
+    "mean_c": 25.1,
+    "rain_mm_per_day": 1.01
+   },
+   {
+    "month": "Jun",
+    "mean_c": 24.5,
+    "rain_mm_per_day": 0.34
+   },
+   {
+    "month": "Jul",
+    "mean_c": 24.1,
+    "rain_mm_per_day": 0.1
+   },
+   {
+    "month": "Aug",
+    "mean_c": 24.0,
+    "rain_mm_per_day": 0.06
+   },
+   {
+    "month": "Sep",
+    "mean_c": 23.9,
+    "rain_mm_per_day": 0.05
+   },
+   {
+    "month": "Oct",
+    "mean_c": 24.1,
+    "rain_mm_per_day": 0.12
+   },
+   {
+    "month": "Nov",
+    "mean_c": 24.2,
+    "rain_mm_per_day": 0.15
+   },
+   {
+    "month": "Dec",
+    "mean_c": 24.9,
+    "rain_mm_per_day": 0.65
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/manta-average-monthly-temperature-rainfall",
+  "title": "Manta climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

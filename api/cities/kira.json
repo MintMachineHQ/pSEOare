@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Kira",
+  "annual_mean_c": 22.4,
+  "warmest_month": "Feb",
+  "warmest_c": 24.3,
+  "coldest_month": "Jun",
+  "coldest_c": 21.4,
+  "seasonal_swing_c": 2.9,
+  "annual_rainfall_mm": 1394.0,
+  "wettest_month": "Apr",
+  "wettest_mm_per_day": 6.48,
+  "driest_month": "Jul",
+  "driest_mm_per_day": 1.84,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 23.5,
+    "rain_mm_per_day": 2.1
+   },
+   {
+    "month": "Feb",
+    "mean_c": 24.3,
+    "rain_mm_per_day": 2.34
+   },
+   {
+    "month": "Mar",
+    "mean_c": 23.6,
+    "rain_mm_per_day": 4.77
+   },
+   {
+    "month": "Apr",
+    "mean_c": 22.3,
+    "rain_mm_per_day": 6.48
+   },
+   {
+    "month": "May",
+    "mean_c": 21.6,
+    "rain_mm_per_day": 5.11
+   },
+   {
+    "month": "Jun",
+    "mean_c": 21.4,
+    "rain_mm_per_day": 2.11
+   },
+   {
+    "month": "Jul",
+    "mean_c": 21.5,
+    "rain_mm_per_day": 1.84
+   },
+   {
+    "month": "Aug",
+    "mean_c": 22.1,
+    "rain_mm_per_day": 2.84
+   },
+   {
+    "month": "Sep",
+    "mean_c": 22.4,
+    "rain_mm_per_day": 3.91
+   },
+   {
+    "month": "Oct",
+    "mean_c": 22.1,
+    "rain_mm_per_day": 5.11
+   },
+   {
+    "month": "Nov",
+    "mean_c": 22.0,
+    "rain_mm_per_day": 5.52
+   },
+   {
+    "month": "Dec",
+    "mean_c": 22.6,
+    "rain_mm_per_day": 3.73
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/kira-average-monthly-temperature-rainfall",
+  "title": "Kira climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Nunoa",
+  "annual_mean_c": 15.3,
+  "warmest_month": "Jan",
+  "warmest_c": 22.1,
+  "coldest_month": "Jul",
+  "coldest_c": 8.4,
+  "seasonal_swing_c": 13.7,
+  "annual_rainfall_mm": 273.0,
+  "wettest_month": "Jun",
+  "wettest_mm_per_day": 2.1,
+  "driest_month": "Dec",
+  "driest_mm_per_day": 0.21,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 22.1,
+    "rain_mm_per_day": 0.25
+   },
+   {
+    "month": "Feb",
+    "mean_c": 21.2,
+    "rain_mm_per_day": 0.3
+   },
+   {
+    "month": "Mar",
+    "mean_c": 19.6,
+    "rain_mm_per_day": 0.31
+   },
+   {
+    "month": "Apr",
+    "mean_c": 16.1,
+    "rain_mm_per_day": 0.39
+   },
+   {
+    "month": "May",
+    "mean_c": 12.5,
+    "rain_mm_per_day": 1.42
+   },
+   {
+    "month": "Jun",
+    "mean_c": 9.2,
+    "rain_mm_per_day": 2.1
+   },
+   {
+    "month": "Jul",
+    "mean_c": 8.4,
+    "rain_mm_per_day": 1.52
+   },
+   {
+    "month": "Aug",
+    "mean_c": 9.7,
+    "rain_mm_per_day": 1.29
+   },
+   {
+    "month": "Sep",
+    "mean_c": 11.8,
+    "rain_mm_per_day": 0.51
+   },
+   {
+    "month": "Oct",
+    "mean_c": 14.6,
+    "rain_mm_per_day": 0.39
+   },
+   {
+    "month": "Nov",
+    "mean_c": 18.0,
+    "rain_mm_per_day": 0.29
+   },
+   {
+    "month": "Dec",
+    "mean_c": 20.5,
+    "rain_mm_per_day": 0.21
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/nunoa-average-monthly-temperature-rainfall",
+  "title": "Nunoa climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

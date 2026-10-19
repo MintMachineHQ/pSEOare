@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Calgary",
+  "annual_mean_c": 3.6,
+  "warmest_month": "Jul",
+  "warmest_c": 16.8,
+  "coldest_month": "Dec",
+  "coldest_c": -7.8,
+  "seasonal_swing_c": 24.6,
+  "annual_rainfall_mm": 545.0,
+  "wettest_month": "Jun",
+  "wettest_mm_per_day": 3.82,
+  "driest_month": "Jan",
+  "driest_mm_per_day": 0.54,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": -7.2,
+    "rain_mm_per_day": 0.54
+   },
+   {
+    "month": "Feb",
+    "mean_c": -6.9,
+    "rain_mm_per_day": 0.73
+   },
+   {
+    "month": "Mar",
+    "mean_c": -2.5,
+    "rain_mm_per_day": 0.85
+   },
+   {
+    "month": "Apr",
+    "mean_c": 2.6,
+    "rain_mm_per_day": 1.53
+   },
+   {
+    "month": "May",
+    "mean_c": 8.7,
+    "rain_mm_per_day": 2.37
+   },
+   {
+    "month": "Jun",
+    "mean_c": 12.8,
+    "rain_mm_per_day": 3.82
+   },
+   {
+    "month": "Jul",
+    "mean_c": 16.8,
+    "rain_mm_per_day": 1.88
+   },
+   {
+    "month": "Aug",
+    "mean_c": 15.5,
+    "rain_mm_per_day": 1.96
+   },
+   {
+    "month": "Sep",
+    "mean_c": 10.3,
+    "rain_mm_per_day": 1.76
+   },
+   {
+    "month": "Oct",
+    "mean_c": 3.4,
+    "rain_mm_per_day": 1.03
+   },
+   {
+    "month": "Nov",
+    "mean_c": -2.9,
+    "rain_mm_per_day": 0.77
+   },
+   {
+    "month": "Dec",
+    "mean_c": -7.8,
+    "rain_mm_per_day": 0.69
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/calgary-average-monthly-temperature-rainfall",
+  "title": "Calgary climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

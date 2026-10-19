@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Portland",
+  "annual_mean_c": 10.4,
+  "warmest_month": "Aug",
+  "warmest_c": 19.7,
+  "coldest_month": "Dec",
+  "coldest_c": 3.1,
+  "seasonal_swing_c": 16.6,
+  "annual_rainfall_mm": 1484.0,
+  "wettest_month": "Dec",
+  "wettest_mm_per_day": 8.1,
+  "driest_month": "Jul",
+  "driest_mm_per_day": 0.35,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 3.5,
+    "rain_mm_per_day": 6.97
+   },
+   {
+    "month": "Feb",
+    "mean_c": 4.1,
+    "rain_mm_per_day": 5.09
+   },
+   {
+    "month": "Mar",
+    "mean_c": 6.3,
+    "rain_mm_per_day": 5.74
+   },
+   {
+    "month": "Apr",
+    "mean_c": 8.5,
+    "rain_mm_per_day": 3.98
+   },
+   {
+    "month": "May",
+    "mean_c": 12.2,
+    "rain_mm_per_day": 2.56
+   },
+   {
+    "month": "Jun",
+    "mean_c": 14.9,
+    "rain_mm_per_day": 1.83
+   },
+   {
+    "month": "Jul",
+    "mean_c": 18.9,
+    "rain_mm_per_day": 0.35
+   },
+   {
+    "month": "Aug",
+    "mean_c": 19.7,
+    "rain_mm_per_day": 0.63
+   },
+   {
+    "month": "Sep",
+    "mean_c": 16.5,
+    "rain_mm_per_day": 1.9
+   },
+   {
+    "month": "Oct",
+    "mean_c": 10.9,
+    "rain_mm_per_day": 4.43
+   },
+   {
+    "month": "Nov",
+    "mean_c": 6.1,
+    "rain_mm_per_day": 7.24
+   },
+   {
+    "month": "Dec",
+    "mean_c": 3.1,
+    "rain_mm_per_day": 8.1
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/portland-average-monthly-temperature-rainfall",
+  "title": "Portland climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

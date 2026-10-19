@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Onitsha",
+  "annual_mean_c": 25.6,
+  "warmest_month": "Mar",
+  "warmest_c": 26.8,
+  "coldest_month": "Jan",
+  "coldest_c": 24.4,
+  "seasonal_swing_c": 2.4,
+  "annual_rainfall_mm": 1699.0,
+  "wettest_month": "Sep",
+  "wettest_mm_per_day": 10.5,
+  "driest_month": "Jan",
+  "driest_mm_per_day": 0.38,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 24.4,
+    "rain_mm_per_day": 0.38
+   },
+   {
+    "month": "Feb",
+    "mean_c": 26.2,
+    "rain_mm_per_day": 1.03
+   },
+   {
+    "month": "Mar",
+    "mean_c": 26.8,
+    "rain_mm_per_day": 1.95
+   },
+   {
+    "month": "Apr",
+    "mean_c": 26.8,
+    "rain_mm_per_day": 4.1
+   },
+   {
+    "month": "May",
+    "mean_c": 26.4,
+    "rain_mm_per_day": 5.4
+   },
+   {
+    "month": "Jun",
+    "mean_c": 25.5,
+    "rain_mm_per_day": 7.57
+   },
+   {
+    "month": "Jul",
+    "mean_c": 24.9,
+    "rain_mm_per_day": 7.46
+   },
+   {
+    "month": "Aug",
+    "mean_c": 24.8,
+    "rain_mm_per_day": 7.82
+   },
+   {
+    "month": "Sep",
+    "mean_c": 25.0,
+    "rain_mm_per_day": 10.5
+   },
+   {
+    "month": "Oct",
+    "mean_c": 25.4,
+    "rain_mm_per_day": 6.78
+   },
+   {
+    "month": "Nov",
+    "mean_c": 25.9,
+    "rain_mm_per_day": 2.42
+   },
+   {
+    "month": "Dec",
+    "mean_c": 24.9,
+    "rain_mm_per_day": 0.47
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/onitsha-average-monthly-temperature-rainfall",
+  "title": "Onitsha climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

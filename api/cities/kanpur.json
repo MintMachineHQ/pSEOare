@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Kanpur",
+  "annual_mean_c": 26.3,
+  "warmest_month": "May",
+  "warmest_c": 36.0,
+  "coldest_month": "Jan",
+  "coldest_c": 15.1,
+  "seasonal_swing_c": 20.9,
+  "annual_rainfall_mm": 838.0,
+  "wettest_month": "Jul",
+  "wettest_mm_per_day": 8.33,
+  "driest_month": "Nov",
+  "driest_mm_per_day": 0.12,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 15.1,
+    "rain_mm_per_day": 0.56
+   },
+   {
+    "month": "Feb",
+    "mean_c": 19.2,
+    "rain_mm_per_day": 0.6
+   },
+   {
+    "month": "Mar",
+    "mean_c": 25.5,
+    "rain_mm_per_day": 0.35
+   },
+   {
+    "month": "Apr",
+    "mean_c": 32.1,
+    "rain_mm_per_day": 0.29
+   },
+   {
+    "month": "May",
+    "mean_c": 36.0,
+    "rain_mm_per_day": 0.73
+   },
+   {
+    "month": "Jun",
+    "mean_c": 35.9,
+    "rain_mm_per_day": 3.52
+   },
+   {
+    "month": "Jul",
+    "mean_c": 31.1,
+    "rain_mm_per_day": 8.33
+   },
+   {
+    "month": "Aug",
+    "mean_c": 29.4,
+    "rain_mm_per_day": 6.98
+   },
+   {
+    "month": "Sep",
+    "mean_c": 28.3,
+    "rain_mm_per_day": 4.92
+   },
+   {
+    "month": "Oct",
+    "mean_c": 25.5,
+    "rain_mm_per_day": 0.98
+   },
+   {
+    "month": "Nov",
+    "mean_c": 20.7,
+    "rain_mm_per_day": 0.12
+   },
+   {
+    "month": "Dec",
+    "mean_c": 16.2,
+    "rain_mm_per_day": 0.19
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/kanpur-average-monthly-temperature-rainfall",
+  "title": "Kanpur climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

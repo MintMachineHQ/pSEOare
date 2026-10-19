@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Jijiga",
+  "annual_mean_c": 19.8,
+  "warmest_month": "May",
+  "warmest_c": 21.7,
+  "coldest_month": "Dec",
+  "coldest_c": 17.6,
+  "seasonal_swing_c": 4.1,
+  "annual_rainfall_mm": 684.0,
+  "wettest_month": "Aug",
+  "wettest_mm_per_day": 3.97,
+  "driest_month": "Jan",
+  "driest_mm_per_day": 0.15,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 18.3,
+    "rain_mm_per_day": 0.15
+   },
+   {
+    "month": "Feb",
+    "mean_c": 20.2,
+    "rain_mm_per_day": 0.36
+   },
+   {
+    "month": "Mar",
+    "mean_c": 21.6,
+    "rain_mm_per_day": 1.32
+   },
+   {
+    "month": "Apr",
+    "mean_c": 21.6,
+    "rain_mm_per_day": 3.52
+   },
+   {
+    "month": "May",
+    "mean_c": 21.7,
+    "rain_mm_per_day": 2.33
+   },
+   {
+    "month": "Jun",
+    "mean_c": 20.8,
+    "rain_mm_per_day": 1.69
+   },
+   {
+    "month": "Jul",
+    "mean_c": 19.5,
+    "rain_mm_per_day": 3.25
+   },
+   {
+    "month": "Aug",
+    "mean_c": 19.2,
+    "rain_mm_per_day": 3.97
+   },
+   {
+    "month": "Sep",
+    "mean_c": 19.8,
+    "rain_mm_per_day": 3.69
+   },
+   {
+    "month": "Oct",
+    "mean_c": 19.5,
+    "rain_mm_per_day": 1.29
+   },
+   {
+    "month": "Nov",
+    "mean_c": 18.4,
+    "rain_mm_per_day": 0.67
+   },
+   {
+    "month": "Dec",
+    "mean_c": 17.6,
+    "rain_mm_per_day": 0.26
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/jijiga-average-monthly-temperature-rainfall",
+  "title": "Jijiga climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

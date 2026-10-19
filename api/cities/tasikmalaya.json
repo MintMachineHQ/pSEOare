@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Tasikmalaya",
+  "annual_mean_c": 23.7,
+  "warmest_month": "Mar",
+  "warmest_c": 24.6,
+  "coldest_month": "Aug",
+  "coldest_c": 22.1,
+  "seasonal_swing_c": 2.5,
+  "annual_rainfall_mm": 3004.0,
+  "wettest_month": "Feb",
+  "wettest_mm_per_day": 13.36,
+  "driest_month": "Aug",
+  "driest_mm_per_day": 1.63,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 24.4,
+    "rain_mm_per_day": 11.4
+   },
+   {
+    "month": "Feb",
+    "mean_c": 24.5,
+    "rain_mm_per_day": 13.36
+   },
+   {
+    "month": "Mar",
+    "mean_c": 24.6,
+    "rain_mm_per_day": 11.94
+   },
+   {
+    "month": "Apr",
+    "mean_c": 24.5,
+    "rain_mm_per_day": 10.5
+   },
+   {
+    "month": "May",
+    "mean_c": 24.2,
+    "rain_mm_per_day": 7.2
+   },
+   {
+    "month": "Jun",
+    "mean_c": 23.3,
+    "rain_mm_per_day": 4.2
+   },
+   {
+    "month": "Jul",
+    "mean_c": 22.4,
+    "rain_mm_per_day": 3.15
+   },
+   {
+    "month": "Aug",
+    "mean_c": 22.1,
+    "rain_mm_per_day": 1.63
+   },
+   {
+    "month": "Sep",
+    "mean_c": 22.6,
+    "rain_mm_per_day": 3.6
+   },
+   {
+    "month": "Oct",
+    "mean_c": 23.6,
+    "rain_mm_per_day": 7.62
+   },
+   {
+    "month": "Nov",
+    "mean_c": 24.2,
+    "rain_mm_per_day": 12.04
+   },
+   {
+    "month": "Dec",
+    "mean_c": 24.3,
+    "rain_mm_per_day": 12.18
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/tasikmalaya-average-monthly-temperature-rainfall",
+  "title": "Tasikmalaya climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

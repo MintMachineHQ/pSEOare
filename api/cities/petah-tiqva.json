@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Petah Tiqva",
+  "annual_mean_c": 19.7,
+  "warmest_month": "Aug",
+  "warmest_c": 27.0,
+  "coldest_month": "Jan",
+  "coldest_c": 11.4,
+  "seasonal_swing_c": 15.6,
+  "annual_rainfall_mm": 359.0,
+  "wettest_month": "Jan",
+  "wettest_mm_per_day": 2.83,
+  "driest_month": "Aug",
+  "driest_mm_per_day": 0.01,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 11.4,
+    "rain_mm_per_day": 2.83
+   },
+   {
+    "month": "Feb",
+    "mean_c": 12.3,
+    "rain_mm_per_day": 2.18
+   },
+   {
+    "month": "Mar",
+    "mean_c": 14.7,
+    "rain_mm_per_day": 1.19
+   },
+   {
+    "month": "Apr",
+    "mean_c": 17.7,
+    "rain_mm_per_day": 0.69
+   },
+   {
+    "month": "May",
+    "mean_c": 21.7,
+    "rain_mm_per_day": 0.16
+   },
+   {
+    "month": "Jun",
+    "mean_c": 24.7,
+    "rain_mm_per_day": 0.02
+   },
+   {
+    "month": "Jul",
+    "mean_c": 26.6,
+    "rain_mm_per_day": 0.03
+   },
+   {
+    "month": "Aug",
+    "mean_c": 27.0,
+    "rain_mm_per_day": 0.01
+   },
+   {
+    "month": "Sep",
+    "mean_c": 25.5,
+    "rain_mm_per_day": 0.05
+   },
+   {
+    "month": "Oct",
+    "mean_c": 22.8,
+    "rain_mm_per_day": 0.45
+   },
+   {
+    "month": "Nov",
+    "mean_c": 17.9,
+    "rain_mm_per_day": 1.52
+   },
+   {
+    "month": "Dec",
+    "mean_c": 13.5,
+    "rain_mm_per_day": 2.68
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/petah-tiqva-average-monthly-temperature-rainfall",
+  "title": "Petah Tiqva climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

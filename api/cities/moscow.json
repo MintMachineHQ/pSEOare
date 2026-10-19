@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Moscow",
+  "annual_mean_c": 4.3,
+  "warmest_month": "Jul",
+  "warmest_c": 19.0,
+  "coldest_month": "Jan",
+  "coldest_c": -10.7,
+  "seasonal_swing_c": 29.7,
+  "annual_rainfall_mm": 764.0,
+  "wettest_month": "Jul",
+  "wettest_mm_per_day": 3.01,
+  "driest_month": "Mar",
+  "driest_mm_per_day": 1.37,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": -10.7,
+    "rain_mm_per_day": 1.56
+   },
+   {
+    "month": "Feb",
+    "mean_c": -9.6,
+    "rain_mm_per_day": 1.49
+   },
+   {
+    "month": "Mar",
+    "mean_c": -4.1,
+    "rain_mm_per_day": 1.37
+   },
+   {
+    "month": "Apr",
+    "mean_c": 4.2,
+    "rain_mm_per_day": 1.64
+   },
+   {
+    "month": "May",
+    "mean_c": 12.6,
+    "rain_mm_per_day": 2.78
+   },
+   {
+    "month": "Jun",
+    "mean_c": 16.0,
+    "rain_mm_per_day": 2.85
+   },
+   {
+    "month": "Jul",
+    "mean_c": 19.0,
+    "rain_mm_per_day": 3.01
+   },
+   {
+    "month": "Aug",
+    "mean_c": 17.2,
+    "rain_mm_per_day": 2.43
+   },
+   {
+    "month": "Sep",
+    "mean_c": 11.5,
+    "rain_mm_per_day": 2.14
+   },
+   {
+    "month": "Oct",
+    "mean_c": 4.2,
+    "rain_mm_per_day": 2.24
+   },
+   {
+    "month": "Nov",
+    "mean_c": -2.2,
+    "rain_mm_per_day": 1.92
+   },
+   {
+    "month": "Dec",
+    "mean_c": -7.7,
+    "rain_mm_per_day": 1.69
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/moscow-average-monthly-temperature-rainfall",
+  "title": "Moscow climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

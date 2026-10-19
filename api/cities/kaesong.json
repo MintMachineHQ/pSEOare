@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Kaesong",
+  "annual_mean_c": 10.6,
+  "warmest_month": "Aug",
+  "warmest_c": 24.5,
+  "coldest_month": "Jan",
+  "coldest_c": -4.7,
+  "seasonal_swing_c": 29.2,
+  "annual_rainfall_mm": 1124.0,
+  "wettest_month": "Jul",
+  "wettest_mm_per_day": 10.71,
+  "driest_month": "Jan",
+  "driest_mm_per_day": 0.45,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": -4.7,
+    "rain_mm_per_day": 0.45
+   },
+   {
+    "month": "Feb",
+    "mean_c": -2.0,
+    "rain_mm_per_day": 0.85
+   },
+   {
+    "month": "Mar",
+    "mean_c": 3.0,
+    "rain_mm_per_day": 0.9
+   },
+   {
+    "month": "Apr",
+    "mean_c": 9.5,
+    "rain_mm_per_day": 2.01
+   },
+   {
+    "month": "May",
+    "mean_c": 16.0,
+    "rain_mm_per_day": 2.83
+   },
+   {
+    "month": "Jun",
+    "mean_c": 21.2,
+    "rain_mm_per_day": 3.35
+   },
+   {
+    "month": "Jul",
+    "mean_c": 23.8,
+    "rain_mm_per_day": 10.71
+   },
+   {
+    "month": "Aug",
+    "mean_c": 24.5,
+    "rain_mm_per_day": 8.33
+   },
+   {
+    "month": "Sep",
+    "mean_c": 19.7,
+    "rain_mm_per_day": 3.92
+   },
+   {
+    "month": "Oct",
+    "mean_c": 12.9,
+    "rain_mm_per_day": 1.5
+   },
+   {
+    "month": "Nov",
+    "mean_c": 5.2,
+    "rain_mm_per_day": 1.51
+   },
+   {
+    "month": "Dec",
+    "mean_c": -2.4,
+    "rain_mm_per_day": 0.6
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/kaesong-average-monthly-temperature-rainfall",
+  "title": "Kaesong climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

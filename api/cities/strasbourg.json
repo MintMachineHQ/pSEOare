@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Strasbourg",
+  "annual_mean_c": 10.3,
+  "warmest_month": "Jul",
+  "warmest_c": 20.2,
+  "coldest_month": "Jan",
+  "coldest_c": 0.7,
+  "seasonal_swing_c": 19.5,
+  "annual_rainfall_mm": 755.0,
+  "wettest_month": "May",
+  "wettest_mm_per_day": 2.68,
+  "driest_month": "Apr",
+  "driest_mm_per_day": 1.62,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 0.7,
+    "rain_mm_per_day": 1.85
+   },
+   {
+    "month": "Feb",
+    "mean_c": 1.6,
+    "rain_mm_per_day": 1.63
+   },
+   {
+    "month": "Mar",
+    "mean_c": 5.4,
+    "rain_mm_per_day": 1.64
+   },
+   {
+    "month": "Apr",
+    "mean_c": 10.0,
+    "rain_mm_per_day": 1.62
+   },
+   {
+    "month": "May",
+    "mean_c": 14.2,
+    "rain_mm_per_day": 2.68
+   },
+   {
+    "month": "Jun",
+    "mean_c": 18.4,
+    "rain_mm_per_day": 2.4
+   },
+   {
+    "month": "Jul",
+    "mean_c": 20.2,
+    "rain_mm_per_day": 2.42
+   },
+   {
+    "month": "Aug",
+    "mean_c": 19.6,
+    "rain_mm_per_day": 2.44
+   },
+   {
+    "month": "Sep",
+    "mean_c": 15.3,
+    "rain_mm_per_day": 1.85
+   },
+   {
+    "month": "Oct",
+    "mean_c": 10.6,
+    "rain_mm_per_day": 2.18
+   },
+   {
+    "month": "Nov",
+    "mean_c": 5.2,
+    "rain_mm_per_day": 1.97
+   },
+   {
+    "month": "Dec",
+    "mean_c": 1.5,
+    "rain_mm_per_day": 2.14
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/strasbourg-average-monthly-temperature-rainfall",
+  "title": "Strasbourg climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

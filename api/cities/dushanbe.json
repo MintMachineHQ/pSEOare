@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Dushanbe",
+  "annual_mean_c": 13.9,
+  "warmest_month": "Jul",
+  "warmest_c": 27.7,
+  "coldest_month": "Jan",
+  "coldest_c": 0.7,
+  "seasonal_swing_c": 27.0,
+  "annual_rainfall_mm": 320.0,
+  "wettest_month": "Feb",
+  "wettest_mm_per_day": 1.83,
+  "driest_month": "Aug",
+  "driest_mm_per_day": 0.03,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 0.7,
+    "rain_mm_per_day": 1.15
+   },
+   {
+    "month": "Feb",
+    "mean_c": 2.0,
+    "rain_mm_per_day": 1.83
+   },
+   {
+    "month": "Mar",
+    "mean_c": 8.0,
+    "rain_mm_per_day": 1.69
+   },
+   {
+    "month": "Apr",
+    "mean_c": 13.6,
+    "rain_mm_per_day": 1.73
+   },
+   {
+    "month": "May",
+    "mean_c": 19.4,
+    "rain_mm_per_day": 1.01
+   },
+   {
+    "month": "Jun",
+    "mean_c": 25.0,
+    "rain_mm_per_day": 0.37
+   },
+   {
+    "month": "Jul",
+    "mean_c": 27.7,
+    "rain_mm_per_day": 0.07
+   },
+   {
+    "month": "Aug",
+    "mean_c": 26.1,
+    "rain_mm_per_day": 0.03
+   },
+   {
+    "month": "Sep",
+    "mean_c": 20.8,
+    "rain_mm_per_day": 0.05
+   },
+   {
+    "month": "Oct",
+    "mean_c": 13.9,
+    "rain_mm_per_day": 0.36
+   },
+   {
+    "month": "Nov",
+    "mean_c": 6.9,
+    "rain_mm_per_day": 1.11
+   },
+   {
+    "month": "Dec",
+    "mean_c": 2.0,
+    "rain_mm_per_day": 1.14
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/dushanbe-average-monthly-temperature-rainfall",
+  "title": "Dushanbe climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

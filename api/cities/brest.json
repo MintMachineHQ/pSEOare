@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Brest",
+  "annual_mean_c": 8.2,
+  "warmest_month": "Jul",
+  "warmest_c": 20.9,
+  "coldest_month": "Jan",
+  "coldest_c": -5.0,
+  "seasonal_swing_c": 25.9,
+  "annual_rainfall_mm": 638.0,
+  "wettest_month": "Jul",
+  "wettest_mm_per_day": 2.54,
+  "driest_month": "Feb",
+  "driest_mm_per_day": 1.26,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": -5.0,
+    "rain_mm_per_day": 1.36
+   },
+   {
+    "month": "Feb",
+    "mean_c": -3.4,
+    "rain_mm_per_day": 1.26
+   },
+   {
+    "month": "Mar",
+    "mean_c": 1.6,
+    "rain_mm_per_day": 1.27
+   },
+   {
+    "month": "Apr",
+    "mean_c": 8.3,
+    "rain_mm_per_day": 1.36
+   },
+   {
+    "month": "May",
+    "mean_c": 14.2,
+    "rain_mm_per_day": 2.49
+   },
+   {
+    "month": "Jun",
+    "mean_c": 18.2,
+    "rain_mm_per_day": 2.39
+   },
+   {
+    "month": "Jul",
+    "mean_c": 20.9,
+    "rain_mm_per_day": 2.54
+   },
+   {
+    "month": "Aug",
+    "mean_c": 20.2,
+    "rain_mm_per_day": 2.19
+   },
+   {
+    "month": "Sep",
+    "mean_c": 14.6,
+    "rain_mm_per_day": 1.8
+   },
+   {
+    "month": "Oct",
+    "mean_c": 8.0,
+    "rain_mm_per_day": 1.57
+   },
+   {
+    "month": "Nov",
+    "mean_c": 2.9,
+    "rain_mm_per_day": 1.39
+   },
+   {
+    "month": "Dec",
+    "mean_c": -2.3,
+    "rain_mm_per_day": 1.38
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/brest-average-monthly-temperature-rainfall",
+  "title": "Brest climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

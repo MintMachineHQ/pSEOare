@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Milan",
+  "annual_mean_c": 13.4,
+  "warmest_month": "Jul",
+  "warmest_c": 24.1,
+  "coldest_month": "Jan",
+  "coldest_c": 2.7,
+  "seasonal_swing_c": 21.4,
+  "annual_rainfall_mm": 984.0,
+  "wettest_month": "Nov",
+  "wettest_mm_per_day": 4.56,
+  "driest_month": "Jan",
+  "driest_mm_per_day": 1.52,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 2.7,
+    "rain_mm_per_day": 1.52
+   },
+   {
+    "month": "Feb",
+    "mean_c": 4.4,
+    "rain_mm_per_day": 2.19
+   },
+   {
+    "month": "Mar",
+    "mean_c": 8.6,
+    "rain_mm_per_day": 2.07
+   },
+   {
+    "month": "Apr",
+    "mean_c": 12.8,
+    "rain_mm_per_day": 2.89
+   },
+   {
+    "month": "May",
+    "mean_c": 17.2,
+    "rain_mm_per_day": 3.43
+   },
+   {
+    "month": "Jun",
+    "mean_c": 21.7,
+    "rain_mm_per_day": 2.7
+   },
+   {
+    "month": "Jul",
+    "mean_c": 24.1,
+    "rain_mm_per_day": 2.2
+   },
+   {
+    "month": "Aug",
+    "mean_c": 23.7,
+    "rain_mm_per_day": 2.86
+   },
+   {
+    "month": "Sep",
+    "mean_c": 19.1,
+    "rain_mm_per_day": 2.68
+   },
+   {
+    "month": "Oct",
+    "mean_c": 13.9,
+    "rain_mm_per_day": 3.07
+   },
+   {
+    "month": "Nov",
+    "mean_c": 8.3,
+    "rain_mm_per_day": 4.56
+   },
+   {
+    "month": "Dec",
+    "mean_c": 3.6,
+    "rain_mm_per_day": 2.21
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/milan-average-monthly-temperature-rainfall",
+  "title": "Milan climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

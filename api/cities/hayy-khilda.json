@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Hayy Khilda",
+  "annual_mean_c": 21.3,
+  "warmest_month": "Jul",
+  "warmest_c": 29.7,
+  "coldest_month": "Jan",
+  "coldest_c": 11.3,
+  "seasonal_swing_c": 18.4,
+  "annual_rainfall_mm": 267.0,
+  "wettest_month": "Jan",
+  "wettest_mm_per_day": 2.04,
+  "driest_month": "Jul",
+  "driest_mm_per_day": 0.01,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 11.3,
+    "rain_mm_per_day": 2.04
+   },
+   {
+    "month": "Feb",
+    "mean_c": 12.8,
+    "rain_mm_per_day": 2.04
+   },
+   {
+    "month": "Mar",
+    "mean_c": 16.0,
+    "rain_mm_per_day": 1.02
+   },
+   {
+    "month": "Apr",
+    "mean_c": 19.7,
+    "rain_mm_per_day": 0.5
+   },
+   {
+    "month": "May",
+    "mean_c": 24.3,
+    "rain_mm_per_day": 0.18
+   },
+   {
+    "month": "Jun",
+    "mean_c": 27.7,
+    "rain_mm_per_day": 0.02
+   },
+   {
+    "month": "Jul",
+    "mean_c": 29.7,
+    "rain_mm_per_day": 0.01
+   },
+   {
+    "month": "Aug",
+    "mean_c": 29.7,
+    "rain_mm_per_day": 0.03
+   },
+   {
+    "month": "Sep",
+    "mean_c": 27.7,
+    "rain_mm_per_day": 0.04
+   },
+   {
+    "month": "Oct",
+    "mean_c": 24.4,
+    "rain_mm_per_day": 0.27
+   },
+   {
+    "month": "Nov",
+    "mean_c": 18.4,
+    "rain_mm_per_day": 0.97
+   },
+   {
+    "month": "Dec",
+    "mean_c": 13.5,
+    "rain_mm_per_day": 1.67
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/hayy-khilda-average-monthly-temperature-rainfall",
+  "title": "Hayy Khilda climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

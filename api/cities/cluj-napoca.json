@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Cluj-Napoca",
+  "annual_mean_c": 9.8,
+  "warmest_month": "Aug",
+  "warmest_c": 21.6,
+  "coldest_month": "Jan",
+  "coldest_c": -3.0,
+  "seasonal_swing_c": 24.6,
+  "annual_rainfall_mm": 678.0,
+  "wettest_month": "Jun",
+  "wettest_mm_per_day": 3.24,
+  "driest_month": "Jan",
+  "driest_mm_per_day": 1.12,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": -3.0,
+    "rain_mm_per_day": 1.12
+   },
+   {
+    "month": "Feb",
+    "mean_c": -0.8,
+    "rain_mm_per_day": 1.21
+   },
+   {
+    "month": "Mar",
+    "mean_c": 4.1,
+    "rain_mm_per_day": 1.38
+   },
+   {
+    "month": "Apr",
+    "mean_c": 10.1,
+    "rain_mm_per_day": 1.69
+   },
+   {
+    "month": "May",
+    "mean_c": 15.4,
+    "rain_mm_per_day": 2.6
+   },
+   {
+    "month": "Jun",
+    "mean_c": 19.4,
+    "rain_mm_per_day": 3.24
+   },
+   {
+    "month": "Jul",
+    "mean_c": 21.5,
+    "rain_mm_per_day": 2.91
+   },
+   {
+    "month": "Aug",
+    "mean_c": 21.6,
+    "rain_mm_per_day": 2.03
+   },
+   {
+    "month": "Sep",
+    "mean_c": 16.2,
+    "rain_mm_per_day": 1.77
+   },
+   {
+    "month": "Oct",
+    "mean_c": 10.0,
+    "rain_mm_per_day": 1.7
+   },
+   {
+    "month": "Nov",
+    "mean_c": 4.4,
+    "rain_mm_per_day": 1.35
+   },
+   {
+    "month": "Dec",
+    "mean_c": -1.4,
+    "rain_mm_per_day": 1.29
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/cluj-napoca-average-monthly-temperature-rainfall",
+  "title": "Cluj-Napoca climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

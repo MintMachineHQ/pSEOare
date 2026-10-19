@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Jepara",
+  "annual_mean_c": 27.6,
+  "warmest_month": "Oct",
+  "warmest_c": 28.4,
+  "coldest_month": "Feb",
+  "coldest_c": 27.0,
+  "seasonal_swing_c": 1.4,
+  "annual_rainfall_mm": 2147.0,
+  "wettest_month": "Feb",
+  "wettest_mm_per_day": 12.75,
+  "driest_month": "Aug",
+  "driest_mm_per_day": 0.85,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 27.2,
+    "rain_mm_per_day": 12.32
+   },
+   {
+    "month": "Feb",
+    "mean_c": 27.0,
+    "rain_mm_per_day": 12.75
+   },
+   {
+    "month": "Mar",
+    "mean_c": 27.4,
+    "rain_mm_per_day": 7.25
+   },
+   {
+    "month": "Apr",
+    "mean_c": 27.9,
+    "rain_mm_per_day": 6.66
+   },
+   {
+    "month": "May",
+    "mean_c": 28.0,
+    "rain_mm_per_day": 4.49
+   },
+   {
+    "month": "Jun",
+    "mean_c": 27.6,
+    "rain_mm_per_day": 3.01
+   },
+   {
+    "month": "Jul",
+    "mean_c": 27.2,
+    "rain_mm_per_day": 1.51
+   },
+   {
+    "month": "Aug",
+    "mean_c": 27.4,
+    "rain_mm_per_day": 0.85
+   },
+   {
+    "month": "Sep",
+    "mean_c": 28.0,
+    "rain_mm_per_day": 1.8
+   },
+   {
+    "month": "Oct",
+    "mean_c": 28.4,
+    "rain_mm_per_day": 3.67
+   },
+   {
+    "month": "Nov",
+    "mean_c": 28.1,
+    "rain_mm_per_day": 6.83
+   },
+   {
+    "month": "Dec",
+    "mean_c": 27.6,
+    "rain_mm_per_day": 9.5
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/jepara-average-monthly-temperature-rainfall",
+  "title": "Jepara climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

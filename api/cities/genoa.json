@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Genoa",
+  "annual_mean_c": 13.2,
+  "warmest_month": "Jul",
+  "warmest_c": 23.2,
+  "coldest_month": "Jan",
+  "coldest_c": 4.0,
+  "seasonal_swing_c": 19.2,
+  "annual_rainfall_mm": 836.0,
+  "wettest_month": "Nov",
+  "wettest_mm_per_day": 4.84,
+  "driest_month": "Jul",
+  "driest_mm_per_day": 1.11,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 4.0,
+    "rain_mm_per_day": 1.8
+   },
+   {
+    "month": "Feb",
+    "mean_c": 4.8,
+    "rain_mm_per_day": 2.11
+   },
+   {
+    "month": "Mar",
+    "mean_c": 8.2,
+    "rain_mm_per_day": 2.29
+   },
+   {
+    "month": "Apr",
+    "mean_c": 11.8,
+    "rain_mm_per_day": 2.35
+   },
+   {
+    "month": "May",
+    "mean_c": 15.7,
+    "rain_mm_per_day": 2.17
+   },
+   {
+    "month": "Jun",
+    "mean_c": 20.3,
+    "rain_mm_per_day": 1.56
+   },
+   {
+    "month": "Jul",
+    "mean_c": 23.2,
+    "rain_mm_per_day": 1.11
+   },
+   {
+    "month": "Aug",
+    "mean_c": 23.1,
+    "rain_mm_per_day": 1.58
+   },
+   {
+    "month": "Sep",
+    "mean_c": 19.0,
+    "rain_mm_per_day": 2.03
+   },
+   {
+    "month": "Oct",
+    "mean_c": 14.2,
+    "rain_mm_per_day": 3.13
+   },
+   {
+    "month": "Nov",
+    "mean_c": 9.0,
+    "rain_mm_per_day": 4.84
+   },
+   {
+    "month": "Dec",
+    "mean_c": 5.0,
+    "rain_mm_per_day": 2.54
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/genoa-average-monthly-temperature-rainfall",
+  "title": "Genoa climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

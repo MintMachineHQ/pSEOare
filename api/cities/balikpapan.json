@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Balikpapan",
+  "annual_mean_c": 27.4,
+  "warmest_month": "May",
+  "warmest_c": 27.9,
+  "coldest_month": "Jul",
+  "coldest_c": 27.0,
+  "seasonal_swing_c": 0.9,
+  "annual_rainfall_mm": 2469.0,
+  "wettest_month": "Dec",
+  "wettest_mm_per_day": 8.69,
+  "driest_month": "Aug",
+  "driest_mm_per_day": 4.24,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 27.3,
+    "rain_mm_per_day": 7.67
+   },
+   {
+    "month": "Feb",
+    "mean_c": 27.3,
+    "rain_mm_per_day": 7.96
+   },
+   {
+    "month": "Mar",
+    "mean_c": 27.4,
+    "rain_mm_per_day": 7.7
+   },
+   {
+    "month": "Apr",
+    "mean_c": 27.7,
+    "rain_mm_per_day": 7.46
+   },
+   {
+    "month": "May",
+    "mean_c": 27.9,
+    "rain_mm_per_day": 7.13
+   },
+   {
+    "month": "Jun",
+    "mean_c": 27.4,
+    "rain_mm_per_day": 7.65
+   },
+   {
+    "month": "Jul",
+    "mean_c": 27.0,
+    "rain_mm_per_day": 6.12
+   },
+   {
+    "month": "Aug",
+    "mean_c": 27.0,
+    "rain_mm_per_day": 4.24
+   },
+   {
+    "month": "Sep",
+    "mean_c": 27.2,
+    "rain_mm_per_day": 4.36
+   },
+   {
+    "month": "Oct",
+    "mean_c": 27.5,
+    "rain_mm_per_day": 5.03
+   },
+   {
+    "month": "Nov",
+    "mean_c": 27.7,
+    "rain_mm_per_day": 7.2
+   },
+   {
+    "month": "Dec",
+    "mean_c": 27.5,
+    "rain_mm_per_day": 8.69
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/balikpapan-average-monthly-temperature-rainfall",
+  "title": "Balikpapan climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

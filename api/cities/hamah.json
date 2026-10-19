@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Hamah",
+  "annual_mean_c": 18.2,
+  "warmest_month": "Aug",
+  "warmest_c": 28.1,
+  "coldest_month": "Jan",
+  "coldest_c": 7.6,
+  "seasonal_swing_c": 20.5,
+  "annual_rainfall_mm": 328.0,
+  "wettest_month": "Jan",
+  "wettest_mm_per_day": 2.31,
+  "driest_month": "Jul",
+  "driest_mm_per_day": 0.02,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 7.6,
+    "rain_mm_per_day": 2.31
+   },
+   {
+    "month": "Feb",
+    "mean_c": 9.1,
+    "rain_mm_per_day": 1.92
+   },
+   {
+    "month": "Mar",
+    "mean_c": 12.5,
+    "rain_mm_per_day": 1.19
+   },
+   {
+    "month": "Apr",
+    "mean_c": 16.4,
+    "rain_mm_per_day": 0.68
+   },
+   {
+    "month": "May",
+    "mean_c": 21.2,
+    "rain_mm_per_day": 0.39
+   },
+   {
+    "month": "Jun",
+    "mean_c": 25.5,
+    "rain_mm_per_day": 0.11
+   },
+   {
+    "month": "Jul",
+    "mean_c": 28.0,
+    "rain_mm_per_day": 0.02
+   },
+   {
+    "month": "Aug",
+    "mean_c": 28.1,
+    "rain_mm_per_day": 0.06
+   },
+   {
+    "month": "Sep",
+    "mean_c": 25.5,
+    "rain_mm_per_day": 0.29
+   },
+   {
+    "month": "Oct",
+    "mean_c": 21.0,
+    "rain_mm_per_day": 0.64
+   },
+   {
+    "month": "Nov",
+    "mean_c": 14.2,
+    "rain_mm_per_day": 1.25
+   },
+   {
+    "month": "Dec",
+    "mean_c": 9.4,
+    "rain_mm_per_day": 1.92
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/hamah-average-monthly-temperature-rainfall",
+  "title": "Hamah climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Christchurch",
+  "annual_mean_c": 11.6,
+  "warmest_month": "Jan",
+  "warmest_c": 17.5,
+  "coldest_month": "Jul",
+  "coldest_c": 5.9,
+  "seasonal_swing_c": 11.6,
+  "annual_rainfall_mm": 844.0,
+  "wettest_month": "Jun",
+  "wettest_mm_per_day": 2.68,
+  "driest_month": "Sep",
+  "driest_mm_per_day": 1.91,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 17.5,
+    "rain_mm_per_day": 2.15
+   },
+   {
+    "month": "Feb",
+    "mean_c": 17.1,
+    "rain_mm_per_day": 2.07
+   },
+   {
+    "month": "Mar",
+    "mean_c": 15.1,
+    "rain_mm_per_day": 1.96
+   },
+   {
+    "month": "Apr",
+    "mean_c": 11.9,
+    "rain_mm_per_day": 2.55
+   },
+   {
+    "month": "May",
+    "mean_c": 9.2,
+    "rain_mm_per_day": 2.54
+   },
+   {
+    "month": "Jun",
+    "mean_c": 6.6,
+    "rain_mm_per_day": 2.68
+   },
+   {
+    "month": "Jul",
+    "mean_c": 5.9,
+    "rain_mm_per_day": 2.34
+   },
+   {
+    "month": "Aug",
+    "mean_c": 7.1,
+    "rain_mm_per_day": 2.27
+   },
+   {
+    "month": "Sep",
+    "mean_c": 8.9,
+    "rain_mm_per_day": 1.91
+   },
+   {
+    "month": "Oct",
+    "mean_c": 10.8,
+    "rain_mm_per_day": 2.51
+   },
+   {
+    "month": "Nov",
+    "mean_c": 13.2,
+    "rain_mm_per_day": 2.28
+   },
+   {
+    "month": "Dec",
+    "mean_c": 15.8,
+    "rain_mm_per_day": 2.49
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/christchurch-average-monthly-temperature-rainfall",
+  "title": "Christchurch climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

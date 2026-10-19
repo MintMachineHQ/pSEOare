@@ -1,7 +1,7 @@
 {
  "answer": {
   "country": "South Korea",
-  "count": 8,
+  "count": 32,
   "holidays": [
    {
     "name": "New Year's Day in South Korea (2016)",
@@ -12,12 +12,44 @@
     "page": "https://pseoare.pages.dev/new-year-s-day-south-korea-2016-01-01"
    },
    {
+    "name": "Lunar New Year in South Korea (2016)",
+    "local_name": "\uc124\ub0a0",
+    "date": "2016-02-06",
+    "weekday": "Saturday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/lunar-new-year-south-korea-2016-02-06"
+   },
+   {
+    "name": "Christmas Day in South Korea (2016)",
+    "local_name": "\ud06c\ub9ac\uc2a4\ub9c8\uc2a4",
+    "date": "2016-12-25",
+    "weekday": "Sunday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/christmas-day-south-korea-2016-12-25"
+   },
+   {
     "name": "New Year's Day in South Korea (2017)",
     "local_name": "\uc0c8\ud574",
     "date": "2017-01-01",
     "weekday": "Sunday",
     "weekend": true,
     "page": "https://pseoare.pages.dev/new-year-s-day-south-korea-2017-01-01"
+   },
+   {
+    "name": "Lunar New Year in South Korea (2017)",
+    "local_name": "\uc124\ub0a0",
+    "date": "2017-01-27",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/lunar-new-year-south-korea-2017-01-27"
+   },
+   {
+    "name": "Christmas Day in South Korea (2017)",
+    "local_name": "\ud06c\ub9ac\uc2a4\ub9c8\uc2a4",
+    "date": "2017-12-25",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-south-korea-2017-12-25"
    },
    {
     "name": "New Year's Day in South Korea (2018)",
@@ -28,12 +60,44 @@
     "page": "https://pseoare.pages.dev/new-year-s-day-south-korea-2018-01-01"
    },
    {
+    "name": "Lunar New Year in South Korea (2018)",
+    "local_name": "\uc124\ub0a0",
+    "date": "2018-02-15",
+    "weekday": "Thursday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/lunar-new-year-south-korea-2018-02-15"
+   },
+   {
+    "name": "Christmas Day in South Korea (2018)",
+    "local_name": "\ud06c\ub9ac\uc2a4\ub9c8\uc2a4",
+    "date": "2018-12-25",
+    "weekday": "Tuesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-south-korea-2018-12-25"
+   },
+   {
     "name": "New Year's Day in South Korea (2019)",
     "local_name": "\uc0c8\ud574",
     "date": "2019-01-01",
     "weekday": "Tuesday",
     "weekend": false,
     "page": "https://pseoare.pages.dev/new-year-s-day-south-korea-2019-01-01"
+   },
+   {
+    "name": "Lunar New Year in South Korea (2019)",
+    "local_name": "\uc124\ub0a0",
+    "date": "2019-02-04",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/lunar-new-year-south-korea-2019-02-04"
+   },
+   {
+    "name": "Christmas Day in South Korea (2019)",
+    "local_name": "\ud06c\ub9ac\uc2a4\ub9c8\uc2a4",
+    "date": "2019-12-25",
+    "weekday": "Wednesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-south-korea-2019-12-25"
    },
    {
     "name": "New Year's Day in South Korea (2020)",
@@ -44,12 +108,44 @@
     "page": "https://pseoare.pages.dev/new-year-s-day-south-korea-2020-01-01"
    },
    {
+    "name": "Lunar New Year in South Korea (2020)",
+    "local_name": "\uc124\ub0a0",
+    "date": "2020-01-24",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/lunar-new-year-south-korea-2020-01-24"
+   },
+   {
+    "name": "Christmas Day in South Korea (2020)",
+    "local_name": "\ud06c\ub9ac\uc2a4\ub9c8\uc2a4",
+    "date": "2020-12-25",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-south-korea-2020-12-25"
+   },
+   {
     "name": "New Year's Day in South Korea (2021)",
     "local_name": "\uc0c8\ud574",
     "date": "2021-01-01",
     "weekday": "Friday",
     "weekend": false,
     "page": "https://pseoare.pages.dev/new-year-s-day-south-korea-2021-01-01"
+   },
+   {
+    "name": "Lunar New Year in South Korea (2021)",
+    "local_name": "\uc124\ub0a0",
+    "date": "2021-02-11",
+    "weekday": "Thursday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/lunar-new-year-south-korea-2021-02-11"
+   },
+   {
+    "name": "Christmas Day in South Korea (2021)",
+    "local_name": "\ud06c\ub9ac\uc2a4\ub9c8\uc2a4",
+    "date": "2021-12-25",
+    "weekday": "Saturday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/christmas-day-south-korea-2021-12-25"
    },
    {
     "name": "New Year's Day in South Korea (2022)",
@@ -60,12 +156,108 @@
     "page": "https://pseoare.pages.dev/new-year-s-day-south-korea-2022-01-01"
    },
    {
+    "name": "Lunar New Year in South Korea (2022)",
+    "local_name": "\uc124\ub0a0",
+    "date": "2022-01-31",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/lunar-new-year-south-korea-2022-01-31"
+   },
+   {
+    "name": "Christmas Day in South Korea (2022)",
+    "local_name": "\ud06c\ub9ac\uc2a4\ub9c8\uc2a4",
+    "date": "2022-12-25",
+    "weekday": "Sunday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/christmas-day-south-korea-2022-12-25"
+   },
+   {
     "name": "New Year's Day in South Korea (2023)",
     "local_name": "\uc0c8\ud574",
     "date": "2023-01-01",
     "weekday": "Sunday",
     "weekend": true,
     "page": "https://pseoare.pages.dev/new-year-s-day-south-korea-2023-01-01"
+   },
+   {
+    "name": "Lunar New Year in South Korea (2023)",
+    "local_name": "\uc124\ub0a0",
+    "date": "2023-01-21",
+    "weekday": "Saturday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/lunar-new-year-south-korea-2023-01-21"
+   },
+   {
+    "name": "Christmas Day in South Korea (2023)",
+    "local_name": "\ud06c\ub9ac\uc2a4\ub9c8\uc2a4",
+    "date": "2023-12-25",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-south-korea-2023-12-25"
+   },
+   {
+    "name": "Lunar New Year in South Korea (2024)",
+    "local_name": "\uc124\ub0a0",
+    "date": "2024-02-09",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/lunar-new-year-south-korea-2024-02-09"
+   },
+   {
+    "name": "Christmas Day in South Korea (2024)",
+    "local_name": "\ud06c\ub9ac\uc2a4\ub9c8\uc2a4",
+    "date": "2024-12-25",
+    "weekday": "Wednesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-south-korea-2024-12-25"
+   },
+   {
+    "name": "Lunar New Year in South Korea (2025)",
+    "local_name": "\uc124\ub0a0",
+    "date": "2025-01-28",
+    "weekday": "Tuesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/lunar-new-year-south-korea-2025-01-28"
+   },
+   {
+    "name": "Christmas Day in South Korea (2025)",
+    "local_name": "\ud06c\ub9ac\uc2a4\ub9c8\uc2a4",
+    "date": "2025-12-25",
+    "weekday": "Thursday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-south-korea-2025-12-25"
+   },
+   {
+    "name": "Lunar New Year in South Korea (2026)",
+    "local_name": "\uc124\ub0a0",
+    "date": "2026-02-16",
+    "weekday": "Monday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/lunar-new-year-south-korea-2026-02-16"
+   },
+   {
+    "name": "Christmas Day in South Korea (2026)",
+    "local_name": "\ud06c\ub9ac\uc2a4\ub9c8\uc2a4",
+    "date": "2026-12-25",
+    "weekday": "Friday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/christmas-day-south-korea-2026-12-25"
+   },
+   {
+    "name": "Lunar New Year in South Korea (2027)",
+    "local_name": "\uc124\ub0a0",
+    "date": "2027-02-06",
+    "weekday": "Saturday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/lunar-new-year-south-korea-2027-02-06"
+   },
+   {
+    "name": "Christmas Day in South Korea (2027)",
+    "local_name": "\ud06c\ub9ac\uc2a4\ub9c8\uc2a4",
+    "date": "2027-12-25",
+    "weekday": "Saturday",
+    "weekend": true,
+    "page": "https://pseoare.pages.dev/christmas-day-south-korea-2027-12-25"
    }
   ]
  },
@@ -74,7 +266,7 @@
   "title": "Public holidays for South Korea",
   "site": "https://pseoare.pages.dev"
  },
- "updated": "2026-10-19T20:41:30.228277+00:00",
+ "updated": "2026-10-19T20:49:39.946179+00:00",
  "license": "CC-BY-4.0",
  "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
 }

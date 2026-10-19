@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Chiayi City",
+  "annual_mean_c": 21.2,
+  "warmest_month": "Jul",
+  "warmest_c": 24.9,
+  "coldest_month": "Jan",
+  "coldest_c": 15.6,
+  "seasonal_swing_c": 9.3,
+  "annual_rainfall_mm": 1892.0,
+  "wettest_month": "Aug",
+  "wettest_mm_per_day": 12.91,
+  "driest_month": "Dec",
+  "driest_mm_per_day": 1.19,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 15.6,
+    "rain_mm_per_day": 1.52
+   },
+   {
+    "month": "Feb",
+    "mean_c": 17.1,
+    "rain_mm_per_day": 1.37
+   },
+   {
+    "month": "Mar",
+    "mean_c": 18.9,
+    "rain_mm_per_day": 2.13
+   },
+   {
+    "month": "Apr",
+    "mean_c": 21.7,
+    "rain_mm_per_day": 3.39
+   },
+   {
+    "month": "May",
+    "mean_c": 23.6,
+    "rain_mm_per_day": 8.13
+   },
+   {
+    "month": "Jun",
+    "mean_c": 24.1,
+    "rain_mm_per_day": 11.42
+   },
+   {
+    "month": "Jul",
+    "mean_c": 24.9,
+    "rain_mm_per_day": 8.64
+   },
+   {
+    "month": "Aug",
+    "mean_c": 24.6,
+    "rain_mm_per_day": 12.91
+   },
+   {
+    "month": "Sep",
+    "mean_c": 24.0,
+    "rain_mm_per_day": 7.61
+   },
+   {
+    "month": "Oct",
+    "mean_c": 22.4,
+    "rain_mm_per_day": 2.35
+   },
+   {
+    "month": "Nov",
+    "mean_c": 20.5,
+    "rain_mm_per_day": 1.58
+   },
+   {
+    "month": "Dec",
+    "mean_c": 16.9,
+    "rain_mm_per_day": 1.19
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/chiayi-city-average-monthly-temperature-rainfall",
+  "title": "Chiayi City climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

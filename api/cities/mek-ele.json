@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Mek'ele",
+  "annual_mean_c": 18.8,
+  "warmest_month": "May",
+  "warmest_c": 21.7,
+  "coldest_month": "Dec",
+  "coldest_c": 15.6,
+  "seasonal_swing_c": 6.1,
+  "annual_rainfall_mm": 527.0,
+  "wettest_month": "Jul",
+  "wettest_mm_per_day": 4.86,
+  "driest_month": "Jan",
+  "driest_mm_per_day": 0.18,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 16.5,
+    "rain_mm_per_day": 0.18
+   },
+   {
+    "month": "Feb",
+    "mean_c": 18.1,
+    "rain_mm_per_day": 0.34
+   },
+   {
+    "month": "Mar",
+    "mean_c": 19.7,
+    "rain_mm_per_day": 0.53
+   },
+   {
+    "month": "Apr",
+    "mean_c": 20.7,
+    "rain_mm_per_day": 1.71
+   },
+   {
+    "month": "May",
+    "mean_c": 21.7,
+    "rain_mm_per_day": 0.9
+   },
+   {
+    "month": "Jun",
+    "mean_c": 21.7,
+    "rain_mm_per_day": 1.37
+   },
+   {
+    "month": "Jul",
+    "mean_c": 19.3,
+    "rain_mm_per_day": 4.86
+   },
+   {
+    "month": "Aug",
+    "mean_c": 18.9,
+    "rain_mm_per_day": 4.77
+   },
+   {
+    "month": "Sep",
+    "mean_c": 19.2,
+    "rain_mm_per_day": 1.34
+   },
+   {
+    "month": "Oct",
+    "mean_c": 17.6,
+    "rain_mm_per_day": 0.74
+   },
+   {
+    "month": "Nov",
+    "mean_c": 16.5,
+    "rain_mm_per_day": 0.27
+   },
+   {
+    "month": "Dec",
+    "mean_c": 15.6,
+    "rain_mm_per_day": 0.32
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/mek-ele-average-monthly-temperature-rainfall",
+  "title": "Mek'ele climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

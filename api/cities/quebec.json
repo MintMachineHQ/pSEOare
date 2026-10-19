@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Quebec",
+  "annual_mean_c": 3.1,
+  "warmest_month": "Jul",
+  "warmest_c": 18.1,
+  "coldest_month": "Jan",
+  "coldest_c": -13.9,
+  "seasonal_swing_c": 32.0,
+  "annual_rainfall_mm": 1143.0,
+  "wettest_month": "Jul",
+  "wettest_mm_per_day": 3.98,
+  "driest_month": "Jan",
+  "driest_mm_per_day": 2.12,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": -13.9,
+    "rain_mm_per_day": 2.12
+   },
+   {
+    "month": "Feb",
+    "mean_c": -12.3,
+    "rain_mm_per_day": 2.26
+   },
+   {
+    "month": "Mar",
+    "mean_c": -7.1,
+    "rain_mm_per_day": 2.32
+   },
+   {
+    "month": "Apr",
+    "mean_c": 1.4,
+    "rain_mm_per_day": 3.09
+   },
+   {
+    "month": "May",
+    "mean_c": 9.8,
+    "rain_mm_per_day": 3.06
+   },
+   {
+    "month": "Jun",
+    "mean_c": 15.2,
+    "rain_mm_per_day": 3.77
+   },
+   {
+    "month": "Jul",
+    "mean_c": 18.1,
+    "rain_mm_per_day": 3.98
+   },
+   {
+    "month": "Aug",
+    "mean_c": 17.2,
+    "rain_mm_per_day": 3.49
+   },
+   {
+    "month": "Sep",
+    "mean_c": 13.1,
+    "rain_mm_per_day": 3.63
+   },
+   {
+    "month": "Oct",
+    "mean_c": 5.8,
+    "rain_mm_per_day": 3.84
+   },
+   {
+    "month": "Nov",
+    "mean_c": -1.5,
+    "rain_mm_per_day": 2.99
+   },
+   {
+    "month": "Dec",
+    "mean_c": -9.3,
+    "rain_mm_per_day": 3.05
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/quebec-average-monthly-temperature-rainfall",
+  "title": "Quebec climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Newcastle upon Tyne",
+  "annual_mean_c": 8.6,
+  "warmest_month": "Jul",
+  "warmest_c": 14.8,
+  "coldest_month": "Jan",
+  "coldest_c": 3.4,
+  "seasonal_swing_c": 11.4,
+  "annual_rainfall_mm": 861.0,
+  "wettest_month": "Aug",
+  "wettest_mm_per_day": 3.18,
+  "driest_month": "Apr",
+  "driest_mm_per_day": 1.74,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 3.4,
+    "rain_mm_per_day": 2.22
+   },
+   {
+    "month": "Feb",
+    "mean_c": 3.4,
+    "rain_mm_per_day": 2.06
+   },
+   {
+    "month": "Mar",
+    "mean_c": 4.7,
+    "rain_mm_per_day": 1.8
+   },
+   {
+    "month": "Apr",
+    "mean_c": 7.1,
+    "rain_mm_per_day": 1.74
+   },
+   {
+    "month": "May",
+    "mean_c": 10.0,
+    "rain_mm_per_day": 1.84
+   },
+   {
+    "month": "Jun",
+    "mean_c": 13.0,
+    "rain_mm_per_day": 2.65
+   },
+   {
+    "month": "Jul",
+    "mean_c": 14.8,
+    "rain_mm_per_day": 2.89
+   },
+   {
+    "month": "Aug",
+    "mean_c": 14.5,
+    "rain_mm_per_day": 3.18
+   },
+   {
+    "month": "Sep",
+    "mean_c": 12.3,
+    "rain_mm_per_day": 2.19
+   },
+   {
+    "month": "Oct",
+    "mean_c": 9.4,
+    "rain_mm_per_day": 2.79
+   },
+   {
+    "month": "Nov",
+    "mean_c": 6.2,
+    "rain_mm_per_day": 2.63
+   },
+   {
+    "month": "Dec",
+    "mean_c": 3.9,
+    "rain_mm_per_day": 2.34
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/newcastle-upon-tyne-average-monthly-temperature-rainfall",
+  "title": "Newcastle upon Tyne climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

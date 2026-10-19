@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Bialystok",
+  "annual_mean_c": 7.6,
+  "warmest_month": "Jul",
+  "warmest_c": 19.9,
+  "coldest_month": "Jan",
+  "coldest_c": -5.3,
+  "seasonal_swing_c": 25.2,
+  "annual_rainfall_mm": 661.0,
+  "wettest_month": "Jul",
+  "wettest_mm_per_day": 2.79,
+  "driest_month": "Mar",
+  "driest_mm_per_day": 1.25,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": -5.3,
+    "rain_mm_per_day": 1.44
+   },
+   {
+    "month": "Feb",
+    "mean_c": -3.9,
+    "rain_mm_per_day": 1.32
+   },
+   {
+    "month": "Mar",
+    "mean_c": 1.1,
+    "rain_mm_per_day": 1.25
+   },
+   {
+    "month": "Apr",
+    "mean_c": 7.5,
+    "rain_mm_per_day": 1.29
+   },
+   {
+    "month": "May",
+    "mean_c": 13.5,
+    "rain_mm_per_day": 2.34
+   },
+   {
+    "month": "Jun",
+    "mean_c": 17.1,
+    "rain_mm_per_day": 2.21
+   },
+   {
+    "month": "Jul",
+    "mean_c": 19.9,
+    "rain_mm_per_day": 2.79
+   },
+   {
+    "month": "Aug",
+    "mean_c": 19.2,
+    "rain_mm_per_day": 2.52
+   },
+   {
+    "month": "Sep",
+    "mean_c": 13.8,
+    "rain_mm_per_day": 1.81
+   },
+   {
+    "month": "Oct",
+    "mean_c": 7.3,
+    "rain_mm_per_day": 1.72
+   },
+   {
+    "month": "Nov",
+    "mean_c": 2.5,
+    "rain_mm_per_day": 1.55
+   },
+   {
+    "month": "Dec",
+    "mean_c": -2.5,
+    "rain_mm_per_day": 1.51
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/bialystok-average-monthly-temperature-rainfall",
+  "title": "Bialystok climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

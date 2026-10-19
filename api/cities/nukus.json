@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Nukus",
+  "annual_mean_c": 13.3,
+  "warmest_month": "Jul",
+  "warmest_c": 30.8,
+  "coldest_month": "Jan",
+  "coldest_c": -4.3,
+  "seasonal_swing_c": 35.1,
+  "annual_rainfall_mm": 82.0,
+  "wettest_month": "Apr",
+  "wettest_mm_per_day": 0.44,
+  "driest_month": "Aug",
+  "driest_mm_per_day": 0.04,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": -4.3,
+    "rain_mm_per_day": 0.21
+   },
+   {
+    "month": "Feb",
+    "mean_c": -2.1,
+    "rain_mm_per_day": 0.31
+   },
+   {
+    "month": "Mar",
+    "mean_c": 6.5,
+    "rain_mm_per_day": 0.4
+   },
+   {
+    "month": "Apr",
+    "mean_c": 14.6,
+    "rain_mm_per_day": 0.44
+   },
+   {
+    "month": "May",
+    "mean_c": 23.4,
+    "rain_mm_per_day": 0.3
+   },
+   {
+    "month": "Jun",
+    "mean_c": 28.9,
+    "rain_mm_per_day": 0.09
+   },
+   {
+    "month": "Jul",
+    "mean_c": 30.8,
+    "rain_mm_per_day": 0.07
+   },
+   {
+    "month": "Aug",
+    "mean_c": 28.2,
+    "rain_mm_per_day": 0.04
+   },
+   {
+    "month": "Sep",
+    "mean_c": 20.9,
+    "rain_mm_per_day": 0.08
+   },
+   {
+    "month": "Oct",
+    "mean_c": 11.8,
+    "rain_mm_per_day": 0.19
+   },
+   {
+    "month": "Nov",
+    "mean_c": 3.0,
+    "rain_mm_per_day": 0.31
+   },
+   {
+    "month": "Dec",
+    "mean_c": -3.2,
+    "rain_mm_per_day": 0.26
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/nukus-average-monthly-temperature-rainfall",
+  "title": "Nukus climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

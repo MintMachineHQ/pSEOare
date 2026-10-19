@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Banjarmasin",
+  "annual_mean_c": 27.7,
+  "warmest_month": "Oct",
+  "warmest_c": 28.5,
+  "coldest_month": "Jul",
+  "coldest_c": 27.0,
+  "seasonal_swing_c": 1.5,
+  "annual_rainfall_mm": 2790.0,
+  "wettest_month": "Dec",
+  "wettest_mm_per_day": 13.28,
+  "driest_month": "Aug",
+  "driest_mm_per_day": 2.48,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 27.2,
+    "rain_mm_per_day": 11.28
+   },
+   {
+    "month": "Feb",
+    "mean_c": 27.4,
+    "rain_mm_per_day": 12.0
+   },
+   {
+    "month": "Mar",
+    "mean_c": 27.6,
+    "rain_mm_per_day": 11.21
+   },
+   {
+    "month": "Apr",
+    "mean_c": 28.0,
+    "rain_mm_per_day": 9.06
+   },
+   {
+    "month": "May",
+    "mean_c": 28.1,
+    "rain_mm_per_day": 6.44
+   },
+   {
+    "month": "Jun",
+    "mean_c": 27.5,
+    "rain_mm_per_day": 5.56
+   },
+   {
+    "month": "Jul",
+    "mean_c": 27.0,
+    "rain_mm_per_day": 3.78
+   },
+   {
+    "month": "Aug",
+    "mean_c": 27.2,
+    "rain_mm_per_day": 2.48
+   },
+   {
+    "month": "Sep",
+    "mean_c": 27.9,
+    "rain_mm_per_day": 2.6
+   },
+   {
+    "month": "Oct",
+    "mean_c": 28.5,
+    "rain_mm_per_day": 4.57
+   },
+   {
+    "month": "Nov",
+    "mean_c": 28.3,
+    "rain_mm_per_day": 9.52
+   },
+   {
+    "month": "Dec",
+    "mean_c": 27.5,
+    "rain_mm_per_day": 13.28
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/banjarmasin-average-monthly-temperature-rainfall",
+  "title": "Banjarmasin climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

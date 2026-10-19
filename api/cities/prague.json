@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Prague",
+  "annual_mean_c": 8.9,
+  "warmest_month": "Jul",
+  "warmest_c": 20.1,
+  "coldest_month": "Jan",
+  "coldest_c": -2.2,
+  "seasonal_swing_c": 22.3,
+  "annual_rainfall_mm": 636.0,
+  "wettest_month": "Jun",
+  "wettest_mm_per_day": 2.61,
+  "driest_month": "Feb",
+  "driest_mm_per_day": 1.14,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": -2.2,
+    "rain_mm_per_day": 1.35
+   },
+   {
+    "month": "Feb",
+    "mean_c": -0.7,
+    "rain_mm_per_day": 1.14
+   },
+   {
+    "month": "Mar",
+    "mean_c": 3.3,
+    "rain_mm_per_day": 1.26
+   },
+   {
+    "month": "Apr",
+    "mean_c": 8.8,
+    "rain_mm_per_day": 1.19
+   },
+   {
+    "month": "May",
+    "mean_c": 13.6,
+    "rain_mm_per_day": 2.23
+   },
+   {
+    "month": "Jun",
+    "mean_c": 17.9,
+    "rain_mm_per_day": 2.61
+   },
+   {
+    "month": "Jul",
+    "mean_c": 20.1,
+    "rain_mm_per_day": 2.56
+   },
+   {
+    "month": "Aug",
+    "mean_c": 19.5,
+    "rain_mm_per_day": 2.6
+   },
+   {
+    "month": "Sep",
+    "mean_c": 14.4,
+    "rain_mm_per_day": 1.75
+   },
+   {
+    "month": "Oct",
+    "mean_c": 8.8,
+    "rain_mm_per_day": 1.49
+   },
+   {
+    "month": "Nov",
+    "mean_c": 3.6,
+    "rain_mm_per_day": 1.42
+   },
+   {
+    "month": "Dec",
+    "mean_c": -0.6,
+    "rain_mm_per_day": 1.33
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/prague-average-monthly-temperature-rainfall",
+  "title": "Prague climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}

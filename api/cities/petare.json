@@ -1,0 +1,86 @@
+{
+ "answer": {
+  "city": "Petare",
+  "annual_mean_c": 24.0,
+  "warmest_month": "May",
+  "warmest_c": 24.8,
+  "coldest_month": "Jan",
+  "coldest_c": 22.7,
+  "seasonal_swing_c": 2.1,
+  "annual_rainfall_mm": 838.0,
+  "wettest_month": "Aug",
+  "wettest_mm_per_day": 3.86,
+  "driest_month": "Mar",
+  "driest_mm_per_day": 0.46,
+  "monthly": [
+   {
+    "month": "Jan",
+    "mean_c": 22.7,
+    "rain_mm_per_day": 1.35
+   },
+   {
+    "month": "Feb",
+    "mean_c": 22.7,
+    "rain_mm_per_day": 1.07
+   },
+   {
+    "month": "Mar",
+    "mean_c": 23.4,
+    "rain_mm_per_day": 0.46
+   },
+   {
+    "month": "Apr",
+    "mean_c": 24.3,
+    "rain_mm_per_day": 1.36
+   },
+   {
+    "month": "May",
+    "mean_c": 24.8,
+    "rain_mm_per_day": 2.28
+   },
+   {
+    "month": "Jun",
+    "mean_c": 24.5,
+    "rain_mm_per_day": 2.89
+   },
+   {
+    "month": "Jul",
+    "mean_c": 24.2,
+    "rain_mm_per_day": 3.25
+   },
+   {
+    "month": "Aug",
+    "mean_c": 24.5,
+    "rain_mm_per_day": 3.86
+   },
+   {
+    "month": "Sep",
+    "mean_c": 24.8,
+    "rain_mm_per_day": 2.97
+   },
+   {
+    "month": "Oct",
+    "mean_c": 24.6,
+    "rain_mm_per_day": 3.1
+   },
+   {
+    "month": "Nov",
+    "mean_c": 24.2,
+    "rain_mm_per_day": 2.56
+   },
+   {
+    "month": "Dec",
+    "mean_c": 23.3,
+    "rain_mm_per_day": 2.4
+   }
+  ]
+ },
+ "source": {
+  "url": "https://pseoare.pages.dev/petare-average-monthly-temperature-rainfall",
+  "title": "Petare climate averages",
+  "site": "https://pseoare.pages.dev"
+ },
+ "updated": "2026-10-19T20:49:39.946179+00:00",
+ "license": "CC-BY-4.0",
+ "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
+}
