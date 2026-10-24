@@ -3,10 +3,10 @@
   "asset": "Algorand",
   "high_12m": 0.19,
   "low_12m": 0.08,
-  "latest": 0.11,
-  "position_in_range_pct": 27.3,
-  "pct_above_low": 37.5,
-  "pct_below_high": 42.1,
+  "latest": 0.1,
+  "position_in_range_pct": 18.2,
+  "pct_above_low": 25.0,
+  "pct_below_high": 47.4,
   "range_pct_of_low": 137.5,
   "monthly": [
    [
@@ -33,15 +33,15 @@
    [
     "2026-01",
     0.11,
-    0.16,
     0.14,
-    0.13
+    0.13,
+    0.11
    ],
    [
     "2026-02",
     0.09,
     0.13,
-    0.12,
+    0.1,
     0.13
    ],
    [
@@ -95,10 +95,10 @@
    ],
    [
     "2026-10",
-    0.11,
+    0.1,
     0.13,
     0.12,
-    0.11
+    0.1
    ]
   ]
  },
@@ -107,7 +107,7 @@
   "title": "Algorand 12-month price range",
   "site": "https://pseoare.pages.dev"
  },
- "updated": "2026-10-23T09:20:41.207626+00:00",
+ "updated": "2026-10-24T08:52:36.760536+00:00",
  "license": "CC-BY-4.0",
  "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
 }
