@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-27T09:48:39.615509+00:00",
+ "updated": "2026-10-28T10:34:31.448467+00:00",
  "count": 24,
  "source": "https://pseoare.pages.dev",
  "note": "high/low/latest cover the trailing 12 months",
@@ -17,52 +17,52 @@
   {
    "asset": "Aptos",
    "page": "https://pseoare.pages.dev/aptos-price-by-month",
-   "high_12m": 3.46,
+   "high_12m": 3.4,
    "low_12m": 0.52,
-   "latest": 0.68,
-   "range_pct_of_low": 565.4,
-   "pct_above_low": 30.8,
-   "pct_below_high": 80.3
+   "latest": 0.7,
+   "range_pct_of_low": 553.8,
+   "pct_above_low": 34.6,
+   "pct_below_high": 79.4
   },
   {
    "asset": "Arbitrum",
    "page": "https://pseoare.pages.dev/arbitrum-price-by-month",
-   "high_12m": 0.33,
+   "high_12m": 0.32,
    "low_12m": 0.07,
-   "latest": 0.16,
-   "range_pct_of_low": 371.4,
-   "pct_above_low": 128.6,
-   "pct_below_high": 51.5
+   "latest": 0.17,
+   "range_pct_of_low": 357.1,
+   "pct_above_low": 142.9,
+   "pct_below_high": 46.9
   },
   {
    "asset": "Avalanche",
    "page": "https://pseoare.pages.dev/avalanche-price-by-month",
-   "high_12m": 20.32,
+   "high_12m": 19.66,
    "low_12m": 5.89,
-   "latest": 8.71,
-   "range_pct_of_low": 245.0,
-   "pct_above_low": 47.9,
-   "pct_below_high": 57.1
+   "latest": 9.02,
+   "range_pct_of_low": 233.8,
+   "pct_above_low": 53.1,
+   "pct_below_high": 54.1
   },
   {
    "asset": "Bitcoin-cash",
    "page": "https://pseoare.pages.dev/bitcoin-cash-price-by-month",
    "high_12m": 654.84,
    "low_12m": 190.35,
-   "latest": 277.71,
+   "latest": 300.43,
    "range_pct_of_low": 244.0,
-   "pct_above_low": 45.9,
-   "pct_below_high": 57.6
+   "pct_above_low": 57.8,
+   "pct_below_high": 54.1
   },
   {
    "asset": "Bitcoin",
    "page": "https://pseoare.pages.dev/bitcoin-price-by-month",
-   "high_12m": 114085.33,
+   "high_12m": 112893.85,
    "low_12m": 58566.09,
-   "latest": 79579.06,
-   "range_pct_of_low": 94.8,
-   "pct_above_low": 35.9,
-   "pct_below_high": 30.2
+   "latest": 81436.18,
+   "range_pct_of_low": 92.8,
+   "pct_above_low": 39.1,
+   "pct_below_high": 27.9
   },
   {
    "asset": "Cardano",

@@ -1,20 +1,20 @@
 {
  "answer": {
   "asset": "Bitcoin",
-  "high_12m": 114085.33,
+  "high_12m": 112893.85,
   "low_12m": 58566.09,
-  "latest": 79579.06,
-  "position_in_range_pct": 37.8,
-  "pct_above_low": 35.9,
-  "pct_below_high": 30.2,
-  "range_pct_of_low": 94.8
+  "latest": 81436.18,
+  "position_in_range_pct": 42.1,
+  "pct_above_low": 39.1,
+  "pct_below_high": 27.9,
+  "range_pct_of_low": 92.8
  },
  "source": {
   "url": "https://pseoare.pages.dev/bitcoin-price-by-month",
   "title": "Bitcoin 12-month price range",
   "site": "https://pseoare.pages.dev"
  },
- "updated": "2026-10-27T09:48:39.615509+00:00",
+ "updated": "2026-10-28T10:34:31.448467+00:00",
  "license": "CC-BY-4.0",
  "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
 }
