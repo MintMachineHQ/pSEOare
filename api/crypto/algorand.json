@@ -12,8 +12,8 @@
    [
     "2025-10",
     0.17,
-    0.18,
-    0.18,
+    0.17,
+    0.17,
     0.17
    ],
    [
@@ -95,9 +95,9 @@
    ],
    [
     "2026-10",
-    0.1,
+    0.09,
     0.13,
-    0.12,
+    0.11,
     0.1
    ]
   ]
@@ -107,7 +107,7 @@
   "title": "Algorand 12-month price range",
   "site": "https://pseoare.pages.dev"
  },
- "updated": "2026-10-29T10:53:17.054996+00:00",
+ "updated": "2026-10-30T10:52:17.632419+00:00",
  "license": "CC-BY-4.0",
  "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
 }

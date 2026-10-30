@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-29T10:53:17.054996+00:00",
+ "updated": "2026-10-30T10:52:17.632419+00:00",
  "count": 24,
  "source": "https://pseoare.pages.dev",
  "note": "high/low/latest cover the trailing 12 months",
@@ -17,52 +17,52 @@
   {
    "asset": "Aptos",
    "page": "https://pseoare.pages.dev/aptos-price-by-month",
-   "high_12m": 3.4,
+   "high_12m": 3.38,
    "low_12m": 0.52,
-   "latest": 0.68,
-   "range_pct_of_low": 553.8,
-   "pct_above_low": 30.8,
-   "pct_below_high": 80.0
+   "latest": 0.63,
+   "range_pct_of_low": 550.0,
+   "pct_above_low": 21.2,
+   "pct_below_high": 81.4
   },
   {
    "asset": "Arbitrum",
    "page": "https://pseoare.pages.dev/arbitrum-price-by-month",
-   "high_12m": 0.32,
+   "high_12m": 0.31,
    "low_12m": 0.07,
-   "latest": 0.17,
-   "range_pct_of_low": 357.1,
-   "pct_above_low": 142.9,
-   "pct_below_high": 46.9
+   "latest": 0.16,
+   "range_pct_of_low": 342.9,
+   "pct_above_low": 128.6,
+   "pct_below_high": 48.4
   },
   {
    "asset": "Avalanche",
    "page": "https://pseoare.pages.dev/avalanche-price-by-month",
-   "high_12m": 19.66,
+   "high_12m": 18.84,
    "low_12m": 5.89,
-   "latest": 8.79,
-   "range_pct_of_low": 233.8,
-   "pct_above_low": 49.2,
-   "pct_below_high": 55.3
+   "latest": 8.59,
+   "range_pct_of_low": 219.9,
+   "pct_above_low": 45.8,
+   "pct_below_high": 54.4
   },
   {
    "asset": "Bitcoin-cash",
    "page": "https://pseoare.pages.dev/bitcoin-cash-price-by-month",
    "high_12m": 654.84,
    "low_12m": 190.35,
-   "latest": 300.43,
+   "latest": 285.83,
    "range_pct_of_low": 244.0,
-   "pct_above_low": 57.8,
-   "pct_below_high": 54.1
+   "pct_above_low": 50.2,
+   "pct_below_high": 56.4
   },
   {
    "asset": "Bitcoin",
    "page": "https://pseoare.pages.dev/bitcoin-price-by-month",
    "high_12m": 110499.52,
    "low_12m": 58566.09,
-   "latest": 80232.88,
+   "latest": 77698.04,
    "range_pct_of_low": 88.7,
-   "pct_above_low": 37.0,
-   "pct_below_high": 27.4
+   "pct_above_low": 32.7,
+   "pct_below_high": 29.7
   },
   {
    "asset": "Cardano",
