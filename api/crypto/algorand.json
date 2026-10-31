@@ -10,13 +10,6 @@
   "range_pct_of_low": 137.5,
   "monthly": [
    [
-    "2025-10",
-    0.17,
-    0.17,
-    0.17,
-    0.17
-   ],
-   [
     "2025-11",
     0.14,
     0.19,
@@ -107,7 +100,7 @@
   "title": "Algorand 12-month price range",
   "site": "https://pseoare.pages.dev"
  },
- "updated": "2026-10-30T10:52:17.632419+00:00",
+ "updated": "2026-10-31T10:23:18.328513+00:00",
  "license": "CC-BY-4.0",
  "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
 }

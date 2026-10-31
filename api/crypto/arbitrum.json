@@ -10,13 +10,6 @@
   "range_pct_of_low": 342.9,
   "monthly": [
    [
-    "2025-10",
-    0.29,
-    0.29,
-    0.29,
-    0.29
-   ],
-   [
     "2025-11",
     0.2,
     0.31,
@@ -107,7 +100,7 @@
   "title": "Arbitrum 12-month price range",
   "site": "https://pseoare.pages.dev"
  },
- "updated": "2026-10-30T10:52:17.632419+00:00",
+ "updated": "2026-10-31T10:23:18.328513+00:00",
  "license": "CC-BY-4.0",
  "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
 }
