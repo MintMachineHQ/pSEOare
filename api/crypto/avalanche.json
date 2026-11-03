@@ -1,19 +1,19 @@
 {
  "answer": {
   "asset": "Avalanche",
-  "high_12m": 18.84,
+  "high_12m": 18.17,
   "low_12m": 5.89,
-  "latest": 8.61,
-  "position_in_range_pct": 21.0,
-  "pct_above_low": 46.2,
-  "pct_below_high": 54.3,
-  "range_pct_of_low": 219.9,
+  "latest": 8.51,
+  "position_in_range_pct": 21.3,
+  "pct_above_low": 44.5,
+  "pct_below_high": 53.2,
+  "range_pct_of_low": 208.5,
   "monthly": [
    [
     "2025-11",
     13.23,
-    18.84,
-    15.54,
+    18.17,
+    15.42,
     14.25
    ],
    [
@@ -95,10 +95,10 @@
    ],
    [
     "2026-11",
-    8.56,
+    8.38,
     8.69,
-    8.62,
-    8.61
+    8.54,
+    8.51
    ]
   ]
  },
@@ -107,7 +107,7 @@
   "title": "Avalanche 12-month price range",
   "site": "https://pseoare.pages.dev"
  },
- "updated": "2026-11-02T12:23:12.370258+00:00",
+ "updated": "2026-11-03T11:55:16.455288+00:00",
  "license": "CC-BY-4.0",
  "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
 }

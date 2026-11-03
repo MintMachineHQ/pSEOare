@@ -13,7 +13,7 @@
     "2025-11",
     0.2,
     0.31,
-    0.25,
+    0.24,
     0.21
    ],
    [
@@ -107,7 +107,7 @@
   "title": "Arbitrum 12-month price range",
   "site": "https://pseoare.pages.dev"
  },
- "updated": "2026-11-02T12:23:12.370258+00:00",
+ "updated": "2026-11-03T11:55:16.455288+00:00",
  "license": "CC-BY-4.0",
  "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
 }
