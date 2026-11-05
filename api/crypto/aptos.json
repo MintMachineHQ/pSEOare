@@ -13,7 +13,7 @@
     "2025-11",
     2.04,
     3.29,
-    2.7,
+    2.71,
     2.04
    ],
    [
@@ -96,7 +96,7 @@
    [
     "2026-11",
     0.62,
-    0.63,
+    0.64,
     0.63,
     0.63
    ]
@@ -107,7 +107,7 @@
   "title": "Aptos 12-month price range",
   "site": "https://pseoare.pages.dev"
  },
- "updated": "2026-11-04T12:07:22.092279+00:00",
+ "updated": "2026-11-05T12:19:16.018233+00:00",
  "license": "CC-BY-4.0",
  "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
 }
