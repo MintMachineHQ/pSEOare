@@ -3,17 +3,17 @@
   "asset": "Aptos",
   "high_12m": 3.29,
   "low_12m": 0.52,
-  "latest": 0.6,
-  "position_in_range_pct": 2.9,
-  "pct_above_low": 15.4,
-  "pct_below_high": 81.8,
+  "latest": 0.59,
+  "position_in_range_pct": 2.5,
+  "pct_above_low": 13.5,
+  "pct_below_high": 82.1,
   "range_pct_of_low": 532.7,
   "monthly": [
    [
     "2025-11",
     2.04,
     3.29,
-    2.71,
+    2.69,
     2.04
    ],
    [
@@ -97,8 +97,8 @@
     "2026-11",
     0.58,
     0.64,
-    0.62,
-    0.6
+    0.61,
+    0.59
    ]
   ]
  },
@@ -107,7 +107,7 @@
   "title": "Aptos 12-month price range",
   "site": "https://pseoare.pages.dev"
  },
- "updated": "2026-11-07T11:03:25.851013+00:00",
+ "updated": "2026-11-08T11:16:14.724396+00:00",
  "license": "CC-BY-4.0",
  "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
 }
