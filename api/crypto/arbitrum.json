@@ -1,19 +1,19 @@
 {
  "answer": {
   "asset": "Arbitrum",
-  "high_12m": 0.28,
+  "high_12m": 0.26,
   "low_12m": 0.07,
-  "latest": 0.16,
-  "position_in_range_pct": 42.9,
-  "pct_above_low": 128.6,
-  "pct_below_high": 42.9,
-  "range_pct_of_low": 300.0,
+  "latest": 0.15,
+  "position_in_range_pct": 42.1,
+  "pct_above_low": 114.3,
+  "pct_below_high": 42.3,
+  "range_pct_of_low": 271.4,
   "monthly": [
    [
     "2025-11",
     0.2,
-    0.28,
-    0.23,
+    0.26,
+    0.22,
     0.21
    ],
    [
@@ -95,10 +95,10 @@
    ],
    [
     "2026-11",
-    0.16,
+    0.15,
     0.17,
     0.16,
-    0.16
+    0.15
    ]
   ]
  },
@@ -107,7 +107,7 @@
   "title": "Arbitrum 12-month price range",
   "site": "https://pseoare.pages.dev"
  },
- "updated": "2026-11-11T11:52:12.360572+00:00",
+ "updated": "2026-11-12T12:41:52.187072+00:00",
  "license": "CC-BY-4.0",
  "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
 }
