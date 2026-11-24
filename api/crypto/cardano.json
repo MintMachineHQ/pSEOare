@@ -1,26 +1,19 @@
 {
  "answer": {
   "asset": "Cardano",
-  "high_12m": 0.68,
+  "high_12m": 0.47,
   "low_12m": 0.14,
-  "latest": 0.21,
-  "position_in_range_pct": 13.0,
-  "pct_above_low": 50.0,
-  "pct_below_high": 69.1,
-  "range_pct_of_low": 385.7,
+  "latest": 0.14,
+  "position_in_range_pct": 0.0,
+  "pct_above_low": 0.0,
+  "pct_below_high": 70.2,
+  "range_pct_of_low": 235.7,
   "monthly": [
    [
-    "2025-10",
-    0.6,
-    0.68,
-    0.65,
-    0.6
-   ],
-   [
     "2025-11",
-    0.4,
-    0.61,
-    0.5,
+    0.42,
+    0.44,
+    0.43,
     0.42
    ],
    [
@@ -40,15 +33,15 @@
    [
     "2026-02",
     0.25,
-    0.31,
+    0.3,
     0.28,
-    0.29
+    0.28
    ],
    [
     "2026-03",
     0.24,
-    0.31,
-    0.28,
+    0.29,
+    0.26,
     0.24
    ],
    [
@@ -95,10 +88,17 @@
    ],
    [
     "2026-10",
-    0.21,
+    0.19,
     0.27,
-    0.24,
-    0.21
+    0.23,
+    0.2
+   ],
+   [
+    "2026-11",
+    0.14,
+    0.2,
+    0.17,
+    0.14
    ]
   ]
  },
@@ -107,7 +107,7 @@
   "title": "Cardano 12-month price range",
   "site": "https://pseoare.pages.dev"
  },
- "updated": "2026-11-23T14:37:18.577858+00:00",
+ "updated": "2026-11-24T14:51:49.764135+00:00",
  "license": "CC-BY-4.0",
  "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
 }

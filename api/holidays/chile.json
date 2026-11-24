@@ -1,7 +1,7 @@
 {
  "answer": {
   "country": "Chile",
-  "count": 36,
+  "count": 37,
   "holidays": [
    {
     "name": "New Year's Day in Chile (2016)",
@@ -58,6 +58,14 @@
     "weekday": "Monday",
     "weekend": false,
     "page": "https://pseoare.pages.dev/new-year-s-day-chile-2018-01-01"
+   },
+   {
+    "name": "Papal visit in Chile (2018)",
+    "local_name": "Visita del Papa Francisco",
+    "date": "2018-01-16",
+    "weekday": "Tuesday",
+    "weekend": false,
+    "page": "https://pseoare.pages.dev/papal-visit-chile-2018-01-16"
    },
    {
     "name": "Good Friday in Chile (2018)",
@@ -298,7 +306,7 @@
   "title": "Public holidays for Chile",
   "site": "https://pseoare.pages.dev"
  },
- "updated": "2026-11-23T14:37:18.577858+00:00",
+ "updated": "2026-11-24T14:51:49.764135+00:00",
  "license": "CC-BY-4.0",
  "attribution": "Data by LongTail Data Atlas (https://pseoare.pages.dev)"
 }
