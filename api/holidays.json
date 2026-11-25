@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24T14:51:49.764135+00:00",
+ "updated": "2026-11-25T14:20:45.419788+00:00",
  "count": 1980,
  "source": "https://pseoare.pages.dev",
  "results": [
@@ -15220,6 +15220,14 @@
    "page": "https://pseoare.pages.dev/on-2-january-united-kingdom-2027-01-02"
   },
   {
+   "holiday": "Papal visit in Chile (2018)",
+   "country": "Chile",
+   "local_name": "Visita del Papa Francisco",
+   "date": "2018-01-16",
+   "weekday": "Tuesday",
+   "page": "https://pseoare.pages.dev/papal-visit-chile-2018-01-16"
+  },
+  {
    "holiday": "Proclamation of Independence in Morocco (2016)",
    "country": "Morocco",
    "local_name": "Takdim watikat al-istiqlal",
@@ -15834,14 +15842,6 @@
    "date": "2027-02-16",
    "weekday": "Tuesday",
    "page": "https://pseoare.pages.dev/the-day-of-restoration-of-the-state-of-lithuania-lithuania-2027-02-16"
-  },
-  {
-   "holiday": "Papal visit in Chile (2018)",
-   "country": "Chile",
-   "local_name": "Visita del Papa Francisco",
-   "date": "2018-01-16",
-   "weekday": "Tuesday",
-   "page": "https://pseoare.pages.dev/papal-visit-chile-2018-01-16"
   }
  ]
 }
