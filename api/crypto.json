@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25T14:20:45.419788+00:00",
+ "updated": "2026-11-26T13:53:33.003468+00:00",
  "count": 24,
  "source": "https://pseoare.pages.dev",
  "note": "high/low/latest cover the trailing 12 months",
@@ -17,12 +17,12 @@
   {
    "asset": "Aptos",
    "page": "https://pseoare.pages.dev/aptos-price-by-month",
-   "high_12m": 2.29,
-   "low_12m": 0.35,
-   "latest": 0.35,
-   "range_pct_of_low": 554.3,
-   "pct_above_low": 0.0,
-   "pct_below_high": 84.7
+   "high_12m": 2.27,
+   "low_12m": 0.36,
+   "latest": 0.39,
+   "range_pct_of_low": 530.6,
+   "pct_above_low": 8.3,
+   "pct_below_high": 82.8
   },
   {
    "asset": "Arbitrum",
@@ -39,10 +39,10 @@
    "page": "https://pseoare.pages.dev/avalanche-price-by-month",
    "high_12m": 15.02,
    "low_12m": 5.89,
-   "latest": 6.34,
+   "latest": 6.64,
    "range_pct_of_low": 155.0,
-   "pct_above_low": 7.6,
-   "pct_below_high": 57.8
+   "pct_above_low": 12.7,
+   "pct_below_high": 55.8
   },
   {
    "asset": "Bitcoin-cash",
@@ -58,11 +58,11 @@
    "asset": "Bitcoin",
    "page": "https://pseoare.pages.dev/bitcoin-price-by-month",
    "high_12m": 96898.76,
-   "low_12m": 58355.1,
-   "latest": 58355.1,
-   "range_pct_of_low": 66.1,
-   "pct_above_low": 0.0,
-   "pct_below_high": 39.8
+   "low_12m": 58566.09,
+   "latest": 60811.14,
+   "range_pct_of_low": 65.5,
+   "pct_above_low": 3.8,
+   "pct_below_high": 37.2
   },
   {
    "asset": "Cardano",
